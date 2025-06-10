@@ -1,5 +1,5 @@
 import { createBrowserRouter } from 'react-router';
-import { BoxRoute } from './box';
+import { BoxRoute } from './core/box';
 import { RootRoute } from './RootRoute';
 
 export const router = createBrowserRouter([
