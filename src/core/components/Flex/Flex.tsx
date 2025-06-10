@@ -1,0 +1,42 @@
+import { type ElementType, Component } from 'react';
+import { useMergeProps } from '../../hooks/use-merge-props/useMergeProps';
+import { mergeClassName } from '../../utils/mergeClassName/mergeClassName';
+import type { BoxProps } from '../Box/Box.types';
+import flexConfig from './flexConfig';
+
+export const Flex = <E extends ElementType = 'div'>(props: BoxProps<E>) => {
+  const {
+    scale,
+    spacing,
+    margin,
+    direction,
+    wrap,
+    justify,
+    align,
+    gap,
+    configClassName,
+    className,
+    ...restProps
+  } = useMergeProps('flex', flexConfig.props, props);
+
+  const mergedClassName = mergeClassName(
+    { component: 'box', className, configClassName },
+    {
+      scale,
+      spacing,
+      margin,
+      direction,
+      wrap,
+      justify,
+      align,
+      gap
+    }
+  );
+
+  return (
+    <Component
+      className={mergedClassName}
+      {...restProps}
+    />
+  );
+};
