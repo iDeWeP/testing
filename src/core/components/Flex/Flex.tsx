@@ -21,7 +21,7 @@ export const Flex = <E extends ElementType = 'div'>(props: FlexProps<E>) => {
   } = useMergeProps('flex', flexConfig.props, props);
 
   const mergedClassName = mergeClassName(
-    { component: 'box', className, configClassName },
+    { component: 'flex', className, configClassName },
     {
       scale,
       spacing,
