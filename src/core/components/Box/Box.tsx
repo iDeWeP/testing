@@ -3,7 +3,6 @@ import { useMergeProps } from '../../hooks/use-merge-props/useMergeProps';
 import { mergeClassName } from '../../utils/mergeClassName/mergeClassName';
 import type { BoxProps } from './Box.types';
 import boxConfig from './boxConfig';
-import { useTheme } from '../../hooks/use-theme/useTheme';
 
 export const Box = <E extends ElementType = 'div'>(props: BoxProps<E>) => {
   const {
@@ -19,19 +18,22 @@ export const Box = <E extends ElementType = 'div'>(props: BoxProps<E>) => {
     ...restProps
   } = useMergeProps('box', boxConfig.props, props);
 
-  const theme = useTheme();
-
   const mergedClassName = mergeClassName(
-    { component: 'box', className, configClassName, theme },
+    { component: 'box', className, configClassName },
     {
-      defaultVariant: variant,
+      variant,
       scale,
       spacing,
       border,
       radius,
-      defaultColor: color
+      color
     }
   );
 
-  return <Component className={mergedClassName} {...restProps} />;
+  return (
+    <Component
+      className={mergedClassName}
+      {...restProps}
+    />
+  );
 };

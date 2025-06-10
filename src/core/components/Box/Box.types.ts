@@ -1,21 +1,21 @@
 import type { ElementType } from 'react';
 import type {
-  DefaultVariant,
+  Variant,
   Scale,
   Spacing,
   Border,
   Radius,
-  DefaultColor,
+  Color,
   RefProps
 } from '../../types';
 
 export type BoxConfigProps = {
-  variant: DefaultVariant;
+  variant: Variant;
   scale: Scale;
   spacing: Spacing;
   border: Border;
   radius: Radius;
-  color: DefaultColor;
+  color: Color;
 };
 
 export type BoxDefaultProps = Partial<BoxConfigProps>;
