@@ -112,14 +112,16 @@ export interface CoreComponentsMap {
 
 interface ComponentConfig<T> {
   styles?: string;
-  props?: Partial<T>;
+  props?: Omit<Partial<T>, 'className'>;
 }
 
 type ComponentConfigUtil<T> = {
   [P in keyof T]: ComponentConfig<T[P]>;
 };
 
+export type CoreComponentsConfig = ComponentConfigUtil<CoreComponentsMap>;
+
 export interface ComponentConfigContext {
-  core?: ComponentConfigUtil<CoreComponentsMap>;
+  core?: CoreComponentsConfig;
   // router?: RouterComponents;
 }
