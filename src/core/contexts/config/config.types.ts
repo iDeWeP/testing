@@ -119,7 +119,7 @@ type ComponentConfigUtil<T> = {
   [P in keyof T]: ComponentConfig<T[P]>;
 };
 
-export interface Config {
+export interface ComponentsConfigContext {
   core?: ComponentConfigUtil<CoreComponentsMap>;
   // router?: RouterComponents;
 }

@@ -1,7 +1,7 @@
 import { createContext } from 'react';
-import type { Config } from 'tailwindcss';
+import type { ComponentConfigContext } from './config.types';
 
-const initialState: Config = {};
+const initialState: ComponentConfigContext = {};
 
 const ConfigContext = createContext(initialState);
 
