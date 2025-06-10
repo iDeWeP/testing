@@ -26,7 +26,7 @@ export const Layout = <E extends ElementType = 'main'>(
   } = useMergeProps('layout', layoutConfig.props, props);
 
   const mergedClassName = mergeClassName(
-    { component: 'box', className, configClassName },
+    { component: 'layout', className, configClassName },
     {
       variant,
       orientation,
