@@ -1,7 +1,5 @@
 import type { ElementType } from 'react';
 import type {
-  Scale,
-  Spacing,
   Margin,
   Direction,
   Wrap,
@@ -10,17 +8,16 @@ import type {
   Gap,
   RefProps
 } from '../../types';
+import type { BoxConfigProps } from '../Box/Box.types';
 
 export type FlexConfigProps = {
-  scale: Scale;
-  spacing: Spacing;
   margin: Margin;
   direction: Direction;
   wrap: Wrap;
   justify: JustifyContent;
   align: AlignItems;
   gap: Gap;
-};
+} & BoxConfigProps;
 
 export type FlexDefaultProps = Partial<FlexConfigProps>;
 

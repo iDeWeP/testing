@@ -1,7 +1,7 @@
 import type { ComponentConfig } from '../../types';
-import type { BoxConfigProps } from './Box.types';
+import type { BoxDefaultProps } from './Box.types';
 
-const boxConfig: ComponentConfig<BoxConfigProps> = {
+const boxConfig: ComponentConfig<BoxDefaultProps> = {
   props: {
     variant: 'surface',
     scale: 'default',
