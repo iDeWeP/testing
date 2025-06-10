@@ -1,8 +1,7 @@
-const getRootFontSize = () => {
+export const convertRemToPixels = (rem: number) => {
   const fontSize = getComputedStyle(document.documentElement).fontSize;
   const rootFontSize = parseFloat(fontSize);
+  const size = isNaN(rootFontSize) ? 16 : rootFontSize;
 
-  return isNaN(rootFontSize) ? 16 : rootFontSize;
+  return rem * size;
 };
-
-export const convertRemToPixels = (rem: number) => rem * getRootFontSize();
