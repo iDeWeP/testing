@@ -1,10 +1,10 @@
-import { type ElementType, Component } from 'react';
+import type { ElementType } from 'react';
 import { useMergeProps } from '../../hooks/use-merge-props/useMergeProps';
 import { mergeClassName } from '../../utils/mergeClassName/mergeClassName';
-import type { BoxProps } from '../Box/Box.types';
+import type { FlexProps } from './Flex.types';
 import flexConfig from './flexConfig';
 
-export const Flex = <E extends ElementType = 'div'>(props: BoxProps<E>) => {
+export const Flex = <E extends ElementType = 'div'>(props: FlexProps<E>) => {
   const {
     scale,
     spacing,
@@ -16,6 +16,7 @@ export const Flex = <E extends ElementType = 'div'>(props: BoxProps<E>) => {
     gap,
     configClassName,
     className,
+    as: Component = 'div',
     ...restProps
   } = useMergeProps('flex', flexConfig.props, props);
 
