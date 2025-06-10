@@ -1,6 +1,5 @@
-export const getFocusableElements = <E extends HTMLElement>(
-  el?: E | null // CHECK TYPES !!!
-) => {
+// CHECK TYPES !!!
+export const getFocusableElements = <E extends HTMLElement>(el?: E | null) => {
   if (!el) {
     return [];
   }

@@ -1,8 +1,7 @@
 import type { ReactNode } from 'react';
 
-export const getInitials = (
-  children: ReactNode // CHECK TYPE !!!
-) =>
+// CHECK TYPES !!!
+export const getInitials = (children: ReactNode) =>
   typeof children === 'string'
     ? children
         .trim()
