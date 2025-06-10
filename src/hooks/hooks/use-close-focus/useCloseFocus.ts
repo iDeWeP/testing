@@ -1,5 +1,6 @@
 import { useEffect, type RefObject } from 'react';
 
+// CHECK TYPES !!!
 export const useCloseFocus = <E extends HTMLElement>(
   elRef?: RefObject<E | null>
 ) => {

@@ -11,14 +11,14 @@ export const useFocusTrap = <E extends HTMLElement>(
       return;
     }
 
-    const handleKeydown = (event: KeyboardEvent): void => {
+    const handleKeydown = (event: KeyboardEvent) => {
       if (event.key !== 'Tab') {
         return;
       }
 
       const focusableEls = getFocusableElements(ref.current);
 
-      if (!focusableEls.length) {
+      if (!focusableEls) {
         event.preventDefault();
 
         return;

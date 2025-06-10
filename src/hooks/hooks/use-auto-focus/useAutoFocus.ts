@@ -1,6 +1,7 @@
 import { type RefObject, useEffect } from 'react';
 import { getFocusableElements } from '../../../utils/utils/get-focusabled-elements/getFocusableElements';
 
+// CHECK TYPES !!!
 export const useAutoFocus = <E extends HTMLElement>(
   elRef?: RefObject<E | null>,
   auto = true
@@ -13,7 +14,11 @@ export const useAutoFocus = <E extends HTMLElement>(
     if (auto) {
       const focusableEls = getFocusableElements(elRef.current);
 
-      focusableEls[0]?.focus();
+      if (!focusableEls) {
+        return;
+      }
+
+      focusableEls[0].focus();
     } else {
       elRef.current.focus();
     }

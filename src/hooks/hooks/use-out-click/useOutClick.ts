@@ -12,7 +12,7 @@ export const useOutClick = <E extends HTMLElement, T extends HTMLElement>(
       return;
     }
 
-    const handleClick = ({ target }: MouseEvent): void => {
+    const handleClick = ({ target }: MouseEvent) => {
       if (!elRef.current || !(target instanceof Node)) {
         return;
       }
