@@ -1,10 +1,10 @@
 import type { ComponentConfig } from '../../types';
-import type { FooterConfigProps } from './Footer.types';
+import type { LayoutConfigProps } from './Layout.types';
 
-const footerConfig: ComponentConfig<FooterConfigProps> = {
+const layoutConfig: ComponentConfig<LayoutConfigProps> = {
   props: {
     variant: 'none',
-    orientation: 'horizontal',
+    orientation: 'vertical',
     scale: 'default',
     spacing: 'none',
     margin: 'none',
@@ -17,4 +17,4 @@ const footerConfig: ComponentConfig<FooterConfigProps> = {
   }
 };
 
-export default footerConfig;
+export default layoutConfig;

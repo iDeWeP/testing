@@ -14,7 +14,7 @@ import type {
   RefProps
 } from '../../types';
 
-export type FooterConfigProps = {
+export type LayoutConfigProps = {
   variant: Variant;
   orientation: Orientation;
   scale: Scale;
@@ -28,9 +28,9 @@ export type FooterConfigProps = {
   gap: Gap;
 };
 
-export type FooterDefaultProps = Partial<FooterConfigProps>;
+export type LayoutDefaultProps = Partial<LayoutConfigProps>;
 
-export type FooterProps<E extends ElementType> = RefProps<
+export type LayoutProps<E extends ElementType> = RefProps<
   E,
-  FooterDefaultProps
+  LayoutDefaultProps
 >;
