@@ -3,6 +3,4 @@ import type { ComponentConfigContext } from './config.types';
 
 const initialState: ComponentConfigContext = {};
 
-const ConfigContext = createContext(initialState);
-
-export default ConfigContext;
+export const ConfigContext = createContext(initialState);
