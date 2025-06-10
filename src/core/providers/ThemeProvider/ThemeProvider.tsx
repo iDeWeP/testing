@@ -2,9 +2,9 @@ import { type ReactNode, type FC, useState, useMemo } from 'react';
 import { ThemeContext } from '../../contexts/theme/theme';
 import type { Theme } from '../../types';
 
-interface Props {
+type Props = {
   children?: ReactNode;
-}
+};
 
 export const ThemeProvider: FC<Props> = ({ children }) => {
   const [theme, setTheme] = useState<Theme>('light');
