@@ -15,6 +15,7 @@ export const Flex = <E extends ElementType = 'div'>(props: FlexProps<E>) => {
     gap,
     configClassName,
     className,
+    as = 'div',
     ...restProps
   } = useMergeProps('flex', flexConfig.props, props);
 
@@ -32,6 +33,7 @@ export const Flex = <E extends ElementType = 'div'>(props: FlexProps<E>) => {
 
   return (
     <Box
+      as={as}
       className={mergedClassName}
       {...restProps}
     />
