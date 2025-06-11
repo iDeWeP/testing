@@ -7,7 +7,6 @@ import flexConfig from './flexConfig';
 
 export const Flex = <E extends ElementType = 'div'>(props: FlexProps<E>) => {
   const {
-    margin,
     direction,
     wrap,
     justify,
@@ -21,7 +20,6 @@ export const Flex = <E extends ElementType = 'div'>(props: FlexProps<E>) => {
   const mergedClassName = mergeClassName(
     { component: 'flex', className, configClassName },
     {
-      margin,
       direction,
       wrap,
       justify,

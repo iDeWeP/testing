@@ -1,6 +1,7 @@
 import type { ElementType } from 'react';
 import { useMergeProps } from '../../hooks/use-merge-props/useMergeProps';
 import { mergeClassName } from '../../utils/mergeClassName/mergeClassName';
+import { Box } from '../Box/Box';
 import type { LayoutProps } from './Layout.types';
 import layoutConfig from './layoutConfig';
 
@@ -8,34 +9,19 @@ export const Layout = <E extends ElementType = 'main'>(
   props: LayoutProps<E>
 ) => {
   const {
-    variant,
     orientation,
-    scale,
-    spacing,
-    margin,
-    border,
-    radius,
-    color,
     justify,
     align,
     gap,
     configClassName,
     className,
-    as: Component = 'main',
     ...restProps
   } = useMergeProps('layout', layoutConfig.props, props);
 
   const mergedClassName = mergeClassName(
     { component: 'layout', className, configClassName },
     {
-      variant,
       orientation,
-      scale,
-      spacing,
-      margin,
-      border,
-      radius,
-      color,
       justify,
       align,
       gap
@@ -43,7 +29,7 @@ export const Layout = <E extends ElementType = 'main'>(
   );
 
   return (
-    <Component
+    <Box
       className={mergedClassName}
       {...restProps}
     />

@@ -9,6 +9,7 @@ export const Box = <E extends ElementType = 'div'>(props: BoxProps<E>) => {
     variant,
     scale,
     spacing,
+    margin,
     border,
     radius,
     color,
@@ -24,6 +25,7 @@ export const Box = <E extends ElementType = 'div'>(props: BoxProps<E>) => {
       variant,
       scale,
       spacing,
+      margin,
       border,
       radius,
       color
