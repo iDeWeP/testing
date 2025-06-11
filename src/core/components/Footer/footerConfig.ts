@@ -3,7 +3,7 @@ import type { FooterConfigProps } from './Footer.types';
 
 const footerConfig: ComponentConfig<FooterConfigProps> = {
   props: {
-    direction: 'col',
+    direction: 'row',
     wrap: 'wrap',
     justify: 'normal',
     align: 'stretch',

@@ -3,7 +3,7 @@ import type { HeaderConfigProps } from './Header.types';
 
 const headerConfig: ComponentConfig<HeaderConfigProps> = {
   props: {
-    direction: 'col',
+    direction: 'row',
     wrap: 'wrap',
     justify: 'normal',
     align: 'stretch',
