@@ -6,6 +6,7 @@ const boxConfig: ComponentConfig<BoxConfigProps> = {
     variant: 'surface',
     scale: 'default',
     spacing: 'none',
+    margin: 'none',
     border: 'none',
     radius: 'none',
     color: 'neutral'

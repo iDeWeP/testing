@@ -3,6 +3,7 @@ import type {
   Variant,
   Scale,
   Spacing,
+  Margin,
   Border,
   Radius,
   Color,
@@ -13,6 +14,7 @@ export type BoxConfigProps = {
   variant?: Variant;
   scale?: Scale;
   spacing?: Spacing;
+  margin?: Margin;
   border?: Border;
   radius?: Radius;
   color?: Color;
