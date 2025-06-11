@@ -3,6 +3,7 @@ import type { StackConfigProps } from './Stack.types';
 
 const stackConfig: ComponentConfig<StackConfigProps> = {
   props: {
+    direction: 'col',
     wrap: 'wrap',
     justify: 'normal',
     align: 'stretch',
@@ -13,8 +14,7 @@ const stackConfig: ComponentConfig<StackConfigProps> = {
     margin: 'none',
     border: 'none',
     radius: 'none',
-    color: 'neutral',
-    direction: 'col'
+    color: 'neutral'
   }
 };
 
