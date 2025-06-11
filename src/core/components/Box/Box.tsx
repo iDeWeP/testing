@@ -15,7 +15,7 @@ export const Box = <E extends ElementType = 'div'>(props: BoxProps<E>) => {
     color,
     className,
     configClassName,
-    as,
+    as: Component = 'div',
     ...restProps
   } = useMergeProps('box', boxConfig.props, props);
 
@@ -31,8 +31,6 @@ export const Box = <E extends ElementType = 'div'>(props: BoxProps<E>) => {
       color
     }
   );
-
-  const Component = as as ElementType;
 
   return (
     <Component

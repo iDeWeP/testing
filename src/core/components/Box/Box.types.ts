@@ -1,4 +1,4 @@
-import type { ElementType } from 'react';
+import type { ElementType, ComponentPropsWithRef } from 'react';
 import type {
   Variant,
   Scale,
@@ -6,8 +6,7 @@ import type {
   Margin,
   Border,
   Radius,
-  Color,
-  RefProps
+  Color
 } from '../../types';
 
 export type BoxConfigProps = {
@@ -20,4 +19,5 @@ export type BoxConfigProps = {
   color?: Color;
 };
 
-export type BoxProps<E extends ElementType> = RefProps<E, BoxConfigProps>;
+export type BoxProps<E extends ElementType> = ComponentPropsWithRef<E> &
+  BoxConfigProps;

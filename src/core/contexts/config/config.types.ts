@@ -1,4 +1,5 @@
-import type { BoxDefaultProps } from '../../components/Box/Box.types';
+import type { BoxConfigProps } from '../../components/Box/Box.types';
+import type { FlexConfigProps } from '../../components/Flex/Flex.types';
 
 export type CoreComponentsMap = {
   /* accordion?: ComponentConfig<AccordionProps>;
@@ -8,7 +9,7 @@ export type CoreComponentsMap = {
   avatar?: ComponentConfig<AvatarProps>;
   avatarGroup?: ComponentConfig<AvatarGroupProps>;
   badge?: ComponentConfig<BadgeProps>; */
-  box?: BoxDefaultProps;
+  box?: BoxConfigProps;
   /* breadcrumbs?: ComponentConfig<BreadcrumbsProps>;
   button?: ComponentConfig<ButtonProps>;
   buttonGroup?: ComponentConfig<ButtonGroupProps>;
@@ -19,16 +20,15 @@ export type CoreComponentsMap = {
   container?: ComponentConfig<ContainerProps>;
   divider?: ComponentConfig<DividerProps>;
   drawer?: ComponentConfig<DrawerProps>;
-  fab?: ComponentConfig<FabProps>;
-  flex?: ComponentConfig<FlexProps>;
-  footer?: ComponentConfig<FooterProps>;
-  formControl?: ComponentConfig<FormControlProps>;
+  fab?: ComponentConfig<FabProps>; */
+  flex?: FlexConfigProps;
+  /* formControl?: ComponentConfig<FormControlProps>;
   grid?: ComponentConfig<GridProps>;
   header?: ComponentConfig<HeaderProps>;
   heading?: ComponentConfig<HeadingProps>;
-  icon?: ComponentConfig<IconProps>;
-  image?: ComponentConfig<ImageProps>;
-  input?: ComponentConfig<InputProps>;
+  icon?: ComponentConfig<IconProps>; */
+  // image?: ImageCoProps;
+  /* input?: ComponentConfig<InputProps>;
   label?: ComponentConfig<LabelProps>;
   layout?: ComponentConfig<LayoutProps>;
   linearProgress?: ComponentConfig<LinearProgressProps>;
@@ -42,9 +42,9 @@ export type CoreComponentsMap = {
   section?: ComponentConfig<SectionProps>;
   sidebar?: ComponentConfig<SidebarProps>;
   snackbar?: ComponentConfig<SnackbarProps>;
-  spinner?: ComponentConfig<SpinnerProps>;
-  stack?: ComponentConfig<StackProps>;
-  switch?: ComponentConfig<SwitchProps>;
+  spinner?: ComponentConfig<SpinnerProps>; */
+  // stack?: StackConfigProps;
+  /* switch?: ComponentConfig<SwitchProps>;
   text?: ComponentConfig<TextProps>;
   textarea?: ComponentConfig<TextareaProps>;
   toggleButton?: ComponentConfig<ToggleButtonProps>;

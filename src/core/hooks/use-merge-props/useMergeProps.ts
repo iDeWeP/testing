@@ -3,7 +3,7 @@ import { ConfigContext } from '../../contexts/config/config';
 import type { CoreComponentsConfig } from '../../contexts/config/config.types';
 
 // CHECL TYPES
-export const useMergeProps = <D, P>(
+export const useMergeProps = <D extends object, P extends object>(
   component: keyof CoreComponentsConfig,
   defaultProps: D,
   props: P

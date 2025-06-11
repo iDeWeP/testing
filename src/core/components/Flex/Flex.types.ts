@@ -18,8 +18,4 @@ type FlexDefaultProps = {
 
 export type FlexConfigProps = FlexDefaultProps & BoxConfigProps;
 
-export type FlexProps<E extends ElementType> = Omit<
-  BoxProps<E>,
-  keyof FlexDefaultProps
-> &
-  FlexDefaultProps;
+export type FlexProps<E extends ElementType> = BoxProps<E> & FlexConfigProps;
