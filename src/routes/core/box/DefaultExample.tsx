@@ -1,5 +1,5 @@
-import ExampleCard from '../../../components/ExampleCard';
-import ExampleSection from '../../../components/ExampleSection';
+import { ExampleCard } from '../../../components/ExampleCard';
+import { ExampleSection } from '../../../components/ExampleSection';
 import { Box } from '../../../core/components/Box/Box';
 
 export const DefaultExample = () => (

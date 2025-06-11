@@ -1,4 +1,4 @@
-import ExampleTitle from '../../../components/ExampleTitle';
+import { ExampleTitle } from '../../../components/ExampleTitle';
 import { BorderExample } from './BorderExample';
 import { ColorExample } from './ColorExample';
 import { DefaultExample } from './DefaultExample';

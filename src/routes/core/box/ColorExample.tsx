@@ -1,17 +1,17 @@
-import ExampleCard from '../../../components/ExampleCard';
-import ExampleSection from '../../../components/ExampleSection';
+import { ExampleCard } from '../../../components/ExampleCard';
+import { ExampleSection } from '../../../components/ExampleSection';
 import { Box } from '../../../core/components/Box/Box';
 
 export const ColorExample = () => (
   <ExampleSection title="Color">
     <ExampleCard>
-      <Box color="neutral">Neutral</Box>
-      <Box color="primary">Primary</Box>
-      <Box color="secondary">Secondary</Box>
-      <Box color="tertiary">Tertiary</Box>
-      <Box color="success">Success</Box>
-      <Box color="warning">Warning</Box>
-      <Box color="error">Error</Box>
+      <Box color="neutral">NEUTRAL</Box>
+      <Box color="primary">PRIMARY</Box>
+      <Box color="secondary">SECONDARY</Box>
+      <Box color="tertiary">TERTIARY</Box>
+      <Box color="success">SUCCESS</Box>
+      <Box color="warning">WARNING</Box>
+      <Box color="error">ERROR</Box>
     </ExampleCard>
   </ExampleSection>
 );
