@@ -4,20 +4,22 @@ import type {
   Wrap,
   JustifyContent,
   AlignItems,
-  Gap,
-  MergeProps
+  Gap
 } from '../../types';
 import type { BoxConfigProps, BoxProps } from '../Box/Box.types';
 
-export type FlexConfigProps = {
+type FlexDefaultProps = {
   direction?: Direction;
   wrap?: Wrap;
   justify?: JustifyContent;
   align?: AlignItems;
   gap?: Gap;
-} & BoxConfigProps;
+};
 
-export type FlexProps<E extends ElementType> = MergeProps<
+export type FlexConfigProps = FlexDefaultProps & BoxConfigProps;
+
+export type FlexProps<E extends ElementType> = Omit<
   BoxProps<E>,
-  FlexConfigProps
->;
+  keyof FlexDefaultProps
+> &
+  FlexDefaultProps;
