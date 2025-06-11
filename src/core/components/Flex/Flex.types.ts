@@ -8,7 +8,7 @@ import type {
   Gap,
   MergeProps
 } from '../../types';
-import type { BoxProps } from '../Box/Box.types';
+import type { BoxConfigProps, BoxProps } from '../Box/Box.types';
 
 export type FlexConfigProps = {
   margin?: Margin;
@@ -17,7 +17,7 @@ export type FlexConfigProps = {
   justify?: JustifyContent;
   align?: AlignItems;
   gap?: Gap;
-};
+} & BoxConfigProps;
 
 export type FlexProps<E extends ElementType> = MergeProps<
   BoxProps<E>,

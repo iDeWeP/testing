@@ -8,7 +8,13 @@ const flexConfig: ComponentConfig<FlexConfigProps> = {
     wrap: 'wrap',
     justify: 'normal',
     align: 'stretch',
-    gap: 'none'
+    gap: 'none',
+    variant: 'none',
+    scale: 'default',
+    spacing: 'none',
+    border: 'none',
+    radius: 'none',
+    color: 'neutral'
   }
 };
 
