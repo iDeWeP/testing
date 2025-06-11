@@ -1,8 +1,6 @@
 import type { ElementType } from 'react';
-import type { Radius, RefProps } from '../../types';
+import type { BoxConfigProps, BoxProps } from '../Box/Box.types';
 
-export type ImageConfigProps = {
-  radius?: Radius;
-};
+export type ImageConfigProps = BoxConfigProps;
 
-export type ImageProps<E extends ElementType> = RefProps<E, ImageConfigProps>;
+export type ImageProps<E extends ElementType> = BoxProps<E>;

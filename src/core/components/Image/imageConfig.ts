@@ -11,7 +11,13 @@ type Styles = {
 
 const imageConfig: ComponentConfig<ImageConfigProps> & Styles = {
   props: {
-    radius: 'none'
+    variant: 'none',
+    scale: 'default',
+    spacing: 'none',
+    margin: 'none',
+    border: false,
+    radius: 'none',
+    color: 'neutral'
   },
   styles: {
     root: {
