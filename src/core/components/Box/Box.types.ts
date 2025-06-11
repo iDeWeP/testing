@@ -9,7 +9,7 @@ import type {
   RefProps
 } from '../../types';
 
-export type BoxDefaultProps = {
+export type BoxConfigProps = {
   variant?: Variant;
   scale?: Scale;
   spacing?: Spacing;
@@ -18,4 +18,4 @@ export type BoxDefaultProps = {
   color?: Color;
 };
 
-export type BoxProps<E extends ElementType> = RefProps<E, BoxDefaultProps>;
+export type BoxProps<E extends ElementType> = RefProps<E, BoxConfigProps>;
