@@ -6,19 +6,20 @@ import type {
   JustifyContent,
   AlignItems,
   Gap,
-  RefProps
+  MergeProps
 } from '../../types';
-import type { BoxConfigProps } from '../Box/Box.types';
+import type { BoxProps } from '../Box/Box.types';
 
 export type FlexConfigProps = {
-  margin: Margin;
-  direction: Direction;
-  wrap: Wrap;
-  justify: JustifyContent;
-  align: AlignItems;
-  gap: Gap;
-} & BoxConfigProps;
+  margin?: Margin;
+  direction?: Direction;
+  wrap?: Wrap;
+  justify?: JustifyContent;
+  align?: AlignItems;
+  gap?: Gap;
+};
 
-export type FlexDefaultProps = Partial<FlexConfigProps>;
-
-export type FlexProps<E extends ElementType> = RefProps<E, FlexDefaultProps>;
+export type FlexProps<E extends ElementType> = MergeProps<
+  BoxProps<E>,
+  FlexConfigProps
+>;
