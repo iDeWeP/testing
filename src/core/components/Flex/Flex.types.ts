@@ -1,6 +1,5 @@
 import type { ElementType } from 'react';
 import type {
-  Margin,
   Direction,
   Wrap,
   JustifyContent,
@@ -11,7 +10,6 @@ import type {
 import type { BoxConfigProps, BoxProps } from '../Box/Box.types';
 
 export type FlexConfigProps = {
-  margin?: Margin;
   direction?: Direction;
   wrap?: Wrap;
   justify?: JustifyContent;
