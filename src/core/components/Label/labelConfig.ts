@@ -7,7 +7,7 @@ const labelConfig: ComponentConfig<LabelConfigProps> = {
     wrap: 'wrap',
     justify: 'normal',
     align: 'stretch',
-    gap: 'none',
+    gap: 'xs',
     variant: 'none',
     scale: 'default',
     spacing: 'none',
