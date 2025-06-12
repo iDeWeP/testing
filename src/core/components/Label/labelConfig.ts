@@ -1,7 +1,7 @@
 import type { ComponentConfig } from '../../types';
 import type { LabelConfigProps } from './Label.types';
 
-const labelConfig: ComponentConfig<LabelConfigProps> = {
+export const labelConfig: ComponentConfig<LabelConfigProps> = {
   props: {
     direction: 'col',
     wrap: 'wrap',
@@ -17,5 +17,3 @@ const labelConfig: ComponentConfig<LabelConfigProps> = {
     color: 'neutral'
   }
 };
-
-export default labelConfig;
