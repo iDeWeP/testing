@@ -1,7 +1,7 @@
 import type { ComponentConfig } from '../../types';
 import type { HeaderConfigProps } from './Header.types';
 
-const headerConfig: ComponentConfig<HeaderConfigProps> = {
+export const headerConfig: ComponentConfig<HeaderConfigProps> = {
   props: {
     direction: 'row',
     wrap: 'wrap',
@@ -18,4 +18,3 @@ const headerConfig: ComponentConfig<HeaderConfigProps> = {
   }
 };
 
-export default headerConfig;
