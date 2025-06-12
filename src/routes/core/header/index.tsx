@@ -1,7 +1,7 @@
 import { lazy } from 'react';
 import type { RouteObject } from 'react-router';
 
-export const FooterRoute: RouteObject = {
-  path: '/core/footer',
+export const HeaderRoute: RouteObject = {
+  path: '/core/header',
   Component: lazy(() => import('./Page'))
 };
