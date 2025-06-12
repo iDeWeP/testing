@@ -3,6 +3,7 @@ import type { BoxConfigProps } from './Box.types';
 
 export const boxConfig: ComponentConfig<BoxConfigProps> = {
   props: {
+    as: 'div',
     variant: 'surface',
     scale: 'square',
     spacing: 'none',

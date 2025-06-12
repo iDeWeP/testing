@@ -10,6 +10,7 @@ import type {
 } from '../../types';
 
 export type BoxConfigProps = {
+  as?: ElementType;
   variant?: Variant;
   scale?: Scale;
   spacing?: Spacing;
