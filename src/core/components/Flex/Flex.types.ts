@@ -1,21 +1,9 @@
 import type { ElementType } from 'react';
 import type {
-  Direction,
-  Wrap,
-  JustifyContent,
-  AlignItems,
-  Gap
-} from '../../types';
-import type { BoxConfigProps, BoxProps } from '../Box/Box.types';
+  UnstyledFlexBoxConfigProps,
+  UnstyledFlexBoxProps
+} from '../UnstyledFlexBox/UnstyledFlexBox.types';
 
-type FlexDefaultProps = {
-  direction?: Direction;
-  wrap?: Wrap;
-  justify?: JustifyContent;
-  align?: AlignItems;
-  gap?: Gap;
-};
+export type FlexConfigProps = UnstyledFlexBoxConfigProps;
 
-export type FlexConfigProps = FlexDefaultProps & BoxConfigProps;
-
-export type FlexProps<E extends ElementType> = BoxProps<E> & FlexConfigProps;
+export type FlexProps<E extends ElementType> = UnstyledFlexBoxProps<E>;
