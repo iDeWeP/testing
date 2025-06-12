@@ -9,42 +9,66 @@ export const JustifyExample = () => (
       vertical
       stretch
     >
-      <Sidebar justify="normal">
+      <Sidebar
+        direction="row"
+        justify="normal"
+      >
         <Box>Normal #2</Box>
         <Box>Normal #1</Box>
         <Box>Normal #3</Box>
       </Sidebar>
-      <Sidebar justify="stretch">
+      <Sidebar
+        direction="row"
+        justify="stretch"
+      >
         <Box>Stretch #2</Box>
         <Box>Stretch #1</Box>
         <Box>Stretch #3</Box>
       </Sidebar>
-      <Sidebar justify="start">
+      <Sidebar
+        direction="row"
+        justify="start"
+      >
         <Box>Start #1</Box>
         <Box>Start #2</Box>
         <Box>Start #3</Box>
       </Sidebar>
-      <Sidebar justify="end">
+      <Sidebar
+        direction="row"
+        justify="end"
+      >
         <Box>End #1</Box>
         <Box>End #2</Box>
         <Box>End #3</Box>
       </Sidebar>
-      <Sidebar justify="center">
+      <Sidebar
+        direction="row"
+        justify="center"
+      >
         <Box>Center #1</Box>
         <Box>Center #2</Box>
         <Box>Center #3</Box>
       </Sidebar>
-      <Sidebar justify="evenly">
+      <Sidebar
+        direction="row"
+        justify="evenly"
+      >
         <Box>Evenly #1</Box>
         <Box>Evenly #2</Box>
         <Box>Evenly #3</Box>
       </Sidebar>
-      <Sidebar justify="between">
+      <Sidebar
+        direction="row"
+        justify="between"
+      >
         <Box>Between #1</Box>
         <Box>Between #2</Box>
         <Box>Between #3</Box>
       </Sidebar>
-      <Sidebar justify="around">
+      <Sidebar
+        direction="row"
+        justify="around"
+      >
         <Box>Around #1</Box>
         <Box>Around #2</Box>
         <Box>Around #3</Box>

@@ -5,7 +5,7 @@ import { Sidebar } from '../../../core/components/Sidebar/Sidebar';
 
 export const GapExample = () => (
   <ExampleSection title="Gap">
-    <ExampleCard vertical>
+    <ExampleCard>
       <Sidebar gap="none">
         <Box>None #1</Box>
         <Box>None #2</Box>
