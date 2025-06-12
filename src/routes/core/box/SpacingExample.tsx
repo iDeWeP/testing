@@ -12,12 +12,5 @@ export const SpacingExample = () => (
       <Box spacing="lg">LG</Box>
       <Box spacing="xl">XL</Box>
     </ExampleCard>
-    <ExampleCard align>
-      <Box spacing="xs-xs">XS-XS</Box>
-      <Box spacing="sm-sm">SM-SM</Box>
-      <Box spacing="md-md">MD-MD</Box>
-      <Box spacing="lg-lg">LG-LG</Box>
-      <Box spacing="xl-xl">XL-XL</Box>
-    </ExampleCard>
   </ExampleSection>
 );
