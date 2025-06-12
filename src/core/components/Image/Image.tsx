@@ -5,9 +5,7 @@ import { Box } from '../Box/Box';
 import type { ImageProps } from './Image.types';
 import { imageConfig } from './imageConfig';
 
-export const Image = <E extends ElementType = 'image'>(
-  props: ImageProps<E>
-) => {
+export const Image = <E extends ElementType = 'img'>(props: ImageProps<E>) => {
   const { configClassName, className, ...restProps } = useMergeProps(
     'image',
     imageConfig.props,
