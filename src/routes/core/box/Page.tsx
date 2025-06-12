@@ -1,11 +1,11 @@
 import { ExampleTitle } from '../../../components/ExampleTitle';
+import { SizeExample } from '../title/SizeExample';
 import { BorderExample } from './BorderExample';
 import { ColorExample } from './ColorExample';
 import { DefaultExample } from './DefaultExample';
 import { MarginExample } from './MarginExample';
 import { RadiusExample } from './RadiusExample';
 import { ScaleExample } from './ScaleExample';
-import { SpacingExample } from './SpacingExample';
 import { VariantExample } from './VariantExample';
 
 const Page = () => (
@@ -13,8 +13,8 @@ const Page = () => (
     <ExampleTitle>UnstyledBox</ExampleTitle>
     <DefaultExample />
     <VariantExample />
+    <SizeExample />
     <ScaleExample />
-    <SpacingExample />
     <MarginExample />
     <BorderExample />
     <RadiusExample />

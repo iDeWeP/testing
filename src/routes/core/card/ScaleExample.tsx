@@ -6,40 +6,22 @@ export const ScaleExample = () => (
   <ExampleSection title="Scale">
     <ExampleCard>
       <Card
-        scale="square"
-        spacing="md"
+        size="md"
+        scale="normal"
       >
-        SQUARE
+        NORMAL
       </Card>
       <Card
-        scale="square-fit"
-        spacing="md"
+        size="md"
+        scale="fit"
       >
-        SQUARE-FIT
+        FIT
       </Card>
       <Card
-        scale="square-full"
-        spacing="md"
+        size="md"
+        scale="full"
       >
-        SQUARE-FULL
-      </Card>
-      <Card
-        scale="rect"
-        spacing="md"
-      >
-        RECT
-      </Card>
-      <Card
-        scale="rect-fit"
-        spacing="md"
-      >
-        RECT-FIT
-      </Card>
-      <Card
-        scale="rect-full"
-        spacing="md"
-      >
-        RECT-FULL
+        FULL
       </Card>
     </ExampleCard>
   </ExampleSection>
