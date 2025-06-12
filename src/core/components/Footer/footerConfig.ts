@@ -1,7 +1,7 @@
 import type { ComponentConfig } from '../../types';
 import type { FooterConfigProps } from './Footer.types';
 
-const footerConfig: ComponentConfig<FooterConfigProps> = {
+export const footerConfig: ComponentConfig<FooterConfigProps> = {
   props: {
     direction: 'row',
     wrap: 'wrap',
@@ -18,4 +18,3 @@ const footerConfig: ComponentConfig<FooterConfigProps> = {
   }
 };
 
-export default footerConfig;
