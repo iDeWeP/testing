@@ -5,13 +5,48 @@ import { Header } from '../../../core/components/Header/Header';
 export const ColorExample = () => (
   <ExampleSection title="Color">
     <ExampleCard>
-      <Header color="neutral">NEUTRAL</Header>
-      <Header color="primary">PRIMARY</Header>
-      <Header color="secondary">SECONDARY</Header>
-      <Header color="tertiary">TERTIARY</Header>
-      <Header color="success">SUCCESS</Header>
-      <Header color="warning">WARNING</Header>
-      <Header color="error">ERROR</Header>
+      <Header
+        variant="solid"
+        color="neutral"
+      >
+        NEUTRAL
+      </Header>
+      <Header
+        variant="solid"
+        color="primary"
+      >
+        PRIMARY
+      </Header>
+      <Header
+        variant="solid"
+        color="secondary"
+      >
+        SECONDARY
+      </Header>
+      <Header
+        variant="solid"
+        color="tertiary"
+      >
+        TERTIARY
+      </Header>
+      <Header
+        variant="solid"
+        color="success"
+      >
+        SUCCESS
+      </Header>
+      <Header
+        variant="solid"
+        color="warning"
+      >
+        WARNING
+      </Header>
+      <Header
+        variant="solid"
+        color="error"
+      >
+        ERROR
+      </Header>
     </ExampleCard>
   </ExampleSection>
 );

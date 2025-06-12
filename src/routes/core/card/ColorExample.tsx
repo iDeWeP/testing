@@ -5,13 +5,48 @@ import { Card } from '../../../core/components/Card/Card';
 export const ColorExample = () => (
   <ExampleSection title="Color">
     <ExampleCard>
-      <Card color="neutral">NEUTRAL</Card>
-      <Card color="primary">PRIMARY</Card>
-      <Card color="secondary">SECONDARY</Card>
-      <Card color="tertiary">TERTIARY</Card>
-      <Card color="success">SUCCESS</Card>
-      <Card color="warning">WARNING</Card>
-      <Card color="error">ERROR</Card>
+      <Card
+        variant="solid"
+        color="neutral"
+      >
+        NEUTRAL
+      </Card>
+      <Card
+        variant="solid"
+        color="primary"
+      >
+        PRIMARY
+      </Card>
+      <Card
+        variant="solid"
+        color="secondary"
+      >
+        SECONDARY
+      </Card>
+      <Card
+        variant="solid"
+        color="tertiary"
+      >
+        TERTIARY
+      </Card>
+      <Card
+        variant="solid"
+        color="success"
+      >
+        SUCCESS
+      </Card>
+      <Card
+        variant="solid"
+        color="warning"
+      >
+        WARNING
+      </Card>
+      <Card
+        variant="solid"
+        color="error"
+      >
+        ERROR
+      </Card>
     </ExampleCard>
   </ExampleSection>
 );
