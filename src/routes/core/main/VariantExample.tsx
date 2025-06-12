@@ -1,0 +1,62 @@
+import { ExampleCard } from '../../../components/ExampleCard';
+import { ExampleSection } from '../../../components/ExampleSection';
+import { Main } from '../../../core/components/Main/Main';
+
+export const VariantExample = () => (
+  <ExampleSection title="Variant">
+    <ExampleCard>
+      <Main
+        variant="text"
+        color="primary"
+      >
+        TEXT
+      </Main>
+      <Main
+        variant="light"
+        color="primary"
+      >
+        LIGHT
+      </Main>
+      <Main
+        variant="surface"
+        color="primary"
+      >
+        SURFACE
+      </Main>
+      <Main
+        variant="solid"
+        color="primary"
+      >
+        SOLID
+      </Main>
+      <Main
+        variant="text"
+        border
+        color="primary"
+      >
+        TEXT-BORDER
+      </Main>
+      <Main
+        variant="light"
+        border
+        color="primary"
+      >
+        LIGHT-BORDER
+      </Main>
+      <Main
+        variant="surface"
+        border
+        color="primary"
+      >
+        SURFACE-BORDER
+      </Main>
+      <Main
+        variant="solid"
+        border
+        color="primary"
+      >
+        SOLID-BORDER
+      </Main>
+    </ExampleCard>
+  </ExampleSection>
+);
