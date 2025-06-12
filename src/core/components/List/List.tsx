@@ -1,11 +1,13 @@
 import type { ElementType } from 'react';
 import { useMergeProps } from '../../hooks/use-merge-props/useMergeProps';
-import { Flex } from '../Flex/Flex';
-import type { FlexProps } from '../Flex/Flex.types';
+import { UnstyledFlexBox } from '../UnstyledFlexBox/UnstyledFlexBox';
+import type { UnstyledFlexBoxProps } from '../UnstyledFlexBox/UnstyledFlexBox.types';
 import { listConfig } from './listConfig';
 
-export const List = <E extends ElementType = 'ul'>(props: FlexProps<E>) => {
+export const List = <E extends ElementType = 'ul'>(
+  props: UnstyledFlexBoxProps<E>
+) => {
   const mergedProps = useMergeProps('list', listConfig.props, props);
 
-  return <Flex {...mergedProps} />;
+  return <UnstyledFlexBox {...mergedProps} />;
 };

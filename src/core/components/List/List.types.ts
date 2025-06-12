@@ -1,6 +1,9 @@
 import type { ElementType } from 'react';
-import type { FlexConfigProps, FlexProps } from '../Flex/Flex.types';
+import type {
+  UnstyledFlexBoxConfigProps,
+  UnstyledFlexBoxProps
+} from '../UnstyledFlexBox/UnstyledFlexBox.types';
 
-export type ListConfigProps = FlexConfigProps;
+export type ListConfigProps = UnstyledFlexBoxConfigProps;
 
-export type ListProps<E extends ElementType> = FlexProps<E>;
+export type ListProps<E extends ElementType> = UnstyledFlexBoxProps<E>;
