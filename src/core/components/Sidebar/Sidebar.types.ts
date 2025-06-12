@@ -1,6 +1,9 @@
 import type { ElementType } from 'react';
-import type { FlexConfigProps, FlexProps } from '../Flex/Flex.types';
+import type {
+  UnstyledFlexBoxConfigProps,
+  UnstyledFlexBoxProps
+} from '../UnstyledFlexBox/UnstyledFlexBox.types';
 
-export type SidebarConfigProps = FlexConfigProps;
+export type SidebarConfigProps = UnstyledFlexBoxConfigProps;
 
-export type SidebarProps<E extends ElementType> = FlexProps<E>;
+export type SidebarProps<E extends ElementType> = UnstyledFlexBoxProps<E>;
