@@ -1,7 +1,7 @@
 import type { ComponentConfig } from '../../types';
 import type { BoxConfigProps } from './Box.types';
 
-const boxConfig: ComponentConfig<BoxConfigProps> = {
+export const boxConfig: ComponentConfig<BoxConfigProps> = {
   props: {
     variant: 'surface',
     scale: 'square',
@@ -12,5 +12,3 @@ const boxConfig: ComponentConfig<BoxConfigProps> = {
     color: 'neutral'
   }
 };
-
-export default boxConfig;
