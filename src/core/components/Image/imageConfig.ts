@@ -9,7 +9,7 @@ type Styles = {
   };
 };
 
-const imageConfig: ComponentConfig<ImageConfigProps> & Styles = {
+export const imageConfig: ComponentConfig<ImageConfigProps> & Styles = {
   props: {
     variant: 'none',
     scale: 'square-full',
@@ -27,5 +27,3 @@ const imageConfig: ComponentConfig<ImageConfigProps> & Styles = {
     }
   }
 };
-
-export default imageConfig;
