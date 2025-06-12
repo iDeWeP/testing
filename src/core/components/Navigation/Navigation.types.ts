@@ -1,6 +1,9 @@
 import type { ElementType } from 'react';
-import type { FlexConfigProps, FlexProps } from '../Flex/Flex.types';
+import type {
+  UnstyledFlexBoxConfigProps,
+  UnstyledFlexBoxProps
+} from '../UnstyledFlexBox/UnstyledFlexBox.types';
 
-export type NavigationConfigProps = FlexConfigProps;
+export type NavigationConfigProps = UnstyledFlexBoxConfigProps;
 
-export type NavigationProps<E extends ElementType> = FlexProps<E>;
+export type NavigationProps<E extends ElementType> = UnstyledFlexBoxProps<E>;
