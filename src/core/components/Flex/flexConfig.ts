@@ -1,7 +1,7 @@
 import type { ComponentConfig } from '../../types';
 import type { FlexConfigProps } from './Flex.types';
 
-const flexConfig: ComponentConfig<FlexConfigProps> = {
+export const flexConfig: ComponentConfig<FlexConfigProps> = {
   props: {
     direction: 'row',
     wrap: 'wrap',
@@ -17,5 +17,3 @@ const flexConfig: ComponentConfig<FlexConfigProps> = {
     color: 'neutral'
   }
 };
-
-export default flexConfig;

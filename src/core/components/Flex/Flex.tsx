@@ -3,7 +3,7 @@ import { useMergeProps } from '../../hooks/use-merge-props/useMergeProps';
 import { mergeClassName } from '../../utils/mergeClassName/mergeClassName';
 import { Box } from '../Box/Box';
 import type { FlexProps } from './Flex.types';
-import flexConfig from './flexConfig';
+import { flexConfig } from './flexConfig';
 
 export const Flex = <E extends ElementType = 'div'>(props: FlexProps<E>) => {
   const {
