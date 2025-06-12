@@ -31,29 +31,29 @@ export const VariantExample = () => (
       </Box>
       <Box
         variant="text"
-        color="primary"
         border
+        color="primary"
       >
         TEXT-BORDER
       </Box>
       <Box
         variant="light"
-        color="primary"
         border
+        color="primary"
       >
         LIGHT-BORDER
       </Box>
       <Box
         variant="surface"
-        color="primary"
         border
+        color="primary"
       >
         SURFACE-BORDER
       </Box>
       <Box
         variant="solid"
-        color="primary"
         border
+        color="primary"
       >
         SOLID-BORDER
       </Box>
