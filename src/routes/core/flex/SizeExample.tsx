@@ -11,6 +11,7 @@ export const SpacingExample = () => (
       <Flex size="md">MD</Flex>
       <Flex size="lg">LG</Flex>
       <Flex size="xl">XL</Flex>
+      <Flex size="xxl">XXL</Flex>
     </ExampleCard>
     <ExampleCard align>
       <Flex size="xs-xs">XS-XS</Flex>
@@ -18,6 +19,7 @@ export const SpacingExample = () => (
       <Flex size="md-md">MD-MD</Flex>
       <Flex size="lg-lg">LG-LG</Flex>
       <Flex size="xl-xl">XL-XL</Flex>
+      <Flex size="xxl-xxl">XXL-XXL</Flex>
     </ExampleCard>
   </ExampleSection>
 );
