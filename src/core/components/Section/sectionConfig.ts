@@ -1,7 +1,7 @@
 import type { ComponentConfig } from '../../types';
 import type { SectionConfigProps } from './Section.types';
 
-const sectionConfig: ComponentConfig<SectionConfigProps> = {
+export const sectionConfig: ComponentConfig<SectionConfigProps> = {
   props: {
     direction: 'col',
     wrap: 'wrap',
@@ -17,5 +17,3 @@ const sectionConfig: ComponentConfig<SectionConfigProps> = {
     color: 'neutral'
   }
 };
-
-export default sectionConfig;

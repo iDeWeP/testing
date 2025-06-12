@@ -1,7 +1,7 @@
 import type { ComponentConfig } from '../../types';
 import type { SidebarConfigProps } from './Sidebar.types';
 
-const sidebarConfig: ComponentConfig<SidebarConfigProps> = {
+export const sidebarConfig: ComponentConfig<SidebarConfigProps> = {
   props: {
     direction: 'col',
     wrap: 'wrap',
@@ -17,5 +17,3 @@ const sidebarConfig: ComponentConfig<SidebarConfigProps> = {
     color: 'neutral'
   }
 };
-
-export default sidebarConfig;

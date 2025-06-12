@@ -1,7 +1,7 @@
 import type { ComponentConfig } from '../../types';
 import type { StackConfigProps } from './Stack.types';
 
-const stackConfig: ComponentConfig<StackConfigProps> = {
+export const stackConfig: ComponentConfig<StackConfigProps> = {
   props: {
     direction: 'col',
     wrap: 'wrap',
@@ -17,5 +17,3 @@ const stackConfig: ComponentConfig<StackConfigProps> = {
     color: 'neutral'
   }
 };
-
-export default stackConfig;
