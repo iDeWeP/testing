@@ -11,7 +11,7 @@ export const headerConfig: ComponentConfig<HeaderConfigProps> = {
     gap: 'none',
     variant: 'none',
     size: 'none',
-    scale: 'square',
+    scale: 'normal',
     margin: 'none',
     border: 'none',
     radius: 'none',

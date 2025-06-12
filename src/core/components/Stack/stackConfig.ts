@@ -11,7 +11,7 @@ export const stackConfig: ComponentConfig<StackConfigProps> = {
     gap: 'none',
     variant: 'none',
     size: 'none',
-    scale: 'square',
+    scale: 'normal',
     margin: 'none',
     border: 'none',
     radius: 'none',

@@ -11,7 +11,7 @@ export const cardConfig: ComponentConfig<CardConfigProps> = {
     gap: 'none',
     variant: 'surface',
     size: 'none',
-    scale: 'square',
+    scale: 'normal',
     margin: 'none',
     border: 'none',
     radius: 'xl',
