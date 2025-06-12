@@ -1,7 +1,7 @@
 import type { ComponentConfig } from '../../types';
 import type { ListConfigProps } from './List.types';
 
-const listConfig: ComponentConfig<ListConfigProps> = {
+export const listConfig: ComponentConfig<ListConfigProps> = {
   props: {
     direction: 'col',
     wrap: 'wrap',
@@ -17,5 +17,3 @@ const listConfig: ComponentConfig<ListConfigProps> = {
     color: 'neutral'
   }
 };
-
-export default listConfig;
