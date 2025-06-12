@@ -3,6 +3,7 @@ import type { ListConfigProps } from './List.types';
 
 export const listConfig: ComponentConfig<ListConfigProps> = {
   props: {
+    as: 'ul',
     direction: 'col',
     wrap: 'wrap',
     justify: 'normal',

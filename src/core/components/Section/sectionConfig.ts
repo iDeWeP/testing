@@ -3,6 +3,7 @@ import type { SectionConfigProps } from './Section.types';
 
 export const sectionConfig: ComponentConfig<SectionConfigProps> = {
   props: {
+    as: 'section',
     direction: 'col',
     wrap: 'wrap',
     justify: 'normal',

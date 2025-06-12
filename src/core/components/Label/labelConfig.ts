@@ -3,6 +3,7 @@ import type { LabelConfigProps } from './Label.types';
 
 export const labelConfig: ComponentConfig<LabelConfigProps> = {
   props: {
+    as: 'label',
     direction: 'col',
     wrap: 'wrap',
     justify: 'normal',

@@ -3,6 +3,7 @@ import type { FlexConfigProps } from './Flex.types';
 
 export const flexConfig: ComponentConfig<FlexConfigProps> = {
   props: {
+    as: 'div',
     direction: 'row',
     wrap: 'wrap',
     justify: 'normal',

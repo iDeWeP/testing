@@ -3,6 +3,7 @@ import type { HeaderConfigProps } from './Header.types';
 
 export const headerConfig: ComponentConfig<HeaderConfigProps> = {
   props: {
+    as: 'header',
     direction: 'row',
     wrap: 'wrap',
     justify: 'normal',
@@ -17,4 +18,3 @@ export const headerConfig: ComponentConfig<HeaderConfigProps> = {
     color: 'neutral'
   }
 };
-

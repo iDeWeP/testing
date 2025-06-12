@@ -11,6 +11,7 @@ type Styles = {
 
 export const imageConfig: ComponentConfig<ImageConfigProps> & Styles = {
   props: {
+    as: 'img',
     variant: 'none',
     scale: 'square-full',
     spacing: 'none',

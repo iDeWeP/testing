@@ -3,6 +3,7 @@ import type { FooterConfigProps } from './Footer.types';
 
 export const footerConfig: ComponentConfig<FooterConfigProps> = {
   props: {
+    as: 'footer',
     direction: 'row',
     wrap: 'wrap',
     justify: 'normal',
@@ -17,4 +18,3 @@ export const footerConfig: ComponentConfig<FooterConfigProps> = {
     color: 'neutral'
   }
 };
-

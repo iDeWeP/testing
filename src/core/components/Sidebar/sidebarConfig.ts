@@ -3,6 +3,7 @@ import type { SidebarConfigProps } from './Sidebar.types';
 
 export const sidebarConfig: ComponentConfig<SidebarConfigProps> = {
   props: {
+    as: 'aside',
     direction: 'col',
     wrap: 'wrap',
     justify: 'normal',

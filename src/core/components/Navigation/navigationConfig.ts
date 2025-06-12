@@ -3,6 +3,7 @@ import type { NavigationConfigProps } from './Navigation.types';
 
 export const navigationConfig: ComponentConfig<NavigationConfigProps> = {
   props: {
+    as: 'nav',
     direction: 'col',
     wrap: 'wrap',
     justify: 'normal',

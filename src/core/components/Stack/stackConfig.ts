@@ -3,6 +3,7 @@ import type { StackConfigProps } from './Stack.types';
 
 export const stackConfig: ComponentConfig<StackConfigProps> = {
   props: {
+    as: 'div',
     direction: 'col',
     wrap: 'wrap',
     justify: 'normal',

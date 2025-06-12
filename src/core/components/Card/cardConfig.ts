@@ -3,6 +3,7 @@ import type { CardConfigProps } from './Card.types';
 
 export const cardConfig: ComponentConfig<CardConfigProps> = {
   props: {
+    as: 'div',
     direction: 'col',
     wrap: 'wrap',
     justify: 'normal',
