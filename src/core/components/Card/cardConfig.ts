@@ -8,12 +8,12 @@ export const cardConfig: ComponentConfig<CardConfigProps> = {
     justify: 'normal',
     align: 'stretch',
     gap: 'none',
-    variant: 'none',
+    variant: 'surface',
     scale: 'square',
     spacing: 'none',
     margin: 'none',
     border: 'none',
-    radius: 'none',
+    radius: 'xl',
     color: 'neutral'
   }
 };
