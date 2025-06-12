@@ -5,7 +5,10 @@ import { Flex } from '../../../core/components/Flex/Flex';
 
 export const JustifyExample = () => (
   <ExampleSection title="Justify">
-    <ExampleCard vertical>
+    <ExampleCard
+      vertical
+      stretch
+    >
       <Flex justify="normal">
         <Box>Normal #2</Box>
         <Box>Normal #1</Box>

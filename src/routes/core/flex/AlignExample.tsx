@@ -5,7 +5,7 @@ import { Flex } from '../../../core/components/Flex/Flex';
 
 export const AlignExample = () => (
   <ExampleSection title="Align">
-    <ExampleCard vertical>
+    <ExampleCard>
       <Flex align="stretch">
         <Box>STRETCH #2</Box>
         <Box>STRETCH #1</Box>

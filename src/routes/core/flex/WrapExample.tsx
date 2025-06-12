@@ -5,7 +5,7 @@ import { Flex } from '../../../core/components/Flex/Flex';
 
 export const WrapExample = () => (
   <ExampleSection title="Wrap">
-    <ExampleCard vertical>
+    <ExampleCard>
       <Flex wrap="nowrap">
         <Box>Nowrap #1</Box>
         <Box>Nowrap #2</Box>

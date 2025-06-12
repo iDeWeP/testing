@@ -5,7 +5,7 @@ import { Flex } from '../../../core/components/Flex/Flex';
 
 export const DirectionExample = () => (
   <ExampleSection title="Direction">
-    <ExampleCard vertical>
+    <ExampleCard>
       <Flex direction="row">
         <Box>Row #1</Box>
         <Box>Row #2</Box>
