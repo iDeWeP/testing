@@ -1,7 +1,7 @@
 import type { ComponentConfig } from '../../types';
 import type { MainConfigProps } from './Main.types';
 
-const mainConfig: ComponentConfig<MainConfigProps> = {
+export const mainConfig: ComponentConfig<MainConfigProps> = {
   props: {
     direction: 'col',
     wrap: 'wrap',
@@ -17,5 +17,3 @@ const mainConfig: ComponentConfig<MainConfigProps> = {
     color: 'neutral'
   }
 };
-
-export default mainConfig;
