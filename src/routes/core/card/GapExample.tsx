@@ -5,7 +5,7 @@ import { Card } from '../../../core/components/Card/Card';
 
 export const GapExample = () => (
   <ExampleSection title="Gap">
-    <ExampleCard vertical>
+    <ExampleCard>
       <Card gap="none">
         <Box>None #1</Box>
         <Box>None #2</Box>
