@@ -11,7 +11,7 @@ export const Box = <E extends ElementType = 'div'>({
   radius,
   color,
   className,
-  as: Component,
+  as: Component = 'div',
   ...restProps
 }: BoxProps<E>) => {
   const mergedClassName = mergeClassName('box', className, {
