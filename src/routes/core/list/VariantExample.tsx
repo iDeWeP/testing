@@ -12,6 +12,12 @@ export const VariantExample = () => (
         TEXT
       </List>
       <List
+        variant="plain"
+        color="primary"
+      >
+        PLAIN
+      </List>
+      <List
         variant="light"
         color="primary"
       >
@@ -35,6 +41,13 @@ export const VariantExample = () => (
         color="primary"
       >
         TEXT-BORDER
+      </List>
+      <List
+        variant="plain"
+        border
+        color="primary"
+      >
+        PLAIN-BORDER
       </List>
       <List
         variant="light"

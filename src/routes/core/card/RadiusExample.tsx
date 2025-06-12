@@ -5,13 +5,55 @@ import { Card } from '../../../core/components/Card/Card';
 export const RadiusExample = () => (
   <ExampleSection title="Radius">
     <ExampleCard>
-      <Card radius="none">NONE</Card>
-      <Card radius="xs">XS</Card>
-      <Card radius="sm">SM</Card>
-      <Card radius="md">MD</Card>
-      <Card radius="lg">LG</Card>
-      <Card radius="xl">XL</Card>
-      <Card radius="full">FULL</Card>
+      <Card
+        variant="solid"
+        radius="none"
+        color="primary"
+      >
+        NONE
+      </Card>
+      <Card
+        variant="solid"
+        radius="xs"
+        color="primary"
+      >
+        XS
+      </Card>
+      <Card
+        variant="solid"
+        radius="sm"
+        color="primary"
+      >
+        SM
+      </Card>
+      <Card
+        variant="solid"
+        radius="md"
+        color="primary"
+      >
+        MD
+      </Card>
+      <Card
+        variant="solid"
+        radius="lg"
+        color="primary"
+      >
+        LG
+      </Card>
+      <Card
+        variant="solid"
+        radius="xl"
+        color="primary"
+      >
+        XL
+      </Card>
+      <Card
+        variant="solid"
+        radius="full"
+        color="primary"
+      >
+        FULL
+      </Card>
     </ExampleCard>
   </ExampleSection>
 );

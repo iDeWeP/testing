@@ -12,6 +12,12 @@ export const VariantExample = () => (
         TEXT
       </Flex>
       <Flex
+        variant="plain"
+        color="primary"
+      >
+        PLAIN
+      </Flex>
+      <Flex
         variant="light"
         color="primary"
       >
@@ -35,6 +41,13 @@ export const VariantExample = () => (
         color="primary"
       >
         TEXT-BORDER
+      </Flex>
+      <Flex
+        variant="plain"
+        border
+        color="primary"
+      >
+        PLAIN-BORDER
       </Flex>
       <Flex
         variant="light"

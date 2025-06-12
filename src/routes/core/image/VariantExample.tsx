@@ -14,6 +14,11 @@ export const VariantExample = () => (
       />
       <Image
         src={imgSrc}
+        variant="plain"
+        color="primary"
+      />
+      <Image
+        src={imgSrc}
         variant="light"
         color="primary"
       />
@@ -30,6 +35,12 @@ export const VariantExample = () => (
       <Image
         src={imgSrc}
         variant="text"
+        border
+        color="primary"
+      />
+      <Image
+        src={imgSrc}
+        variant="plain"
         border
         color="primary"
       />

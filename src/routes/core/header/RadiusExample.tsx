@@ -5,13 +5,55 @@ import { Header } from '../../../core/components/Header/Header';
 export const RadiusExample = () => (
   <ExampleSection title="Radius">
     <ExampleCard>
-      <Header radius="none">NONE</Header>
-      <Header radius="xs">XS</Header>
-      <Header radius="sm">SM</Header>
-      <Header radius="md">MD</Header>
-      <Header radius="lg">LG</Header>
-      <Header radius="xl">XL</Header>
-      <Header radius="full">FULL</Header>
+      <Header
+        variant="solid"
+        radius="none"
+        color="primary"
+      >
+        NONE
+      </Header>
+      <Header
+        variant="solid"
+        radius="xs"
+        color="primary"
+      >
+        XS
+      </Header>
+      <Header
+        variant="solid"
+        radius="sm"
+        color="primary"
+      >
+        SM
+      </Header>
+      <Header
+        variant="solid"
+        radius="md"
+        color="primary"
+      >
+        MD
+      </Header>
+      <Header
+        variant="solid"
+        radius="lg"
+        color="primary"
+      >
+        LG
+      </Header>
+      <Header
+        variant="solid"
+        radius="xl"
+        color="primary"
+      >
+        XL
+      </Header>
+      <Header
+        variant="solid"
+        radius="full"
+        color="primary"
+      >
+        FULL
+      </Header>
     </ExampleCard>
   </ExampleSection>
 );

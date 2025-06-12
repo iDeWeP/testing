@@ -5,13 +5,55 @@ import { Box } from '../../../core/components/Box/Box';
 export const RadiusExample = () => (
   <ExampleSection title="Radius">
     <ExampleCard>
-      <Box radius="none">NONE</Box>
-      <Box radius="xs">XS</Box>
-      <Box radius="sm">SM</Box>
-      <Box radius="md">MD</Box>
-      <Box radius="lg">LG</Box>
-      <Box radius="xl">XL</Box>
-      <Box radius="full">FULL</Box>
+      <Box
+        variant="solid"
+        radius="none"
+        color="primary"
+      >
+        NONE
+      </Box>
+      <Box
+        variant="solid"
+        radius="xs"
+        color="primary"
+      >
+        XS
+      </Box>
+      <Box
+        variant="solid"
+        radius="sm"
+        color="primary"
+      >
+        SM
+      </Box>
+      <Box
+        variant="solid"
+        radius="md"
+        color="primary"
+      >
+        MD
+      </Box>
+      <Box
+        variant="solid"
+        radius="lg"
+        color="primary"
+      >
+        LG
+      </Box>
+      <Box
+        variant="solid"
+        radius="xl"
+        color="primary"
+      >
+        XL
+      </Box>
+      <Box
+        variant="solid"
+        radius="full"
+        color="primary"
+      >
+        FULL
+      </Box>
     </ExampleCard>
   </ExampleSection>
 );

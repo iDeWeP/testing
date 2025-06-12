@@ -12,6 +12,12 @@ export const VariantExample = () => (
         TEXT
       </Header>
       <Header
+        variant="plain"
+        color="primary"
+      >
+        PLAIN
+      </Header>
+      <Header
         variant="light"
         color="primary"
       >
@@ -35,6 +41,13 @@ export const VariantExample = () => (
         color="primary"
       >
         TEXT-BORDER
+      </Header>
+      <Header
+        variant="plain"
+        border
+        color="primary"
+      >
+        PLAIN-BORDER
       </Header>
       <Header
         variant="light"

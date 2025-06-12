@@ -9,31 +9,45 @@ export const RadiusExample = () => (
     <ExampleCard>
       <Image
         src={imgSrc}
+        variant="solid"
         radius="none"
+        color="primary"
       />
       <Image
         src={imgSrc}
+        variant="solid"
         radius="xs"
+        color="primary"
       />
       <Image
         src={imgSrc}
+        variant="solid"
         radius="sm"
+        color="primary"
       />
       <Image
         src={imgSrc}
+        variant="solid"
         radius="md"
+        color="primary"
       />
       <Image
         src={imgSrc}
+        variant="solid"
         radius="lg"
+        color="primary"
       />
       <Image
         src={imgSrc}
+        variant="solid"
         radius="xl"
+        color="primary"
       />
       <Image
         src={imgSrc}
+        variant="solid"
         radius="full"
+        color="primary"
       />
     </ExampleCard>
   </ExampleSection>
