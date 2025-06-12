@@ -5,7 +5,7 @@ import { Stack } from '../../../core/components/Stack/Stack';
 
 export const GapExample = () => (
   <ExampleSection title="Gap">
-    <ExampleCard vertical>
+    <ExampleCard>
       <Stack gap="none">
         <Box>None #1</Box>
         <Box>None #2</Box>
