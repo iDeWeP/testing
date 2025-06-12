@@ -11,6 +11,7 @@ export const SpacingExample = () => (
       <Header size="md">MD</Header>
       <Header size="lg">LG</Header>
       <Header size="xl">XL</Header>
+      <Header size="xxl">XXL</Header>
     </ExampleCard>
     <ExampleCard align>
       <Header size="xs-xs">XS-XS</Header>
@@ -18,6 +19,7 @@ export const SpacingExample = () => (
       <Header size="md-md">MD-MD</Header>
       <Header size="lg-lg">LG-LG</Header>
       <Header size="xl-xl">XL-XL</Header>
+      <Header size="xxl-xxl">XXL-XXL</Header>
     </ExampleCard>
   </ExampleSection>
 );
