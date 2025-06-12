@@ -1,0 +1,75 @@
+import { ExampleCard } from '../../../components/ExampleCard';
+import { ExampleSection } from '../../../components/ExampleSection';
+import { Stack } from '../../../core/components/Stack/Stack';
+
+export const VariantExample = () => (
+  <ExampleSection title="Variant">
+    <ExampleCard>
+      <Stack
+        variant="text"
+        color="primary"
+      >
+        TEXT
+      </Stack>
+      <Stack
+        variant="plain"
+        color="primary"
+      >
+        PLAIN
+      </Stack>
+      <Stack
+        variant="light"
+        color="primary"
+      >
+        LIGHT
+      </Stack>
+      <Stack
+        variant="surface"
+        color="primary"
+      >
+        SURFACE
+      </Stack>
+      <Stack
+        variant="solid"
+        color="primary"
+      >
+        SOLID
+      </Stack>
+      <Stack
+        variant="text"
+        border
+        color="primary"
+      >
+        TEXT-BORDER
+      </Stack>
+      <Stack
+        variant="plain"
+        border
+        color="primary"
+      >
+        PLAIN-BORDER
+      </Stack>
+      <Stack
+        variant="light"
+        border
+        color="primary"
+      >
+        LIGHT-BORDER
+      </Stack>
+      <Stack
+        variant="surface"
+        border
+        color="primary"
+      >
+        SURFACE-BORDER
+      </Stack>
+      <Stack
+        variant="solid"
+        border
+        color="primary"
+      >
+        SOLID-BORDER
+      </Stack>
+    </ExampleCard>
+  </ExampleSection>
+);
