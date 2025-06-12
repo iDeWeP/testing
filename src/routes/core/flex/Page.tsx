@@ -16,12 +16,12 @@ import { WrapExample } from './WrapExample';
 const Page = () => (
   <>
     <ExampleTitle>Flex</ExampleTitle>
+    <DefaultExample />
     <DirectionExample />
     <WrapExample />
     <JustifyExample />
     <AlignExample />
     <GapExample />
-    <DefaultExample />
     <VariantExample />
     <ScaleExample />
     <SpacingExample />
