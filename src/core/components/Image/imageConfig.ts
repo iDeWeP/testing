@@ -12,7 +12,7 @@ type Styles = {
 const imageConfig: ComponentConfig<ImageConfigProps> & Styles = {
   props: {
     variant: 'none',
-    scale: 'square',
+    scale: 'square-full',
     spacing: 'none',
     margin: 'none',
     border: false,
@@ -22,7 +22,6 @@ const imageConfig: ComponentConfig<ImageConfigProps> & Styles = {
   styles: {
     root: {
       default: {
-        width: 'w-full',
         maxWidth: 'max-w-none'
       }
     }
