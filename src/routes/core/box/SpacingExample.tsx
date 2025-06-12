@@ -1,16 +1,16 @@
 import { ExampleCard } from '../../../components/ExampleCard';
 import { ExampleSection } from '../../../components/ExampleSection';
-import { Box } from '../../../core/components/Box/Box';
+import { UnstyledBox } from '../../../core/components/UnstyledBox/UnstyledBox';
 
 export const SpacingExample = () => (
   <ExampleSection title="Spacing">
     <ExampleCard align>
-      <Box spacing="none">NONE</Box>
-      <Box spacing="xs">XS</Box>
-      <Box spacing="sm">SM</Box>
-      <Box spacing="md">MD</Box>
-      <Box spacing="lg">LG</Box>
-      <Box spacing="xl">XL</Box>
+      <UnstyledBox spacing="none">NONE</UnstyledBox>
+      <UnstyledBox spacing="xs">XS</UnstyledBox>
+      <UnstyledBox spacing="sm">SM</UnstyledBox>
+      <UnstyledBox spacing="md">MD</UnstyledBox>
+      <UnstyledBox spacing="lg">LG</UnstyledBox>
+      <UnstyledBox spacing="xl">XL</UnstyledBox>
     </ExampleCard>
   </ExampleSection>
 );

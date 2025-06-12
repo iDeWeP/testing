@@ -1,17 +1,17 @@
 import { ExampleCard } from '../../../components/ExampleCard';
 import { ExampleSection } from '../../../components/ExampleSection';
-import { Box } from '../../../core/components/Box/Box';
+import { UnstyledBox } from '../../../core/components/UnstyledBox/UnstyledBox';
 
 export const BorderExample = () => (
   <ExampleSection title="Border">
     <ExampleCard>
-      <Box border="all">ALL</Box>
-      <Box border="x">X</Box>
-      <Box border="y">Y</Box>
-      <Box border="top">TOP</Box>
-      <Box border="bottom">BOTTOM</Box>
-      <Box border="left">LEFT</Box>
-      <Box border="right">RIGHT</Box>
+      <UnstyledBox border="all">ALL</UnstyledBox>
+      <UnstyledBox border="x">X</UnstyledBox>
+      <UnstyledBox border="y">Y</UnstyledBox>
+      <UnstyledBox border="top">TOP</UnstyledBox>
+      <UnstyledBox border="bottom">BOTTOM</UnstyledBox>
+      <UnstyledBox border="left">LEFT</UnstyledBox>
+      <UnstyledBox border="right">RIGHT</UnstyledBox>
     </ExampleCard>
   </ExampleSection>
 );

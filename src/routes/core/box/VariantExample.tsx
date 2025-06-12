@@ -1,75 +1,75 @@
 import { ExampleCard } from '../../../components/ExampleCard';
 import { ExampleSection } from '../../../components/ExampleSection';
-import { Box } from '../../../core/components/Box/Box';
+import { UnstyledBox } from '../../../core/components/UnstyledBox/UnstyledBox';
 
 export const VariantExample = () => (
   <ExampleSection title="Variant">
     <ExampleCard>
-      <Box
+      <UnstyledBox
         variant="text"
         color="primary"
       >
         TEXT
-      </Box>
-      <Box
+      </UnstyledBox>
+      <UnstyledBox
         variant="plain"
         color="primary"
       >
         PLAIN
-      </Box>
-      <Box
+      </UnstyledBox>
+      <UnstyledBox
         variant="light"
         color="primary"
       >
         LIGHT
-      </Box>
-      <Box
+      </UnstyledBox>
+      <UnstyledBox
         variant="surface"
         color="primary"
       >
         SURFACE
-      </Box>
-      <Box
+      </UnstyledBox>
+      <UnstyledBox
         variant="solid"
         color="primary"
       >
         SOLID
-      </Box>
-      <Box
+      </UnstyledBox>
+      <UnstyledBox
         variant="text"
         border
         color="primary"
       >
         TEXT-BORDER
-      </Box>
-      <Box
+      </UnstyledBox>
+      <UnstyledBox
         variant="plain"
         border
         color="primary"
       >
         PLAIN-BORDER
-      </Box>
-      <Box
+      </UnstyledBox>
+      <UnstyledBox
         variant="light"
         border
         color="primary"
       >
         LIGHT-BORDER
-      </Box>
-      <Box
+      </UnstyledBox>
+      <UnstyledBox
         variant="surface"
         border
         color="primary"
       >
         SURFACE-BORDER
-      </Box>
-      <Box
+      </UnstyledBox>
+      <UnstyledBox
         variant="solid"
         border
         color="primary"
       >
         SOLID-BORDER
-      </Box>
+      </UnstyledBox>
     </ExampleCard>
   </ExampleSection>
 );

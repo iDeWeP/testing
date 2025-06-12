@@ -1,52 +1,52 @@
 import { ExampleCard } from '../../../components/ExampleCard';
 import { ExampleSection } from '../../../components/ExampleSection';
-import { Box } from '../../../core/components/Box/Box';
+import { UnstyledBox } from '../../../core/components/UnstyledBox/UnstyledBox';
 
 export const ColorExample = () => (
   <ExampleSection title="Color">
     <ExampleCard>
-      <Box
+      <UnstyledBox
         variant="solid"
         color="neutral"
       >
         NEUTRAL
-      </Box>
-      <Box
+      </UnstyledBox>
+      <UnstyledBox
         variant="solid"
         color="primary"
       >
         PRIMARY
-      </Box>
-      <Box
+      </UnstyledBox>
+      <UnstyledBox
         variant="solid"
         color="secondary"
       >
         SECONDARY
-      </Box>
-      <Box
+      </UnstyledBox>
+      <UnstyledBox
         variant="solid"
         color="tertiary"
       >
         TERTIARY
-      </Box>
-      <Box
+      </UnstyledBox>
+      <UnstyledBox
         variant="solid"
         color="success"
       >
         SUCCESS
-      </Box>
-      <Box
+      </UnstyledBox>
+      <UnstyledBox
         variant="solid"
         color="warning"
       >
         WARNING
-      </Box>
-      <Box
+      </UnstyledBox>
+      <UnstyledBox
         variant="solid"
         color="error"
       >
         ERROR
-      </Box>
+      </UnstyledBox>
     </ExampleCard>
   </ExampleSection>
 );

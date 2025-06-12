@@ -1,17 +1,17 @@
 import { ExampleCard } from '../../../components/ExampleCard';
 import { ExampleSection } from '../../../components/ExampleSection';
-import { Box } from '../../../core/components/Box/Box';
+import { UnstyledBox } from '../../../core/components/UnstyledBox/UnstyledBox';
 
 export const MarginExample = () => (
   <ExampleSection title="Margin">
     <ExampleCard align>
-      <Box margin="none">NONE</Box>
-      <Box margin="xs">XS</Box>
-      <Box margin="sm">SM</Box>
-      <Box margin="md">MD</Box>
-      <Box margin="lg">LG</Box>
-      <Box margin="xl">XL</Box>
-      <Box margin="xxl">XXL</Box>
+      <UnstyledBox margin="none">NONE</UnstyledBox>
+      <UnstyledBox margin="xs">XS</UnstyledBox>
+      <UnstyledBox margin="sm">SM</UnstyledBox>
+      <UnstyledBox margin="md">MD</UnstyledBox>
+      <UnstyledBox margin="lg">LG</UnstyledBox>
+      <UnstyledBox margin="xl">XL</UnstyledBox>
+      <UnstyledBox margin="xxl">XXL</UnstyledBox>
     </ExampleCard>
   </ExampleSection>
 );
