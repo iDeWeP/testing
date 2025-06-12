@@ -6,27 +6,16 @@ import type { FlexProps } from './Flex.types';
 import { flexConfig } from './flexConfig';
 
 export const Flex = <E extends ElementType = 'div'>(props: FlexProps<E>) => {
-  const {
+  const { direction, wrap, justify, align, gap, className, ...restProps } =
+    useMergeProps('flex', flexConfig.props, props);
+
+  const mergedClassName = mergeClassName('flex', className, {
     direction,
     wrap,
     justify,
     align,
-    gap,
-    configClassName,
-    className,
-    ...restProps
-  } = useMergeProps('flex', flexConfig.props, props);
-
-  const mergedClassName = mergeClassName(
-    { component: 'flex', className, configClassName },
-    {
-      direction,
-      wrap,
-      justify,
-      align,
-      gap
-    }
-  );
+    gap
+  });
 
   return (
     <Box

@@ -6,17 +6,13 @@ import type { ImageProps } from './Image.types';
 import { imageConfig } from './imageConfig';
 
 export const Image = <E extends ElementType = 'img'>(props: ImageProps<E>) => {
-  const { configClassName, className, ...restProps } = useMergeProps(
+  const { className, ...restProps } = useMergeProps(
     'image',
     imageConfig.props,
     props
   );
 
-  const mergedClassName = mergeClassName({
-    component: 'image',
-    className,
-    configClassName
-  });
+  const mergedClassName = mergeClassName('image', className);
 
   return (
     <Box
