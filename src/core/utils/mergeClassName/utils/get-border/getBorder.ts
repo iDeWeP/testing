@@ -1,6 +1,6 @@
-import type { Border, DefaultBorder } from '../../../../types';
+import type { Border } from '../../../../types';
 
-const getBorder = (border: Border): DefaultBorder => {
+const getBorder = (border: Border) => {
   if (typeof border === 'string') {
     return border;
   }

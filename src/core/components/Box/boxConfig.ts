@@ -4,7 +4,7 @@ import type { BoxConfigProps } from './Box.types';
 const boxConfig: ComponentConfig<BoxConfigProps> = {
   props: {
     variant: 'surface',
-    scale: 'default',
+    scale: 'square',
     spacing: 'none',
     margin: 'none',
     border: 'none',

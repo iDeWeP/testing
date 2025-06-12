@@ -1,145 +1,67 @@
 import type {
-  AvatarSize,
-  IconSize,
-  TextColor,
+  AlignItems,
   Color,
   CSSProps,
-  Orientation,
-  Display,
-  InnerPlacement,
-  DefaultSpacing,
-  DefaultSize,
-  Spacing,
-  SidePlacement,
-  Gap,
-  Margin,
-  DefaultBorder,
-  Radius,
-  Weight,
-  Underline,
-  TextWrap,
-  TextAlign,
-  TextOverflow,
-  WordBreak,
-  Theme,
   Direction,
-  Wrap,
+  Gap,
   JustifyContent,
-  AlignItems,
-  Effect
+  Margin,
+  Radius,
+  ScaleSizes,
+  ScaleWidth,
+  Spacing,
+  Wrap
 } from '../types';
 
-type Loading = 'none' | 'default' | 'hide';
-type Position = 'static' | 'absolute' | 'fixed' | 'relative';
-type ExtendedSize = 'none' | AvatarSize;
-type Size = IconSize;
-type Scale = 'default' | 'screen' | 'full' | 'fit' | 'square';
-type DefaultScale = 'default' | 'square';
-type Padding = 'default' | 'bordered';
+type Display = 'block' | 'flex' | 'grid' | 'inline-flex';
+type Border =
+  | 'none'
+  | 'all'
+  | 'x'
+  | 'y'
+  | 'top'
+  | 'bottom'
+  | 'left'
+  | 'right'
+  | 'x-top'
+  | 'x-bottom'
+  | 'y-left'
+  | 'y-right'
+  | 'top-left'
+  | 'top-right'
+  | 'bottom-left'
+  | 'bottom-right';
 type DefaultRadius = 'sm' | 'md' | 'lg';
-type DefaultColor =
-  | 'disabled'
-  | 'on-disabled'
-  | 'soft-neutral'
-  | 'soft-primary'
-  | 'soft-secondary'
-  | 'soft-tertiary'
-  | 'soft-success'
-  | 'soft-warning'
-  | 'soft-error'
-  | TextColor;
-type BgColor = 'shell' | DefaultColor;
-type RingColor = 'disabled' | TextColor;
-type FocusColor = 'inherit' | Color;
+type MergedColor = 'disabled' | 'surface' | Color;
 type GapDirection = 'default' | 'row' | 'col';
-type Transition = 'fade' | 'transform' | 'transform-fade';
-type Cursor = 'none' | 'pointer' | 'disabled';
-type FocusPosition = 'parent' | 'child';
-type Focus = 'none' | 'default' | 'disabled';
 
-interface Generic {
+type Generic = {
   styles: {
-    loading: Record<Loading, CSSProps>;
-    orientation: Record<Orientation, CSSProps>;
     display: Record<Display, CSSProps>;
-    position: Record<Position, CSSProps>;
-    placement: Record<InnerPlacement, Record<DefaultSpacing, CSSProps>>;
-    size: {
-      default: Record<ExtendedSize, Record<DefaultScale, CSSProps>>;
-      text: Record<Size, Record<DefaultScale, CSSProps>>;
-      font: Record<DefaultSize, CSSProps>;
-    };
-    scale: Record<Scale, CSSProps>;
+    scale: Record<ScaleWidth, CSSProps>;
     spacing: {
-      default: Record<Spacing, CSSProps>;
-      button: Record<
-        DefaultSize,
-        Record<DefaultScale, Record<Padding, CSSProps>>
-      >;
-      action: Record<
-        SidePlacement,
-        Record<Size, Record<DefaultSize, Record<Gap, CSSProps>>>
-      >;
+      default: Record<ScaleSizes, Record<Spacing, CSSProps>>;
     };
-    gutter: Record<Gap, CSSProps>;
     margin: Record<Margin, CSSProps>;
-    border: Record<DefaultBorder, CSSProps>;
+    border: Record<Border, CSSProps>;
     radius: Record<DefaultRadius, Record<Radius, CSSProps>>;
-    ring: CSSProps;
-    weight: Record<Weight, CSSProps>;
-    underline: Record<Underline, CSSProps>;
-    textWrap: Record<TextWrap, CSSProps>;
-    textAlign: Record<TextAlign, CSSProps>;
-    textOverflow: Record<TextOverflow, CSSProps>;
-    wordBreak: Record<WordBreak, CSSProps>;
     color: {
-      overlay: CSSProps;
-      bg: Record<Theme, Record<BgColor, CSSProps>>;
-      border: {
-        none: CSSProps;
-        transparent: CSSProps;
-        default: Record<Theme, Record<DefaultColor, CSSProps>>;
-      };
-      text: Record<Theme, Record<DefaultColor, CSSProps>>;
-      fill: Record<Theme, Record<DefaultColor, CSSProps>>;
-      ring: Record<Theme, Record<RingColor, CSSProps>>;
-      focus: Record<FocusPosition, Record<Theme, Record<FocusColor, CSSProps>>>;
+      bg: Record<MergedColor, Record<string, CSSProps>>;
+      border: Record<MergedColor, Record<string, CSSProps>>;
+      text: Record<MergedColor, Record<string, CSSProps>>;
+      fill: Record<MergedColor, Record<string, CSSProps>>;
+      ring: Record<MergedColor, Record<string, CSSProps>>;
     };
     direction: Record<Direction, CSSProps>;
     wrap: Record<Wrap, CSSProps>;
     justify: Record<JustifyContent, CSSProps>;
     align: Record<AlignItems, CSSProps>;
     gap: Record<GapDirection, Record<Gap, CSSProps>>;
-    effect: Record<Effect, CSSProps>;
-    transition: Record<Transition, CSSProps>;
-    cursor: Record<Cursor, CSSProps>;
-    blur: CSSProps;
-    focus: Record<Focus, CSSProps>;
   };
-}
+};
 
 export const generic: Generic = {
   styles: {
-    loading: {
-      none: {},
-      default: {
-        opacity: 'opacity-50'
-      },
-      hide: {
-        opacity: 'opacity-50',
-        fill: 'fill-transparent',
-        color: 'text-transparent'
-      }
-    },
-    orientation: {
-      horizontal: {
-        margin: '-space-x-px'
-      },
-      vertical: {
-        margin: '-space-y-px',
-        flexDirection: 'flex-col'
-      }
-    },
     display: {
       block: {},
       flex: {
@@ -152,1547 +74,473 @@ export const generic: Generic = {
         display: 'inline-flex'
       }
     },
-    position: {
-      static: {
-        position: 'static'
-      },
-      absolute: {
-        position: 'absolute'
-      },
-      fixed: {
-        position: 'fixed'
-      },
-      relative: {
-        position: 'relative'
-      }
-    },
-    placement: {
-      top: {
-        none: {
-          top: 'top-0',
-          left: 'left-2/4',
-          translate: '-translate-x-2/4'
-        },
-        xs: {
-          top: 'top-2',
-          left: 'left-2/4',
-          translate: '-translate-x-2/4'
-        },
-        sm: {
-          top: 'top-4',
-          left: 'left-2/4',
-          translate: '-translate-x-2/4'
-        },
-        md: {
-          top: 'top-6',
-          left: 'left-2/4',
-          translate: '-translate-x-2/4'
-        },
-        lg: {
-          top: 'top-8',
-          left: 'left-2/4',
-          translate: '-translate-x-2/4'
-        },
-        xl: {
-          top: 'top-12',
-          left: 'left-2/4',
-          translate: '-translate-x-2/4'
-        },
-        'xs-xs': {
-          top: 'top-1',
-          left: 'left-2/4',
-          translate: '-translate-x-2/4'
-        },
-        'sm-sm': {
-          top: 'top-2',
-          left: 'left-2/4',
-          translate: '-translate-x-2/4'
-        },
-        'md-md': {
-          top: 'top-3',
-          left: 'left-2/4',
-          translate: '-translate-x-2/4'
-        },
-        'lg-lg': {
-          top: 'top-4',
-          left: 'left-2/4',
-          translate: '-translate-x-2/4'
-        },
-        'xl-xl': {
-          top: 'top-6',
-          left: 'left-2/4',
-          translate: '-translate-x-2/4'
-        }
-      },
-      bottom: {
-        none: {
-          bottom: 'bottom-0',
-          left: 'left-2/4',
-          translate: '-translate-x-2/4'
-        },
-        xs: {
-          bottom: 'bottom-2',
-          left: 'left-2/4',
-          translate: '-translate-x-2/4'
-        },
-        sm: {
-          bottom: 'bottom-4',
-          left: 'left-2/4',
-          translate: '-translate-x-2/4'
-        },
-        md: {
-          bottom: 'bottom-6',
-          left: 'left-2/4',
-          translate: '-translate-x-2/4'
-        },
-        lg: {
-          bottom: 'bottom-8',
-          left: 'left-2/4',
-          translate: '-translate-x-2/4'
-        },
-        xl: {
-          bottom: 'bottom-12',
-          left: 'left-2/4',
-          translate: '-translate-x-2/4'
-        },
-        'xs-xs': {
-          bottom: 'bottom-1',
-          left: 'left-2/4',
-          translate: '-translate-x-2/4'
-        },
-        'sm-sm': {
-          bottom: 'bottom-2',
-          left: 'left-2/4',
-          translate: '-translate-x-2/4'
-        },
-        'md-md': {
-          bottom: 'bottom-3',
-          left: 'left-2/4',
-          translate: '-translate-x-2/4'
-        },
-        'lg-lg': {
-          bottom: 'bottom-4',
-          left: 'left-2/4',
-          translate: '-translate-x-2/4'
-        },
-        'xl-xl': {
-          bottom: 'bottom-6',
-          left: 'left-2/4',
-          translate: '-translate-x-2/4'
-        }
-      },
-      left: {
-        none: { top: 'top-2/4', left: 'left-0', translate: '-translate-y-2/4' },
-        xs: { top: 'top-2/4', left: 'left-2', translate: '-translate-y-2/4' },
-        sm: { top: 'top-2/4', left: 'left-4', translate: '-translate-y-2/4' },
-        md: { top: 'top-2/4', left: 'left-6', translate: '-translate-y-2/4' },
-        lg: { top: 'top-2/4', left: 'left-8', translate: '-translate-y-2/4' },
-        xl: { top: 'top-2/4', left: 'left-12', translate: '-translate-y-2/4' },
-        'xs-xs': {
-          top: 'top-2/4',
-          left: 'left-2',
-          translate: '-translate-y-2/4'
-        },
-        'sm-sm': {
-          top: 'top-2/4',
-          left: 'left-4',
-          translate: '-translate-y-2/4'
-        },
-        'md-md': {
-          top: 'top-2/4',
-          left: 'left-6',
-          translate: '-translate-y-2/4'
-        },
-        'lg-lg': {
-          top: 'top-2/4',
-          left: 'left-8',
-          translate: '-translate-y-2/4'
-        },
-        'xl-xl': {
-          top: 'top-2/4',
-          left: 'left-12',
-          translate: '-translate-y-2/4'
-        }
-      },
-      right: {
-        none: {
-          top: 'top-2/4',
-          right: 'right-0',
-          translate: '-translate-y-2/4'
-        },
-        xs: { top: 'top-2/4', right: 'right-2', translate: '-translate-y-2/4' },
-        sm: { top: 'top-2/4', right: 'right-4', translate: '-translate-y-2/4' },
-        md: { top: 'top-2/4', right: 'right-6', translate: '-translate-y-2/4' },
-        lg: { top: 'top-2/4', right: 'right-8', translate: '-translate-y-2/4' },
-        xl: {
-          top: 'top-2/4',
-          right: 'right-12',
-          translate: '-translate-y-2/4'
-        },
-        'xs-xs': {
-          top: 'top-2/4',
-          right: 'right-2',
-          translate: '-translate-y-2/4'
-        },
-        'sm-sm': {
-          top: 'top-2/4',
-          right: 'right-4',
-          translate: '-translate-y-2/4'
-        },
-        'md-md': {
-          top: 'top-2/4',
-          right: 'right-6',
-          translate: '-translate-y-2/4'
-        },
-        'lg-lg': {
-          top: 'top-2/4',
-          right: 'right-8',
-          translate: '-translate-y-2/4'
-        },
-        'xl-xl': {
-          top: 'top-2/4',
-          right: 'right-12',
-          translate: '-translate-y-2/4'
-        }
-      },
-      'top-left': {
-        none: { top: 'top-0', left: 'left-0' },
-        xs: { top: 'top-2', left: 'left-2' },
-        sm: { top: 'top-4', left: 'left-4' },
-        md: { top: 'top-6', left: 'left-6' },
-        lg: { top: 'top-8', left: 'left-8' },
-        xl: { top: 'top-12', left: 'left-12' },
-        'xs-xs': { top: 'top-1', left: 'left-2' },
-        'sm-sm': { top: 'top-2', left: 'left-4' },
-        'md-md': { top: 'top-3', left: 'left-6' },
-        'lg-lg': { top: 'top-4', left: 'left-8' },
-        'xl-xl': { top: 'top-6', left: 'left-12' }
-      },
-      'top-right': {
-        none: { top: 'top-0', right: 'right-0' },
-        xs: { top: 'top-2', right: 'right-2' },
-        sm: { top: 'top-4', right: 'right-4' },
-        md: { top: 'top-6', right: 'right-6' },
-        lg: { top: 'top-8', right: 'right-8' },
-        xl: { top: 'top-12', right: 'right-12' },
-        'xs-xs': { top: 'top-1', right: 'right-2' },
-        'sm-sm': { top: 'top-2', right: 'right-4' },
-        'md-md': { top: 'top-3', right: 'right-6' },
-        'lg-lg': { top: 'top-4', right: 'right-8' },
-        'xl-xl': { top: 'top-6', right: 'right-12' }
-      },
-      'bottom-left': {
-        none: { bottom: 'bottom-0', left: 'left-0' },
-        xs: { bottom: 'bottom-2', left: 'left-2' },
-        sm: { bottom: 'bottom-4', left: 'left-4' },
-        md: { bottom: 'bottom-6', left: 'left-6' },
-        lg: { bottom: 'bottom-8', left: 'left-8' },
-        xl: { bottom: 'bottom-12', left: 'left-12' },
-        'xs-xs': { bottom: 'bottom-1', left: 'left-2' },
-        'sm-sm': { bottom: 'bottom-2', left: 'left-4' },
-        'md-md': { bottom: 'bottom-3', left: 'left-6' },
-        'lg-lg': { bottom: 'bottom-4', left: 'left-8' },
-        'xl-xl': { bottom: 'bottom-6', left: 'left-12' }
-      },
-      'bottom-right': {
-        none: { bottom: 'bottom-0', right: 'right-0' },
-        xs: { bottom: 'bottom-2', right: 'right-2' },
-        sm: { bottom: 'bottom-4', right: 'right-4' },
-        md: { bottom: 'bottom-6', right: 'right-6' },
-        lg: { bottom: 'bottom-8', right: 'right-8' },
-        xl: { bottom: 'bottom-12', right: 'right-12' },
-        'xs-xs': { bottom: 'bottom-1', right: 'right-2' },
-        'sm-sm': { bottom: 'bottom-2', right: 'right-4' },
-        'md-md': { bottom: 'bottom-3', right: 'right-6' },
-        'lg-lg': { bottom: 'bottom-4', right: 'right-8' },
-        'xl-xl': { bottom: 'bottom-6', right: 'right-12' }
-      }
-    },
-    size: {
-      default: {
-        none: {
-          default: {},
-          square: {}
-        },
-        xs: {
-          default: {
-            height: 'h-5'
-          },
-          square: {
-            width: 'w-5',
-            height: 'h-5'
-          }
-        },
-        sm: {
-          default: {
-            height: 'h-8'
-          },
-          square: {
-            width: 'w-8',
-            height: 'h-8'
-          }
-        },
-        md: {
-          default: {
-            height: 'h-10'
-          },
-          square: {
-            width: 'w-10',
-            height: 'h-10'
-          }
-        },
-        lg: {
-          default: {
-            height: 'h-12'
-          },
-          square: {
-            width: 'w-12',
-            height: 'h-12'
-          }
-        },
-        xl: {
-          default: {
-            height: 'h-16'
-          },
-          square: {
-            width: 'w-16',
-            height: 'h-16'
-          }
-        },
-        xxl: {
-          default: {
-            height: 'h-24'
-          },
-          square: {
-            width: 'w-24',
-            height: 'h-24'
-          }
-        }
-      },
-      text: {
-        none: {
-          default: {},
-          square: {}
-        },
-        xs: {
-          default: {
-            height: 'h-3'
-          },
-          square: {
-            width: 'w-3',
-            height: 'h-3'
-          }
-        },
-        sm: {
-          default: {
-            height: 'h-4'
-          },
-          square: {
-            width: 'w-4',
-            height: 'h-4'
-          }
-        },
-        md: {
-          default: {
-            height: 'h-5'
-          },
-          square: {
-            width: 'w-5',
-            height: 'h-5'
-          }
-        },
-        lg: {
-          default: {
-            height: 'h-6'
-          },
-          square: {
-            width: 'w-6',
-            height: 'h-6'
-          }
-        },
-        xl: {
-          default: {
-            height: 'h-7'
-          },
-          square: {
-            width: 'w-7',
-            height: 'h-7'
-          }
-        }
-      },
-      font: {
-        xs: {
-          fontSize: 'text-xs'
-        },
-        sm: {
-          fontSize: 'text-sm'
-        },
-        md: {
-          fontSize: 'text-md'
-        },
-        lg: {
-          fontSize: 'text-lg'
-        },
-        xl: {
-          fontSize: 'text-xl'
-        }
-      }
-    },
     scale: {
       default: {},
-      screen: {
-        position: 'relative',
-        left: 'left-1/2',
-        right: 'right-1/2',
-        width: 'w-screen',
-        margin: 'ml-[-50vw] mr-[-50vw]'
-      },
       full: {
         width: 'w-full'
       },
       fit: {
         width: 'w-fit'
-      },
-      square: {
-        overflow: 'overflow-hidden'
       }
     },
     spacing: {
       default: {
-        none: {},
-        xs: {
-          padding: 'p-2'
-        },
-        sm: {
-          padding: 'p-4'
-        },
-        md: {
-          padding: 'p-6'
-        },
-        lg: {
-          padding: 'p-8'
-        },
-        xl: {
-          padding: 'p-12'
-        },
-        'xs-xs': {
-          padding: 'px-2 py-1'
-        },
-        'sm-sm': {
-          padding: 'px-4 py-2'
-        },
-        'md-md': {
-          padding: 'px-6 py-3'
-        },
-        'lg-lg': {
-          padding: 'px-8 py-4'
-        },
-        'xl-xl': {
-          padding: 'px-12 py-6'
-        },
-        'xs-x': {
-          padding: 'px-2'
-        },
-        'xs-y': {
-          padding: 'py-2'
-        },
-        'xs-top': {
-          padding: 'pt-2'
-        },
-        'xs-bottom': {
-          padding: 'pb-2'
-        },
-        'xs-left': {
-          padding: 'pl-2'
-        },
-        'xs-right': {
-          padding: 'pr-2'
-        },
-        'xs-x-top': {
-          padding: 'px-2 pt-2'
-        },
-        'xs-x-bottom': {
-          padding: 'px-2 pb-2'
-        },
-        'xs-y-left': {
-          padding: 'py-2 pl-2'
-        },
-        'xs-y-right': {
-          padding: 'py-2 pr-2'
-        },
-        'xs-top-left': {
-          padding: 'pt-2 pl-2'
-        },
-        'xs-top-right': {
-          padding: 'pt-2 pr-2'
-        },
-        'xs-bottom-left': {
-          padding: 'pb-2 pl-2'
-        },
-        'xs-bottom-right': {
-          padding: 'pb-2 pr-2'
-        },
-        'sm-x': {
-          padding: 'px-4'
-        },
-        'sm-y': {
-          padding: 'py-4'
-        },
-        'sm-top': {
-          padding: 'pt-4'
-        },
-        'sm-bottom': {
-          padding: 'pb-4'
-        },
-        'sm-left': {
-          padding: 'pl-4'
-        },
-        'sm-right': {
-          padding: 'pr-4'
-        },
-        'sm-x-top': {
-          padding: 'px-4 pt-4'
-        },
-        'sm-x-bottom': {
-          padding: 'px-4 pb-4'
-        },
-        'sm-y-left': {
-          padding: 'py-4 pl-4'
-        },
-        'sm-y-right': {
-          padding: 'py-4 pr-4'
-        },
-        'sm-top-left': {
-          padding: 'pt-4 pl-4'
-        },
-        'sm-top-right': {
-          padding: 'pt-4 pr-4'
-        },
-        'sm-bottom-left': {
-          padding: 'pb-4 pl-4'
-        },
-        'sm-bottom-right': {
-          padding: 'pb-4 pr-4'
-        },
-        'md-x': {
-          padding: 'px-6'
-        },
-        'md-y': {
-          padding: 'py-6'
-        },
-        'md-top': {
-          padding: 'pt-6'
-        },
-        'md-bottom': {
-          padding: 'pb-6'
-        },
-        'md-left': {
-          padding: 'pl-6'
-        },
-        'md-right': {
-          padding: 'pr-6'
-        },
-        'md-x-top': {
-          padding: 'px-6 pt-6'
-        },
-        'md-x-bottom': {
-          padding: 'px-6 pb-6'
-        },
-        'md-y-left': {
-          padding: 'py-6 pl-6'
-        },
-        'md-y-right': {
-          padding: 'py-6 pr-6'
-        },
-        'md-top-left': {
-          padding: 'pt-6 pl-6'
-        },
-        'md-top-right': {
-          padding: 'pt-6 pr-6'
-        },
-        'md-bottom-left': {
-          padding: 'pb-6 pl-6'
-        },
-        'md-bottom-right': {
-          padding: 'pb-6 pr-6'
-        },
-        'lg-x': {
-          padding: 'px-8'
-        },
-        'lg-y': {
-          padding: 'py-8'
-        },
-        'lg-top': {
-          padding: 'pt-8'
-        },
-        'lg-bottom': {
-          padding: 'pb-8'
-        },
-        'lg-left': {
-          padding: 'pl-8'
-        },
-        'lg-right': {
-          padding: 'pr-8'
-        },
-        'lg-x-top': {
-          padding: 'px-8 pt-8'
-        },
-        'lg-x-bottom': {
-          padding: 'px-8 pb-8'
-        },
-        'lg-y-left': {
-          padding: 'py-8 pl-8'
-        },
-        'lg-y-right': {
-          padding: 'py-8 pr-8'
-        },
-        'lg-top-left': {
-          padding: 'pt-8 pl-8'
-        },
-        'lg-top-right': {
-          padding: 'pt-8 pr-8'
-        },
-        'lg-bottom-left': {
-          padding: 'pb-8 pl-8'
-        },
-        'lg-bottom-right': {
-          padding: 'pb-8 pr-8'
-        },
-        'xl-x': {
-          padding: 'px-12'
-        },
-        'xl-y': {
-          padding: 'py-12'
-        },
-        'xl-top': {
-          padding: 'pt-12'
-        },
-        'xl-bottom': {
-          padding: 'pb-12'
-        },
-        'xl-left': {
-          padding: 'pl-12'
-        },
-        'xl-right': {
-          padding: 'pr-12'
-        },
-        'xl-x-top': {
-          padding: 'px-12 pt-12'
-        },
-        'xl-x-bottom': {
-          padding: 'px-12 pb-12'
-        },
-        'xl-y-left': {
-          padding: 'py-12 pl-12'
-        },
-        'xl-y-right': {
-          padding: 'py-12 pr-12'
-        },
-        'xl-top-left': {
-          padding: 'pt-12 pl-12'
-        },
-        'xl-top-right': {
-          padding: 'pt-12 pr-12'
-        },
-        'xl-bottom-left': {
-          padding: 'pb-12 pl-12'
-        },
-        'xl-bottom-right': {
-          padding: 'pb-12 pr-12'
-        },
-        'xs-xs-x': {
-          padding: 'px-2'
-        },
-        'xs-xs-y': {
-          padding: 'py-1'
-        },
-        'xs-xs-top': {
-          padding: 'pt-1'
-        },
-        'xs-xs-bottom': {
-          padding: 'pb-1'
-        },
-        'xs-xs-left': {
-          padding: 'pl-2'
-        },
-        'xs-xs-right': {
-          padding: 'pr-2'
-        },
-        'xs-xs-x-top': {
-          padding: 'px-2 pt-1'
-        },
-        'xs-xs-x-bottom': {
-          padding: 'px-2 pb-1'
-        },
-        'xs-xs-y-left': {
-          padding: 'py-1 pl-2'
-        },
-        'xs-xs-y-right': {
-          padding: 'py-1 pr-2'
-        },
-        'xs-xs-top-left': {
-          padding: 'pt-1 pl-2'
-        },
-        'xs-xs-top-right': {
-          padding: 'pt-1 pr-2'
-        },
-        'xs-xs-bottom-left': {
-          padding: 'pb-1 pl-2'
-        },
-        'xs-xs-bottom-right': {
-          padding: 'pb-1 pr-2'
-        },
-        'sm-sm-x': {
-          padding: 'px-4'
-        },
-        'sm-sm-y': {
-          padding: 'py-2'
-        },
-        'sm-sm-top': {
-          padding: 'pt-2'
-        },
-        'sm-sm-bottom': {
-          padding: 'pb-2'
-        },
-        'sm-sm-left': {
-          padding: 'pl-4'
-        },
-        'sm-sm-right': {
-          padding: 'pr-4'
-        },
-        'sm-sm-x-top': {
-          padding: 'px-4 pt-2'
-        },
-        'sm-sm-x-bottom': {
-          padding: 'px-4 pb-2'
-        },
-        'sm-sm-y-left': {
-          padding: 'py-2 pl-4'
-        },
-        'sm-sm-y-right': {
-          padding: 'py-2 pr-4'
-        },
-        'sm-sm-top-left': {
-          padding: 'pt-2 pl-4'
-        },
-        'sm-sm-top-right': {
-          padding: 'pt-2 pr-4'
-        },
-        'sm-sm-bottom-left': {
-          padding: 'pb-2 pl-4'
-        },
-        'sm-sm-bottom-right': {
-          padding: 'pb-2 pr-4'
-        },
-        'md-md-x': {
-          padding: 'px-6'
-        },
-        'md-md-y': {
-          padding: 'py-3'
-        },
-        'md-md-top': {
-          padding: 'pt-3'
-        },
-        'md-md-bottom': {
-          padding: 'pb-3'
-        },
-        'md-md-left': {
-          padding: 'pl-6'
-        },
-        'md-md-right': {
-          padding: 'pr-6'
-        },
-        'md-md-x-top': {
-          padding: 'px-6 pt-3'
-        },
-        'md-md-x-bottom': {
-          padding: 'px-6 pb-3'
-        },
-        'md-md-y-left': {
-          padding: 'py-3 pl-6'
-        },
-        'md-md-y-right': {
-          padding: 'py-3 pr-6'
-        },
-        'md-md-top-left': {
-          padding: 'pt-3 pl-6'
-        },
-        'md-md-top-right': {
-          padding: 'pt-3 pr-6'
-        },
-        'md-md-bottom-left': {
-          padding: 'pb-3 pl-6'
-        },
-        'md-md-bottom-right': {
-          padding: 'pb-3 pr-6'
-        },
-        'lg-lg-x': {
-          padding: 'px-8'
-        },
-        'lg-lg-y': {
-          padding: 'py-4'
-        },
-        'lg-lg-top': {
-          padding: 'pt-4'
-        },
-        'lg-lg-bottom': {
-          padding: 'pb-4'
-        },
-        'lg-lg-left': {
-          padding: 'pl-8'
-        },
-        'lg-lg-right': {
-          padding: 'pr-8'
-        },
-        'lg-lg-x-top': {
-          padding: 'px-8 pt-4'
-        },
-        'lg-lg-x-bottom': {
-          padding: 'px-8 pb-4'
-        },
-        'lg-lg-y-left': {
-          padding: 'py-4 pl-8'
-        },
-        'lg-lg-y-right': {
-          padding: 'py-4 pr-8'
-        },
-        'lg-lg-top-left': {
-          padding: 'pt-4 pl-8'
-        },
-        'lg-lg-top-right': {
-          padding: 'pt-4 pr-8'
-        },
-        'lg-lg-bottom-left': {
-          padding: 'pb-4 pl-8'
-        },
-        'lg-lg-bottom-right': {
-          padding: 'pb-4 pr-8'
-        },
-        'xl-xl-x': {
-          padding: 'px-12'
-        },
-        'xl-xl-y': {
-          padding: 'py-6'
-        },
-        'xl-xl-top': {
-          padding: 'pt-6'
-        },
-        'xl-xl-bottom': {
-          padding: 'pb-6'
-        },
-        'xl-xl-left': {
-          padding: 'pl-12'
-        },
-        'xl-xl-right': {
-          padding: 'pr-12'
-        },
-        'xl-xl-x-top': {
-          padding: 'px-12 pt-6'
-        },
-        'xl-xl-x-bottom': {
-          padding: 'px-12 pb-6'
-        },
-        'xl-xl-y-left': {
-          padding: 'py-6 pl-12'
-        },
-        'xl-xl-y-right': {
-          padding: 'py-6 pr-12'
-        },
-        'xl-xl-top-left': {
-          padding: 'pt-6 pl-12'
-        },
-        'xl-xl-top-right': {
-          padding: 'pt-6 pr-12'
-        },
-        'xl-xl-bottom-left': {
-          padding: 'pb-6 pl-12'
-        },
-        'xl-xl-bottom-right': {
-          padding: 'pb-6 pr-12'
-        }
-      },
-      button: {
-        xs: {
-          default: {
-            default: {
-              padding: 'px-2 py-1'
-            },
-            bordered: {
-              padding: 'px-1.75 py-0.75'
-            }
-          },
-          square: {
-            default: {
-              padding: 'p-1'
-            },
-            bordered: {
-              padding: 'p-0.75'
-            }
-          }
-        },
-        sm: {
-          default: {
-            default: {
-              padding: 'px-4 py-2'
-            },
-            bordered: {
-              padding: 'px-3.75 py-1.75'
-            }
-          },
-          square: {
-            default: {
-              padding: 'p-2'
-            },
-            bordered: {
-              padding: 'p-1.75'
-            }
-          }
-        },
-        md: {
-          default: {
-            default: {
-              padding: 'px-5 py-2.5'
-            },
-            bordered: {
-              padding: 'px-4.75 py-2.25'
-            }
-          },
-          square: {
-            default: {
-              padding: 'p-2.5'
-            },
-            bordered: {
-              padding: 'p-2.25'
-            }
-          }
-        },
-        lg: {
-          default: {
-            default: {
-              padding: 'px-6 py-3'
-            },
-            bordered: {
-              padding: 'px-5.75 py-2.75'
-            }
-          },
-          square: {
-            default: {
-              padding: 'p-3'
-            },
-            bordered: {
-              padding: 'p-2.75'
-            }
-          }
-        },
-        xl: {
-          default: {
-            default: {
-              padding: 'px-9 py-4.5'
-            },
-            bordered: {
-              padding: 'px-8.75 py-4.25'
-            }
-          },
-          square: {
-            default: {
-              padding: 'p-4.5'
-            },
-            bordered: {
-              padding: 'p-4.25'
-            }
-          }
-        }
-      },
-      action: {
-        left: {
-          none: {
-            xs: {
-              none: { padding: 'pl-4.25' },
-              xs: { padding: 'pl-6.25' },
-              sm: { padding: 'pl-8.25' },
-              md: { padding: 'pl-10.25' },
-              lg: { padding: 'pl-12.25' },
-              xl: { padding: 'pl-16.25' },
-              xxl: { padding: 'pl-20.25' }
-            },
-            sm: {
-              none: { padding: 'pl-6' },
-              xs: { padding: 'pl-8' },
-              sm: { padding: 'pl-10' },
-              md: { padding: 'pl-12' },
-              lg: { padding: 'pl-14' },
-              xl: { padding: 'pl-18' },
-              xxl: { padding: 'pl-22' }
-            },
-            md: {
-              none: { padding: 'pl-7.5' },
-              xs: { padding: 'pl-9.5' },
-              sm: { padding: 'pl-11.5' },
-              md: { padding: 'pl-13.5' },
-              lg: { padding: 'pl-15.5' },
-              xl: { padding: 'pl-19.5' },
-              xxl: { padding: 'pl-23.5' }
-            },
-            lg: {
-              none: { padding: 'pl-9' },
-              xs: { padding: 'pl-11' },
-              sm: { padding: 'pl-13' },
-              md: { padding: 'pl-15' },
-              lg: { padding: 'pl-17' },
-              xl: { padding: 'pl-21' },
-              xxl: { padding: 'pl-25' }
-            },
-            xl: {
-              none: { padding: 'pl-11.5' },
-              xs: { padding: 'pl-13.5' },
-              sm: { padding: 'pl-15.5' },
-              md: { padding: 'pl-17.5' },
-              lg: { padding: 'pl-19.5' },
-              xl: { padding: 'pl-23.5' },
-              xxl: { padding: 'pl-27.5' }
-            }
-          },
+        square: {
+          none: {},
           xs: {
-            xs: {
-              none: { padding: 'pl-6.25' },
-              xs: { padding: 'pl-8.25' },
-              sm: { padding: 'pl-10.25' },
-              md: { padding: 'pl-12.25' },
-              lg: { padding: 'pl-14.25' },
-              xl: { padding: 'pl-18.25' },
-              xxl: { padding: 'pl-22.25' }
-            },
-            sm: {
-              none: { padding: 'pl-8' },
-              xs: { padding: 'pl-10' },
-              sm: { padding: 'pl-12' },
-              md: { padding: 'pl-14' },
-              lg: { padding: 'pl-16' },
-              xl: { padding: 'pl-20' },
-              xxl: { padding: 'pl-24' }
-            },
-            md: {
-              none: { padding: 'pl-9.5' },
-              xs: { padding: 'pl-11.5' },
-              sm: { padding: 'pl-13.5' },
-              md: { padding: 'pl-15.5' },
-              lg: { padding: 'pl-17.5' },
-              xl: { padding: 'pl-21.5' },
-              xxl: { padding: 'pl-25.5' }
-            },
-            lg: {
-              none: { padding: 'pl-11' },
-              xs: { padding: 'pl-13' },
-              sm: { padding: 'pl-15' },
-              md: { padding: 'pl-17' },
-              lg: { padding: 'pl-19' },
-              xl: { padding: 'pl-23' },
-              xxl: { padding: 'pl-27' }
-            },
-            xl: {
-              none: { padding: 'pl-13.5' },
-              xs: { padding: 'pl-15.5' },
-              sm: { padding: 'pl-17.5' },
-              md: { padding: 'pl-19.5' },
-              lg: { padding: 'pl-21.5' },
-              xl: { padding: 'pl-25.5' },
-              xxl: { padding: 'pl-29.5' }
-            }
+            padding: 'p-2'
           },
           sm: {
-            xs: {
-              none: { padding: 'pl-8.25' },
-              xs: { padding: 'pl-10.25' },
-              sm: { padding: 'pl-12.25' },
-              md: { padding: 'pl-14.25' },
-              lg: { padding: 'pl-16.25' },
-              xl: { padding: 'pl-20.25' },
-              xxl: { padding: 'pl-24.25' }
-            },
-            sm: {
-              none: { padding: 'pl-10' },
-              xs: { padding: 'pl-12' },
-              sm: { padding: 'pl-14' },
-              md: { padding: 'pl-16' },
-              lg: { padding: 'pl-18' },
-              xl: { padding: 'pl-22' },
-              xxl: { padding: 'pl-26' }
-            },
-            md: {
-              none: { padding: 'pl-11.5' },
-              xs: { padding: 'pl-13.5' },
-              sm: { padding: 'pl-15.5' },
-              md: { padding: 'pl-17.5' },
-              lg: { padding: 'pl-19.5' },
-              xl: { padding: 'pl-23.5' },
-              xxl: { padding: 'pl-27.5' }
-            },
-            lg: {
-              none: { padding: 'pl-13' },
-              xs: { padding: 'pl-15' },
-              sm: { padding: 'pl-17' },
-              md: { padding: 'pl-19' },
-              lg: { padding: 'pl-21' },
-              xl: { padding: 'pl-25' },
-              xxl: { padding: 'pl-29' }
-            },
-            xl: {
-              none: { padding: 'pl-15.5' },
-              xs: { padding: 'pl-17.5' },
-              sm: { padding: 'pl-19.5' },
-              md: { padding: 'pl-21.5' },
-              lg: { padding: 'pl-23.5' },
-              xl: { padding: 'pl-27.5' },
-              xxl: { padding: 'pl-31.5' }
-            }
+            padding: 'p-4'
           },
           md: {
-            xs: {
-              none: { padding: 'pl-10.25' },
-              xs: { padding: 'pl-12.25' },
-              sm: { padding: 'pl-14.25' },
-              md: { padding: 'pl-16.25' },
-              lg: { padding: 'pl-18.25' },
-              xl: { padding: 'pl-22.25' },
-              xxl: { padding: 'pl-26.25' }
-            },
-            sm: {
-              none: { padding: 'pl-12' },
-              xs: { padding: 'pl-14' },
-              sm: { padding: 'pl-16' },
-              md: { padding: 'pl-18' },
-              lg: { padding: 'pl-20' },
-              xl: { padding: 'pl-24' },
-              xxl: { padding: 'pl-28' }
-            },
-            md: {
-              none: { padding: 'pl-13.5' },
-              xs: { padding: 'pl-15.5' },
-              sm: { padding: 'pl-17.5' },
-              md: { padding: 'pl-19.5' },
-              lg: { padding: 'pl-21.5' },
-              xl: { padding: 'pl-25.5' },
-              xxl: { padding: 'pl-29.5' }
-            },
-            lg: {
-              none: { padding: 'pl-15' },
-              xs: { padding: 'pl-17' },
-              sm: { padding: 'pl-19' },
-              md: { padding: 'pl-21' },
-              lg: { padding: 'pl-23' },
-              xl: { padding: 'pl-27' },
-              xxl: { padding: 'pl-31' }
-            },
-            xl: {
-              none: { padding: 'pl-17.5' },
-              xs: { padding: 'pl-19.5' },
-              sm: { padding: 'pl-21.5' },
-              md: { padding: 'pl-23.5' },
-              lg: { padding: 'pl-25.5' },
-              xl: { padding: 'pl-29.5' },
-              xxl: { padding: 'pl-33.5' }
-            }
+            padding: 'p-6'
           },
           lg: {
-            xs: {
-              none: { padding: 'pl-12.25' },
-              xs: { padding: 'pl-14.25' },
-              sm: { padding: 'pl-16.25' },
-              md: { padding: 'pl-18.25' },
-              lg: { padding: 'pl-20.25' },
-              xl: { padding: 'pl-24.25' },
-              xxl: { padding: 'pl-28.25' }
-            },
-            sm: {
-              none: { padding: 'pl-14' },
-              xs: { padding: 'pl-16' },
-              sm: { padding: 'pl-18' },
-              md: { padding: 'pl-20' },
-              lg: { padding: 'pl-22' },
-              xl: { padding: 'pl-26' },
-              xxl: { padding: 'pl-30' }
-            },
-            md: {
-              none: { padding: 'pl-15.5' },
-              xs: { padding: 'pl-17.5' },
-              sm: { padding: 'pl-19.5' },
-              md: { padding: 'pl-21.5' },
-              lg: { padding: 'pl-23.5' },
-              xl: { padding: 'pl-27.5' },
-              xxl: { padding: 'pl-31.5' }
-            },
-            lg: {
-              none: { padding: 'pl-17' },
-              xs: { padding: 'pl-19' },
-              sm: { padding: 'pl-21' },
-              md: { padding: 'pl-23' },
-              lg: { padding: 'pl-25' },
-              xl: { padding: 'pl-29' },
-              xxl: { padding: 'pl-33' }
-            },
-            xl: {
-              none: { padding: 'pl-19.5' },
-              xs: { padding: 'pl-21.5' },
-              sm: { padding: 'pl-23.5' },
-              md: { padding: 'pl-25.5' },
-              lg: { padding: 'pl-27.5' },
-              xl: { padding: 'pl-31.5' },
-              xxl: { padding: 'pl-35.5' }
-            }
+            padding: 'p-8'
           },
           xl: {
-            xs: {
-              none: { padding: 'pl-16.25' },
-              xs: { padding: 'pl-18.25' },
-              sm: { padding: 'pl-20.25' },
-              md: { padding: 'pl-22.25' },
-              lg: { padding: 'pl-24.25' },
-              xl: { padding: 'pl-28.25' },
-              xxl: { padding: 'pl-32.25' }
-            },
-            sm: {
-              none: { padding: 'pl-18' },
-              xs: { padding: 'pl-20' },
-              sm: { padding: 'pl-22' },
-              md: { padding: 'pl-24' },
-              lg: { padding: 'pl-26' },
-              xl: { padding: 'pl-30' },
-              xxl: { padding: 'pl-34' }
-            },
-            md: {
-              none: { padding: 'pl-19.5' },
-              xs: { padding: 'pl-21.5' },
-              sm: { padding: 'pl-23.5' },
-              md: { padding: 'pl-25.5' },
-              lg: { padding: 'pl-27.5' },
-              xl: { padding: 'pl-31.5' },
-              xxl: { padding: 'pl-35.5' }
-            },
-            lg: {
-              none: { padding: 'pl-21' },
-              xs: { padding: 'pl-23' },
-              sm: { padding: 'pl-25' },
-              md: { padding: 'pl-27' },
-              lg: { padding: 'pl-29' },
-              xl: { padding: 'pl-33' },
-              xxl: { padding: 'pl-37' }
-            },
-            xl: {
-              none: { padding: 'pl-23.5' },
-              xs: { padding: 'pl-25.5' },
-              sm: { padding: 'pl-27.5' },
-              md: { padding: 'pl-29.5' },
-              lg: { padding: 'pl-31.5' },
-              xl: { padding: 'pl-35.5' },
-              xxl: { padding: 'pl-39.5' }
-            }
+            padding: 'p-12'
+          },
+          'xs-x': {
+            padding: 'px-2'
+          },
+          'xs-y': {
+            padding: 'py-2'
+          },
+          'xs-top': {
+            padding: 'pt-2'
+          },
+          'xs-bottom': {
+            padding: 'pb-2'
+          },
+          'xs-left': {
+            padding: 'pl-2'
+          },
+          'xs-right': {
+            padding: 'pr-2'
+          },
+          'xs-x-top': {
+            padding: 'px-2 pt-2'
+          },
+          'xs-x-bottom': {
+            padding: 'px-2 pb-2'
+          },
+          'xs-y-left': {
+            padding: 'py-2 pl-2'
+          },
+          'xs-y-right': {
+            padding: 'py-2 pr-2'
+          },
+          'xs-top-left': {
+            padding: 'pt-2 pl-2'
+          },
+          'xs-top-right': {
+            padding: 'pt-2 pr-2'
+          },
+          'xs-bottom-left': {
+            padding: 'pb-2 pl-2'
+          },
+          'xs-bottom-right': {
+            padding: 'pb-2 pr-2'
+          },
+          'sm-x': {
+            padding: 'px-4'
+          },
+          'sm-y': {
+            padding: 'py-4'
+          },
+          'sm-top': {
+            padding: 'pt-4'
+          },
+          'sm-bottom': {
+            padding: 'pb-4'
+          },
+          'sm-left': {
+            padding: 'pl-4'
+          },
+          'sm-right': {
+            padding: 'pr-4'
+          },
+          'sm-x-top': {
+            padding: 'px-4 pt-4'
+          },
+          'sm-x-bottom': {
+            padding: 'px-4 pb-4'
+          },
+          'sm-y-left': {
+            padding: 'py-4 pl-4'
+          },
+          'sm-y-right': {
+            padding: 'py-4 pr-4'
+          },
+          'sm-top-left': {
+            padding: 'pt-4 pl-4'
+          },
+          'sm-top-right': {
+            padding: 'pt-4 pr-4'
+          },
+          'sm-bottom-left': {
+            padding: 'pb-4 pl-4'
+          },
+          'sm-bottom-right': {
+            padding: 'pb-4 pr-4'
+          },
+          'md-x': {
+            padding: 'px-6'
+          },
+          'md-y': {
+            padding: 'py-6'
+          },
+          'md-top': {
+            padding: 'pt-6'
+          },
+          'md-bottom': {
+            padding: 'pb-6'
+          },
+          'md-left': {
+            padding: 'pl-6'
+          },
+          'md-right': {
+            padding: 'pr-6'
+          },
+          'md-x-top': {
+            padding: 'px-6 pt-6'
+          },
+          'md-x-bottom': {
+            padding: 'px-6 pb-6'
+          },
+          'md-y-left': {
+            padding: 'py-6 pl-6'
+          },
+          'md-y-right': {
+            padding: 'py-6 pr-6'
+          },
+          'md-top-left': {
+            padding: 'pt-6 pl-6'
+          },
+          'md-top-right': {
+            padding: 'pt-6 pr-6'
+          },
+          'md-bottom-left': {
+            padding: 'pb-6 pl-6'
+          },
+          'md-bottom-right': {
+            padding: 'pb-6 pr-6'
+          },
+          'lg-x': {
+            padding: 'px-8'
+          },
+          'lg-y': {
+            padding: 'py-8'
+          },
+          'lg-top': {
+            padding: 'pt-8'
+          },
+          'lg-bottom': {
+            padding: 'pb-8'
+          },
+          'lg-left': {
+            padding: 'pl-8'
+          },
+          'lg-right': {
+            padding: 'pr-8'
+          },
+          'lg-x-top': {
+            padding: 'px-8 pt-8'
+          },
+          'lg-x-bottom': {
+            padding: 'px-8 pb-8'
+          },
+          'lg-y-left': {
+            padding: 'py-8 pl-8'
+          },
+          'lg-y-right': {
+            padding: 'py-8 pr-8'
+          },
+          'lg-top-left': {
+            padding: 'pt-8 pl-8'
+          },
+          'lg-top-right': {
+            padding: 'pt-8 pr-8'
+          },
+          'lg-bottom-left': {
+            padding: 'pb-8 pl-8'
+          },
+          'lg-bottom-right': {
+            padding: 'pb-8 pr-8'
+          },
+          'xl-x': {
+            padding: 'px-12'
+          },
+          'xl-y': {
+            padding: 'py-12'
+          },
+          'xl-top': {
+            padding: 'pt-12'
+          },
+          'xl-bottom': {
+            padding: 'pb-12'
+          },
+          'xl-left': {
+            padding: 'pl-12'
+          },
+          'xl-right': {
+            padding: 'pr-12'
+          },
+          'xl-x-top': {
+            padding: 'px-12 pt-12'
+          },
+          'xl-x-bottom': {
+            padding: 'px-12 pb-12'
+          },
+          'xl-y-left': {
+            padding: 'py-12 pl-12'
+          },
+          'xl-y-right': {
+            padding: 'py-12 pr-12'
+          },
+          'xl-top-left': {
+            padding: 'pt-12 pl-12'
+          },
+          'xl-top-right': {
+            padding: 'pt-12 pr-12'
+          },
+          'xl-bottom-left': {
+            padding: 'pb-12 pl-12'
+          },
+          'xl-bottom-right': {
+            padding: 'pb-12 pr-12'
           }
         },
-        right: {
-          none: {
-            xs: {
-              none: { padding: 'pr-4.25' },
-              xs: { padding: 'pr-6.25' },
-              sm: { padding: 'pr-8.25' },
-              md: { padding: 'pr-10.25' },
-              lg: { padding: 'pr-12.25' },
-              xl: { padding: 'pr-16.25' },
-              xxl: { padding: 'pr-20.25' }
-            },
-            sm: {
-              none: { padding: 'pr-6' },
-              xs: { padding: 'pr-8' },
-              sm: { padding: 'pr-10' },
-              md: { padding: 'pr-12' },
-              lg: { padding: 'pr-14' },
-              xl: { padding: 'pr-18' },
-              xxl: { padding: 'pr-22' }
-            },
-            md: {
-              none: { padding: 'pr-7.5' },
-              xs: { padding: 'pr-9.5' },
-              sm: { padding: 'pr-11.5' },
-              md: { padding: 'pr-13.5' },
-              lg: { padding: 'pr-15.5' },
-              xl: { padding: 'pr-19.5' },
-              xxl: { padding: 'pr-23.5' }
-            },
-            lg: {
-              none: { padding: 'pr-9' },
-              xs: { padding: 'pr-11' },
-              sm: { padding: 'pr-13' },
-              md: { padding: 'pr-15' },
-              lg: { padding: 'pr-17' },
-              xl: { padding: 'pr-21' },
-              xxl: { padding: 'pr-25' }
-            },
-            xl: {
-              none: { padding: 'pr-11.5' },
-              xs: { padding: 'pr-13.5' },
-              sm: { padding: 'pr-15.5' },
-              md: { padding: 'pr-17.5' },
-              lg: { padding: 'pr-19.5' },
-              xl: { padding: 'pr-23.5' },
-              xxl: { padding: 'pr-27.5' }
-            }
-          },
+        rect: {
+          none: {},
           xs: {
-            xs: {
-              none: { padding: 'pr-6.25' },
-              xs: { padding: 'pr-8.25' },
-              sm: { padding: 'pr-10.25' },
-              md: { padding: 'pr-12.25' },
-              lg: { padding: 'pr-14.25' },
-              xl: { padding: 'pr-18.25' },
-              xxl: { padding: 'pr-22.25' }
-            },
-            sm: {
-              none: { padding: 'pr-8' },
-              xs: { padding: 'pr-10' },
-              sm: { padding: 'pr-12' },
-              md: { padding: 'pr-14' },
-              lg: { padding: 'pr-16' },
-              xl: { padding: 'pr-20' },
-              xxl: { padding: 'pr-24' }
-            },
-            md: {
-              none: { padding: 'pr-9.5' },
-              xs: { padding: 'pr-11.5' },
-              sm: { padding: 'pr-13.5' },
-              md: { padding: 'pr-15.5' },
-              lg: { padding: 'pr-17.5' },
-              xl: { padding: 'pr-21.5' },
-              xxl: { padding: 'pr-25.5' }
-            },
-            lg: {
-              none: { padding: 'pr-11' },
-              xs: { padding: 'pr-13' },
-              sm: { padding: 'pr-15' },
-              md: { padding: 'pr-17' },
-              lg: { padding: 'pr-19' },
-              xl: { padding: 'pr-23' },
-              xxl: { padding: 'pr-27' }
-            },
-            xl: {
-              none: { padding: 'pr-13.5' },
-              xs: { padding: 'pr-15.5' },
-              sm: { padding: 'pr-17.5' },
-              md: { padding: 'pr-19.5' },
-              lg: { padding: 'pr-21.5' },
-              xl: { padding: 'pr-25.5' },
-              xxl: { padding: 'pr-29.5' }
-            }
+            padding: 'px-2 py-1'
           },
           sm: {
-            xs: {
-              none: { padding: 'pr-8.25' },
-              xs: { padding: 'pr-10.25' },
-              sm: { padding: 'pr-12.25' },
-              md: { padding: 'pr-14.25' },
-              lg: { padding: 'pr-16.25' },
-              xl: { padding: 'pr-20.25' },
-              xxl: { padding: 'pr-24.25' }
-            },
-            sm: {
-              none: { padding: 'pr-10' },
-              xs: { padding: 'pr-12' },
-              sm: { padding: 'pr-14' },
-              md: { padding: 'pr-16' },
-              lg: { padding: 'pr-18' },
-              xl: { padding: 'pr-22' },
-              xxl: { padding: 'pr-26' }
-            },
-            md: {
-              none: { padding: 'pr-11.5' },
-              xs: { padding: 'pr-13.5' },
-              sm: { padding: 'pr-15.5' },
-              md: { padding: 'pr-17.5' },
-              lg: { padding: 'pr-19.5' },
-              xl: { padding: 'pr-23.5' },
-              xxl: { padding: 'pr-27.5' }
-            },
-            lg: {
-              none: { padding: 'pr-13' },
-              xs: { padding: 'pr-15' },
-              sm: { padding: 'pr-17' },
-              md: { padding: 'pr-19' },
-              lg: { padding: 'pr-21' },
-              xl: { padding: 'pr-25' },
-              xxl: { padding: 'pr-29' }
-            },
-            xl: {
-              none: { padding: 'pr-15.5' },
-              xs: { padding: 'pr-17.5' },
-              sm: { padding: 'pr-19.5' },
-              md: { padding: 'pr-21.5' },
-              lg: { padding: 'pr-23.5' },
-              xl: { padding: 'pr-27.5' },
-              xxl: { padding: 'pr-31.5' }
-            }
+            padding: 'px-4 py-2'
           },
           md: {
-            xs: {
-              none: { padding: 'pr-10.25' },
-              xs: { padding: 'pr-12.25' },
-              sm: { padding: 'pr-14.25' },
-              md: { padding: 'pr-16.25' },
-              lg: { padding: 'pr-18.25' },
-              xl: { padding: 'pr-22.25' },
-              xxl: { padding: 'pr-26.25' }
-            },
-            sm: {
-              none: { padding: 'pr-12' },
-              xs: { padding: 'pr-14' },
-              sm: { padding: 'pr-16' },
-              md: { padding: 'pr-18' },
-              lg: { padding: 'pr-20' },
-              xl: { padding: 'pr-24' },
-              xxl: { padding: 'pr-28' }
-            },
-            md: {
-              none: { padding: 'pr-13.5' },
-              xs: { padding: 'pr-15.5' },
-              sm: { padding: 'pr-17.5' },
-              md: { padding: 'pr-19.5' },
-              lg: { padding: 'pr-21.5' },
-              xl: { padding: 'pr-25.5' },
-              xxl: { padding: 'pr-29.5' }
-            },
-            lg: {
-              none: { padding: 'pr-15' },
-              xs: { padding: 'pr-17' },
-              sm: { padding: 'pr-19' },
-              md: { padding: 'pr-21' },
-              lg: { padding: 'pr-23' },
-              xl: { padding: 'pr-27' },
-              xxl: { padding: 'pr-31' }
-            },
-            xl: {
-              none: { padding: 'pr-17.5' },
-              xs: { padding: 'pr-19.5' },
-              sm: { padding: 'pr-21.5' },
-              md: { padding: 'pr-23.5' },
-              lg: { padding: 'pr-25.5' },
-              xl: { padding: 'pr-29.5' },
-              xxl: { padding: 'pr-33.5' }
-            }
+            padding: 'px-6 py-3'
           },
           lg: {
-            xs: {
-              none: { padding: 'pr-12.25' },
-              xs: { padding: 'pr-14.25' },
-              sm: { padding: 'pr-16.25' },
-              md: { padding: 'pr-18.25' },
-              lg: { padding: 'pr-20.25' },
-              xl: { padding: 'pr-24.25' },
-              xxl: { padding: 'pr-28.25' }
-            },
-            sm: {
-              none: { padding: 'pr-14' },
-              xs: { padding: 'pr-16' },
-              sm: { padding: 'pr-18' },
-              md: { padding: 'pr-20' },
-              lg: { padding: 'pr-22' },
-              xl: { padding: 'pr-26' },
-              xxl: { padding: 'pr-30' }
-            },
-            md: {
-              none: { padding: 'pr-15.5' },
-              xs: { padding: 'pr-17.5' },
-              sm: { padding: 'pr-19.5' },
-              md: { padding: 'pr-21.5' },
-              lg: { padding: 'pr-23.5' },
-              xl: { padding: 'pr-27.5' },
-              xxl: { padding: 'pr-31.5' }
-            },
-            lg: {
-              none: { padding: 'pr-17' },
-              xs: { padding: 'pr-19' },
-              sm: { padding: 'pr-21' },
-              md: { padding: 'pr-23' },
-              lg: { padding: 'pr-25' },
-              xl: { padding: 'pr-29' },
-              xxl: { padding: 'pr-33' }
-            },
-            xl: {
-              none: { padding: 'pr-19.5' },
-              xs: { padding: 'pr-21.5' },
-              sm: { padding: 'pr-23.5' },
-              md: { padding: 'pr-25.5' },
-              lg: { padding: 'pr-27.5' },
-              xl: { padding: 'pr-31.5' },
-              xxl: { padding: 'pr-35.5' }
-            }
+            padding: 'px-8 py-4'
           },
           xl: {
-            xs: {
-              none: { padding: 'pr-16.25' },
-              xs: { padding: 'pr-18.25' },
-              sm: { padding: 'pr-20.25' },
-              md: { padding: 'pr-22.25' },
-              lg: { padding: 'pr-24.25' },
-              xl: { padding: 'pr-28.25' },
-              xxl: { padding: 'pr-32.25' }
-            },
-            sm: {
-              none: { padding: 'pr-18' },
-              xs: { padding: 'pr-20' },
-              sm: { padding: 'pr-22' },
-              md: { padding: 'pr-24' },
-              lg: { padding: 'pr-26' },
-              xl: { padding: 'pr-30' },
-              xxl: { padding: 'pr-34' }
-            },
-            md: {
-              none: { padding: 'pr-19.5' },
-              xs: { padding: 'pr-21.5' },
-              sm: { padding: 'pr-23.5' },
-              md: { padding: 'pr-25.5' },
-              lg: { padding: 'pr-27.5' },
-              xl: { padding: 'pr-31.5' },
-              xxl: { padding: 'pr-35.5' }
-            },
-            lg: {
-              none: { padding: 'pr-21' },
-              xs: { padding: 'pr-23' },
-              sm: { padding: 'pr-25' },
-              md: { padding: 'pr-27' },
-              lg: { padding: 'pr-29' },
-              xl: { padding: 'pr-33' },
-              xxl: { padding: 'pr-37' }
-            },
-            xl: {
-              none: { padding: 'pr-23.5' },
-              xs: { padding: 'pr-25.5' },
-              sm: { padding: 'pr-27.5' },
-              md: { padding: 'pr-29.5' },
-              lg: { padding: 'pr-31.5' },
-              xl: { padding: 'pr-35.5' },
-              xxl: { padding: 'pr-39.5' }
-            }
+            padding: 'px-12 py-6'
+          },
+          'xs-x': {
+            padding: 'px-2'
+          },
+          'xs-y': {
+            padding: 'py-1'
+          },
+          'xs-top': {
+            padding: 'pt-1'
+          },
+          'xs-bottom': {
+            padding: 'pb-1'
+          },
+          'xs-left': {
+            padding: 'pl-2'
+          },
+          'xs-right': {
+            padding: 'pr-2'
+          },
+          'xs-x-top': {
+            padding: 'px-2 pt-1'
+          },
+          'xs-x-bottom': {
+            padding: 'px-2 pb-1'
+          },
+          'xs-y-left': {
+            padding: 'py-1 pl-2'
+          },
+          'xs-y-right': {
+            padding: 'py-1 pr-2'
+          },
+          'xs-top-left': {
+            padding: 'pt-1 pl-2'
+          },
+          'xs-top-right': {
+            padding: 'pt-1 pr-2'
+          },
+          'xs-bottom-left': {
+            padding: 'pb-1 pl-2'
+          },
+          'xs-bottom-right': {
+            padding: 'pb-1 pr-2'
+          },
+          'sm-x': {
+            padding: 'px-4'
+          },
+          'sm-y': {
+            padding: 'py-2'
+          },
+          'sm-top': {
+            padding: 'pt-2'
+          },
+          'sm-bottom': {
+            padding: 'pb-2'
+          },
+          'sm-left': {
+            padding: 'pl-4'
+          },
+          'sm-right': {
+            padding: 'pr-4'
+          },
+          'sm-x-top': {
+            padding: 'px-4 pt-2'
+          },
+          'sm-x-bottom': {
+            padding: 'px-4 pb-2'
+          },
+          'sm-y-left': {
+            padding: 'py-2 pl-4'
+          },
+          'sm-y-right': {
+            padding: 'py-2 pr-4'
+          },
+          'sm-top-left': {
+            padding: 'pt-2 pl-4'
+          },
+          'sm-top-right': {
+            padding: 'pt-2 pr-4'
+          },
+          'sm-bottom-left': {
+            padding: 'pb-2 pl-4'
+          },
+          'sm-bottom-right': {
+            padding: 'pb-2 pr-4'
+          },
+          'md-x': {
+            padding: 'px-6'
+          },
+          'md-y': {
+            padding: 'py-3'
+          },
+          'md-top': {
+            padding: 'pt-3'
+          },
+          'md-bottom': {
+            padding: 'pb-3'
+          },
+          'md-left': {
+            padding: 'pl-6'
+          },
+          'md-right': {
+            padding: 'pr-6'
+          },
+          'md-x-top': {
+            padding: 'px-6 pt-3'
+          },
+          'md-x-bottom': {
+            padding: 'px-6 pb-3'
+          },
+          'md-y-left': {
+            padding: 'py-3 pl-6'
+          },
+          'md-y-right': {
+            padding: 'py-3 pr-6'
+          },
+          'md-top-left': {
+            padding: 'pt-3 pl-6'
+          },
+          'md-top-right': {
+            padding: 'pt-3 pr-6'
+          },
+          'md-bottom-left': {
+            padding: 'pb-3 pl-6'
+          },
+          'md-bottom-right': {
+            padding: 'pb-3 pr-6'
+          },
+          'lg-x': {
+            padding: 'px-8'
+          },
+          'lg-y': {
+            padding: 'py-4'
+          },
+          'lg-top': {
+            padding: 'pt-4'
+          },
+          'lg-bottom': {
+            padding: 'pb-4'
+          },
+          'lg-left': {
+            padding: 'pl-8'
+          },
+          'lg-right': {
+            padding: 'pr-8'
+          },
+          'lg-x-top': {
+            padding: 'px-8 pt-4'
+          },
+          'lg-x-bottom': {
+            padding: 'px-8 pb-4'
+          },
+          'lg-y-left': {
+            padding: 'py-4 pl-8'
+          },
+          'lg-y-right': {
+            padding: 'py-4 pr-8'
+          },
+          'lg-top-left': {
+            padding: 'pt-4 pl-8'
+          },
+          'lg-top-right': {
+            padding: 'pt-4 pr-8'
+          },
+          'lg-bottom-left': {
+            padding: 'pb-4 pl-8'
+          },
+          'lg-bottom-right': {
+            padding: 'pb-4 pr-8'
+          },
+          'xl-x': {
+            padding: 'px-12'
+          },
+          'xl-y': {
+            padding: 'py-6'
+          },
+          'xl-top': {
+            padding: 'pt-6'
+          },
+          'xl-bottom': {
+            padding: 'pb-6'
+          },
+          'xl-left': {
+            padding: 'pl-12'
+          },
+          'xl-right': {
+            padding: 'pr-12'
+          },
+          'xl-x-top': {
+            padding: 'px-12 pt-6'
+          },
+          'xl-x-bottom': {
+            padding: 'px-12 pb-6'
+          },
+          'xl-y-left': {
+            padding: 'py-6 pl-12'
+          },
+          'xl-y-right': {
+            padding: 'py-6 pr-12'
+          },
+          'xl-top-left': {
+            padding: 'pt-6 pl-12'
+          },
+          'xl-top-right': {
+            padding: 'pt-6 pr-12'
+          },
+          'xl-bottom-left': {
+            padding: 'pb-6 pl-12'
+          },
+          'xl-bottom-right': {
+            padding: 'pb-6 pr-12'
           }
         }
-      }
-    },
-    gutter: {
-      none: {},
-      xs: {
-        padding: 'pt-2'
-      },
-      sm: {
-        padding: 'pt-4'
-      },
-      md: {
-        padding: 'pt-6'
-      },
-      lg: {
-        padding: 'pt-8'
-      },
-      xl: {
-        padding: 'pt-12'
-      },
-      xxl: {
-        padding: 'pt-16'
       }
     },
     margin: {
@@ -2513,1215 +1361,637 @@ export const generic: Generic = {
         }
       }
     },
-    ring: {
-      boxShadow: 'ring'
-    },
-    weight: {
-      none: {},
-      semi: {
-        font: 'font-semibold'
-      },
-      bold: {
-        font: 'font-bold'
-      }
-    },
-    underline: {
-      none: {
-        textDecoration: 'no-underline'
-      },
-      hover: {
-        textDecoration: 'hover:underline'
-      },
-      always: {
-        textDecoration: 'underline'
-      }
-    },
-    textWrap: {
-      wrap: {},
-      nowrap: {
-        textWrap: 'text-nowrap'
-      },
-      balance: {
-        textWrap: 'text-balance'
-      },
-      pretty: {
-        textWrap: 'text-pretty'
-      }
-    },
-    textAlign: {
-      left: {},
-      center: {
-        textAlign: 'text-center'
-      },
-      right: {
-        textAlign: 'text-right'
-      },
-      justify: {
-        textAlign: 'text-justify'
-      }
-    },
-    textOverflow: {
-      clip: {},
-      truncate: {
-        textOverflow: 'truncate'
-      },
-      ellipsis: {
-        textOverflow: 'text-ellipsis'
-      }
-    },
-    wordBreak: {
-      normal: {},
-      words: {
-        wordBreak: 'break-words'
-      },
-      all: {
-        wordBreak: 'break-all'
-      },
-      keep: {
-        wordBreak: 'break-keep'
-      }
-    },
     color: {
-      overlay: {
-        backgroundColor: 'bg-black/70'
-      },
       bg: {
-        light: {
-          inherit: {},
-          disabled: {
-            backgroundColor: 'bg-light-on-disabled'
+        disabled: {
+          default: {
+            color: 'bg-disabled-500'
           },
-          'on-disabled': {
-            backgroundColor: 'bg-light-disabled'
+          light: {
+            color: 'bg-disabled-300'
           },
-          shell: {
-            backgroundColor: 'bg-light-shell'
-          },
-          surface: {
-            backgroundColor: 'bg-light-on-surface'
-          },
-          neutral: {
-            backgroundColor: 'bg-light-neutral'
-          },
-          primary: {
-            backgroundColor: 'bg-light-primary'
-          },
-          secondary: {
-            backgroundColor: 'bg-light-secondary'
-          },
-          tertiary: {
-            backgroundColor: 'bg-light-tertiary'
-          },
-          success: {
-            backgroundColor: 'bg-light-success'
-          },
-          warning: {
-            backgroundColor: 'bg-light-warning'
-          },
-          error: {
-            backgroundColor: 'bg-light-error'
-          },
-          'soft-neutral': {
-            backgroundColor: 'bg-light-soft-neutral'
-          },
-          'soft-primary': {
-            backgroundColor: 'bg-light-soft-primary'
-          },
-          'soft-secondary': {
-            backgroundColor: 'bg-light-soft-secondary'
-          },
-          'soft-tertiary': {
-            backgroundColor: 'bg-light-soft-tertiary'
-          },
-          'soft-success': {
-            backgroundColor: 'bg-light-soft-success'
-          },
-          'soft-warning': {
-            backgroundColor: 'bg-light-soft-warning'
-          },
-          'soft-error': {
-            backgroundColor: 'bg-light-soft-error'
-          },
-          'on-neutral': {
-            backgroundColor: 'bg-light-on-neutral'
-          },
-          'on-primary': {
-            backgroundColor: 'bg-light-on-primary'
-          },
-          'on-secondary': {
-            backgroundColor: 'bg-light-on-secondary'
-          },
-          'on-tertiary': {
-            backgroundColor: 'bg-light-on-tertiary'
-          },
-          'on-success': {
-            backgroundColor: 'bg-light-on-success'
-          },
-          'on-warning': {
-            backgroundColor: 'bg-light-on-warning'
-          },
-          'on-error': {
-            backgroundColor: 'bg-light-on-error'
+          on: {
+            color: 'bg-disabled-50'
           }
         },
-        dark: {
-          inherit: {},
-          disabled: {
-            backgroundColor: 'bg-dark-on-disabled'
+        surface: {
+          default: {
+            color: 'bg-surface-500'
           },
-          'on-disabled': {
-            backgroundColor: 'bg-dark-disabled'
+          light: {
+            color: 'bg-surface-300'
           },
-          shell: {
-            backgroundColor: 'bg-dark-shell'
+          on: {
+            color: 'bg-surface-50'
+          }
+        },
+        neutral: {
+          default: {
+            color: 'bg-neutral-500'
           },
-          surface: {
-            backgroundColor: 'bg-dark-surface'
+          light: {
+            color: 'bg-neutral-300'
           },
-          neutral: {
-            backgroundColor: 'bg-dark-neutral'
+          on: {
+            color: 'bg-neutral-50'
+          }
+        },
+        primary: {
+          default: {
+            color: 'bg-primary-500'
           },
-          primary: {
-            backgroundColor: 'bg-dark-primary'
+          light: {
+            color: 'bg-primary-300'
           },
-          secondary: {
-            backgroundColor: 'bg-dark-secondary'
+          on: {
+            color: 'bg-primary-50'
+          }
+        },
+        secondary: {
+          default: {
+            color: 'bg-secondary-500'
           },
-          tertiary: {
-            backgroundColor: 'bg-dark-tertiary'
+          light: {
+            color: 'bg-secondary-300'
           },
-          success: {
-            backgroundColor: 'bg-dark-success'
+          on: {
+            color: 'bg-secondary-50'
+          }
+        },
+        tertiary: {
+          default: {
+            color: 'bg-tertiary-500'
           },
-          warning: {
-            backgroundColor: 'bg-dark-warning'
+          light: {
+            color: 'bg-tertiary-300'
           },
-          error: {
-            backgroundColor: 'bg-dark-error'
+          on: {
+            color: 'bg-tertiary-50'
+          }
+        },
+        success: {
+          default: {
+            color: 'bg-success-500'
           },
-          'soft-neutral': {
-            backgroundColor: 'bg-dark-soft-neutral'
+          light: {
+            color: 'bg-success-300'
           },
-          'soft-primary': {
-            backgroundColor: 'bg-dark-soft-primary'
+          on: {
+            color: 'bg-success-50'
+          }
+        },
+        warning: {
+          default: {
+            color: 'bg-warning-500'
           },
-          'soft-secondary': {
-            backgroundColor: 'bg-dark-soft-secondary'
+          light: {
+            color: 'bg-warning-300'
           },
-          'soft-tertiary': {
-            backgroundColor: 'bg-dark-soft-tertiary'
+          on: {
+            color: 'bg-warning-50'
+          }
+        },
+        error: {
+          default: {
+            color: 'bg-error-500'
           },
-          'soft-success': {
-            backgroundColor: 'bg-dark-soft-success'
+          light: {
+            color: 'bg-error-300'
           },
-          'soft-warning': {
-            backgroundColor: 'bg-dark-soft-warning'
-          },
-          'soft-error': {
-            backgroundColor: 'bg-dark-soft-error'
-          },
-          'on-neutral': {
-            backgroundColor: 'bg-dark-on-neutral'
-          },
-          'on-primary': {
-            backgroundColor: 'bg-dark-on-primary'
-          },
-          'on-secondary': {
-            backgroundColor: 'bg-dark-on-secondary'
-          },
-          'on-tertiary': {
-            backgroundColor: 'bg-dark-on-tertiary'
-          },
-          'on-success': {
-            backgroundColor: 'bg-dark-on-success'
-          },
-          'on-warning': {
-            backgroundColor: 'bg-dark-on-warning'
-          },
-          'on-error': {
-            backgroundColor: 'bg-dark-on-error'
+          on: {
+            color: 'bg-error-50'
           }
         }
       },
       border: {
-        none: {},
-        transparent: {
-          borderColor: 'border-transparent'
-        },
-        default: {
-          light: {
-            inherit: {},
-            disabled: {
-              borderColor: 'border-light-disabled'
-            },
-            'on-disabled': {
-              borderColor: 'border-light-on-disabled'
-            },
-            surface: {
-              borderColor: 'border-light-surface'
-            },
-            neutral: {
-              borderColor: 'border-light-neutral'
-            },
-            primary: {
-              borderColor: 'border-light-primary'
-            },
-            secondary: {
-              borderColor: 'border-light-secondary'
-            },
-            tertiary: {
-              borderColor: 'border-light-tertiary'
-            },
-            success: {
-              borderColor: 'border-light-success'
-            },
-            warning: {
-              borderColor: 'border-light-warning'
-            },
-            error: {
-              borderColor: 'border-light-error'
-            },
-            'soft-neutral': {
-              borderColor: 'border-light-soft-neutral'
-            },
-            'soft-primary': {
-              borderColor: 'border-light-soft-primary'
-            },
-            'soft-secondary': {
-              borderColor: 'border-light-soft-secondary'
-            },
-            'soft-tertiary': {
-              borderColor: 'border-light-soft-tertiary'
-            },
-            'soft-success': {
-              borderColor: 'border-light-soft-success'
-            },
-            'soft-warning': {
-              borderColor: 'border-light-soft-warning'
-            },
-            'soft-error': {
-              borderColor: 'border-light-soft-error'
-            },
-            'on-neutral': {
-              borderColor: 'border-light-on-neutral'
-            },
-            'on-primary': {
-              borderColor: 'border-light-on-primary'
-            },
-            'on-secondary': {
-              borderColor: 'border-light-on-secondary'
-            },
-            'on-tertiary': {
-              borderColor: 'border-light-on-tertiary'
-            },
-            'on-success': {
-              borderColor: 'border-light-on-success'
-            },
-            'on-warning': {
-              borderColor: 'border-light-on-warning'
-            },
-            'on-error': {
-              borderColor: 'border-light-on-error'
-            }
+        disabled: {
+          default: {
+            color: 'border-disabled-500'
           },
-          dark: {
-            inherit: {},
-            disabled: {
-              borderColor: 'border-dark-disabled'
-            },
-            'on-disabled': {
-              borderColor: 'border-dark-on-disabled'
-            },
-            surface: {
-              borderColor: 'border-dark-surface'
-            },
-            neutral: {
-              borderColor: 'border-dark-neutral'
-            },
-            primary: {
-              borderColor: 'border-dark-primary'
-            },
-            secondary: {
-              borderColor: 'border-dark-secondary'
-            },
-            tertiary: {
-              borderColor: 'border-dark-tertiary'
-            },
-            success: {
-              borderColor: 'border-dark-success'
-            },
-            warning: {
-              borderColor: 'border-dark-warning'
-            },
-            error: {
-              borderColor: 'border-dark-error'
-            },
-            'soft-neutral': {
-              borderColor: 'border-dark-soft-neutral'
-            },
-            'soft-primary': {
-              borderColor: 'border-dark-soft-primary'
-            },
-            'soft-secondary': {
-              borderColor: 'border-dark-soft-secondary'
-            },
-            'soft-tertiary': {
-              borderColor: 'border-dark-soft-tertiary'
-            },
-            'soft-success': {
-              borderColor: 'border-dark-soft-success'
-            },
-            'soft-warning': {
-              borderColor: 'border-dark-soft-warning'
-            },
-            'soft-error': {
-              borderColor: 'border-dark-soft-error'
-            },
-            'on-neutral': {
-              borderColor: 'border-dark-on-neutral'
-            },
-            'on-primary': {
-              borderColor: 'border-dark-on-primary'
-            },
-            'on-secondary': {
-              borderColor: 'border-dark-on-secondary'
-            },
-            'on-tertiary': {
-              borderColor: 'border-dark-on-tertiary'
-            },
-            'on-success': {
-              borderColor: 'border-dark-on-success'
-            },
-            'on-warning': {
-              borderColor: 'border-dark-on-warning'
-            },
-            'on-error': {
-              borderColor: 'border-dark-on-error'
-            }
+          light: {
+            color: 'border-disabled-300'
+          },
+          on: {
+            color: 'border-disabled-50'
+          }
+        },
+        surface: {
+          default: {
+            color: 'border-surface-500'
+          },
+          light: {
+            color: 'border-surface-300'
+          },
+          on: {
+            color: 'border-surface-50'
+          }
+        },
+        neutral: {
+          default: {
+            color: 'border-neutral-500'
+          },
+          light: {
+            color: 'border-neutral-300'
+          },
+          on: {
+            color: 'border-neutral-50'
+          }
+        },
+        primary: {
+          default: {
+            color: 'border-primary-500'
+          },
+          light: {
+            color: 'border-primary-300'
+          },
+          on: {
+            color: 'border-primary-50'
+          }
+        },
+        secondary: {
+          default: {
+            color: 'border-secondary-500'
+          },
+          light: {
+            color: 'border-secondary-300'
+          },
+          on: {
+            color: 'border-secondary-50'
+          }
+        },
+        tertiary: {
+          default: {
+            color: 'border-tertiary-500'
+          },
+          light: {
+            color: 'border-tertiary-300'
+          },
+          on: {
+            color: 'border-tertiary-50'
+          }
+        },
+        success: {
+          default: {
+            color: 'border-success-500'
+          },
+          light: {
+            color: 'border-success-300'
+          },
+          on: {
+            color: 'border-success-50'
+          }
+        },
+        warning: {
+          default: {
+            color: 'border-warning-500'
+          },
+          light: {
+            color: 'border-warning-300'
+          },
+          on: {
+            color: 'border-warning-50'
+          }
+        },
+        error: {
+          default: {
+            color: 'border-error-500'
+          },
+          light: {
+            color: 'border-error-300'
+          },
+          on: {
+            color: 'border-error-50'
           }
         }
       },
       text: {
-        light: {
-          inherit: {},
-          disabled: {
-            color: 'text-light-disabled'
+        disabled: {
+          default: {
+            color: 'text-disabled-500'
           },
-          'on-disabled': {
-            color: 'text-light-on-disabled'
+          light: {
+            color: 'text-disabled-300'
           },
-          surface: {
-            color: 'text-light-surface'
-          },
-          neutral: {
-            color: 'text-light-neutral'
-          },
-          primary: {
-            color: 'text-light-primary'
-          },
-          secondary: {
-            color: 'text-light-secondary'
-          },
-          tertiary: {
-            color: 'text-light-tertiary'
-          },
-          success: {
-            color: 'text-light-success'
-          },
-          warning: {
-            color: 'text-light-warning'
-          },
-          error: {
-            color: 'text-light-error'
-          },
-          'soft-neutral': {
-            color: 'text-light-soft-neutral'
-          },
-          'soft-primary': {
-            color: 'text-light-soft-primary'
-          },
-          'soft-secondary': {
-            color: 'text-light-soft-secondary'
-          },
-          'soft-tertiary': {
-            color: 'text-light-soft-tertiary'
-          },
-          'soft-success': {
-            color: 'text-light-soft-success'
-          },
-          'soft-warning': {
-            color: 'text-light-soft-warning'
-          },
-          'soft-error': {
-            color: 'text-light-soft-error'
-          },
-          'on-neutral': {
-            color: 'text-light-on-neutral'
-          },
-          'on-primary': {
-            color: 'text-light-on-primary'
-          },
-          'on-secondary': {
-            color: 'text-light-on-secondary'
-          },
-          'on-tertiary': {
-            color: 'text-light-on-tertiary'
-          },
-          'on-success': {
-            color: 'text-light-on-success'
-          },
-          'on-warning': {
-            color: 'text-light-on-warning'
-          },
-          'on-error': {
-            color: 'text-light-on-error'
+          on: {
+            color: 'text-disabled-50'
           }
         },
-        dark: {
-          inherit: {},
-          disabled: {
-            color: 'text-dark-disabled'
+        surface: {
+          default: {
+            color: 'text-surface-500'
           },
-          'on-disabled': {
-            color: 'text-light-ondisabled'
+          light: {
+            color: 'text-surface-300'
           },
-          surface: {
-            color: 'text-dark-surface'
+          on: {
+            color: 'text-surface-50'
+          }
+        },
+        neutral: {
+          default: {
+            color: 'text-neutral-500'
           },
-          neutral: {
-            color: 'text-dark-neutral'
+          light: {
+            color: 'text-neutral-300'
           },
-          primary: {
-            color: 'text-dark-primary'
+          on: {
+            color: 'text-neutral-50'
+          }
+        },
+        primary: {
+          default: {
+            color: 'text-primary-500'
           },
-          secondary: {
-            color: 'text-dark-secondary'
+          light: {
+            color: 'text-primary-300'
           },
-          tertiary: {
-            color: 'text-dark-tertiary'
+          on: {
+            color: 'text-primary-50'
+          }
+        },
+        secondary: {
+          default: {
+            color: 'text-secondary-500'
           },
-          success: {
-            color: 'text-dark-success'
+          light: {
+            color: 'text-secondary-300'
           },
-          warning: {
-            color: 'text-dark-warning'
+          on: {
+            color: 'text-secondary-50'
+          }
+        },
+        tertiary: {
+          default: {
+            color: 'text-tertiary-500'
           },
-          error: {
-            color: 'text-dark-error'
+          light: {
+            color: 'text-tertiary-300'
           },
-          'soft-neutral': {
-            color: 'text-dark-soft-neutral'
+          on: {
+            color: 'text-tertiary-50'
+          }
+        },
+        success: {
+          default: {
+            color: 'text-success-500'
           },
-          'soft-primary': {
-            color: 'text-dark-soft-primary'
+          light: {
+            color: 'text-success-300'
           },
-          'soft-secondary': {
-            color: 'text-dark-soft-secondary'
+          on: {
+            color: 'text-success-50'
+          }
+        },
+        warning: {
+          default: {
+            color: 'text-warning-500'
           },
-          'soft-tertiary': {
-            color: 'text-dark-soft-tertiary'
+          light: {
+            color: 'text-warning-300'
           },
-          'soft-success': {
-            color: 'text-dark-soft-success'
+          on: {
+            color: 'text-warning-50'
+          }
+        },
+        error: {
+          default: {
+            color: 'text-error-500'
           },
-          'soft-warning': {
-            color: 'text-dark-soft-warning'
+          light: {
+            color: 'text-error-300'
           },
-          'soft-error': {
-            color: 'text-dark-soft-error'
-          },
-          'on-neutral': {
-            color: 'text-dark-on-neutral'
-          },
-          'on-primary': {
-            color: 'text-dark-on-primary'
-          },
-          'on-secondary': {
-            color: 'text-dark-on-secondary'
-          },
-          'on-tertiary': {
-            color: 'text-dark-on-tertiary'
-          },
-          'on-success': {
-            color: 'text-dark-on-success'
-          },
-          'on-warning': {
-            color: 'text-dark-on-warning'
-          },
-          'on-error': {
-            color: 'text-dark-on-error'
+          on: {
+            color: 'text-error-50'
           }
         }
       },
       fill: {
-        light: {
-          inherit: {},
-          disabled: {
-            fill: 'fill-light-disabled'
+        disabled: {
+          default: {
+            color: 'fill-disabled-500'
           },
-          'on-disabled': {
-            fill: 'fill-light-on-disabled'
+          light: {
+            color: 'fill-disabled-300'
           },
-          surface: {
-            fill: 'fill-light-surface'
-          },
-          neutral: {
-            fill: 'fill-light-neutral'
-          },
-          primary: {
-            fill: 'fill-light-primary'
-          },
-          secondary: {
-            fill: 'fill-light-secondary'
-          },
-          tertiary: {
-            fill: 'fill-light-tertiary'
-          },
-          success: {
-            fill: 'fill-light-success'
-          },
-          warning: {
-            fill: 'fill-light-warning'
-          },
-          error: {
-            fill: 'fill-light-error'
-          },
-          'soft-neutral': {
-            fill: 'fill-light-soft-neutral'
-          },
-          'soft-primary': {
-            fill: 'fill-light-soft-primary'
-          },
-          'soft-secondary': {
-            fill: 'fill-light-soft-secondary'
-          },
-          'soft-tertiary': {
-            fill: 'fill-light-soft-tertiary'
-          },
-          'soft-success': {
-            fill: 'fill-light-soft-success'
-          },
-          'soft-warning': {
-            fill: 'fill-light-soft-warning'
-          },
-          'soft-error': {
-            fill: 'fill-light-soft-error'
-          },
-          'on-neutral': {
-            fill: 'fill-light-on-neutral'
-          },
-          'on-primary': {
-            fill: 'fill-light-on-primary'
-          },
-          'on-secondary': {
-            fill: 'fill-light-on-secondary'
-          },
-          'on-tertiary': {
-            fill: 'fill-light-on-tertiary'
-          },
-          'on-success': {
-            fill: 'fill-light-on-success'
-          },
-          'on-warning': {
-            fill: 'fill-light-on-warning'
-          },
-          'on-error': {
-            fill: 'fill-light-on-error'
+          on: {
+            color: 'fill-disabled-50'
           }
         },
-        dark: {
-          inherit: {},
-          disabled: {
-            fill: 'fill-dark-disabled'
+        surface: {
+          default: {
+            color: 'fill-surface-500'
           },
-          'on-disabled': {
-            fill: 'fill-dark-on-disabled'
+          light: {
+            color: 'fill-surface-300'
           },
-          surface: {
-            fill: 'fill-dark-surface'
+          on: {
+            color: 'fill-surface-50'
+          }
+        },
+        neutral: {
+          default: {
+            color: 'fill-neutral-500'
           },
-          neutral: {
-            fill: 'fill-dark-neutral'
+          light: {
+            color: 'fill-neutral-300'
           },
-          primary: {
-            fill: 'fill-dark-primary'
+          on: {
+            color: 'fill-neutral-50'
+          }
+        },
+        primary: {
+          default: {
+            color: 'fill-primary-500'
           },
-          secondary: {
-            fill: 'fill-dark-secondary'
+          light: {
+            color: 'fill-primary-300'
           },
-          tertiary: {
-            fill: 'fill-dark-tertiary'
+          on: {
+            color: 'fill-primary-50'
+          }
+        },
+        secondary: {
+          default: {
+            color: 'fill-secondary-500'
           },
-          success: {
-            fill: 'fill-dark-success'
+          light: {
+            color: 'fill-secondary-300'
           },
-          warning: {
-            fill: 'fill-dark-warning'
+          on: {
+            color: 'fill-secondary-50'
+          }
+        },
+        tertiary: {
+          default: {
+            color: 'fill-tertiary-500'
           },
-          error: {
-            fill: 'fill-dark-error'
+          light: {
+            color: 'fill-tertiary-300'
           },
-          'soft-neutral': {
-            fill: 'fill-dark-soft-neutral'
+          on: {
+            color: 'fill-tertiary-50'
+          }
+        },
+        success: {
+          default: {
+            color: 'fill-success-500'
           },
-          'soft-primary': {
-            fill: 'fill-dark-soft-primary'
+          light: {
+            color: 'fill-success-300'
           },
-          'soft-secondary': {
-            fill: 'fill-dark-soft-secondary'
+          on: {
+            color: 'fill-success-50'
+          }
+        },
+        warning: {
+          default: {
+            color: 'fill-warning-500'
           },
-          'soft-tertiary': {
-            fill: 'fill-dark-soft-tertiary'
+          light: {
+            color: 'fill-warning-300'
           },
-          'soft-success': {
-            fill: 'fill-dark-soft-success'
+          on: {
+            color: 'fill-warning-50'
+          }
+        },
+        error: {
+          default: {
+            color: 'fill-error-500'
           },
-          'soft-warning': {
-            fill: 'fill-dark-soft-warning'
+          light: {
+            color: 'fill-error-300'
           },
-          'soft-error': {
-            fill: 'fill-dark-soft-error'
-          },
-          'on-neutral': {
-            fill: 'fill-dark-on-neutral'
-          },
-          'on-primary': {
-            fill: 'fill-dark-on-primary'
-          },
-          'on-secondary': {
-            fill: 'fill-dark-on-secondary'
-          },
-          'on-tertiary': {
-            fill: 'fill-dark-on-tertiary'
-          },
-          'on-success': {
-            fill: 'fill-dark-on-success'
-          },
-          'on-warning': {
-            fill: 'fill-dark-on-warning'
-          },
-          'on-error': {
-            fill: 'fill-dark-on-error'
+          on: {
+            color: 'fill-error-50'
           }
         }
       },
       ring: {
-        light: {
-          inherit: {},
-          disabled: {
-            boxShadow: 'ring-light-disabled'
+        disabled: {
+          default: {
+            color: 'ring-disabled-500'
           },
-          surface: {
-            boxShadow: 'ring-light-surface'
+          light: {
+            color: 'ring-disabled-300'
           },
-          neutral: {
-            boxShadow: 'ring-light-neutral'
-          },
-          primary: {
-            boxShadow: 'ring-light-primary'
-          },
-          secondary: {
-            boxShadow: 'ring-light-secondary'
-          },
-          tertiary: {
-            boxShadow: 'ring-light-tertiary'
-          },
-          success: {
-            boxShadow: 'ring-light-success'
-          },
-          warning: {
-            boxShadow: 'ring-light-warning'
-          },
-          error: {
-            boxShadow: 'ring-light-error'
-          },
-          'on-neutral': {
-            boxShadow: 'ring-light-on-neutral'
-          },
-          'on-primary': {
-            boxShadow: 'ring-light-on-primary'
-          },
-          'on-secondary': {
-            boxShadow: 'ring-light-on-secondary'
-          },
-          'on-tertiary': {
-            boxShadow: 'ring-light-on-tertiary'
-          },
-          'on-success': {
-            boxShadow: 'ring-light-on-success'
-          },
-          'on-warning': {
-            boxShadow: 'ring-light-on-warning'
-          },
-          'on-error': {
-            boxShadow: 'ring-light-on-error'
+          on: {
+            color: 'ring-disabled-50'
           }
         },
-        dark: {
-          inherit: {},
-          disabled: {
-            boxShadow: 'ring-dark-disabled'
+        surface: {
+          default: {
+            color: 'ring-surface-500'
           },
-          surface: {
-            boxShadow: 'ring-dark-surface'
-          },
-          neutral: {
-            boxShadow: 'ring-dark-neutral'
-          },
-          primary: {
-            boxShadow: 'ring-dark-primary'
-          },
-          secondary: {
-            boxShadow: 'ring-dark-secondary'
-          },
-          tertiary: {
-            boxShadow: 'ring-dark-tertiary'
-          },
-          success: {
-            boxShadow: 'ring-dark-success'
-          },
-          warning: {
-            boxShadow: 'ring-dark-warning'
-          },
-          error: {
-            boxShadow: 'ring-dark-error'
-          },
-          'on-neutral': {
-            boxShadow: 'ring-dark-on-neutral'
-          },
-          'on-primary': {
-            boxShadow: 'ring-dark-on-primary'
-          },
-          'on-secondary': {
-            boxShadow: 'ring-dark-on-secondary'
-          },
-          'on-tertiary': {
-            boxShadow: 'ring-dark-on-tertiary'
-          },
-          'on-success': {
-            boxShadow: 'ring-dark-on-success'
-          },
-          'on-warning': {
-            boxShadow: 'ring-dark-on-warning'
-          },
-          'on-error': {
-            boxShadow: 'ring-dark-on-error'
-          }
-        }
-      },
-      focus: {
-        parent: {
           light: {
-            inherit: {},
-            neutral: {
-              group:
-                '[&.focused]:text-light-neutral [&.focused]:fill-light-neutral'
-            },
-            primary: {
-              group:
-                '[&.focused]:text-light-primary [&.focused]:fill-light-primary'
-            },
-            secondary: {
-              group:
-                '[&.focused]:text-light-secondary [&.focused]:fill-light-secondary'
-            },
-            tertiary: {
-              group:
-                '[&.focused]:text-light-tertiary [&.focused]:fill-light-tertiary'
-            },
-            success: {
-              group:
-                '[&.focused]:text-light-success [&.focused]:fill-light-success'
-            },
-            warning: {
-              group:
-                '[&.focused]:text-light-warning [&.focused]:fill-light-warning'
-            },
-            error: {
-              group: '[&.focused]:text-light-error [&.focused]:fill-light-error'
-            },
-            'on-neutral': {
-              group:
-                '[&.focused]:text-light-on-neutral [&.focused]:fill-light-on-neutral'
-            },
-            'on-primary': {
-              group:
-                '[&.focused]:text-light-on-primary [&.focused]:fill-light-on-primary'
-            },
-            'on-secondary': {
-              group:
-                '[&.focused]:text-light-on-secondary [&.focused]:fill-light-on-secondary'
-            },
-            'on-tertiary': {
-              group:
-                '[&.focused]:text-light-on-tertiary [&.focused]:fill-light-on-tertiary'
-            },
-            'on-success': {
-              group:
-                '[&.focused]:text-light-on-success [&.focused]:fill-light-on-success'
-            },
-            'on-warning': {
-              group:
-                '[&.focused]:text-light-on-warning [&.focused]:fill-light-on-warning'
-            },
-            'on-error': {
-              group:
-                '[&.focused]:text-light-on-error [&.focused]:fill-light-on-error'
-            }
+            color: 'ring-surface-300'
           },
-          dark: {
-            inherit: {},
-            neutral: {
-              group:
-                '[&.focused]:text-dark-neutral [&.focused]:fill-dark-neutral'
-            },
-            primary: {
-              group:
-                '[&.focused]:text-dark-primary [&.focused]:fill-dark-primary'
-            },
-            secondary: {
-              group:
-                '[&.focused]:text-dark-secondary [&.focused]:fill-dark-secondary'
-            },
-            tertiary: {
-              group:
-                '[&.focused]:text-dark-tertiary [&.focused]:fill-dark-tertiary'
-            },
-            success: {
-              group:
-                '[&.focused]:text-dark-success [&.focused]:fill-dark-success'
-            },
-            warning: {
-              group:
-                '[&.focused]:text-dark-warning [&.focused]:fill-dark-warning'
-            },
-            error: {
-              group: '[&.focused]:text-dark-error [&.focused]:fill-dark-error'
-            },
-            'on-neutral': {
-              group:
-                '[&.focused]:text-dark-on-neutral [&.focused]:fill-dark-on-neutral'
-            },
-            'on-primary': {
-              group:
-                '[&.focused]:text-dark-on-primary [&.focused]:fill-dark-on-primary'
-            },
-            'on-secondary': {
-              group:
-                '[&.focused]:text-dark-on-secondary [&.focused]:fill-dark-on-secondary'
-            },
-            'on-tertiary': {
-              group:
-                '[&.focused]:text-dark-on-tertiary [&.focused]:fill-dark-on-tertiary'
-            },
-            'on-success': {
-              group:
-                '[&.focused]:text-dark-on-success [&.focused]:fill-dark-on-success'
-            },
-            'on-warning': {
-              group:
-                '[&.focused]:text-dark-on-warning [&.focused]:fill-dark-on-warning'
-            },
-            'on-error': {
-              group:
-                '[&.focused]:text-dark-on-error [&.focused]:fill-dark-on-error'
-            }
+          on: {
+            color: 'ring-surface-50'
           }
         },
-        child: {
-          light: {
-            inherit: {},
-            neutral: {
-              group:
-                'group-[.focused]:fill-light-neutral group-[.focused]:text-light-neutral'
-            },
-            primary: {
-              group:
-                'group-[.focused]:fill-light-primary group-[.focused]:text-light-primary'
-            },
-            secondary: {
-              group:
-                'group-[.focused]:fill-light-secondary group-[.focused]:text-light-secondary'
-            },
-            tertiary: {
-              group:
-                'group-[.focused]:fill-light-tertiary group-[.focused]:text-light-tertiary'
-            },
-            success: {
-              group:
-                'group-[.focused]:fill-light-success group-[.focused]:text-light-success'
-            },
-            warning: {
-              group:
-                'group-[.focused]:fill-light-warning group-[.focused]:text-light-warning'
-            },
-            error: {
-              group:
-                'group-[.focused]:fill-light-error group-[.focused]:text-light-error'
-            },
-            'on-neutral': {
-              group:
-                'group-[.focused]:fill-light-on-neutral group-[.focused]:text-light-on-neutral'
-            },
-            'on-primary': {
-              group:
-                'group-[.focused]:fill-light-on-primary group-[.focused]:text-light-on-primary'
-            },
-            'on-secondary': {
-              group:
-                'group-[.focused]:fill-light-on-secondary group-[.focused]:text-light-on-secondary'
-            },
-            'on-tertiary': {
-              group:
-                'group-[.focused]:fill-light-on-tertiary group-[.focused]:text-light-on-tertiary'
-            },
-            'on-success': {
-              group:
-                'group-[.focused]:fill-light-on-success group-[.focused]:text-light-on-success'
-            },
-            'on-warning': {
-              group:
-                'group-[.focused]:fill-light-on-warning group-[.focused]:text-light-on-warning'
-            },
-            'on-error': {
-              group:
-                'group-[.focused]:fill-light-on-error group-[.focused]:text-light-on-error'
-            }
+        neutral: {
+          default: {
+            color: 'ring-neutral-500'
           },
-          dark: {
-            inherit: {},
-            neutral: {
-              group:
-                'group-[.focused]:fill-dark-neutral group-[.focused]:text-dark-neutral'
-            },
-            primary: {
-              group:
-                'group-[.focused]:fill-dark-primary group-[.focused]:text-dark-primary'
-            },
-            secondary: {
-              group:
-                'group-[.focused]:fill-dark-secondary group-[.focused]:text-dark-secondary'
-            },
-            tertiary: {
-              group:
-                'group-[.focused]:fill-dark-tertiary group-[.focused]:text-dark-tertiary'
-            },
-            success: {
-              group:
-                'group-[.focused]:fill-dark-success group-[.focused]:text-dark-success'
-            },
-            warning: {
-              group:
-                'group-[.focused]:fill-dark-warning group-[.focused]:text-dark-warning'
-            },
-            error: {
-              group:
-                'group-[.focused]:fill-dark-error group-[.focused]:text-dark-error'
-            },
-            'on-neutral': {
-              group:
-                'group-[.focused]:fill-dark-on-neutral group-[.focused]:text-dark-on-neutral'
-            },
-            'on-primary': {
-              group:
-                'group-[.focused]:fill-dark-on-primary group-[.focused]:text-dark-on-primary'
-            },
-            'on-secondary': {
-              group:
-                'group-[.focused]:fill-dark-on-secondary group-[.focused]:text-dark-on-secondary'
-            },
-            'on-tertiary': {
-              group:
-                'group-[.focused]:fill-dark-on-tertiary group-[.focused]:text-dark-on-tertiary'
-            },
-            'on-success': {
-              group:
-                'group-[.focused]:fill-dark-on-success group-[.focused]:text-dark-on-success'
-            },
-            'on-warning': {
-              group:
-                'group-[.focused]:fill-dark-on-warning group-[.focused]:text-dark-on-warning'
-            },
-            'on-error': {
-              group:
-                'group-[.focused]:fill-dark-on-error group-[.focused]:text-dark-on-error'
-            }
+          light: {
+            color: 'ring-neutral-300'
+          },
+          on: {
+            color: 'ring-neutral-50'
+          }
+        },
+        primary: {
+          default: {
+            color: 'ring-primary-500'
+          },
+          light: {
+            color: 'ring-primary-300'
+          },
+          on: {
+            color: 'ring-primary-50'
+          }
+        },
+        secondary: {
+          default: {
+            color: 'ring-secondary-500'
+          },
+          light: {
+            color: 'ring-secondary-300'
+          },
+          on: {
+            color: 'ring-secondary-50'
+          }
+        },
+        tertiary: {
+          default: {
+            color: 'ring-tertiary-500'
+          },
+          light: {
+            color: 'ring-tertiary-300'
+          },
+          on: {
+            color: 'ring-tertiary-50'
+          }
+        },
+        success: {
+          default: {
+            color: 'ring-success-500'
+          },
+          light: {
+            color: 'ring-success-300'
+          },
+          on: {
+            color: 'ring-success-50'
+          }
+        },
+        warning: {
+          default: {
+            color: 'ring-warning-500'
+          },
+          light: {
+            color: 'ring-warning-300'
+          },
+          on: {
+            color: 'ring-warning-50'
+          }
+        },
+        error: {
+          default: {
+            color: 'ring-error-500'
+          },
+          light: {
+            color: 'ring-error-300'
+          },
+          on: {
+            color: 'ring-error-50'
           }
         }
       }
     },
     direction: {
-      row: {},
-      col: {
-        flexDirection: 'flex-col'
-      },
-      'row-reverse': {
-        flexDirection: 'flex-row-reverse'
-      },
-      'col-reverse': {
-        flexDirection: 'flex-col-reverse'
-      }
+    row: {},
+    col: {
+      flexDirection: 'flex-col'
     },
+    'row-reverse': {
+      flexDirection: 'flex-row-reverse'
+    },
+    'col-reverse': {
+      flexDirection: 'flex-col-reverse'
+    }
+  },
+  wrap: {
+    nowrap: {},
     wrap: {
-      nowrap: {},
-      wrap: {
-        flexWrap: 'flex-wrap'
-      },
-      'wrap-reverse': {
-        flexWrap: 'flex-wrap-reverse'
-      }
+      flexWrap: 'flex-wrap'
     },
-    justify: {
-      normal: {},
-      start: {
-        justifyContent: 'justify-start'
-      },
-      center: {
-        justifyContent: 'justify-center'
-      },
-      end: {
-        justifyContent: 'justify-end'
-      },
-      between: {
-        justifyContent: 'justify-between'
-      },
-      around: {
-        justifyContent: 'justify-around'
-      },
-      evenly: {
-        justifyContent: 'justify-evenly'
-      },
-      stretch: {
-        justifyContent: 'justify-stretch'
-      }
+    'wrap-reverse': {
+      flexWrap: 'flex-wrap-reverse'
+    }
+  },
+  justify: {
+    normal: {},
+    start: {
+      justifyContent: 'justify-start'
     },
-    align: {
-      stretch: {},
-      start: {
-        alignItems: 'items-start'
-      },
-      center: {
-        alignItems: 'items-center'
-      },
-      end: {
-        alignItems: 'items-end'
-      },
-      baseline: {
-        alignItems: 'items-baseline'
-      }
+    center: {
+      justifyContent: 'justify-center'
     },
-    gap: {
-      default: {
-        none: {},
-        xs: {
-          gap: 'gap-2'
-        },
-        sm: {
-          gap: 'gap-4'
-        },
-        md: {
-          gap: 'gap-6'
-        },
-        lg: {
-          gap: 'gap-8'
-        },
-        xl: {
-          gap: 'gap-12'
-        },
-        xxl: {
-          gap: 'gap-16'
-        }
-      },
-      col: {
-        none: {},
-        xs: {
-          gap: 'gap-x-2'
-        },
-        sm: {
-          gap: 'gap-x-4'
-        },
-        md: {
-          gap: 'gap-x-6'
-        },
-        lg: {
-          gap: 'gap-x-8'
-        },
-        xl: {
-          gap: 'gap-x-12'
-        },
-        xxl: {
-          gap: 'gap-x-16'
-        }
-      },
-      row: {
-        none: {},
-        xs: {
-          gap: 'gap-y-2'
-        },
-        sm: {
-          gap: 'gap-y-4'
-        },
-        md: {
-          gap: 'gap-y-6'
-        },
-        lg: {
-          gap: 'gap-y-8'
-        },
-        xl: {
-          gap: 'gap-y-12'
-        },
-        xxl: {
-          gap: 'gap-y-16'
-        }
-      }
+    end: {
+      justifyContent: 'justify-end'
     },
-    effect: {
+    between: {
+      justifyContent: 'justify-between'
+    },
+    around: {
+      justifyContent: 'justify-around'
+    },
+    evenly: {
+      justifyContent: 'justify-evenly'
+    },
+    stretch: {
+      justifyContent: 'justify-stretch'
+    }
+  },
+  align: {
+    stretch: {},
+    start: {
+      alignItems: 'items-start'
+    },
+    center: {
+      alignItems: 'items-center'
+    },
+    end: {
+      alignItems: 'items-end'
+    },
+    baseline: {
+      alignItems: 'items-baseline'
+    }
+  },
+  gap: {
+    default: {
       none: {},
-      shadow: {
-        boxShadow: 'shadow-md',
-        transition: 'transition',
-        hover: 'hover:shadow-lg',
-        active: 'active:shadow-none',
-        focus: 'focus:shadow-none',
-        focusVisible: 'focus-visible:shadow-none'
+      xs: {
+        gap: 'gap-2'
+      },
+      sm: {
+        gap: 'gap-4'
+      },
+      md: {
+        gap: 'gap-6'
+      },
+      lg: {
+        gap: 'gap-8'
+      },
+      xl: {
+        gap: 'gap-12'
+      },
+      xxl: {
+        gap: 'gap-16'
       }
     },
-    transition: {
-      fade: {
-        transition: 'transition-opacity'
-      },
-      transform: {
-        transition: 'transition-transform'
-      },
-      'transform-fade': {
-        transition: 'transition-[transform,_opacity]'
-      }
-    },
-    cursor: {
-      none: {
-        pointerEvents: 'pointer-events-none'
-      },
-      pointer: {
-        cursor: 'cursor-pointer'
-      },
-      disabled: {
-        cursor: 'cursor-not-allowed',
-        userSelect: 'select-none'
-      }
-    },
-    blur: {
-      transform: 'backdrop-blur-sm'
-    },
-    focus: {
+    col: {
       none: {},
-      default: {
-        focus: 'focus:outline-none',
-        focusVisible: 'focus-visible:ring-4'
+      xs: {
+        gap: 'gap-x-2'
       },
-      disabled: {
-        cursor: 'cursor-not-allowed',
-        userSelect: 'select-none'
+      sm: {
+        gap: 'gap-x-4'
+      },
+      md: {
+        gap: 'gap-x-6'
+      },
+      lg: {
+        gap: 'gap-x-8'
+      },
+      xl: {
+        gap: 'gap-x-12'
+      },
+      xxl: {
+        gap: 'gap-x-16'
+      }
+    },
+    row: {
+      none: {},
+      xs: {
+        gap: 'gap-y-2'
+      },
+      sm: {
+        gap: 'gap-y-4'
+      },
+      md: {
+        gap: 'gap-y-6'
+      },
+      lg: {
+        gap: 'gap-y-8'
+      },
+      xl: {
+        gap: 'gap-y-12'
+      },
+      xxl: {
+        gap: 'gap-y-16'
       }
     }
+  }
   }
 };

@@ -12,7 +12,7 @@ type Styles = {
 const imageConfig: ComponentConfig<ImageConfigProps> & Styles = {
   props: {
     variant: 'none',
-    scale: 'default',
+    scale: 'square',
     spacing: 'none',
     margin: 'none',
     border: false,

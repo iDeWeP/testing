@@ -9,7 +9,7 @@ const labelConfig: ComponentConfig<LabelConfigProps> = {
     align: 'stretch',
     gap: 'xs',
     variant: 'none',
-    scale: 'default',
+    scale: 'square',
     spacing: 'none',
     margin: 'none',
     border: 'none',

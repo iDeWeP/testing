@@ -9,7 +9,7 @@ const navigationConfig: ComponentConfig<NavigationConfigProps> = {
     align: 'stretch',
     gap: 'none',
     variant: 'none',
-    scale: 'default',
+    scale: 'square',
     spacing: 'none',
     margin: 'none',
     border: 'none',
