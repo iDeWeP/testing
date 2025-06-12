@@ -13,8 +13,8 @@ export const imageConfig: ComponentConfig<ImageConfigProps> & Styles = {
   props: {
     as: 'img',
     variant: 'none',
+    size: 'none',
     scale: 'square-full',
-    spacing: 'none',
     margin: 'none',
     border: 'none',
     radius: 'none',
