@@ -1,7 +1,7 @@
 import type { ComponentConfig } from '../../types';
 import type { NavigationConfigProps } from './Navigation.types';
 
-const navigationConfig: ComponentConfig<NavigationConfigProps> = {
+export const navigationConfig: ComponentConfig<NavigationConfigProps> = {
   props: {
     direction: 'col',
     wrap: 'wrap',
@@ -17,5 +17,3 @@ const navigationConfig: ComponentConfig<NavigationConfigProps> = {
     color: 'neutral'
   }
 };
-
-export default navigationConfig;
