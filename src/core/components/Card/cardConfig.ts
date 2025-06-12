@@ -1,7 +1,7 @@
 import type { ComponentConfig } from '../../types';
 import type { CardConfigProps } from './Card.types';
 
-const cardConfig: ComponentConfig<CardConfigProps> = {
+export const cardConfig: ComponentConfig<CardConfigProps> = {
   props: {
     direction: 'col',
     wrap: 'wrap',
@@ -17,5 +17,3 @@ const cardConfig: ComponentConfig<CardConfigProps> = {
     color: 'neutral'
   }
 };
-
-export default cardConfig;
