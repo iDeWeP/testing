@@ -16,7 +16,7 @@ export const imageConfig: ComponentConfig<ImageConfigProps> & Styles = {
     scale: 'square-full',
     spacing: 'none',
     margin: 'none',
-    border: false,
+    border: 'none',
     radius: 'none',
     color: 'neutral'
   },
