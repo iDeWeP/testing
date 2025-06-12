@@ -1,6 +1,9 @@
 import type { ElementType } from 'react';
-import type { BoxConfigProps, BoxProps } from '../Box/Box.types';
+import type {
+  UnstyledBoxConfigProps,
+  UnstyledBoxProps
+} from '../UnstyledBox/UnstyledBox.types';
 
-export type ImageConfigProps = BoxConfigProps;
+export type ImageConfigProps = UnstyledBoxConfigProps;
 
-export type ImageProps<E extends ElementType> = BoxProps<E>;
+export type ImageProps<E extends ElementType> = UnstyledBoxProps<E>;
