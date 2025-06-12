@@ -1,8 +1,6 @@
 import type { ElementType } from 'react';
-import type { BoxProps } from '../Box/Box.types';
-import type { FlexConfigProps } from '../Flex/Flex.types';
+import type { FlexConfigProps, FlexProps } from '../Flex/Flex.types';
 
 export type SectionConfigProps = FlexConfigProps;
 
-export type SectionProps<E extends ElementType> = BoxProps<E> &
-  SectionConfigProps;
+export type SectionProps<E extends ElementType> = FlexProps<E>;
