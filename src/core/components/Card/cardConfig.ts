@@ -13,7 +13,7 @@ export const cardConfig: ComponentConfig<CardConfigProps> = {
     size: 'none',
     scale: 'normal',
     margin: 'none',
-    border: 'none',
+    border: false,
     radius: 'xl',
     color: 'neutral'
   }

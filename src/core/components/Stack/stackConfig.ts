@@ -13,7 +13,7 @@ export const stackConfig: ComponentConfig<StackConfigProps> = {
     size: 'none',
     scale: 'normal',
     margin: 'none',
-    border: 'none',
+    border: false,
     radius: 'none',
     color: 'neutral'
   }

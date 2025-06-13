@@ -14,7 +14,7 @@ export const labelConfig: ComponentConfig<LabelConfigProps> = {
     variant: 'none',
     scale: 'normal',
     margin: 'none',
-    border: 'none',
+    border: false,
     radius: 'none',
     color: 'neutral'
   }

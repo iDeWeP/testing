@@ -14,7 +14,7 @@ export const textConfig: ComponentConfig<TextConfigProps> = {
     variant: 'none',
     scale: 'normal',
     margin: 'none',
-    border: 'none',
+    border: false,
     radius: 'none',
     color: 'neutral'
   }

@@ -14,7 +14,7 @@ export const markConfig: ComponentConfig<MarkConfigProps> = {
     variant: 'none',
     scale: 'normal',
     margin: 'none',
-    border: 'none',
+    border: false,
     radius: 'none',
     color: 'neutral'
   }
