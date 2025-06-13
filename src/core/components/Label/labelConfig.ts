@@ -3,15 +3,16 @@ import type { LabelConfigProps } from './Label.types';
 
 export const labelConfig: ComponentConfig<LabelConfigProps> = {
   props: {
-    as: 'label',
-    direction: 'col',
+    as: 'p',
+    size: 'md',
+    weight: 'normal',
+    underline: 'none',
+    wordBreak: 'normal',
     wrap: 'wrap',
-    justify: 'normal',
-    align: 'stretch',
-    gap: 'xs',
+    align: 'left',
+    overflow: 'clip',
     variant: 'none',
-    scale: 'square',
-    spacing: 'none',
+    scale: 'normal',
     margin: 'none',
     border: 'none',
     radius: 'none',
