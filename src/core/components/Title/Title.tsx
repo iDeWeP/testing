@@ -1,7 +1,7 @@
 import type { ElementType } from 'react';
 import { useMergeProps } from '../../hooks/use-merge-props/useMergeProps';
 import { mergeClassName } from '../../utils/mergeClassName/mergeClassName';
-import { UnstyledBox } from '../UnstyledBox/UnstyledBox';
+import { UnstyledTypography } from '../UnstyledTypography/UnstyledTypography';
 import type { TitleProps } from './Title.types';
 import { titleConfig } from './titleConfig';
 
@@ -15,7 +15,7 @@ export const Title = <E extends ElementType = 'h3'>(props: TitleProps<E>) => {
   const mergedClassName = mergeClassName('title', className, { size });
 
   return (
-    <UnstyledBox
+    <UnstyledTypography
       size={size}
       className={mergedClassName}
       {...restProps}
