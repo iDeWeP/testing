@@ -1,9 +1,9 @@
 import type { ComponentConfig } from '../../types';
-import type { LabelConfigProps } from './Label.types';
+import type { MarkConfigProps } from './Mark.types';
 
-export const labelConfig: ComponentConfig<LabelConfigProps> = {
+export const markConfig: ComponentConfig<MarkConfigProps> = {
   props: {
-    as: 'label',
+    as: 'span',
     size: 'md',
     weight: 'normal',
     underline: 'none',

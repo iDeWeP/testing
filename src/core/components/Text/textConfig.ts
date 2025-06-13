@@ -1,9 +1,9 @@
 import type { ComponentConfig } from '../../types';
-import type { LabelConfigProps } from './Label.types';
+import type { TextConfigProps } from './Text.types';
 
-export const labelConfig: ComponentConfig<LabelConfigProps> = {
+export const textConfig: ComponentConfig<TextConfigProps> = {
   props: {
-    as: 'label',
+    as: 'p',
     size: 'md',
     weight: 'normal',
     underline: 'none',

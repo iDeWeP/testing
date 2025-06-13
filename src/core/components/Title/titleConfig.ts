@@ -1,9 +1,9 @@
 import type { ComponentConfig } from '../../types';
-import type { LabelConfigProps } from './Label.types';
+import type { TitleConfigProps } from './Title.types';
 
-export const labelConfig: ComponentConfig<LabelConfigProps> = {
+export const titleConfig: ComponentConfig<TitleConfigProps> = {
   props: {
-    as: 'label',
+    as: 'h3',
     size: 'md',
     weight: 'normal',
     underline: 'none',
@@ -12,7 +12,7 @@ export const labelConfig: ComponentConfig<LabelConfigProps> = {
     align: 'left',
     overflow: 'clip',
     variant: 'none',
-    scale: 'normal',
+    scale: 'full',
     margin: 'none',
     border: 'none',
     radius: 'none',

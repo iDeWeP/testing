@@ -5,7 +5,7 @@ import { UnstyledTypography } from '../UnstyledTypography/UnstyledTypography';
 import type { LabelProps } from './Label.types';
 import { labelConfig } from './labelConfig';
 
-export const Label = <E extends ElementType = 'p'>(props: LabelProps<E>) => {
+export const Label = <E extends ElementType = 'label'>(props: LabelProps<E>) => {
   const { className, ...restProps } = useMergeProps(
     'label',
     labelConfig.props,
