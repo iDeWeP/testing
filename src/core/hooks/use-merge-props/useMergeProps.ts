@@ -1,8 +1,13 @@
-import { useContext } from 'react';
+import { type ElementType, useContext } from 'react';
 import { ConfigContext } from '../../contexts/config/config';
 import type { CoreComponentsConfig } from '../../contexts/config/config.types';
+import type { ComponentRefProps } from '../../types';
 
-export const useMergeProps = <D extends object, P extends object>(
+export const useMergeProps = <
+  E extends ElementType,
+  D extends object,
+  P extends ComponentRefProps<E>
+>(
   component: keyof CoreComponentsConfig,
   defaultProps: D,
   props: P
@@ -13,6 +18,6 @@ export const useMergeProps = <D extends object, P extends object>(
     ...defaultProps,
     ...config?.props,
     ...props,
-    configClassName: config?.styles
+    className: `${config?.styles} ${props.className}`
   };
 };
