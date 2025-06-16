@@ -5,7 +5,7 @@ import mergeClasses from './mergeClasses';
 export const styleUnstyledTypography = (
   className: string,
   {
-    fontSize = 'md',
+    size = 'md',
     weight = 'normal',
     underline = 'none',
     wordBreak = 'normal',
@@ -15,7 +15,7 @@ export const styleUnstyledTypography = (
   }: Classes
 ) =>
   mergeClasses(
-    generic.styles.size.font[fontSize],
+    generic.styles.size.font[size],
     generic.styles.weight[weight],
     generic.styles.underline[underline],
     generic.styles.wordBreak[wordBreak],

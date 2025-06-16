@@ -20,7 +20,7 @@ export const styleUnstyledBox = (
 
   return mergeClasses(
     generic.styles.scale[scale],
-    generic.styles.size.box[spacing],
+    generic.styles.size.spacing[spacing],
     generic.styles.margin[margin],
     generic.styles.border[getBorder(border)],
     generic.styles.radius.lg[radius],
