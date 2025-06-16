@@ -4,7 +4,7 @@ import { UnstyledBox } from '../../../core/components/UnstyledBox/UnstyledBox';
 
 export const SizeExample = () => (
   <ExampleSection title="Size">
-    <ExampleCard align>
+    <ExampleCard>
       <UnstyledBox
         variant="solid"
         size="none"
@@ -55,7 +55,7 @@ export const SizeExample = () => (
         XXL
       </UnstyledBox>
     </ExampleCard>
-    <ExampleCard align>
+    <ExampleCard>
       <UnstyledBox
         variant="solid"
         size="xs-xs"
