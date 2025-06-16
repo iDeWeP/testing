@@ -5,21 +5,99 @@ import { UnstyledBox } from '../../../core/components/UnstyledBox/UnstyledBox';
 export const SizeExample = () => (
   <ExampleSection title="Size">
     <ExampleCard align>
-      <UnstyledBox size="none">NONE</UnstyledBox>
-      <UnstyledBox size="xs">XS</UnstyledBox>
-      <UnstyledBox size="sm">SM</UnstyledBox>
-      <UnstyledBox size="md">MD</UnstyledBox>
-      <UnstyledBox size="lg">LG</UnstyledBox>
-      <UnstyledBox size="xl">XL</UnstyledBox>
-      <UnstyledBox size="xxl">XXL</UnstyledBox>
+      <UnstyledBox
+        variant="solid"
+        size="none"
+        color="primary"
+      >
+        NONE
+      </UnstyledBox>
+      <UnstyledBox
+        variant="solid"
+        size="xs"
+        color="primary"
+      >
+        XS
+      </UnstyledBox>
+      <UnstyledBox
+        variant="solid"
+        size="sm"
+        color="primary"
+      >
+        SM
+      </UnstyledBox>
+      <UnstyledBox
+        variant="solid"
+        size="md"
+        color="primary"
+      >
+        MD
+      </UnstyledBox>
+      <UnstyledBox
+        variant="solid"
+        size="lg"
+        color="primary"
+      >
+        LG
+      </UnstyledBox>
+      <UnstyledBox
+        variant="solid"
+        size="xl"
+        color="primary"
+      >
+        XL
+      </UnstyledBox>
+      <UnstyledBox
+        variant="solid"
+        size="xxl"
+        color="primary"
+      >
+        XXL
+      </UnstyledBox>
     </ExampleCard>
     <ExampleCard align>
-      <UnstyledBox size="xs-xs">XS-XS</UnstyledBox>
-      <UnstyledBox size="sm-sm">SM-SM</UnstyledBox>
-      <UnstyledBox size="md-md">MD-MD</UnstyledBox>
-      <UnstyledBox size="lg-lg">LG-LG</UnstyledBox>
-      <UnstyledBox size="xl-xl">XL-XL</UnstyledBox>
-      <UnstyledBox size="xxl-xxl">XXL-XXL</UnstyledBox>
+      <UnstyledBox
+        variant="solid"
+        size="xs-xs"
+        color="primary"
+      >
+        XS-XS
+      </UnstyledBox>
+      <UnstyledBox
+        variant="solid"
+        size="sm-sm"
+        color="primary"
+      >
+        SM-SM
+      </UnstyledBox>
+      <UnstyledBox
+        variant="solid"
+        size="md-md"
+        color="primary"
+      >
+        MD-MD
+      </UnstyledBox>
+      <UnstyledBox
+        variant="solid"
+        size="lg-lg"
+        color="primary"
+      >
+        LG-LG
+      </UnstyledBox>
+      <UnstyledBox
+        variant="solid"
+        size="xl-xl"
+        color="primary"
+      >
+        XL-XL
+      </UnstyledBox>
+      <UnstyledBox
+        variant="solid"
+        size="xxl-xxl"
+        color="primary"
+      >
+        XXL-XXL
+      </UnstyledBox>
     </ExampleCard>
   </ExampleSection>
 );
