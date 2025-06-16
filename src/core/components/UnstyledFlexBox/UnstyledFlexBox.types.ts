@@ -4,7 +4,8 @@ import type {
   Wrap,
   JustifyContent,
   AlignItems,
-  Gap
+  Gap,
+  MergeProps
 } from '../../types';
 import type {
   UnstyledBoxConfigProps,
@@ -19,5 +20,7 @@ export type UnstyledFlexBoxConfigProps = {
   gap?: Gap;
 } & UnstyledBoxConfigProps;
 
-export type UnstyledFlexBoxProps<E extends ElementType> = UnstyledBoxProps<E> &
-  UnstyledFlexBoxConfigProps;
+export type UnstyledFlexBoxProps<E extends ElementType> = MergeProps<
+  UnstyledBoxProps<E>,
+  UnstyledFlexBoxConfigProps
+>;

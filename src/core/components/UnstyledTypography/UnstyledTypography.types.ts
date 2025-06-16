@@ -6,7 +6,8 @@ import type {
   WordBreak,
   TextWrap,
   TextAlign,
-  TextOverflow
+  TextOverflow,
+  MergeProps
 } from '../../types';
 import type {
   UnstyledBoxConfigProps,
@@ -23,5 +24,7 @@ export type UnstyledTypographyConfigProps = {
   overflow?: TextOverflow;
 } & UnstyledBoxConfigProps;
 
-export type UnstyledTypographyProps<E extends ElementType> =
-  UnstyledBoxProps<E> & UnstyledTypographyConfigProps;
+export type UnstyledTypographyProps<E extends ElementType> = MergeProps<
+  UnstyledBoxProps<E>,
+  UnstyledTypographyConfigProps
+>;

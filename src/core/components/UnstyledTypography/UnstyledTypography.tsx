@@ -4,7 +4,7 @@ import { UnstyledBox } from '../UnstyledBox/UnstyledBox';
 import type { UnstyledTypographyProps } from './UnstyledTypography.types';
 
 export const UnstyledTypography = <E extends ElementType = 'span'>({
-  size: fontSize,
+  size,
   weight,
   underline,
   wordBreak,
@@ -15,7 +15,7 @@ export const UnstyledTypography = <E extends ElementType = 'span'>({
   ...restProps
 }: UnstyledTypographyProps<E>) => {
   const mergedClassName = mergeClassName('unstyledTypography', className, {
-    fontSize,
+    size,
     weight,
     underline,
     wordBreak,
