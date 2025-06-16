@@ -1,4 +1,4 @@
-import type { ElementType, ComponentPropsWithRef } from 'react';
+import type { ElementType } from 'react';
 import type {
   Variant,
   BoxSize,
@@ -6,7 +6,9 @@ import type {
   Margin,
   Border,
   Radius,
-  Color
+  Color,
+  MergeProps,
+  ComponentRefProps
 } from '../../types';
 
 export type UnstyledBoxConfigProps = {
@@ -20,5 +22,7 @@ export type UnstyledBoxConfigProps = {
   color?: Color;
 };
 
-export type UnstyledBoxProps<E extends ElementType> = ComponentPropsWithRef<E> &
-  UnstyledBoxConfigProps;
+export type UnstyledBoxProps<E extends ElementType> = MergeProps<
+  ComponentRefProps<E>,
+  UnstyledBoxConfigProps
+>;
