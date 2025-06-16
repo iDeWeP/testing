@@ -8,7 +8,7 @@ import type {
   MergeProps
 } from '../../types';
 import type {
-  UnstyledBoxConfigProps,
+  UnstyledBoxDefaultProps,
   UnstyledBoxProps
 } from '../UnstyledBox/UnstyledBox.types';
 
@@ -18,9 +18,12 @@ export type UnstyledFlexBoxConfigProps = {
   justify?: JustifyContent;
   align?: AlignItems;
   gap?: Gap;
-} & UnstyledBoxConfigProps;
+};
+
+export type UnstyledFlexBoxDefaultProps = UnstyledFlexBoxConfigProps &
+  UnstyledBoxDefaultProps;
 
 export type UnstyledFlexBoxProps<E extends ElementType> = MergeProps<
   UnstyledBoxProps<E>,
-  UnstyledFlexBoxConfigProps
+  UnstyledFlexBoxDefaultProps
 >;
