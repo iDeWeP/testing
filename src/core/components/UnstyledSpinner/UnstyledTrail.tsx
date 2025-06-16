@@ -1,8 +1,8 @@
 import type { FC } from 'react';
-import type { MergeElementProps, Variant, Color } from '../../types';
+import type { MergeElementProps as MergeComponentProps, Variant, Color } from '../../types';
 import { mergeClassName } from '../../utils/mergeClassName/mergeClassName';
 
-export type Props = MergeElementProps<
+export type Props = MergeComponentProps<
   'circle',
   {
     isDisabled: boolean;
