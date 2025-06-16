@@ -1,12 +1,15 @@
-import { type ElementType, useContext } from 'react';
+import {
+  type ElementType,
+  type ComponentPropsWithRef,
+  useContext
+} from 'react';
 import { ConfigContext } from '../../contexts/config/config';
 import type { CoreComponentsConfig } from '../../contexts/config/config.types';
-import type { ComponentRefProps } from '../../types';
 
 export const useMergeProps = <
   E extends ElementType,
   D extends object,
-  P extends ComponentRefProps<E>
+  P extends ComponentPropsWithRef<E>
 >(
   component: keyof CoreComponentsConfig,
   defaultProps: D,

@@ -1,4 +1,4 @@
-import type { ReactNode, FC } from 'react';
+import type { ReactNode } from 'react';
 import { ConfigContext } from '../../contexts/config/config';
 import type { ComponentConfigContext } from '../../contexts/config/config.types';
 
@@ -7,6 +7,6 @@ type Props = {
   children?: ReactNode;
 };
 
-export const ConfigProvider: FC<Props> = ({ config, children }) => (
+export const ConfigProvider = ({ config, children }: Props) => (
   <ConfigContext value={config}>{children}</ConfigContext>
 );
