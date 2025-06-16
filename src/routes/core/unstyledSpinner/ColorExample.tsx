@@ -6,43 +6,43 @@ export const ColorExample = () => (
   <ExampleSection title="Color">
     <ExampleCard>
       <UnstyledSpinner
-        variant="solid"
+        variant="text"
         color="neutral"
       >
         NEUTRAL
       </UnstyledSpinner>
       <UnstyledSpinner
-        variant="solid"
+        variant="text"
         color="primary"
       >
         PRIMARY
       </UnstyledSpinner>
       <UnstyledSpinner
-        variant="solid"
+        variant="text"
         color="secondary"
       >
         SECONDARY
       </UnstyledSpinner>
       <UnstyledSpinner
-        variant="solid"
+        variant="text"
         color="tertiary"
       >
         TERTIARY
       </UnstyledSpinner>
       <UnstyledSpinner
-        variant="solid"
+        variant="text"
         color="success"
       >
         SUCCESS
       </UnstyledSpinner>
       <UnstyledSpinner
-        variant="solid"
+        variant="text"
         color="warning"
       >
         WARNING
       </UnstyledSpinner>
       <UnstyledSpinner
-        variant="solid"
+        variant="text"
         color="error"
       >
         ERROR
