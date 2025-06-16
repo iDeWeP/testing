@@ -1,5 +1,8 @@
-import type { FC } from 'react';
-import type { MergeElementProps as MergeComponentProps, Variant, Color } from '../../types';
+import type {
+  MergeElementProps as MergeComponentProps,
+  Variant,
+  Color
+} from '../../types';
 import { mergeClassName } from '../../utils/mergeClassName/mergeClassName';
 
 export type Props = MergeComponentProps<
@@ -11,13 +14,13 @@ export type Props = MergeComponentProps<
   }
 >;
 
-export const UnstyledTrail: FC<Props> = ({
+export const UnstyledTrail = ({
   isDisabled,
   variant,
   color,
   className,
   ...restProps
-}) => {
+}: Props) => {
   const mergedClassName = mergeClassName('unstyledTrail', className, {
     isDisabled,
     variant,
