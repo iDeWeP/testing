@@ -20,8 +20,10 @@ export type UnstyledFlexBoxConfigProps = {
   gap?: Gap;
 };
 
-export type UnstyledFlexBoxDefaultProps = UnstyledFlexBoxConfigProps &
-  UnstyledBoxDefaultProps;
+export type UnstyledFlexBoxDefaultProps = MergeProps<
+  UnstyledBoxDefaultProps,
+  UnstyledFlexBoxConfigProps
+>;
 
 export type UnstyledFlexBoxProps<E extends ElementType> = MergeProps<
   UnstyledBoxProps<E>,

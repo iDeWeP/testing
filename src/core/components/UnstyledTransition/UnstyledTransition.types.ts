@@ -19,8 +19,10 @@ export type UnstyledTransitionConfigProps = {
   transtionProps?: TransitionProps;
 };
 
-export type UnstyledTransitionDefaultProps = UnstyledTransitionConfigProps &
-  UnstyledBoxDefaultProps;
+export type UnstyledTransitionDefaultProps = MergeProps<
+  UnstyledBoxDefaultProps,
+  UnstyledTransitionConfigProps
+>;
 
 export type UnstyledTransitionProps<E extends ElementType> = MergeProps<
   UnstyledBoxProps<E>,

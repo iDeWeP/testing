@@ -24,8 +24,10 @@ export type UnstyledTypographyConfigProps = {
   overflow?: TextOverflow;
 };
 
-export type UnstyledTypographyDefaultProps = UnstyledTypographyConfigProps &
-  UnstyledBoxDefaultProps;
+export type UnstyledTypographyDefaultProps = MergeProps<
+  UnstyledBoxDefaultProps,
+  UnstyledTypographyConfigProps
+>;
 
 export type UnstyledTypographyProps<E extends ElementType> = MergeProps<
   UnstyledBoxProps<E>,
