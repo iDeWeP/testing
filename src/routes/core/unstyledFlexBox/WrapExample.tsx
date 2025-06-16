@@ -5,7 +5,7 @@ import { UnstyledFlexBox } from '../../../core/components/UnstyledFlexBox/Unstyl
 
 export const WrapExample = () => (
   <ExampleSection title="Wrap">
-    <ExampleCard vertical>
+    <ExampleCard>
       <UnstyledFlexBox wrap="nowrap">
         <UnstyledBox>NOWRAP #1</UnstyledBox>
         <UnstyledBox>NOWRAP #2</UnstyledBox>

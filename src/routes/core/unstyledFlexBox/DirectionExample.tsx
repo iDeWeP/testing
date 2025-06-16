@@ -5,7 +5,7 @@ import { UnstyledFlexBox } from '../../../core/components/UnstyledFlexBox/Unstyl
 
 export const DirectionExample = () => (
   <ExampleSection title="Direction">
-    <ExampleCard vertical>
+    <ExampleCard>
       <UnstyledFlexBox direction="row">
         <UnstyledBox>ROW #1</UnstyledBox>
         <UnstyledBox>ROW #2</UnstyledBox>

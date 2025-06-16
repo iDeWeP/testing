@@ -5,7 +5,10 @@ import { UnstyledFlexBox } from '../../../core/components/UnstyledFlexBox/Unstyl
 
 export const JustifyExample = () => (
   <ExampleSection title="Justify">
-    <ExampleCard vertical>
+    <ExampleCard
+      vertical
+      stretch
+    >
       <UnstyledFlexBox justify="normal">
         <UnstyledBox>NORMAL #2</UnstyledBox>
         <UnstyledBox>NORMAL #1</UnstyledBox>

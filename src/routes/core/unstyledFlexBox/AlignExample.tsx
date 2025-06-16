@@ -5,7 +5,7 @@ import { UnstyledFlexBox } from '../../../core/components/UnstyledFlexBox/Unstyl
 
 export const AlignExample = () => (
   <ExampleSection title="Align">
-    <ExampleCard vertical>
+    <ExampleCard>
       <UnstyledFlexBox align="stretch">
         <UnstyledBox>STRETCH #2</UnstyledBox>
         <UnstyledBox>STRETCH #1</UnstyledBox>
