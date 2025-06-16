@@ -2,18 +2,24 @@ import type { ElementType } from 'react';
 import { mergeClassName } from '../../utils/mergeClassName/mergeClassName';
 import { UnstyledBox } from '../UnstyledBox/UnstyledBox';
 import type { UnstyledTypographyProps } from './UnstyledTypography.types';
+import { mergeProps } from '../../utils/mergeProps/mergeProps';
+import { unstyledTypographyConfig } from './unstyledTypographyConfig';
 
-export const UnstyledTypography = <E extends ElementType = 'span'>({
-  size,
-  weight,
-  underline,
-  wordBreak,
-  wrap: textWrap,
-  align: textAlign,
-  overflow: textOverflow,
-  className,
-  ...restProps
-}: UnstyledTypographyProps<E>) => {
+export const UnstyledTypography = <E extends ElementType = 'span'>(
+  props: UnstyledTypographyProps<E>
+) => {
+  const {
+    size,
+    weight,
+    underline,
+    wordBreak,
+    wrap: textWrap,
+    align: textAlign,
+    overflow: textOverflow,
+    className,
+    ...restProps
+  } = mergeProps(unstyledTypographyConfig.props, props);
+
   const mergedClassName = mergeClassName('unstyledTypography', className, {
     size,
     weight,
@@ -26,6 +32,7 @@ export const UnstyledTypography = <E extends ElementType = 'span'>({
 
   return (
     <UnstyledBox
+      as="span"
       className={mergedClassName}
       {...restProps}
     />

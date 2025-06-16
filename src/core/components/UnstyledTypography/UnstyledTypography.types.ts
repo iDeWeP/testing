@@ -22,9 +22,12 @@ export type UnstyledTypographyConfigProps = {
   wrap?: TextWrap;
   align?: TextAlign;
   overflow?: TextOverflow;
-} & UnstyledBoxConfigProps;
+};
+
+export type UnstyledTypographyDefaultProps = UnstyledTypographyConfigProps &
+  UnstyledBoxConfigProps;
 
 export type UnstyledTypographyProps<E extends ElementType> = MergeProps<
   UnstyledBoxProps<E>,
-  UnstyledTypographyConfigProps
+  UnstyledTypographyDefaultProps
 >;
