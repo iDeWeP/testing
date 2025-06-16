@@ -51,6 +51,13 @@ export const UnstyledSpinner = (props: UnstyledSpinnerProps) => {
           {...componentsProps.outerBorder}
         />
       )}
+      <UnstyledTrail
+        isDisabled={isDisabled}
+        strokeWidth={thickness}
+        variant={variant}
+        color={color}
+        {...componentsProps.trail}
+      />
       <circle
         cx="20"
         cy="20"
@@ -59,13 +66,6 @@ export const UnstyledSpinner = (props: UnstyledSpinnerProps) => {
         strokeDasharray={length}
         strokeDashoffset={offset}
         {...componentsProps.bar}
-      />
-      <UnstyledTrail
-        isDisabled
-        strokeWidth={thickness}
-        variant={variant}
-        color={color}
-        {...componentsProps.trail}
       />
       {border && (
         <circle
