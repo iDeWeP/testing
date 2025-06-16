@@ -18,8 +18,8 @@ export const mergeTransitionStyle = (
   ref: RefObject<HTMLElement | null>,
   isIn: boolean,
   animation: Animation,
-  scale: Scale,
   peak: Peak,
+  scale: Scale,
   transition: Transition,
   duration: number,
   style: CSSProperties,
@@ -29,6 +29,10 @@ export const mergeTransitionStyle = (
 
   return {
     ...styleTransition(isIn, animation, duration, transitionProps),
+    ...(transitions[0] !== 'fade' &&
+    transitions[transitions.length - 1] === 'fade'
+      ? setStyle.fade(animation, peak, transitions)
+      : {}),
     ...setStyle[transitions[0] as keyof typeof setStyle](
       animation,
       peak,
