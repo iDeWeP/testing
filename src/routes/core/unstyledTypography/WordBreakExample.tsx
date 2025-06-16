@@ -4,7 +4,7 @@ import { UnstyledTypography } from '../../../core/components/UnstyledTypography/
 
 const WordBreakExample = () => (
   <ExampleSection title="Word break">
-    <ExampleCard vertical>
+    <ExampleCard>
       <UnstyledTypography wordBreak="normal">NORMAL</UnstyledTypography>
       <UnstyledTypography wordBreak="words">WORDS</UnstyledTypography>
       <UnstyledTypography wordBreak="all">ALL</UnstyledTypography>

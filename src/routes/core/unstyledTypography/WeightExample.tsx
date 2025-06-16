@@ -4,7 +4,7 @@ import { UnstyledTypography } from '../../../core/components/UnstyledTypography/
 
 export const WeightExample = () => (
   <ExampleSection title="Weight">
-    <ExampleCard vertical>
+    <ExampleCard>
       <UnstyledTypography weight="normal">NORMAL</UnstyledTypography>
       <UnstyledTypography weight="semi">SEMI</UnstyledTypography>
       <UnstyledTypography weight="bold">BOLD</UnstyledTypography>

@@ -4,7 +4,7 @@ import { UnstyledTypography } from '../../../core/components/UnstyledTypography/
 
 export const SizeExample = () => (
   <ExampleSection title="Size">
-    <ExampleCard align>
+    <ExampleCard>
       <UnstyledTypography size="xs">XS</UnstyledTypography>
       <UnstyledTypography size="sm">SM</UnstyledTypography>
       <UnstyledTypography size="md">MD</UnstyledTypography>
