@@ -23,7 +23,7 @@ export const unstyledSpinnerConfig: ComponentConfig<UnstyledSpinnerConfigProps> 
     spin: true,
     disabled: false,
     value: 50,
-    variant: 'text',
+    variant: 'none',
     float: false,
     size: 'md',
     thickness: 4,
