@@ -16,7 +16,7 @@ export type UnstyledTransitionConfigProps = {
   peak?: Peak;
   transition?: Transition;
   duration?: number;
-  transtionProps?: TransitionProps;
+  transitionProps?: TransitionProps;
 };
 
 export type UnstyledTransitionDefaultProps = MergeProps<

@@ -9,6 +9,6 @@ export const unstyledTransitionConfig: ComponentConfig<UnstyledTransitionConfigP
       peak: 100,
       transition: 'fade',
       duration: 1000,
-      transtionProps: {}
+      transitionProps: {}
     }
   };
