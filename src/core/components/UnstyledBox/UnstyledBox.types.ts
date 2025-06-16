@@ -22,7 +22,9 @@ export type UnstyledBoxConfigProps = {
   color?: Color;
 };
 
+export type UnstyledBoxDefaultProps = UnstyledBoxConfigProps;
+
 export type UnstyledBoxProps<E extends ElementType> = MergeProps<
   ComponentRefProps<E>,
-  UnstyledBoxConfigProps
+  UnstyledBoxDefaultProps
 >;
