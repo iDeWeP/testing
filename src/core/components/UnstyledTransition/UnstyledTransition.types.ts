@@ -1,5 +1,10 @@
 import type { ElementType } from 'react';
-import type { Peak, Transition, TransitionProps } from '../../types';
+import type {
+  Peak,
+  Transition,
+  TransitionProps,
+  MergeProps
+} from '../../types';
 import type {
   UnstyledBoxDefaultProps,
   UnstyledBoxProps
@@ -17,5 +22,7 @@ export type UnstyledTransitionConfigProps = {
 export type UnstyledTransitionDefaultProps = UnstyledTransitionConfigProps &
   UnstyledBoxDefaultProps;
 
-export type UnstyledTransitionProps<E extends ElementType> =
-  UnstyledBoxProps<E> & UnstyledTransitionDefaultProps;
+export type UnstyledTransitionProps<E extends ElementType> = MergeProps<
+  UnstyledBoxProps<E>,
+  UnstyledTransitionDefaultProps
+>;
