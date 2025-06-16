@@ -33,6 +33,7 @@ export const UnstyledTypography = <E extends ElementType = 'span'>(
   return (
     <UnstyledBox
       as="span"
+      size="none"
       className={mergedClassName}
       {...restProps}
     />
