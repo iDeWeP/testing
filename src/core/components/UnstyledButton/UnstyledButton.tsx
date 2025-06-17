@@ -1,11 +1,10 @@
-import type { ElementType } from "react";
-import { mergeClassName } from "../../utils/mergeClassName/mergeClassName";
-import { mergeProps } from "../../utils/mergeProps/mergeProps";
-import { UnstyledRipple } from "../UnstyledRipple/UnstyledRipple";
-import { UnstyledSpinner } from "../UnstyledSpinner/UnstyledSpinner";
-import type { UnstyledButtonProps } from "./UnstyledButton.types";
-import { unstyledButtonConfig } from "./unstyledButtonConfig";
-
+import type { ElementType } from 'react';
+import { mergeClassName } from '../../utils/mergeClassName/mergeClassName';
+import { mergeProps } from '../../utils/mergeProps/mergeProps';
+import { UnstyledRipple } from '../UnstyledRipple/UnstyledRipple';
+import { UnstyledSpinner } from '../UnstyledSpinner/UnstyledSpinner';
+import type { UnstyledButtonProps } from './UnstyledButton.types';
+import { unstyledButtonConfig } from './unstyledButtonConfig';
 
 export const UnstyledButton = <E extends ElementType = 'button'>(
   props: UnstyledButtonProps<E>
@@ -15,7 +14,9 @@ export const UnstyledButton = <E extends ElementType = 'button'>(
     disabled: isDisabled,
     variant,
     size,
-    scale,
+    scale: buttonScale,
+    border: isBordered,
+    radius,
     color,
     effect,
     className,
@@ -32,10 +33,14 @@ export const UnstyledButton = <E extends ElementType = 'button'>(
   const mergedClassName = mergeClassName('unstyledButton', className, {
     loading,
     isDisabled,
+    variant,
+    isRelative: hasRipple,
     size,
-    scale,
-    effect,
-    hasRipple
+    buttonScale,
+    isBordered,
+    radius,
+    color,
+    effect
   });
 
   const spinnerNode = (
@@ -50,7 +55,7 @@ export const UnstyledButton = <E extends ElementType = 'button'>(
       thickness={4}
       margin="none"
       border={false}
-      // color={getColorVariant(variant, color)}
+      color={color}
       componentsProps={{
         bar: componentsProps.bar,
         trail: componentsProps.trail,
@@ -68,6 +73,8 @@ export const UnstyledButton = <E extends ElementType = 'button'>(
       variant={variant}
       size="none"
       scale="normal"
+      border={isBordered}
+      radius="none"
       color={color}
       className={mergedClassName}
       {...restProps}
@@ -85,7 +92,7 @@ export const UnstyledButton = <E extends ElementType = 'button'>(
           variant={variant}
           color={color}
           effect={ripple}
-          {...componentsProps?.ripple}
+          {...componentsProps.ripple}
         />
       )}
     </button>
