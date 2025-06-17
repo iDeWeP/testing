@@ -26,6 +26,7 @@ export const unstyledSpinnerConfig: ComponentConfig<UnstyledSpinnerConfigProps> 
     variant: 'none',
     float: false,
     size: 'md',
+    scale: 'normal',
     thickness: 4,
     margin: 'none',
     border: false,

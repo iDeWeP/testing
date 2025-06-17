@@ -4,7 +4,8 @@ import type {
   Size,
   Margin,
   Color,
-  MergeProps
+  MergeProps,
+  DefaultScale
 } from '../../types';
 
 export type UnstyledSpinnerComponentProps = {
@@ -14,13 +15,14 @@ export type UnstyledSpinnerComponentProps = {
   outerBorder?: ComponentRefProps<'circle'>;
 };
 
-export type UnstyledSpinnerConfigProps = {
+export type UnstyledSpinnerDefaultProps = {
   spin?: boolean;
   disabled?: boolean;
   value?: number;
   variant?: Variant;
   float?: boolean;
   size?: Size;
+  scale?: DefaultScale;
   thickness?: number;
   margin?: Margin;
   border?: boolean;
@@ -28,7 +30,7 @@ export type UnstyledSpinnerConfigProps = {
   componentsProps?: UnstyledSpinnerComponentProps;
 };
 
-export type UnstyledSpinnerDefaultProps = UnstyledSpinnerConfigProps;
+export type UnstyledSpinnerConfigProps = UnstyledSpinnerDefaultProps;
 
 export type UnstyledSpinnerProps = MergeProps<
   ComponentRefProps<'svg'>,
