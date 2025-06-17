@@ -11,7 +11,7 @@ import type {
   ComponentRefProps
 } from '../../types';
 
-export type UnstyledBoxConfigProps = {
+export type UnstyledBoxDefaultProps = {
   as?: ElementType;
   variant?: Variant;
   size?: BoxSize;
@@ -22,7 +22,7 @@ export type UnstyledBoxConfigProps = {
   color?: Color;
 };
 
-export type UnstyledBoxDefaultProps = UnstyledBoxConfigProps;
+export type UnstyledBoxConfigProps = UnstyledBoxDefaultProps;
 
 export type UnstyledBoxProps<E extends ElementType> = MergeProps<
   ComponentRefProps<E>,
