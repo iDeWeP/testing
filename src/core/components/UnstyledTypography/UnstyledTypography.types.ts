@@ -14,7 +14,7 @@ import type {
   UnstyledBoxProps
 } from '../UnstyledBox/UnstyledBox.types';
 
-export type UnstyledTypographyConfigProps = {
+export type UnstyledTypographyDefaultProps = {
   size?: Size;
   weight?: Weight;
   underline?: Underline;
@@ -24,9 +24,9 @@ export type UnstyledTypographyConfigProps = {
   overflow?: TextOverflow;
 };
 
-export type UnstyledTypographyDefaultProps = MergeProps<
+export type UnstyledTypographyConfigProps = MergeProps<
   UnstyledBoxDefaultProps,
-  UnstyledTypographyConfigProps
+  UnstyledTypographyDefaultProps
 >;
 
 export type UnstyledTypographyProps<E extends ElementType> = MergeProps<
