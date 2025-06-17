@@ -59,7 +59,6 @@ export const UnstyledTransition = <E extends ElementType = 'div'>(
 
   return (
     <UnstyledBox
-      as="div"
       ref={mergeRefs(forwardedRef, ref)}
       scale={scale}
       className={mergedClassName}
