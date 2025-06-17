@@ -9,7 +9,7 @@ export const unstyledTransitionConfig: ComponentConfig<UnstyledTransitionConfigP
       unmountOnExit: false,
       peak: 100,
       variant: 'none',
-      size: 'md',
+      size: 'none',
       scale: 'normal',
       margin: 'none',
       border: false,

@@ -21,7 +21,6 @@ export const UnstyledFlexBox = <E extends ElementType = 'div'>(
 
   return (
     <UnstyledBox
-      as="div"
       className={mergedClassName}
       {...restProps}
     />
