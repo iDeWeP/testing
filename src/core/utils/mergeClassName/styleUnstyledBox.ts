@@ -7,7 +7,7 @@ import mergeClasses from './mergeClasses';
 export const styleUnstyledBox = (
   className: string,
   {
-    variant = 'surface',
+    variant = 'none',
     spacing = 'none',
     scale = 'normal',
     margin = 'none',
@@ -20,7 +20,7 @@ export const styleUnstyledBox = (
 
   return mergeClasses(
     generic.styles.scale[scale],
-    generic.styles.size.spacing[spacing],
+    generic.styles.spacing.container[spacing],
     generic.styles.margin[margin],
     generic.styles.border[getBorder(border)],
     generic.styles.radius.lg[radius],
