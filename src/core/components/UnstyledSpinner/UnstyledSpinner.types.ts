@@ -2,10 +2,10 @@ import type {
   ComponentRefProps,
   Variant,
   Size,
+  DefaultScale,
   Margin,
   Color,
-  MergeProps,
-  DefaultScale
+  MergeProps
 } from '../../types';
 
 export type UnstyledSpinnerComponentProps = {
