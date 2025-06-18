@@ -1,19 +1,222 @@
 import type {
-  AlignItems,
   Color,
   CSSProps,
-  Direction,
-  Gap,
-  JustifyContent,
+  Size,
+  Scale,
   Margin,
-  Radius,
-  ScaleSizes,
-  ScaleWidth,
-  Spacing,
-  Wrap
+  Weight,
+  Underline,
+  WordBreak,
+  TextWrap,
+  TextAlign,
+  TextOverflow,
+  Direction,
+  Wrap,
+  JustifyContent,
+  AlignItems,
+  Gap,
+  Effect
 } from '../types';
 
+type Focusable = 'none' | 'default' | 'disabled';
+type Loading = 'none' | 'normal' | 'hide';
 type Display = 'block' | 'flex' | 'grid' | 'inline-flex';
+type Position = 'static' | 'absolute' | 'fixed' | 'relative';
+type DefaultSize = 'none' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl';
+type SizeScale = 'normal' | 'square';
+type Spacing =
+  | 'none'
+  | 'xs'
+  | 'sm'
+  | 'md'
+  | 'lg'
+  | 'xl'
+  | 'xxl'
+  | 'xs-x'
+  | 'xs-y'
+  | 'xs-top'
+  | 'xs-bottom'
+  | 'xs-left'
+  | 'xs-right'
+  | 'xs-x-top'
+  | 'xs-x-bottom'
+  | 'xs-y-left'
+  | 'xs-y-right'
+  | 'xs-top-left'
+  | 'xs-top-right'
+  | 'xs-bottom-left'
+  | 'xs-bottom-right'
+  | 'sm-x'
+  | 'sm-y'
+  | 'sm-top'
+  | 'sm-bottom'
+  | 'sm-left'
+  | 'sm-right'
+  | 'sm-x-top'
+  | 'sm-x-bottom'
+  | 'sm-y-left'
+  | 'sm-y-right'
+  | 'sm-top-left'
+  | 'sm-top-right'
+  | 'sm-bottom-left'
+  | 'sm-bottom-right'
+  | 'md-x'
+  | 'md-y'
+  | 'md-top'
+  | 'md-bottom'
+  | 'md-left'
+  | 'md-right'
+  | 'md-x-top'
+  | 'md-x-bottom'
+  | 'md-y-left'
+  | 'md-y-right'
+  | 'md-top-left'
+  | 'md-top-right'
+  | 'md-bottom-left'
+  | 'md-bottom-right'
+  | 'lg-x'
+  | 'lg-y'
+  | 'lg-top'
+  | 'lg-bottom'
+  | 'lg-left'
+  | 'lg-right'
+  | 'lg-x-top'
+  | 'lg-x-bottom'
+  | 'lg-y-left'
+  | 'lg-y-right'
+  | 'lg-top-left'
+  | 'lg-top-right'
+  | 'lg-bottom-left'
+  | 'lg-bottom-right'
+  | 'xl-x'
+  | 'xl-y'
+  | 'xl-top'
+  | 'xl-bottom'
+  | 'xl-left'
+  | 'xl-right'
+  | 'xl-x-top'
+  | 'xl-x-bottom'
+  | 'xl-y-left'
+  | 'xl-y-right'
+  | 'xl-top-left'
+  | 'xl-top-right'
+  | 'xl-bottom-left'
+  | 'xl-bottom-right'
+  | 'xxl-x'
+  | 'xxl-y'
+  | 'xxl-top'
+  | 'xxl-bottom'
+  | 'xxl-left'
+  | 'xxl-right'
+  | 'xxl-x-top'
+  | 'xxl-x-bottom'
+  | 'xxl-y-left'
+  | 'xxl-y-right'
+  | 'xxl-top-left'
+  | 'xxl-top-right'
+  | 'xxl-bottom-left'
+  | 'xxl-bottom-right'
+  | 'xs-xs'
+  | 'sm-sm'
+  | 'md-md'
+  | 'lg-lg'
+  | 'xl-xl'
+  | 'xxl-xxl'
+  | 'xs-xs-x'
+  | 'xs-xs-y'
+  | 'xs-xs-top'
+  | 'xs-xs-bottom'
+  | 'xs-xs-left'
+  | 'xs-xs-right'
+  | 'xs-xs-x-top'
+  | 'xs-xs-x-bottom'
+  | 'xs-xs-y-left'
+  | 'xs-xs-y-right'
+  | 'xs-xs-top-left'
+  | 'xs-xs-top-right'
+  | 'xs-xs-bottom-left'
+  | 'xs-xs-bottom-right'
+  | 'sm-sm-x'
+  | 'sm-sm-y'
+  | 'sm-sm-top'
+  | 'sm-sm-bottom'
+  | 'sm-sm-left'
+  | 'sm-sm-right'
+  | 'sm-sm-x-top'
+  | 'sm-sm-x-bottom'
+  | 'sm-sm-y-left'
+  | 'sm-sm-y-right'
+  | 'sm-sm-top-left'
+  | 'sm-sm-top-right'
+  | 'sm-sm-bottom-left'
+  | 'sm-sm-bottom-right'
+  | 'md-md-x'
+  | 'md-md-y'
+  | 'md-md-top'
+  | 'md-md-bottom'
+  | 'md-md-left'
+  | 'md-md-right'
+  | 'md-md-x-top'
+  | 'md-md-x-bottom'
+  | 'md-md-y-left'
+  | 'md-md-y-right'
+  | 'md-md-top-left'
+  | 'md-md-top-right'
+  | 'md-md-bottom-left'
+  | 'md-md-bottom-right'
+  | 'lg-lg-x'
+  | 'lg-lg-y'
+  | 'lg-lg-top'
+  | 'lg-lg-bottom'
+  | 'lg-lg-left'
+  | 'lg-lg-right'
+  | 'lg-lg-x-top'
+  | 'lg-lg-x-bottom'
+  | 'lg-lg-y-left'
+  | 'lg-lg-y-right'
+  | 'lg-lg-top-left'
+  | 'lg-lg-top-right'
+  | 'lg-lg-bottom-left'
+  | 'lg-lg-bottom-right'
+  | 'xl-xl-x'
+  | 'xl-xl-y'
+  | 'xl-xl-top'
+  | 'xl-xl-bottom'
+  | 'xl-xl-left'
+  | 'xl-xl-right'
+  | 'xl-xl-x-top'
+  | 'xl-xl-x-bottom'
+  | 'xl-xl-y-left'
+  | 'xl-xl-y-right'
+  | 'xl-xl-top-left'
+  | 'xl-xl-top-right'
+  | 'xl-xl-bottom-left'
+  | 'xl-xl-bottom-right'
+  | 'xxl-xxl-x'
+  | 'xxl-xxl-y'
+  | 'xxl-xxl-top'
+  | 'xxl-xxl-bottom'
+  | 'xxl-xxl-left'
+  | 'xxl-xxl-right'
+  | 'xxl-xxl-x-top'
+  | 'xxl-xxl-x-bottom'
+  | 'xxl-xxl-y-left'
+  | 'xxl-xxl-y-right'
+  | 'xxl-xxl-top-left'
+  | 'xxl-xxl-top-right'
+  | 'xxl-xxl-bottom-left'
+  | 'xxl-xxl-bottom-right';
+type SpacingScale =
+  | 'normal'
+  | 'square'
+  | 'border'
+  | 'border-square'
+  | 'border-y'
+  | 'border-square-y'
+  | 'border-y-left'
+  | 'border-square-y-left'
+  | 'border-y-right'
+  | 'border-square-y-right';
 type Border =
   | 'none'
   | 'all'
@@ -31,37 +234,131 @@ type Border =
   | 'top-right'
   | 'bottom-left'
   | 'bottom-right';
+type Radius =
+  | 'none'
+  | 'xs'
+  | 'sm'
+  | 'md'
+  | 'lg'
+  | 'xl'
+  | 'full'
+  | 'xs-top'
+  | 'xs-bottom'
+  | 'xs-left'
+  | 'xs-right'
+  | 'xs-top-left'
+  | 'xs-top-right'
+  | 'xs-bottom-left'
+  | 'xs-bottom-right'
+  | 'sm-top'
+  | 'sm-bottom'
+  | 'sm-left'
+  | 'sm-right'
+  | 'sm-top-left'
+  | 'sm-top-right'
+  | 'sm-bottom-left'
+  | 'sm-bottom-right'
+  | 'md-top'
+  | 'md-bottom'
+  | 'md-left'
+  | 'md-right'
+  | 'md-top-left'
+  | 'md-top-right'
+  | 'md-bottom-left'
+  | 'md-bottom-right'
+  | 'lg-top'
+  | 'lg-bottom'
+  | 'lg-left'
+  | 'lg-right'
+  | 'lg-top-left'
+  | 'lg-top-right'
+  | 'lg-bottom-left'
+  | 'lg-bottom-right'
+  | 'xl-top'
+  | 'xl-bottom'
+  | 'xl-left'
+  | 'xl-right'
+  | 'xl-top-left'
+  | 'xl-top-right'
+  | 'xl-bottom-left'
+  | 'xl-bottom-right'
+  | 'full-top'
+  | 'full-bottom'
+  | 'full-left'
+  | 'full-right'
+  | 'full-top-left'
+  | 'full-top-right'
+  | 'full-bottom-left'
+  | 'full-bottom-right';
 type DefaultRadius = 'sm' | 'md' | 'lg';
 type MergedColor = 'disabled' | 'surface' | Color;
+type ColorType = 'bg' | 'border' | 'text' | 'fill' | 'stroke' | 'ring';
 type GapDirection = 'default' | 'row' | 'col';
+type Transition = 'fade' | 'transform' | 'transform-fade';
+type Cursor = 'none' | 'pointer' | 'disabled';
 
 type Generic = {
   styles: {
+    focusable: Record<Focusable, CSSProps>;
+    loading: Record<Loading, CSSProps>;
     display: Record<Display, CSSProps>;
-    scale: Record<ScaleWidth, CSSProps>;
+    position: Record<Position, CSSProps>;
+    size: {
+      normal: Record<DefaultSize, Record<SizeScale, CSSProps>>;
+      inner: Record<DefaultSize, Record<SizeScale, CSSProps>>;
+      font: Record<Size, CSSProps>;
+      title: Record<Size, CSSProps>;
+    };
+    scale: Record<Scale, CSSProps>;
     spacing: {
-      default: Record<ScaleSizes, Record<Spacing, CSSProps>>;
+      normal: Record<Size, Record<SpacingScale, CSSProps>>;
+      container: Record<Spacing, CSSProps>;
     };
     margin: Record<Margin, CSSProps>;
     border: Record<Border, CSSProps>;
     radius: Record<DefaultRadius, Record<Radius, CSSProps>>;
-    color: {
-      bg: Record<MergedColor, Record<string, CSSProps>>;
-      border: Record<MergedColor, Record<string, CSSProps>>;
-      text: Record<MergedColor, Record<string, CSSProps>>;
-      fill: Record<MergedColor, Record<string, CSSProps>>;
-      ring: Record<MergedColor, Record<string, CSSProps>>;
-    };
+    weight: Record<Weight, CSSProps>;
+    underline: Record<Underline, CSSProps>;
+    wordBreak: Record<WordBreak, CSSProps>;
+    textWrap: Record<TextWrap, CSSProps>;
+    textAlign: Record<TextAlign, CSSProps>;
+    textOverflow: Record<TextOverflow, CSSProps>;
+    color: Record<ColorType, Record<MergedColor, Record<string, CSSProps>>>;
     direction: Record<Direction, CSSProps>;
     wrap: Record<Wrap, CSSProps>;
     justify: Record<JustifyContent, CSSProps>;
     align: Record<AlignItems, CSSProps>;
     gap: Record<GapDirection, Record<Gap, CSSProps>>;
+    effect: Record<Effect, CSSProps>;
+    transition: Record<Transition, CSSProps>;
+    cursor: Record<Cursor, CSSProps>;
   };
 };
 
 export const generic: Generic = {
   styles: {
+    focusable: {
+      none: {},
+      default: {
+        focus: 'focus:outline-none',
+        focusVisible: 'focus-visible:ring-4'
+      },
+      disabled: {
+        cursor: 'cursor-not-allowed',
+        userSelect: 'select-none'
+      }
+    },
+    loading: {
+      none: {},
+      normal: {
+        opacity: 'opacity-50'
+      },
+      hide: {
+        color: 'text-transparent',
+        fill: 'fill-transparent',
+        opacity: 'opacity-50'
+      }
+    },
     display: {
       block: {},
       flex: {
@@ -74,8 +371,184 @@ export const generic: Generic = {
         display: 'inline-flex'
       }
     },
+    position: {
+      static: {
+        position: 'static'
+      },
+      absolute: {
+        position: 'absolute'
+      },
+      fixed: {
+        position: 'fixed'
+      },
+      relative: {
+        position: 'relative'
+      }
+    },
+    size: {
+      normal: {
+        none: {
+          normal: {},
+          square: {}
+        },
+        xs: {
+          normal: {
+            height: 'h-5'
+          },
+          square: {
+            width: 'w-5',
+            height: 'h-5'
+          }
+        },
+        sm: {
+          normal: {
+            height: 'h-8'
+          },
+          square: {
+            width: 'w-8',
+            height: 'h-8'
+          }
+        },
+        md: {
+          normal: {
+            height: 'h-10'
+          },
+          square: {
+            width: 'w-10',
+            height: 'h-10'
+          }
+        },
+        lg: {
+          normal: {
+            height: 'h-12'
+          },
+          square: {
+            width: 'w-12',
+            height: 'h-12'
+          }
+        },
+        xl: {
+          normal: {
+            height: 'h-16'
+          },
+          square: {
+            width: 'w-16',
+            height: 'h-16'
+          }
+        },
+        xxl: {
+          normal: {
+            height: 'h-24'
+          },
+          square: {
+            width: 'w-24',
+            height: 'h-24'
+          }
+        }
+      },
+      inner: {
+        none: {
+          normal: {},
+          square: {}
+        },
+        xs: {
+          normal: {
+            height: 'h-3'
+          },
+          square: {
+            width: 'w-3',
+            height: 'h-3'
+          }
+        },
+        sm: {
+          normal: {
+            height: 'h-4'
+          },
+          square: {
+            width: 'w-4',
+            height: 'h-4'
+          }
+        },
+        md: {
+          normal: {
+            height: 'h-5'
+          },
+          square: {
+            width: 'w-5',
+            height: 'h-5'
+          }
+        },
+        lg: {
+          normal: {
+            height: 'h-6'
+          },
+          square: {
+            width: 'w-6',
+            height: 'h-6'
+          }
+        },
+        xl: {
+          normal: {
+            height: 'h-7'
+          },
+          square: {
+            width: 'w-7',
+            height: 'h-7'
+          }
+        },
+        xxl: {
+          normal: {
+            height: 'h-8'
+          },
+          square: {
+            width: 'w-8',
+            height: 'h-8'
+          }
+        }
+      },
+      font: {
+        xs: {
+          fontSize: 'text-xs'
+        },
+        sm: {
+          fontSize: 'text-sm'
+        },
+        md: {
+          fontSize: 'text-base'
+        },
+        lg: {
+          fontSize: 'text-lg'
+        },
+        xl: {
+          fontSize: 'text-xl'
+        },
+        xxl: {
+          fontSize: 'text-2xl'
+        }
+      },
+      title: {
+        xs: {
+          fontSize: 'text3xl'
+        },
+        sm: {
+          fontSize: 'text-4xl'
+        },
+        md: {
+          fontSize: 'text-5xl'
+        },
+        lg: {
+          fontSize: 'text-6xl'
+        },
+        xl: {
+          fontSize: 'text-7xk'
+        },
+        xxl: {
+          fontSize: 'text-8xl'
+        }
+      }
+    },
     scale: {
-      default: {},
+      normal: {},
       full: {
         width: 'w-full'
       },
@@ -84,462 +557,741 @@ export const generic: Generic = {
       }
     },
     spacing: {
-      default: {
-        square: {
-          none: {},
-          xs: {
-            padding: 'p-2'
-          },
-          sm: {
-            padding: 'p-4'
-          },
-          md: {
-            padding: 'p-6'
-          },
-          lg: {
-            padding: 'p-8'
-          },
-          xl: {
-            padding: 'p-12'
-          },
-          'xs-x': {
-            padding: 'px-2'
-          },
-          'xs-y': {
-            padding: 'py-2'
-          },
-          'xs-top': {
-            padding: 'pt-2'
-          },
-          'xs-bottom': {
-            padding: 'pb-2'
-          },
-          'xs-left': {
-            padding: 'pl-2'
-          },
-          'xs-right': {
-            padding: 'pr-2'
-          },
-          'xs-x-top': {
-            padding: 'px-2 pt-2'
-          },
-          'xs-x-bottom': {
-            padding: 'px-2 pb-2'
-          },
-          'xs-y-left': {
-            padding: 'py-2 pl-2'
-          },
-          'xs-y-right': {
-            padding: 'py-2 pr-2'
-          },
-          'xs-top-left': {
-            padding: 'pt-2 pl-2'
-          },
-          'xs-top-right': {
-            padding: 'pt-2 pr-2'
-          },
-          'xs-bottom-left': {
-            padding: 'pb-2 pl-2'
-          },
-          'xs-bottom-right': {
-            padding: 'pb-2 pr-2'
-          },
-          'sm-x': {
-            padding: 'px-4'
-          },
-          'sm-y': {
-            padding: 'py-4'
-          },
-          'sm-top': {
-            padding: 'pt-4'
-          },
-          'sm-bottom': {
-            padding: 'pb-4'
-          },
-          'sm-left': {
-            padding: 'pl-4'
-          },
-          'sm-right': {
-            padding: 'pr-4'
-          },
-          'sm-x-top': {
-            padding: 'px-4 pt-4'
-          },
-          'sm-x-bottom': {
-            padding: 'px-4 pb-4'
-          },
-          'sm-y-left': {
-            padding: 'py-4 pl-4'
-          },
-          'sm-y-right': {
-            padding: 'py-4 pr-4'
-          },
-          'sm-top-left': {
-            padding: 'pt-4 pl-4'
-          },
-          'sm-top-right': {
-            padding: 'pt-4 pr-4'
-          },
-          'sm-bottom-left': {
-            padding: 'pb-4 pl-4'
-          },
-          'sm-bottom-right': {
-            padding: 'pb-4 pr-4'
-          },
-          'md-x': {
-            padding: 'px-6'
-          },
-          'md-y': {
-            padding: 'py-6'
-          },
-          'md-top': {
-            padding: 'pt-6'
-          },
-          'md-bottom': {
-            padding: 'pb-6'
-          },
-          'md-left': {
-            padding: 'pl-6'
-          },
-          'md-right': {
-            padding: 'pr-6'
-          },
-          'md-x-top': {
-            padding: 'px-6 pt-6'
-          },
-          'md-x-bottom': {
-            padding: 'px-6 pb-6'
-          },
-          'md-y-left': {
-            padding: 'py-6 pl-6'
-          },
-          'md-y-right': {
-            padding: 'py-6 pr-6'
-          },
-          'md-top-left': {
-            padding: 'pt-6 pl-6'
-          },
-          'md-top-right': {
-            padding: 'pt-6 pr-6'
-          },
-          'md-bottom-left': {
-            padding: 'pb-6 pl-6'
-          },
-          'md-bottom-right': {
-            padding: 'pb-6 pr-6'
-          },
-          'lg-x': {
-            padding: 'px-8'
-          },
-          'lg-y': {
-            padding: 'py-8'
-          },
-          'lg-top': {
-            padding: 'pt-8'
-          },
-          'lg-bottom': {
-            padding: 'pb-8'
-          },
-          'lg-left': {
-            padding: 'pl-8'
-          },
-          'lg-right': {
-            padding: 'pr-8'
-          },
-          'lg-x-top': {
-            padding: 'px-8 pt-8'
-          },
-          'lg-x-bottom': {
-            padding: 'px-8 pb-8'
-          },
-          'lg-y-left': {
-            padding: 'py-8 pl-8'
-          },
-          'lg-y-right': {
-            padding: 'py-8 pr-8'
-          },
-          'lg-top-left': {
-            padding: 'pt-8 pl-8'
-          },
-          'lg-top-right': {
-            padding: 'pt-8 pr-8'
-          },
-          'lg-bottom-left': {
-            padding: 'pb-8 pl-8'
-          },
-          'lg-bottom-right': {
-            padding: 'pb-8 pr-8'
-          },
-          'xl-x': {
-            padding: 'px-12'
-          },
-          'xl-y': {
-            padding: 'py-12'
-          },
-          'xl-top': {
-            padding: 'pt-12'
-          },
-          'xl-bottom': {
-            padding: 'pb-12'
-          },
-          'xl-left': {
-            padding: 'pl-12'
-          },
-          'xl-right': {
-            padding: 'pr-12'
-          },
-          'xl-x-top': {
-            padding: 'px-12 pt-12'
-          },
-          'xl-x-bottom': {
-            padding: 'px-12 pb-12'
-          },
-          'xl-y-left': {
-            padding: 'py-12 pl-12'
-          },
-          'xl-y-right': {
-            padding: 'py-12 pr-12'
-          },
-          'xl-top-left': {
-            padding: 'pt-12 pl-12'
-          },
-          'xl-top-right': {
-            padding: 'pt-12 pr-12'
-          },
-          'xl-bottom-left': {
-            padding: 'pb-12 pl-12'
-          },
-          'xl-bottom-right': {
-            padding: 'pb-12 pr-12'
-          }
-        },
-        rect: {
-          none: {},
-          xs: {
+      normal: {
+        xs: {
+          normal: {
             padding: 'px-2 py-1'
           },
-          sm: {
+          square: {
+            padding: 'p-1'
+          },
+          border: {
+            padding: 'px-1.75 py-0.75'
+          },
+          'border-square': {
+            padding: 'p-0.75'
+          },
+          'border-y': {
+            padding: 'px-2 py-0.75'
+          },
+          'border-square-y': {
+            padding: 'px-1 py-0.75'
+          },
+          'border-y-left': {
+            padding: 'pl-1.75 pr-2 py-0.75'
+          },
+          'border-square-y-left': {
+            padding: 'pl-0.75 pr-1 py-0.75'
+          },
+          'border-y-right': {
+            padding: 'pl-2 pr-1.75 py-0.75'
+          },
+          'border-square-y-right': {
+            padding: 'pl-1 pr-0.75 py-0.75'
+          }
+        },
+        sm: {
+          normal: {
             padding: 'px-4 py-2'
           },
-          md: {
+          square: {
+            padding: 'p-2'
+          },
+          border: {
+            padding: 'px-3.75 py-1.75'
+          },
+          'border-square': {
+            padding: 'p-1.75'
+          },
+          'border-y': {
+            padding: 'px-4 py-1.75'
+          },
+          'border-square-y': {
+            padding: 'px-2 py-1.75'
+          },
+          'border-y-left': {
+            padding: 'pl-3.75 pr-4 py-1.75'
+          },
+          'border-square-y-left': {
+            padding: 'pl-1.75 pr-2 py-1.75'
+          },
+          'border-y-right': {
+            padding: 'pl-4 pr-3.75 py-1.75'
+          },
+          'border-square-y-right': {
+            padding: 'pl-2 pr-1.75 py-1.75'
+          }
+        },
+        md: {
+          normal: {
+            padding: 'px-5 py-2.5'
+          },
+          square: {
+            padding: 'p-2.5'
+          },
+          border: {
+            padding: 'px-4.75 py-2.25'
+          },
+          'border-square': {
+            padding: 'p-2.25'
+          },
+          'border-y': {
+            padding: 'px-5 py-2.25'
+          },
+          'border-square-y': {
+            padding: 'px-2.5 py-2.25'
+          },
+          'border-y-left': {
+            padding: 'pl-4.75 pr-5 py-2.25'
+          },
+          'border-square-y-left': {
+            padding: 'pl-2.25 pr-2.5 py-2.25'
+          },
+          'border-y-right': {
+            padding: 'pl-5 pr-4.75 py-2.25'
+          },
+          'border-square-y-right': {
+            padding: 'pl-2.5 pr-2.25 py-2.25'
+          }
+        },
+        lg: {
+          normal: {
             padding: 'px-6 py-3'
           },
-          lg: {
-            padding: 'px-8 py-4'
+          square: {
+            padding: 'p-3'
           },
-          xl: {
+          border: {
+            padding: 'px-5.75 py-2.75'
+          },
+          'border-square': {
+            padding: 'p-2.75'
+          },
+          'border-y': {
+            padding: 'px-6 py-2.75'
+          },
+          'border-square-y': {
+            padding: 'px-3 py-2.75'
+          },
+          'border-y-left': {
+            padding: 'pl-5.75 pr-6 py-2.75'
+          },
+          'border-square-y-left': {
+            padding: 'pl-2.75 pr-3 py-2.75'
+          },
+          'border-y-right': {
+            padding: 'pl-6 pr-5.75 py-2.75'
+          },
+          'border-square-y-right': {
+            padding: 'pl-3 pr-2.75 py-2.75'
+          }
+        },
+        xl: {
+          normal: {
+            padding: 'px-9 py-4.5'
+          },
+          square: {
+            padding: 'p-4.5'
+          },
+          border: {
+            padding: 'px-8.75 py-4.25'
+          },
+          'border-square': {
+            padding: 'p-4.25'
+          },
+          'border-y': {
+            padding: 'px-9 py-4.25'
+          },
+          'border-square-y': {
+            padding: 'px-4.5 py-4.25'
+          },
+          'border-y-left': {
+            padding: 'pl-8.75 pr-9 py-4.25'
+          },
+          'border-square-y-left': {
+            padding: 'pl-4.25 pr-4.5 py-4.25'
+          },
+          'border-y-right': {
+            padding: 'pl-9 pr-8.75 py-4.25'
+          },
+          'border-square-y-right': {
+            padding: 'pl-4.5 pr-4.25 py-4.25'
+          }
+        },
+        xxl: {
+          normal: {
             padding: 'px-12 py-6'
           },
-          'xs-x': {
-            padding: 'px-2'
+          square: {
+            padding: 'p-6'
           },
-          'xs-y': {
-            padding: 'py-1'
+          border: {
+            padding: 'px-11.75 py-5.75'
           },
-          'xs-top': {
-            padding: 'pt-1'
+          'border-square': {
+            padding: 'p-5.75'
           },
-          'xs-bottom': {
-            padding: 'pb-1'
+          'border-y': {
+            padding: 'px-12 py-5.75'
           },
-          'xs-left': {
-            padding: 'pl-2'
+          'border-square-y': {
+            padding: 'px-6 py-5.75'
           },
-          'xs-right': {
-            padding: 'pr-2'
+          'border-y-left': {
+            padding: 'pl-11.75 pr-12 py-5.75'
           },
-          'xs-x-top': {
-            padding: 'px-2 pt-1'
+          'border-square-y-left': {
+            padding: 'pl-5.75 pr-6 py-5.75'
           },
-          'xs-x-bottom': {
-            padding: 'px-2 pb-1'
+          'border-y-right': {
+            padding: 'pl-12 pr-11.75 py-5.75'
           },
-          'xs-y-left': {
-            padding: 'py-1 pl-2'
-          },
-          'xs-y-right': {
-            padding: 'py-1 pr-2'
-          },
-          'xs-top-left': {
-            padding: 'pt-1 pl-2'
-          },
-          'xs-top-right': {
-            padding: 'pt-1 pr-2'
-          },
-          'xs-bottom-left': {
-            padding: 'pb-1 pl-2'
-          },
-          'xs-bottom-right': {
-            padding: 'pb-1 pr-2'
-          },
-          'sm-x': {
-            padding: 'px-4'
-          },
-          'sm-y': {
-            padding: 'py-2'
-          },
-          'sm-top': {
-            padding: 'pt-2'
-          },
-          'sm-bottom': {
-            padding: 'pb-2'
-          },
-          'sm-left': {
-            padding: 'pl-4'
-          },
-          'sm-right': {
-            padding: 'pr-4'
-          },
-          'sm-x-top': {
-            padding: 'px-4 pt-2'
-          },
-          'sm-x-bottom': {
-            padding: 'px-4 pb-2'
-          },
-          'sm-y-left': {
-            padding: 'py-2 pl-4'
-          },
-          'sm-y-right': {
-            padding: 'py-2 pr-4'
-          },
-          'sm-top-left': {
-            padding: 'pt-2 pl-4'
-          },
-          'sm-top-right': {
-            padding: 'pt-2 pr-4'
-          },
-          'sm-bottom-left': {
-            padding: 'pb-2 pl-4'
-          },
-          'sm-bottom-right': {
-            padding: 'pb-2 pr-4'
-          },
-          'md-x': {
-            padding: 'px-6'
-          },
-          'md-y': {
-            padding: 'py-3'
-          },
-          'md-top': {
-            padding: 'pt-3'
-          },
-          'md-bottom': {
-            padding: 'pb-3'
-          },
-          'md-left': {
-            padding: 'pl-6'
-          },
-          'md-right': {
-            padding: 'pr-6'
-          },
-          'md-x-top': {
-            padding: 'px-6 pt-3'
-          },
-          'md-x-bottom': {
-            padding: 'px-6 pb-3'
-          },
-          'md-y-left': {
-            padding: 'py-3 pl-6'
-          },
-          'md-y-right': {
-            padding: 'py-3 pr-6'
-          },
-          'md-top-left': {
-            padding: 'pt-3 pl-6'
-          },
-          'md-top-right': {
-            padding: 'pt-3 pr-6'
-          },
-          'md-bottom-left': {
-            padding: 'pb-3 pl-6'
-          },
-          'md-bottom-right': {
-            padding: 'pb-3 pr-6'
-          },
-          'lg-x': {
-            padding: 'px-8'
-          },
-          'lg-y': {
-            padding: 'py-4'
-          },
-          'lg-top': {
-            padding: 'pt-4'
-          },
-          'lg-bottom': {
-            padding: 'pb-4'
-          },
-          'lg-left': {
-            padding: 'pl-8'
-          },
-          'lg-right': {
-            padding: 'pr-8'
-          },
-          'lg-x-top': {
-            padding: 'px-8 pt-4'
-          },
-          'lg-x-bottom': {
-            padding: 'px-8 pb-4'
-          },
-          'lg-y-left': {
-            padding: 'py-4 pl-8'
-          },
-          'lg-y-right': {
-            padding: 'py-4 pr-8'
-          },
-          'lg-top-left': {
-            padding: 'pt-4 pl-8'
-          },
-          'lg-top-right': {
-            padding: 'pt-4 pr-8'
-          },
-          'lg-bottom-left': {
-            padding: 'pb-4 pl-8'
-          },
-          'lg-bottom-right': {
-            padding: 'pb-4 pr-8'
-          },
-          'xl-x': {
-            padding: 'px-12'
-          },
-          'xl-y': {
-            padding: 'py-6'
-          },
-          'xl-top': {
-            padding: 'pt-6'
-          },
-          'xl-bottom': {
-            padding: 'pb-6'
-          },
-          'xl-left': {
-            padding: 'pl-12'
-          },
-          'xl-right': {
-            padding: 'pr-12'
-          },
-          'xl-x-top': {
-            padding: 'px-12 pt-6'
-          },
-          'xl-x-bottom': {
-            padding: 'px-12 pb-6'
-          },
-          'xl-y-left': {
-            padding: 'py-6 pl-12'
-          },
-          'xl-y-right': {
-            padding: 'py-6 pr-12'
-          },
-          'xl-top-left': {
-            padding: 'pt-6 pl-12'
-          },
-          'xl-top-right': {
-            padding: 'pt-6 pr-12'
-          },
-          'xl-bottom-left': {
-            padding: 'pb-6 pl-12'
-          },
-          'xl-bottom-right': {
-            padding: 'pb-6 pr-12'
+          'border-square-y-right': {
+            padding: 'pl-6 pr-5.75 py-5.75'
           }
+        }
+      },
+      container: {
+        none: {},
+        xs: {
+          padding: 'p-2'
+        },
+        sm: {
+          padding: 'p-4'
+        },
+        md: {
+          padding: 'p-6'
+        },
+        lg: {
+          padding: 'p-8'
+        },
+        xl: {
+          padding: 'p-12'
+        },
+        xxl: {
+          padding: 'p-16'
+        },
+        'xs-x': {
+          padding: 'px-2'
+        },
+        'xs-y': {
+          padding: 'py-2'
+        },
+        'xs-top': {
+          padding: 'pt-2'
+        },
+        'xs-bottom': {
+          padding: 'pb-2'
+        },
+        'xs-left': {
+          padding: 'pl-2'
+        },
+        'xs-right': {
+          padding: 'pr-2'
+        },
+        'xs-x-top': {
+          padding: 'px-2 pt-2'
+        },
+        'xs-x-bottom': {
+          padding: 'px-2 pb-2'
+        },
+        'xs-y-left': {
+          padding: 'py-2 pl-2'
+        },
+        'xs-y-right': {
+          padding: 'py-2 pr-2'
+        },
+        'xs-top-left': {
+          padding: 'pt-2 pl-2'
+        },
+        'xs-top-right': {
+          padding: 'pt-2 pr-2'
+        },
+        'xs-bottom-left': {
+          padding: 'pb-2 pl-2'
+        },
+        'xs-bottom-right': {
+          padding: 'pb-2 pr-2'
+        },
+        'sm-x': {
+          padding: 'px-4'
+        },
+        'sm-y': {
+          padding: 'py-4'
+        },
+        'sm-top': {
+          padding: 'pt-4'
+        },
+        'sm-bottom': {
+          padding: 'pb-4'
+        },
+        'sm-left': {
+          padding: 'pl-4'
+        },
+        'sm-right': {
+          padding: 'pr-4'
+        },
+        'sm-x-top': {
+          padding: 'px-4 pt-4'
+        },
+        'sm-x-bottom': {
+          padding: 'px-4 pb-4'
+        },
+        'sm-y-left': {
+          padding: 'py-4 pl-4'
+        },
+        'sm-y-right': {
+          padding: 'py-4 pr-4'
+        },
+        'sm-top-left': {
+          padding: 'pt-4 pl-4'
+        },
+        'sm-top-right': {
+          padding: 'pt-4 pr-4'
+        },
+        'sm-bottom-left': {
+          padding: 'pb-4 pl-4'
+        },
+        'sm-bottom-right': {
+          padding: 'pb-4 pr-4'
+        },
+        'md-x': {
+          padding: 'px-6'
+        },
+        'md-y': {
+          padding: 'py-6'
+        },
+        'md-top': {
+          padding: 'pt-6'
+        },
+        'md-bottom': {
+          padding: 'pb-6'
+        },
+        'md-left': {
+          padding: 'pl-6'
+        },
+        'md-right': {
+          padding: 'pr-6'
+        },
+        'md-x-top': {
+          padding: 'px-6 pt-6'
+        },
+        'md-x-bottom': {
+          padding: 'px-6 pb-6'
+        },
+        'md-y-left': {
+          padding: 'py-6 pl-6'
+        },
+        'md-y-right': {
+          padding: 'py-6 pr-6'
+        },
+        'md-top-left': {
+          padding: 'pt-6 pl-6'
+        },
+        'md-top-right': {
+          padding: 'pt-6 pr-6'
+        },
+        'md-bottom-left': {
+          padding: 'pb-6 pl-6'
+        },
+        'md-bottom-right': {
+          padding: 'pb-6 pr-6'
+        },
+        'lg-x': {
+          padding: 'px-8'
+        },
+        'lg-y': {
+          padding: 'py-8'
+        },
+        'lg-top': {
+          padding: 'pt-8'
+        },
+        'lg-bottom': {
+          padding: 'pb-8'
+        },
+        'lg-left': {
+          padding: 'pl-8'
+        },
+        'lg-right': {
+          padding: 'pr-8'
+        },
+        'lg-x-top': {
+          padding: 'px-8 pt-8'
+        },
+        'lg-x-bottom': {
+          padding: 'px-8 pb-8'
+        },
+        'lg-y-left': {
+          padding: 'py-8 pl-8'
+        },
+        'lg-y-right': {
+          padding: 'py-8 pr-8'
+        },
+        'lg-top-left': {
+          padding: 'pt-8 pl-8'
+        },
+        'lg-top-right': {
+          padding: 'pt-8 pr-8'
+        },
+        'lg-bottom-left': {
+          padding: 'pb-8 pl-8'
+        },
+        'lg-bottom-right': {
+          padding: 'pb-8 pr-8'
+        },
+        'xl-x': {
+          padding: 'px-12'
+        },
+        'xl-y': {
+          padding: 'py-12'
+        },
+        'xl-top': {
+          padding: 'pt-12'
+        },
+        'xl-bottom': {
+          padding: 'pb-12'
+        },
+        'xl-left': {
+          padding: 'pl-12'
+        },
+        'xl-right': {
+          padding: 'pr-12'
+        },
+        'xl-x-top': {
+          padding: 'px-12 pt-12'
+        },
+        'xl-x-bottom': {
+          padding: 'px-12 pb-12'
+        },
+        'xl-y-left': {
+          padding: 'py-12 pl-12'
+        },
+        'xl-y-right': {
+          padding: 'py-12 pr-12'
+        },
+        'xl-top-left': {
+          padding: 'pt-12 pl-12'
+        },
+        'xl-top-right': {
+          padding: 'pt-12 pr-12'
+        },
+        'xl-bottom-left': {
+          padding: 'pb-12 pl-12'
+        },
+        'xl-bottom-right': {
+          padding: 'pb-12 pr-12'
+        },
+        'xxl-x': {
+          padding: 'px-16'
+        },
+        'xxl-y': {
+          padding: 'py-16'
+        },
+        'xxl-top': {
+          padding: 'pt-16'
+        },
+        'xxl-bottom': {
+          padding: 'pb-16'
+        },
+        'xxl-left': {
+          padding: 'pl-16'
+        },
+        'xxl-right': {
+          padding: 'pr-16'
+        },
+        'xxl-x-top': {
+          padding: 'px-16 pt-16'
+        },
+        'xxl-x-bottom': {
+          padding: 'px-16 pb-16'
+        },
+        'xxl-y-left': {
+          padding: 'py-16 pl-16'
+        },
+        'xxl-y-right': {
+          padding: 'py-16 pr-16'
+        },
+        'xxl-top-left': {
+          padding: 'pt-16 pl-16'
+        },
+        'xxl-top-right': {
+          padding: 'pt-16 pr-16'
+        },
+        'xxl-bottom-left': {
+          padding: 'pb-16 pl-16'
+        },
+        'xxl-bottom-right': {
+          padding: 'pb-16 pr-16'
+        },
+        'xs-xs': {
+          padding: 'px-2 py-1'
+        },
+        'sm-sm': {
+          padding: 'px-4 py-2'
+        },
+        'md-md': {
+          padding: 'px-6 py-3'
+        },
+        'lg-lg': {
+          padding: 'px-8 py-4'
+        },
+        'xl-xl': {
+          padding: 'px-12 py-6'
+        },
+        'xxl-xxl': {
+          padding: 'px-16 py-8'
+        },
+        'xs-xs-x': {
+          padding: 'px-2'
+        },
+        'xs-xs-y': {
+          padding: 'py-1'
+        },
+        'xs-xs-top': {
+          padding: 'pt-1'
+        },
+        'xs-xs-bottom': {
+          padding: 'pb-1'
+        },
+        'xs-xs-left': {
+          padding: 'pl-2'
+        },
+        'xs-xs-right': {
+          padding: 'pr-2'
+        },
+        'xs-xs-x-top': {
+          padding: 'px-2 pt-1'
+        },
+        'xs-xs-x-bottom': {
+          padding: 'px-2 pb-1'
+        },
+        'xs-xs-y-left': {
+          padding: 'py-1 pl-2'
+        },
+        'xs-xs-y-right': {
+          padding: 'py-1 pr-2'
+        },
+        'xs-xs-top-left': {
+          padding: 'pt-1 pl-2'
+        },
+        'xs-xs-top-right': {
+          padding: 'pt-1 pr-2'
+        },
+        'xs-xs-bottom-left': {
+          padding: 'pb-1 pl-2'
+        },
+        'xs-xs-bottom-right': {
+          padding: 'pb-1 pr-2'
+        },
+        'sm-sm-x': {
+          padding: 'px-4'
+        },
+        'sm-sm-y': {
+          padding: 'py-2'
+        },
+        'sm-sm-top': {
+          padding: 'pt-2'
+        },
+        'sm-sm-bottom': {
+          padding: 'pb-2'
+        },
+        'sm-sm-left': {
+          padding: 'pl-4'
+        },
+        'sm-sm-right': {
+          padding: 'pr-4'
+        },
+        'sm-sm-x-top': {
+          padding: 'px-4 pt-2'
+        },
+        'sm-sm-x-bottom': {
+          padding: 'px-4 pb-2'
+        },
+        'sm-sm-y-left': {
+          padding: 'py-2 pl-4'
+        },
+        'sm-sm-y-right': {
+          padding: 'py-2 pr-4'
+        },
+        'sm-sm-top-left': {
+          padding: 'pt-2 pl-4'
+        },
+        'sm-sm-top-right': {
+          padding: 'pt-2 pr-4'
+        },
+        'sm-sm-bottom-left': {
+          padding: 'pb-2 pl-4'
+        },
+        'sm-sm-bottom-right': {
+          padding: 'pb-2 pr-4'
+        },
+        'md-md-x': {
+          padding: 'px-6'
+        },
+        'md-md-y': {
+          padding: 'py-3'
+        },
+        'md-md-top': {
+          padding: 'pt-3'
+        },
+        'md-md-bottom': {
+          padding: 'pb-3'
+        },
+        'md-md-left': {
+          padding: 'pl-6'
+        },
+        'md-md-right': {
+          padding: 'pr-6'
+        },
+        'md-md-x-top': {
+          padding: 'px-6 pt-3'
+        },
+        'md-md-x-bottom': {
+          padding: 'px-6 pb-3'
+        },
+        'md-md-y-left': {
+          padding: 'py-3 pl-6'
+        },
+        'md-md-y-right': {
+          padding: 'py-3 pr-6'
+        },
+        'md-md-top-left': {
+          padding: 'pt-3 pl-6'
+        },
+        'md-md-top-right': {
+          padding: 'pt-3 pr-6'
+        },
+        'md-md-bottom-left': {
+          padding: 'pb-3 pl-6'
+        },
+        'md-md-bottom-right': {
+          padding: 'pb-3 pr-6'
+        },
+        'lg-lg-x': {
+          padding: 'px-8'
+        },
+        'lg-lg-y': {
+          padding: 'py-4'
+        },
+        'lg-lg-top': {
+          padding: 'pt-4'
+        },
+        'lg-lg-bottom': {
+          padding: 'pb-4'
+        },
+        'lg-lg-left': {
+          padding: 'pl-8'
+        },
+        'lg-lg-right': {
+          padding: 'pr-8'
+        },
+        'lg-lg-x-top': {
+          padding: 'px-8 pt-4'
+        },
+        'lg-lg-x-bottom': {
+          padding: 'px-8 pb-4'
+        },
+        'lg-lg-y-left': {
+          padding: 'py-4 pl-8'
+        },
+        'lg-lg-y-right': {
+          padding: 'py-4 pr-8'
+        },
+        'lg-lg-top-left': {
+          padding: 'pt-4 pl-8'
+        },
+        'lg-lg-top-right': {
+          padding: 'pt-4 pr-8'
+        },
+        'lg-lg-bottom-left': {
+          padding: 'pb-4 pl-8'
+        },
+        'lg-lg-bottom-right': {
+          padding: 'pb-4 pr-8'
+        },
+        'xl-xl-x': {
+          padding: 'px-12'
+        },
+        'xl-xl-y': {
+          padding: 'py-6'
+        },
+        'xl-xl-top': {
+          padding: 'pt-6'
+        },
+        'xl-xl-bottom': {
+          padding: 'pb-6'
+        },
+        'xl-xl-left': {
+          padding: 'pl-12'
+        },
+        'xl-xl-right': {
+          padding: 'pr-12'
+        },
+        'xl-xl-x-top': {
+          padding: 'px-12 pt-6'
+        },
+        'xl-xl-x-bottom': {
+          padding: 'px-12 pb-6'
+        },
+        'xl-xl-y-left': {
+          padding: 'py-6 pl-12'
+        },
+        'xl-xl-y-right': {
+          padding: 'py-6 pr-12'
+        },
+        'xl-xl-top-left': {
+          padding: 'pt-6 pl-12'
+        },
+        'xl-xl-top-right': {
+          padding: 'pt-6 pr-12'
+        },
+        'xl-xl-bottom-left': {
+          padding: 'pb-6 pl-12'
+        },
+        'xl-xl-bottom-right': {
+          padding: 'pb-6 pr-12'
+        },
+        'xxl-xxl-x': {
+          padding: 'px-16'
+        },
+        'xxl-xxl-y': {
+          padding: 'py-16'
+        },
+        'xxl-xxl-top': {
+          padding: 'pt-16'
+        },
+        'xxl-xxl-bottom': {
+          padding: 'pb-16'
+        },
+        'xxl-xxl-left': {
+          padding: 'pl-16'
+        },
+        'xxl-xxl-right': {
+          padding: 'pr-16'
+        },
+        'xxl-xxl-x-top': {
+          padding: 'px-16 pt-16'
+        },
+        'xxl-xxl-x-bottom': {
+          padding: 'px-16 pb-16'
+        },
+        'xxl-xxl-y-left': {
+          padding: 'py-16 pl-16'
+        },
+        'xxl-xxl-y-right': {
+          padding: 'py-16 pr-16'
+        },
+        'xxl-xxl-top-left': {
+          padding: 'pt-16 pl-16'
+        },
+        'xxl-xxl-top-right': {
+          padding: 'pt-16 pr-16'
+        },
+        'xxl-xxl-bottom-left': {
+          padding: 'pb-16 pl-16'
+        },
+        'xxl-xxl-bottom-right': {
+          padding: 'pb-16 pr-16'
         }
       }
     },
@@ -1361,6 +2113,71 @@ export const generic: Generic = {
         }
       }
     },
+    weight: {
+      normal: {},
+      semi: {
+        font: 'font-semibold'
+      },
+      bold: {
+        font: 'font-bold'
+      }
+    },
+    underline: {
+      none: {
+        textDecoration: 'no-underline'
+      },
+      hover: {
+        textDecoration: 'hover:underline'
+      },
+      always: {
+        textDecoration: 'underline'
+      }
+    },
+    wordBreak: {
+      normal: {},
+      words: {
+        wordBreak: 'break-words'
+      },
+      all: {
+        wordBreak: 'break-all'
+      },
+      keep: {
+        wordBreak: 'break-keep'
+      }
+    },
+    textWrap: {
+      wrap: {},
+      nowrap: {
+        textWrap: 'text-nowrap'
+      },
+      balance: {
+        textWrap: 'text-balance'
+      },
+      pretty: {
+        textWrap: 'text-pretty'
+      }
+    },
+    textAlign: {
+      left: {},
+      center: {
+        textAlign: 'text-center'
+      },
+      right: {
+        textAlign: 'text-right'
+      },
+      justify: {
+        textAlign: 'text-justify'
+      }
+    },
+    textOverflow: {
+      clip: {},
+      truncate: {
+        textOverflow: 'truncate'
+      },
+      ellipsis: {
+        textOverflow: 'text-ellipsis'
+      }
+    },
     color: {
       bg: {
         disabled: {
@@ -1766,6 +2583,107 @@ export const generic: Generic = {
           }
         }
       },
+      stroke: {
+        disabled: {
+          default: {
+            color: 'stroke-disabled-500'
+          },
+          light: {
+            color: 'stroke-disabled-300'
+          },
+          on: {
+            color: 'stroke-disabled-50'
+          }
+        },
+        surface: {
+          default: {
+            color: 'stroke-surface-500'
+          },
+          light: {
+            color: 'stroke-surface-300'
+          },
+          on: {
+            color: 'stroke-surface-50'
+          }
+        },
+        neutral: {
+          default: {
+            color: 'stroke-neutral-500'
+          },
+          light: {
+            color: 'stroke-neutral-300'
+          },
+          on: {
+            color: 'stroke-neutral-50'
+          }
+        },
+        primary: {
+          default: {
+            color: 'stroke-primary-500'
+          },
+          light: {
+            color: 'stroke-primary-300'
+          },
+          on: {
+            color: 'stroke-primary-50'
+          }
+        },
+        secondary: {
+          default: {
+            color: 'stroke-secondary-500'
+          },
+          light: {
+            color: 'stroke-secondary-300'
+          },
+          on: {
+            color: 'stroke-secondary-50'
+          }
+        },
+        tertiary: {
+          default: {
+            color: 'stroke-tertiary-500'
+          },
+          light: {
+            color: 'stroke-tertiary-300'
+          },
+          on: {
+            color: 'stroke-tertiary-50'
+          }
+        },
+        success: {
+          default: {
+            color: 'stroke-success-500'
+          },
+          light: {
+            color: 'stroke-success-300'
+          },
+          on: {
+            color: 'stroke-success-50'
+          }
+        },
+        warning: {
+          default: {
+            color: 'stroke-warning-500'
+          },
+          light: {
+            color: 'stroke-warning-300'
+          },
+          on: {
+            color: 'stroke-warning-50'
+          }
+        },
+        error: {
+          default: {
+            color: 'stroke-error-500'
+          },
+          light: {
+            color: 'stroke-error-300'
+          },
+          on: {
+            color: 'stroke-error-50'
+          }
+        }
+      },
       ring: {
         disabled: {
           default: {
@@ -1869,129 +2787,163 @@ export const generic: Generic = {
       }
     },
     direction: {
-    row: {},
-    col: {
-      flexDirection: 'flex-col'
+      row: {},
+      col: {
+        flexDirection: 'flex-col'
+      },
+      'row-reverse': {
+        flexDirection: 'flex-row-reverse'
+      },
+      'col-reverse': {
+        flexDirection: 'flex-col-reverse'
+      }
     },
-    'row-reverse': {
-      flexDirection: 'flex-row-reverse'
-    },
-    'col-reverse': {
-      flexDirection: 'flex-col-reverse'
-    }
-  },
-  wrap: {
-    nowrap: {},
     wrap: {
-      flexWrap: 'flex-wrap'
-    },
-    'wrap-reverse': {
-      flexWrap: 'flex-wrap-reverse'
-    }
-  },
-  justify: {
-    normal: {},
-    start: {
-      justifyContent: 'justify-start'
-    },
-    center: {
-      justifyContent: 'justify-center'
-    },
-    end: {
-      justifyContent: 'justify-end'
-    },
-    between: {
-      justifyContent: 'justify-between'
-    },
-    around: {
-      justifyContent: 'justify-around'
-    },
-    evenly: {
-      justifyContent: 'justify-evenly'
-    },
-    stretch: {
-      justifyContent: 'justify-stretch'
-    }
-  },
-  align: {
-    stretch: {},
-    start: {
-      alignItems: 'items-start'
-    },
-    center: {
-      alignItems: 'items-center'
-    },
-    end: {
-      alignItems: 'items-end'
-    },
-    baseline: {
-      alignItems: 'items-baseline'
-    }
-  },
-  gap: {
-    default: {
-      none: {},
-      xs: {
-        gap: 'gap-2'
+      nowrap: {},
+      wrap: {
+        flexWrap: 'flex-wrap'
       },
-      sm: {
-        gap: 'gap-4'
-      },
-      md: {
-        gap: 'gap-6'
-      },
-      lg: {
-        gap: 'gap-8'
-      },
-      xl: {
-        gap: 'gap-12'
-      },
-      xxl: {
-        gap: 'gap-16'
+      'wrap-reverse': {
+        flexWrap: 'flex-wrap-reverse'
       }
     },
-    col: {
-      none: {},
-      xs: {
-        gap: 'gap-x-2'
+    justify: {
+      normal: {},
+      start: {
+        justifyContent: 'justify-start'
       },
-      sm: {
-        gap: 'gap-x-4'
+      center: {
+        justifyContent: 'justify-center'
       },
-      md: {
-        gap: 'gap-x-6'
+      end: {
+        justifyContent: 'justify-end'
       },
-      lg: {
-        gap: 'gap-x-8'
+      between: {
+        justifyContent: 'justify-between'
       },
-      xl: {
-        gap: 'gap-x-12'
+      around: {
+        justifyContent: 'justify-around'
       },
-      xxl: {
-        gap: 'gap-x-16'
+      evenly: {
+        justifyContent: 'justify-evenly'
+      },
+      stretch: {
+        justifyContent: 'justify-stretch'
       }
     },
-    row: {
+    align: {
+      stretch: {},
+      start: {
+        alignItems: 'items-start'
+      },
+      center: {
+        alignItems: 'items-center'
+      },
+      end: {
+        alignItems: 'items-end'
+      },
+      baseline: {
+        alignItems: 'items-baseline'
+      }
+    },
+    gap: {
+      default: {
+        none: {},
+        xs: {
+          gap: 'gap-2'
+        },
+        sm: {
+          gap: 'gap-4'
+        },
+        md: {
+          gap: 'gap-6'
+        },
+        lg: {
+          gap: 'gap-8'
+        },
+        xl: {
+          gap: 'gap-12'
+        },
+        xxl: {
+          gap: 'gap-16'
+        }
+      },
+      col: {
+        none: {},
+        xs: {
+          gap: 'gap-x-2'
+        },
+        sm: {
+          gap: 'gap-x-4'
+        },
+        md: {
+          gap: 'gap-x-6'
+        },
+        lg: {
+          gap: 'gap-x-8'
+        },
+        xl: {
+          gap: 'gap-x-12'
+        },
+        xxl: {
+          gap: 'gap-x-16'
+        }
+      },
+      row: {
+        none: {},
+        xs: {
+          gap: 'gap-y-2'
+        },
+        sm: {
+          gap: 'gap-y-4'
+        },
+        md: {
+          gap: 'gap-y-6'
+        },
+        lg: {
+          gap: 'gap-y-8'
+        },
+        xl: {
+          gap: 'gap-y-12'
+        },
+        xxl: {
+          gap: 'gap-y-16'
+        }
+      }
+    },
+    effect: {
       none: {},
-      xs: {
-        gap: 'gap-y-2'
+      shadow: {
+        boxShadow: 'shadow-md',
+        transition: 'transition',
+        hover: 'hover:shadow-lg',
+        active: 'active:shadow-none',
+        focus: 'focus:shadow-none',
+        focusVisible: 'focus-visible:shadow-none'
+      }
+    },
+    transition: {
+      fade: {
+        transition: 'transition-opacity'
       },
-      sm: {
-        gap: 'gap-y-4'
+      transform: {
+        transition: 'transition-transform'
       },
-      md: {
-        gap: 'gap-y-6'
+      'transform-fade': {
+        transition: 'transition-[transform,_opacity]'
+      }
+    },
+    cursor: {
+      none: {
+        pointerEvents: 'pointer-events-none'
       },
-      lg: {
-        gap: 'gap-y-8'
+      pointer: {
+        cursor: 'cursor-pointer'
       },
-      xl: {
-        gap: 'gap-y-12'
-      },
-      xxl: {
-        gap: 'gap-y-16'
+      disabled: {
+        cursor: 'cursor-not-allowed',
+        userSelect: 'select-none'
       }
     }
-  }
   }
 };
