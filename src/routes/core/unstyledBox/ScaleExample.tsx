@@ -7,7 +7,6 @@ export const ScaleExample = () => (
     <ExampleCard>
       <UnstyledBox
         variant="solid"
-        size="md"
         scale="normal"
         color="neutral"
       >
@@ -15,7 +14,6 @@ export const ScaleExample = () => (
       </UnstyledBox>
       <UnstyledBox
         variant="solid"
-        size="md"
         scale="fit"
         color="neutral"
       >
@@ -23,7 +21,6 @@ export const ScaleExample = () => (
       </UnstyledBox>
       <UnstyledBox
         variant="solid"
-        size="md"
         scale="full"
         color="neutral"
       >
