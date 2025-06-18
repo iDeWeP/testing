@@ -13,6 +13,7 @@ export const styleUnstyledSpinner = (
     float = false,
     variant = 'none',
     size = 'md',
+    margin = 'none',
     color = 'neutral'
   }: Classes
 ) => {
@@ -23,6 +24,7 @@ export const styleUnstyledSpinner = (
     float && generic.styles.position.absolute,
     float && unstyledSpinnerConfig.styles.root.float[size],
     generic.styles.size.normal[size].square,
+    generic.styles.margin[margin],
     generic.styles.color.stroke[getColor(disabled, color)][
       getSpinnerVariant(variant)
     ],
