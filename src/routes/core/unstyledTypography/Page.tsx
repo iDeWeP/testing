@@ -5,8 +5,8 @@ import { OverflowExample } from './OverflowExample';
 import { SizeExample } from './SizeExample';
 import { UnderlineExample } from './UnderlineExample';
 import { WeightExample } from './WeightExample';
-import WordBreakExample from './WordBreakExample';
-import WrapExample from './WrapExample';
+import { WordBreakExample } from './WordBreakExample';
+import { WrapExample } from './WrapExample';
 
 const Page = () => (
   <>

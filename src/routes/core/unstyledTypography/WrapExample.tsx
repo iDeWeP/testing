@@ -2,7 +2,7 @@ import { ExampleCard } from '../../../components/ExampleCard';
 import { ExampleSection } from '../../../components/ExampleSection';
 import { UnstyledTypography } from '../../../core/components/UnstyledTypography/UnstyledTypography';
 
-const WrapExample = () => (
+export const WrapExample = () => (
   <ExampleSection title="Wrap">
     <ExampleCard>
       <UnstyledTypography wrap="nowrap">
@@ -24,5 +24,3 @@ const WrapExample = () => (
     </ExampleCard>
   </ExampleSection>
 );
-
-export default WrapExample;
