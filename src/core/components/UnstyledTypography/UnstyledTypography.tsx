@@ -1,8 +1,8 @@
 import type { ElementType } from 'react';
 import { mergeClassName } from '../../utils/mergeClassName/mergeClassName';
+import { mergeProps } from '../../utils/mergeProps/mergeProps';
 import { UnstyledBox } from '../UnstyledBox/UnstyledBox';
 import type { UnstyledTypographyProps } from './UnstyledTypography.types';
-import { mergeProps } from '../../utils/mergeProps/mergeProps';
 import { unstyledTypographyConfig } from './unstyledTypographyConfig';
 
 export const UnstyledTypography = <E extends ElementType = 'span'>(

@@ -11,7 +11,7 @@ export const unstyledTypographyConfig: ComponentConfig<UnstyledTypographyConfigP
       margin: 'none',
       border: false,
       radius: 'none',
-      color: 'primary',
+      color: 'neutral',
       weight: 'normal',
       underline: 'none',
       wordBreak: 'normal',

@@ -10,7 +10,7 @@ import type {
   MergeProps
 } from '../../types';
 import type {
-  UnstyledBoxDefaultProps,
+  UnstyledBoxConfigProps,
   UnstyledBoxProps
 } from '../UnstyledBox/UnstyledBox.types';
 
@@ -25,7 +25,7 @@ export type UnstyledTypographyDefaultProps = {
 };
 
 export type UnstyledTypographyConfigProps = MergeProps<
-  UnstyledBoxDefaultProps,
+  UnstyledBoxConfigProps,
   UnstyledTypographyDefaultProps
 >;
 
