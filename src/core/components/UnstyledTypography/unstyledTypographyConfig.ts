@@ -13,7 +13,7 @@ export const unstyledTypographyConfig: ComponentConfig<UnstyledTypographyConfigP
       radius: 'none',
       color: 'neutral',
       weight: 'normal',
-      underline: 'none',
+      underline: 'normal',
       wordBreak: 'normal',
       wrap: 'wrap',
       align: 'left',
