@@ -41,7 +41,6 @@ export const UnstyledSpinner = (props: UnstyledSpinnerProps) => {
     <svg
       viewBox="0 0 40 40"
       strokeLinecap="round"
-      // fill="none"
       className={mergedClassName}
       {...restProps}
     >
