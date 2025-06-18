@@ -7,79 +7,79 @@ export const VariantExample = () => (
     <ExampleCard>
       <UnstyledSpinner
         variant="none"
-        color="primary"
+        color="neutral"
       >
         NONE
       </UnstyledSpinner>
       <UnstyledSpinner
         variant="text"
-        color="primary"
+        color="neutral"
       >
         TEXT
       </UnstyledSpinner>
       <UnstyledSpinner
         variant="plain"
-        color="primary"
+        color="neutral"
       >
         PLAIN
       </UnstyledSpinner>
       <UnstyledSpinner
         variant="light"
-        color="primary"
+        color="neutral"
       >
         LIGHT
       </UnstyledSpinner>
       <UnstyledSpinner
         variant="surface"
-        color="primary"
+        color="neutral"
       >
         SURFACE
       </UnstyledSpinner>
       <UnstyledSpinner
         variant="solid"
-        color="primary"
+        color="neutral"
       >
         SOLID
       </UnstyledSpinner>
       <UnstyledSpinner
         variant="none"
         border
-        color="primary"
+        color="neutral"
       >
         NONE-BORDER
       </UnstyledSpinner>
       <UnstyledSpinner
         variant="text"
         border
-        color="primary"
+        color="neutral"
       >
         TEXT-BORDER
       </UnstyledSpinner>
       <UnstyledSpinner
         variant="plain"
         border
-        color="primary"
+        color="neutral"
       >
         PLAIN-BORDER
       </UnstyledSpinner>
       <UnstyledSpinner
         variant="light"
         border
-        color="primary"
+        color="neutral"
       >
         LIGHT-BORDER
       </UnstyledSpinner>
       <UnstyledSpinner
         variant="surface"
         border
-        color="primary"
+        color="neutral"
       >
         SURFACE-BORDER
       </UnstyledSpinner>
       <UnstyledSpinner
         variant="solid"
         border
-        color="primary"
+        color="neutral"
       >
         SOLID-BORDER
       </UnstyledSpinner>
