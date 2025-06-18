@@ -7,79 +7,79 @@ export const VariantExample = () => (
     <ExampleCard>
       <UnstyledBox
         variant="none"
-        color="primary"
+        color="neutral"
       >
         NONE
       </UnstyledBox>
       <UnstyledBox
         variant="text"
-        color="primary"
+        color="neutral"
       >
         TEXT
       </UnstyledBox>
       <UnstyledBox
         variant="plain"
-        color="primary"
+        color="neutral"
       >
         PLAIN
       </UnstyledBox>
       <UnstyledBox
         variant="light"
-        color="primary"
+        color="neutral"
       >
         LIGHT
       </UnstyledBox>
       <UnstyledBox
         variant="surface"
-        color="primary"
+        color="neutral"
       >
         SURFACE
       </UnstyledBox>
       <UnstyledBox
         variant="solid"
-        color="primary"
+        color="neutral"
       >
         SOLID
       </UnstyledBox>
       <UnstyledBox
         variant="none"
         border
-        color="primary"
+        color="neutral"
       >
         NONE-BORDER
       </UnstyledBox>
       <UnstyledBox
         variant="text"
         border
-        color="primary"
+        color="neutral"
       >
         TEXT-BORDER
       </UnstyledBox>
       <UnstyledBox
         variant="plain"
         border
-        color="primary"
+        color="neutral"
       >
         PLAIN-BORDER
       </UnstyledBox>
       <UnstyledBox
         variant="light"
         border
-        color="primary"
+        color="neutral"
       >
         LIGHT-BORDER
       </UnstyledBox>
       <UnstyledBox
         variant="surface"
         border
-        color="primary"
+        color="neutral"
       >
         SURFACE-BORDER
       </UnstyledBox>
       <UnstyledBox
         variant="solid"
         border
-        color="primary"
+        color="neutral"
       >
         SOLID-BORDER
       </UnstyledBox>

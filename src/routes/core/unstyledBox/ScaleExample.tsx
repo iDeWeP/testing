@@ -9,7 +9,7 @@ export const ScaleExample = () => (
         variant="solid"
         size="md"
         scale="normal"
-        color="primary"
+        color="neutral"
       >
         NORMAL
       </UnstyledBox>
@@ -17,7 +17,7 @@ export const ScaleExample = () => (
         variant="solid"
         size="md"
         scale="fit"
-        color="primary"
+        color="neutral"
       >
         FIT
       </UnstyledBox>
@@ -25,7 +25,7 @@ export const ScaleExample = () => (
         variant="solid"
         size="md"
         scale="full"
-        color="primary"
+        color="neutral"
       >
         FULL
       </UnstyledBox>

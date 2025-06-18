@@ -8,49 +8,49 @@ export const SizeExample = () => (
       <UnstyledBox
         variant="solid"
         size="none"
-        color="primary"
+        color="neutral"
       >
         NONE
       </UnstyledBox>
       <UnstyledBox
         variant="solid"
         size="xs"
-        color="primary"
+        color="neutral"
       >
         XS
       </UnstyledBox>
       <UnstyledBox
         variant="solid"
         size="sm"
-        color="primary"
+        color="neutral"
       >
         SM
       </UnstyledBox>
       <UnstyledBox
         variant="solid"
         size="md"
-        color="primary"
+        color="neutral"
       >
         MD
       </UnstyledBox>
       <UnstyledBox
         variant="solid"
         size="lg"
-        color="primary"
+        color="neutral"
       >
         LG
       </UnstyledBox>
       <UnstyledBox
         variant="solid"
         size="xl"
-        color="primary"
+        color="neutral"
       >
         XL
       </UnstyledBox>
       <UnstyledBox
         variant="solid"
         size="xxl"
-        color="primary"
+        color="neutral"
       >
         XXL
       </UnstyledBox>
@@ -59,42 +59,42 @@ export const SizeExample = () => (
       <UnstyledBox
         variant="solid"
         size="xs-xs"
-        color="primary"
+        color="neutral"
       >
         XS-XS
       </UnstyledBox>
       <UnstyledBox
         variant="solid"
         size="sm-sm"
-        color="primary"
+        color="neutral"
       >
         SM-SM
       </UnstyledBox>
       <UnstyledBox
         variant="solid"
         size="md-md"
-        color="primary"
+        color="neutral"
       >
         MD-MD
       </UnstyledBox>
       <UnstyledBox
         variant="solid"
         size="lg-lg"
-        color="primary"
+        color="neutral"
       >
         LG-LG
       </UnstyledBox>
       <UnstyledBox
         variant="solid"
         size="xl-xl"
-        color="primary"
+        color="neutral"
       >
         XL-XL
       </UnstyledBox>
       <UnstyledBox
         variant="solid"
         size="xxl-xxl"
-        color="primary"
+        color="neutral"
       >
         XXL-XXL
       </UnstyledBox>

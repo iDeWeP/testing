@@ -8,49 +8,49 @@ export const MarginExample = () => (
       <UnstyledBox
         variant="solid"
         margin="none"
-        color="primary"
+        color="neutral"
       >
         NONE
       </UnstyledBox>
       <UnstyledBox
         variant="solid"
         margin="xs"
-        color="primary"
+        color="neutral"
       >
         XS
       </UnstyledBox>
       <UnstyledBox
         variant="solid"
         margin="sm"
-        color="primary"
+        color="neutral"
       >
         SM
       </UnstyledBox>
       <UnstyledBox
         variant="solid"
         margin="md"
-        color="primary"
+        color="neutral"
       >
         MD
       </UnstyledBox>
       <UnstyledBox
         variant="solid"
         margin="lg"
-        color="primary"
+        color="neutral"
       >
         LG
       </UnstyledBox>
       <UnstyledBox
         variant="solid"
         margin="xl"
-        color="primary"
+        color="neutral"
       >
         XL
       </UnstyledBox>
       <UnstyledBox
         variant="solid"
         margin="xxl"
-        color="primary"
+        color="neutral"
       >
         XXL
       </UnstyledBox>
