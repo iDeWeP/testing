@@ -43,54 +43,54 @@ export const unstyledSpinnerConfig: ComponentConfig<UnstyledSpinnerConfigProps> 
       float: {
         normal: {
           xs: {
-            top: 'top-[calc(50%_-_10px)]',
-            left: 'left-[calc(50%_-_10px)]'
+            top: 'top-[calc(50%_-_0.625rem)]',
+            left: 'left-[calc(50%_-_0.625rem)]'
           },
           sm: {
-            top: 'top-[calc(50%_-_16px)]',
-            left: 'left-[calc(50%_-_16px)]'
+            top: 'top-[calc(50%_-_1rem)]',
+            left: 'left-[calc(50%_-_1rem)]'
           },
           md: {
-            top: 'top-[calc(50%_-_20px)]',
-            left: 'left-[calc(50%_-_20px)]'
+            top: 'top-[calc(50%_-_1.25rem)]',
+            left: 'left-[calc(50%_-_1.25rem)]'
           },
           lg: {
-            top: 'top-[calc(50%_-_24px)]',
-            left: 'left-[calc(50%_-_24px)]'
+            top: 'top-[calc(50%_-_1.5rem)]',
+            left: 'left-[calc(50%_-_1.5rem)]'
           },
           xl: {
-            top: 'top-[calc(50%_-_32px)]',
-            left: 'left-[calc(50%_-_32px)]'
+            top: 'top-[calc(50%_-_2rem)]',
+            left: 'left-[calc(50%_-_2rem)]'
           },
           xxl: {
-            top: 'top-[calc(50%_-_40px)]',
-            left: 'left-[calc(50%_-_40px)]'
+            top: 'top-[calc(50%_-_2.5rem)]',
+            left: 'left-[calc(50%_-_2.5rem)]'
           }
         },
         text: {
           xs: {
-            top: 'top-[calc(50%_-_7px)]',
-            left: 'left-[calc(50%_-_7px)]'
+            top: 'top-[calc(50%_-_0.375)]',
+            left: 'left-[calc(50%_-_0.375)]'
           },
           sm: {
-            top: 'top-[calc(50%_-_8px)]',
-            left: 'left-[calc(50%_-_8px)]'
+            top: 'top-[calc(50%_-_0.5rem)]',
+            left: 'left-[calc(50%_-_0.5rem)]'
           },
           md: {
-            top: 'top-[calc(50%_-_10px)]',
-            left: 'left-[calc(50%_-_10px)]'
+            top: 'top-[calc(50%_-_0.625rem)]',
+            left: 'left-[calc(50%_-_0.625rem)]'
           },
           lg: {
-            top: 'top-[calc(50%_-_12px)]',
-            left: 'left-[calc(50%_-_12px)]'
+            top: 'top-[calc(50%_-_0.75rem)]',
+            left: 'left-[calc(50%_-_0.75rem)]'
           },
           xl: {
-            top: 'top-[calc(50%_-_14px)]',
-            left: 'left-[calc(50%_-_14px)]'
+            top: 'top-[calc(50%_-_0.875rem)]',
+            left: 'left-[calc(50%_-_0.875rem)]'
           },
           xxl: {
-            top: 'top-[calc(50%_-_16px)]',
-            left: 'left-[calc(50%_-_16px)]'
+            top: 'top-[calc(50%_-_1rem)]',
+            left: 'left-[calc(50%_-_1rem)]'
           }
         }
       },
