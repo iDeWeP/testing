@@ -5,7 +5,7 @@ import { UnstyledSpinner } from '../../../core/components/UnstyledSpinner/Unstyl
 export const ThicknessExample = () => (
   <ExampleSection title="Thickness">
     <ExampleCard>
-      <UnstyledSpinner thickness={5}>5</UnstyledSpinner>
+      <UnstyledSpinner thickness={8}>8</UnstyledSpinner>
     </ExampleCard>
   </ExampleSection>
 );
