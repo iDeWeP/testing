@@ -1,28 +1,24 @@
-import type {
-  MergeElementProps as MergeComponentProps,
-  Variant,
-  Color
-} from '../../types';
+import type { MergeComponentProps, Variant, Color } from '../../types';
 import { mergeClassName } from '../../utils/mergeClassName/mergeClassName';
 
 export type Props = MergeComponentProps<
   'circle',
   {
-    isDisabled: boolean;
+    disabled: boolean;
     variant: Variant;
     color: Color;
   }
 >;
 
 export const UnstyledTrail = ({
-  isDisabled,
+  disabled,
   variant,
   color,
   className,
   ...restProps
 }: Props) => {
   const mergedClassName = mergeClassName('unstyledTrail', className, {
-    isDisabled,
+    disabled,
     variant,
     color
   });

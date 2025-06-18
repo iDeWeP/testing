@@ -8,23 +8,23 @@ import mergeClasses from './mergeClasses';
 export const styleUnstyledSpinner = (
   className: string,
   {
-    isSpinning = true,
-    isDisabled = false,
-    isFloating = false,
-    variant = 'text',
+    spin = true,
+    disabled = false,
+    float = false,
+    variant = 'none',
     size = 'md',
     defaultScale = 'normal',
-    color = 'primary'
+    color = 'neutral'
   }: Classes
 ) => {
-  const animation = !isSpinning || isDisabled ? 'rotate' : 'spin';
+  const animation = !spin || disabled ? 'rotate' : 'spin';
 
   return mergeClasses(
     unstyledSpinnerConfig.styles.root.default,
-    isFloating && generic.styles.position.absolute,
-    isFloating && unstyledSpinnerConfig.styles.root.float[defaultScale][size],
+    float && generic.styles.position.absolute,
+    float && unstyledSpinnerConfig.styles.root.float[defaultScale][size],
     generic.styles.size[defaultScale][size].square,
-    generic.styles.color.stroke[getColor(isDisabled, color)][
+    generic.styles.color.stroke[getColor(disabled, color)][
       getSpinnerVariant(variant)
     ],
     unstyledSpinnerConfig.styles.root[animation],

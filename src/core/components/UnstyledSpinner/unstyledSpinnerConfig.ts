@@ -30,7 +30,7 @@ export const unstyledSpinnerConfig: ComponentConfig<UnstyledSpinnerConfigProps> 
     thickness: 4,
     margin: 'none',
     border: false,
-    color: 'primary',
+    color: 'neutral',
     componentsProps: {}
   },
   styles: {
