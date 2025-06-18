@@ -6,12 +6,13 @@ import { UnstyledTrail } from './UnstyledTrail';
 
 export const UnstyledSpinner = (props: UnstyledSpinnerProps) => {
   const {
-    spin: isSpinning,
-    disabled: isDisabled,
+    spin,
+    disabled,
     value,
     variant,
-    float: isFloating,
+    float,
     size,
+    scale: defaultScale,
     thickness,
     margin,
     border,
@@ -25,11 +26,12 @@ export const UnstyledSpinner = (props: UnstyledSpinnerProps) => {
   const offset = length - (value * length) / 100;
 
   const mergedClassName = mergeClassName('unstyledSpinner', className, {
-    isSpinning,
-    isDisabled,
+    spin,
+    disabled,
     variant,
-    isFloating,
+    float,
     size,
+    defaultScale,
     margin,
     border,
     color
@@ -39,7 +41,7 @@ export const UnstyledSpinner = (props: UnstyledSpinnerProps) => {
     <svg
       viewBox="0 0 40 40"
       strokeLinecap="round"
-      fill="none"
+      // fill="none"
       className={mergedClassName}
       {...restProps}
     >
@@ -52,7 +54,7 @@ export const UnstyledSpinner = (props: UnstyledSpinnerProps) => {
         />
       )}
       <UnstyledTrail
-        isDisabled={isDisabled}
+        disabled={disabled}
         strokeWidth={thickness}
         variant={variant}
         color={color}
