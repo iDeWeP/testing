@@ -5,7 +5,6 @@ import { DefaultExample } from './DefaultExample';
 import { DisabledExample } from './DisabledExample';
 import { FloatExample } from './FloatExample';
 import { MarginExample } from './MarginExample';
-import { ScaleExample } from './ScaleExample';
 import { SizeExample } from './SizeExample';
 import { SpinExample } from './SpinExample';
 import { ThicknessExample } from './ThicknessExample';
@@ -22,7 +21,6 @@ const Page = () => (
     <VariantExample />
     <FloatExample />
     <SizeExample />
-    <ScaleExample />
     <ThicknessExample />
     <MarginExample />
     <BorderExample />
