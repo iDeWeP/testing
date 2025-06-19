@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 
 export const useWindowResize = (
-  handler: (this: Window, ev: UIEvent) => void,
+  handler: ((this: Window, ev: UIEvent) => void) | false,
   options?: boolean | AddEventListenerOptions
 ) =>
   useEffect(() => {
