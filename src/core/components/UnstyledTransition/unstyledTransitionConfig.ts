@@ -6,6 +6,7 @@ export const unstyledTransitionConfig: ComponentConfig<UnstyledTransitionConfigP
     props: {
       as: 'div',
       in: false,
+      disabled: false,
       unmountOnExit: false,
       peak: 100,
       variant: 'none',

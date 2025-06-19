@@ -5,6 +5,7 @@ export const unstyledTypographyConfig: ComponentConfig<UnstyledTypographyConfigP
   {
     props: {
       as: 'span',
+      disabled: false,
       variant: 'none',
       size: 'md',
       scale: 'normal',
