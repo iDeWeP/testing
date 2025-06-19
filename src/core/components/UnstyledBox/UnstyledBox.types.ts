@@ -13,7 +13,6 @@ import type {
 
 export type UnstyledBoxDefaultProps = {
   as?: ElementType;
-  disabled?: boolean;
   variant?: Variant;
   size?: BoxSize;
   scale?: Scale;

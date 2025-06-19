@@ -6,21 +6,21 @@ export const ScaleExample = () => (
   <ExampleSection title="Scale">
     <ExampleCard>
       <UnstyledBox
-        variant="solid"
+        variant="light"
         scale="normal"
         color="neutral"
       >
         NORMAL
       </UnstyledBox>
       <UnstyledBox
-        variant="solid"
+        variant="light"
         scale="fit"
         color="neutral"
       >
         FIT
       </UnstyledBox>
       <UnstyledBox
-        variant="solid"
+        variant="light"
         scale="full"
         color="neutral"
       >

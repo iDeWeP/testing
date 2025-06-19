@@ -6,49 +6,49 @@ export const SizeExample = () => (
   <ExampleSection title="Size">
     <ExampleCard>
       <UnstyledBox
-        variant="solid"
+        variant="light"
         size="none"
         color="neutral"
       >
         NONE
       </UnstyledBox>
       <UnstyledBox
-        variant="solid"
+        variant="light"
         size="xs"
         color="neutral"
       >
         XS
       </UnstyledBox>
       <UnstyledBox
-        variant="solid"
+        variant="light"
         size="sm"
         color="neutral"
       >
         SM
       </UnstyledBox>
       <UnstyledBox
-        variant="solid"
+        variant="light"
         size="md"
         color="neutral"
       >
         MD
       </UnstyledBox>
       <UnstyledBox
-        variant="solid"
+        variant="light"
         size="lg"
         color="neutral"
       >
         LG
       </UnstyledBox>
       <UnstyledBox
-        variant="solid"
+        variant="light"
         size="xl"
         color="neutral"
       >
         XL
       </UnstyledBox>
       <UnstyledBox
-        variant="solid"
+        variant="light"
         size="xxl"
         color="neutral"
       >
@@ -57,42 +57,42 @@ export const SizeExample = () => (
     </ExampleCard>
     <ExampleCard>
       <UnstyledBox
-        variant="solid"
+        variant="light"
         size="xs-xs"
         color="neutral"
       >
         XS-XS
       </UnstyledBox>
       <UnstyledBox
-        variant="solid"
+        variant="light"
         size="sm-sm"
         color="neutral"
       >
         SM-SM
       </UnstyledBox>
       <UnstyledBox
-        variant="solid"
+        variant="light"
         size="md-md"
         color="neutral"
       >
         MD-MD
       </UnstyledBox>
       <UnstyledBox
-        variant="solid"
+        variant="light"
         size="lg-lg"
         color="neutral"
       >
         LG-LG
       </UnstyledBox>
       <UnstyledBox
-        variant="solid"
+        variant="light"
         size="xl-xl"
         color="neutral"
       >
         XL-XL
       </UnstyledBox>
       <UnstyledBox
-        variant="solid"
+        variant="light"
         size="xxl-xxl"
         color="neutral"
       >

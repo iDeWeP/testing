@@ -6,51 +6,51 @@ export const RadiusExample = () => (
   <ExampleSection title="Radius">
     <ExampleCard>
       <UnstyledBox
-        variant="solid"
+        variant="light"
         radius="none"
-        color="primary"
+        color="neutral"
       >
         NONE
       </UnstyledBox>
       <UnstyledBox
-        variant="solid"
+        variant="light"
         radius="xs"
-        color="primary"
+        color="neutral"
       >
         XS
       </UnstyledBox>
       <UnstyledBox
-        variant="solid"
+        variant="light"
         radius="sm"
-        color="primary"
+        color="neutral"
       >
         SM
       </UnstyledBox>
       <UnstyledBox
-        variant="solid"
+        variant="light"
         radius="md"
-        color="primary"
+        color="neutral"
       >
         MD
       </UnstyledBox>
       <UnstyledBox
-        variant="solid"
+        variant="light"
         radius="lg"
-        color="primary"
+        color="neutral"
       >
         LG
       </UnstyledBox>
       <UnstyledBox
-        variant="solid"
+        variant="light"
         radius="xl"
-        color="primary"
+        color="neutral"
       >
         XL
       </UnstyledBox>
       <UnstyledBox
-        variant="solid"
+        variant="light"
         radius="full"
-        color="primary"
+        color="neutral"
       >
         FULL
       </UnstyledBox>

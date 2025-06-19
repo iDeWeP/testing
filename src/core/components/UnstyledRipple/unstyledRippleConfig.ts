@@ -35,6 +35,40 @@ export const unstyledRippleConfig: ComponentConfig<UnstyledRippleConfigProps> &
         pointerEvents: 'pointer-events-none'
       },
       color: {
+        surface: {
+          stateless: {
+            default: {
+              hover: '[*:hover>&]:bg-surface-500/10',
+              active: '[*:active:hover>&]:bg-surface-500/20',
+              focus:
+                '[*:focus:hover>&]:bg-surface-500/20 [*:focus>&]:bg-surface-500/20'
+            },
+            on: {
+              hover: '[*:hover>&]:bg-surface-50/10',
+              active: '[*:active:hover>&]:bg-surface-50/20',
+              focus:
+                '[*:focus:hover>&]:bg-surface-50/20 [*:focus>&]:bg-surface-50/20'
+            }
+          },
+          stateful: {
+            default: {
+              hover:
+                'peer-hover:bg-surface-500/10 peer-[:checked:hover]:bg-surface-500/10',
+              active:
+                'peer-[:active:hover]:bg-surface-500/20 peer-[:checked:active:hover]:bg-surface-500/20',
+              focus:
+                'peer-[:focus:hover]:bg-surface-500/20 peer-focus:bg-surface-500/20 peer-[:checked:focus:hover]:bg-surface-500/20 peer-[:checked:focus]:bg-surface-500/20'
+            },
+            on: {
+              hover:
+                'peer-hover:bg-surface-50/10 peer-[:checked:hover]:bg-light-surface-50/10',
+              active:
+                'peer-[:active:hover]:bg-surface-50/20 peer-[:checked:active:hover]:bg-light-surface-50/20',
+              focus:
+                'peer-[:focus:hover]:bg-surface-50/20 peer-focus:bg-surface-50/20 peer-[:checked:focus:hover]:bg-light-surface-50/20 peer-[:checked:focus]:bg-light-surface-50/20'
+            }
+          }
+        },
         neutral: {
           stateless: {
             default: {

@@ -8,7 +8,6 @@ export const UnstyledBox = <E extends ElementType = 'div'>(
   props: UnstyledBoxProps<E>
 ) => {
   const {
-    disabled,
     variant,
     size: spacing,
     scale,
@@ -22,7 +21,6 @@ export const UnstyledBox = <E extends ElementType = 'div'>(
   } = mergeProps(unstyledBoxConfig.props, props);
 
   const mergedClassName = mergeClassName('unstyledBox', className, {
-    disabled,
     variant,
     spacing,
     scale,
