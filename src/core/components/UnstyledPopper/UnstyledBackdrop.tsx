@@ -1,7 +1,7 @@
 import type { Animation } from '../../../hooks/hooks/use-animation/useAnimation';
 import { combineHandlers } from '../../../utils/utils/combine-handlers/combineHandlers';
 import { portElement } from '../../../utils/utils/port-element/portElement';
-import type { MergeComponentProps, Peak } from '../../types';
+import type { MergeComponentProps, Peak, TransitionProps } from '../../types';
 import { mergeBackdropStyle } from '../../utils/mergeBackdropStyle/mergeBackdropStyle';
 import { mergeClassName } from '../../utils/mergeClassName/mergeClassName';
 
@@ -14,8 +14,10 @@ type Props = MergeComponentProps<
     zIndex: number;
     invisible: boolean;
     blur: boolean;
+    duration: number;
     onClose?: VoidFunction;
     portalEl: Element | null;
+    transitionProps?: TransitionProps;
   }
 >;
 
@@ -26,11 +28,13 @@ export const UnstyledBackdrop = ({
   zIndex,
   invisible,
   blur,
+  duration,
   className,
   style,
   onClose,
   onClick,
   portalEl,
+  transitionProps,
   ...restProps
 }: Props) => {
   const mergedClassName = mergeClassName('unstyledBackdrop', className, {
@@ -43,7 +47,9 @@ export const UnstyledBackdrop = ({
     animation,
     peak,
     zIndex,
-    style
+    duration,
+    style,
+    transitionProps
   );
 
   const handleClick = combineHandlers(onClick, onClose);
