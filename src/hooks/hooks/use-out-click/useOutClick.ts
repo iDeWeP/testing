@@ -2,7 +2,7 @@ import { type RefObject, useEffect } from 'react';
 
 // CHECK TYPES !!!
 export const useOutClick = <E extends HTMLElement, T extends HTMLElement>(
-  handler?: VoidFunction,
+  handler?: VoidFunction | false,
   elRef?: RefObject<E | null>,
   triggerRef?: RefObject<T | null>,
   options?: boolean | AddEventListenerOptions
