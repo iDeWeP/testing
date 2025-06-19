@@ -1,9 +1,10 @@
 import type { RefObject, CSSProperties } from 'react';
 import type { Animation } from '../../../hooks/hooks/use-animation/useAnimation';
-import type { Scale, Peak, Transition, TransitionProps } from '../../types';
+import type { Peak, Scale, Transition, TransitionProps } from '../../types';
 import { styleTransition } from '../styleTransition/styleTransition';
+import { getFadeStyle } from './getFadeStyle';
 import { styleCollapse } from './styleCollapse';
-import { styleFade } from './styleFade';
+import { styleFade } from '../styleFade/styleFade';
 import { styleGrow } from './styleGrow';
 import { styleSlide } from './styleSlide';
 
@@ -22,17 +23,14 @@ export const mergeTransitionStyle = (
   scale: Scale,
   transition: Transition,
   duration: number,
-  style: CSSProperties,
+  style: CSSProperties = {},
   transitionProps: TransitionProps
 ): CSSProperties => {
   const transitions = transition.split('-');
 
   return {
     ...styleTransition(isIn, animation, duration, transitionProps),
-    ...(transitions[0] !== 'fade' &&
-    transitions[transitions.length - 1] === 'fade'
-      ? setStyle.fade(animation, peak, transitions)
-      : {}),
+    ...getFadeStyle(animation, peak, transitions),
     ...setStyle[transitions[0] as keyof typeof setStyle](
       animation,
       peak,

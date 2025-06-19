@@ -23,7 +23,7 @@ export const styleCollapse = (
     const width = scale === 'full' ? '100%' : 'auto';
     const autoLength = isHorizontal ? width : 'auto';
 
-    return { [dimension]: peak === 'auto' ? autoLength : length };
+    return { [dimension]: peak === 'auto' ? autoLength : peak };
   } else {
     return { [dimension]: '0px' };
   }
