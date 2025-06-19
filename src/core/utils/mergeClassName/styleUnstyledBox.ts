@@ -25,7 +25,6 @@ export const styleUnstyledBox = (
     generic.styles.border[getBorder(border)],
     generic.styles.radius.lg[radius],
     generic.styles.color.bg[color][bgVariant],
-    generic.styles.color.border[color][textVariant],
     generic.styles.color.text[color][textVariant],
     generic.styles.color.fill[color][textVariant],
     className

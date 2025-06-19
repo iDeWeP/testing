@@ -7,7 +7,7 @@ export const styleUnstyledTypography = (
   {
     size = 'md',
     weight = 'normal',
-    underline = 'none',
+    underline = 'normal',
     wordBreak = 'normal',
     textWrap = 'wrap',
     textAlign = 'left',
