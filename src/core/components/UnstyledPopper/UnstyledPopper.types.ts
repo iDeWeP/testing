@@ -1,16 +1,17 @@
 import type {
-  RefObject,
-  ElementType,
   ReactElement,
-  ComponentPropsWithRef
+  ComponentPropsWithRef,
+  RefObject,
+  ElementType
 } from 'react';
 import type {
   ComponentRefProps,
-  TransitionProps,
   Placement,
-  MergeProps,
+  Trigger,
   Peak,
-  Trigger
+  Float,
+  TransitionProps,
+  MergeProps
 } from '../../types';
 import type {
   UnstyledFlexBoxConfigProps,
@@ -37,16 +38,15 @@ export type UnstyledPopperComponentProps = {
 
 type UnstyledPopperOptionalProps = {
   anchorRef?: RefObject<HTMLElement | null>;
+  open?: boolean;
   onOpen?: VoidFunction;
   onClose?: VoidFunction;
   onPlacementChange?: (placement: Placement) => void;
 };
 
 export type UnstyledPopperDefaultProps = {
-  open?: boolean;
   defaultOpen?: boolean;
   trigger?: Trigger;
-  stable?: boolean;
   followCursor?: boolean;
   closeOnOutClick?: boolean | RefObject<HTMLElement | null>;
   closeOnEsc?: boolean;
@@ -57,6 +57,7 @@ export type UnstyledPopperDefaultProps = {
   unmountOnExit?: boolean;
   peak?: Peak;
   placement?: Placement;
+  float?: Float;
   zIndex?: number;
   offset?: number;
   duration?: number;

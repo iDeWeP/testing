@@ -46,7 +46,7 @@ export const UnstyledBackdrop = ({
     style
   );
 
-  const handleClick = combineHandlers(onClose, onClick);
+  const handleClick = combineHandlers(onClick, onClose);
 
   return portElement(
     <div

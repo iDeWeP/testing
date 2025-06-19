@@ -15,19 +15,19 @@ import { combineHandlers } from '../../../utils/utils/combine-handlers/combineHa
 import getCords from '../../../utils/utils/getCords/getCords';
 import { mergeRefs } from '../../../utils/utils/merge-refs/mergeRefs';
 import { portElement } from '../../../utils/utils/port-element/portElement';
+import { setProp } from '../../../utils/utils/set-prop/setProp';
 import useStartAnimation from '../../hooks/use-animation-start/useTransitionStart';
+import { useControlledState } from '../../hooks/use-controlled-state/useControlledState';
 import { usePlacementChange } from '../../hooks/use-placemenet-change/usePlacementChange';
 import { mergeClassName } from '../../utils/mergeClassName/mergeClassName';
 import { mergePopperStyle } from '../../utils/mergePopperStyle/mergPopperStyle';
 import { mergeProps } from '../../utils/mergeProps/mergeProps';
-import { UnstyledBox } from '../UnstyledBox/UnstyledBox';
+import { UnstyledFlexBox } from '../UnstyledFlexBox/UnstyledFlexBox';
+import { UnstyledAnchor } from './UnstyledAnchor';
 import { UnstyledArrow } from './UnstyledArrow';
 import { UnstyledBackdrop } from './UnstyledBackdrop';
 import type { UnstyledPopperProps } from './UnstyledPopper.types';
 import { unstyledPopperConfig } from './unstyledPopperConfig';
-import { setProp } from '../../../utils/utils/set-prop/setProp';
-import { useControlledState } from '../../hooks/use-controlled-state/useControlledState';
-import { UnstyledAnchor } from './UnstyledAnchor';
 
 export const UnstyledPopper = <E extends ElementType = 'div'>(
   props: UnstyledPopperProps<E>
@@ -38,7 +38,6 @@ export const UnstyledPopper = <E extends ElementType = 'div'>(
     open,
     defaultOpen,
     trigger,
-    stable,
     followCursor,
     closeOnOutClick,
     closeOnEsc,
@@ -50,6 +49,7 @@ export const UnstyledPopper = <E extends ElementType = 'div'>(
     peak,
     variant,
     placement,
+    float,
     zIndex,
     offset,
     border,
@@ -87,10 +87,11 @@ export const UnstyledPopper = <E extends ElementType = 'div'>(
 
   const anchorRef = anchorElRef ?? anchorNodeRef;
   const isExited = !isOpen && animation.isExited;
+
   const { top, left, mainAxis } = getCords(
     ref,
-    !stable,
     placement,
+    float,
     offset,
     !!portalEl,
     anchorRef,
@@ -102,17 +103,21 @@ export const UnstyledPopper = <E extends ElementType = 'div'>(
 
   usePlacementChange(mainAxis, onPlacementChange);
 
-  useWindowResize(!isExited && !stable && !followCursor && handleResize);
+  useWindowResize(
+    !isExited && float !== 'none' && !followCursor && handleResize
+  );
 
-  useWindowScroll(!isExited && !stable && !followCursor && handleScroll);
+  useWindowScroll(
+    !isExited && float !== 'none' && !followCursor && handleScroll
+  );
 
   useOutClick(
-    isOpen && closeOnOutClick && !backdrop && onClose,
+    isOpen && closeOnOutClick && !backdrop && handleClose,
     ref,
     typeof closeOnOutClick === 'boolean' ? anchorRef : closeOnOutClick
   );
 
-  useEscape(isOpen && closeOnEsc && onClose);
+  useEscape(isOpen && closeOnEsc && handleClose);
 
   useAutoFocus(isOpen && focusOnOpen && ref, focusOnOpen === true);
 
@@ -137,7 +142,16 @@ export const UnstyledPopper = <E extends ElementType = 'div'>(
     </UnstyledAnchor>
   );
 
-  if (!isOpen && animation.isExited && unmountOnExit) {
+  console.log(
+    isOpen,
+    `${animation.isEntered ? 'ENTERED' : ''}${
+      animation.isEntering ? 'ENTERING' : ''
+    }${animation.isExited ? 'EXITED' : ''}${
+      animation.isExiting ? 'EXITING' : ''
+    }`
+  );
+
+  if (isExited && unmountOnExit) {
     return anchorNode;
   }
 
@@ -155,19 +169,19 @@ export const UnstyledPopper = <E extends ElementType = 'div'>(
     transitionProps
   );
 
-  const handleTransitionEnd = combineHandlers(stopAnimation, onTransitionEnd);
+  const handleTransitionEnd = combineHandlers(onTransitionEnd, stopAnimation);
 
   return (
     <>
       {anchorNode}
       {portElement(
-        <UnstyledBox
-          ref={mergeRefs(forwardedRef, ref)}
+        <UnstyledFlexBox
+          ref={mergeRefs(ref, forwardedRef)}
           variant={variant}
           border={border}
           color={color}
           className={mergedClassName}
-          style={mergedStyles}
+          style={{ ...mergedStyles, position: 'absolute' }}
           onTransitionEnd={handleTransitionEnd}
           {...restProps}
         >
@@ -179,7 +193,7 @@ export const UnstyledPopper = <E extends ElementType = 'div'>(
               zIndex={1000}
               invisible
               blur={false}
-              onClose={setProp(!!closeOnOutClick, onClose)}
+              onClose={setProp(!!closeOnOutClick, handleClose)}
               portalEl={null}
               {...componentProps.backdrop}
             />
@@ -198,7 +212,7 @@ export const UnstyledPopper = <E extends ElementType = 'div'>(
               {...componentProps.arrow}
             />
           )}
-        </UnstyledBox>,
+        </UnstyledFlexBox>,
         portalEl
       )}
     </>
