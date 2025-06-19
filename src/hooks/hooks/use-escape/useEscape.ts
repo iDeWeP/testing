@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 
 export const useEscape = (
-  handler?: VoidFunction,
+  handler?: VoidFunction | false,
   options?: boolean | AddEventListenerOptions
 ) =>
   useEffect(() => {
