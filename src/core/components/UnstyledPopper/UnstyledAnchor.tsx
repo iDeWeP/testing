@@ -42,29 +42,26 @@ export const UnstyledAnchor = ({
   const { clickOpen, clickClose, hoverOpen, hoverClose } = getTriggers(trigger);
 
   const handleClick = combineHandlers(
-    () => console.log('click'),
+    children?.props.onClick,
     !isOpen && clickOpen && onOpen,
     isOpen && clickClose && onClose,
-    !isOpen && clickOpen && followCursor && onCursorMove, // CHECK !!!
-    children?.props.onClick
+    !isOpen && clickOpen && followCursor && onCursorMove // CHECK !!!
   );
 
   const handleMouseEnter = combineHandlers(
-    !isOpen && hoverOpen && onOpen,
-    children?.props.onMouseEnter
+    children?.props.onMouseEnter,
+    !isOpen && hoverOpen && onOpen
   );
 
   const handleMouseLeave = combineHandlers(
-    isOpen && hoverClose && onClose,
-    children?.props.onMouseLeave
+    children?.props.onMouseLeave,
+    isOpen && hoverClose && onClose
   );
 
   const handleMouseMove = combineHandlers(
-    !isExited && followCursor && onCursorMove,
-    children?.props.onMouseMove
+    children?.props.onMouseMove,
+    !isExited && followCursor && onCursorMove
   );
-
-  console.log(children);
 
   return cloneElement(children, {
     onClick: handleClick,
