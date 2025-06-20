@@ -15,11 +15,11 @@ export const mergePopperStyle = (
   style?: CSSProperties,
   transitionProps?: TransitionProps
 ): CSSProperties => ({
-  ...styleTransition(isOpen, animation, duration, transitionProps),
-  ...styleFade(animation, peak),
   top,
   left,
   zIndex,
   visibility: !isOpen && animation.isExited ? 'hidden' : 'visible',
+  ...styleTransition(isOpen, animation, duration, transitionProps),
+  ...styleFade(animation, peak),
   ...style
 });

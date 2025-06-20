@@ -13,9 +13,9 @@ export const mergeBackdropStyle = (
   style?: CSSProperties,
   transitionProps?: TransitionProps
 ): CSSProperties => ({
-  ...styleTransition(isOpen, animation, duration, transitionProps),
-  ...styleFade(animation, peak),
   zIndex,
   visibility: !isOpen && animation.isExited ? 'hidden' : 'visible',
+  ...styleTransition(isOpen, animation, duration, transitionProps),
+  ...styleFade(animation, peak),
   ...style
 });
