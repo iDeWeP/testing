@@ -1,6 +1,6 @@
 import type { CSSProperties } from 'react';
 import type { DefaultPlacement } from '../../types';
-import { getOffset } from '../getOffset/getOffset';
+import { getOffset } from '../get-offset/get-offset';
 
 const placements = {
   top: 'translate(-50%, 100%) rotate(180deg)',
