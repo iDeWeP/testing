@@ -18,8 +18,8 @@ const getPosition = (orientation: Orientation) =>
 
 const dimensions = {
   start: (
-    dimension: Dimension,
     orientation: Orientation,
+    dimension: Dimension,
     length: Length,
     anchor: AnchorDimensions,
     el: ElDimensions,
@@ -54,8 +54,8 @@ const dimensions = {
     }
   },
   end: (
-    dimension: Dimension,
     orientation: Orientation,
+    dimension: Dimension,
     length: Length,
     anchor: AnchorDimensions,
     el: ElDimensions,
@@ -85,8 +85,8 @@ const dimensions = {
     }
   },
   center: (
-    dimension: Dimension,
     orientation: Orientation,
+    dimension: Dimension,
     length: Length,
     anchor: AnchorDimensions,
     el: ElDimensions,
@@ -137,8 +137,8 @@ const dimensions = {
 export const getAutoCrossAxis = (
   crossAxis: CrossAxis,
   float: Float,
-  dimension: Dimension,
   orientation: Orientation,
+  dimension: Dimension,
   length: Length,
   anchor: AnchorDimensions,
   el: ElDimensions,
@@ -148,8 +148,8 @@ export const getAutoCrossAxis = (
 ) =>
   float === 'auto'
     ? dimensions[crossAxis](
-        dimension,
         orientation,
+        dimension,
         length,
         anchor,
         el,

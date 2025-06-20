@@ -12,8 +12,8 @@ import { isElShorter } from './isElShorter';
 
 const dimensions = {
   start: (
-    dimension: Dimension,
     orientation: Orientation,
+    dimension: Dimension,
     length: Length,
     anchor: AnchorDimensions,
     el: ElDimensions,
@@ -29,8 +29,8 @@ const dimensions = {
         { [dimension]: size[orientation].end }
       : {},
   end: (
-    dimension: Dimension,
     orientation: Orientation,
+    dimension: Dimension,
     length: Length,
     anchor: AnchorDimensions,
     el: ElDimensions,
@@ -49,8 +49,8 @@ const dimensions = {
 export const getFlipCrossAxis = (
   crossAxis: CrossAxis,
   float: Float,
-  dimension: Dimension,
   orientation: Orientation,
+  dimension: Dimension,
   length: Length,
   anchor: AnchorDimensions,
   el: ElDimensions,
@@ -60,8 +60,8 @@ export const getFlipCrossAxis = (
 ) =>
   float === 'flip' && crossAxis !== 'center'
     ? dimensions[crossAxis](
-        dimension,
         orientation,
+        dimension,
         length,
         anchor,
         el,

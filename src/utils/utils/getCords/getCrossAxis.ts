@@ -3,22 +3,22 @@ import type { Dimension, SizeDimensions } from './getCords.types';
 
 const dimensions = {
   start: (
-    dimension: Dimension,
     orientation: Orientation,
+    dimension: Dimension,
     size: SizeDimensions
   ) => ({
     [dimension]: size[orientation].start
   }),
   end: (
-    dimension: Dimension,
     orientation: Orientation,
+    dimension: Dimension,
     size: SizeDimensions
   ) => ({
     [dimension]: size[orientation].end
   }),
   center: (
-    dimension: Dimension,
     orientation: Orientation,
+    dimension: Dimension,
     size: SizeDimensions
   ) => ({
     [dimension]: size[orientation].center
@@ -27,7 +27,7 @@ const dimensions = {
 
 export const getCrossAxis = (
   crossAxis: CrossAxis,
-  dimension: Dimension,
   orientation: Orientation,
+  dimension: Dimension,
   size: SizeDimensions
-) => dimensions[crossAxis](dimension, orientation, size);
+) => dimensions[crossAxis](orientation, dimension, size);

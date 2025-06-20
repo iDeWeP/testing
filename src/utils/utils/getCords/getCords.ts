@@ -60,7 +60,6 @@ export const getCords = (
   const dimension = isHorizontal ? 'left' : 'top';
   const length = isHorizontal ? 'width' : 'height';
 
-  // Adjust position based on the main axis
   return {
     ...getMainAxis(mainAxis, size),
     ...getFloatMainAxis(mainAxis, float, size, overflow, view),
