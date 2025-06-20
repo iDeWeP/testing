@@ -1,5 +1,8 @@
-import type { AnchorDimensions, ElDimensions } from './getCords.types';
-import type { ViewDimensions } from './getViewDimensions';
+import type {
+  AnchorDimensions,
+  ElDimensions,
+  ViewDimensions
+} from './getCords.types';
 
 export const calculateOverflowDimensions = (
   anchor: AnchorDimensions,

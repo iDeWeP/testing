@@ -1,6 +1,8 @@
-import type { AnchorDimensions } from './getAnchorDimensions';
-import type { ElDimensions } from './getElDimensions';
-import type { ViewDimensions } from './getViewDimensions';
+import type {
+  AnchorDimensions,
+  ElDimensions,
+  ViewDimensions
+} from './getCords.types';
 
 export const calculateSizeDimensions = (
   anchor: AnchorDimensions,
@@ -9,21 +11,21 @@ export const calculateSizeDimensions = (
   offset: number
 ) => ({
   horizontal: {
-    start: anchor.x,
+    start: anchor.left,
     end: anchor.offsetWidth - el.width,
-    center: anchor.x + anchor.width / 2 - el.width / 2,
-    viewStart: anchor.x - anchor.viewX,
-    viewEnd: anchor.x + view.width - anchor.viewX - el.width
+    center: anchor.left + anchor.width / 2 - el.width / 2,
+    viewStart: anchor.left - anchor.x,
+    viewEnd: anchor.left + view.width - anchor.x - el.width
   },
   vertical: {
-    start: anchor.y,
+    start: anchor.top,
     end: anchor.offsetHeight - el.height,
-    center: anchor.y + anchor.height / 2 - el.height / 2,
-    viewStart: anchor.y - anchor.viewY,
-    viewEnd: anchor.y + view.height - anchor.viewY - el.height
+    center: anchor.top + anchor.height / 2 - el.height / 2,
+    viewStart: anchor.top - anchor.y,
+    viewEnd: anchor.top + view.height - anchor.y - el.height
   },
-  top: anchor.y - el.offsetHeight,
+  top: anchor.top - el.offsetHeight,
   bottom: anchor.offsetHeight + offset,
-  left: anchor.x - el.offsetWidth,
+  left: anchor.left - el.offsetWidth,
   right: anchor.offsetWidth + offset
 });

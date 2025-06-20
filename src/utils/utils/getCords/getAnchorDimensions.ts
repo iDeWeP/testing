@@ -1,67 +1,52 @@
 import type { RefObject } from 'react';
 import type { Cursor } from '../../../core/types';
 
-export type AnchorDimensions = {
-  x: number;
-  y: number;
-  viewX: number;
-  viewY: number;
-  width: number;
-  height: number;
-  offsetWidth: number;
-  offsetHeight: number;
-};
-
 export const getAnchorDimensions = (
   anchorRef: RefObject<HTMLElement | null>,
   isPorted: boolean,
   isFollowingCursor?: boolean,
   cursor?: Cursor
 ) => {
-  const anchor = {
+  const dimensions = {
     x: anchorRef.current?.getBoundingClientRect().x ?? 0,
     y: anchorRef.current?.getBoundingClientRect().y ?? 0,
-    offsetTop: anchorRef.current?.offsetTop ?? 0,
-    offsetLeft: anchorRef.current?.offsetLeft ?? 0,
-    offsetWidth: anchorRef.current?.offsetWidth ?? 0,
-    offsetHeight: anchorRef.current?.offsetHeight ?? 0
+    cursorX: cursor?.x ?? 0,
+    cursorY: cursor?.y ?? 0,
+    top: anchorRef.current?.offsetTop ?? 0,
+    left: anchorRef.current?.offsetLeft ?? 0,
+    width: anchorRef.current?.offsetWidth ?? 0,
+    height: anchorRef.current?.offsetHeight ?? 0
   };
-  const anchorDimensions = {
-    x: 0,
-    y: 0,
-    viewX: 0,
-    viewY: 0,
-    width: 0,
-    height: 0,
+
+  const portedX =
+    (isFollowingCursor ? dimensions.cursorX : dimensions.x) +
+    document.documentElement.scrollLeft;
+
+  const portedY =
+    (isFollowingCursor ? dimensions.cursorX : dimensions.y) +
+    document.documentElement.scrollTop;
+
+  const left = isFollowingCursor
+    ? dimensions.left + dimensions.cursorX - dimensions.x
+    : dimensions.left;
+
+  const top = isFollowingCursor
+    ? dimensions.top + dimensions.cursorY - dimensions.y
+    : dimensions.top;
+
+  const anchor = {
+    left: isPorted ? portedX : left,
+    top: isPorted ? portedY : top,
+    x: isFollowingCursor ? dimensions.cursorX : dimensions.x,
+    y: isFollowingCursor ? dimensions.cursorY : dimensions.y,
+    width: isFollowingCursor ? 0 : dimensions.width,
+    height: isFollowingCursor ? 0 : dimensions.height,
     offsetWidth: 0,
     offsetHeight: 0
   };
 
-  if (isFollowingCursor) {
-    anchorDimensions.viewX = cursor?.x ?? 0;
-    anchorDimensions.viewY = cursor?.y ?? 0;
-    anchorDimensions.x = isPorted
-      ? anchorDimensions.viewX + document.documentElement.scrollLeft
-      : anchor.offsetLeft + anchorDimensions.viewX - anchor.x;
-    anchorDimensions.y = isPorted
-      ? anchorDimensions.viewY + document.documentElement.scrollTop
-      : anchor.offsetTop + anchorDimensions.viewY - anchor.y;
-  } else {
-    anchorDimensions.viewX = anchor.x;
-    anchorDimensions.viewY = anchor.y;
-    anchorDimensions.x = isPorted
-      ? anchorDimensions.viewX + document.documentElement.scrollLeft
-      : anchor.offsetLeft;
-    anchorDimensions.y = isPorted
-      ? anchorDimensions.viewY + document.documentElement.scrollTop
-      : anchor.offsetTop;
-    anchorDimensions.width = anchor.offsetWidth;
-    anchorDimensions.height = anchor.offsetHeight;
-  }
+  anchor.offsetWidth = anchor.left + anchor.width;
+  anchor.offsetHeight = anchor.top + anchor.height;
 
-  // Update anchor offset sizes
-  anchorDimensions.offsetWidth = anchorDimensions.x + anchorDimensions.width;
-  anchorDimensions.offsetHeight = anchorDimensions.y + anchorDimensions.height;
-
-  return anchorDimensions;
+  return anchor;
 };
