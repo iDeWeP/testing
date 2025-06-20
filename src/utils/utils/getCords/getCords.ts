@@ -63,12 +63,12 @@ export const getCords = (
   return {
     ...getMainAxis(mainAxis, size),
     ...getFloatMainAxis(mainAxis, float, size, overflow, view),
-    ...getCrossAxis(crossAxis, dimension, orientation, size),
+    ...getCrossAxis(crossAxis, orientation, dimension, size),
     ...getFlipCrossAxis(
       crossAxis,
       float,
-      dimension,
       orientation,
+      dimension,
       length,
       anchor,
       el,
@@ -79,8 +79,8 @@ export const getCords = (
     ...getAutoCrossAxis(
       crossAxis,
       float,
-      dimension,
       orientation,
+      dimension,
       length,
       anchor,
       el,
