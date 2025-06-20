@@ -1,4 +1,4 @@
-import type { AnchorDimensions, ElDimensions, Length } from './getCords.types';
+import type { AnchorDimensions, ElDimensions, Length } from './cords.types';
 
 export const isElShorter = (
   anchor: AnchorDimensions,

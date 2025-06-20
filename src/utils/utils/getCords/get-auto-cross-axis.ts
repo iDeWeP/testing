@@ -7,7 +7,7 @@ import type {
   ViewDimensions,
   SizeDimensions,
   OverflowDimensions
-} from './getCords.types';
+} from './cords.types';
 import { isElShorter } from './is-el-shorter';
 
 const getOffsetSize = (orientation: Orientation) =>

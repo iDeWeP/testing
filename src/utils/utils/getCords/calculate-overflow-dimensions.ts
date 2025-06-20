@@ -2,7 +2,7 @@ import type {
   AnchorDimensions,
   ElDimensions,
   ViewDimensions
-} from './getCords.types';
+} from './cords.types';
 
 export const calculateOverflowDimensions = (
   anchor: AnchorDimensions,

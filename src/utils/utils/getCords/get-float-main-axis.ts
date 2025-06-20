@@ -3,7 +3,7 @@ import type {
   SizeDimensions,
   OverflowDimensions,
   ViewDimensions
-} from './getCords.types';
+} from './cords.types';
 
 const dimensions = {
   top: (size: SizeDimensions, overflow: OverflowDimensions) =>

@@ -1,5 +1,5 @@
 import type { MainAxis } from '../../../core/types';
-import type { SizeDimensions } from './getCords.types';
+import type { SizeDimensions } from './cords.types';
 
 const dimensions = {
   top: (size: SizeDimensions) => ({ top: size.top }),

@@ -1,5 +1,5 @@
 import type { Orientation, CrossAxis } from '../../../core/types';
-import type { Dimension, SizeDimensions } from './getCords.types';
+import type { Dimension, SizeDimensions } from './cords.types';
 
 const dimensions = {
   start: (

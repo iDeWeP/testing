@@ -6,18 +6,18 @@ import type {
   Float,
   Cursor
 } from '../../../core/types';
-import { isPlacementHorizontal } from '../isPlacementHorizontal/isPlacementHorizontal';
-import { calculateOverflowDimensions } from './calculateOverflowDimensions';
-import { calculateSizeDimensions } from './calculateSizeDimensions';
-import { getAnchorDimensions } from './getAnchorDimensions';
-import { getAutoCrossAxis } from './getAutoCrossAxis';
-import { getAxises } from './getAxises';
-import { getCrossAxis } from './getCrossAxis';
-import { getElDimensions } from './getElDimensions';
-import { getFlipCrossAxis } from './getFlipCrossAxis';
-import { getFloatMainAxis } from './getFloatMainAxis';
-import { getMainAxis } from './getMainAxis';
-import { getViewDimensions } from './getViewDimensions';
+import { isPlacementHorizontal } from '../is-placement-horizontal/is-placement-horizontal';
+import { calculateOverflowDimensions } from './calculate-overflow-dimensions';
+import { calculateSizeDimensions } from './calculate-size-dimensions';
+import { getAnchorDimensions } from './get-anchor-dimensions';
+import { getAutoCrossAxis } from './get-auto-cross-axis';
+import { getAxises } from './get-axises';
+import { getCrossAxis } from './get-cross-axis';
+import { getElDimensions } from './get-el-dimensions';
+import { getFlipCrossAxis } from './get-flip-cross-axis';
+import { getFloatMainAxis } from './get-float-main-axis';
+import { getMainAxis } from './get-main-axis';
+import { getViewDimensions } from './get-view-dimensions';
 
 type Cord = {
   top: number;
