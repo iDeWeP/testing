@@ -291,10 +291,17 @@ type Radius =
   | 'full-bottom-left'
   | 'full-bottom-right';
 type DefaultRadius = 'sm' | 'md' | 'lg';
-type MergedColor = 'disabled' | 'surface' | Color;
+type MergedColor = 'disabled' | Color;
 type ColorType = 'bg' | 'border' | 'text' | 'fill' | 'stroke' | 'ring';
 type GapDirection = 'default' | 'row' | 'col';
-type Transition = 'fade' | 'transform' | 'transform-fade';
+type Transition =
+  | 'fade'
+  | 'transform'
+  | 'transform-fade'
+  | 'collapse-x'
+  | 'collapse-x-fade'
+  | 'collapse-y'
+  | 'collapse-y-fade';
 type Cursor = 'none' | 'pointer' | 'disabled';
 
 type Generic = {
@@ -305,7 +312,7 @@ type Generic = {
     position: Record<Position, CSSProps>;
     size: {
       normal: Record<DefaultSize, Record<SizeScale, CSSProps>>;
-      inner: Record<DefaultSize, Record<SizeScale, CSSProps>>;
+      text: Record<DefaultSize, Record<SizeScale, CSSProps>>;
       font: Record<Size, CSSProps>;
       title: Record<Size, CSSProps>;
     };
@@ -438,15 +445,15 @@ export const generic: Generic = {
         },
         xxl: {
           normal: {
-            height: 'h-24'
+            height: 'h-20'
           },
           square: {
-            width: 'w-24',
-            height: 'h-24'
+            width: 'w-20',
+            height: 'h-20'
           }
         }
       },
-      inner: {
+      text: {
         none: {
           normal: {},
           square: {}
@@ -2123,6 +2130,7 @@ export const generic: Generic = {
       }
     },
     underline: {
+      normal: {},
       none: {
         textDecoration: 'no-underline'
       },
@@ -2931,6 +2939,24 @@ export const generic: Generic = {
       },
       'transform-fade': {
         transition: 'transition-[transform,_opacity]'
+      },
+      'collapse-x': {
+        display: 'flex',
+        overflow: 'overflow-hidden',
+        transition: 'transition-width'
+      },
+      'collapse-y': {
+        overflow: 'overflow-hidden',
+        transition: 'transition-height'
+      },
+      'collapse-x-fade': {
+        display: 'flex',
+        overflow: 'overflow-hidden',
+        transition: 'transition-[width,_opacity]'
+      },
+      'collapse-y-fade': {
+        overflow: 'overflow-hidden',
+        transition: 'transition-[height,_opacity]'
       }
     },
     cursor: {
