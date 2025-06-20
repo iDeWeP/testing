@@ -44,12 +44,12 @@ export const getCords = (
   }
 
   const anchor = getAnchorDimensions(
-    anchorRef,
+    anchorRef.current,
     isPorted,
     isFollowingCursor,
     cursor
   );
-  const el = getElDimensions(ref, offset);
+  const el = getElDimensions(ref.current.getBoundingClientRect(), offset);
   const view = getViewDimensions();
 
   const overflow = calculateOverflowDimensions(anchor, el, view);

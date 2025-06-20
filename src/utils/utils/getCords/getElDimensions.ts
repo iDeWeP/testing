@@ -1,11 +1,6 @@
-import type { RefObject } from 'react';
-
-export const getElDimensions = (
-  ref: RefObject<HTMLElement | null>,
-  offset: number
-) => {
-  const width = ref.current?.getBoundingClientRect().width ?? 0;
-  const height = ref.current?.getBoundingClientRect().height ?? 0;
+export const getElDimensions = (elDimensions: DOMRect, offset: number) => {
+  const width = elDimensions.width;
+  const height = elDimensions.height;
 
   return {
     width,
