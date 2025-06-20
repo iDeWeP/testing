@@ -52,8 +52,8 @@ export const getCords = (
   const el = getElDimensions(ref.current.getBoundingClientRect(), offset);
   const view = getViewDimensions();
 
-  const overflow = calculateOverflowDimensions(anchor, el, view);
   const size = calculateSizeDimensions(anchor, el, view, offset);
+  const overflow = calculateOverflowDimensions(anchor, el, view);
 
   const isHorizontal = isPlacementHorizontal(mainAxis);
   const orientation = isHorizontal ? 'horizontal' : 'vertical';
