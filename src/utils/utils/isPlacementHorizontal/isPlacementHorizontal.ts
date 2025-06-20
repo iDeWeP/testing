@@ -1,6 +1,4 @@
 import type { Placement } from '../../../core/types';
 
-const isPlacementHorizontal = (placement: Placement): boolean =>
+export const isPlacementHorizontal = (placement: Placement) =>
   placement === 'top' || placement === 'bottom';
-
-export default isPlacementHorizontal;

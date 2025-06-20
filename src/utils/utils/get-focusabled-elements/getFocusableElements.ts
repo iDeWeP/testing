@@ -1,4 +1,3 @@
-// CHECK TYPES !!!
 export const getFocusableElements = <E extends HTMLElement>(el?: E | null) => {
   if (!el) {
     return undefined;

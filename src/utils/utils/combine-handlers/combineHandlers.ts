@@ -1,11 +1,13 @@
 import type { SyntheticEvent } from 'react';
 
-// CHECK TYPES !!!
 export const combineHandlers =
-  <T extends SyntheticEvent>(...handlers: ((event: T) => void | undefined)[]) =>
-  (event: T) =>
-    handlers.forEach((handler) => {
-      if (handler) {
-        handler(event);
+  <T extends SyntheticEvent>(
+    ...handlers: (((event: T) => void | boolean) | undefined | false)[]
+  ) =>
+  (event: T) => {
+    for (const handler of handlers) {
+      if (handler && handler(event) === false) {
+        return;
       }
-    });
+    }
+  };
