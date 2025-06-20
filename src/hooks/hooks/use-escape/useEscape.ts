@@ -17,5 +17,6 @@ export const useEscape = (
 
     document.addEventListener('keydown', handleKeyDown, options);
 
-    return () => document.removeEventListener('keydown', handleKeyDown);
+    return () =>
+      document.removeEventListener('keydown', handleKeyDown, options);
   }, [handler, options]);

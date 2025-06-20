@@ -1,7 +1,6 @@
 import { type RefObject, useEffect } from 'react';
-import { getFocusableElements } from '../../../utils/utils/get-focusabled-elements/getFocusableElements';
+import { getFocusableElements } from '../../../utils/utils/get-focusabled-elements/get-focusable-elements';
 
-// CHECK TYPES !!!
 export const useFocusTrap = <E extends HTMLElement>(
   ref?: RefObject<E | null> | false,
   options?: boolean | AddEventListenerOptions
@@ -38,5 +37,6 @@ export const useFocusTrap = <E extends HTMLElement>(
 
     document.addEventListener('keydown', handleKeydown, options);
 
-    return () => document.removeEventListener('keydown', handleKeydown);
+    return () =>
+      document.removeEventListener('keydown', handleKeydown, options);
   }, [ref, options]);

@@ -11,5 +11,5 @@ export const useWindowScroll = (
 
     document.addEventListener('scroll', handler, options);
 
-    return () => document.removeEventListener('scroll', handler);
+    return () => document.removeEventListener('scroll', handler, options);
   }, [handler, options]);
