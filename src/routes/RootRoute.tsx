@@ -1,7 +1,6 @@
-import type { FC } from 'react';
-import { ScrollRestoration, Outlet } from 'react-router';
+import { Outlet, ScrollRestoration } from 'react-router';
 
-export const RootRoute: FC = () => (
+export const RootRoute = () => (
   <>
     <ScrollRestoration />
     <Outlet />
