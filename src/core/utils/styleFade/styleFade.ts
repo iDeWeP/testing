@@ -1,8 +1,8 @@
-import type { Animation } from '../../../hooks/hooks/use-animation/useAnimation';
+import type { Animation } from '../../../hooks/hooks/use-animation/use-animation';
 import type { Peak } from '../../types';
-import { getNumPeak } from '../mergeTransitionStyle/getNumPeak';
+import { getPeak } from '../get-peak/get-peak';
 
 export const styleFade = (
   { isEntering, isEntered }: Animation,
   peak: Peak
-) => ({ opacity: isEntering || isEntered ? `${getNumPeak(peak)}%` : '0' });
+) => ({ opacity: isEntering || isEntered ? `${getPeak(peak)}%` : '0' });

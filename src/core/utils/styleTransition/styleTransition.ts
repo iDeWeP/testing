@@ -1,5 +1,5 @@
 import type { CSSProperties } from 'react';
-import type { Animation } from '../../../hooks/hooks/use-animation/useAnimation';
+import type { Animation } from '../../../hooks/hooks/use-animation/use-animation';
 import type { TransitionProps } from '../../types';
 
 export const styleTransition = (

@@ -2,45 +2,39 @@ import type { CSSProperties } from 'react';
 import type { DefaultPlacement } from '../../types';
 import { getOffset } from '../getOffset/getOffset';
 
+const placements = {
+  top: 'translate(-50%, 100%) rotate(180deg)',
+  bottom: 'translate(-50%, -100%)',
+  left: 'translate(100%, -50%) rotate(90deg)',
+  right: 'translate(-100%, -50%) rotate(-90deg)'
+};
+
 export const mergeArrowStyle = (
   placement: DefaultPlacement,
   offset: [number | string, number | string],
-  style: CSSProperties = {},
-  defaultStyle: CSSProperties = {}
+  style?: CSSProperties,
+  defaultStyle?: CSSProperties
 ) => {
+  const placementStyle: CSSProperties = {};
+
   if (placement === 'top') {
-    return {
-      bottom: getOffset(offset[0]),
-      left: getOffset(offset[1]),
-      transform: 'translate(-50%, 100%) rotate(180deg)',
-      ...style,
-      ...defaultStyle
-    };
+    placementStyle.bottom = getOffset(offset[1]);
+    placementStyle.left = getOffset(offset[0]);
   } else if (placement === 'bottom') {
-    return {
-      top: getOffset(offset[0]),
-      left: getOffset(offset[1]),
-      transform: 'translate(-50%, -100%)',
-      ...style,
-      ...defaultStyle
-    };
+    placementStyle.top = getOffset(offset[1]);
+    placementStyle.left = getOffset(offset[0]);
   } else if (placement === 'left') {
-    return {
-      top: getOffset(offset[1]),
-      right: getOffset(offset[0]),
-      transform: 'translate(100%, -50%) rotate(90deg)',
-      ...style,
-      ...defaultStyle
-    };
+    placementStyle.top = getOffset(offset[0]);
+    placementStyle.right = getOffset(offset[1]);
   } else if (placement === 'right') {
-    return {
-      top: getOffset(offset[1]),
-      left: getOffset(offset[0]),
-      transform: 'translate(-100%, -50%) rotate(-90deg)',
-      ...style,
-      ...defaultStyle
-    };
+    placementStyle.top = getOffset(offset[0]);
+    placementStyle.left = getOffset(offset[1]);
   }
 
-  return { ...style, ...defaultStyle };
+  return {
+    transform: placements[placement],
+    ...placementStyle,
+    ...style,
+    ...defaultStyle
+  };
 };
