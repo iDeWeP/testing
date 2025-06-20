@@ -62,7 +62,7 @@ export const getCords = (
 
   return {
     ...getMainAxis(mainAxis, size),
-    ...getFloatMainAxis(mainAxis, float, size, overflow, view),
+    ...getFloatMainAxis(mainAxis, float, view, size, overflow),
     ...getCrossAxis(crossAxis, orientation, dimension, size),
     ...getFlipCrossAxis(
       crossAxis,
