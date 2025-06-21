@@ -92,12 +92,12 @@ export const UnstyledPopper = <E extends ElementType = 'div'>(
   const isExited = !isOpen && animation.isExited;
 
   const { top, left, mainAxis } = getCords(
+    anchorRef,
     ref,
     placement,
     float,
     offset,
     !!portalEl,
-    anchorRef,
     cursor,
     followCursor
   );
