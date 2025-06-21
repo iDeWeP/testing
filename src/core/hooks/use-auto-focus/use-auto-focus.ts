@@ -3,11 +3,11 @@ import { getFocusableElements } from '../../../utils/utils/get-focusabled-elemen
 
 export const useAutoFocus = <E extends HTMLElement>(
   focus: RefObject<HTMLElement | null> | boolean,
-  ref: RefObject<E | null>
+  autoRef: RefObject<E | null>
 ) =>
   useEffect(() => {
     if (focus === true) {
-      const focusableEls = getFocusableElements(ref.current);
+      const focusableEls = getFocusableElements(autoRef.current);
 
       if (!focusableEls) {
         return;
@@ -17,4 +17,4 @@ export const useAutoFocus = <E extends HTMLElement>(
     } else if (focus) {
       focus.current?.focus();
     }
-  }, [focus, ref]);
+  }, [focus, autoRef]);

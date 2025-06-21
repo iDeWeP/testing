@@ -2,7 +2,7 @@ import { type RefObject, useRef, useEffect } from 'react';
 
 export const useCloseFocus = <E extends HTMLElement>(
   focus: RefObject<HTMLElement | null> | boolean,
-  ref?: RefObject<E | null>
+  autoRef: RefObject<E | null>
 ): void => {
   const isRendered = useRef(false);
 
@@ -14,9 +14,9 @@ export const useCloseFocus = <E extends HTMLElement>(
     }
 
     if (focus === true) {
-      ref?.current?.focus();
+      autoRef.current?.focus();
     } else if (focus) {
       focus.current?.focus();
     }
-  }, [focus, ref]);
+  }, [focus, autoRef]);
 };
