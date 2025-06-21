@@ -1,7 +1,7 @@
 import type { MergeComponentProps, Variant, Color } from '../../types';
 import { mergeClassName } from '../../utils/mergeClassName/mergeClassName';
 
-export type Props = MergeComponentProps<
+type Props = MergeComponentProps<
   'circle',
   {
     disabled: boolean;

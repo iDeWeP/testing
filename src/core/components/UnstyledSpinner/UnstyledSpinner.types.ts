@@ -22,8 +22,8 @@ export type UnstyledSpinnerDefaultProps = {
   variant?: Variant;
   float?: boolean;
   size?: Size;
-  scale?: DefaultScale;
   thickness?: number;
+  scale?: DefaultScale;
   margin?: Margin;
   border?: boolean;
   color?: Color;

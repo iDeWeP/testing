@@ -1,5 +1,5 @@
+import { mergeProps } from '../../utils/merge-props/merge-props';
 import { mergeClassName } from '../../utils/mergeClassName/mergeClassName';
-import { mergeProps } from '../../utils/mergeProps/mergeProps';
 import type { UnstyledSpinnerProps } from './UnstyledSpinner.types';
 import { unstyledSpinnerConfig } from './unstyledSpinnerConfig';
 import { UnstyledTrail } from './UnstyledTrail';
@@ -12,8 +12,8 @@ export const UnstyledSpinner = (props: UnstyledSpinnerProps) => {
     variant,
     float,
     size,
-    scale: defaultScale,
     thickness,
+    scale: defaultScale,
     margin,
     border,
     color,
