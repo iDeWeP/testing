@@ -1,4 +1,4 @@
-import type { Color, CSSProps, ComponentConfig } from '../../types';
+import type { CSSProps, Color, ComponentConfig } from '../../types';
 import type { UnstyledRippleConfigProps } from './UnstyledRipple.types';
 
 type ColorState = 'stateless' | 'stateful';
@@ -15,9 +15,9 @@ type Styles = {
 export const unstyledRippleConfig: ComponentConfig<UnstyledRippleConfigProps> &
   Styles = {
   props: {
-    stateful: false,
     valid: false,
     invalid: false,
+    stateful: false,
     variant: 'none',
     color: 'primary',
     effect: 'normal'

@@ -7,9 +7,9 @@ import type {
 } from '../../types';
 
 export type UnstyledRippleDefaultProps = {
-  stateful?: boolean;
   valid?: boolean;
   invalid?: boolean;
+  stateful?: boolean;
   variant?: Variant;
   color?: Color;
   effect?: RippleEffect;
