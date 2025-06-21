@@ -2,7 +2,6 @@ import type {
   Color,
   CSSProps,
   Size,
-  Scale,
   Margin,
   Weight,
   Underline,
@@ -23,6 +22,7 @@ type Loading = 'none' | 'normal' | 'hide';
 type Display = 'block' | 'flex' | 'grid' | 'inline-flex';
 type Position = 'static' | 'absolute' | 'fixed' | 'relative';
 type DefaultSize = 'none' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl';
+type Scale = 'normal' | 'fit' | 'full' | 'square';
 type SizeScale = 'normal' | 'square';
 type Spacing =
   | 'none'
@@ -556,11 +556,14 @@ export const generic: Generic = {
     },
     scale: {
       normal: {},
+      fit: {
+        width: 'w-fit'
+      },
       full: {
         width: 'w-full'
       },
-      fit: {
-        width: 'w-fit'
+      square: {
+        overflow: 'overflow-hidden'
       }
     },
     spacing: {
