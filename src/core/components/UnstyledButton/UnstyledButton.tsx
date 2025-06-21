@@ -1,6 +1,6 @@
 import type { ElementType } from 'react';
+import { mergeProps } from '../../utils/merge-props/merge-props';
 import { mergeClassName } from '../../utils/mergeClassName/mergeClassName';
-import { mergeProps } from '../../utils/mergeProps/mergeProps';
 import { UnstyledRipple } from '../UnstyledRipple/UnstyledRipple';
 import { UnstyledSpinner } from '../UnstyledSpinner/UnstyledSpinner';
 import type { UnstyledButtonProps } from './UnstyledButton.types';
@@ -10,12 +10,13 @@ export const UnstyledButton = <E extends ElementType = 'button'>(
   props: UnstyledButtonProps<E>
 ) => {
   const {
+    as: Component,
     loading,
-    disabled: isDisabled,
+    disabled,
     variant,
     size,
     scale: buttonScale,
-    border: isBordered,
+    border: defaultBorder,
     radius,
     color,
     effect,
@@ -28,30 +29,29 @@ export const UnstyledButton = <E extends ElementType = 'button'>(
     ...restProps
   } = mergeProps(unstyledButtonConfig.props, props);
 
-  const hasRipple = !loading && !isDisabled && ripple !== 'none';
-
   const mergedClassName = mergeClassName('unstyledButton', className, {
     loading,
-    isDisabled,
+    disabled,
     variant,
-    isRelative: hasRipple,
+    relative: !!loading || ripple !== 'none',
     size,
     buttonScale,
-    isBordered,
+    defaultBorder,
     radius,
     color,
     effect
   });
 
+  const hasRipple = !loading && !disabled && ripple !== 'none';
+
   const spinnerNode = (
     <UnstyledSpinner
       spin
-      disabled={isDisabled}
+      disabled={disabled}
       value={75}
       variant="text"
       float={loading === true}
-      size={size}
-      scale="inner"
+      size="xs"
       thickness={4}
       margin="none"
       border={false}
@@ -67,13 +67,13 @@ export const UnstyledButton = <E extends ElementType = 'button'>(
   );
 
   return (
-    <button
-      disabled={isDisabled || !!loading}
+    <Component
+      disabled={disabled || !!loading}
       type="button"
       variant={variant}
       size="none"
       scale="normal"
-      border={isBordered}
+      border={defaultBorder}
       radius="none"
       color={color}
       className={mergedClassName}
@@ -95,6 +95,6 @@ export const UnstyledButton = <E extends ElementType = 'button'>(
           {...componentsProps.ripple}
         />
       )}
-    </button>
+    </Component>
   );
 };

@@ -1,17 +1,17 @@
-import type { ReactNode, ElementType } from 'react';
+import type { ElementType, ReactNode } from 'react';
 import type {
+  ComponentRefProps,
   Loading,
+  Variant,
   Size,
   ButtonScale,
+  Margin,
+  Radius,
   Effect,
   Ripple,
   MergeProps,
-  ComponentRefProps
+  Color
 } from '../../types';
-import type {
-  UnstyledBoxDefaultProps,
-  UnstyledBoxProps
-} from '../UnstyledBox/UnstyledBox.types';
 
 export type UnstyledButtonComponentProps = {
   ripple?: ComponentRefProps<'span'>;
@@ -23,24 +23,26 @@ export type UnstyledButtonComponentProps = {
 };
 
 export type UnstyledButtonDefaultProps = {
+  as?: ElementType;
   loading?: Loading;
   disabled?: boolean;
+  variant?: Variant;
   size?: Size;
   scale?: ButtonScale;
+  margin?: Margin;
   border?: boolean;
+  radius?: Radius;
+  color?: Color;
   effect?: Effect;
   componentsProps?: UnstyledButtonComponentProps;
-  ripple: Ripple;
+  ripple?: Ripple;
   leftDecorator?: ReactNode;
   rightDecorator?: ReactNode;
 };
 
-export type UnstyledButtonConfigProps = MergeProps<
-  UnstyledBoxDefaultProps,
-  UnstyledButtonDefaultProps
->;
+export type UnstyledButtonConfigProps = UnstyledButtonDefaultProps;
 
 export type UnstyledButtonProps<E extends ElementType> = MergeProps<
-  UnstyledBoxProps<E>,
+  ComponentRefProps<E>,
   UnstyledButtonDefaultProps
 >;
