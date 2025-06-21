@@ -10,7 +10,7 @@ const placementsMap = {
 export const isPopperBordered = (
   placement: DefaultPlacement,
   border: Border
-): boolean => {
+) => {
   if (!border) {
     return false;
   }

@@ -1,4 +1,4 @@
 import type { Loading } from '../../types';
 
-export const getFocusable = (isDisabled: boolean, isLoading?: Loading) =>
+export const getFocusable = (isLoading: Loading, isDisabled: boolean) =>
   isDisabled ? 'disabled' : isLoading ? 'none' : 'default';

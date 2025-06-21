@@ -1,6 +1,6 @@
 import type { Variant, DefaultPlacement, Border } from '../../types';
-import { getVariant } from './getVariant';
-import { isPopperBordered } from './isPopperBordered';
+import { getVariant } from './get-variant';
+import { isPopperBordered } from './is-popper-bordered';
 
 export const getArrowVariant = (
   variant: Variant,
