@@ -8,9 +8,10 @@ import type {
   MergeComponentProps,
   Variant,
   DefaultPlacement,
+  ArrowOffset,
   Color
 } from '../../types';
-import { mergeArrowStyle } from '../../utils/mergeArrowStyle/mergeArrowStyle';
+import { mergeArrowStyle } from '../../utils/merge-arrow-style/merge-arrow-style';
 import { mergeClassName } from '../../utils/mergeClassName/mergeClassName';
 
 type ComponentProps = {
@@ -22,7 +23,7 @@ type Props = MergeComponentProps<
   {
     variant: Variant;
     placement: DefaultPlacement;
-    offset: [number | string, number | string];
+    offset: ArrowOffset;
     border: boolean;
     color: Color;
     componentProps: ComponentProps;

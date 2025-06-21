@@ -5,6 +5,7 @@ import type {
   ElementType
 } from 'react';
 import type {
+  ArrowOffset,
   ComponentRefProps,
   TransitionProps,
   Placement,
@@ -19,7 +20,7 @@ import type {
 } from '../UnstyledFlexBox/UnstyledFlexBox.types';
 
 export type UnstyledPopperArrowProps = {
-  offset?: [number | string, number | string];
+  offset?: ArrowOffset;
   children?: ReactElement<ComponentPropsWithRef<'svg'>>;
 } & ComponentRefProps<'svg'>;
 

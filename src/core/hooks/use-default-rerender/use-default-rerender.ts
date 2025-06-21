@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-export const useDefaultRerenderation = (isOpen: boolean) => {
+export const useDefaultRerender = (isOpen: boolean) => {
   const [isRerendered, setRerendered] = useState(isOpen);
 
   useEffect(() => {

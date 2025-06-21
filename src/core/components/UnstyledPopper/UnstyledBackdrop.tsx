@@ -1,8 +1,8 @@
-import type { Animation } from '../../../hooks/hooks/use-animation/useAnimation';
-import { combineHandlers } from '../../../utils/utils/combine-handlers/combineHandlers';
-import { portElement } from '../../../utils/utils/port-element/portElement';
+import type { Animation } from '../../../hooks/hooks/use-animation/use-animation';
+import { combineHandlers } from '../../../utils/utils/combine-handlers/combine-handlers';
+import { portElement } from '../../../utils/utils/port-element/port-element';
 import type { MergeComponentProps, Peak, TransitionProps } from '../../types';
-import { mergeBackdropStyle } from '../../utils/mergeBackdropStyle/mergeBackdropStyle';
+import { mergeBackdropStyle } from '../../utils/merge-backdrop-style/merge-backdrop-style';
 import { mergeClassName } from '../../utils/mergeClassName/mergeClassName';
 
 type Props = MergeComponentProps<
@@ -52,13 +52,11 @@ export const UnstyledBackdrop = ({
     transitionProps
   );
 
-  const handleClick = combineHandlers(onClick, onClose);
-
   return portElement(
     <div
       className={mergedClassName}
       style={mergedStyle}
-      onClick={handleClick}
+      onClick={combineHandlers(onClick, onClose)}
       {...restProps}
     />,
     portalEl

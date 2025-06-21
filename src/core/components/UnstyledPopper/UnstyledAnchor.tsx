@@ -1,23 +1,21 @@
 import {
-  type ForwardedRef,
-  type ReactElement,
+  cloneElement,
   type ComponentPropsWithRef,
   type ElementType,
-  useRef,
-  cloneElement,
-  type Ref,
-  type MouseEvent
+  type ForwardedRef,
+  type MouseEvent,
+  type ReactElement,
+  type Ref
 } from 'react';
-import type { Animation } from '../../../hooks/hooks/use-animation/useAnimation';
-import { combineHandlers } from '../../../utils/utils/combine-handlers/combineHandlers';
-import { mergeRefs } from '../../../utils/utils/merge-refs/mergeRefs';
+import { combineHandlers } from '../../../utils/utils/combine-handlers/combine-handlers';
+import { mergeRefs } from '../../../utils/utils/merge-refs/merge-refs';
 import type { Trigger } from '../../types';
-import { getTriggers as getTriggers } from '../../utils/getTriggers/getTriggers';
+import { getTriggers } from '../../utils/get-triggers/get-triggers';
 
 type Props = {
   ref: ForwardedRef<HTMLElement | null>;
   isOpen: boolean;
-  animation: Animation;
+  isExited: boolean;
   trigger: Trigger;
   followCursor: boolean;
   onOpen?: VoidFunction;
@@ -29,7 +27,7 @@ type Props = {
 export const UnstyledAnchor = ({
   ref: forwardedRef,
   isOpen,
-  animation: { isExited },
+  isExited,
   trigger,
   followCursor,
   onOpen,
@@ -37,15 +35,13 @@ export const UnstyledAnchor = ({
   onCursorMove,
   children
 }: Props) => {
-  const ref = useRef<HTMLElement>(null);
-
   const { clickOpen, clickClose, hoverOpen, hoverClose } = getTriggers(trigger);
 
   const handleClick = combineHandlers(
     children?.props.onClick,
     !isOpen && clickOpen && onOpen,
     isOpen && clickClose && onClose,
-    !isOpen && clickOpen && followCursor && onCursorMove // CHECK !!!
+    !isOpen && clickOpen && followCursor && onCursorMove
   );
 
   const handleMouseEnter = combineHandlers(
@@ -69,7 +65,6 @@ export const UnstyledAnchor = ({
     onMouseLeave: handleMouseLeave,
     onMouseMove: handleMouseMove,
     ref: mergeRefs(
-      ref,
       forwardedRef,
       (children as ReactElement & { ref?: Ref<HTMLElement> }).ref
     )
