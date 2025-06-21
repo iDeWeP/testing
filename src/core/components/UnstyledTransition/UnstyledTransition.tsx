@@ -1,15 +1,15 @@
-import { useRef, type ElementType } from 'react';
-import { useAnimation } from '../../../hooks/hooks/use-animation/useAnimation';
-import { combineHandlers } from '../../../utils/utils/combine-handlers/combineHandlers';
-import useTransitionStart from '../../hooks/use-animation-start/useTransitionStart';
+import { type ElementType, useRef } from 'react';
+import { useAnimation } from '../../../hooks/hooks/use-animation/use-animation';
+import { combineHandlers } from '../../../utils/utils/combine-handlers/combine-handlers';
+import { mergeRefs } from '../../../utils/utils/merge-refs/merge-refs';
+import { useStartAnimation } from '../../hooks/use-start-animation/use-start-animation';
+import { mergeProps } from '../../utils/merge-props/merge-props';
 import { mergeClassName } from '../../utils/mergeClassName/mergeClassName';
 import { mergeTransitionStyle } from '../../utils/mergeTransitionStyle/mergeTransitionStyle';
 import { UnstyledBox } from '../UnstyledBox/UnstyledBox';
-import type { UnstyledTransitionProps } from './UnstyledTransition.types';
-import { mergeRefs } from '../../../utils/utils/merge-refs/mergeRefs';
-import { mergeProps } from '../../utils/mergeProps/mergeProps';
-import { unstyledTransitionConfig } from './unstyledTransitionConfig';
 import { unstyledBoxConfig } from '../UnstyledBox/unstyledBoxConfig';
+import type { UnstyledTransitionProps } from './UnstyledTransition.types';
+import { unstyledTransitionConfig } from './unstyledTransitionConfig';
 
 export const UnstyledTransition = <E extends ElementType = 'div'>(
   props: UnstyledTransitionProps<E>
@@ -33,7 +33,7 @@ export const UnstyledTransition = <E extends ElementType = 'div'>(
 
   const { animation, startAnimation, stopAnimation } = useAnimation(isIn);
 
-  useTransitionStart(isIn, startAnimation);
+  useStartAnimation(isIn, startAnimation);
 
   if (!isIn && animation.isExited && unmountOnExit) {
     return undefined;
@@ -55,15 +55,13 @@ export const UnstyledTransition = <E extends ElementType = 'div'>(
     transitionProps
   );
 
-  const handleTransitionEnd = combineHandlers(stopAnimation, onTransitionEnd);
-
   return (
     <UnstyledBox
       ref={mergeRefs(forwardedRef, ref)}
       scale={scale}
       className={mergedClassName}
       style={mergedStyles}
-      onTransitionEnd={handleTransitionEnd}
+      onTransitionEnd={combineHandlers(onTransitionEnd, stopAnimation)}
       {...restProps}
     />
   );
