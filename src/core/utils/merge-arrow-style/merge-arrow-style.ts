@@ -1,5 +1,5 @@
 import type { CSSProperties } from 'react';
-import type { DefaultPlacement } from '../../types';
+import type { DefaultPlacement, ArrowOffset } from '../../types';
 import { getOffset } from '../get-offset/get-offset';
 
 const placements = {
@@ -11,7 +11,7 @@ const placements = {
 
 export const mergeArrowStyle = (
   placement: DefaultPlacement,
-  offset: [number | string, number | string],
+  offset: ArrowOffset,
   style?: CSSProperties,
   defaultStyle?: CSSProperties
 ) => {
