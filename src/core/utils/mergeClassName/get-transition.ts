@@ -1,4 +1,4 @@
-import type { Transition } from '../../types';
+import type { CollapseTransition, Transition } from '../../types';
 
 export const getTransition = (transition: Transition) => {
   const transitions = transition.split('-');
@@ -6,7 +6,7 @@ export const getTransition = (transition: Transition) => {
   if (transitions[0] === 'fade') {
     return 'fade';
   } else if (transitions[0] === 'collapse') {
-    return transition;
+    return transition as CollapseTransition;
   }
 
   return transitions[transitions.length - 1] === 'fade'
