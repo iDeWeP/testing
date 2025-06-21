@@ -1,4 +1,4 @@
-import type { ComponentConfig, CSSProps } from '../../types';
+import type { CSSProps, ComponentConfig } from '../../types';
 import type { UnstyledButtonConfigProps } from './UnstyledButton.types';
 
 type Styles = {

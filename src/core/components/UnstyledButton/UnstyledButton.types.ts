@@ -7,10 +7,10 @@ import type {
   ButtonScale,
   Margin,
   Radius,
+  Color,
   Effect,
   Ripple,
-  MergeProps,
-  Color
+  MergeProps
 } from '../../types';
 
 export type UnstyledButtonComponentProps = {
