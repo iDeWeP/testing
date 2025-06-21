@@ -7,7 +7,7 @@ export const unstyledTransitionConfig: ComponentConfig<UnstyledTransitionConfigP
       as: 'div',
       in: false,
       unmountOnExit: false,
-      peak: 100,
+      peak: 'auto',
       variant: 'none',
       size: 'none',
       scale: 'normal',

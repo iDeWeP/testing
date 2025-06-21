@@ -5,7 +5,7 @@ import { mergeRefs } from '../../../utils/utils/merge-refs/merge-refs';
 import { useStartAnimation } from '../../hooks/use-start-animation/use-start-animation';
 import { mergeProps } from '../../utils/merge-props/merge-props';
 import { mergeClassName } from '../../utils/mergeClassName/mergeClassName';
-import { mergeTransitionStyle } from '../../utils/mergeTransitionStyle/mergeTransitionStyle';
+import { mergeTransitionStyle } from '../../utils/mergeTransitionStyle/merge-transition-style';
 import { UnstyledBox } from '../UnstyledBox/UnstyledBox';
 import { unstyledBoxConfig } from '../UnstyledBox/unstyledBoxConfig';
 import type { UnstyledTransitionProps } from './UnstyledTransition.types';
