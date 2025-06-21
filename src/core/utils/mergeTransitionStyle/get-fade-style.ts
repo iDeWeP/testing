@@ -1,6 +1,6 @@
-import type { Animation } from '../../../hooks/hooks/use-animation/useAnimation';
+import type { Animation } from '../../../hooks/hooks/use-animation/use-animation';
 import type { Peak } from '../../types';
-import { styleFade } from '../styleFade/styleFade';
+import { styleFade } from '../style-fade/style-fade';
 
 export const getFadeStyle = (
   animation: Animation,

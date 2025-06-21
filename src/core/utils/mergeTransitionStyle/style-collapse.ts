@@ -1,5 +1,5 @@
 import type { RefObject } from 'react';
-import type { Animation } from '../../../hooks/hooks/use-animation/useAnimation';
+import type { Animation } from '../../../hooks/hooks/use-animation/use-animation';
 import type { Peak, Scale } from '../../types';
 
 export const styleCollapse = (
@@ -16,14 +16,14 @@ export const styleCollapse = (
   if ((!isIn && isEntered) || isEntering) {
     const sizes = ref.current?.firstElementChild?.getBoundingClientRect();
     const width = scale === 'full' ? '100%' : sizes?.width ?? 'auto';
-    const autoLength = isHorizontal ? width : sizes?.height ?? 'auto';
+    const length = isHorizontal ? width : sizes?.height ?? 'auto';
 
-    return { [dimension]: peak === 'auto' ? autoLength : peak };
+    return { [dimension]: peak === 'auto' ? length : peak };
   } else if (isEntered) {
     const width = scale === 'full' ? '100%' : 'auto';
-    const autoLength = isHorizontal ? width : 'auto';
+    const length = isHorizontal ? width : 'auto';
 
-    return { [dimension]: peak === 'auto' ? autoLength : peak };
+    return { [dimension]: peak === 'auto' ? length : peak };
   } else {
     return { [dimension]: '0px' };
   }
