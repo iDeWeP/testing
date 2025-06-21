@@ -1,7 +1,7 @@
 import { twMerge } from 'tailwind-merge';
 import type { CSSProps } from '../../types';
 
-const mergeClasses = (
+export const mergeClasses = (
   ...classNames: (CSSProps | string | boolean | number | undefined)[]
 ) => {
   const className = classNames
@@ -22,5 +22,3 @@ const mergeClasses = (
 
   return className ? twMerge(className) : undefined;
 };
-
-export default mergeClasses;
