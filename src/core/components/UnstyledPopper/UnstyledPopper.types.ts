@@ -6,11 +6,11 @@ import type {
 } from 'react';
 import type {
   ComponentRefProps,
+  TransitionProps,
   Placement,
   Trigger,
   Peak,
   Float,
-  TransitionProps,
   MergeProps
 } from '../../types';
 import type {
@@ -24,10 +24,11 @@ export type UnstyledPopperArrowProps = {
 } & ComponentRefProps<'svg'>;
 
 export type UnstyledPopperBackdropProps = {
-  zIndex: number;
-  invisible: boolean;
-  blur: boolean;
+  zIndex?: number;
+  invisible?: boolean;
+  blur?: boolean;
   portalEl?: Element | null;
+  transitionProps?: TransitionProps;
 } & ComponentRefProps<'div'>;
 
 export type UnstyledPopperComponentProps = {
@@ -58,8 +59,8 @@ export type UnstyledPopperDefaultProps = {
   peak?: Peak;
   placement?: Placement;
   float?: Float;
-  zIndex?: number;
   offset?: number;
+  zIndex?: number;
   duration?: number;
   portalEl?: Element | null;
   transitionProps?: TransitionProps;

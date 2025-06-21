@@ -18,10 +18,8 @@ export const unstyledPopperConfig: ComponentConfig<UnstyledPopperConfigProps> &
   Styles = {
   props: {
     as: 'div',
-    open: false,
     defaultOpen: false,
     trigger: 'click',
-    stable: false,
     followCursor: false,
     closeOnOutClick: false,
     closeOnEsc: false,
@@ -31,10 +29,11 @@ export const unstyledPopperConfig: ComponentConfig<UnstyledPopperConfigProps> &
     lockScroll: false,
     unmountOnExit: false,
     peak: 100,
-    variant: 'none',
+    variant: 'light',
     placement: 'bottom',
+    float: 'auto',
+    offset: 0,
     zIndex: 1000,
-    offset: 16,
     size: 'none',
     scale: 'normal',
     margin: 'none',
@@ -70,7 +69,7 @@ export const unstyledPopperConfig: ComponentConfig<UnstyledPopperConfigProps> &
         height: 'h-screen'
       },
       visible: {
-        color: 'bg-black/10'
+        color: 'bg-black/50'
       },
       blur: {
         transform: 'backdrop-blur-sm'
