@@ -3,7 +3,7 @@ import { combineHandlers } from '../../../utils/utils/combine-handlers/combine-h
 import { portElement } from '../../../utils/utils/port-element/port-element';
 import type { MergeComponentProps, Peak, TransitionProps } from '../../types';
 import { mergeBackdropStyle } from '../../utils/merge-backdrop-style/merge-backdrop-style';
-import { mergeClassName } from '../../utils/mergeClassName/mergeClassName';
+import { mergeClassName } from '../../utils/mergeClassName/merge-class-name';
 
 type Props = MergeComponentProps<
   'div',

@@ -23,7 +23,7 @@ import { useStartAnimation } from '../../hooks/use-start-animation/use-start-ani
 import { mergePopperStyle } from '../../utils/merge-popper-style/merge-popper-style';
 import { mergeProps } from '../../utils/merge-props/merge-props';
 import { mergeTransitionProps } from '../../utils/merge-transition-props/merge-transition-props';
-import { mergeClassName } from '../../utils/mergeClassName/mergeClassName';
+import { mergeClassName } from '../../utils/mergeClassName/merge-class-name';
 import { UnstyledFlexBox } from '../UnstyledFlexBox/UnstyledFlexBox';
 import { UnstyledAnchor } from './UnstyledAnchor';
 import { UnstyledArrow } from './UnstyledArrow';

@@ -1,5 +1,5 @@
 import { mergeProps } from '../../utils/merge-props/merge-props';
-import { mergeClassName } from '../../utils/mergeClassName/mergeClassName';
+import { mergeClassName } from '../../utils/mergeClassName/merge-class-name';
 import type { UnstyledRippleProps } from './UnstyledRipple.types';
 import { unstyledRippleConfig } from './unstyledRippleConfig';
 

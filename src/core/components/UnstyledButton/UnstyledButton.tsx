@@ -1,6 +1,6 @@
 import type { ElementType } from 'react';
 import { mergeProps } from '../../utils/merge-props/merge-props';
-import { mergeClassName } from '../../utils/mergeClassName/mergeClassName';
+import { mergeClassName } from '../../utils/mergeClassName/merge-class-name';
 import { UnstyledRipple } from '../UnstyledRipple/UnstyledRipple';
 import { UnstyledSpinner } from '../UnstyledSpinner/UnstyledSpinner';
 import type { UnstyledButtonProps } from './UnstyledButton.types';

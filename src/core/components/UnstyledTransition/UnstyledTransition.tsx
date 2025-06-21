@@ -4,7 +4,7 @@ import { combineHandlers } from '../../../utils/utils/combine-handlers/combine-h
 import { mergeRefs } from '../../../utils/utils/merge-refs/merge-refs';
 import { useStartAnimation } from '../../hooks/use-start-animation/use-start-animation';
 import { mergeProps } from '../../utils/merge-props/merge-props';
-import { mergeClassName } from '../../utils/mergeClassName/mergeClassName';
+import { mergeClassName } from '../../utils/mergeClassName/merge-class-name';
 import { mergeTransitionStyle } from '../../utils/mergeTransitionStyle/merge-transition-style';
 import { UnstyledBox } from '../UnstyledBox/UnstyledBox';
 import { unstyledBoxConfig } from '../UnstyledBox/unstyledBoxConfig';
