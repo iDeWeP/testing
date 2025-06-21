@@ -1,7 +1,7 @@
 import { unstyledPopperConfig } from '../../components/UnstyledPopper/unstyledPopperConfig';
 import { generic } from '../../config/generic';
 import type { Classes } from '../../types';
-import mergeClasses from './mergeClasses';
+import { mergeClasses } from './merge-classes';
 
 export const styleUnstyledPopper = (
   className: string,

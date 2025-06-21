@@ -1,8 +1,8 @@
 import { generic } from '../../config/generic';
 import type { Classes } from '../../types';
-import { getColor } from './getColor';
-import { getTrailVariant } from './getTrailVariant';
-import mergeClasses from './mergeClasses';
+import { getColor } from './get-color';
+import { getTrailVariant } from './get-trail-variant';
+import { mergeClasses } from './merge-classes';
 
 export const styleUnstyledTrail = (
   className: string,

@@ -1,8 +1,8 @@
 import { unstyledRippleConfig } from '../../components/UnstyledRipple/unstyledRippleConfig';
 import type { Classes } from '../../types';
-import { getValidityColor } from './getValidityColor';
-import { getVariant } from './getVariant';
-import mergeClasses from './mergeClasses';
+import { getValidityColor } from './get-validity-color';
+import { getVariant } from './get-variant';
+import { mergeClasses } from './merge-classes';
 
 export const styleUnstyledRipple = (
   className: string,

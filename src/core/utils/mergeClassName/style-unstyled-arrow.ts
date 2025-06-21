@@ -1,13 +1,13 @@
 import { generic } from '../../config/generic';
 import type { Classes } from '../../types';
-import { getArrowVariant } from './getArrowVariant';
-import mergeClasses from './mergeClasses';
+import { getArrowVariant } from './get-arrow-variant';
+import { mergeClasses } from './merge-classes';
 
 export const styleUnstyledArrow = (
   className: string,
   {
     variant = 'surface',
-    placement = 'bottom',
+    defaultPlacement = 'bottom',
     border = false,
     color = 'primary'
   }: Classes
@@ -15,7 +15,7 @@ export const styleUnstyledArrow = (
   mergeClasses(
     generic.styles.position.absolute,
     generic.styles.color.fill[color][
-      getArrowVariant(variant, placement, border)
+      getArrowVariant(variant, defaultPlacement, border)
     ],
     className
   );

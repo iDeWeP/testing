@@ -1,9 +1,9 @@
 import { unstyledSpinnerConfig } from '../../components/UnstyledSpinner/unstyledSpinnerConfig';
 import { generic } from '../../config/generic';
 import type { Classes } from '../../types';
-import { getColor } from './getColor';
-import { getSpinnerVariant } from './getSpinnerVariant';
-import mergeClasses from './mergeClasses';
+import { getColor } from './get-color';
+import { getVariant } from './get-variant';
+import { mergeClasses } from './merge-classes';
 
 export const styleUnstyledSpinner = (
   className: string,
@@ -27,7 +27,7 @@ export const styleUnstyledSpinner = (
     generic.styles.size[defaultScale][size].square,
     generic.styles.margin[margin],
     generic.styles.color.stroke[getColor(disabled, color)][
-      getSpinnerVariant(variant)
+      getVariant(variant)[1]
     ],
     unstyledSpinnerConfig.styles.root[animation],
     className
