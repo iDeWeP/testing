@@ -81,7 +81,7 @@ type ComponentConfigUtil<T> = {
   [K in keyof T]: ComponentConfig<T[K]>;
 };
 
-type CoreComponentsConfig = ComponentConfigUtil<CoreComponentsMap>;
+export type CoreComponentsConfig = ComponentConfigUtil<CoreComponentsMap>;
 
 export type ComponentConfigContext = {
   core?: CoreComponentsConfig;
