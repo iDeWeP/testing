@@ -88,7 +88,7 @@ export const UnstyledPopper = <E extends ElementType = 'div'>(
   const { handleResize } = useResize();
   const { animation, startAnimation, stopAnimation } = useAnimation(isOpen);
 
-  const anchorRef = anchorElRef ?? anchorNodeRef; // FIX !!!
+  const anchorRef = anchorElRef ?? anchorNodeRef;
   const isExited = !isOpen && animation.isExited;
 
   const { top, left, mainAxis } = getCords(
@@ -122,9 +122,9 @@ export const UnstyledPopper = <E extends ElementType = 'div'>(
 
   useEscape(isOpen && closeOnEsc && handleClose);
 
-  useAutoFocus(ref, isOpen && focusOnOpen);
+  useAutoFocus(isOpen && focusOnOpen, ref);
 
-  useCloseFocus(anchorRef, !isOpen && focusOnClose);
+  useCloseFocus(!isOpen && focusOnClose, anchorRef);
 
   useFocusTrap(isOpen && focusTrap && ref);
 
