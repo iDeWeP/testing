@@ -135,8 +135,8 @@ const dimensions = {
 };
 
 export const getAutoCrossAxis = (
-  crossAxis: CrossAxis,
   float: Float,
+  crossAxis: CrossAxis,
   orientation: Orientation,
   dimension: Dimension,
   length: Length,

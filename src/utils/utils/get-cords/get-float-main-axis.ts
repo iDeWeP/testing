@@ -25,8 +25,8 @@ const dimensions = {
 };
 
 export const getFloatMainAxis = (
-  mainAxis: MainAxis,
   float: Float,
+  mainAxis: MainAxis,
   view: ViewDimensions,
   size: SizeDimensions,
   overflow: OverflowDimensions

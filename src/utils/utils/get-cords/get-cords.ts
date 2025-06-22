@@ -29,8 +29,8 @@ type Cord = {
 export const getCords = (
   anchorRef: RefObject<HTMLElement | null>,
   ref: RefObject<HTMLDivElement | null>,
-  placement: Placement,
   float: Float,
+  placement: Placement,
   offset: number,
   isPorted: boolean,
   cursor?: Cursor,
@@ -62,11 +62,11 @@ export const getCords = (
 
   return {
     ...getMainAxis(mainAxis, size),
-    ...getFloatMainAxis(mainAxis, float, view, size, overflow),
+    ...getFloatMainAxis(float, mainAxis, view, size, overflow),
     ...getCrossAxis(crossAxis, orientation, dimension, size),
     ...getFlipCrossAxis(
-      crossAxis,
       float,
+      crossAxis,
       orientation,
       dimension,
       length,
@@ -77,8 +77,8 @@ export const getCords = (
       overflow
     ),
     ...getAutoCrossAxis(
-      crossAxis,
       float,
+      crossAxis,
       orientation,
       dimension,
       length,

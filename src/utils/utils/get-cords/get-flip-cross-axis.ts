@@ -47,8 +47,8 @@ const dimensions = {
 };
 
 export const getFlipCrossAxis = (
-  crossAxis: CrossAxis,
   float: Float,
+  crossAxis: CrossAxis,
   orientation: Orientation,
   dimension: Dimension,
   length: Length,
