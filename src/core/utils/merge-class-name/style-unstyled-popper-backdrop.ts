@@ -2,7 +2,7 @@ import { unstyledPopperConfig } from '../../components/UnstyledPopper/unstyledPo
 import type { Classes } from '../../types';
 import { mergeClasses } from './merge-classes';
 
-export const styleUnstyledBackdrop = (
+export const styleUnstyledPopperBackdrop = (
   className: string,
   { invisible = false, blur = false }: Classes
 ) =>

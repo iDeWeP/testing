@@ -3,7 +3,7 @@ import type { Classes } from '../../types';
 import { getArrowVariant } from './get-arrow-variant';
 import { mergeClasses } from './merge-classes';
 
-export const styleUnstyledArrow = (
+export const styleUnstyledPopperArrow = (
   className: string,
   {
     variant = 'surface',
