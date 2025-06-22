@@ -5,81 +5,45 @@ import { UnstyledBox } from '../../../core/components/UnstyledBox/UnstyledBox';
 export const VariantExample = () => (
   <ExampleSection title="Variant">
     <ExampleCard>
-      <UnstyledBox
-        variant="none"
-        color="neutral"
-      >
-        NONE
-      </UnstyledBox>
-      <UnstyledBox
-        variant="text"
-        color="neutral"
-      >
-        TEXT
-      </UnstyledBox>
-      <UnstyledBox
-        variant="plain"
-        color="neutral"
-      >
-        PLAIN
-      </UnstyledBox>
-      <UnstyledBox
-        variant="light"
-        color="neutral"
-      >
-        LIGHT
-      </UnstyledBox>
-      <UnstyledBox
-        variant="surface"
-        color="neutral"
-      >
-        SURFACE
-      </UnstyledBox>
-      <UnstyledBox
-        variant="solid"
-        color="neutral"
-      >
-        SOLID
-      </UnstyledBox>
+      <UnstyledBox variant="none">NONE</UnstyledBox>
+      <UnstyledBox variant="text">TEXT</UnstyledBox>
+      <UnstyledBox variant="plain">PLAIN</UnstyledBox>
+      <UnstyledBox variant="light">LIGHT</UnstyledBox>
+      <UnstyledBox variant="surface">SURFACE</UnstyledBox>
+      <UnstyledBox variant="solid">SOLID</UnstyledBox>
       <UnstyledBox
         variant="none"
         border
-        color="neutral"
       >
         NONE-BORDER
       </UnstyledBox>
       <UnstyledBox
         variant="text"
         border
-        color="neutral"
       >
         TEXT-BORDER
       </UnstyledBox>
       <UnstyledBox
         variant="plain"
         border
-        color="neutral"
       >
         PLAIN-BORDER
       </UnstyledBox>
       <UnstyledBox
         variant="light"
         border
-        color="neutral"
       >
         LIGHT-BORDER
       </UnstyledBox>
       <UnstyledBox
         variant="surface"
         border
-        color="neutral"
       >
         SURFACE-BORDER
       </UnstyledBox>
       <UnstyledBox
         variant="solid"
         border
-        color="neutral"
       >
         SOLID-BORDER
       </UnstyledBox>

@@ -8,21 +8,18 @@ export const ScaleExample = () => (
       <UnstyledBox
         variant="light"
         scale="normal"
-        color="neutral"
       >
         NORMAL
       </UnstyledBox>
       <UnstyledBox
         variant="light"
         scale="fit"
-        color="neutral"
       >
         FIT
       </UnstyledBox>
       <UnstyledBox
         variant="light"
         scale="full"
-        color="neutral"
       >
         FULL
       </UnstyledBox>
