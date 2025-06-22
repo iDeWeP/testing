@@ -1,5 +1,5 @@
+import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
 import { mergeProps } from '../../utils/merge-props/merge-props';
-import { mergeClassName } from '../../utils/mergeClassName/merge-class-name';
 import type { UnstyledSpinnerProps } from './UnstyledSpinner.types';
 import { unstyledSpinnerConfig } from './unstyledSpinnerConfig';
 import { UnstyledTrail } from './UnstyledTrail';

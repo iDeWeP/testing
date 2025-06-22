@@ -1,6 +1,6 @@
 import type { ElementType } from 'react';
+import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
 import { mergeProps } from '../../utils/merge-props/merge-props';
-import { mergeClassName } from '../../utils/mergeClassName/merge-class-name';
 import { UnstyledBox } from '../UnstyledBox/UnstyledBox';
 import type { UnstyledTypographyProps } from './UnstyledTypography.types';
 import { unstyledTypographyConfig } from './unstyledTypographyConfig';

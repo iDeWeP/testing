@@ -20,10 +20,10 @@ import { useControlledState } from '../../hooks/use-controlled-state/use-control
 import { useDefaultRerender } from '../../hooks/use-default-rerender/use-default-rerender';
 import { usePlacementChange } from '../../hooks/use-placemenet-change/use-placement-change';
 import { useStartAnimation } from '../../hooks/use-start-animation/use-start-animation';
+import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
 import { mergePopperStyle } from '../../utils/merge-popper-style/merge-popper-style';
 import { mergeProps } from '../../utils/merge-props/merge-props';
 import { mergeTransitionProps } from '../../utils/merge-transition-props/merge-transition-props';
-import { mergeClassName } from '../../utils/mergeClassName/merge-class-name';
 import { UnstyledFlexBox } from '../UnstyledFlexBox/UnstyledFlexBox';
 import { UnstyledAnchor } from './UnstyledAnchor';
 import { UnstyledArrow } from './UnstyledArrow';

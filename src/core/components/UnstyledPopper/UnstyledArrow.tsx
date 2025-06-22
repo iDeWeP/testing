@@ -12,7 +12,7 @@ import type {
   Color
 } from '../../types';
 import { mergeArrowStyle } from '../../utils/merge-arrow-style/merge-arrow-style';
-import { mergeClassName } from '../../utils/mergeClassName/merge-class-name';
+import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
 
 type ComponentProps = {
   polygon?: ComponentRefProps<'polygon'>;
