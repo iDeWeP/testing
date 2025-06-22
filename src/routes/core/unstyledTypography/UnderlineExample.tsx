@@ -5,6 +5,7 @@ import { UnstyledTypography } from '../../../core/components/UnstyledTypography/
 export const UnderlineExample = () => (
   <ExampleSection title="Underline">
     <ExampleCard>
+      <UnstyledTypography underline="normal">NORMAL</UnstyledTypography>
       <UnstyledTypography underline="none">NONE</UnstyledTypography>
       <UnstyledTypography underline="hover">HOVER</UnstyledTypography>
       <UnstyledTypography underline="always">ALWAYS</UnstyledTypography>
