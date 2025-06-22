@@ -1,5 +1,5 @@
 import type { MergeComponentProps, Variant, Color } from '../../types';
-import { mergeClassName } from '../../utils/mergeClassName/merge-class-name';
+import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
 
 type Props = MergeComponentProps<
   'circle',
