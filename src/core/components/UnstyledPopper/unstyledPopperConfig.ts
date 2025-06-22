@@ -19,6 +19,7 @@ export const unstyledPopperConfig: ComponentConfig<UnstyledPopperConfigProps> &
   props: {
     as: 'div',
     defaultOpen: false,
+    float: 'auto',
     trigger: 'click',
     followCursor: false,
     closeOnOutClick: false,
@@ -31,7 +32,6 @@ export const unstyledPopperConfig: ComponentConfig<UnstyledPopperConfigProps> &
     peak: 100,
     variant: 'light',
     placement: 'bottom',
-    float: 'auto',
     offset: 0,
     zIndex: 1000,
     size: 'none',

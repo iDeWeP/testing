@@ -48,6 +48,7 @@ type UnstyledPopperOptionalProps = {
 
 export type UnstyledPopperDefaultProps = {
   defaultOpen?: boolean;
+  float?: Float;
   trigger?: Trigger;
   followCursor?: boolean;
   closeOnOutClick?: boolean | RefObject<HTMLElement | null>;
@@ -59,7 +60,6 @@ export type UnstyledPopperDefaultProps = {
   unmountOnExit?: boolean;
   peak?: Peak;
   placement?: Placement;
-  float?: Float;
   offset?: number;
   zIndex?: number;
   duration?: number;
