@@ -16,6 +16,7 @@ export const UnstyledButton = <E extends ElementType = 'button'>(
     variant,
     size,
     scale: buttonScale,
+    margin,
     border: defaultBorder,
     radius,
     color,
@@ -36,6 +37,7 @@ export const UnstyledButton = <E extends ElementType = 'button'>(
     relative: !!loading || ripple !== 'none',
     size,
     buttonScale,
+    margin,
     defaultBorder,
     radius,
     color,
@@ -53,6 +55,7 @@ export const UnstyledButton = <E extends ElementType = 'button'>(
       float={loading === true}
       size="xs"
       thickness={4}
+      scale="text"
       margin="none"
       border={false}
       color={color}
@@ -70,12 +73,6 @@ export const UnstyledButton = <E extends ElementType = 'button'>(
     <Component
       disabled={disabled || !!loading}
       type="button"
-      variant={variant}
-      size="none"
-      scale="normal"
-      border={defaultBorder}
-      radius="none"
-      color={color}
       className={mergedClassName}
       {...restProps}
     >
@@ -86,9 +83,9 @@ export const UnstyledButton = <E extends ElementType = 'button'>(
       {loading === 'right' && spinnerNode}
       {hasRipple && (
         <UnstyledRipple
-          stateful={false}
           valid={false}
           invalid={false}
+          stateful={false}
           variant={variant}
           color={color}
           effect={ripple}
