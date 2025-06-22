@@ -7,6 +7,7 @@ import { styleUnstyledBackdrop } from './style-unstyled-backdrop';
 import { styleUnstyledBox } from './style-unstyled-box';
 import { styleUnstyledButton } from './style-unstyled-button';
 import { styleUnstyledFlexBox } from './style-unstyled-flex-box';
+import { styleUnstyledGrid } from './style-unstyled-grid';
 import { styleUnstyledPopper } from './style-unstyled-popper';
 import { styleUnstyledRipple } from './style-unstyled-ripple';
 import { styleUnstyledSpinner } from './style-unstyled-spinner';
@@ -23,6 +24,7 @@ const componentsClasses = {
   unstyledBox: styleUnstyledBox,
   unstyledButton: styleUnstyledButton,
   unstyledFlexBox: styleUnstyledFlexBox,
+  unstyledGrig: styleUnstyledGrid,
   unstyledPopper: styleUnstyledPopper,
   unstyledRipple: styleUnstyledRipple,
   unstyledSpinner: styleUnstyledSpinner,
