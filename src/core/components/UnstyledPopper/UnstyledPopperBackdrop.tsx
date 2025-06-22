@@ -21,7 +21,7 @@ type Props = MergeComponentProps<
   }
 >;
 
-export const UnstyledBackdrop = ({
+export const UnstyledPopperBackdrop = ({
   isOpen,
   animation,
   peak,
@@ -37,7 +37,7 @@ export const UnstyledBackdrop = ({
   transitionProps,
   ...restProps
 }: Props) => {
-  const mergedClassName = mergeClassName('unstyledBackdrop', className, {
+  const mergedClassName = mergeClassName('unstyledPopperBackdrop', className, {
     invisible,
     blur
   });

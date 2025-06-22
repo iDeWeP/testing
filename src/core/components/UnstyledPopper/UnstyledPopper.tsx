@@ -25,10 +25,10 @@ import { mergePopperStyle } from '../../utils/merge-popper-style/merge-popper-st
 import { mergeProps } from '../../utils/merge-props/merge-props';
 import { mergeTransitionProps } from '../../utils/merge-transition-props/merge-transition-props';
 import { UnstyledFlexBox } from '../UnstyledFlexBox/UnstyledFlexBox';
-import { UnstyledAnchor } from './UnstyledAnchor';
-import { UnstyledArrow } from './UnstyledArrow';
-import { UnstyledBackdrop } from './UnstyledBackdrop';
 import type { UnstyledPopperProps } from './UnstyledPopper.types';
+import { UnstyledPopperAnchor } from './UnstyledPopperAnchor';
+import { UnstyledPopperArrow } from './UnstyledPopperArrow';
+import { UnstyledPopperBackdrop } from './UnstyledPopperBackdrop';
 import { unstyledPopperConfig } from './unstyledPopperConfig';
 
 export const UnstyledPopper = <E extends ElementType = 'div'>(
@@ -131,7 +131,7 @@ export const UnstyledPopper = <E extends ElementType = 'div'>(
   useLockScroll(isOpen && lockScroll);
 
   const anchorNode = anchor && (
-    <UnstyledAnchor
+    <UnstyledPopperAnchor
       ref={anchorNodeRef}
       isOpen={isOpen}
       isExited={animation.isExited}
@@ -142,7 +142,7 @@ export const UnstyledPopper = <E extends ElementType = 'div'>(
       onCursorMove={handleCursorMove}
     >
       {anchor}
-    </UnstyledAnchor>
+    </UnstyledPopperAnchor>
   );
 
   if (isExited && unmountOnExit) {
@@ -171,7 +171,7 @@ export const UnstyledPopper = <E extends ElementType = 'div'>(
       {portNode(
         <>
           {backdrop && (
-            <UnstyledBackdrop
+            <UnstyledPopperBackdrop
               isOpen={isOpen}
               animation={animation}
               peak={peak}
@@ -200,7 +200,7 @@ export const UnstyledPopper = <E extends ElementType = 'div'>(
           >
             {children}
             {arrow && (
-              <UnstyledArrow
+              <UnstyledPopperArrow
                 variant={variant}
                 placement={mainAxis}
                 offset={[0, '50%']}

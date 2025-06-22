@@ -31,7 +31,7 @@ type Props = MergeComponentProps<
   }
 >;
 
-export const UnstyledArrow = ({
+export const UnstyledPopperArrow = ({
   variant,
   placement,
   offset,
@@ -44,7 +44,7 @@ export const UnstyledArrow = ({
   ...restProps
 }: Props) => {
   const mergedClassName = mergeClassName(
-    'unstyledArrow',
+    'unstyledPopperArrow',
     `${className} ${children?.props.className}`,
     {
       variant,

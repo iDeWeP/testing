@@ -2,10 +2,10 @@ import {
   cloneElement,
   type ComponentPropsWithRef,
   type ElementType,
-  type ForwardedRef,
   type MouseEvent,
   type ReactElement,
-  type Ref
+  type Ref,
+  type RefObject
 } from 'react';
 import { combineHandlers } from '../../../utils/utils/combine-handlers/combine-handlers';
 import { mergeRefs } from '../../../utils/utils/merge-refs/merge-refs';
@@ -13,7 +13,7 @@ import type { Trigger } from '../../types';
 import { getTriggers } from '../../utils/get-triggers/get-triggers';
 
 type Props = {
-  ref: ForwardedRef<HTMLElement | null>;
+  ref: RefObject<HTMLElement | null>;
   isOpen: boolean;
   isExited: boolean;
   trigger: Trigger;
@@ -24,7 +24,7 @@ type Props = {
   children: ReactElement<ComponentPropsWithRef<ElementType>>;
 };
 
-export const UnstyledAnchor = ({
+export const UnstyledPopperAnchor = ({
   ref: forwardedRef,
   isOpen,
   isExited,
