@@ -8,49 +8,42 @@ export const SizeExample = () => (
       <UnstyledBox
         variant="light"
         size="none"
-        color="neutral"
       >
         NONE
       </UnstyledBox>
       <UnstyledBox
         variant="light"
         size="xs"
-        color="neutral"
       >
         XS
       </UnstyledBox>
       <UnstyledBox
         variant="light"
         size="sm"
-        color="neutral"
       >
         SM
       </UnstyledBox>
       <UnstyledBox
         variant="light"
         size="md"
-        color="neutral"
       >
         MD
       </UnstyledBox>
       <UnstyledBox
         variant="light"
         size="lg"
-        color="neutral"
       >
         LG
       </UnstyledBox>
       <UnstyledBox
         variant="light"
         size="xl"
-        color="neutral"
       >
         XL
       </UnstyledBox>
       <UnstyledBox
         variant="light"
         size="xxl"
-        color="neutral"
       >
         XXL
       </UnstyledBox>
@@ -59,42 +52,36 @@ export const SizeExample = () => (
       <UnstyledBox
         variant="light"
         size="xs-xs"
-        color="neutral"
       >
         XS-XS
       </UnstyledBox>
       <UnstyledBox
         variant="light"
         size="sm-sm"
-        color="neutral"
       >
         SM-SM
       </UnstyledBox>
       <UnstyledBox
         variant="light"
         size="md-md"
-        color="neutral"
       >
         MD-MD
       </UnstyledBox>
       <UnstyledBox
         variant="light"
         size="lg-lg"
-        color="neutral"
       >
         LG-LG
       </UnstyledBox>
       <UnstyledBox
         variant="light"
         size="xl-xl"
-        color="neutral"
       >
         XL-XL
       </UnstyledBox>
       <UnstyledBox
         variant="light"
         size="xxl-xxl"
-        color="neutral"
       >
         XXL-XXL
       </UnstyledBox>
