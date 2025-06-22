@@ -2,7 +2,7 @@ import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
 import { mergeProps } from '../../utils/merge-props/merge-props';
 import type { UnstyledSpinnerProps } from './UnstyledSpinner.types';
 import { unstyledSpinnerConfig } from './unstyledSpinnerConfig';
-import { UnstyledTrail } from './UnstyledTrail';
+import { UnstyledSpinnerTrail } from './UnstyledSpinnerTrail';
 
 export const UnstyledSpinner = (props: UnstyledSpinnerProps) => {
   const {
@@ -52,7 +52,7 @@ export const UnstyledSpinner = (props: UnstyledSpinnerProps) => {
           {...componentsProps.outerBorder}
         />
       )}
-      <UnstyledTrail
+      <UnstyledSpinnerTrail
         disabled={disabled}
         strokeWidth={thickness}
         variant={variant}

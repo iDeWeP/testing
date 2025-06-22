@@ -10,14 +10,14 @@ type Props = MergeComponentProps<
   }
 >;
 
-export const UnstyledTrail = ({
+export const UnstyledSpinnerTrail = ({
   disabled,
   variant,
   color,
   className,
   ...restProps
 }: Props) => {
-  const mergedClassName = mergeClassName('unstyledTrail', className, {
+  const mergedClassName = mergeClassName('unstyledSpinnerTrail', className, {
     disabled,
     variant,
     color
