@@ -5,8 +5,8 @@ import { UnstyledSpinner } from '../../../core/components/UnstyledSpinner/Unstyl
 export const DisabledExample = () => (
   <ExampleSection title="Disabled">
     <ExampleCard>
-      <UnstyledSpinner disabled={true}>TRUE</UnstyledSpinner>
       <UnstyledSpinner disabled={false}>FALSE</UnstyledSpinner>
+      <UnstyledSpinner disabled={true}>TRUE</UnstyledSpinner>
     </ExampleCard>
   </ExampleSection>
 );

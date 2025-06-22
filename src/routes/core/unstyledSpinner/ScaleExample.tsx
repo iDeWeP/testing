@@ -4,9 +4,9 @@ import { UnstyledSpinner } from '../../../core/components/UnstyledSpinner/Unstyl
 
 export const ScaleExample = () => (
   <ExampleSection title="Scale">
-    <ExampleCard align>
-      <UnstyledSpinner scale="normal">NORMAL</UnstyledSpinner>
-      <UnstyledSpinner scale="inner">INNER</UnstyledSpinner>
+    <ExampleCard>
+      <UnstyledSpinner scale="normal">NORNAL</UnstyledSpinner>
+      <UnstyledSpinner scale="text">TEXT</UnstyledSpinner>
     </ExampleCard>
   </ExampleSection>
 );

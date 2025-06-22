@@ -5,8 +5,8 @@ import { UnstyledSpinner } from '../../../core/components/UnstyledSpinner/Unstyl
 export const FloatExample = () => (
   <ExampleSection title="Float">
     <ExampleCard>
-      <UnstyledSpinner float={true}>TRUE</UnstyledSpinner>
       <UnstyledSpinner float={false}>FALSE</UnstyledSpinner>
+      <UnstyledSpinner float={true}>TRUE</UnstyledSpinner>
     </ExampleCard>
   </ExampleSection>
 );

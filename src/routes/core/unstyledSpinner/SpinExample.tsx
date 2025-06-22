@@ -5,8 +5,8 @@ import { UnstyledSpinner } from '../../../core/components/UnstyledSpinner/Unstyl
 export const SpinExample = () => (
   <ExampleSection title="Spin">
     <ExampleCard>
-      <UnstyledSpinner spin>TRUE</UnstyledSpinner>
       <UnstyledSpinner spin={false}>FALSE</UnstyledSpinner>
+      <UnstyledSpinner spin>TRUE</UnstyledSpinner>
     </ExampleCard>
   </ExampleSection>
 );

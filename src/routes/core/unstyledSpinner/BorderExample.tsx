@@ -5,8 +5,8 @@ import { UnstyledSpinner } from '../../../core/components/UnstyledSpinner/Unstyl
 export const BorderExample = () => (
   <ExampleSection title="Border">
     <ExampleCard>
-      <UnstyledSpinner border={true}>TRUE</UnstyledSpinner>
       <UnstyledSpinner border={false}>FALSE</UnstyledSpinner>
+      <UnstyledSpinner border={true}>TRUE</UnstyledSpinner>
     </ExampleCard>
   </ExampleSection>
 );
