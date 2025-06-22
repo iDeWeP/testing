@@ -24,9 +24,7 @@ export const unstyledButtonConfig: ComponentConfig<UnstyledButtonConfigProps> &
     color: 'neutral',
     effect: 'none',
     componentsProps: {},
-    ripple: 'normal',
-    leftDecorator: '',
-    rightDecorator: ''
+    ripple: 'normal'
   },
   styles: {
     root: {

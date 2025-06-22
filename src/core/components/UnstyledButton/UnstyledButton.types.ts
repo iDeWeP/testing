@@ -22,6 +22,11 @@ export type UnstyledButtonComponentProps = {
   outerBorder?: ComponentRefProps<'circle'>;
 };
 
+type UnstyledButtonOptionalProps = {
+  leftDecorator?: ReactNode;
+  rightDecorator?: ReactNode;
+};
+
 export type UnstyledButtonDefaultProps = {
   as?: ElementType;
   loading?: Loading;
@@ -36,13 +41,11 @@ export type UnstyledButtonDefaultProps = {
   effect?: Effect;
   componentsProps?: UnstyledButtonComponentProps;
   ripple?: Ripple;
-  leftDecorator?: ReactNode;
-  rightDecorator?: ReactNode;
 };
 
 export type UnstyledButtonConfigProps = UnstyledButtonDefaultProps;
 
 export type UnstyledButtonProps<E extends ElementType> = MergeProps<
   ComponentRefProps<E>,
-  UnstyledButtonDefaultProps
+  UnstyledButtonDefaultProps & UnstyledButtonOptionalProps
 >;
