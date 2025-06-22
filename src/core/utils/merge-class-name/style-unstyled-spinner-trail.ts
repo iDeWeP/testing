@@ -4,7 +4,7 @@ import { getColor } from './get-color';
 import { getTrailVariant } from './get-trail-variant';
 import { mergeClasses } from './merge-classes';
 
-export const styleUnstyledTrail = (
+export const styleUnstyledSpinnerTrail = (
   className: string,
   { disabled = false, variant = 'none', color = 'neutral' }: Classes
 ) => {

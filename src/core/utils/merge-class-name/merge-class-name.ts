@@ -11,7 +11,7 @@ import { styleUnstyledGrid } from './style-unstyled-grid';
 import { styleUnstyledPopper } from './style-unstyled-popper';
 import { styleUnstyledRipple } from './style-unstyled-ripple';
 import { styleUnstyledSpinner } from './style-unstyled-spinner';
-import { styleUnstyledTrail } from './style-unstyled-trail';
+import { styleUnstyledSpinnerTrail } from './style-unstyled-spinner-trail';
 import { styleUnstyledTransition } from './style-unstyled-transition';
 import { styleUnstyledTypography } from './style-unstyled-typography';
 
@@ -28,7 +28,7 @@ const componentsClasses = {
   unstyledPopper: styleUnstyledPopper,
   unstyledRipple: styleUnstyledRipple,
   unstyledSpinner: styleUnstyledSpinner,
-  unstyledTrail: styleUnstyledTrail,
+  unstyledSpinnerTrail: styleUnstyledSpinnerTrail,
   unstyledTransition: styleUnstyledTransition,
   unstyledTypography: styleUnstyledTypography
 };
