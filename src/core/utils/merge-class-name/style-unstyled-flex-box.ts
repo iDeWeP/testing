@@ -7,8 +7,8 @@ export const styleUnstyledFlexBox = (
   {
     direction = 'row',
     wrap = 'wrap',
-    justify = 'normal',
-    align = 'stretch',
+    justifyContent = 'normal',
+    alignItems = 'stretch',
     gap = 'none'
   }: Classes
 ) =>
@@ -16,8 +16,8 @@ export const styleUnstyledFlexBox = (
     generic.styles.display.flex,
     generic.styles.direction[direction],
     generic.styles.wrap[wrap],
-    generic.styles.justify[justify],
-    generic.styles.align[align],
+    generic.styles.justifyContent[justifyContent],
+    generic.styles.alignItems[alignItems],
     generic.styles.gap.default[gap],
     className
   );
