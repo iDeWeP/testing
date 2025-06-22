@@ -1,6 +1,6 @@
 import type { Animation } from '../../../hooks/hooks/use-animation/use-animation';
 import { combineHandlers } from '../../../utils/utils/combine-handlers/combine-handlers';
-import { portElement } from '../../../utils/utils/port-element/port-element';
+import { portNode } from '../../../utils/utils/port-node/port-node';
 import type { MergeComponentProps, Peak, TransitionProps } from '../../types';
 import { mergeBackdropStyle } from '../../utils/merge-backdrop-style/merge-backdrop-style';
 import { mergeClassName } from '../../utils/mergeClassName/merge-class-name';
@@ -52,7 +52,7 @@ export const UnstyledBackdrop = ({
     transitionProps
   );
 
-  return portElement(
+  return portNode(
     <div
       className={mergedClassName}
       style={mergedStyle}

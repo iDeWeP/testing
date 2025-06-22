@@ -12,7 +12,7 @@ import { useWindowScroll } from '../../../hooks/hooks/use-window-scroll/use-wind
 import { combineHandlers } from '../../../utils/utils/combine-handlers/combine-handlers';
 import { getCords } from '../../../utils/utils/get-cords/get-cords';
 import { mergeRefs } from '../../../utils/utils/merge-refs/merge-refs';
-import { portElement } from '../../../utils/utils/port-element/port-element';
+import { portNode } from '../../../utils/utils/port-node/port-node';
 import { setProp } from '../../../utils/utils/set-prop/set-prop';
 import { useAutoFocus } from '../../hooks/use-auto-focus/use-auto-focus';
 import { useCloseFocus } from '../../hooks/use-close-focus/use-close-focus';
@@ -168,7 +168,7 @@ export const UnstyledPopper = <E extends ElementType = 'div'>(
   return (
     <>
       {anchorNode}
-      {portElement(
+      {portNode(
         <>
           {backdrop && (
             <UnstyledBackdrop
