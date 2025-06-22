@@ -1,9 +1,9 @@
 import { ExampleTitle } from '../../../components/ExampleTitle';
 import { CloseOnEscExample } from './CloseOnEscExample';
 import { CloseOnOutClickExample } from './CloseOnOutClick';
+import { CollisionExample } from './CollisionExample';
 import { DefaultExample } from './DefaultExample';
 import { DurationExample } from './DurationExample';
-import { FloatExample } from './FloatExample';
 import { FocusOnCloseExample } from './FocusOnClose';
 import { FocusOnOpenExample } from './FocusOnOpen';
 import { FocusTrapExample } from './FocusTrapExample';
@@ -21,7 +21,7 @@ const Page = () => (
   <>
     <ExampleTitle>Popper</ExampleTitle>
     <DefaultExample />
-    <FloatExample />
+    <CollisionExample />
     <TriggerExample />
     <FollowCursorExample />
     <CloseOnOutClickExample />
