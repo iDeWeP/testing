@@ -39,7 +39,7 @@ export const UnstyledPopper = <E extends ElementType = 'div'>(
     anchorRef: anchorElRef,
     open,
     defaultOpen,
-    float,
+    collision,
     trigger,
     followCursor,
     closeOnOutClick,
@@ -94,7 +94,7 @@ export const UnstyledPopper = <E extends ElementType = 'div'>(
   const { top, left, mainAxis } = getCords(
     anchorRef,
     ref,
-    float,
+    collision,
     placement,
     offset,
     !!portalEl,
@@ -107,11 +107,11 @@ export const UnstyledPopper = <E extends ElementType = 'div'>(
   usePlacementChange(mainAxis, onPlacementChange);
 
   useWindowResize(
-    !isExited && float !== 'none' && !followCursor && handleResize
+    !isExited && collision !== 'none' && !followCursor && handleResize
   );
 
   useWindowScroll(
-    !isExited && float !== 'none' && !followCursor && handleScroll
+    !isExited && collision !== 'none' && !followCursor && handleScroll
   );
 
   useOutClick(

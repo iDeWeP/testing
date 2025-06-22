@@ -9,9 +9,9 @@ import type {
   ComponentRefProps,
   TransitionProps,
   Placement,
+  Collision,
   Trigger,
   Peak,
-  Float,
   MergeProps
 } from '../../types';
 import type {
@@ -48,7 +48,7 @@ type UnstyledPopperOptionalProps = {
 
 export type UnstyledPopperDefaultProps = {
   defaultOpen?: boolean;
-  float?: Float;
+  collision?: Collision;
   trigger?: Trigger;
   followCursor?: boolean;
   closeOnOutClick?: boolean | RefObject<HTMLElement | null>;
