@@ -21,7 +21,7 @@ export const unstyledButtonConfig: ComponentConfig<UnstyledButtonConfigProps> &
     margin: 'none',
     border: false,
     radius: 'md',
-    color: 'primary',
+    color: 'neutral',
     effect: 'none',
     componentsProps: {},
     ripple: 'normal',
