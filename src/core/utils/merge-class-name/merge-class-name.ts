@@ -24,7 +24,7 @@ const componentsClasses = {
   unstyledBox: styleUnstyledBox,
   unstyledButton: styleUnstyledButton,
   unstyledFlexBox: styleUnstyledFlexBox,
-  unstyledGrig: styleUnstyledGrid,
+  unstyledGrid: styleUnstyledGrid,
   unstyledPopper: styleUnstyledPopper,
   unstyledRipple: styleUnstyledRipple,
   unstyledSpinner: styleUnstyledSpinner,
