@@ -1,4 +1,4 @@
-import type { Orientation, CrossAxis, Float } from '../../../core/types';
+import type { Orientation, Collision, CrossAxis } from '../../../core/types';
 import type {
   Dimension,
   Length,
@@ -135,7 +135,7 @@ const dimensions = {
 };
 
 export const getAutoCrossAxis = (
-  float: Float,
+  collision: Collision,
   crossAxis: CrossAxis,
   orientation: Orientation,
   dimension: Dimension,
@@ -146,7 +146,7 @@ export const getAutoCrossAxis = (
   size: SizeDimensions,
   overflow: OverflowDimensions
 ) =>
-  float === 'auto'
+  collision === 'auto'
     ? dimensions[crossAxis](
         orientation,
         dimension,

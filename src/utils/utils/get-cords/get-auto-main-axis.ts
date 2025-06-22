@@ -1,4 +1,4 @@
-import type { MainAxis, Float } from '../../../core/types';
+import type { Collision, MainAxis } from '../../../core/types';
 import type {
   SizeDimensions,
   OverflowDimensions,
@@ -25,9 +25,9 @@ const dimensions = {
 };
 
 export const getFloatMainAxis = (
-  float: Float,
+  collision: Collision,
   mainAxis: MainAxis,
   view: ViewDimensions,
   size: SizeDimensions,
   overflow: OverflowDimensions
-) => (float !== 'none' ? dimensions[mainAxis](size, overflow, view) : {});
+) => (collision !== 'none' ? dimensions[mainAxis](size, overflow, view) : {});

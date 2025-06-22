@@ -1,4 +1,4 @@
-import type { Orientation, CrossAxis, Float } from '../../../core/types';
+import type { Orientation, Collision, CrossAxis } from '../../../core/types';
 import type {
   Dimension,
   Length,
@@ -47,7 +47,7 @@ const dimensions = {
 };
 
 export const getFlipCrossAxis = (
-  float: Float,
+  collision: Collision,
   crossAxis: CrossAxis,
   orientation: Orientation,
   dimension: Dimension,
@@ -58,7 +58,7 @@ export const getFlipCrossAxis = (
   size: SizeDimensions,
   overflow: OverflowDimensions
 ) =>
-  float === 'flip' && crossAxis !== 'center'
+  collision === 'flip' && crossAxis !== 'center'
     ? dimensions[crossAxis](
         orientation,
         dimension,
