@@ -1,5 +1,6 @@
 import { useState, useCallback } from 'react';
 import { ExampleCard } from '../../../components/ExampleCard';
+import { UnstyledBox } from '../../../core/components/UnstyledBox/UnstyledBox';
 import { UnstyledTransition } from '../../../core/components/UnstyledTransition/UnstyledTransition';
 import type { UnstyledTransitionProps } from '../../../core/components/UnstyledTransition/UnstyledTransition.types';
 
@@ -13,13 +14,13 @@ export const ExampleTransition = ({
 
   return (
     <>
-      <button onClick={handleClick}>{`Toggle ${children} fade`}</button>
+      <button onClick={handleClick}>{`Toggle ${children}`}</button>
       <ExampleCard>
         <UnstyledTransition
           in={isIn}
           {...restProps}
         >
-          {children}
+          <UnstyledBox>{children}</UnstyledBox>
         </UnstyledTransition>
       </ExampleCard>
     </>
