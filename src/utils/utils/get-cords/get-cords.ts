@@ -2,8 +2,8 @@ import type { RefObject } from 'react';
 import type {
   MainAxis,
   CrossAxis,
+  Collision,
   Placement,
-  Float,
   Cursor
 } from '../../../core/types';
 import { isPlacementHorizontal } from '../is-placement-horizontal/is-placement-horizontal';
@@ -11,11 +11,11 @@ import { calculateOverflowDimensions } from './calculate-overflow-dimensions';
 import { calculateSizeDimensions } from './calculate-size-dimensions';
 import { getAnchorDimensions } from './get-anchor-dimensions';
 import { getAutoCrossAxis } from './get-auto-cross-axis';
+import { getAutoMainAxis } from './get-auto-main-axis';
 import { getAxises } from './get-axises';
 import { getCrossAxis } from './get-cross-axis';
 import { getElDimensions } from './get-el-dimensions';
 import { getFlipCrossAxis } from './get-flip-cross-axis';
-import { getFloatMainAxis } from './get-float-main-axis';
 import { getMainAxis } from './get-main-axis';
 import { getViewDimensions } from './get-view-dimensions';
 
@@ -29,7 +29,7 @@ type Cord = {
 export const getCords = (
   anchorRef: RefObject<HTMLElement | null>,
   ref: RefObject<HTMLDivElement | null>,
-  float: Float,
+  collision: Collision,
   placement: Placement,
   offset: number,
   isPorted: boolean,
@@ -62,10 +62,10 @@ export const getCords = (
 
   return {
     ...getMainAxis(mainAxis, size),
-    ...getFloatMainAxis(float, mainAxis, view, size, overflow),
+    ...getAutoMainAxis(collision, mainAxis, view, size, overflow),
     ...getCrossAxis(crossAxis, orientation, dimension, size),
     ...getFlipCrossAxis(
-      float,
+      collision,
       crossAxis,
       orientation,
       dimension,
@@ -77,7 +77,7 @@ export const getCords = (
       overflow
     ),
     ...getAutoCrossAxis(
-      float,
+      collision,
       crossAxis,
       orientation,
       dimension,
