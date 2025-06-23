@@ -17,6 +17,7 @@ export const styleUnstyledRipple = (
 ) =>
   mergeClasses(
     unstyledRippleConfig.styles.root.default,
+    stateful && unstyledRippleConfig.styles.root.stateful,
     unstyledRippleConfig.styles.root.color[
       getValidityColor(valid, invalid, color)
     ][getRippleState(stateful)][getVariant(variant)[1]],

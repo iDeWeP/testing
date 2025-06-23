@@ -23,7 +23,7 @@ export const styleUnstyledSpinner = (
     unstyledSpinnerConfig.styles.root.default,
     float && generic.styles.position.absolute,
     float && unstyledSpinnerConfig.styles.root.float[defaultScale][size],
-    generic.styles.size[defaultScale][size].square,
+    generic.styles.size[defaultScale].square[size],
     generic.styles.margin[margin],
     generic.styles.color.stroke[getColor(disabled, color)][
       getVariant(variant)[1]
