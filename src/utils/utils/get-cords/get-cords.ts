@@ -10,13 +10,13 @@ import { isPlacementHorizontal } from '../is-placement-horizontal/is-placement-h
 import { calculateOverflowDimensions } from './calculate-overflow-dimensions';
 import { calculateSizeDimensions } from './calculate-size-dimensions';
 import { getAnchorDimensions } from './get-anchor-dimensions';
-import { getAutoCrossAxis } from './get-auto-cross-axis';
 import { getAutoMainAxis } from './get-auto-main-axis';
 import { getAxises } from './get-axises';
 import { getCrossAxis } from './get-cross-axis';
 import { getElDimensions } from './get-el-dimensions';
 import { getFlipCrossAxis } from './get-flip-cross-axis';
 import { getMainAxis } from './get-main-axis';
+import { getShiftCrossAxis } from './get-shift-cross-axis';
 import { getViewDimensions } from './get-view-dimensions';
 
 type Cord = {
@@ -36,7 +36,7 @@ export const getCords = (
   cursor?: Cursor,
   isFollowingCursor?: boolean
 ): Cord => {
-  const [mainAxis, crossAxis] = getAxises(placement);
+  const { mainAxis, crossAxis } = getAxises(placement);
   const cord = { top: 0, left: 0, mainAxis, crossAxis };
 
   if (!ref.current || !anchorRef.current) {
@@ -76,7 +76,7 @@ export const getCords = (
       size,
       overflow
     ),
-    ...getAutoCrossAxis(
+    ...getShiftCrossAxis(
       collision,
       crossAxis,
       orientation,

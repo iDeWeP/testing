@@ -134,7 +134,7 @@ const dimensions = {
   }
 };
 
-export const getAutoCrossAxis = (
+export const getShiftCrossAxis = (
   collision: Collision,
   crossAxis: CrossAxis,
   orientation: Orientation,
@@ -146,7 +146,7 @@ export const getAutoCrossAxis = (
   size: SizeDimensions,
   overflow: OverflowDimensions
 ) =>
-  collision === 'auto'
+  collision === 'shift'
     ? dimensions[crossAxis](
         orientation,
         dimension,

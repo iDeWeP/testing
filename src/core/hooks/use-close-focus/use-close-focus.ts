@@ -3,7 +3,7 @@ import { type RefObject, useRef, useEffect } from 'react';
 export const useCloseFocus = <E extends HTMLElement>(
   focus: RefObject<HTMLElement | null> | boolean,
   autoRef: RefObject<E | null>
-): void => {
+) => {
   const isRendered = useRef(false);
 
   useEffect(() => {

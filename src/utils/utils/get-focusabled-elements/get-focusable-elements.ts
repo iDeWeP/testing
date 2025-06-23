@@ -1,3 +1,5 @@
+import { setProp } from '../set-prop/set-prop';
+
 export const getFocusableElements = <E extends HTMLElement>(el?: E | null) => {
   if (!el) {
     return undefined;
@@ -13,5 +15,5 @@ export const getFocusableElements = <E extends HTMLElement>(el?: E | null) => {
       !el.hasAttribute('disabled') && el.getAttribute('aria-hidden') !== 'true'
   );
 
-  return focusableEls.length ? focusableEls : undefined;
+  return setProp(!!focusableEls.length, focusableEls);
 };
