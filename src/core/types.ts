@@ -363,6 +363,7 @@ export type Classes = {
   rippleEffect?: RippleEffect;
   transition?: Transition;
   decorated?: boolean;
+  labeled?: boolean;
 };
 
 type CSSPropKeys =
