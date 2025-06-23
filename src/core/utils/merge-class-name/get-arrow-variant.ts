@@ -8,5 +8,5 @@ export const getArrowVariant = (
   border: Border
 ) =>
   isPopperBordered(placement, border)
-    ? getVariant(variant)[1]
-    : getVariant(variant)[0];
+    ? getVariant(variant).textVariant
+    : getVariant(variant).bgVariant;
