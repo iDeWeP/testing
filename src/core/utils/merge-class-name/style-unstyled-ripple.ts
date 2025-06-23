@@ -20,6 +20,6 @@ export const styleUnstyledRipple = (
     stateful && unstyledRippleConfig.styles.root.stateful,
     unstyledRippleConfig.styles.root.color[
       getValidityColor(valid, invalid, color)
-    ][getRippleState(stateful)][getVariant(variant)[1]],
+    ][getRippleState(stateful)][getVariant(variant).textVariant],
     className
   );
