@@ -10,11 +10,7 @@ export const getButtonScale = (
   isBordered: boolean
 ): GetButtonReturn => {
   const sizeScale = scale === 'square' ? 'square' : 'normal';
+  const spacingScale = scale === 'square' ? 'border-square' : 'border';
 
-  return isBordered
-    ? {
-        sizeScale,
-        spacingScale: scale === 'square' ? 'border-square' : 'border'
-      }
-    : { sizeScale, spacingScale: sizeScale };
+  return { sizeScale, spacingScale: isBordered ? spacingScale : sizeScale };
 };
