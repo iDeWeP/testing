@@ -19,7 +19,7 @@ export const unstyledPopperConfig: ComponentConfig<UnstyledPopperConfigProps> &
   props: {
     as: 'div',
     defaultOpen: false,
-    collision: 'auto',
+    collision: 'none',
     trigger: 'click',
     followCursor: false,
     closeOnOutClick: false,
@@ -57,7 +57,8 @@ export const unstyledPopperConfig: ComponentConfig<UnstyledPopperConfigProps> &
     root: {
       default: {
         position: 'absolute',
-        transition: 'transition-opacity'
+        transition: 'transition-opacity',
+        transitionTimingFunction: 'easy-in-out'
       }
     },
     backdrop: {
