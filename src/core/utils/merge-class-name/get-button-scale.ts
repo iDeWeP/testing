@@ -1,17 +1,20 @@
 import type { ButtonScale } from '../../types';
 
-type SizeScale = 'normal' | 'square';
-type SpacingScale = SizeScale | 'border' | 'border-square';
+type GetButtonReturn = {
+  sizeScale: 'normal' | 'square';
+  spacingScale: 'normal' | 'square' | 'border' | 'border-square';
+};
 
 export const getButtonScale = (
   scale: ButtonScale,
   isBordered: boolean
-): [SizeScale, SpacingScale] => {
+): GetButtonReturn => {
   const sizeScale = scale === 'square' ? 'square' : 'normal';
 
-  if (isBordered) {
-    return [sizeScale, scale === 'square' ? 'border-square' : 'border'];
-  }
-
-  return [sizeScale, sizeScale];
+  return isBordered
+    ? {
+        sizeScale,
+        spacingScale: scale === 'square' ? 'border-square' : 'border'
+      }
+    : { sizeScale, spacingScale: sizeScale };
 };
