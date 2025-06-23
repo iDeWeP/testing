@@ -1,5 +1,5 @@
 import type { ElementType } from 'react';
-import { useMergeProps } from '../../hooks/use-merge-props/useMergeProps';
+import { useMergeProps } from '../../hooks/use-merge-props/use-merge-props';
 import { UnstyledFlexBox } from '../UnstyledFlexBox/UnstyledFlexBox';
 import type { CardProps } from './Card.types';
 import { cardConfig } from './cardConfig';

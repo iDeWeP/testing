@@ -1,29 +1,27 @@
 import { createBrowserRouter } from 'react-router';
-import { BoxRoute } from './core/box';
-import { CardRoute } from './core/card';
-import { FlexRoute } from './core/flex';
+import { UnstyledBoxRoute } from './core/unstyledBox';
+import { UnstyledFlexBoxRoute } from './core/unstyledFlexBox';
 import { RootRoute } from './RootRoute';
-import { FooterRoute } from './core/footer';
-import { HeaderRoute } from './core/header';
-import { ImageRoute } from './core/image';
-import { ListRoute } from './core/list';
-import { MainRoute } from './core/main';
-import { NavigationRoute } from './core/navigation';
+import { UnstyledSpinnerRoute } from './core/unstyledSpinner';
+import { UnstyledTransitionRoute } from './core/unstyledTransition';
+import { UnstyledTypographyRoute } from './core/unstyledTypography';
+import { UnstyledButtonRoute } from './core/unstyledButton';
+import { UnstyledPopperRoute } from './core/UnstyledPopper';
+import { UnstyledInputRoute } from './core/UnstyledInput';
 
 export const router = createBrowserRouter([
   {
     path: '/',
     Component: RootRoute,
     children: [
-      BoxRoute,
-      CardRoute,
-      FlexRoute,
-      FooterRoute,
-      HeaderRoute,
-      ImageRoute,
-      ListRoute,
-      MainRoute,
-      NavigationRoute
+      UnstyledBoxRoute,
+      UnstyledFlexBoxRoute,
+      UnstyledSpinnerRoute,
+      UnstyledTransitionRoute,
+      UnstyledTypographyRoute,
+      UnstyledButtonRoute,
+      UnstyledPopperRoute,
+      UnstyledInputRoute
     ]
   }
 ]);

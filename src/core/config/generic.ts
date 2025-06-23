@@ -1,211 +1,8 @@
-import type {
-  Color,
-  CSSProps,
-  Size,
-  Margin,
-  Weight,
-  Underline,
-  WordBreak,
-  TextWrap,
-  TextAlign,
-  TextOverflow,
-  Direction,
-  Wrap,
-  JustifyContent,
-  AlignItems,
-  Gap,
-  Effect
-} from '../types';
+import type { Color, CSSProps } from '../types';
 
-type Focusable = 'none' | 'default' | 'disabled';
-type Loading = 'none' | 'normal' | 'hide';
-type Display = 'block' | 'flex' | 'grid' | 'inline-flex';
-type Position = 'static' | 'absolute' | 'fixed' | 'relative';
-type DefaultSize = 'none' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl';
-type Scale = 'normal' | 'fit' | 'full' | 'square';
-type SizeScale = 'normal' | 'square';
-type Spacing =
-  | 'none'
-  | 'xs'
-  | 'sm'
-  | 'md'
-  | 'lg'
-  | 'xl'
-  | 'xxl'
-  | 'xs-x'
-  | 'xs-y'
-  | 'xs-top'
-  | 'xs-bottom'
-  | 'xs-left'
-  | 'xs-right'
-  | 'xs-x-top'
-  | 'xs-x-bottom'
-  | 'xs-y-left'
-  | 'xs-y-right'
-  | 'xs-top-left'
-  | 'xs-top-right'
-  | 'xs-bottom-left'
-  | 'xs-bottom-right'
-  | 'sm-x'
-  | 'sm-y'
-  | 'sm-top'
-  | 'sm-bottom'
-  | 'sm-left'
-  | 'sm-right'
-  | 'sm-x-top'
-  | 'sm-x-bottom'
-  | 'sm-y-left'
-  | 'sm-y-right'
-  | 'sm-top-left'
-  | 'sm-top-right'
-  | 'sm-bottom-left'
-  | 'sm-bottom-right'
-  | 'md-x'
-  | 'md-y'
-  | 'md-top'
-  | 'md-bottom'
-  | 'md-left'
-  | 'md-right'
-  | 'md-x-top'
-  | 'md-x-bottom'
-  | 'md-y-left'
-  | 'md-y-right'
-  | 'md-top-left'
-  | 'md-top-right'
-  | 'md-bottom-left'
-  | 'md-bottom-right'
-  | 'lg-x'
-  | 'lg-y'
-  | 'lg-top'
-  | 'lg-bottom'
-  | 'lg-left'
-  | 'lg-right'
-  | 'lg-x-top'
-  | 'lg-x-bottom'
-  | 'lg-y-left'
-  | 'lg-y-right'
-  | 'lg-top-left'
-  | 'lg-top-right'
-  | 'lg-bottom-left'
-  | 'lg-bottom-right'
-  | 'xl-x'
-  | 'xl-y'
-  | 'xl-top'
-  | 'xl-bottom'
-  | 'xl-left'
-  | 'xl-right'
-  | 'xl-x-top'
-  | 'xl-x-bottom'
-  | 'xl-y-left'
-  | 'xl-y-right'
-  | 'xl-top-left'
-  | 'xl-top-right'
-  | 'xl-bottom-left'
-  | 'xl-bottom-right'
-  | 'xxl-x'
-  | 'xxl-y'
-  | 'xxl-top'
-  | 'xxl-bottom'
-  | 'xxl-left'
-  | 'xxl-right'
-  | 'xxl-x-top'
-  | 'xxl-x-bottom'
-  | 'xxl-y-left'
-  | 'xxl-y-right'
-  | 'xxl-top-left'
-  | 'xxl-top-right'
-  | 'xxl-bottom-left'
-  | 'xxl-bottom-right'
-  | 'xs-xs'
-  | 'sm-sm'
-  | 'md-md'
-  | 'lg-lg'
-  | 'xl-xl'
-  | 'xxl-xxl'
-  | 'xs-xs-x'
-  | 'xs-xs-y'
-  | 'xs-xs-top'
-  | 'xs-xs-bottom'
-  | 'xs-xs-left'
-  | 'xs-xs-right'
-  | 'xs-xs-x-top'
-  | 'xs-xs-x-bottom'
-  | 'xs-xs-y-left'
-  | 'xs-xs-y-right'
-  | 'xs-xs-top-left'
-  | 'xs-xs-top-right'
-  | 'xs-xs-bottom-left'
-  | 'xs-xs-bottom-right'
-  | 'sm-sm-x'
-  | 'sm-sm-y'
-  | 'sm-sm-top'
-  | 'sm-sm-bottom'
-  | 'sm-sm-left'
-  | 'sm-sm-right'
-  | 'sm-sm-x-top'
-  | 'sm-sm-x-bottom'
-  | 'sm-sm-y-left'
-  | 'sm-sm-y-right'
-  | 'sm-sm-top-left'
-  | 'sm-sm-top-right'
-  | 'sm-sm-bottom-left'
-  | 'sm-sm-bottom-right'
-  | 'md-md-x'
-  | 'md-md-y'
-  | 'md-md-top'
-  | 'md-md-bottom'
-  | 'md-md-left'
-  | 'md-md-right'
-  | 'md-md-x-top'
-  | 'md-md-x-bottom'
-  | 'md-md-y-left'
-  | 'md-md-y-right'
-  | 'md-md-top-left'
-  | 'md-md-top-right'
-  | 'md-md-bottom-left'
-  | 'md-md-bottom-right'
-  | 'lg-lg-x'
-  | 'lg-lg-y'
-  | 'lg-lg-top'
-  | 'lg-lg-bottom'
-  | 'lg-lg-left'
-  | 'lg-lg-right'
-  | 'lg-lg-x-top'
-  | 'lg-lg-x-bottom'
-  | 'lg-lg-y-left'
-  | 'lg-lg-y-right'
-  | 'lg-lg-top-left'
-  | 'lg-lg-top-right'
-  | 'lg-lg-bottom-left'
-  | 'lg-lg-bottom-right'
-  | 'xl-xl-x'
-  | 'xl-xl-y'
-  | 'xl-xl-top'
-  | 'xl-xl-bottom'
-  | 'xl-xl-left'
-  | 'xl-xl-right'
-  | 'xl-xl-x-top'
-  | 'xl-xl-x-bottom'
-  | 'xl-xl-y-left'
-  | 'xl-xl-y-right'
-  | 'xl-xl-top-left'
-  | 'xl-xl-top-right'
-  | 'xl-xl-bottom-left'
-  | 'xl-xl-bottom-right'
-  | 'xxl-xxl-x'
-  | 'xxl-xxl-y'
-  | 'xxl-xxl-top'
-  | 'xxl-xxl-bottom'
-  | 'xxl-xxl-left'
-  | 'xxl-xxl-right'
-  | 'xxl-xxl-x-top'
-  | 'xxl-xxl-x-bottom'
-  | 'xxl-xxl-y-left'
-  | 'xxl-xxl-y-right'
-  | 'xxl-xxl-top-left'
-  | 'xxl-xxl-top-right'
-  | 'xxl-xxl-bottom-left'
-  | 'xxl-xxl-bottom-right';
+type DefaultRadius = 'sm' | 'md' | 'lg';
+type MergedColor = 'disabled' | Color;
+type GapDirection = 'default' | 'row' | 'col';
 type SpacingScale =
   | 'normal'
   | 'square'
@@ -217,135 +14,79 @@ type SpacingScale =
   | 'border-square-y-left'
   | 'border-y-right'
   | 'border-square-y-right';
-type Border =
-  | 'none'
-  | 'all'
-  | 'x'
-  | 'y'
-  | 'top'
-  | 'bottom'
-  | 'left'
-  | 'right'
-  | 'x-top'
-  | 'x-bottom'
-  | 'y-left'
-  | 'y-right'
-  | 'top-left'
-  | 'top-right'
-  | 'bottom-left'
-  | 'bottom-right';
-type Radius =
-  | 'none'
-  | 'xs'
-  | 'sm'
-  | 'md'
-  | 'lg'
-  | 'xl'
-  | 'full'
-  | 'xs-top'
-  | 'xs-bottom'
-  | 'xs-left'
-  | 'xs-right'
-  | 'xs-top-left'
-  | 'xs-top-right'
-  | 'xs-bottom-left'
-  | 'xs-bottom-right'
-  | 'sm-top'
-  | 'sm-bottom'
-  | 'sm-left'
-  | 'sm-right'
-  | 'sm-top-left'
-  | 'sm-top-right'
-  | 'sm-bottom-left'
-  | 'sm-bottom-right'
-  | 'md-top'
-  | 'md-bottom'
-  | 'md-left'
-  | 'md-right'
-  | 'md-top-left'
-  | 'md-top-right'
-  | 'md-bottom-left'
-  | 'md-bottom-right'
-  | 'lg-top'
-  | 'lg-bottom'
-  | 'lg-left'
-  | 'lg-right'
-  | 'lg-top-left'
-  | 'lg-top-right'
-  | 'lg-bottom-left'
-  | 'lg-bottom-right'
-  | 'xl-top'
-  | 'xl-bottom'
-  | 'xl-left'
-  | 'xl-right'
-  | 'xl-top-left'
-  | 'xl-top-right'
-  | 'xl-bottom-left'
-  | 'xl-bottom-right'
-  | 'full-top'
-  | 'full-bottom'
-  | 'full-left'
-  | 'full-right'
-  | 'full-top-left'
-  | 'full-top-right'
-  | 'full-bottom-left'
-  | 'full-bottom-right';
-type DefaultRadius = 'sm' | 'md' | 'lg';
-type MergedColor = 'disabled' | Color;
-type ColorType = 'bg' | 'border' | 'text' | 'fill' | 'stroke' | 'ring';
-type GapDirection = 'default' | 'row' | 'col';
-type Transition =
-  | 'fade'
-  | 'transform'
-  | 'transform-fade'
-  | 'collapse-x'
-  | 'collapse-x-fade'
-  | 'collapse-y'
-  | 'collapse-y-fade';
-type Cursor = 'none' | 'pointer' | 'disabled';
+
+type Styles = Record<string, CSSProps>;
 
 type Generic = {
   styles: {
-    focusable: Record<Focusable, CSSProps>;
-    loading: Record<Loading, CSSProps>;
-    display: Record<Display, CSSProps>;
-    position: Record<Position, CSSProps>;
+    state: {
+      focused: CSSProps;
+      shifted: CSSProps;
+    };
+    focusable: Styles;
+    loading: Styles;
+    display: Styles;
+    position: Styles;
     size: {
-      normal: Record<DefaultSize, Record<SizeScale, CSSProps>>;
-      text: Record<DefaultSize, Record<SizeScale, CSSProps>>;
-      font: Record<Size, CSSProps>;
-      title: Record<Size, CSSProps>;
+      normal: {
+        normal: Styles;
+        square: Styles;
+      };
+      text: {
+        normal: Styles;
+        square: Styles;
+      };
+      font: Styles;
+      title: Styles;
     };
-    scale: Record<Scale, CSSProps>;
+    scale: Styles;
     spacing: {
-      normal: Record<Size, Record<SpacingScale, CSSProps>>;
-      container: Record<Spacing, CSSProps>;
+      normal: Record<SpacingScale, Styles>;
+      container: Styles;
     };
-    margin: Record<Margin, CSSProps>;
-    border: Record<Border, CSSProps>;
-    radius: Record<DefaultRadius, Record<Radius, CSSProps>>;
-    weight: Record<Weight, CSSProps>;
-    underline: Record<Underline, CSSProps>;
-    wordBreak: Record<WordBreak, CSSProps>;
-    textWrap: Record<TextWrap, CSSProps>;
-    textAlign: Record<TextAlign, CSSProps>;
-    textOverflow: Record<TextOverflow, CSSProps>;
-    color: Record<ColorType, Record<MergedColor, Record<string, CSSProps>>>;
-    direction: Record<Direction, CSSProps>;
-    wrap: Record<Wrap, CSSProps>;
-    justify: Record<JustifyContent, CSSProps>;
-    align: Record<AlignItems, CSSProps>;
-    gap: Record<GapDirection, Record<Gap, CSSProps>>;
-    effect: Record<Effect, CSSProps>;
-    transition: Record<Transition, CSSProps>;
-    cursor: Record<Cursor, CSSProps>;
+    margin: Styles;
+    border: Styles;
+    radius: Record<DefaultRadius, Styles>;
+    weight: Styles;
+    underline: Styles;
+    wordBreak: Styles;
+    textWrap: Styles;
+    textAlign: Styles;
+    textOverflow: Styles;
+    color: {
+      bg: Record<MergedColor, Styles>;
+      border: Record<MergedColor, Styles>;
+      text: Record<MergedColor, Styles>;
+      fill: Record<MergedColor, Styles>;
+      stroke: Record<MergedColor, Styles>;
+      ring: Record<MergedColor, Styles>;
+      input: Record<Color, Styles>;
+    };
+    direction: Styles;
+    flow: Styles;
+    wrap: Styles;
+    justifyContent: Styles;
+    alignContent: Styles;
+    justifyItems: Styles;
+    alignItems: Styles;
+    gap: Record<GapDirection, Styles>;
+    effect: Styles;
+    transition: Styles;
+    cursor: Styles;
   };
 };
 
 export const generic: Generic = {
   styles: {
+    state: {
+      focused: {
+        state: 'focused'
+      },
+      shifted: {
+        state: 'shifted'
+      }
+    },
     focusable: {
-      none: {},
       default: {
         focus: 'focus:outline-none',
         focusVisible: 'focus-visible:ring-4'
@@ -356,7 +97,6 @@ export const generic: Generic = {
       }
     },
     loading: {
-      none: {},
       normal: {
         opacity: 'opacity-50'
       },
@@ -367,7 +107,6 @@ export const generic: Generic = {
       }
     },
     display: {
-      block: {},
       flex: {
         display: 'flex'
       },
@@ -394,120 +133,96 @@ export const generic: Generic = {
     },
     size: {
       normal: {
-        none: {
-          normal: {},
-          square: {}
-        },
-        xs: {
-          normal: {
+        normal: {
+          xs: {
             height: 'h-5'
           },
-          square: {
+          sm: {
+            height: 'h-8'
+          },
+          md: {
+            height: 'h-10'
+          },
+          lg: {
+            height: 'h-12'
+          },
+          xl: {
+            height: 'h-16'
+          },
+          xxl: {
+            height: 'h-20'
+          }
+        },
+        square: {
+          xs: {
             width: 'w-5',
             height: 'h-5'
-          }
-        },
-        sm: {
-          normal: {
-            height: 'h-8'
           },
-          square: {
+          sm: {
             width: 'w-8',
             height: 'h-8'
-          }
-        },
-        md: {
-          normal: {
-            height: 'h-10'
           },
-          square: {
+          md: {
             width: 'w-10',
             height: 'h-10'
-          }
-        },
-        lg: {
-          normal: {
-            height: 'h-12'
           },
-          square: {
+          lg: {
             width: 'w-12',
             height: 'h-12'
-          }
-        },
-        xl: {
-          normal: {
-            height: 'h-16'
           },
-          square: {
+          xl: {
             width: 'w-16',
             height: 'h-16'
-          }
-        },
-        xxl: {
-          normal: {
-            height: 'h-20'
           },
-          square: {
+          xxl: {
             width: 'w-20',
             height: 'h-20'
           }
         }
       },
       text: {
-        none: {
-          normal: {},
-          square: {}
-        },
-        xs: {
-          normal: {
+        normal: {
+          xs: {
             height: 'h-3'
           },
-          square: {
+          sm: {
+            height: 'h-4'
+          },
+          md: {
+            height: 'h-4'
+          },
+          lg: {
+            height: 'h-5'
+          },
+          xl: {
+            height: 'h-6'
+          },
+          xxl: {
+            height: 'h-7'
+          }
+        },
+        square: {
+          xs: {
             width: 'w-3',
             height: 'h-3'
-          }
-        },
-        sm: {
-          normal: {
-            height: 'h-4'
           },
-          square: {
+          sm: {
             width: 'w-4',
             height: 'h-4'
-          }
-        },
-        md: {
-          normal: {
-            height: 'h-5'
           },
-          square: {
+          md: {
             width: 'w-5',
             height: 'h-5'
-          }
-        },
-        lg: {
-          normal: {
-            height: 'h-6'
           },
-          square: {
+          lg: {
             width: 'w-6',
             height: 'h-6'
-          }
-        },
-        xl: {
-          normal: {
-            height: 'h-7'
           },
-          square: {
+          xl: {
             width: 'w-7',
             height: 'h-7'
-          }
-        },
-        xxl: {
-          normal: {
-            height: 'h-8'
           },
-          square: {
+          xxl: {
             width: 'w-8',
             height: 'h-8'
           }
@@ -555,7 +270,6 @@ export const generic: Generic = {
       }
     },
     scale: {
-      normal: {},
       fit: {
         width: 'w-fit'
       },
@@ -568,201 +282,208 @@ export const generic: Generic = {
     },
     spacing: {
       normal: {
-        xs: {
-          normal: {
+        normal: {
+          xs: {
             padding: 'px-2 py-1'
           },
-          square: {
-            padding: 'p-1'
-          },
-          border: {
-            padding: 'px-1.75 py-0.75'
-          },
-          'border-square': {
-            padding: 'p-0.75'
-          },
-          'border-y': {
-            padding: 'px-2 py-0.75'
-          },
-          'border-square-y': {
-            padding: 'px-1 py-0.75'
-          },
-          'border-y-left': {
-            padding: 'pl-1.75 pr-2 py-0.75'
-          },
-          'border-square-y-left': {
-            padding: 'pl-0.75 pr-1 py-0.75'
-          },
-          'border-y-right': {
-            padding: 'pl-2 pr-1.75 py-0.75'
-          },
-          'border-square-y-right': {
-            padding: 'pl-1 pr-0.75 py-0.75'
-          }
-        },
-        sm: {
-          normal: {
+          sm: {
             padding: 'px-4 py-2'
           },
-          square: {
-            padding: 'p-2'
-          },
-          border: {
-            padding: 'px-3.75 py-1.75'
-          },
-          'border-square': {
-            padding: 'p-1.75'
-          },
-          'border-y': {
-            padding: 'px-4 py-1.75'
-          },
-          'border-square-y': {
-            padding: 'px-2 py-1.75'
-          },
-          'border-y-left': {
-            padding: 'pl-3.75 pr-4 py-1.75'
-          },
-          'border-square-y-left': {
-            padding: 'pl-1.75 pr-2 py-1.75'
-          },
-          'border-y-right': {
-            padding: 'pl-4 pr-3.75 py-1.75'
-          },
-          'border-square-y-right': {
-            padding: 'pl-2 pr-1.75 py-1.75'
-          }
-        },
-        md: {
-          normal: {
+          md: {
             padding: 'px-5 py-2.5'
           },
-          square: {
-            padding: 'p-2.5'
-          },
-          border: {
-            padding: 'px-4.75 py-2.25'
-          },
-          'border-square': {
-            padding: 'p-2.25'
-          },
-          'border-y': {
-            padding: 'px-5 py-2.25'
-          },
-          'border-square-y': {
-            padding: 'px-2.5 py-2.25'
-          },
-          'border-y-left': {
-            padding: 'pl-4.75 pr-5 py-2.25'
-          },
-          'border-square-y-left': {
-            padding: 'pl-2.25 pr-2.5 py-2.25'
-          },
-          'border-y-right': {
-            padding: 'pl-5 pr-4.75 py-2.25'
-          },
-          'border-square-y-right': {
-            padding: 'pl-2.5 pr-2.25 py-2.25'
-          }
-        },
-        lg: {
-          normal: {
+          lg: {
             padding: 'px-6 py-3'
           },
-          square: {
-            padding: 'p-3'
-          },
-          border: {
-            padding: 'px-5.75 py-2.75'
-          },
-          'border-square': {
-            padding: 'p-2.75'
-          },
-          'border-y': {
-            padding: 'px-6 py-2.75'
-          },
-          'border-square-y': {
-            padding: 'px-3 py-2.75'
-          },
-          'border-y-left': {
-            padding: 'pl-5.75 pr-6 py-2.75'
-          },
-          'border-square-y-left': {
-            padding: 'pl-2.75 pr-3 py-2.75'
-          },
-          'border-y-right': {
-            padding: 'pl-6 pr-5.75 py-2.75'
-          },
-          'border-square-y-right': {
-            padding: 'pl-3 pr-2.75 py-2.75'
-          }
-        },
-        xl: {
-          normal: {
+          xl: {
             padding: 'px-9 py-4.5'
           },
-          square: {
-            padding: 'p-4.5'
-          },
-          border: {
-            padding: 'px-8.75 py-4.25'
-          },
-          'border-square': {
-            padding: 'p-4.25'
-          },
-          'border-y': {
-            padding: 'px-9 py-4.25'
-          },
-          'border-square-y': {
-            padding: 'px-4.5 py-4.25'
-          },
-          'border-y-left': {
-            padding: 'pl-8.75 pr-9 py-4.25'
-          },
-          'border-square-y-left': {
-            padding: 'pl-4.25 pr-4.5 py-4.25'
-          },
-          'border-y-right': {
-            padding: 'pl-9 pr-8.75 py-4.25'
-          },
-          'border-square-y-right': {
-            padding: 'pl-4.5 pr-4.25 py-4.25'
+          xxl: {
+            padding: 'px-12 py-6'
           }
         },
-        xxl: {
-          normal: {
-            padding: 'px-12 py-6'
+        square: {
+          xs: {
+            padding: 'p-1'
           },
-          square: {
+          sm: {
+            padding: 'p-2'
+          },
+          md: {
+            padding: 'p-2.5'
+          },
+          lg: {
+            padding: 'p-3'
+          },
+          xl: {
+            padding: 'p-4.5'
+          },
+          xxl: {
             padding: 'p-6'
+          }
+        },
+        border: {
+          xs: {
+            padding: 'px-1.75 py-0.75'
           },
-          border: {
+          sm: {
+            padding: 'px-3.75 py-1.75'
+          },
+          md: {
+            padding: 'px-4.75 py-2.25'
+          },
+          lg: {
+            padding: 'px-5.75 py-2.75'
+          },
+          xl: {
+            padding: 'px-8.75 py-4.25'
+          },
+          xxl: {
             padding: 'px-11.75 py-5.75'
+          }
+        },
+        'border-square': {
+          xs: {
+            padding: 'p-0.75'
           },
-          'border-square': {
+          sm: {
+            padding: 'p-1.75'
+          },
+          md: {
+            padding: 'p-2.25'
+          },
+          lg: {
+            padding: 'p-2.75'
+          },
+          xl: {
+            padding: 'p-4.25'
+          },
+          xxl: {
             padding: 'p-5.75'
+          }
+        },
+        'border-y': {
+          xs: {
+            padding: 'px-2 py-0.75'
           },
-          'border-y': {
+          sm: {
+            padding: 'px-4 py-1.75'
+          },
+          md: {
+            padding: 'px-5 py-2.25'
+          },
+          lg: {
+            padding: 'px-6 py-2.75'
+          },
+          xl: {
+            padding: 'px-9 py-4.25'
+          },
+          xxl: {
             padding: 'px-12 py-5.75'
+          }
+        },
+        'border-square-y': {
+          xs: {
+            padding: 'px-1 py-0.75'
           },
-          'border-square-y': {
+          sm: {
+            padding: 'px-2 py-1.75'
+          },
+          md: {
+            padding: 'px-2.5 py-2.25'
+          },
+          lg: {
+            padding: 'px-3 py-2.75'
+          },
+          xl: {
+            padding: 'px-4.5 py-4.25'
+          },
+          xxl: {
             padding: 'px-6 py-5.75'
+          }
+        },
+        'border-y-left': {
+          xs: {
+            padding: 'pl-1.75 pr-2 py-0.75'
           },
-          'border-y-left': {
+          sm: {
+            padding: 'pl-3.75 pr-4 py-1.75'
+          },
+          md: {
+            padding: 'pl-4.75 pr-5 py-2.25'
+          },
+          lg: {
+            padding: 'pl-5.75 pr-6 py-2.75'
+          },
+          xl: {
+            padding: 'pl-8.75 pr-9 py-4.25'
+          },
+          xxl: {
             padding: 'pl-11.75 pr-12 py-5.75'
+          }
+        },
+        'border-square-y-left': {
+          xs: {
+            padding: 'pl-0.75 pr-1 py-0.75'
           },
-          'border-square-y-left': {
+          sm: {
+            padding: 'pl-1.75 pr-2 py-1.75'
+          },
+          md: {
+            padding: 'pl-2.25 pr-2.5 py-2.25'
+          },
+          lg: {
+            padding: 'pl-2.75 pr-3 py-2.75'
+          },
+          xl: {
+            padding: 'pl-4.25 pr-4.5 py-4.25'
+          },
+          xxl: {
             padding: 'pl-5.75 pr-6 py-5.75'
+          }
+        },
+        'border-y-right': {
+          xs: {
+            padding: 'pl-2 pr-1.75 py-0.75'
           },
-          'border-y-right': {
+          sm: {
+            padding: 'pl-4 pr-3.75 py-1.75'
+          },
+          md: {
+            padding: 'pl-5 pr-4.75 py-2.25'
+          },
+          lg: {
+            padding: 'pl-6 pr-5.75 py-2.75'
+          },
+          xl: {
+            padding: 'pl-9 pr-8.75 py-4.25'
+          },
+          xxl: {
             padding: 'pl-12 pr-11.75 py-5.75'
+          }
+        },
+        'border-square-y-right': {
+          xs: {
+            padding: 'pl-1 pr-0.75 py-0.75'
           },
-          'border-square-y-right': {
+          sm: {
+            padding: 'pl-2 pr-1.75 py-1.75'
+          },
+          md: {
+            padding: 'pl-2.5 pr-2.25 py-2.25'
+          },
+          lg: {
+            padding: 'pl-3 pr-2.75 py-2.75'
+          },
+          xl: {
+            padding: 'pl-4.5 pr-4.25 py-4.25'
+          },
+          xxl: {
             padding: 'pl-6 pr-5.75 py-5.75'
           }
         }
       },
       container: {
-        none: {},
         xs: {
           padding: 'p-2'
         },
@@ -1306,7 +1027,6 @@ export const generic: Generic = {
       }
     },
     margin: {
-      none: {},
       xs: {
         margin: 'm-2'
       },
@@ -1579,7 +1299,6 @@ export const generic: Generic = {
       }
     },
     border: {
-      none: {},
       all: {
         borderWidth: 'border'
       },
@@ -1628,7 +1347,6 @@ export const generic: Generic = {
     },
     radius: {
       sm: {
-        none: {},
         xs: {
           borderRadius: 'rounded-sm'
         },
@@ -1793,7 +1511,6 @@ export const generic: Generic = {
         }
       },
       md: {
-        none: {},
         xs: {
           borderRadius: 'rounded'
         },
@@ -1958,7 +1675,6 @@ export const generic: Generic = {
         }
       },
       lg: {
-        none: {},
         xs: {
           borderRadius: 'rounded-md'
         },
@@ -2124,7 +1840,6 @@ export const generic: Generic = {
       }
     },
     weight: {
-      normal: {},
       semi: {
         font: 'font-semibold'
       },
@@ -2133,7 +1848,6 @@ export const generic: Generic = {
       }
     },
     underline: {
-      normal: {},
       none: {
         textDecoration: 'no-underline'
       },
@@ -2145,7 +1859,6 @@ export const generic: Generic = {
       }
     },
     wordBreak: {
-      normal: {},
       words: {
         wordBreak: 'break-words'
       },
@@ -2157,7 +1870,6 @@ export const generic: Generic = {
       }
     },
     textWrap: {
-      wrap: {},
       nowrap: {
         textWrap: 'text-nowrap'
       },
@@ -2169,7 +1881,6 @@ export const generic: Generic = {
       }
     },
     textAlign: {
-      left: {},
       center: {
         textAlign: 'text-center'
       },
@@ -2181,7 +1892,6 @@ export const generic: Generic = {
       }
     },
     textOverflow: {
-      clip: {},
       truncate: {
         textOverflow: 'truncate'
       },
@@ -2795,10 +2505,75 @@ export const generic: Generic = {
             color: 'ring-error-50'
           }
         }
+      },
+      input: {
+        surface: {
+          default: {
+            group: '[.focused]:text-surface-500 [.focused]:fill-surface-500'
+          },
+          on: {
+            group: '[.focused]:text-surface-50 [.focused]:fill-surface-50'
+          }
+        },
+        neutral: {
+          default: {
+            group: '[.focused]:text-neutral-500 [.focused]:fill-neutral-500'
+          },
+          on: {
+            group: '[.focused]:text-neutral-50 [.focused]:fill-neutral-50'
+          }
+        },
+        primary: {
+          default: {
+            group: '[.focused]:text-primary-500 [.focused]:fill-primary-500'
+          },
+          on: {
+            group: '[.focused]:text-primary-50 [.focused]:fill-primary-50'
+          }
+        },
+        secondary: {
+          default: {
+            group: '[.focused]:text-secondary-500 [.focused]:fill-secondary-500'
+          },
+          on: {
+            group: '[.focused]:text-secondary-50 [.focused]:fill-secondary-50'
+          }
+        },
+        tertiary: {
+          default: {
+            group: '[.focused]:text-tertiary-500 [.focused]:fill-tertiary-500'
+          },
+          on: {
+            group: '[.focused]:text-tertiary-50 [.focused]:fill-tertiary-50'
+          }
+        },
+        success: {
+          default: {
+            group: '[.focused]:text-success-500 [.focused]:fill-success-500'
+          },
+          on: {
+            group: '[.focused]:text-success-50 [.focused]:fill-success-50'
+          }
+        },
+        warning: {
+          default: {
+            group: '[.focused]:text-warning-500 [.focused]:fill-warning-500'
+          },
+          on: {
+            group: '[.focused]:text-warning-50 [.focused]:fill-warning-50'
+          }
+        },
+        error: {
+          default: {
+            group: '[.focused]:text-error-500 [.focused]:fill-error-500'
+          },
+          on: {
+            group: '[.focused]:text-error-50 [.focused]:fill-error-50'
+          }
+        }
       }
     },
     direction: {
-      row: {},
       col: {
         flexDirection: 'flex-col'
       },
@@ -2809,8 +2584,21 @@ export const generic: Generic = {
         flexDirection: 'flex-col-reverse'
       }
     },
+    flow: {
+      col: {
+        gridAutoFlow: 'grid-flow-col'
+      },
+      dense: {
+        gridAutoFlow: 'grid-flow-dense'
+      },
+      'row-dense': {
+        gridAutoFlow: 'grid-flow-row-dense'
+      },
+      'col-dense': {
+        gridAutoFlow: 'grid-flow-col-dense'
+      }
+    },
     wrap: {
-      nowrap: {},
       wrap: {
         flexWrap: 'flex-wrap'
       },
@@ -2818,8 +2606,7 @@ export const generic: Generic = {
         flexWrap: 'flex-wrap-reverse'
       }
     },
-    justify: {
-      normal: {},
+    justifyContent: {
       start: {
         justifyContent: 'justify-start'
       },
@@ -2842,8 +2629,44 @@ export const generic: Generic = {
         justifyContent: 'justify-stretch'
       }
     },
-    align: {
-      stretch: {},
+    alignContent: {
+      start: {
+        alignContent: 'content-start'
+      },
+      center: {
+        alignContent: 'content-center'
+      },
+      end: {
+        alignContent: 'content-end'
+      },
+      between: {
+        alignContent: 'content-between'
+      },
+      around: {
+        alignContent: 'content-around'
+      },
+      evenly: {
+        alignContent: 'content-evenly'
+      },
+      stretch: {
+        alignContent: 'content-stretch'
+      },
+      baseline: {
+        alignContent: 'content-baseline'
+      }
+    },
+    justifyItems: {
+      start: {
+        justifyItems: 'justify-items-start'
+      },
+      center: {
+        justifyItems: 'justify-items-center'
+      },
+      end: {
+        justifyItems: 'justify-items-end'
+      }
+    },
+    alignItems: {
       start: {
         alignItems: 'items-start'
       },
@@ -2859,7 +2682,6 @@ export const generic: Generic = {
     },
     gap: {
       default: {
-        none: {},
         xs: {
           gap: 'gap-2'
         },
@@ -2880,7 +2702,6 @@ export const generic: Generic = {
         }
       },
       col: {
-        none: {},
         xs: {
           gap: 'gap-x-2'
         },
@@ -2901,7 +2722,6 @@ export const generic: Generic = {
         }
       },
       row: {
-        none: {},
         xs: {
           gap: 'gap-y-2'
         },
@@ -2923,7 +2743,6 @@ export const generic: Generic = {
       }
     },
     effect: {
-      none: {},
       shadow: {
         boxShadow: 'shadow-md',
         transition: 'transition',
@@ -2946,6 +2765,7 @@ export const generic: Generic = {
       'collapse-x': {
         display: 'flex',
         overflow: 'overflow-hidden',
+        textWrap: 'text-nowrap',
         transition: 'transition-width'
       },
       'collapse-y': {
@@ -2955,6 +2775,7 @@ export const generic: Generic = {
       'collapse-x-fade': {
         display: 'flex',
         overflow: 'overflow-hidden',
+        textWrap: 'text-nowrap',
         transition: 'transition-[width,_opacity]'
       },
       'collapse-y-fade': {

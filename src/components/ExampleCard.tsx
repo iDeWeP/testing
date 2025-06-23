@@ -1,47 +1,36 @@
-import React, { type ReactNode, forwardRef } from 'react';
+import type { ReactNode } from 'react';
+import { Card } from '../core/components/Card/Card';
 
-import Card from '../lib/idewep/core/components/Card/Card';
-
-interface ExampleCardProps {
+type Props = {
   stable?: boolean;
   vertical?: boolean;
   stretch?: boolean;
   align?: boolean;
   children: ReactNode;
-}
+};
 
-const ExampleCard = forwardRef<HTMLDivElement, ExampleCardProps>(
-  (
-    {
-      stable = false,
-      vertical = false,
-      stretch = false,
-      align = false,
-      ...restProps
-    },
-    forwardedRef
-  ) => {
-    const classes = `relative bg-light-neutral/25${
-      stable ? ' h-[16rem]' : ''
-    } flex-wrap`;
+export const ExampleCard = ({
+  stable = false,
+  vertical = false,
+  stretch = false,
+  align = false,
+  ...restProps
+}: Props) => {
+  const className = `relative bg-disabled-50 ${stable ? 'h-[16rem]' : ''}`;
 
-    return (
-      <Card
-        size="md-md"
-        radius="xl"
-        border
-        orientation={vertical ? 'vertical' : 'horizontal'}
-        justify="evenly"
-        align={align ? 'end' : stretch ? 'stretch' : 'center'}
-        gap="md"
-        className={classes}
-        ref={forwardedRef}
-        {...restProps}
-      />
-    );
-  }
-);
-
-ExampleCard.displayName = 'ExampleCard';
-
-export default ExampleCard;
+  return (
+    <Card
+      direction={vertical ? 'col' : 'row'}
+      wrap="wrap"
+      justify="evenly"
+      size="md-md"
+      align={align ? 'end' : stretch ? 'stretch' : 'center'}
+      gap="md"
+      variant="light"
+      border
+      radius="xl"
+      className={className}
+      {...restProps}
+    />
+  );
+};

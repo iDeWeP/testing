@@ -1,4 +1,4 @@
-import React, { type ReactNode, type FC } from 'react';
+/* import React, { type ReactNode, type FC } from 'react';
 
 import Heading from '../lib/idewep/core/components/Heading/Heading';
 
@@ -14,4 +14,10 @@ const MainTitle: FC<MainTitleProps> = (props) => (
   />
 );
 
-export default MainTitle;
+export default MainTitle; */
+
+import type { ComponentProps } from 'react';
+
+export const ExampleTitle = ({ children }: ComponentProps<'h1'>) => (
+  <h1>{children}</h1>
+);

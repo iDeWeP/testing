@@ -1,11 +1,27 @@
+import type { ComponentPropsWithRef, CSSProperties, ElementType } from 'react';
 
+export type MergeProps<D extends object, T extends object> = Omit<D, keyof T> &
+  T;
+
+export type MergeComponentProps<E extends ElementType, T> = Omit<
+  ComponentPropsWithRef<E>,
+  keyof T
+> &
+  T;
+
+export type ComponentRefProps<E extends ElementType> = Omit<
+  ComponentPropsWithRef<E>,
+  'color' | 'scale' | 'offset'
+>;
+// Omit<T, 'offset' | 'size' | 'scale' | 'radius' | 'color' | 'rotate' | 'content'>
 
 export type ComponentConfig<P> = {
   props: Required<P>;
 };
 
-/* export type Loading = boolean | 'left' | 'right';
-/* export type Triger =
+export type Loading = boolean | 'left' | 'right';
+export type Collision = 'none' | 'shift' | 'flip';
+export type Trigger =
   | 'none'
   | 'hover'
   | 'click'
@@ -15,6 +31,7 @@ export type ComponentConfig<P> = {
   | 'hover-click'
   | 'click-none'
   | 'click-hover';
+export type Peak = 'auto' | number;
 /* export type Layout =
   | 'default'
   | 'row'
@@ -25,18 +42,19 @@ export type ComponentConfig<P> = {
   | 'dashboard'
   | 'dashboard-left'
   | 'dashboard-center'
-  | 'dashboard-right';
-/* export type ContainerLayout = 'header' | 'body' | 'footer' | 'fullbleed'; */
-export type Variant = 'none' | 'text' | 'light' | 'surface' | 'solid';
-/* export type InputVariant = 'default' | 'soft' | 'outlined';
-export type Orientation = 'horizontal' | 'vertical';
-export type Placement = 'top' | 'bottom' | 'left' | 'right';
-export type CornerPlacement =
-  | 'top-left'
-  | 'top-right'
-  | 'bottom-left'
-  | 'bottom-right';
-export type OuterPlacement =
+  | 'dashboard-right'; */
+export type Variant = 'none' | 'plain' | 'text' | 'light' | 'surface' | 'solid';
+export type InputVariant =
+  | 'default'
+  | 'light'
+  | 'outlined'
+  | 'default-plain'
+  | 'light-plain'
+  | 'outlined-plain';
+export type DefaultInputVariant = 'default' | 'light' | 'outlined';
+export type Theme = 'light' | 'dark';
+export type Orientation = 'vertical' | 'horizontal';
+export type Placement =
   | 'top'
   | 'bottom'
   | 'left'
@@ -49,7 +67,8 @@ export type OuterPlacement =
   | 'left-end'
   | 'right-start'
   | 'right-end';
-export type InnerPlacement =
+export type DefaultPlacement = 'top' | 'bottom' | 'left' | 'right';
+/* export type InnerPlacement =
   | 'top'
   | 'bottom'
   | 'left'
@@ -57,126 +76,17 @@ export type InnerPlacement =
   | 'top-left'
   | 'top-right'
   | 'bottom-left'
-  | 'bottom-right';
-export type CrossPlacement = 'left' | 'center' | 'right';
+  | 'bottom-right'; */
+/*export type CornerPlacement =
+  | 'top-left'
+  | 'top-right'
+  | 'bottom-left'
+  | 'bottom-right'; */
+export type CrossPlacement = 'start' | 'center' | 'end';
 export type SidePlacement = 'left' | 'right';
-export type MainAxis = 'top' | 'bottom' | 'left' | 'right';
-export type CrossAxis = 'start' | 'center' | 'end';
-export type Offset =
-  | 'none'
-  | 'xs'
-  | 'sm'
-  | 'md'
-  | 'lg'
-  | 'xl'
-  | 'xs-xs'
-  | 'sm-sm'
-  | 'md-md'
-  | 'lg-lg'
-  | 'xl-xl';
-export type Overlap = 'square' | 'rounded' | 'circular';
-export type Size =
-  | 'xs'
-  | 'sm'
-  | 'md'
-  | 'lg'
-  | 'xl'
-  | 'xs-xs'
-  | 'sm-sm'
-  | 'md-md'
-  | 'lg-lg'
-  | 'xl-xl';
-export type DefaultSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl';
-export type AvatarSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl';
-export type InputSize = 'sm' | 'md' | 'lg';
-export type TextareaSize = 'sm' | 'md' | 'lg' | 'full';
-export type IconSize = 'none' | 'xs' | 'sm' | 'md' | 'lg' | 'xl';
-export type HeadingSize = '1' | '2' | '3' | '4' | '5' | '6';
-export type Length = number | string | 'auto'; */
-export type Scale = 'square'  | 'square-fit' | 'square-full' | 'rect'  | 'rect-fit' | 'rect-full';
-export type ScaleSizes = 'square' | 'rect';
-export type ScaleWidth = 'default' | 'fit' | 'full'
-/* export type DefaultScale = 'default' | 'text';
-export type ButtonScale = 'default' | 'full' | 'fit' | 'square';
-export type IconScale = 'default' | 'text' | 'square' | 'text-square'; */
-export type Spacing =
-  | 'none'
-  | 'xs'
-  | 'sm'
-  | 'md'
-  | 'lg'
-  | 'xl'
-  | 'xs-x'
-  | 'xs-y'
-  | 'xs-top'
-  | 'xs-bottom'
-  | 'xs-left'
-  | 'xs-right'
-  | 'xs-x-top'
-  | 'xs-x-bottom'
-  | 'xs-y-left'
-  | 'xs-y-right'
-  | 'xs-top-left'
-  | 'xs-top-right'
-  | 'xs-bottom-left'
-  | 'xs-bottom-right'
-  | 'sm-x'
-  | 'sm-y'
-  | 'sm-top'
-  | 'sm-bottom'
-  | 'sm-left'
-  | 'sm-right'
-  | 'sm-x-top'
-  | 'sm-x-bottom'
-  | 'sm-y-left'
-  | 'sm-y-right'
-  | 'sm-top-left'
-  | 'sm-top-right'
-  | 'sm-bottom-left'
-  | 'sm-bottom-right'
-  | 'md-x'
-  | 'md-y'
-  | 'md-top'
-  | 'md-bottom'
-  | 'md-left'
-  | 'md-right'
-  | 'md-x-top'
-  | 'md-x-bottom'
-  | 'md-y-left'
-  | 'md-y-right'
-  | 'md-top-left'
-  | 'md-top-right'
-  | 'md-bottom-left'
-  | 'md-bottom-right'
-  | 'lg-x'
-  | 'lg-y'
-  | 'lg-top'
-  | 'lg-bottom'
-  | 'lg-left'
-  | 'lg-right'
-  | 'lg-x-top'
-  | 'lg-x-bottom'
-  | 'lg-y-left'
-  | 'lg-y-right'
-  | 'lg-top-left'
-  | 'lg-top-right'
-  | 'lg-bottom-left'
-  | 'lg-bottom-right'
-  | 'xl-x'
-  | 'xl-y'
-  | 'xl-top'
-  | 'xl-bottom'
-  | 'xl-left'
-  | 'xl-right'
-  | 'xl-x-top'
-  | 'xl-x-bottom'
-  | 'xl-y-left'
-  | 'xl-y-right'
-  | 'xl-top-left'
-  | 'xl-top-right'
-  | 'xl-bottom-left'
-  | 'xl-bottom-right';
-/* export type DefaultSpacing =
+export type MainAxis = DefaultPlacement;
+export type CrossAxis = CrossPlacement;
+/* export type Offset =
   | 'none'
   | 'xs'
   | 'sm'
@@ -188,6 +98,30 @@ export type Spacing =
   | 'md-md'
   | 'lg-lg'
   | 'xl-xl'; */
+export type ArrowOffset = [number | string, number | string];
+// export type Overlap = 'square' | 'rounded' | 'circular';
+export type Size = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl';
+export type BoxSize =
+  | 'none'
+  | 'xs'
+  | 'sm'
+  | 'md'
+  | 'lg'
+  | 'xl'
+  | 'xxl'
+  | 'xs-xs'
+  | 'sm-sm'
+  | 'md-md'
+  | 'lg-lg'
+  | 'xl-xl'
+  | 'xxl-xxl';
+export type InputSize = 'sm' | 'md' | 'lg';
+// export type TextareaSize = 'sm' | 'md' | 'lg' | 'full';
+// export type IconSize = 'none' | 'xs' | 'sm' | 'md' | 'lg' | 'xl';
+export type Scale = 'normal' | 'fit' | 'full';
+export type DefaultScale = 'normal' | 'text';
+export type ButtonScale = 'normal' | 'full' | 'fit' | 'square';
+// export type IconScale = 'default' | 'text' | 'square' | 'text-square';
 export type Margin =
   | 'none'
   | 'xs'
@@ -282,7 +216,6 @@ export type Margin =
   | 'xxl-bottom-right';
 export type Border =
   | boolean
-  | 'none'
   | 'all'
   | 'x'
   | 'y'
@@ -298,70 +231,15 @@ export type Border =
   | 'top-right'
   | 'bottom-left'
   | 'bottom-right';
-export type Radius =
-  | 'none'
-  | 'xs'
-  | 'sm'
-  | 'md'
-  | 'lg'
-  | 'xl'
-  | 'full'
-  | 'xs-top'
-  | 'xs-bottom'
-  | 'xs-left'
-  | 'xs-right'
-  | 'xs-top-left'
-  | 'xs-top-right'
-  | 'xs-bottom-left'
-  | 'xs-bottom-right'
-  | 'sm-top'
-  | 'sm-bottom'
-  | 'sm-left'
-  | 'sm-right'
-  | 'sm-top-left'
-  | 'sm-top-right'
-  | 'sm-bottom-left'
-  | 'sm-bottom-right'
-  | 'md-top'
-  | 'md-bottom'
-  | 'md-left'
-  | 'md-right'
-  | 'md-top-left'
-  | 'md-top-right'
-  | 'md-bottom-left'
-  | 'md-bottom-right'
-  | 'lg-top'
-  | 'lg-bottom'
-  | 'lg-left'
-  | 'lg-right'
-  | 'lg-top-left'
-  | 'lg-top-right'
-  | 'lg-bottom-left'
-  | 'lg-bottom-right'
-  | 'xl-top'
-  | 'xl-bottom'
-  | 'xl-left'
-  | 'xl-right'
-  | 'xl-top-left'
-  | 'xl-top-right'
-  | 'xl-bottom-left'
-  | 'xl-bottom-right'
-  | 'full-top'
-  | 'full-bottom'
-  | 'full-left'
-  | 'full-right'
-  | 'full-top-left'
-  | 'full-top-right'
-  | 'full-bottom-left'
-  | 'full-bottom-right';
-// export type DefaultRadius = 'none' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'full';
-/* export type Weight = 'none' | 'semi' | 'bold';
-export type Underline = 'none' | 'hover' | 'always';
+export type Radius = 'none' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'full';
+export type Weight = 'normal' | 'semi' | 'bold';
+export type Underline = 'normal' | 'none' | 'hover' | 'always';
+export type WordBreak = 'normal' | 'words' | 'all' | 'keep';
 export type TextWrap = 'wrap' | 'nowrap' | 'balance' | 'pretty';
 export type TextAlign = 'left' | 'center' | 'right' | 'justify';
 export type TextOverflow = 'clip' | 'truncate' | 'ellipsis';
-export type WordBreak = 'normal' | 'words' | 'all' | 'keep'; */
 export type Color =
+  | 'surface'
   | 'neutral'
   | 'primary'
   | 'secondary'
@@ -369,9 +247,8 @@ export type Color =
   | 'success'
   | 'warning'
   | 'error';
-//export type TrailColor = 'none' | Color;
 export type Direction = 'row' | 'col' | 'row-reverse' | 'col-reverse';
-//export type Flow = 'row' | 'col' | 'dense' | 'row-dense' | 'col-dense';
+export type Flow = 'row' | 'col' | 'dense' | 'row-dense' | 'col-dense';
 export type Wrap = 'nowrap' | 'wrap' | 'wrap-reverse';
 export type JustifyContent =
   | 'normal'
@@ -382,7 +259,7 @@ export type JustifyContent =
   | 'around'
   | 'evenly'
   | 'stretch';
-/* export type AlignContent =
+export type AlignContent =
   | 'normal'
   | 'start'
   | 'center'
@@ -391,31 +268,34 @@ export type JustifyContent =
   | 'around'
   | 'evenly'
   | 'stretch'
-  | 'baseline'; */
-//export type JustifyItems = 'stretch' | 'start' | 'center' | 'end';
+  | 'baseline';
+export type JustifyItems = 'stretch' | 'start' | 'center' | 'end';
 export type AlignItems = 'stretch' | 'start' | 'center' | 'end' | 'baseline';
 export type Gap = 'none' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl';
-/*export type Effect = 'none' | 'shadow';
-export type AccordionEffect = 'none' | 'opacity';
-export type RippleEffect = 'default';
-export type Ripple = 'none' | 'default';
-
-export type Props<T> = Omit<
-  Omit<
-    Omit<
-      Omit<Omit<Omit<Omit<T, 'offset'>, 'size'>, 'scale'>, 'radius'>,
-      'color'
-    >,
-    'rotate'
-  >,
-  'content'
->;
-
-// Omit<T, 'offset' | 'size' | 'scale' | 'radius' | 'color' | 'rotate' | 'content'>
-
-export type DefaultProps<T extends ElementType> = Props<
-  ComponentPropsWithoutRef<T>
->;
+export type GrowTransition = 'grow' | 'grow-fade';
+export type SlideTransition =
+  | 'slide-top'
+  | 'slide-bottom'
+  | 'slide-left'
+  | 'slide-right'
+  | 'slide-top-fade'
+  | 'slide-bottom-fade'
+  | 'slide-left-fade'
+  | 'slide-right-fade';
+export type CollapseTransition =
+  | 'collapse-x'
+  | 'collapse-y'
+  | 'collapse-x-fade'
+  | 'collapse-y-fade';
+export type Effect = 'none' | 'shadow';
+export type RippleEffect = 'normal';
+// export type AccordionEffect = 'none' | 'opacity';
+export type Transition =
+  | 'fade'
+  | GrowTransition
+  | SlideTransition
+  | CollapseTransition;
+export type Ripple = 'none' | 'normal';
 
 export type Cursor = {
   x: number;
@@ -431,7 +311,59 @@ export type TransitionProps = {
   exitedStyle?: CSSProperties;
   enteringStyle?: CSSProperties;
   exitingStyle?: CSSProperties;
-}; */
+};
+
+export type Classes = {
+  focused?: boolean;
+  shifted?: boolean;
+  valid?: boolean;
+  invalid?: boolean;
+  loading?: Loading;
+  spin?: boolean;
+  stateful?: boolean;
+  disabled?: boolean;
+  followCursor?: boolean;
+  variant?: Variant;
+  inputVariant?: InputVariant;
+  placement?: Placement;
+  defaultPlacement?: DefaultPlacement;
+  sidePlacement?: SidePlacement;
+  float?: boolean;
+  relative?: boolean;
+  size?: Size;
+  inputSize?: InputSize;
+  spacing?: BoxSize;
+  scale?: Scale;
+  defaultScale?: DefaultScale;
+  buttonScale?: ButtonScale;
+  border?: Border;
+  defaultBorder?: boolean;
+  radius?: Radius;
+  color?: Color;
+  margin?: Margin;
+  weight?: Weight;
+  underline?: Underline;
+  wordBreak?: WordBreak;
+  textWrap?: TextWrap;
+  textAlign?: TextAlign;
+  textOverflow?: TextOverflow;
+  direction?: Direction;
+  flow?: Flow;
+  wrap?: Wrap;
+  justifyContent?: JustifyContent;
+  alignContent?: AlignContent;
+  justifyItems?: JustifyItems;
+  alignItems?: AlignItems;
+  gap?: Gap;
+  colGap?: Gap;
+  rowGap?: Gap;
+  invisible?: boolean;
+  blur?: boolean;
+  effect?: Effect;
+  rippleEffect?: RippleEffect;
+  transition?: Transition;
+  decorated?: boolean;
+};
 
 type CSSPropKeys =
   | 'state'
@@ -491,6 +423,8 @@ type CSSPropKeys =
   | 'transform'
   | 'transformOrigin'
   | 'transition'
+  | 'transitionDuration'
+  | 'transitionTimingFunction'
   | 'translate'
   | 'visibility'
   | 'userSelect'
