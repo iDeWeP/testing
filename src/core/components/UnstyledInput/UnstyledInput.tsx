@@ -92,6 +92,7 @@ export const UnstyledInput = (props: UnstyledInputProps) => {
           placeholder={setProp(isFocused, placeholder)}
           type="text"
           className={mergedClassName}
+          aria-invalid={invalid}
           onFocus={combineHandlers(onFocus, handleFocus)}
           onBlur={combineHandlers(onBlur, handleBlur)}
           {...restProps}
