@@ -9,9 +9,7 @@ export const mergeClasses = (
     .map((className) => {
       if (typeof className === 'object') {
         return Object.values(className).join(' ');
-      }
-
-      if (typeof className === 'string') {
+      } else if (typeof className === 'string') {
         return className;
       }
 
