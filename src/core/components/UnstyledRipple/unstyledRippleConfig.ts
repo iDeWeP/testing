@@ -7,6 +7,7 @@ type Styles = {
   styles: {
     root: {
       default: CSSProps;
+      stateful: CSSProps;
       color: Record<Color, Record<ColorState, Record<string, CSSProps>>>;
     };
   };
@@ -31,8 +32,12 @@ export const unstyledRippleConfig: ComponentConfig<UnstyledRippleConfigProps> &
         width: 'w-full',
         height: 'h-full',
         borderRadius: 'rounded-[inherit]',
-        transition: 'transition-colors',
         pointerEvents: 'pointer-events-none'
+      },
+      stateful: {
+        transition: 'transition-colors',
+        transitionDuration: 'duration-500',
+        transitionTimingFunction: 'ease-in-out'
       },
       color: {
         surface: {

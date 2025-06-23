@@ -8,7 +8,7 @@ import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
 type Props = MergeComponentProps<
   'div',
   {
-    isOpen: boolean;
+    open: boolean;
     animation: Animation;
     peak: Peak;
     zIndex: number;
@@ -22,7 +22,7 @@ type Props = MergeComponentProps<
 >;
 
 export const UnstyledPopperBackdrop = ({
-  isOpen,
+  open,
   animation,
   peak,
   zIndex,
@@ -43,7 +43,7 @@ export const UnstyledPopperBackdrop = ({
   });
 
   const mergedStyle = mergeBackdropStyle(
-    isOpen,
+    open,
     animation,
     peak,
     zIndex,

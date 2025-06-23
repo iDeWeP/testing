@@ -14,7 +14,7 @@ import { getTriggers } from '../../utils/get-triggers/get-triggers';
 
 type Props = {
   ref: RefObject<HTMLElement | null>;
-  isOpen: boolean;
+  open: boolean;
   isExited: boolean;
   trigger: Trigger;
   followCursor: boolean;
@@ -26,7 +26,7 @@ type Props = {
 
 export const UnstyledPopperAnchor = ({
   ref: forwardedRef,
-  isOpen,
+  open,
   isExited,
   trigger,
   followCursor,
@@ -39,19 +39,19 @@ export const UnstyledPopperAnchor = ({
 
   const handleClick = combineHandlers(
     children?.props.onClick,
-    !isOpen && clickOpen && onOpen,
-    isOpen && clickClose && onClose,
-    !isOpen && clickOpen && followCursor && onCursorMove
+    !open && clickOpen && onOpen,
+    open && clickClose && onClose,
+    !open && clickOpen && followCursor && onCursorMove
   );
 
   const handleMouseEnter = combineHandlers(
     children?.props.onMouseEnter,
-    !isOpen && hoverOpen && onOpen
+    !open && hoverOpen && onOpen
   );
 
   const handleMouseLeave = combineHandlers(
     children?.props.onMouseLeave,
-    isOpen && hoverClose && onClose
+    open && hoverClose && onClose
   );
 
   const handleMouseMove = combineHandlers(
