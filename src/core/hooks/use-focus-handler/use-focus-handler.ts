@@ -1,13 +1,11 @@
-import { type RefObject, useCallback } from 'react';
+import { useCallback, type FocusEvent, type RefObject } from 'react';
 import { setProp } from '../../../utils/utils/set-prop/set-prop';
 
-export const useFocusHandler = <
-  T extends HTMLInputElement | HTMLTextAreaElement
->(
-  ref?: RefObject<T | null>
+export const useFocusHandler = <T extends HTMLElement>(
+  ref?: RefObject<HTMLInputElement | HTMLTextAreaElement | null>
 ) => {
   const handleFocus = useCallback(
-    (event: FocusEvent) => {
+    (event: FocusEvent<T>) => {
       if (event.currentTarget === event.target) {
         ref?.current?.focus();
       }
