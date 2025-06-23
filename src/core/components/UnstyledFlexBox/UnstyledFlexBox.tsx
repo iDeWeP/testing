@@ -8,14 +8,21 @@ import { unstyledFlexBoxConfig } from './unstyledFlexBoxConfig';
 export const UnstyledFlexBox = <E extends ElementType = 'div'>(
   props: UnstyledFlexBoxProps<E>
 ) => {
-  const { direction, wrap, justify, align, gap, className, ...restProps } =
-    mergeProps(unstyledFlexBoxConfig.props, props);
+  const {
+    direction,
+    wrap,
+    justify: justifyContent,
+    align: alignItems,
+    gap,
+    className,
+    ...restProps
+  } = mergeProps(unstyledFlexBoxConfig.props, props);
 
   const mergedClassName = mergeClassName('unstyledFlexBox', className, {
     direction,
     wrap,
-    justify,
-    align,
+    justifyContent,
+    alignItems,
     gap
   });
 
