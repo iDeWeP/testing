@@ -56,6 +56,7 @@ export const UnstyledPopperBackdrop = ({
     <div
       className={mergedClassName}
       style={mergedStyle}
+      aria-hidden
       onClick={combineHandlers(onClick, onClose)}
       {...restProps}
     />,
