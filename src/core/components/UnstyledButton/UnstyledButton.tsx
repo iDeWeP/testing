@@ -1,6 +1,7 @@
 import type { ElementType } from 'react';
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
 import { mergeProps } from '../../utils/merge-props/merge-props';
+import { setVariant } from '../../utils/set-variant/set-variant';
 import { UnstyledRipple } from '../UnstyledRipple/UnstyledRipple';
 import { UnstyledSpinner } from '../UnstyledSpinner/UnstyledSpinner';
 import type { UnstyledButtonProps } from './UnstyledButton.types';
@@ -51,9 +52,9 @@ export const UnstyledButton = <E extends ElementType = 'button'>(
       spin
       disabled={disabled}
       value={75}
-      variant="text"
+      variant={setVariant(variant)}
       float={loading === true}
-      size="xs"
+      size={size}
       thickness={4}
       scale="text"
       margin="none"
