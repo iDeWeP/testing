@@ -195,17 +195,17 @@
   --color-black: #000;
   --color-white: #fff;
 
-  --color-surface-50: #e8e8e8;
-  --color-surface-100: #d4d4d4;
-  --color-surface-200: #a8a8a8;
-  --color-surface-300: #808080;
-  --color-surface-400: #6d6d6d;
-  --color-surface-500: #595959;
-  --color-surface-600: #494949;
-  --color-surface-700: #373737;
-  --color-surface-800: #262626;
-  --color-surface-900: #181818;
-  --color-surface-950: #0e0e0e;
+  --color-surface-50: #f9f9f9;
+  --color-surface-100: #f1f1f1;
+  --color-surface-200: #e5e5e5;
+  --color-surface-300: #d7d7d7;
+  --color-surface-400: #cccccc;
+  --color-surface-500: #bebebe;
+  --color-surface-600: #969696;
+  --color-surface-700: #6d6d6d;
+  --color-surface-800: #494949;
+  --color-surface-900: #262626;
+  --color-surface-950: #181818;
 
   --color-neutral-50: #ffffff;
   --color-neutral-100: #e8e8e8;
@@ -291,15 +291,15 @@
   --color-error-900: #830f07;
   --color-error-950: #520904;
 
-  --color-disabled-50: #e2e2e2;
-  --color-disabled-100: #d4d4d4;
-  --color-disabled-200: #bbbbbb;
-  --color-disabled-300: #a0a0a0;
-  --color-disabled-400: #898989;
-  --color-disabled-500: #6f6f6f;
-  --color-disabled-600: #595959;
-  --color-disabled-700: #424242;
-  --color-disabled-800: #2e2e2e;
-  --color-disabled-900: #191919;
+  --color-disabled-50: #f1f1f1;
+  --color-disabled-100: #e5e5e5;
+  --color-disabled-200: #c9c9c9;
+  --color-disabled-300: #b0b0b0;
+  --color-disabled-400: #989898;
+  --color-disabled-500: #808080;
+  --color-disabled-600: #666666;
+  --color-disabled-700: #4b4b4b;
+  --color-disabled-800: #323232;
+  --color-disabled-900: #1d1d1d;
   --color-disabled-950: #111111;
 }
