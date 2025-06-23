@@ -26,17 +26,20 @@ export const styleUnstyledButton = (
     effect = 'none'
   }: Classes
 ) => {
-  const [bgVariant, textVariant] = getVariant(variant);
-  const [sizeScale, spacingScale] = getButtonScale(buttonScale, defaultBorder);
+  const { bgVariant, textVariant } = getVariant(variant);
+  const { sizeScale, spacingScale } = getButtonScale(
+    buttonScale,
+    defaultBorder
+  );
   const statefulColor = getColor(disabled, color);
 
   return mergeClasses(
     unstyledButtonConfig.styles.root.default,
     generic.styles.focusable[getFocusable(loading, disabled)],
     relative && generic.styles.position.relative,
-    generic.styles.size.normal[size][sizeScale],
+    generic.styles.size.normal[sizeScale][size],
     generic.styles.scale[buttonScale],
-    generic.styles.spacing.normal[size][spacingScale],
+    generic.styles.spacing.normal[spacingScale][size],
     generic.styles.margin[margin],
     generic.styles.border[getBorder(defaultBorder)],
     generic.styles.radius.md[radius],

@@ -15,15 +15,12 @@ export const isPopperBordered = (
     return false;
   }
 
-  if (border === true || border === 'all') {
-    return true;
-  }
-
-  if (border.includes('x') && (placement === 'left' || placement === 'right')) {
-    return true;
-  }
-
-  if (border.includes('y') && (placement === 'top' || placement === 'bottom')) {
+  if (
+    border === true ||
+    border === 'all' ||
+    (border.includes('x') && (placement === 'left' || placement === 'right')) ||
+    (border.includes('y') && (placement === 'top' || placement === 'bottom'))
+  ) {
     return true;
   }
 

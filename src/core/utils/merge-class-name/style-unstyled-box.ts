@@ -16,7 +16,7 @@ export const styleUnstyledBox = (
     color = 'neutral'
   }: Classes
 ) => {
-  const [bgVariant, textVariant] = getVariant(variant);
+  const { bgVariant, textVariant } = getVariant(variant);
 
   return mergeClasses(
     generic.styles.scale[scale],
