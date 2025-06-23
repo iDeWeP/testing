@@ -133,7 +133,7 @@ export const UnstyledPopper = <E extends ElementType = 'div'>(
   const anchorNode = anchor && (
     <UnstyledPopperAnchor
       ref={anchorNodeRef}
-      isOpen={isOpen}
+      open={isOpen}
       isExited={animation.isExited}
       trigger={trigger}
       followCursor={followCursor}
@@ -172,7 +172,7 @@ export const UnstyledPopper = <E extends ElementType = 'div'>(
         <>
           {backdrop && (
             <UnstyledPopperBackdrop
-              isOpen={isOpen}
+              open={isOpen}
               animation={animation}
               peak={peak}
               zIndex={1000}
