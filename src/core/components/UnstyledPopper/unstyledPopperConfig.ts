@@ -19,7 +19,7 @@ export const unstyledPopperConfig: ComponentConfig<UnstyledPopperConfigProps> &
   props: {
     as: 'div',
     defaultOpen: false,
-    collision: 'none',
+    collision: 'shift',
     trigger: 'click',
     followCursor: false,
     closeOnOutClick: false,

@@ -11,9 +11,9 @@ export type MergeComponentProps<E extends ElementType, T> = Omit<
 
 export type ComponentRefProps<E extends ElementType> = Omit<
   ComponentPropsWithRef<E>,
-  'color' | 'scale' | 'offset'
+  'offset' | 'scale' | 'radius' | 'color'
 >;
-// Omit<T, 'offset' | 'size' | 'scale' | 'radius' | 'color' | 'rotate' | 'content'>
+// 'size' 'rotate' | 'content'>
 
 export type ComponentConfig<P> = {
   props: Required<P>;
@@ -337,7 +337,6 @@ export type Classes = {
   defaultScale?: DefaultScale;
   buttonScale?: ButtonScale;
   border?: Border;
-  defaultBorder?: boolean;
   radius?: Radius;
   color?: Color;
   margin?: Margin;
@@ -364,6 +363,7 @@ export type Classes = {
   transition?: Transition;
   decorated?: boolean;
   labeled?: boolean;
+  hasRipple?: boolean;
 };
 
 type CSSPropKeys =
