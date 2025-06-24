@@ -1,10 +1,9 @@
-import { unstyledInputConfig } from "../../components/UnstyledInput/unstyledInputConfig";
-import { generic } from "../../config/generic";
-import type { Classes } from "../../types";
-import { getColor } from "./get-color";
-import { getInputVariant } from "./get-input-variant";
-import { mergeClasses } from "./merge-classes";
-
+import { unstyledInputConfig } from '../../components/UnstyledInput/unstyledInputConfig';
+import { generic } from '../../config/generic';
+import type { Classes } from '../../types';
+import { getColor } from './color';
+import { mergeClasses } from './merge-classes';
+import { getInputVariant } from './variants';
 
 export const styleUnstyledInputContainer = (
   className: string,
@@ -27,7 +26,7 @@ export const styleUnstyledInputContainer = (
     valid,
     invalid
   );
-  const colorVariant = getColor(disabled, 'surface', valid, invalid);
+  const colorVariant = getColor('surface', disabled, valid, invalid);
 
   return mergeClasses(
     focused && generic.styles.state.focused,

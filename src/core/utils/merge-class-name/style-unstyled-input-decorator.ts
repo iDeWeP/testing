@@ -1,11 +1,11 @@
 import { unstyledInputConfig } from '../../components/UnstyledInput/unstyledInputConfig';
 import { generic } from '../../config/generic';
 import type { Classes } from '../../types';
-import { getColor } from './get-color';
-import { getInputRadius } from './get-input-radius';
-import { getInputSpacing } from './get-input-spacing';
-import { getInputVariant } from './get-input-variant';
+import { getColor } from './color';
 import { mergeClasses } from './merge-classes';
+import { getInputRadius } from './radius';
+import { getInputSpacing } from './spacing';
+import { getInputVariant } from './variants';
 
 export const styleUnstyledInputDecorator = (
   className: string,
@@ -30,7 +30,7 @@ export const styleUnstyledInputDecorator = (
     generic.styles.radius.lg[
       getInputRadius(inputVariant, sidePlacement, radius)
     ],
-    generic.styles.color.bg[getColor(disabled, 'surface')][bgVariant],
+    generic.styles.color.bg[getColor('surface', disabled)][bgVariant],
     className
   );
 };
