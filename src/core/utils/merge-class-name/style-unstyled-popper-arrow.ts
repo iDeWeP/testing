@@ -1,7 +1,7 @@
 import { generic } from '../../config/generic';
 import type { Classes } from '../../types';
-import { getArrowVariant } from './get-arrow-variant';
 import { mergeClasses } from './merge-classes';
+import { getArrowVariant } from './variants';
 
 export const styleUnstyledPopperArrow = (
   className: string,
