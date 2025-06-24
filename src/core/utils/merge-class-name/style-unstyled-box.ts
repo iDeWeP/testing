@@ -1,8 +1,8 @@
 import { generic } from '../../config/generic';
 import type { Classes } from '../../types';
-import { getBorder } from './get-border';
-import { getVariant } from './get-variant';
+import { getBorder } from './border';
 import { mergeClasses } from './merge-classes';
+import { getVariant } from './variants';
 
 export const styleUnstyledBox = (
   className: string,

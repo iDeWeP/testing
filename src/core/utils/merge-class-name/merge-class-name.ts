@@ -1,6 +1,10 @@
 import type { Classes } from '../../types';
 import { styleUnstyledBox } from './style-unstyled-box';
 import { styleUnstyledButton } from './style-unstyled-button';
+import { styleUnstyledCheckbox } from './style-unstyled-checkbox';
+import { styleUnstyledCheckboxContainer } from './style-unstyled-checkbox-container';
+import { styleUnstyledCheckboxIcon } from './style-unstyled-checkbox-icon';
+import { styleUnstyledCheckboxTrail } from './style-unstyled-checkbox-trail';
 import { styleUnstyledFlexBox } from './style-unstyled-flex-box';
 import { styleUnstyledGrid } from './style-unstyled-grid';
 import { styleUnstyledInput } from './style-unstyled-input';
@@ -23,6 +27,10 @@ const componentsClasses = {
   unstyledPopperBackdrop: styleUnstyledPopperBackdrop,
   unstyledBox: styleUnstyledBox,
   unstyledButton: styleUnstyledButton,
+  unstyledCheckboxContainer: styleUnstyledCheckboxContainer,
+  unstyledCheckboxIcon: styleUnstyledCheckboxIcon,
+  unstyledCheckboxTrail: styleUnstyledCheckboxTrail,
+  unstyledCheckbox: styleUnstyledCheckbox,
   unstyledFlexBox: styleUnstyledFlexBox,
   unstyledGrid: styleUnstyledGrid,
   unstyledInputClearance: styleUnstyledInputClearance,

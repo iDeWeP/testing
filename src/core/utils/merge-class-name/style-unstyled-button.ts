@@ -1,14 +1,13 @@
 import { unstyledButtonConfig } from '../../components/UnstyledButton/unstyledButtonConfig';
 import { generic } from '../../config/generic';
 import type { Classes } from '../../types';
-import { getBorder } from './get-border';
-import { getButtonScale } from './get-button-scale';
-import { getColor } from './get-color';
+import { getBorder } from './border';
+import { getColor } from './color';
 import { getFocusable } from './get-focusable';
 import { getLoading } from './get-loading';
-import { getRingVariant } from './get-ring-variant';
-import { getVariant } from './get-variant';
 import { mergeClasses } from './merge-classes';
+import { getButtonScale } from './scale';
+import { getVariant, getRingVariant } from './variants';
 
 export const styleUnstyledButton = (
   className: string,
@@ -20,35 +19,32 @@ export const styleUnstyledButton = (
     size = 'md',
     buttonScale = 'normal',
     margin = 'none',
-    defaultBorder = false,
+    border = false,
     radius = 'none',
     color = 'primary',
     effect = 'none'
   }: Classes
 ) => {
   const { bgVariant, textVariant } = getVariant(variant);
-  const { sizeScale, spacingScale } = getButtonScale(
-    buttonScale,
-    defaultBorder
-  );
-  const statefulColor = getColor(disabled, color);
+  const { sizeScale, spacingScale } = getButtonScale(buttonScale, border);
+  const statefulColor = getColor(color, disabled);
 
   return mergeClasses(
     unstyledButtonConfig.styles.root.default,
-    generic.styles.focusable[getFocusable(loading, disabled)],
+    generic.styles.focusable[getFocusable(disabled, loading)],
     relative && generic.styles.position.relative,
     generic.styles.size.normal[sizeScale][size],
     generic.styles.scale[buttonScale],
     generic.styles.spacing.normal[spacingScale][size],
     generic.styles.margin[margin],
-    generic.styles.border[getBorder(defaultBorder)],
+    generic.styles.border[getBorder(border)],
     generic.styles.radius.md[radius],
     generic.styles.size.font[size],
     generic.styles.color.bg[statefulColor][bgVariant],
     generic.styles.color.text[statefulColor][textVariant],
     generic.styles.color.fill[statefulColor][textVariant],
     generic.styles.color.ring[statefulColor][
-      getRingVariant(disabled || !!loading, variant)
+      getRingVariant(variant, disabled || !!loading)
     ],
     generic.styles.loading[getLoading(loading)],
     generic.styles.effect[effect],
