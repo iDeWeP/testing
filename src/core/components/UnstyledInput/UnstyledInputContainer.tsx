@@ -30,7 +30,6 @@ type Props = MergeComponentProps<
 >;
 
 export const UnstyledInputContainer = ({
-  ref: forwardedRef,
   inputRef,
   focused,
   shifted,
@@ -63,7 +62,6 @@ export const UnstyledInputContainer = ({
 
   return (
     <div
-      ref={forwardedRef}
       tabIndex={setProp(!disabled, -1)}
       className={mergedClassName}
       onFocus={combineHandlers(onFocus, handleFocus)}
