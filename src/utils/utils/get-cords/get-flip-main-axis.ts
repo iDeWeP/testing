@@ -24,7 +24,7 @@ const dimensions = {
     overflow.right > view.width ? { left: size.left, mainAxis: 'left' } : {}
 };
 
-export const getAutoMainAxis = (
+export const getFlipMainAxis = (
   collision: Collision,
   mainAxis: MainAxis,
   view: ViewDimensions,

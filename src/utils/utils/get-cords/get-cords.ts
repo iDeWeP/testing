@@ -10,11 +10,11 @@ import { isPlacementHorizontal } from '../is-placement-horizontal/is-placement-h
 import { calculateOverflowDimensions } from './calculate-overflow-dimensions';
 import { calculateSizeDimensions } from './calculate-size-dimensions';
 import { getAnchorDimensions } from './get-anchor-dimensions';
-import { getAutoMainAxis } from './get-auto-main-axis';
 import { getAxises } from './get-axises';
 import { getCrossAxis } from './get-cross-axis';
 import { getElDimensions } from './get-el-dimensions';
 import { getFlipCrossAxis } from './get-flip-cross-axis';
+import { getFlipMainAxis } from './get-flip-main-axis';
 import { getMainAxis } from './get-main-axis';
 import { getShiftCrossAxis } from './get-shift-cross-axis';
 import { getViewDimensions } from './get-view-dimensions';
@@ -62,7 +62,7 @@ export const getCords = (
 
   return {
     ...getMainAxis(mainAxis, size),
-    ...getAutoMainAxis(collision, mainAxis, view, size, overflow),
+    ...getFlipMainAxis(collision, mainAxis, view, size, overflow),
     ...getCrossAxis(crossAxis, orientation, dimension, size),
     ...getFlipCrossAxis(
       collision,
