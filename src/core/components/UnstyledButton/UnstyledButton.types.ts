@@ -22,7 +22,7 @@ export type UnstyledButtonComponentProps = {
   outerBorder?: ComponentRefProps<'circle'>;
 };
 
-type UnstyledButtonOptionalProps = {
+type OptionalProps = {
   leftDecorator?: ReactNode;
   rightDecorator?: ReactNode;
 };
@@ -47,5 +47,5 @@ export type UnstyledButtonConfigProps = UnstyledButtonDefaultProps;
 
 export type UnstyledButtonProps<E extends ElementType> = MergeProps<
   ComponentRefProps<E>,
-  UnstyledButtonDefaultProps & UnstyledButtonOptionalProps
+  UnstyledButtonDefaultProps & OptionalProps
 >;

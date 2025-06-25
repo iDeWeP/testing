@@ -38,7 +38,7 @@ export type UnstyledPopperComponentProps = {
   polygon?: ComponentRefProps<'polygon'>;
 };
 
-type UnstyledPopperOptionalProps = {
+type OptionalProps = {
   anchorRef?: RefObject<HTMLElement | null>;
   open?: boolean;
   onOpen?: VoidFunction;
@@ -78,5 +78,5 @@ export type UnstyledPopperConfigProps = MergeProps<
 
 export type UnstyledPopperProps<E extends ElementType> = MergeProps<
   UnstyledFlexBoxProps<E>,
-  UnstyledPopperDefaultProps & UnstyledPopperOptionalProps
+  UnstyledPopperDefaultProps & OptionalProps
 >;
