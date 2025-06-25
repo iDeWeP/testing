@@ -2,7 +2,7 @@ import { generic } from '../../config/generic';
 import type { Classes } from '../../types';
 import { getBorder } from './border';
 import { mergeClasses } from './merge-classes';
-import { getVariant } from './variants';
+import { getVariant } from './variant';
 
 export const styleUnstyledBox = (
   className: string,
