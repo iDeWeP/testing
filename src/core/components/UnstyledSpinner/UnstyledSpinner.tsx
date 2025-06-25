@@ -33,7 +33,6 @@ export const UnstyledSpinner = (props: UnstyledSpinnerProps) => {
     size,
     defaultScale,
     margin,
-    border,
     color
   });
 
