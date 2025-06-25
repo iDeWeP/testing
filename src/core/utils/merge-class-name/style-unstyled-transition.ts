@@ -1,7 +1,7 @@
 import { generic } from '../../config/generic';
 import type { Classes } from '../../types';
-import { getTransition } from './get-transition';
 import { mergeClasses } from './merge-classes';
+import { getTransition } from './transition';
 
 export const styleUnstyledTransition = (
   className: string,
