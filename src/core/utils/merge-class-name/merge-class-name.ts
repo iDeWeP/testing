@@ -1,18 +1,7 @@
 import type { Classes } from '../../types';
 import { styleUnstyledBox } from './style-unstyled-box';
 import { styleUnstyledButton } from './style-unstyled-button';
-import { styleUnstyledCheckbox } from './style-unstyled-checkbox';
-import { styleUnstyledCheckboxContainer } from './style-unstyled-checkbox-container';
-import { styleUnstyledCheckboxIcon } from './style-unstyled-checkbox-icon';
-import { styleUnstyledCheckboxTrail } from './style-unstyled-checkbox-trail';
 import { styleUnstyledFlexBox } from './style-unstyled-flex-box';
-import { styleUnstyledGrid } from './style-unstyled-grid';
-import { styleUnstyledInput } from './style-unstyled-input';
-import { styleUnstyledInputClearance } from './style-unstyled-input-clearance';
-import { styleUnstyledInputContainer } from './style-unstyled-input-container';
-import { styleUnstyledInputDecorator } from './style-unstyled-input-decorator';
-import { styleUnstyledInputFieldSet } from './style-unstyled-input-fieldset';
-import { styleUnstyledInputLabel } from './style-unstyled-input-label';
 import { styleUnstyledPopper } from './style-unstyled-popper';
 import { styleUnstyledPopperArrow } from './style-unstyled-popper-arrow';
 import { styleUnstyledPopperBackdrop } from './style-unstyled-popper-backdrop';
@@ -27,18 +16,7 @@ const componentsClasses = {
   unstyledPopperBackdrop: styleUnstyledPopperBackdrop,
   unstyledBox: styleUnstyledBox,
   unstyledButton: styleUnstyledButton,
-  unstyledCheckboxContainer: styleUnstyledCheckboxContainer,
-  unstyledCheckboxIcon: styleUnstyledCheckboxIcon,
-  unstyledCheckboxTrail: styleUnstyledCheckboxTrail,
-  unstyledCheckbox: styleUnstyledCheckbox,
   unstyledFlexBox: styleUnstyledFlexBox,
-  unstyledGrid: styleUnstyledGrid,
-  unstyledInputClearance: styleUnstyledInputClearance,
-  unstyledInputContainer: styleUnstyledInputContainer,
-  unstyledInputDecorator: styleUnstyledInputDecorator,
-  unstyledInputFieldSet: styleUnstyledInputFieldSet,
-  unstyledInputLabel: styleUnstyledInputLabel,
-  unstyledInput: styleUnstyledInput,
   unstyledPopper: styleUnstyledPopper,
   unstyledRipple: styleUnstyledRipple,
   unstyledSpinner: styleUnstyledSpinner,
