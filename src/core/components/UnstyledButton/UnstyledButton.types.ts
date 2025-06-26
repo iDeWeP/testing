@@ -1,4 +1,4 @@
-import type { ElementType, ReactNode } from 'react';
+import type { ReactNode, ElementType } from 'react';
 import type {
   ComponentRefProps,
   Loading,

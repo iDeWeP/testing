@@ -18,7 +18,7 @@ export const UnstyledButton = <E extends ElementType = 'button'>(
     size,
     scale: buttonScale,
     margin,
-    border: defaultBorder,
+    border,
     radius,
     color,
     effect,
@@ -39,7 +39,7 @@ export const UnstyledButton = <E extends ElementType = 'button'>(
     size,
     buttonScale,
     margin,
-    defaultBorder,
+    border,
     radius,
     color,
     effect

@@ -15,7 +15,7 @@ export const unstyledButtonConfig: ComponentConfig<UnstyledButtonConfigProps> &
     as: 'button',
     loading: false,
     disabled: false,
-    variant: 'solid',
+    variant: 'none',
     size: 'md',
     scale: 'normal',
     margin: 'none',
