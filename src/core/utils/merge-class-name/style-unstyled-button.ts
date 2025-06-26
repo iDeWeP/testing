@@ -3,11 +3,10 @@ import { generic } from '../../config/generic';
 import type { Classes } from '../../types';
 import { getBorder } from './border';
 import { getColor } from './color';
-import { getFocusable } from './get-focusable';
-import { getLoading } from './get-loading';
 import { mergeClasses } from './merge-classes';
 import { getButtonScale } from './scale';
-import { getVariant, getRingVariant } from './variants';
+import { getFocusableState, getLoadingState } from './state';
+import { getVariant, getRingVariant } from './variant';
 
 export const styleUnstyledButton = (
   className: string,
@@ -31,7 +30,7 @@ export const styleUnstyledButton = (
 
   return mergeClasses(
     unstyledButtonConfig.styles.root.default,
-    generic.styles.focusable[getFocusable(disabled, loading)],
+    generic.styles.focusable[getFocusableState(disabled, loading)],
     relative && generic.styles.position.relative,
     generic.styles.size.normal[sizeScale][size],
     generic.styles.scale[buttonScale],
@@ -46,7 +45,7 @@ export const styleUnstyledButton = (
     generic.styles.color.ring[statefulColor][
       getRingVariant(variant, disabled || !!loading)
     ],
-    generic.styles.loading[getLoading(loading)],
+    generic.styles.loading[getLoadingState(loading)],
     generic.styles.effect[effect],
     className
   );
