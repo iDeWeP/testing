@@ -1,4 +1,4 @@
-import type { CardConfigProps } from "../../components/Card/Card.types";
+import type { CardConfigProps } from '../../components/Card/Card.types';
 
 export type CoreComponentsMap = {
   /* accordion?: ComponentConfig<AccordionProps>;
@@ -7,8 +7,8 @@ export type CoreComponentsMap = {
   appShell?: ComponentConfig<AppShellProps>;
   avatar?: ComponentConfig<AvatarProps>;
   avatarGroup?: ComponentConfig<AvatarGroupProps>;
-  badge?: ComponentConfig<BadgeProps>; */
-  /* breadcrumbs?: ComponentConfig<BreadcrumbsProps>;
+  badge?: ComponentConfig<BadgeProps>;
+  breadcrumbs?: ComponentConfig<BreadcrumbsProps>;
   button?: ComponentConfig<ButtonProps>;
   buttonGroup?: ComponentConfig<ButtonGroupProps>; */
   card?: CardConfigProps;
@@ -21,33 +21,33 @@ export type CoreComponentsMap = {
   fab?: ComponentConfig<FabProps>;
   flex?: FlexConfigProps;
   footer?: FooterConfigProps;
-  /* formControl?: ComponentConfig<FormControlProps>;
-  grid?: ComponentConfig<GridProps>; 
+  formControl?: ComponentConfig<FormControlProps>;
+  grid?: ComponentConfig<GridProps>;
   header?: HeaderConfigProps;
   /* heading?: ComponentConfig<HeadingProps>;
-  icon?: ComponentConfig<IconProps>; 
+  icon?: ComponentConfig<IconProps>;
   image?: ImageConfigProps;
-  //input?: ComponentConfig<InputProps>;
+  input?: ComponentConfig<InputProps>;
   label?: LabelConfigProps;
-  /* layout?: ComponentConfig<LayoutProps>;
+  layout?: ComponentConfig<LayoutProps>;
   linearProgress?: ComponentConfig<LinearProgressProps>;
-  link?: ComponentConfig<LinkProps>; 
+  link?: ComponentConfig<LinkProps>;
   list?: ListConfigProps;
-  //listItem?: ComponentConfig<ListItemProps>;
+  listItem?: ComponentConfig<ListItemProps>;
   main?: MainConfigProps;
   mark?: MarkConfigProps;
   navigation?: NavigationConfigProps;
-  // radio?: ComponentConfig<RadioProps>;
+  radio?: ComponentConfig<RadioProps>;
   section?: SectionConfigProps;
   sidebar?: SidebarConfigProps;
-  /* snackbar?: ComponentConfig<SnackbarProps>;
-  spinner?: ComponentConfig<SpinnerProps>; 
+  snackbar?: ComponentConfig<SnackbarProps>;
+  spinner?: ComponentConfig<SpinnerProps>;
   stack?: StackConfigProps;
-  //switch?: ComponentConfig<SwitchProps>;
+  switch?: ComponentConfig<SwitchProps>;
   text?: TextConfigProps;
-  //textarea?: ComponentConfig<TextareaProps>;
+  textarea?: ComponentConfig<TextareaProps>;
   title?: TitleConfigProps;
-  /* toggleButton?: ComponentConfig<ToggleButtonProps>;
+  toggleButton?: ComponentConfig<ToggleButtonProps>;
   toggleButtonGroup?: ComponentConfig<ToggleButtonGroupProps>;
   tooltip?: ComponentConfig<TooltipProps>; */
 };

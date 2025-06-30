@@ -29,7 +29,7 @@ export const UnstyledCheckbox = (props: UnstyledCheckboxProps) => {
     ...restProps
   } = mergeProps(unstyledCheckboxConfig.props, props);
 
-  const mergedClassName = mergeClassName('unstyledInput', className, {
+  const mergedClassName = mergeClassName('unstyledCheckbox', className, {
     disabled
   });
 

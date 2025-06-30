@@ -1,4 +1,9 @@
-import type { ComponentPropsWithRef, CSSProperties, ElementType } from 'react';
+import type {
+  ElementType,
+  ComponentPropsWithRef,
+  ReactElement,
+  CSSProperties
+} from 'react';
 
 export type MergeProps<D extends object, T extends object> = Omit<D, keyof T> &
   T;
@@ -18,6 +23,8 @@ export type ComponentRefProps<E extends ElementType> = Omit<
 export type ComponentConfig<P> = {
   props: Required<P>;
 };
+
+export type SVGNodeProps = ReactElement<ComponentPropsWithRef<'svg'>>;
 
 export type Loading = boolean | 'left' | 'right';
 export type Collision = 'none' | 'shift' | 'flip';
