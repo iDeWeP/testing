@@ -6,10 +6,10 @@ import { getArrowVariant } from './variant';
 export const styleUnstyledPopperArrow = (
   className: string,
   {
-    variant = 'surface',
+    variant = 'none',
     defaultPlacement = 'bottom',
     border = false,
-    color = 'primary'
+    color = 'neutral'
   }: Classes
 ) =>
   mergeClasses(

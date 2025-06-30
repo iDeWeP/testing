@@ -12,7 +12,7 @@ export const styleUnstyledRipple = (
     invalid = false,
     stateful = false,
     variant = 'none',
-    color = 'primary'
+    color = 'neutral'
   }: Classes
 ) =>
   mergeClasses(
