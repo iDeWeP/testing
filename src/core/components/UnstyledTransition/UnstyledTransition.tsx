@@ -35,7 +35,7 @@ export const UnstyledTransition = <E extends ElementType = 'div'>(
 
   useStartAnimation(isIn, startAnimation);
 
-  if (!isIn && animation.isExited && unmountOnExit) {
+  if (unmountOnExit && !isIn && animation.isExited) {
     return undefined;
   }
 

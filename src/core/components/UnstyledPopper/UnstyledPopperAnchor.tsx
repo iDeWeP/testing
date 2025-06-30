@@ -39,24 +39,24 @@ export const UnstyledPopperAnchor = ({
 
   const handleClick = combineHandlers(
     children?.props.onClick,
-    !open && clickOpen && onOpen,
-    open && clickClose && onClose,
-    !open && clickOpen && followCursor && onCursorMove
+    clickOpen && !open && onOpen,
+    clickClose && open && onClose,
+    clickOpen && followCursor && !open && onCursorMove
   );
 
   const handleMouseEnter = combineHandlers(
     children?.props.onMouseEnter,
-    !open && hoverOpen && onOpen
+    hoverOpen && !open && onOpen
   );
 
   const handleMouseLeave = combineHandlers(
     children?.props.onMouseLeave,
-    open && hoverClose && onClose
+    hoverClose && open && onClose
   );
 
   const handleMouseMove = combineHandlers(
     children?.props.onMouseMove,
-    !isExited && followCursor && onCursorMove
+    followCursor && !isExited && onCursorMove
   );
 
   return cloneElement(children, {

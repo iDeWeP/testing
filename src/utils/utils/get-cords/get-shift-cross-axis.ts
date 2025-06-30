@@ -27,10 +27,9 @@ const dimensions = {
     size: SizeDimensions,
     overflow: OverflowDimensions
   ) => {
-    if (
-      isElShorter(anchor, el, length) &&
-      overflow[orientation].anchorStart < 0
-    ) {
+    const isShorter = isElShorter(anchor, el, length);
+
+    if (isShorter && overflow[orientation].anchorStart < 0) {
       return {
         [dimension]:
           size[orientation].viewStart + el[length] <
@@ -40,10 +39,7 @@ const dimensions = {
       };
     }
 
-    if (
-      !isElShorter(anchor, el, length) &&
-      overflow[orientation].start > view[length]
-    ) {
+    if (!isShorter && overflow[orientation].start > view[length]) {
       return {
         [dimension]:
           size[orientation].viewEnd + el[length] <
@@ -63,10 +59,9 @@ const dimensions = {
     size: SizeDimensions,
     overflow: OverflowDimensions
   ) => {
-    if (
-      isElShorter(anchor, el, length) &&
-      overflow[orientation].anchorEnd > view[length]
-    ) {
+    const isShorter = isElShorter(anchor, el, length);
+
+    if (isShorter && overflow[orientation].anchorEnd > view[length]) {
       return {
         [dimension]:
           size[orientation].viewEnd < anchor[getPosition(orientation)]
@@ -75,7 +70,7 @@ const dimensions = {
       };
     }
 
-    if (!isElShorter(anchor, el, length) && overflow[orientation].end < 0) {
+    if (!isShorter && overflow[orientation].end < 0) {
       return {
         [dimension]:
           size[orientation].viewStart < anchor[getPosition(orientation)]
@@ -94,8 +89,10 @@ const dimensions = {
     size: SizeDimensions,
     overflow: OverflowDimensions
   ) => {
+    const isShorter = isElShorter(anchor, el, length);
+
     if (overflow[orientation].centerEnd > view[length]) {
-      if (isElShorter(anchor, el, length)) {
+      if (isShorter) {
         return {
           [dimension]:
             size[orientation].viewEnd < anchor[getPosition(orientation)]
@@ -114,7 +111,7 @@ const dimensions = {
     }
 
     if (overflow[orientation].centerStart < 0) {
-      if (isElShorter(anchor, el, length)) {
+      if (isShorter) {
         return {
           [dimension]:
             size[orientation].viewStart + el[length] <

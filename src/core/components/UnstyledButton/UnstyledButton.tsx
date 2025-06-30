@@ -45,7 +45,7 @@ export const UnstyledButton = <E extends ElementType = 'button'>(
     effect
   });
 
-  const hasRipple = !loading && !disabled && ripple !== 'none';
+  const hasRipple = ripple !== 'none' && !loading && !disabled;
 
   const spinnerNode = (
     <UnstyledSpinner

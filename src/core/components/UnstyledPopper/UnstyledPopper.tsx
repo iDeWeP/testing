@@ -89,7 +89,7 @@ export const UnstyledPopper = <E extends ElementType = 'div'>(
   const { animation, startAnimation, stopAnimation } = useAnimation(isOpen);
 
   const anchorRef = anchorElRef ?? anchorNodeRef;
-  const isMovable = (isOpen || !animation.isExited) && collision !== 'none';
+  const isMovable = collision !== 'none' && (isOpen || !animation.isExited);
 
   const { top, left, mainAxis } = getCords(
     anchorRef,
@@ -111,20 +111,20 @@ export const UnstyledPopper = <E extends ElementType = 'div'>(
   useWindowScroll(isMovable && handleScroll);
 
   useOutClick(
-    isOpen && closeOnOutClick && !backdrop && handleClose,
+    closeOnOutClick && !backdrop && isOpen && handleClose,
     ref,
     typeof closeOnOutClick === 'boolean' ? anchorRef : closeOnOutClick
   );
 
-  useEscape(isOpen && closeOnEsc && handleClose);
+  useEscape(closeOnEsc && isOpen && handleClose);
 
-  useAutoFocus(isOpen && focusOnOpen, ref);
+  useAutoFocus(focusOnOpen && isOpen, ref);
 
-  useCloseFocus(!isOpen && focusOnClose, anchorRef);
+  useCloseFocus(focusOnClose && !isOpen, anchorRef);
 
-  useFocusTrap(isOpen && focusTrap && ref);
+  useFocusTrap(focusTrap && isOpen && ref);
 
-  useLockScroll(isOpen && lockScroll);
+  useLockScroll(lockScroll && isOpen);
 
   const anchorNode = anchor && (
     <UnstyledPopperAnchor
@@ -141,7 +141,7 @@ export const UnstyledPopper = <E extends ElementType = 'div'>(
     </UnstyledPopperAnchor>
   );
 
-  if (!isOpen && animation.isExited && unmountOnExit) {
+  if (unmountOnExit && !isOpen && animation.isExited) {
     return anchorNode;
   }
 

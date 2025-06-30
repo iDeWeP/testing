@@ -26,10 +26,10 @@ export const useFocusTrap = <E extends HTMLElement>(
       const firstEl = focusableEls[0];
       const lastEl = focusableEls[focusableEls.length - 1];
 
-      if (document.activeElement === firstEl && event.shiftKey) {
+      if (event.shiftKey && document.activeElement === firstEl) {
         event.preventDefault();
         lastEl.focus();
-      } else if (document.activeElement === lastEl && !event.shiftKey) {
+      } else if (!event.shiftKey && document.activeElement === lastEl) {
         event.preventDefault();
         firstEl.focus();
       }

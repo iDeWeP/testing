@@ -20,14 +20,15 @@ const dimensions = {
     view: ViewDimensions,
     size: SizeDimensions,
     overflow: OverflowDimensions
-  ) =>
-    (isElShorter(anchor, el, length) &&
-      overflow[orientation].anchorStart < 0) ||
-    (!isElShorter(anchor, el, length) &&
-      overflow[orientation].start > view[length])
+  ) => {
+    const isShorter = isElShorter(anchor, el, length);
+
+    return (isShorter && overflow[orientation].anchorStart < 0) ||
+      (!isShorter && overflow[orientation].start > view[length])
       ? // &&overflow[orientation].viewStart > overflow[orientation].viewEnd)
         { [dimension]: size[orientation].end }
-      : {},
+      : {};
+  },
   end: (
     orientation: Orientation,
     dimension: Dimension,
@@ -37,13 +38,15 @@ const dimensions = {
     view: ViewDimensions,
     size: SizeDimensions,
     overflow: OverflowDimensions
-  ) =>
-    (isElShorter(anchor, el, length) &&
-      overflow[orientation].anchorEnd > view[length]) ||
-    (!isElShorter(anchor, el, length) && overflow[orientation].end < 0)
+  ) => {
+    const isShorter = isElShorter(anchor, el, length);
+
+    return (isShorter && overflow[orientation].anchorEnd > view[length]) ||
+      (!isShorter && overflow[orientation].end < 0)
       ? // && overflow[orientation].viewStart < overflow[orientation].viewEnd)
         { [dimension]: size[orientation].start }
-      : {}
+      : {};
+  }
 };
 
 export const getFlipCrossAxis = (
