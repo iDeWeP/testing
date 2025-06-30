@@ -1,7 +1,12 @@
 import type { Classes } from '../../types';
 import { styleUnstyledBox } from './style-unstyled-box';
 import { styleUnstyledButton } from './style-unstyled-button';
+import { styleUnstyledCheckbox } from './style-unstyled-checkbox';
+import { styleUnstyledCheckboxContainer } from './style-unstyled-checkbox-container';
+import { styleUnstyledCheckboxIcon } from './style-unstyled-checkbox-icon';
+import { styleUnstyledCheckboxTrail } from './style-unstyled-checkbox-trail';
 import { styleUnstyledFlexBox } from './style-unstyled-flex-box';
+import { styleUnstyledGrid } from './style-unstyled-grid';
 import { styleUnstyledPopper } from './style-unstyled-popper';
 import { styleUnstyledPopperArrow } from './style-unstyled-popper-arrow';
 import { styleUnstyledPopperBackdrop } from './style-unstyled-popper-backdrop';
@@ -12,15 +17,20 @@ import { styleUnstyledTransition } from './style-unstyled-transition';
 import { styleUnstyledTypography } from './style-unstyled-typography';
 
 const componentsClasses = {
-  unstyledPopperArrow: styleUnstyledPopperArrow,
-  unstyledPopperBackdrop: styleUnstyledPopperBackdrop,
   unstyledBox: styleUnstyledBox,
   unstyledButton: styleUnstyledButton,
+  unstyledCheckboxContainer: styleUnstyledCheckboxContainer,
+  unstyledCheckboxIcon: styleUnstyledCheckboxIcon,
+  unstyledCheckboxTrail: styleUnstyledCheckboxTrail,
+  unstyledCheckbox: styleUnstyledCheckbox,
   unstyledFlexBox: styleUnstyledFlexBox,
+  unstyledGrid: styleUnstyledGrid,
+  unstyledPopperArrow: styleUnstyledPopperArrow,
+  unstyledPopperBackdrop: styleUnstyledPopperBackdrop,
   unstyledPopper: styleUnstyledPopper,
   unstyledRipple: styleUnstyledRipple,
-  unstyledSpinner: styleUnstyledSpinner,
   unstyledSpinnerTrail: styleUnstyledSpinnerTrail,
+  unstyledSpinner: styleUnstyledSpinner,
   unstyledTransition: styleUnstyledTransition,
   unstyledTypography: styleUnstyledTypography
 };
