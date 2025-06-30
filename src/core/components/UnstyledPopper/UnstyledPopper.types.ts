@@ -35,7 +35,6 @@ export type UnstyledPopperBackdropProps = {
 export type UnstyledPopperComponentProps = {
   arrow?: UnstyledPopperArrowProps;
   backdrop?: UnstyledPopperBackdropProps;
-  polygon?: ComponentRefProps<'polygon'>;
 };
 
 type OptionalProps = {

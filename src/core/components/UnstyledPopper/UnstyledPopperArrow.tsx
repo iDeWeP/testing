@@ -4,7 +4,6 @@ import {
   cloneElement
 } from 'react';
 import type {
-  ComponentRefProps,
   MergeComponentProps,
   Variant,
   DefaultPlacement,
@@ -14,10 +13,6 @@ import type {
 import { mergeArrowStyle } from '../../utils/merge-arrow-style/merge-arrow-style';
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
 
-type ComponentProps = {
-  polygon?: ComponentRefProps<'polygon'>;
-};
-
 type Props = MergeComponentProps<
   'svg',
   {
@@ -26,20 +21,18 @@ type Props = MergeComponentProps<
     offset: ArrowOffset;
     border: boolean;
     color: Color;
-    componentProps: ComponentProps;
     children?: ReactElement<ComponentPropsWithRef<'svg'>>;
   }
 >;
 
 export const UnstyledPopperArrow = ({
   variant,
-  placement,
+  placement: defaultPlacement,
   offset,
   border,
   color,
   className,
   style,
-  componentProps,
   children,
   ...restProps
 }: Props) => {
@@ -48,14 +41,14 @@ export const UnstyledPopperArrow = ({
     `${className} ${children?.props.className}`,
     {
       variant,
-      placement,
+      defaultPlacement,
       border,
       color
     }
   );
 
   const mergedStyle = mergeArrowStyle(
-    placement,
+    defaultPlacement,
     offset,
     style,
     children?.props.style
@@ -80,10 +73,7 @@ export const UnstyledPopperArrow = ({
       aria-hidden="true"
       {...restProps}
     >
-      <polygon
-        points="0,8 8,8 4,3"
-        {...componentProps.polygon}
-      />
+      <polygon points="0,8 8,8 4,3" />
     </svg>
   );
 };

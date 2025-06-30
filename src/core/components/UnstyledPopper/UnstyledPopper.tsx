@@ -89,7 +89,7 @@ export const UnstyledPopper = <E extends ElementType = 'div'>(
   const { animation, startAnimation, stopAnimation } = useAnimation(isOpen);
 
   const anchorRef = anchorElRef ?? anchorNodeRef;
-  const isExited = !isOpen && animation.isExited;
+  const isMovable = (isOpen || !animation.isExited) && collision !== 'none';
 
   const { top, left, mainAxis } = getCords(
     anchorRef,
@@ -106,13 +106,9 @@ export const UnstyledPopper = <E extends ElementType = 'div'>(
 
   usePlacementChange(mainAxis, onPlacementChange);
 
-  useWindowResize(
-    !isExited && collision !== 'none' && !followCursor && handleResize
-  );
+  useWindowResize(isMovable && handleResize);
 
-  useWindowScroll(
-    !isExited && collision !== 'none' && !followCursor && handleScroll
-  );
+  useWindowScroll(isMovable && handleScroll);
 
   useOutClick(
     isOpen && closeOnOutClick && !backdrop && handleClose,
@@ -145,7 +141,7 @@ export const UnstyledPopper = <E extends ElementType = 'div'>(
     </UnstyledPopperAnchor>
   );
 
-  if (isExited && unmountOnExit) {
+  if (!isOpen && animation.isExited && unmountOnExit) {
     return anchorNode;
   }
 
@@ -203,12 +199,9 @@ export const UnstyledPopper = <E extends ElementType = 'div'>(
               <UnstyledPopperArrow
                 variant={variant}
                 placement={mainAxis}
-                offset={[0, '50%']}
+                offset={['50%', 0]}
                 border={border}
                 color={color}
-                componentProps={{
-                  polygon: componentProps.polygon
-                }}
                 {...componentProps.arrow}
               />
             )}
