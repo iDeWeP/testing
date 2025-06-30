@@ -20,7 +20,7 @@ export const unstyledRippleConfig: ComponentConfig<UnstyledRippleConfigProps> &
     invalid: false,
     stateful: false,
     variant: 'none',
-    color: 'primary',
+    color: 'neutral',
     effect: 'normal'
   },
   styles: {
