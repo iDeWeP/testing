@@ -11,7 +11,7 @@ export const unstyledFlexBoxConfig: ComponentConfig<UnstyledFlexBoxConfigProps> 
       margin: 'none',
       border: false,
       radius: 'none',
-      color: 'primary',
+      color: 'neutral',
       direction: 'row',
       wrap: 'wrap',
       justify: 'normal',

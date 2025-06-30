@@ -14,7 +14,7 @@ export const unstyledTransitionConfig: ComponentConfig<UnstyledTransitionConfigP
       margin: 'none',
       border: false,
       radius: 'none',
-      color: 'primary',
+      color: 'neutral',
       transition: 'fade',
       duration: 1000,
       transitionProps: {}
