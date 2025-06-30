@@ -1,11 +1,12 @@
 import type {
+  RefObject,
   ReactElement,
   ComponentPropsWithRef,
-  RefObject,
   ElementType
 } from 'react';
 import type {
   ArrowOffset,
+  SVGNodeProps,
   ComponentRefProps,
   TransitionProps,
   Placement,
@@ -21,7 +22,7 @@ import type {
 
 export type UnstyledPopperArrowProps = {
   offset?: ArrowOffset;
-  children?: ReactElement<ComponentPropsWithRef<'svg'>>;
+  children?: SVGNodeProps;
 } & ComponentRefProps<'svg'>;
 
 export type UnstyledPopperBackdropProps = {

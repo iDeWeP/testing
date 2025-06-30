@@ -49,7 +49,7 @@ export const UnstyledCheckbox = (props: UnstyledCheckboxProps) => {
         className={mergedClassName}
         {...restProps}
       />
-      {!disabled && ripple !== 'none' && (
+      {ripple !== 'none' && !disabled && (
         <UnstyledRipple
           valid={valid}
           invalid={invalid}
@@ -69,10 +69,10 @@ export const UnstyledCheckbox = (props: UnstyledCheckboxProps) => {
         {...componentsProps.trail}
       />
       <UnstyledCheckboxIcon
-        inputType={type}
         valid={valid}
         invalid={invalid}
         disabled={disabled}
+        inputType={type}
         variant={variant}
         size={size}
         border={border}

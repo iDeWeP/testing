@@ -21,11 +21,11 @@ type Styles = {
 export const unstyledCheckboxConfig: ComponentConfig<UnstyledCheckboxConfigProps> &
   Styles = {
   props: {
-    type: 'checkbox',
     checked: false,
     valid: false,
     invalid: false,
     disabled: false,
+    type: 'checkbox',
     variant: 'none',
     size: 'md',
     margin: 'none',
@@ -39,16 +39,16 @@ export const unstyledCheckboxConfig: ComponentConfig<UnstyledCheckboxConfigProps
     root: {
       default: {
         display: 'inline-flex',
-        position: 'relative',
-        borderRadius: 'rounded-full'
+        position: 'relative', // ???
+        borderRadius: 'rounded-full' // ???
       }
     },
     input: {
       default: {
         width: 'w-full',
         height: 'h-full',
-        appearance: 'appearance-none',
-        focus: 'focus:outline-none',
+        appearance: 'appearance-none', // ???
+        focus: 'focus:outline-none', // ???
         group: 'peer'
       }
     },
@@ -60,6 +60,8 @@ export const unstyledCheckboxConfig: ComponentConfig<UnstyledCheckboxConfigProps
         translate: '-translate-x-2/4 -translate-y-2/4',
         borderWidth: 'border',
         transition: 'transition-opacity',
+        transitionDuration: 'duration-500',
+        transitionTimingFunction: 'ease-in-out',
         pointerEvents: 'pointer-events-none',
         group: 'peer-focus-visible:ring-4 peer-checked:opacity-0'
       }
@@ -72,6 +74,8 @@ export const unstyledCheckboxConfig: ComponentConfig<UnstyledCheckboxConfigProps
         translate: '-translate-x-2/4 -translate-y-2/4',
         opacity: 'opacity-0',
         transition: 'transition-opacity',
+        transitionDuration: 'duration-500',
+        transitionTimingFunction: 'ease-in-out',
         pointerEvents: 'pointer-events-none',
         group: 'peer-focus-visible:ring-4 peer-checked:opacity-100'
       }

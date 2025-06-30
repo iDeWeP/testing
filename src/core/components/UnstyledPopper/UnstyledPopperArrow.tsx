@@ -1,14 +1,11 @@
-import {
-  type ReactElement,
-  type ComponentPropsWithRef,
-  cloneElement
-} from 'react';
+import { cloneElement } from 'react';
 import type {
   MergeComponentProps,
   Variant,
   DefaultPlacement,
   ArrowOffset,
-  Color
+  Color,
+  SVGNodeProps
 } from '../../types';
 import { mergeArrowStyle } from '../../utils/merge-arrow-style/merge-arrow-style';
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
@@ -21,7 +18,7 @@ type Props = MergeComponentProps<
     offset: ArrowOffset;
     border: boolean;
     color: Color;
-    children?: ReactElement<ComponentPropsWithRef<'svg'>>;
+    children?: SVGNodeProps;
   }
 >;
 

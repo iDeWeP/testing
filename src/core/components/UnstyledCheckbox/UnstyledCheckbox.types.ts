@@ -1,13 +1,14 @@
-import type { ComponentPropsWithRef, ReactElement, RefObject } from 'react';
+import type { RefObject } from 'react';
 import type {
   ComponentRefProps,
+  SVGNodeProps,
+  Variant,
   Size,
   Margin,
   Radius,
   Color,
   Ripple,
-  MergeProps,
-  Variant
+  MergeProps
 } from '../../types';
 
 export type UnstyledCheckboxComponentProps = {
@@ -17,17 +18,17 @@ export type UnstyledCheckboxComponentProps = {
   ripple?: ComponentRefProps<'span'>;
 };
 
-type UntyledInputOptionalProps = {
+type OptionalProps = {
   inputRef?: RefObject<HTMLInputElement | null>;
-  children?: ReactElement<ComponentPropsWithRef<'svg'>>;
+  children?: SVGNodeProps;
 };
 
 export type UnstyledCheckboxDefaultProps = {
-  type?: 'checkbox' | 'radio';
   checked?: boolean;
   valid?: boolean;
   invalid?: boolean;
   disabled?: boolean;
+  type?: 'checkbox' | 'radio';
   variant?: Variant;
   size?: Size;
   margin?: Margin;
@@ -42,5 +43,5 @@ export type UnstyledCheckboxConfigProps = UnstyledCheckboxDefaultProps;
 
 export type UnstyledCheckboxProps = MergeProps<
   ComponentRefProps<'input'>,
-  UnstyledCheckboxDefaultProps & UntyledInputOptionalProps
+  UnstyledCheckboxDefaultProps & OptionalProps
 >;

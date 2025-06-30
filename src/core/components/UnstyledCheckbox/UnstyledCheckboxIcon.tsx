@@ -1,38 +1,35 @@
-import {
-  type ReactElement,
-  type ComponentPropsWithRef,
-  cloneElement
-} from 'react';
+import { cloneElement } from 'react';
 import type {
   MergeComponentProps,
   Variant,
   Size,
   Radius,
-  Color
+  Color,
+  SVGNodeProps
 } from '../../types';
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
 
 type Props = MergeComponentProps<
   'svg',
   {
-    inputType: 'checkbox' | 'radio';
     valid: boolean;
     invalid: boolean;
     disabled: boolean;
+    inputType: 'checkbox' | 'radio';
     variant: Variant;
     size: Size;
     border: boolean;
     radius: Radius;
     color: Color;
-    children?: ReactElement<ComponentPropsWithRef<'svg'>>;
+    children?: SVGNodeProps;
   }
 >;
 
 export const UnstyledCheckboxIcon = ({
-  type,
   valid,
   invalid,
   disabled,
+  inputType,
   variant,
   size,
   border,
@@ -72,10 +69,10 @@ export const UnstyledCheckboxIcon = ({
       aria-hidden="true"
       {...restProps}
     >
-      {type === 'checkbox' && (
+      {inputType === 'checkbox' && (
         <path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
       )}
-      {type === 'radio' && (
+      {inputType === 'radio' && (
         <circle
           cx="12"
           cy="12"
