@@ -2,8 +2,8 @@ import type {
   CSSProps,
   InputSize,
   SidePlacement,
-  ComponentConfig,
-  DefaultInputVariant
+  DefaultInputVariant,
+  ComponentConfig
 } from '../../types';
 import type { UnstyledInputConfigProps } from './UnstyledInput.types';
 
@@ -50,13 +50,13 @@ export const unstyledInputConfig: ComponentConfig<UnstyledInputConfigProps> &
     scale: 'normal',
     margin: 'none',
     radius: 'md',
-    color: 'primary',
+    color: 'neutral',
     componentsProps: {}
   },
   styles: {
     root: {
       default: {
-        display: 'inline-flex',
+        display: 'inline-flex',  // ???
         font: 'text-md',
         transition: 'transition-colors',
         transitionDuration: 'duration-500',
@@ -77,7 +77,7 @@ export const unstyledInputConfig: ComponentConfig<UnstyledInputConfigProps> &
     },
     decorator: {
       default: {
-        display: 'flex',
+        display: 'inline-flex',
         gap: 'gap-2'
       },
       spacing: {
@@ -114,14 +114,14 @@ export const unstyledInputConfig: ComponentConfig<UnstyledInputConfigProps> &
     fieldset: {
       default: {
         display: 'flex',
-        flexGrow: 'grow'
-      },
+        flexGrow: 'grow' // ???
+      }
     },
     input: {
       default: {
-        width: 'w-full',
+        width: 'w-full', // ???
         margin: 'mx-1',
-        focus: 'focus:outline-none'
+        focus: 'focus:outline-none' // ???
       }
     },
     clearance: {

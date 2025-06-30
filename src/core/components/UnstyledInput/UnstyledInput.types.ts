@@ -13,13 +13,13 @@ import type {
 export type UnstyledInputComponentProps = {
   container?: ComponentRefProps<'div'>;
   label?: ComponentRefProps<'label'>;
-  leftDecorator?: ComponentRefProps<'div'>;
-  rightDecorator?: ComponentRefProps<'div'>;
+  leftDecorator?: ComponentRefProps<'span'>;
+  rightDecorator?: ComponentRefProps<'span'>;
   fieldset?: ComponentRefProps<'fieldset'>;
   clearance?: ComponentRefProps<'legend'>;
 };
 
-type UntyledInputOptionalProps = {
+type OptionalProps = {
   inputRef?: RefObject<HTMLInputElement | null>;
   focused?: boolean;
   shifted?: boolean;
@@ -45,5 +45,5 @@ export type UnstyledInputConfigProps = UnstyledInputDefaultProps;
 
 export type UnstyledInputProps = MergeProps<
   ComponentRefProps<'input'>,
-  UnstyledInputDefaultProps & UntyledInputOptionalProps
+  UnstyledInputDefaultProps & OptionalProps
 >;

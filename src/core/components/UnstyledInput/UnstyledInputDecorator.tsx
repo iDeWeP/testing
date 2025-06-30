@@ -7,7 +7,7 @@ import type {
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
 
 type Props = MergeComponentProps<
-  'div',
+  'span',
   {
     disabled: boolean;
     variant: InputVariant;
@@ -34,11 +34,11 @@ export const UnstyledInputDecorator = ({
   });
 
   return (
-    <div
+    <span
       className={mergedClassName}
       {...restProps}
     >
       {children}
-    </div>
+    </span>
   );
 };
