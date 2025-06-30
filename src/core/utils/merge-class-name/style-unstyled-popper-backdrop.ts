@@ -4,7 +4,7 @@ import { mergeClasses } from './merge-classes';
 
 export const styleUnstyledPopperBackdrop = (
   className: string,
-  { invisible = false, blur = false }: Classes
+  { invisible = true, blur = false }: Classes
 ) =>
   mergeClasses(
     unstyledPopperConfig.styles.backdrop.default,

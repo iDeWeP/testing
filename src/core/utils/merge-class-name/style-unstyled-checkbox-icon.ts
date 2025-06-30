@@ -4,7 +4,7 @@ import type { Classes } from '../../types';
 import { getBorder } from './border';
 import { getColor } from './color';
 import { mergeClasses } from './merge-classes';
-import { getVariant, getRingVariant } from './variants';
+import { getVariant, getRingVariant } from './variant';
 
 export const styleUnstyledCheckboxIcon = (
   className: string,
