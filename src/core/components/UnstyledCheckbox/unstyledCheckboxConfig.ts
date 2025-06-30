@@ -30,8 +30,8 @@ export const unstyledCheckboxConfig: ComponentConfig<UnstyledCheckboxConfigProps
     size: 'md',
     margin: 'none',
     border: false,
-    radius: 'md',
-    color: 'primary',
+    radius: 'none',
+    color: 'neutral',
     componentsProps: {},
     ripple: 'normal'
   },
