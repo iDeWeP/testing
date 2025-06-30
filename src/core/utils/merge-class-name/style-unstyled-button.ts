@@ -20,7 +20,7 @@ export const styleUnstyledButton = (
     margin = 'none',
     border = false,
     radius = 'none',
-    color = 'primary',
+    color = 'neutral',
     effect = 'none'
   }: Classes
 ) => {
