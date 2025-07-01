@@ -1,96 +1,96 @@
 import { ExampleCard } from '../../../components/ExampleCard';
 import { ExampleSection } from '../../../components/ExampleSection';
-import { UnstyledFlexBox } from '../../../core/components/UnstyledFlexBox/UnstyledFlexBox';
+import { UnstyledFlex } from '../../../core/components/UnstyledFlex/UnstyledFlex';
 
 export const SizeExample = () => (
   <ExampleSection title="Size">
     <ExampleCard>
-      <UnstyledFlexBox
+      <UnstyledFlex
         variant="light"
         size="none"
       >
         NONE
-      </UnstyledFlexBox>
-      <UnstyledFlexBox
+      </UnstyledFlex>
+      <UnstyledFlex
         variant="light"
         size="xs"
       >
         XS
-      </UnstyledFlexBox>
-      <UnstyledFlexBox
+      </UnstyledFlex>
+      <UnstyledFlex
         variant="light"
         size="sm"
       >
         SM
-      </UnstyledFlexBox>
-      <UnstyledFlexBox
+      </UnstyledFlex>
+      <UnstyledFlex
         variant="light"
         size="md"
       >
         MD
-      </UnstyledFlexBox>
-      <UnstyledFlexBox
+      </UnstyledFlex>
+      <UnstyledFlex
         variant="light"
         size="lg"
       >
         LG
-      </UnstyledFlexBox>
-      <UnstyledFlexBox
+      </UnstyledFlex>
+      <UnstyledFlex
         variant="light"
         size="xl"
       >
         XL
-      </UnstyledFlexBox>
-      <UnstyledFlexBox
+      </UnstyledFlex>
+      <UnstyledFlex
         variant="light"
         size="xxl"
       >
         XXL
-      </UnstyledFlexBox>
+      </UnstyledFlex>
     </ExampleCard>
     <ExampleCard>
-      <UnstyledFlexBox
+      <UnstyledFlex
         variant="light"
         size="none"
       >
         NONE
-      </UnstyledFlexBox>
-      <UnstyledFlexBox
+      </UnstyledFlex>
+      <UnstyledFlex
         variant="light"
         size="xs-xs"
       >
         XS-XS
-      </UnstyledFlexBox>
-      <UnstyledFlexBox
+      </UnstyledFlex>
+      <UnstyledFlex
         variant="light"
         size="sm-sm"
       >
         SM-SM
-      </UnstyledFlexBox>
-      <UnstyledFlexBox
+      </UnstyledFlex>
+      <UnstyledFlex
         variant="light"
         size="md-md"
       >
         MD-MD
-      </UnstyledFlexBox>
-      <UnstyledFlexBox
+      </UnstyledFlex>
+      <UnstyledFlex
         variant="light"
         size="lg-lg"
       >
         LG-LG
-      </UnstyledFlexBox>
-      <UnstyledFlexBox
+      </UnstyledFlex>
+      <UnstyledFlex
         variant="light"
         size="xl-xl"
       >
         XL-XL
-      </UnstyledFlexBox>
-      <UnstyledFlexBox
+      </UnstyledFlex>
+      <UnstyledFlex
         variant="light"
         size="xxl-xxl"
       >
         XXL-XXL
-      </UnstyledFlexBox>
+      </UnstyledFlex>
     </ExampleCard>
   </ExampleSection>
 );

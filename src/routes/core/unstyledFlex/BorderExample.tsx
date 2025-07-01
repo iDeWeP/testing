@@ -1,58 +1,58 @@
 import { ExampleCard } from '../../../components/ExampleCard';
 import { ExampleSection } from '../../../components/ExampleSection';
-import { UnstyledFlexBox } from '../../../core/components/UnstyledFlexBox/UnstyledFlexBox';
+import { UnstyledFlex } from '../../../core/components/UnstyledFlex/UnstyledFlex';
 
 export const BorderExample = () => (
   <ExampleSection title="Border">
     <ExampleCard>
-      <UnstyledFlexBox
+      <UnstyledFlex
         variant="none"
         border={false}
       >
         FALSE
-      </UnstyledFlexBox>
-      <UnstyledFlexBox
+      </UnstyledFlex>
+      <UnstyledFlex
         variant="none"
         border="all"
       >
         ALL
-      </UnstyledFlexBox>
-      <UnstyledFlexBox
+      </UnstyledFlex>
+      <UnstyledFlex
         variant="none"
         border="x"
       >
         X
-      </UnstyledFlexBox>
-      <UnstyledFlexBox
+      </UnstyledFlex>
+      <UnstyledFlex
         variant="none"
         border="y"
       >
         Y
-      </UnstyledFlexBox>
-      <UnstyledFlexBox
+      </UnstyledFlex>
+      <UnstyledFlex
         variant="none"
         border="top"
       >
         TOP
-      </UnstyledFlexBox>
-      <UnstyledFlexBox
+      </UnstyledFlex>
+      <UnstyledFlex
         variant="none"
         border="bottom"
       >
         BOTTOM
-      </UnstyledFlexBox>
-      <UnstyledFlexBox
+      </UnstyledFlex>
+      <UnstyledFlex
         variant="none"
         border="left"
       >
         LEFT
-      </UnstyledFlexBox>
-      <UnstyledFlexBox
+      </UnstyledFlex>
+      <UnstyledFlex
         variant="none"
         border="right"
       >
         RIGHT
-      </UnstyledFlexBox>
+      </UnstyledFlex>
     </ExampleCard>
   </ExampleSection>
 );

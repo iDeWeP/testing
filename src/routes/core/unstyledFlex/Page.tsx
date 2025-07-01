@@ -15,7 +15,7 @@ import { WrapExample } from './WrapExample';
 
 const Page = () => (
   <>
-    <ExampleTitle>UnstyledFlexBox</ExampleTitle>
+    <ExampleTitle>UnstyledFlex</ExampleTitle>
     <DefaultExample />
     <DirectionExample />
     <WrapExample />

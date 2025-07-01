@@ -1,52 +1,52 @@
 import { ExampleCard } from '../../../components/ExampleCard';
 import { ExampleSection } from '../../../components/ExampleSection';
-import { UnstyledFlexBox } from '../../../core/components/UnstyledFlexBox/UnstyledFlexBox';
+import { UnstyledFlex } from '../../../core/components/UnstyledFlex/UnstyledFlex';
 
 export const RadiusExample = () => (
   <ExampleSection title="Radius">
     <ExampleCard>
-      <UnstyledFlexBox
+      <UnstyledFlex
         variant="light"
         radius="none"
       >
         NONE
-      </UnstyledFlexBox>
-      <UnstyledFlexBox
+      </UnstyledFlex>
+      <UnstyledFlex
         variant="light"
         radius="xs"
       >
         XS
-      </UnstyledFlexBox>
-      <UnstyledFlexBox
+      </UnstyledFlex>
+      <UnstyledFlex
         variant="light"
         radius="sm"
       >
         SM
-      </UnstyledFlexBox>
-      <UnstyledFlexBox
+      </UnstyledFlex>
+      <UnstyledFlex
         variant="light"
         radius="md"
       >
         MD
-      </UnstyledFlexBox>
-      <UnstyledFlexBox
+      </UnstyledFlex>
+      <UnstyledFlex
         variant="light"
         radius="lg"
       >
         LG
-      </UnstyledFlexBox>
-      <UnstyledFlexBox
+      </UnstyledFlex>
+      <UnstyledFlex
         variant="light"
         radius="xl"
       >
         XL
-      </UnstyledFlexBox>
-      <UnstyledFlexBox
+      </UnstyledFlex>
+      <UnstyledFlex
         variant="light"
         radius="full"
       >
         FULL
-      </UnstyledFlexBox>
+      </UnstyledFlex>
     </ExampleCard>
   </ExampleSection>
 );

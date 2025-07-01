@@ -1,7 +1,7 @@
 import { lazy } from 'react';
 import type { RouteObject } from 'react-router';
 
-export const UnstyledFlexBoxRoute: RouteObject = {
-  path: '/core/unstyled-flex-box',
+export const UnstyledFlexRoute: RouteObject = {
+  path: '/core/unstyled-flex',
   Component: lazy(() => import('./Page'))
 };
