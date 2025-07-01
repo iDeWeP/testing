@@ -5,16 +5,28 @@ import { ExampleUnstyledTypography } from './ExampleUnstyledTypography';
 export const UnderlineExample = () => (
   <ExampleSection title="Underline">
     <ExampleCard>
-      <ExampleUnstyledTypography underline="normal">
+      <ExampleUnstyledTypography
+        clear
+        underline="normal"
+      >
         NORMAL
       </ExampleUnstyledTypography>
-      <ExampleUnstyledTypography underline="none">
+      <ExampleUnstyledTypography
+        clear
+        underline="none"
+      >
         NONE
       </ExampleUnstyledTypography>
-      <ExampleUnstyledTypography underline="hover">
+      <ExampleUnstyledTypography
+        clear
+        underline="hover"
+      >
         HOVER
       </ExampleUnstyledTypography>
-      <ExampleUnstyledTypography underline="always">
+      <ExampleUnstyledTypography
+        clear
+        underline="always"
+      >
         ALWAYS
       </ExampleUnstyledTypography>
     </ExampleCard>

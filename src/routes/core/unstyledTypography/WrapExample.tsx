@@ -5,19 +5,31 @@ import { ExampleUnstyledTypography } from './ExampleUnstyledTypography';
 export const WrapExample = () => (
   <ExampleSection title="Wrap">
     <ExampleCard>
-      <ExampleUnstyledTypography wrap="nowrap">
+      <ExampleUnstyledTypography
+        clear
+        wrap="nowrap"
+      >
         NOWRAP NOWRAP NOWRAP NOWRAP NOWRAP NOWRAP NOWRAP NOWRAP NOWRAP NOWRAP
         NOWRAP NOWRAP NOWRAP NOWRAP NOWRAP
       </ExampleUnstyledTypography>
-      <ExampleUnstyledTypography wrap="wrap">
+      <ExampleUnstyledTypography
+        clear
+        wrap="wrap"
+      >
         WRAP WRAP WRAP WRAP WRAP WRAP WRAP WRAP WRAP WRAP WRAP WRAP WRAP WRAP
         WRAP
       </ExampleUnstyledTypography>
-      <ExampleUnstyledTypography wrap="balance">
+      <ExampleUnstyledTypography
+        clear
+        wrap="balance"
+      >
         BALANCE BALANCE BALANCE BALANCE BALANCE BALANCE BALANCE BALANCE BALANCE
         BALANCE BALANCE BALANCE BALANCE BALANCE BALANCE
       </ExampleUnstyledTypography>
-      <ExampleUnstyledTypography wrap="pretty">
+      <ExampleUnstyledTypography
+        clear
+        wrap="pretty"
+      >
         PRETTY PRETTY PRETTY PRETTY PRETTY PRETTY PRETTY PRETTY PRETTY PRETTY
         PRETTY PRETTY PRETTY PRETTY PRETTY
       </ExampleUnstyledTypography>
