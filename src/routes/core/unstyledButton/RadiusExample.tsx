@@ -5,48 +5,13 @@ import { ExampleUnstyledButton } from './ExampleUnstyledButton';
 export const RadiusExample = () => (
   <ExampleSection title="Radius">
     <ExampleCard>
-      <ExampleUnstyledButton
-        light
-        radius="none"
-      >
-        NONE
-      </ExampleUnstyledButton>
-      <ExampleUnstyledButton
-        light
-        radius="xs"
-      >
-        XS
-      </ExampleUnstyledButton>
-      <ExampleUnstyledButton
-        light
-        radius="sm"
-      >
-        SM
-      </ExampleUnstyledButton>
-      <ExampleUnstyledButton
-        light
-        radius="md"
-      >
-        MD
-      </ExampleUnstyledButton>
-      <ExampleUnstyledButton
-        light
-        radius="lg"
-      >
-        LG
-      </ExampleUnstyledButton>
-      <ExampleUnstyledButton
-        light
-        radius="xl"
-      >
-        XL
-      </ExampleUnstyledButton>
-      <ExampleUnstyledButton
-        light
-        radius="full"
-      >
-        FULL
-      </ExampleUnstyledButton>
+      <ExampleUnstyledButton radius="none">NONE</ExampleUnstyledButton>
+      <ExampleUnstyledButton radius="xs">XS</ExampleUnstyledButton>
+      <ExampleUnstyledButton radius="sm">SM</ExampleUnstyledButton>
+      <ExampleUnstyledButton radius="md">MD</ExampleUnstyledButton>
+      <ExampleUnstyledButton radius="lg">LG</ExampleUnstyledButton>
+      <ExampleUnstyledButton radius="xl">XL</ExampleUnstyledButton>
+      <ExampleUnstyledButton radius="full">FULL</ExampleUnstyledButton>
     </ExampleCard>
   </ExampleSection>
 );

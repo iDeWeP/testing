@@ -5,30 +5,10 @@ import { ExampleUnstyledButton } from './ExampleUnstyledButton';
 export const ScaleExample = () => (
   <ExampleSection title="Scale">
     <ExampleCard>
-      <ExampleUnstyledButton
-        light
-        scale="normal"
-      >
-        NORMAL
-      </ExampleUnstyledButton>
-      <ExampleUnstyledButton
-        light
-        scale="fit"
-      >
-        FIT
-      </ExampleUnstyledButton>
-      <ExampleUnstyledButton
-        light
-        scale="full"
-      >
-        FULL
-      </ExampleUnstyledButton>
-      <ExampleUnstyledButton
-        light
-        scale="square"
-      >
-        SQUARE
-      </ExampleUnstyledButton>
+      <ExampleUnstyledButton scale="normal">NORMAL</ExampleUnstyledButton>
+      <ExampleUnstyledButton scale="fit">FIT</ExampleUnstyledButton>
+      <ExampleUnstyledButton scale="full">FULL</ExampleUnstyledButton>
+      <ExampleUnstyledButton scale="square">SQUARE</ExampleUnstyledButton>
     </ExampleCard>
   </ExampleSection>
 );

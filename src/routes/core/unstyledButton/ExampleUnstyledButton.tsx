@@ -2,16 +2,17 @@ import { UnstyledButton } from '../../../core/components/UnstyledButton/Unstyled
 import type { UnstyledButtonProps } from '../../../core/components/UnstyledButton/UnstyledButton.types';
 
 type Props = {
-  light?: boolean;
+  clear?: boolean;
 } & UnstyledButtonProps<'button'>;
 
 export const ExampleUnstyledButton = ({
-  light,
+  clear,
   children = 'UNSTYLED-BUTTON',
   ...restProps
 }: Props) => (
   <UnstyledButton
-    variant={light ? 'light' : 'none'}
+    variant={clear ? 'none' : 'light'}
+    color="primary"
     {...restProps}
   >
     {children}

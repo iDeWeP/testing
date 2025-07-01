@@ -5,48 +5,13 @@ import { ExampleUnstyledButton } from './ExampleUnstyledButton';
 export const MarginExample = () => (
   <ExampleSection title="Margin">
     <ExampleCard align>
-      <ExampleUnstyledButton
-        light
-        margin="none"
-      >
-        NONE
-      </ExampleUnstyledButton>
-      <ExampleUnstyledButton
-        light
-        margin="xs"
-      >
-        XS
-      </ExampleUnstyledButton>
-      <ExampleUnstyledButton
-        light
-        margin="sm"
-      >
-        SM
-      </ExampleUnstyledButton>
-      <ExampleUnstyledButton
-        light
-        margin="md"
-      >
-        MD
-      </ExampleUnstyledButton>
-      <ExampleUnstyledButton
-        light
-        margin="lg"
-      >
-        LG
-      </ExampleUnstyledButton>
-      <ExampleUnstyledButton
-        light
-        margin="xl"
-      >
-        XL
-      </ExampleUnstyledButton>
-      <ExampleUnstyledButton
-        light
-        margin="xxl"
-      >
-        XXL
-      </ExampleUnstyledButton>
+      <ExampleUnstyledButton margin="none">NONE</ExampleUnstyledButton>
+      <ExampleUnstyledButton margin="xs">XS</ExampleUnstyledButton>
+      <ExampleUnstyledButton margin="sm">SM</ExampleUnstyledButton>
+      <ExampleUnstyledButton margin="md">MD</ExampleUnstyledButton>
+      <ExampleUnstyledButton margin="lg">LG</ExampleUnstyledButton>
+      <ExampleUnstyledButton margin="xl">XL</ExampleUnstyledButton>
+      <ExampleUnstyledButton margin="xxl">XXL</ExampleUnstyledButton>
     </ExampleCard>
   </ExampleSection>
 );
