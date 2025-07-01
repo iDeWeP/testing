@@ -1,52 +1,20 @@
 import { ExampleCard } from '../../../components/ExampleCard';
 import { ExampleSection } from '../../../components/ExampleSection';
-import { UnstyledSpinner } from '../../../core/components/UnstyledSpinner/UnstyledSpinner';
+import { ExampleUnstyledSpinner } from './ExampleUnstyledSpinner';
 
 export const ColorExample = () => (
   <ExampleSection title="Color">
     <ExampleCard>
-      <UnstyledSpinner
-        variant="light"
-        color="neutral"
-      >
-        NEUTRAL
-      </UnstyledSpinner>
-      <UnstyledSpinner
-        variant="light"
-        color="primary"
-      >
-        PRIMARY
-      </UnstyledSpinner>
-      <UnstyledSpinner
-        variant="light"
-        color="secondary"
-      >
+      <ExampleUnstyledSpinner color="surface">SURFACE</ExampleUnstyledSpinner>
+      <ExampleUnstyledSpinner color="neutral">NEUTRAL</ExampleUnstyledSpinner>
+      <ExampleUnstyledSpinner color="primary">PRIMARY</ExampleUnstyledSpinner>
+      <ExampleUnstyledSpinner color="secondary">
         SECONDARY
-      </UnstyledSpinner>
-      <UnstyledSpinner
-        variant="light"
-        color="tertiary"
-      >
-        TERTIARY
-      </UnstyledSpinner>
-      <UnstyledSpinner
-        variant="light"
-        color="success"
-      >
-        SUCCESS
-      </UnstyledSpinner>
-      <UnstyledSpinner
-        variant="light"
-        color="warning"
-      >
-        WARNING
-      </UnstyledSpinner>
-      <UnstyledSpinner
-        variant="light"
-        color="error"
-      >
-        ERROR
-      </UnstyledSpinner>
+      </ExampleUnstyledSpinner>
+      <ExampleUnstyledSpinner color="tertiary">TERTIARY</ExampleUnstyledSpinner>
+      <ExampleUnstyledSpinner color="success">SUCCESS</ExampleUnstyledSpinner>
+      <ExampleUnstyledSpinner color="warning">WARNING</ExampleUnstyledSpinner>
+      <ExampleUnstyledSpinner color="error">ERROR</ExampleUnstyledSpinner>
     </ExampleCard>
   </ExampleSection>
 );

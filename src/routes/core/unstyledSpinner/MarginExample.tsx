@@ -1,17 +1,17 @@
 import { ExampleCard } from '../../../components/ExampleCard';
 import { ExampleSection } from '../../../components/ExampleSection';
-import { UnstyledSpinner } from '../../../core/components/UnstyledSpinner/UnstyledSpinner';
+import { ExampleUnstyledSpinner } from './ExampleUnstyledSpinner';
 
 export const MarginExample = () => (
   <ExampleSection title="Margin">
     <ExampleCard align>
-      <UnstyledSpinner margin="none">NONE</UnstyledSpinner>
-      <UnstyledSpinner margin="xs">XS</UnstyledSpinner>
-      <UnstyledSpinner margin="sm">SM</UnstyledSpinner>
-      <UnstyledSpinner margin="md">MD</UnstyledSpinner>
-      <UnstyledSpinner margin="lg">LG</UnstyledSpinner>
-      <UnstyledSpinner margin="xl">XL</UnstyledSpinner>
-      <UnstyledSpinner margin="xxl">XXL</UnstyledSpinner>
+      <ExampleUnstyledSpinner margin="none">NONE</ExampleUnstyledSpinner>
+      <ExampleUnstyledSpinner margin="xs">XS</ExampleUnstyledSpinner>
+      <ExampleUnstyledSpinner margin="sm">SM</ExampleUnstyledSpinner>
+      <ExampleUnstyledSpinner margin="md">MD</ExampleUnstyledSpinner>
+      <ExampleUnstyledSpinner margin="lg">LG</ExampleUnstyledSpinner>
+      <ExampleUnstyledSpinner margin="xl">XL</ExampleUnstyledSpinner>
+      <ExampleUnstyledSpinner margin="xxl">XXL</ExampleUnstyledSpinner>
     </ExampleCard>
   </ExampleSection>
 );

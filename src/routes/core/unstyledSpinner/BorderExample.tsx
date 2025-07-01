@@ -1,12 +1,12 @@
 import { ExampleCard } from '../../../components/ExampleCard';
 import { ExampleSection } from '../../../components/ExampleSection';
-import { UnstyledSpinner } from '../../../core/components/UnstyledSpinner/UnstyledSpinner';
+import { ExampleUnstyledSpinner } from './ExampleUnstyledSpinner';
 
 export const BorderExample = () => (
   <ExampleSection title="Border">
     <ExampleCard>
-      <UnstyledSpinner border={false}>FALSE</UnstyledSpinner>
-      <UnstyledSpinner border={true}>TRUE</UnstyledSpinner>
+      <ExampleUnstyledSpinner border={false}>FALSE</ExampleUnstyledSpinner>
+      <ExampleUnstyledSpinner border={true}>TRUE</ExampleUnstyledSpinner>
     </ExampleCard>
   </ExampleSection>
 );

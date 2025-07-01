@@ -1,88 +1,52 @@
 import { ExampleCard } from '../../../components/ExampleCard';
 import { ExampleSection } from '../../../components/ExampleSection';
-import { UnstyledSpinner } from '../../../core/components/UnstyledSpinner/UnstyledSpinner';
+import { ExampleUnstyledSpinner } from './ExampleUnstyledSpinner';
 
 export const VariantExample = () => (
   <ExampleSection title="Variant">
     <ExampleCard>
-      <UnstyledSpinner
-        variant="none"
-        color="neutral"
-      >
-        NONE
-      </UnstyledSpinner>
-      <UnstyledSpinner
-        variant="text"
-        color="neutral"
-      >
-        TEXT
-      </UnstyledSpinner>
-      <UnstyledSpinner
-        variant="plain"
-        color="neutral"
-      >
-        PLAIN
-      </UnstyledSpinner>
-      <UnstyledSpinner
-        variant="light"
-        color="neutral"
-      >
-        LIGHT
-      </UnstyledSpinner>
-      <UnstyledSpinner
-        variant="surface"
-        color="neutral"
-      >
-        SURFACE
-      </UnstyledSpinner>
-      <UnstyledSpinner
-        variant="solid"
-        color="neutral"
-      >
-        SOLID
-      </UnstyledSpinner>
-      <UnstyledSpinner
+      <ExampleUnstyledSpinner variant="none">NONE</ExampleUnstyledSpinner>
+      <ExampleUnstyledSpinner variant="text">TEXT</ExampleUnstyledSpinner>
+      <ExampleUnstyledSpinner variant="plain">PLAIN</ExampleUnstyledSpinner>
+      <ExampleUnstyledSpinner variant="light">LIGHT</ExampleUnstyledSpinner>
+      <ExampleUnstyledSpinner variant="surface">SURFACE</ExampleUnstyledSpinner>
+      <ExampleUnstyledSpinner variant="solid">SOLID</ExampleUnstyledSpinner>
+      <ExampleUnstyledSpinner
         variant="none"
         border
-        color="neutral"
       >
         NONE-BORDER
-      </UnstyledSpinner>
-      <UnstyledSpinner
+      </ExampleUnstyledSpinner>
+      <ExampleUnstyledSpinner
         variant="text"
         border
-        color="neutral"
       >
         TEXT-BORDER
-      </UnstyledSpinner>
-      <UnstyledSpinner
+      </ExampleUnstyledSpinner>
+      <ExampleUnstyledSpinner
         variant="plain"
         border
-        color="neutral"
       >
         PLAIN-BORDER
-      </UnstyledSpinner>
-      <UnstyledSpinner
+      </ExampleUnstyledSpinner>
+      <ExampleUnstyledSpinner
         variant="light"
         border
-        color="neutral"
       >
         LIGHT-BORDER
-      </UnstyledSpinner>
-      <UnstyledSpinner
+      </ExampleUnstyledSpinner>
+      <ExampleUnstyledSpinner
         variant="surface"
         border
-        color="neutral"
       >
         SURFACE-BORDER
-      </UnstyledSpinner>
-      <UnstyledSpinner
+      </ExampleUnstyledSpinner>
+      <ExampleUnstyledSpinner
         variant="solid"
         border
-        color="neutral"
       >
         SOLID-BORDER
-      </UnstyledSpinner>
+      </ExampleUnstyledSpinner>
     </ExampleCard>
   </ExampleSection>
 );
