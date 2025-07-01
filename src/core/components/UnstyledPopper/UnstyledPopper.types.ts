@@ -18,7 +18,7 @@ import type {
 import type {
   UnstyledFlexConfigProps,
   UnstyledFlexProps
-} from '../UnstyledFlexBox/UnstyledFlex.types';
+} from '../UnstyledFlex/UnstyledFlex.types';
 
 export type UnstyledPopperArrowProps = {
   offset?: ArrowOffset;

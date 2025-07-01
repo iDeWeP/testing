@@ -24,7 +24,7 @@ import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
 import { mergePopperStyle } from '../../utils/merge-popper-style/merge-popper-style';
 import { mergeProps } from '../../utils/merge-props/merge-props';
 import { mergeTransitionProps } from '../../utils/merge-transition-props/merge-transition-props';
-import { UnstyledFlex } from '../UnstyledFlexBox/UnstyledFlex';
+import { UnstyledFlex } from '../UnstyledFlex/UnstyledFlex';
 import type { UnstyledPopperProps } from './UnstyledPopper.types';
 import { UnstyledPopperAnchor } from './UnstyledPopperAnchor';
 import { UnstyledPopperArrow } from './UnstyledPopperArrow';
