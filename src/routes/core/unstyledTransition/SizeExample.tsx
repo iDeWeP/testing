@@ -3,88 +3,20 @@ import { ExampleUnstyledTransition } from './ExampleUnstyledTransition';
 
 export const SizeExample = () => (
   <ExampleSection title="Size">
-    <ExampleUnstyledTransition
-      light
-      size="none"
-    >
-      NONE
-    </ExampleUnstyledTransition>
-    <ExampleUnstyledTransition
-      light
-      size="xs"
-    >
-      XS
-    </ExampleUnstyledTransition>
-    <ExampleUnstyledTransition
-      light
-      size="sm"
-    >
-      SM
-    </ExampleUnstyledTransition>
-    <ExampleUnstyledTransition
-      light
-      size="md"
-    >
-      MD
-    </ExampleUnstyledTransition>
-    <ExampleUnstyledTransition
-      light
-      size="lg"
-    >
-      LG
-    </ExampleUnstyledTransition>
-    <ExampleUnstyledTransition
-      light
-      size="xl"
-    >
-      XL
-    </ExampleUnstyledTransition>
-    <ExampleUnstyledTransition
-      light
-      size="xxl"
-    >
-      XXL
-    </ExampleUnstyledTransition>
-    <ExampleUnstyledTransition
-      light
-      size="none"
-    >
-      NONE
-    </ExampleUnstyledTransition>
-    <ExampleUnstyledTransition
-      light
-      size="xs-xs"
-    >
-      XS-XS
-    </ExampleUnstyledTransition>
-    <ExampleUnstyledTransition
-      light
-      size="sm-sm"
-    >
-      SM-SM
-    </ExampleUnstyledTransition>
-    <ExampleUnstyledTransition
-      light
-      size="md-md"
-    >
-      MD-MD
-    </ExampleUnstyledTransition>
-    <ExampleUnstyledTransition
-      light
-      size="lg-lg"
-    >
-      LG-LG
-    </ExampleUnstyledTransition>
-    <ExampleUnstyledTransition
-      light
-      size="xl-xl"
-    >
-      XL-XL
-    </ExampleUnstyledTransition>
-    <ExampleUnstyledTransition
-      light
-      size="xxl-xxl"
-    >
+    <ExampleUnstyledTransition size="none">NONE</ExampleUnstyledTransition>
+    <ExampleUnstyledTransition size="xs">XS</ExampleUnstyledTransition>
+    <ExampleUnstyledTransition size="sm">SM</ExampleUnstyledTransition>
+    <ExampleUnstyledTransition size="md">MD</ExampleUnstyledTransition>
+    <ExampleUnstyledTransition size="lg">LG</ExampleUnstyledTransition>
+    <ExampleUnstyledTransition size="xl">XL</ExampleUnstyledTransition>
+    <ExampleUnstyledTransition size="xxl">XXL</ExampleUnstyledTransition>
+    <ExampleUnstyledTransition size="none">NONE</ExampleUnstyledTransition>
+    <ExampleUnstyledTransition size="xs-xs">XS-XS</ExampleUnstyledTransition>
+    <ExampleUnstyledTransition size="sm-sm">SM-SM</ExampleUnstyledTransition>
+    <ExampleUnstyledTransition size="md-md">MD-MD</ExampleUnstyledTransition>
+    <ExampleUnstyledTransition size="lg-lg">LG-LG</ExampleUnstyledTransition>
+    <ExampleUnstyledTransition size="xl-xl">XL-XL</ExampleUnstyledTransition>
+    <ExampleUnstyledTransition size="xxl-xxl">
       XXL-XXL
     </ExampleUnstyledTransition>
   </ExampleSection>

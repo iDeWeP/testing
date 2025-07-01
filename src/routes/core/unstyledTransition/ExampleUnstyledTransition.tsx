@@ -5,11 +5,11 @@ import { UnstyledTransition } from '../../../core/components/UnstyledTransition/
 import type { UnstyledTransitionProps } from '../../../core/components/UnstyledTransition/UnstyledTransition.types';
 
 type Props = {
-  light?: boolean;
+  clear?: boolean;
 } & UnstyledTransitionProps<'div'>;
 
 export const ExampleUnstyledTransition = ({
-  light,
+  clear,
   children = 'UNSTYLED-TRANSITION',
   ...restProps
 }: Props) => {
@@ -23,10 +23,14 @@ export const ExampleUnstyledTransition = ({
       <ExampleCard>
         <UnstyledTransition
           in={isIn}
-          variant={light ? 'light' : 'none'}
           {...restProps}
         >
-          <UnstyledBox>{children}</UnstyledBox>
+          <UnstyledBox
+            variant={clear ? 'none' : 'light'}
+            color="neutral"
+          >
+            {children}
+          </UnstyledBox>
         </UnstyledTransition>
       </ExampleCard>
     </>

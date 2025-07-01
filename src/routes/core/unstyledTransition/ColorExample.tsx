@@ -3,53 +3,27 @@ import { ExampleUnstyledTransition } from './ExampleUnstyledTransition';
 
 export const ColorExample = () => (
   <ExampleSection title="Color">
-    <ExampleUnstyledTransition
-      light
-      color="surface"
-    >
+    <ExampleUnstyledTransition color="surface">
       SURFACE
     </ExampleUnstyledTransition>
-    <ExampleUnstyledTransition
-      light
-      color="neutral"
-    >
+    <ExampleUnstyledTransition color="neutral">
       NEUTRAL
     </ExampleUnstyledTransition>
-    <ExampleUnstyledTransition
-      light
-      color="primary"
-    >
+    <ExampleUnstyledTransition color="primary">
       PRIMARY
     </ExampleUnstyledTransition>
-    <ExampleUnstyledTransition
-      light
-      color="secondary"
-    >
+    <ExampleUnstyledTransition color="secondary">
       SECONDARY
     </ExampleUnstyledTransition>
-    <ExampleUnstyledTransition
-      light
-      color="tertiary"
-    >
+    <ExampleUnstyledTransition color="tertiary">
       TERTIARY
     </ExampleUnstyledTransition>
-    <ExampleUnstyledTransition
-      light
-      color="success"
-    >
+    <ExampleUnstyledTransition color="success">
       SUCCESS
     </ExampleUnstyledTransition>
-    <ExampleUnstyledTransition
-      light
-      color="warning"
-    >
+    <ExampleUnstyledTransition color="warning">
       WARNING
     </ExampleUnstyledTransition>
-    <ExampleUnstyledTransition
-      light
-      color="error"
-    >
-      ERROR
-    </ExampleUnstyledTransition>
+    <ExampleUnstyledTransition color="error">ERROR</ExampleUnstyledTransition>
   </ExampleSection>
 );
