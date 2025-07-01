@@ -1,52 +1,52 @@
 import { ExampleCard } from '../../../components/ExampleCard';
 import { ExampleSection } from '../../../components/ExampleSection';
-import { UnstyledBox } from '../../../core/components/UnstyledBox/UnstyledBox';
+import { ExampleUnstyledBox } from './ExampleBox';
 
 export const MarginExample = () => (
   <ExampleSection title="Margin">
     <ExampleCard align>
-      <UnstyledBox
+      <ExampleUnstyledBox
         variant="light"
         margin="none"
       >
         NONE
-      </UnstyledBox>
-      <UnstyledBox
+      </ExampleUnstyledBox>
+      <ExampleUnstyledBox
         variant="light"
         margin="xs"
       >
         XS
-      </UnstyledBox>
-      <UnstyledBox
+      </ExampleUnstyledBox>
+      <ExampleUnstyledBox
         variant="light"
         margin="sm"
       >
         SM
-      </UnstyledBox>
-      <UnstyledBox
+      </ExampleUnstyledBox>
+      <ExampleUnstyledBox
         variant="light"
         margin="md"
       >
         MD
-      </UnstyledBox>
-      <UnstyledBox
+      </ExampleUnstyledBox>
+      <ExampleUnstyledBox
         variant="light"
         margin="lg"
       >
         LG
-      </UnstyledBox>
-      <UnstyledBox
+      </ExampleUnstyledBox>
+      <ExampleUnstyledBox
         variant="light"
         margin="xl"
       >
         XL
-      </UnstyledBox>
-      <UnstyledBox
+      </ExampleUnstyledBox>
+      <ExampleUnstyledBox
         variant="light"
         margin="xxl"
       >
         XXL
-      </UnstyledBox>
+      </ExampleUnstyledBox>
     </ExampleCard>
   </ExampleSection>
 );

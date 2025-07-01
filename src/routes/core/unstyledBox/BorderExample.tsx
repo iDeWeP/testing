@@ -1,58 +1,18 @@
 import { ExampleCard } from '../../../components/ExampleCard';
 import { ExampleSection } from '../../../components/ExampleSection';
-import { UnstyledBox } from '../../../core/components/UnstyledBox/UnstyledBox';
+import { ExampleUnstyledBox } from './ExampleBox';
 
 export const BorderExample = () => (
   <ExampleSection title="Border">
     <ExampleCard>
-      <UnstyledBox
-        variant="none"
-        border={false}
-      >
-        FALSE
-      </UnstyledBox>
-      <UnstyledBox
-        variant="none"
-        border="all"
-      >
-        ALL
-      </UnstyledBox>
-      <UnstyledBox
-        variant="none"
-        border="x"
-      >
-        X
-      </UnstyledBox>
-      <UnstyledBox
-        variant="none"
-        border="y"
-      >
-        Y
-      </UnstyledBox>
-      <UnstyledBox
-        variant="none"
-        border="top"
-      >
-        TOP
-      </UnstyledBox>
-      <UnstyledBox
-        variant="none"
-        border="bottom"
-      >
-        BOTTOM
-      </UnstyledBox>
-      <UnstyledBox
-        variant="none"
-        border="left"
-      >
-        LEFT
-      </UnstyledBox>
-      <UnstyledBox
-        variant="none"
-        border="right"
-      >
-        RIGHT
-      </UnstyledBox>
+      <ExampleUnstyledBox border={false}>FALSE</ExampleUnstyledBox>
+      <ExampleUnstyledBox border="all">ALL</ExampleUnstyledBox>
+      <ExampleUnstyledBox border="x">X</ExampleUnstyledBox>
+      <ExampleUnstyledBox border="y">Y</ExampleUnstyledBox>
+      <ExampleUnstyledBox border="top">TOP</ExampleUnstyledBox>
+      <ExampleUnstyledBox border="bottom">BOTTOM</ExampleUnstyledBox>
+      <ExampleUnstyledBox border="left">LEFT</ExampleUnstyledBox>
+      <ExampleUnstyledBox border="right">RIGHT</ExampleUnstyledBox>
     </ExampleCard>
   </ExampleSection>
 );

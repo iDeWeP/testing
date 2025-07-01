@@ -1,52 +1,52 @@
 import { ExampleCard } from '../../../components/ExampleCard';
 import { ExampleSection } from '../../../components/ExampleSection';
-import { UnstyledBox } from '../../../core/components/UnstyledBox/UnstyledBox';
+import { ExampleUnstyledBox } from './ExampleBox';
 
 export const RadiusExample = () => (
   <ExampleSection title="Radius">
     <ExampleCard>
-      <UnstyledBox
+      <ExampleUnstyledBox
         variant="light"
         radius="none"
       >
         NONE
-      </UnstyledBox>
-      <UnstyledBox
+      </ExampleUnstyledBox>
+      <ExampleUnstyledBox
         variant="light"
         radius="xs"
       >
         XS
-      </UnstyledBox>
-      <UnstyledBox
+      </ExampleUnstyledBox>
+      <ExampleUnstyledBox
         variant="light"
         radius="sm"
       >
         SM
-      </UnstyledBox>
-      <UnstyledBox
+      </ExampleUnstyledBox>
+      <ExampleUnstyledBox
         variant="light"
         radius="md"
       >
         MD
-      </UnstyledBox>
-      <UnstyledBox
+      </ExampleUnstyledBox>
+      <ExampleUnstyledBox
         variant="light"
         radius="lg"
       >
         LG
-      </UnstyledBox>
-      <UnstyledBox
+      </ExampleUnstyledBox>
+      <ExampleUnstyledBox
         variant="light"
         radius="xl"
       >
         XL
-      </UnstyledBox>
-      <UnstyledBox
+      </ExampleUnstyledBox>
+      <ExampleUnstyledBox
         variant="light"
         radius="full"
       >
         FULL
-      </UnstyledBox>
+      </ExampleUnstyledBox>
     </ExampleCard>
   </ExampleSection>
 );

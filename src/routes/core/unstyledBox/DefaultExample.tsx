@@ -1,11 +1,11 @@
 import { ExampleCard } from '../../../components/ExampleCard';
 import { ExampleSection } from '../../../components/ExampleSection';
-import { UnstyledBox } from '../../../core/components/UnstyledBox/UnstyledBox';
+import { ExampleUnstyledBox } from './ExampleBox';
 
 export const DefaultExample = () => (
   <ExampleSection title="Default">
     <ExampleCard>
-      <UnstyledBox>UNSTYLED-BOX</UnstyledBox>
+      <ExampleUnstyledBox />
     </ExampleCard>
   </ExampleSection>
 );

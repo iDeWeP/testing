@@ -1,52 +1,52 @@
 import { ExampleCard } from '../../../components/ExampleCard';
 import { ExampleSection } from '../../../components/ExampleSection';
-import { UnstyledBox } from '../../../core/components/UnstyledBox/UnstyledBox';
+import { ExampleUnstyledBox } from './ExampleBox';
 
 export const VariantExample = () => (
   <ExampleSection title="Variant">
     <ExampleCard>
-      <UnstyledBox variant="none">NONE</UnstyledBox>
-      <UnstyledBox variant="text">TEXT</UnstyledBox>
-      <UnstyledBox variant="plain">PLAIN</UnstyledBox>
-      <UnstyledBox variant="light">LIGHT</UnstyledBox>
-      <UnstyledBox variant="surface">SURFACE</UnstyledBox>
-      <UnstyledBox variant="solid">SOLID</UnstyledBox>
-      <UnstyledBox
+      <ExampleUnstyledBox variant="none">NONE</ExampleUnstyledBox>
+      <ExampleUnstyledBox variant="text">TEXT</ExampleUnstyledBox>
+      <ExampleUnstyledBox variant="plain">PLAIN</ExampleUnstyledBox>
+      <ExampleUnstyledBox variant="light">LIGHT</ExampleUnstyledBox>
+      <ExampleUnstyledBox variant="surface">SURFACE</ExampleUnstyledBox>
+      <ExampleUnstyledBox variant="solid">SOLID</ExampleUnstyledBox>
+      <ExampleUnstyledBox
         variant="none"
         border
       >
         NONE-BORDER
-      </UnstyledBox>
-      <UnstyledBox
+      </ExampleUnstyledBox>
+      <ExampleUnstyledBox
         variant="text"
         border
       >
         TEXT-BORDER
-      </UnstyledBox>
-      <UnstyledBox
+      </ExampleUnstyledBox>
+      <ExampleUnstyledBox
         variant="plain"
         border
       >
         PLAIN-BORDER
-      </UnstyledBox>
-      <UnstyledBox
+      </ExampleUnstyledBox>
+      <ExampleUnstyledBox
         variant="light"
         border
       >
         LIGHT-BORDER
-      </UnstyledBox>
-      <UnstyledBox
+      </ExampleUnstyledBox>
+      <ExampleUnstyledBox
         variant="surface"
         border
       >
         SURFACE-BORDER
-      </UnstyledBox>
-      <UnstyledBox
+      </ExampleUnstyledBox>
+      <ExampleUnstyledBox
         variant="solid"
         border
       >
         SOLID-BORDER
-      </UnstyledBox>
+      </ExampleUnstyledBox>
     </ExampleCard>
   </ExampleSection>
 );
