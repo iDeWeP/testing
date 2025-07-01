@@ -2,7 +2,7 @@ import { generic } from '../../config/generic';
 import type { Classes } from '../../types';
 import { mergeClasses } from './merge-classes';
 
-export const styleUnstyledFlexBox = (
+export const styleUnstyledFlex = (
   className: string,
   {
     direction = 'row',

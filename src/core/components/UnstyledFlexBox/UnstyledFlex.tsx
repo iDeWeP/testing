@@ -2,11 +2,11 @@ import type { ElementType } from 'react';
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
 import { mergeProps } from '../../utils/merge-props/merge-props';
 import { UnstyledBox } from '../UnstyledBox/UnstyledBox';
-import type { UnstyledFlexBoxProps } from './UnstyledFlexBox.types';
-import { unstyledFlexBoxConfig } from './unstyledFlexBoxConfig';
+import type { UnstyledFlexProps } from './UnstyledFlex.types';
+import { unstyledFlexConfig } from './unstyledFlexConfig';
 
-export const UnstyledFlexBox = <E extends ElementType = 'div'>(
-  props: UnstyledFlexBoxProps<E>
+export const UnstyledFlex = <E extends ElementType = 'div'>(
+  props: UnstyledFlexProps<E>
 ) => {
   const {
     direction,
@@ -16,9 +16,9 @@ export const UnstyledFlexBox = <E extends ElementType = 'div'>(
     gap,
     className,
     ...restProps
-  } = mergeProps(unstyledFlexBoxConfig.props, props);
+  } = mergeProps(unstyledFlexConfig.props, props);
 
-  const mergedClassName = mergeClassName('unstyledFlexBox', className, {
+  const mergedClassName = mergeClassName('unstyledFlex', className, {
     direction,
     wrap,
     justifyContent,

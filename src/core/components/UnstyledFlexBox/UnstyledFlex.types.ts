@@ -12,7 +12,7 @@ import type {
   UnstyledBoxProps
 } from '../UnstyledBox/UnstyledBox.types';
 
-export type UnstyledFlexBoxDefaultProps = {
+export type UnstyledFlexDefaultProps = {
   direction?: Direction;
   wrap?: Wrap;
   justify?: JustifyContent;
@@ -20,12 +20,12 @@ export type UnstyledFlexBoxDefaultProps = {
   gap?: Gap;
 };
 
-export type UnstyledFlexBoxConfigProps = MergeProps<
+export type UnstyledFlexConfigProps = MergeProps<
   UnstyledBoxConfigProps,
-  UnstyledFlexBoxDefaultProps
+  UnstyledFlexDefaultProps
 >;
 
-export type UnstyledFlexBoxProps<E extends ElementType> = MergeProps<
+export type UnstyledFlexProps<E extends ElementType> = MergeProps<
   UnstyledBoxProps<E>,
-  UnstyledFlexBoxDefaultProps
+  UnstyledFlexDefaultProps
 >;

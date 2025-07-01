@@ -5,7 +5,7 @@ import { styleUnstyledCheckbox } from './style-unstyled-checkbox';
 import { styleUnstyledCheckboxContainer } from './style-unstyled-checkbox-container';
 import { styleUnstyledCheckboxIcon } from './style-unstyled-checkbox-icon';
 import { styleUnstyledCheckboxTrail } from './style-unstyled-checkbox-trail';
-import { styleUnstyledFlexBox } from './style-unstyled-flex-box';
+import { styleUnstyledFlex } from './style-unstyled-flex';
 import { styleUnstyledGrid } from './style-unstyled-grid';
 import { styleUnstyledPopper } from './style-unstyled-popper';
 import { styleUnstyledPopperArrow } from './style-unstyled-popper-arrow';
@@ -23,7 +23,7 @@ const componentsClasses = {
   unstyledCheckboxIcon: styleUnstyledCheckboxIcon,
   unstyledCheckboxTrail: styleUnstyledCheckboxTrail,
   unstyledCheckbox: styleUnstyledCheckbox,
-  unstyledFlexBox: styleUnstyledFlexBox,
+  unstyledFlex: styleUnstyledFlex,
   unstyledGrid: styleUnstyledGrid,
   unstyledPopperArrow: styleUnstyledPopperArrow,
   unstyledPopperBackdrop: styleUnstyledPopperBackdrop,
