@@ -3,7 +3,7 @@ import type {
   ComponentRefProps,
   Loading,
   Variant,
-  Size,
+  DefaultSize,
   ButtonScale,
   Margin,
   Radius,
@@ -32,7 +32,7 @@ export type UnstyledButtonDefaultProps = {
   loading?: Loading;
   disabled?: boolean;
   variant?: Variant;
-  size?: Size;
+  size?: DefaultSize;
   scale?: ButtonScale;
   margin?: Margin;
   border?: boolean;
