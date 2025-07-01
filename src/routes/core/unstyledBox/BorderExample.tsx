@@ -7,6 +7,12 @@ export const BorderExample = () => (
     <ExampleCard>
       <UnstyledBox
         variant="none"
+        border={false}
+      >
+        FALSE
+      </UnstyledBox>
+      <UnstyledBox
+        variant="none"
         border="all"
       >
         ALL
