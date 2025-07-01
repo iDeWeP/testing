@@ -1,58 +1,24 @@
 import { ExampleCard } from '../../../components/ExampleCard';
 import { ExampleSection } from '../../../components/ExampleSection';
-import { UnstyledTypography } from '../../../core/components/UnstyledTypography/UnstyledTypography';
+import { ExampleUnstyledTypography } from './ExampleUnstyledTypography';
 
 export const BorderExample = () => (
   <ExampleSection title="Border">
     <ExampleCard>
-      <UnstyledTypography
-        variant="none"
-        border={false}
-      >
+      <ExampleUnstyledTypography border={false}>
         FALSE
-      </UnstyledTypography>
-      <UnstyledTypography
-        variant="none"
-        border="all"
-      >
-        ALL
-      </UnstyledTypography>
-      <UnstyledTypography
-        variant="none"
-        border="x"
-      >
-        X
-      </UnstyledTypography>
-      <UnstyledTypography
-        variant="none"
-        border="y"
-      >
-        Y
-      </UnstyledTypography>
-      <UnstyledTypography
-        variant="none"
-        border="top"
-      >
-        TOP
-      </UnstyledTypography>
-      <UnstyledTypography
-        variant="none"
-        border="bottom"
-      >
+      </ExampleUnstyledTypography>
+      <ExampleUnstyledTypography border="all">ALL</ExampleUnstyledTypography>
+      <ExampleUnstyledTypography border="x">X</ExampleUnstyledTypography>
+      <ExampleUnstyledTypography border="y">Y</ExampleUnstyledTypography>
+      <ExampleUnstyledTypography border="top">TOP</ExampleUnstyledTypography>
+      <ExampleUnstyledTypography border="bottom">
         BOTTOM
-      </UnstyledTypography>
-      <UnstyledTypography
-        variant="none"
-        border="left"
-      >
-        LEFT
-      </UnstyledTypography>
-      <UnstyledTypography
-        variant="none"
-        border="right"
-      >
+      </ExampleUnstyledTypography>
+      <ExampleUnstyledTypography border="left">LEFT</ExampleUnstyledTypography>
+      <ExampleUnstyledTypography border="right">
         RIGHT
-      </UnstyledTypography>
+      </ExampleUnstyledTypography>
     </ExampleCard>
   </ExampleSection>
 );

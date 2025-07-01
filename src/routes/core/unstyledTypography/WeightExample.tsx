@@ -1,28 +1,13 @@
 import { ExampleCard } from '../../../components/ExampleCard';
 import { ExampleSection } from '../../../components/ExampleSection';
-import { UnstyledTypography } from '../../../core/components/UnstyledTypography/UnstyledTypography';
+import { ExampleUnstyledTypography } from './ExampleUnstyledTypography';
 
 export const WeightExample = () => (
   <ExampleSection title="Weight">
     <ExampleCard>
-      <UnstyledTypography
-        variant="none"
-        weight="normal"
-      >
-        NORMAL
-      </UnstyledTypography>
-      <UnstyledTypography
-        variant="none"
-        weight="semi"
-      >
-        SEMI
-      </UnstyledTypography>
-      <UnstyledTypography
-        variant="none"
-        weight="bold"
-      >
-        BOLD
-      </UnstyledTypography>
+      <ExampleUnstyledTypography weight="normal">NORMAL</ExampleUnstyledTypography>
+      <ExampleUnstyledTypography weight="semi">SEMI</ExampleUnstyledTypography>
+      <ExampleUnstyledTypography weight="bold">BOLD</ExampleUnstyledTypography>
     </ExampleCard>
   </ExampleSection>
 );

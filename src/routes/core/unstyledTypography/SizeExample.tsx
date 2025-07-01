@@ -1,46 +1,16 @@
 import { ExampleCard } from '../../../components/ExampleCard';
 import { ExampleSection } from '../../../components/ExampleSection';
-import { UnstyledTypography } from '../../../core/components/UnstyledTypography/UnstyledTypography';
+import { ExampleUnstyledTypography } from './ExampleUnstyledTypography';
 
 export const SizeExample = () => (
   <ExampleSection title="Size">
     <ExampleCard>
-      <UnstyledTypography
-        variant="none"
-        size="xs"
-      >
-        XS
-      </UnstyledTypography>
-      <UnstyledTypography
-        variant="none"
-        size="sm"
-      >
-        SM
-      </UnstyledTypography>
-      <UnstyledTypography
-        variant="none"
-        size="md"
-      >
-        MD
-      </UnstyledTypography>
-      <UnstyledTypography
-        variant="none"
-        size="lg"
-      >
-        LG
-      </UnstyledTypography>
-      <UnstyledTypography
-        variant="none"
-        size="xl"
-      >
-        XL
-      </UnstyledTypography>
-      <UnstyledTypography
-        variant="none"
-        size="xxl"
-      >
-        XXL
-      </UnstyledTypography>
+      <ExampleUnstyledTypography size="xs">XS</ExampleUnstyledTypography>
+      <ExampleUnstyledTypography size="sm">SM</ExampleUnstyledTypography>
+      <ExampleUnstyledTypography size="md">MD</ExampleUnstyledTypography>
+      <ExampleUnstyledTypography size="lg">LG</ExampleUnstyledTypography>
+      <ExampleUnstyledTypography size="xl">XL</ExampleUnstyledTypography>
+      <ExampleUnstyledTypography size="xxl">XXL</ExampleUnstyledTypography>
     </ExampleCard>
   </ExampleSection>
 );

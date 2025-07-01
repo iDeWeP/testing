@@ -1,58 +1,58 @@
 import { ExampleCard } from '../../../components/ExampleCard';
 import { ExampleSection } from '../../../components/ExampleSection';
-import { UnstyledTypography } from '../../../core/components/UnstyledTypography/UnstyledTypography';
+import { ExampleUnstyledTypography } from './ExampleUnstyledTypography';
 
 export const ColorExample = () => (
   <ExampleSection title="Color">
     <ExampleCard>
-      <UnstyledTypography
-        variant="light"
+      <ExampleUnstyledTypography
+        light
         color="surface"
       >
         SURFACE
-      </UnstyledTypography>
-      <UnstyledTypography
-        variant="light"
+      </ExampleUnstyledTypography>
+      <ExampleUnstyledTypography
+        light
         color="neutral"
       >
         NEUTRAL
-      </UnstyledTypography>
-      <UnstyledTypography
-        variant="light"
+      </ExampleUnstyledTypography>
+      <ExampleUnstyledTypography
+        light
         color="primary"
       >
         PRIMARY
-      </UnstyledTypography>
-      <UnstyledTypography
-        variant="light"
+      </ExampleUnstyledTypography>
+      <ExampleUnstyledTypography
+        light
         color="secondary"
       >
         SECONDARY
-      </UnstyledTypography>
-      <UnstyledTypography
-        variant="light"
+      </ExampleUnstyledTypography>
+      <ExampleUnstyledTypography
+        light
         color="tertiary"
       >
         TERTIARY
-      </UnstyledTypography>
-      <UnstyledTypography
-        variant="light"
+      </ExampleUnstyledTypography>
+      <ExampleUnstyledTypography
+        light
         color="success"
       >
         SUCCESS
-      </UnstyledTypography>
-      <UnstyledTypography
-        variant="light"
+      </ExampleUnstyledTypography>
+      <ExampleUnstyledTypography
+        light
         color="warning"
       >
         WARNING
-      </UnstyledTypography>
-      <UnstyledTypography
-        variant="light"
+      </ExampleUnstyledTypography>
+      <ExampleUnstyledTypography
+        light
         color="error"
       >
         ERROR
-      </UnstyledTypography>
+      </ExampleUnstyledTypography>
     </ExampleCard>
   </ExampleSection>
 );

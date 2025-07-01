@@ -1,52 +1,52 @@
 import { ExampleCard } from '../../../components/ExampleCard';
 import { ExampleSection } from '../../../components/ExampleSection';
-import { UnstyledTypography } from '../../../core/components/UnstyledTypography/UnstyledTypography';
+import { ExampleUnstyledTypography } from './ExampleUnstyledTypography';
 
 export const VariantExample = () => (
   <ExampleSection title="Variant">
     <ExampleCard>
-      <UnstyledTypography variant="none">NONE</UnstyledTypography>
-      <UnstyledTypography variant="text">TEXT</UnstyledTypography>
-      <UnstyledTypography variant="plain">PLAIN</UnstyledTypography>
-      <UnstyledTypography variant="light">LIGHT</UnstyledTypography>
-      <UnstyledTypography variant="surface">SURFACE</UnstyledTypography>
-      <UnstyledTypography variant="solid">SOLID</UnstyledTypography>
-      <UnstyledTypography
+      <ExampleUnstyledTypography variant="none">NONE</ExampleUnstyledTypography>
+      <ExampleUnstyledTypography variant="text">TEXT</ExampleUnstyledTypography>
+      <ExampleUnstyledTypography variant="plain">PLAIN</ExampleUnstyledTypography>
+      <ExampleUnstyledTypography variant="light">LIGHT</ExampleUnstyledTypography>
+      <ExampleUnstyledTypography variant="surface">SURFACE</ExampleUnstyledTypography>
+      <ExampleUnstyledTypography variant="solid">SOLID</ExampleUnstyledTypography>
+      <ExampleUnstyledTypography
         variant="none"
         border
       >
         NONE-BORDER
-      </UnstyledTypography>
-      <UnstyledTypography
+      </ExampleUnstyledTypography>
+      <ExampleUnstyledTypography
         variant="text"
         border
       >
         TEXT-BORDER
-      </UnstyledTypography>
-      <UnstyledTypography
+      </ExampleUnstyledTypography>
+      <ExampleUnstyledTypography
         variant="plain"
         border
       >
         PLAIN-BORDER
-      </UnstyledTypography>
-      <UnstyledTypography
+      </ExampleUnstyledTypography>
+      <ExampleUnstyledTypography
         variant="light"
         border
       >
         LIGHT-BORDER
-      </UnstyledTypography>
-      <UnstyledTypography
+      </ExampleUnstyledTypography>
+      <ExampleUnstyledTypography
         variant="surface"
         border
       >
         SURFACE-BORDER
-      </UnstyledTypography>
-      <UnstyledTypography
+      </ExampleUnstyledTypography>
+      <ExampleUnstyledTypography
         variant="solid"
         border
       >
         SOLID-BORDER
-      </UnstyledTypography>
+      </ExampleUnstyledTypography>
     </ExampleCard>
   </ExampleSection>
 );

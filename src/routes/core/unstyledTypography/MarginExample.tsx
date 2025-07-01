@@ -1,52 +1,52 @@
 import { ExampleCard } from '../../../components/ExampleCard';
 import { ExampleSection } from '../../../components/ExampleSection';
-import { UnstyledTypography } from '../../../core/components/UnstyledTypography/UnstyledTypography';
+import { ExampleUnstyledTypography } from './ExampleUnstyledTypography';
 
 export const MarginExample = () => (
   <ExampleSection title="Margin">
     <ExampleCard align>
-      <UnstyledTypography
-        variant="light"
+      <ExampleUnstyledTypography
+        light
         margin="none"
       >
         NONE
-      </UnstyledTypography>
-      <UnstyledTypography
-        variant="light"
+      </ExampleUnstyledTypography>
+      <ExampleUnstyledTypography
+        light
         margin="xs"
       >
         XS
-      </UnstyledTypography>
-      <UnstyledTypography
-        variant="light"
+      </ExampleUnstyledTypography>
+      <ExampleUnstyledTypography
+        light
         margin="sm"
       >
         SM
-      </UnstyledTypography>
-      <UnstyledTypography
-        variant="light"
+      </ExampleUnstyledTypography>
+      <ExampleUnstyledTypography
+        light
         margin="md"
       >
         MD
-      </UnstyledTypography>
-      <UnstyledTypography
-        variant="light"
+      </ExampleUnstyledTypography>
+      <ExampleUnstyledTypography
+        light
         margin="lg"
       >
         LG
-      </UnstyledTypography>
-      <UnstyledTypography
-        variant="light"
+      </ExampleUnstyledTypography>
+      <ExampleUnstyledTypography
+        light
         margin="xl"
       >
         XL
-      </UnstyledTypography>
-      <UnstyledTypography
-        variant="light"
+      </ExampleUnstyledTypography>
+      <ExampleUnstyledTypography
+        light
         margin="xxl"
       >
         XXL
-      </UnstyledTypography>
+      </ExampleUnstyledTypography>
     </ExampleCard>
   </ExampleSection>
 );

@@ -1,52 +1,52 @@
 import { ExampleCard } from '../../../components/ExampleCard';
 import { ExampleSection } from '../../../components/ExampleSection';
-import { UnstyledTypography } from '../../../core/components/UnstyledTypography/UnstyledTypography';
+import { ExampleUnstyledTypography } from './ExampleUnstyledTypography';
 
 export const RadiusExample = () => (
   <ExampleSection title="Radius">
     <ExampleCard>
-      <UnstyledTypography
-        variant="light"
+      <ExampleUnstyledTypography
+        light
         radius="none"
       >
         NONE
-      </UnstyledTypography>
-      <UnstyledTypography
-        variant="light"
+      </ExampleUnstyledTypography>
+      <ExampleUnstyledTypography
+        light
         radius="xs"
       >
         XS
-      </UnstyledTypography>
-      <UnstyledTypography
-        variant="light"
+      </ExampleUnstyledTypography>
+      <ExampleUnstyledTypography
+        light
         radius="sm"
       >
         SM
-      </UnstyledTypography>
-      <UnstyledTypography
-        variant="light"
+      </ExampleUnstyledTypography>
+      <ExampleUnstyledTypography
+        light
         radius="md"
       >
         MD
-      </UnstyledTypography>
-      <UnstyledTypography
-        variant="light"
+      </ExampleUnstyledTypography>
+      <ExampleUnstyledTypography
+        light
         radius="lg"
       >
         LG
-      </UnstyledTypography>
-      <UnstyledTypography
-        variant="light"
+      </ExampleUnstyledTypography>
+      <ExampleUnstyledTypography
+        light
         radius="xl"
       >
         XL
-      </UnstyledTypography>
-      <UnstyledTypography
-        variant="light"
+      </ExampleUnstyledTypography>
+      <ExampleUnstyledTypography
+        light
         radius="full"
       >
         FULL
-      </UnstyledTypography>
+      </ExampleUnstyledTypography>
     </ExampleCard>
   </ExampleSection>
 );
