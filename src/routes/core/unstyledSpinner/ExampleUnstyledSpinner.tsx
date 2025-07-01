@@ -3,7 +3,8 @@ import type { UnstyledSpinnerProps } from '../../../core/components/UnstyledSpin
 
 export const ExampleUnstyledSpinner = (props: UnstyledSpinnerProps) => (
   <UnstyledSpinner
-    variant="text"
+    variant="light"
+    color="primary"
     {...props}
   />
 );

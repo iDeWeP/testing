@@ -24,12 +24,12 @@ export const ExampleUnstyledTransition = ({
         <UnstyledTransition
           in={isIn}
           variant={clear ? 'light' : 'none'}
-          color="neutral"
+          color="primary"
           {...restProps}
         >
           <UnstyledBox
             variant={clear ? 'none' : 'light'}
-            color="neutral"
+            color="primary"
           >
             {children}
           </UnstyledBox>
