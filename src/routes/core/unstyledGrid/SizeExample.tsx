@@ -1,96 +1,96 @@
 import { ExampleCard } from '../../../components/ExampleCard';
 import { ExampleSection } from '../../../components/ExampleSection';
-import { UnstyledGrid } from '../../../core/components/UnstyledGrid/UnstyledGrid';
+import { ExampleUnstyledGrid } from './ExampleUnstyledGrid';
 
 export const SizeExample = () => (
   <ExampleSection title="Size">
     <ExampleCard>
-      <UnstyledGrid
-        variant="light"
+      <ExampleUnstyledGrid
+        light
         size="none"
       >
         NONE
-      </UnstyledGrid>
-      <UnstyledGrid
-        variant="light"
+      </ExampleUnstyledGrid>
+      <ExampleUnstyledGrid
+        light
         size="xs"
       >
         XS
-      </UnstyledGrid>
-      <UnstyledGrid
-        variant="light"
+      </ExampleUnstyledGrid>
+      <ExampleUnstyledGrid
+        light
         size="sm"
       >
         SM
-      </UnstyledGrid>
-      <UnstyledGrid
-        variant="light"
+      </ExampleUnstyledGrid>
+      <ExampleUnstyledGrid
+        light
         size="md"
       >
         MD
-      </UnstyledGrid>
-      <UnstyledGrid
-        variant="light"
+      </ExampleUnstyledGrid>
+      <ExampleUnstyledGrid
+        light
         size="lg"
       >
         LG
-      </UnstyledGrid>
-      <UnstyledGrid
-        variant="light"
+      </ExampleUnstyledGrid>
+      <ExampleUnstyledGrid
+        light
         size="xl"
       >
         XL
-      </UnstyledGrid>
-      <UnstyledGrid
-        variant="light"
+      </ExampleUnstyledGrid>
+      <ExampleUnstyledGrid
+        light
         size="xxl"
       >
         XXL
-      </UnstyledGrid>
+      </ExampleUnstyledGrid>
     </ExampleCard>
     <ExampleCard>
-      <UnstyledGrid
-        variant="light"
+      <ExampleUnstyledGrid
+        light
         size="none"
       >
         NONE
-      </UnstyledGrid>
-      <UnstyledGrid
-        variant="light"
+      </ExampleUnstyledGrid>
+      <ExampleUnstyledGrid
+        light
         size="xs-xs"
       >
         XS-XS
-      </UnstyledGrid>
-      <UnstyledGrid
-        variant="light"
+      </ExampleUnstyledGrid>
+      <ExampleUnstyledGrid
+        light
         size="sm-sm"
       >
         SM-SM
-      </UnstyledGrid>
-      <UnstyledGrid
-        variant="light"
+      </ExampleUnstyledGrid>
+      <ExampleUnstyledGrid
+        light
         size="md-md"
       >
         MD-MD
-      </UnstyledGrid>
-      <UnstyledGrid
-        variant="light"
+      </ExampleUnstyledGrid>
+      <ExampleUnstyledGrid
+        light
         size="lg-lg"
       >
         LG-LG
-      </UnstyledGrid>
-      <UnstyledGrid
-        variant="light"
+      </ExampleUnstyledGrid>
+      <ExampleUnstyledGrid
+        light
         size="xl-xl"
       >
         XL-XL
-      </UnstyledGrid>
-      <UnstyledGrid
-        variant="light"
+      </ExampleUnstyledGrid>
+      <ExampleUnstyledGrid
+        light
         size="xxl-xxl"
       >
         XXL-XXL
-      </UnstyledGrid>
+      </ExampleUnstyledGrid>
     </ExampleCard>
   </ExampleSection>
 );

@@ -1,52 +1,52 @@
 import { ExampleCard } from '../../../components/ExampleCard';
 import { ExampleSection } from '../../../components/ExampleSection';
-import { UnstyledGrid } from '../../../core/components/UnstyledGrid/UnstyledGrid';
+import { ExampleUnstyledGrid } from './ExampleUnstyledGrid';
 
 export const RadiusExample = () => (
   <ExampleSection title="Radius">
     <ExampleCard>
-      <UnstyledGrid
-        variant="light"
+      <ExampleUnstyledGrid
+        light
         radius="none"
       >
         NONE
-      </UnstyledGrid>
-      <UnstyledGrid
-        variant="light"
+      </ExampleUnstyledGrid>
+      <ExampleUnstyledGrid
+        light
         radius="xs"
       >
         XS
-      </UnstyledGrid>
-      <UnstyledGrid
-        variant="light"
+      </ExampleUnstyledGrid>
+      <ExampleUnstyledGrid
+        light
         radius="sm"
       >
         SM
-      </UnstyledGrid>
-      <UnstyledGrid
-        variant="light"
+      </ExampleUnstyledGrid>
+      <ExampleUnstyledGrid
+        light
         radius="md"
       >
         MD
-      </UnstyledGrid>
-      <UnstyledGrid
-        variant="light"
+      </ExampleUnstyledGrid>
+      <ExampleUnstyledGrid
+        light
         radius="lg"
       >
         LG
-      </UnstyledGrid>
-      <UnstyledGrid
-        variant="light"
+      </ExampleUnstyledGrid>
+      <ExampleUnstyledGrid
+        light
         radius="xl"
       >
         XL
-      </UnstyledGrid>
-      <UnstyledGrid
-        variant="light"
+      </ExampleUnstyledGrid>
+      <ExampleUnstyledGrid
+        light
         radius="full"
       >
         FULL
-      </UnstyledGrid>
+      </ExampleUnstyledGrid>
     </ExampleCard>
   </ExampleSection>
 );

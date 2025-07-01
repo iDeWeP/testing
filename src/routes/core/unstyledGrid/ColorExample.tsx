@@ -1,58 +1,58 @@
 import { ExampleCard } from '../../../components/ExampleCard';
 import { ExampleSection } from '../../../components/ExampleSection';
-import { UnstyledGrid } from '../../../core/components/UnstyledGrid/UnstyledGrid';
+import { ExampleUnstyledGrid } from './ExampleUnstyledGrid';
 
 export const ColorExample = () => (
   <ExampleSection title="Color">
     <ExampleCard>
-      <UnstyledGrid
-        variant="light"
+      <ExampleUnstyledGrid
+        light
         color="surface"
       >
         SURFACE
-      </UnstyledGrid>
-      <UnstyledGrid
-        variant="light"
+      </ExampleUnstyledGrid>
+      <ExampleUnstyledGrid
+        light
         color="neutral"
       >
         NEUTRAL
-      </UnstyledGrid>
-      <UnstyledGrid
-        variant="light"
+      </ExampleUnstyledGrid>
+      <ExampleUnstyledGrid
+        light
         color="primary"
       >
         PRIMARY
-      </UnstyledGrid>
-      <UnstyledGrid
-        variant="light"
+      </ExampleUnstyledGrid>
+      <ExampleUnstyledGrid
+        light
         color="secondary"
       >
         SECONDARY
-      </UnstyledGrid>
-      <UnstyledGrid
-        variant="light"
+      </ExampleUnstyledGrid>
+      <ExampleUnstyledGrid
+        light
         color="tertiary"
       >
         TERTIARY
-      </UnstyledGrid>
-      <UnstyledGrid
-        variant="light"
+      </ExampleUnstyledGrid>
+      <ExampleUnstyledGrid
+        light
         color="success"
       >
         SUCCESS
-      </UnstyledGrid>
-      <UnstyledGrid
-        variant="light"
+      </ExampleUnstyledGrid>
+      <ExampleUnstyledGrid
+        light
         color="warning"
       >
         WARNING
-      </UnstyledGrid>
-      <UnstyledGrid
-        variant="light"
+      </ExampleUnstyledGrid>
+      <ExampleUnstyledGrid
+        light
         color="error"
       >
         ERROR
-      </UnstyledGrid>
+      </ExampleUnstyledGrid>
     </ExampleCard>
   </ExampleSection>
 );

@@ -1,51 +1,36 @@
 import { ExampleCard } from '../../../components/ExampleCard';
 import { ExampleSection } from '../../../components/ExampleSection';
 import { UnstyledBox } from '../../../core/components/UnstyledBox/UnstyledBox';
-import { UnstyledGrid } from '../../../core/components/UnstyledGrid/UnstyledGrid';
+import { ExampleUnstyledGrid } from './ExampleUnstyledGrid';
 
 export const FlowExample = () => (
   <ExampleSection title="Flow">
     <ExampleCard>
-      <UnstyledGrid
-        variant="none"
-        flow="row"
-      >
+      <ExampleUnstyledGrid flow="row">
         <UnstyledBox variant="light">ROW #1</UnstyledBox>
         <UnstyledBox variant="light">ROW #2</UnstyledBox>
         <UnstyledBox variant="light">ROW #3</UnstyledBox>
-      </UnstyledGrid>
-      <UnstyledGrid
-        variant="none"
-        flow="col"
-      >
+      </ExampleUnstyledGrid>
+      <ExampleUnstyledGrid flow="col">
         <UnstyledBox variant="light">COL #1</UnstyledBox>
         <UnstyledBox variant="light">COL #2</UnstyledBox>
         <UnstyledBox variant="light">COL #3</UnstyledBox>
-      </UnstyledGrid>
-      <UnstyledGrid
-        variant="none"
-        flow="dense"
-      >
+      </ExampleUnstyledGrid>
+      <ExampleUnstyledGrid flow="dense">
         <UnstyledBox variant="light">DENSE #1</UnstyledBox>
         <UnstyledBox variant="light">DENSE #2</UnstyledBox>
         <UnstyledBox variant="light">DENSE #3</UnstyledBox>
-      </UnstyledGrid>
-      <UnstyledGrid
-        variant="none"
-        flow="row-dense"
-      >
+      </ExampleUnstyledGrid>
+      <ExampleUnstyledGrid flow="row-dense">
         <UnstyledBox variant="light">ROW-DENSE #1</UnstyledBox>
         <UnstyledBox variant="light">ROW-DENSE #2</UnstyledBox>
         <UnstyledBox variant="light">ROW-DENSE #3</UnstyledBox>
-      </UnstyledGrid>
-      <UnstyledGrid
-        variant="none"
-        flow="col-dense"
-      >
+      </ExampleUnstyledGrid>
+      <ExampleUnstyledGrid flow="col-dense">
         <UnstyledBox variant="light">COL-DENSE #1</UnstyledBox>
         <UnstyledBox variant="light">COL-DENSE #2</UnstyledBox>
         <UnstyledBox variant="light">COL-DENSE #3</UnstyledBox>
-      </UnstyledGrid>
+      </ExampleUnstyledGrid>
     </ExampleCard>
   </ExampleSection>
 );

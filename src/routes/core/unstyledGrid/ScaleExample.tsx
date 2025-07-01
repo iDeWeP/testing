@@ -1,28 +1,28 @@
 import { ExampleCard } from '../../../components/ExampleCard';
 import { ExampleSection } from '../../../components/ExampleSection';
-import { UnstyledGrid } from '../../../core/components/UnstyledGrid/UnstyledGrid';
+import { ExampleUnstyledGrid } from './ExampleUnstyledGrid';
 
 export const ScaleExample = () => (
   <ExampleSection title="Scale">
     <ExampleCard>
-      <UnstyledGrid
-        variant="light"
+      <ExampleUnstyledGrid
+        light
         scale="normal"
       >
         NORMAL
-      </UnstyledGrid>
-      <UnstyledGrid
-        variant="light"
+      </ExampleUnstyledGrid>
+      <ExampleUnstyledGrid
+        light
         scale="fit"
       >
         FIT
-      </UnstyledGrid>
-      <UnstyledGrid
-        variant="light"
+      </ExampleUnstyledGrid>
+      <ExampleUnstyledGrid
+        light
         scale="full"
       >
         FULL
-      </UnstyledGrid>
+      </ExampleUnstyledGrid>
     </ExampleCard>
   </ExampleSection>
 );

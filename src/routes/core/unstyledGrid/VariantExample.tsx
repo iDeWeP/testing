@@ -1,52 +1,52 @@
 import { ExampleCard } from '../../../components/ExampleCard';
 import { ExampleSection } from '../../../components/ExampleSection';
-import { UnstyledGrid } from '../../../core/components/UnstyledGrid/UnstyledGrid';
+import { ExampleUnstyledGrid } from './ExampleUnstyledGrid';
 
 export const VariantExample = () => (
   <ExampleSection title="Variant">
     <ExampleCard>
-      <UnstyledGrid variant="none">NONE</UnstyledGrid>
-      <UnstyledGrid variant="text">TEXT</UnstyledGrid>
-      <UnstyledGrid variant="plain">PLAIN</UnstyledGrid>
-      <UnstyledGrid variant="light">LIGHT</UnstyledGrid>
-      <UnstyledGrid variant="surface">SURFACE</UnstyledGrid>
-      <UnstyledGrid variant="solid">SOLID</UnstyledGrid>
-      <UnstyledGrid
+      <ExampleUnstyledGrid variant="none">NONE</ExampleUnstyledGrid>
+      <ExampleUnstyledGrid variant="text">TEXT</ExampleUnstyledGrid>
+      <ExampleUnstyledGrid variant="plain">PLAIN</ExampleUnstyledGrid>
+      <ExampleUnstyledGrid variant="light">LIGHT</ExampleUnstyledGrid>
+      <ExampleUnstyledGrid variant="surface">SURFACE</ExampleUnstyledGrid>
+      <ExampleUnstyledGrid variant="solid">SOLID</ExampleUnstyledGrid>
+      <ExampleUnstyledGrid
         variant="none"
         border
       >
         NONE-BORDER
-      </UnstyledGrid>
-      <UnstyledGrid
+      </ExampleUnstyledGrid>
+      <ExampleUnstyledGrid
         variant="text"
         border
       >
         TEXT-BORDER
-      </UnstyledGrid>
-      <UnstyledGrid
+      </ExampleUnstyledGrid>
+      <ExampleUnstyledGrid
         variant="plain"
         border
       >
         PLAIN-BORDER
-      </UnstyledGrid>
-      <UnstyledGrid
+      </ExampleUnstyledGrid>
+      <ExampleUnstyledGrid
         variant="light"
         border
       >
         LIGHT-BORDER
-      </UnstyledGrid>
-      <UnstyledGrid
+      </ExampleUnstyledGrid>
+      <ExampleUnstyledGrid
         variant="surface"
         border
       >
         SURFACE-BORDER
-      </UnstyledGrid>
-      <UnstyledGrid
+      </ExampleUnstyledGrid>
+      <ExampleUnstyledGrid
         variant="solid"
         border
       >
         SOLID-BORDER
-      </UnstyledGrid>
+      </ExampleUnstyledGrid>
     </ExampleCard>
   </ExampleSection>
 );
