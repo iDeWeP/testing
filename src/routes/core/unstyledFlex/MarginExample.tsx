@@ -6,43 +6,43 @@ export const MarginExample = () => (
   <ExampleSection title="Margin">
     <ExampleCard align>
       <ExampleUnstyledFlex
-        variant="light"
+        light
         margin="none"
       >
         NONE
       </ExampleUnstyledFlex>
       <ExampleUnstyledFlex
-        variant="light"
+        light
         margin="xs"
       >
         XS
       </ExampleUnstyledFlex>
       <ExampleUnstyledFlex
-        variant="light"
+        light
         margin="sm"
       >
         SM
       </ExampleUnstyledFlex>
       <ExampleUnstyledFlex
-        variant="light"
+        light
         margin="md"
       >
         MD
       </ExampleUnstyledFlex>
       <ExampleUnstyledFlex
-        variant="light"
+        light
         margin="lg"
       >
         LG
       </ExampleUnstyledFlex>
       <ExampleUnstyledFlex
-        variant="light"
+        light
         margin="xl"
       >
         XL
       </ExampleUnstyledFlex>
       <ExampleUnstyledFlex
-        variant="light"
+        light
         margin="xxl"
       >
         XXL

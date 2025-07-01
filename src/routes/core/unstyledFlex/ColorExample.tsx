@@ -6,49 +6,49 @@ export const ColorExample = () => (
   <ExampleSection title="Color">
     <ExampleCard>
       <ExampleUnstyledFlex
-        variant="light"
+        light
         color="surface"
       >
         SURFACE
       </ExampleUnstyledFlex>
       <ExampleUnstyledFlex
-        variant="light"
+        light
         color="neutral"
       >
         NEUTRAL
       </ExampleUnstyledFlex>
       <ExampleUnstyledFlex
-        variant="light"
+        light
         color="primary"
       >
         PRIMARY
       </ExampleUnstyledFlex>
       <ExampleUnstyledFlex
-        variant="light"
+        light
         color="secondary"
       >
         SECONDARY
       </ExampleUnstyledFlex>
       <ExampleUnstyledFlex
-        variant="light"
+        light
         color="tertiary"
       >
         TERTIARY
       </ExampleUnstyledFlex>
       <ExampleUnstyledFlex
-        variant="light"
+        light
         color="success"
       >
         SUCCESS
       </ExampleUnstyledFlex>
       <ExampleUnstyledFlex
-        variant="light"
+        light
         color="warning"
       >
         WARNING
       </ExampleUnstyledFlex>
       <ExampleUnstyledFlex
-        variant="light"
+        light
         color="error"
       >
         ERROR

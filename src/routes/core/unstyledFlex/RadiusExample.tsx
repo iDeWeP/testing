@@ -6,43 +6,43 @@ export const RadiusExample = () => (
   <ExampleSection title="Radius">
     <ExampleCard>
       <ExampleUnstyledFlex
-        variant="light"
+        light
         radius="none"
       >
         NONE
       </ExampleUnstyledFlex>
       <ExampleUnstyledFlex
-        variant="light"
+        light
         radius="xs"
       >
         XS
       </ExampleUnstyledFlex>
       <ExampleUnstyledFlex
-        variant="light"
+        light
         radius="sm"
       >
         SM
       </ExampleUnstyledFlex>
       <ExampleUnstyledFlex
-        variant="light"
+        light
         radius="md"
       >
         MD
       </ExampleUnstyledFlex>
       <ExampleUnstyledFlex
-        variant="light"
+        light
         radius="lg"
       >
         LG
       </ExampleUnstyledFlex>
       <ExampleUnstyledFlex
-        variant="light"
+        light
         radius="xl"
       >
         XL
       </ExampleUnstyledFlex>
       <ExampleUnstyledFlex
-        variant="light"
+        light
         radius="full"
       >
         FULL

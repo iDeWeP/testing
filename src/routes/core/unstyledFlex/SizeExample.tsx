@@ -6,43 +6,43 @@ export const SizeExample = () => (
   <ExampleSection title="Size">
     <ExampleCard>
       <ExampleUnstyledFlex
-        variant="light"
+        light
         size="none"
       >
         NONE
       </ExampleUnstyledFlex>
       <ExampleUnstyledFlex
-        variant="light"
+        light
         size="xs"
       >
         XS
       </ExampleUnstyledFlex>
       <ExampleUnstyledFlex
-        variant="light"
+        light
         size="sm"
       >
         SM
       </ExampleUnstyledFlex>
       <ExampleUnstyledFlex
-        variant="light"
+        light
         size="md"
       >
         MD
       </ExampleUnstyledFlex>
       <ExampleUnstyledFlex
-        variant="light"
+        light
         size="lg"
       >
         LG
       </ExampleUnstyledFlex>
       <ExampleUnstyledFlex
-        variant="light"
+        light
         size="xl"
       >
         XL
       </ExampleUnstyledFlex>
       <ExampleUnstyledFlex
-        variant="light"
+        light
         size="xxl"
       >
         XXL
@@ -50,43 +50,43 @@ export const SizeExample = () => (
     </ExampleCard>
     <ExampleCard>
       <ExampleUnstyledFlex
-        variant="light"
+        light
         size="none"
       >
         NONE
       </ExampleUnstyledFlex>
       <ExampleUnstyledFlex
-        variant="light"
+        light
         size="xs-xs"
       >
         XS-XS
       </ExampleUnstyledFlex>
       <ExampleUnstyledFlex
-        variant="light"
+        light
         size="sm-sm"
       >
         SM-SM
       </ExampleUnstyledFlex>
       <ExampleUnstyledFlex
-        variant="light"
+        light
         size="md-md"
       >
         MD-MD
       </ExampleUnstyledFlex>
       <ExampleUnstyledFlex
-        variant="light"
+        light
         size="lg-lg"
       >
         LG-LG
       </ExampleUnstyledFlex>
       <ExampleUnstyledFlex
-        variant="light"
+        light
         size="xl-xl"
       >
         XL-XL
       </ExampleUnstyledFlex>
       <ExampleUnstyledFlex
-        variant="light"
+        light
         size="xxl-xxl"
       >
         XXL-XXL
