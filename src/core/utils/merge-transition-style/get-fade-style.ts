@@ -6,7 +6,10 @@ export const getFadeStyle = (
   animation: Animation,
   peak: Peak,
   transitions: string[]
-) =>
-  transitions[0] !== 'fade' && transitions[transitions.length - 1] === 'fade'
+) => {
+  const lastIdx = transitions.length - 1;
+
+  return lastIdx !== 0 && transitions[lastIdx] === 'fade'
     ? styleFade(animation, peak)
     : {};
+};
