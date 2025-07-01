@@ -7,10 +7,18 @@ export const VariantExample = () => (
     <ExampleCard>
       <ExampleUnstyledTypography variant="none">NONE</ExampleUnstyledTypography>
       <ExampleUnstyledTypography variant="text">TEXT</ExampleUnstyledTypography>
-      <ExampleUnstyledTypography variant="plain">PLAIN</ExampleUnstyledTypography>
-      <ExampleUnstyledTypography variant="light">LIGHT</ExampleUnstyledTypography>
-      <ExampleUnstyledTypography variant="surface">SURFACE</ExampleUnstyledTypography>
-      <ExampleUnstyledTypography variant="solid">SOLID</ExampleUnstyledTypography>
+      <ExampleUnstyledTypography variant="plain">
+        PLAIN
+      </ExampleUnstyledTypography>
+      <ExampleUnstyledTypography variant="light">
+        LIGHT
+      </ExampleUnstyledTypography>
+      <ExampleUnstyledTypography variant="surface">
+        SURFACE
+      </ExampleUnstyledTypography>
+      <ExampleUnstyledTypography variant="solid">
+        SOLID
+      </ExampleUnstyledTypography>
       <ExampleUnstyledTypography
         variant="none"
         border
