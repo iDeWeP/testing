@@ -12,6 +12,7 @@ export const ExampleUnstyledTypography = ({
 }: Props) => (
   <UnstyledTypography
     variant={clear ? 'none' : 'light'}
+    color="primary"
     {...restProps}
   >
     {children}
