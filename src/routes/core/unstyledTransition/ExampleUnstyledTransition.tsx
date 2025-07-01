@@ -26,7 +26,7 @@ export const ExampleUnstyledTransition = ({
           variant={light ? 'light' : 'none'}
           {...restProps}
         >
-          <UnstyledBox variant="light">{children}</UnstyledBox>
+          <UnstyledBox>{children}</UnstyledBox>
         </UnstyledTransition>
       </ExampleCard>
     </>
