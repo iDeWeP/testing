@@ -1,7 +1,7 @@
 import type {
   ComponentRefProps,
   Variant,
-  Size,
+  DefaultSize,
   DefaultScale,
   Margin,
   Color,
@@ -21,7 +21,7 @@ export type UnstyledSpinnerDefaultProps = {
   value?: number;
   variant?: Variant;
   float?: boolean;
-  size?: Size;
+  size?: DefaultSize;
   thickness?: number;
   scale?: DefaultScale;
   margin?: Margin;
