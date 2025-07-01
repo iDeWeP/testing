@@ -31,11 +31,14 @@ export const UnstyledButton = <E extends ElementType = 'button'>(
     ...restProps
   } = mergeProps(unstyledButtonConfig.props, props);
 
+  const isRelative =
+    ripple !== 'none' && loading !== 'left' && loading !== 'right' && !disabled;
+
   const mergedClassName = mergeClassName('unstyledButton', className, {
     loading,
     disabled,
     variant,
-    relative: !!loading || ripple !== 'none',
+    relative: isRelative,
     size,
     buttonScale,
     margin,
