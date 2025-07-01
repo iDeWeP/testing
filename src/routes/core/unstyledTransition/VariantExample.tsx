@@ -3,45 +3,79 @@ import { ExampleUnstyledTransition } from './ExampleUnstyledTransition';
 
 export const VariantExample = () => (
   <ExampleSection title="Variant">
-    <ExampleUnstyledTransition variant="none">NONE</ExampleUnstyledTransition>
-    <ExampleUnstyledTransition variant="text">TEXT</ExampleUnstyledTransition>
-    <ExampleUnstyledTransition variant="plain">PLAIN</ExampleUnstyledTransition>
-    <ExampleUnstyledTransition variant="light">LIGHT</ExampleUnstyledTransition>
-    <ExampleUnstyledTransition variant="surface">
+    <ExampleUnstyledTransition
+      clear
+      variant="none"
+    >
+      NONE
+    </ExampleUnstyledTransition>
+    <ExampleUnstyledTransition
+      clear
+      variant="text"
+    >
+      TEXT
+    </ExampleUnstyledTransition>
+    <ExampleUnstyledTransition
+      clear
+      variant="plain"
+    >
+      PLAIN
+    </ExampleUnstyledTransition>
+    <ExampleUnstyledTransition
+      clear
+      variant="light"
+    >
+      LIGHT
+    </ExampleUnstyledTransition>
+    <ExampleUnstyledTransition
+      clear
+      variant="surface"
+    >
       SURFACE
     </ExampleUnstyledTransition>
-    <ExampleUnstyledTransition variant="solid">SOLID</ExampleUnstyledTransition>
     <ExampleUnstyledTransition
+      clear
+      variant="solid"
+    >
+      SOLID
+    </ExampleUnstyledTransition>
+    <ExampleUnstyledTransition
+      clear
       variant="none"
       border
     >
       NONE-BORDER
     </ExampleUnstyledTransition>
     <ExampleUnstyledTransition
+      clear
       variant="text"
       border
     >
       TEXT-BORDER
     </ExampleUnstyledTransition>
     <ExampleUnstyledTransition
+      clear
       variant="plain"
       border
     >
       PLAIN-BORDER
     </ExampleUnstyledTransition>
     <ExampleUnstyledTransition
+      clear
       variant="light"
       border
     >
       LIGHT-BORDER
     </ExampleUnstyledTransition>
     <ExampleUnstyledTransition
+      clear
       variant="surface"
       border
     >
       SURFACE-BORDER
     </ExampleUnstyledTransition>
     <ExampleUnstyledTransition
+      clear
       variant="solid"
       border
     >

@@ -23,6 +23,8 @@ export const ExampleUnstyledTransition = ({
       <ExampleCard>
         <UnstyledTransition
           in={isIn}
+          variant={clear ? 'light' : 'none'}
+          color="neutral"
           {...restProps}
         >
           <UnstyledBox
