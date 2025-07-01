@@ -8,7 +8,7 @@ import type {
   MergeProps
 } from '../../types';
 
-export type UnstyledSpinnerComponentProps = {
+export type UnstyledSpinnerComponentsProps = {
   bar?: ComponentRefProps<'circle'>;
   trail?: ComponentRefProps<'circle'>;
   innerBorder?: ComponentRefProps<'circle'>;
@@ -27,7 +27,7 @@ export type UnstyledSpinnerDefaultProps = {
   margin?: Margin;
   border?: boolean;
   color?: Color;
-  componentsProps?: UnstyledSpinnerComponentProps;
+  componentsProps?: UnstyledSpinnerComponentsProps;
 };
 
 export type UnstyledSpinnerConfigProps = UnstyledSpinnerDefaultProps;

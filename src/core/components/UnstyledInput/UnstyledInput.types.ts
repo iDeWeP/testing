@@ -10,7 +10,7 @@ import type {
   MergeProps
 } from '../../types';
 
-export type UnstyledInputComponentProps = {
+export type UnstyledInputComponentsProps = {
   container?: ComponentRefProps<'div'>;
   label?: ComponentRefProps<'label'>;
   leftDecorator?: ComponentRefProps<'span'>;
@@ -38,7 +38,7 @@ export type UnstyledInputDefaultProps = {
   margin?: Margin;
   radius?: Radius;
   color?: Color;
-  componentsProps?: UnstyledInputComponentProps;
+  componentsProps?: UnstyledInputComponentsProps;
 };
 
 export type UnstyledInputConfigProps = UnstyledInputDefaultProps;

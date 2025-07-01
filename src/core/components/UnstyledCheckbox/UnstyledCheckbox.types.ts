@@ -11,7 +11,7 @@ import type {
   MergeProps
 } from '../../types';
 
-export type UnstyledCheckboxComponentProps = {
+export type UnstyledCheckboxComponentsProps = {
   container?: ComponentRefProps<'div'>;
   icon?: ComponentRefProps<'svg'>;
   trail?: ComponentRefProps<'span'>;
@@ -35,7 +35,7 @@ export type UnstyledCheckboxDefaultProps = {
   border?: boolean;
   radius?: Radius;
   color?: Color;
-  componentsProps?: UnstyledCheckboxComponentProps;
+  componentsProps?: UnstyledCheckboxComponentsProps;
   ripple?: Ripple;
 };
 

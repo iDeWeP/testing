@@ -33,7 +33,7 @@ export type UnstyledPopperBackdropProps = {
   transitionProps?: TransitionProps;
 } & ComponentRefProps<'div'>;
 
-export type UnstyledPopperComponentProps = {
+export type UnstyledPopperComponentsProps = {
   arrow?: UnstyledPopperArrowProps;
   backdrop?: UnstyledPopperBackdropProps;
 };
@@ -65,7 +65,7 @@ export type UnstyledPopperDefaultProps = {
   duration?: number;
   portalEl?: Element | null;
   transitionProps?: TransitionProps;
-  componentProps?: UnstyledPopperComponentProps;
+  componentProps?: UnstyledPopperComponentsProps;
   anchor?: ReactElement<ComponentPropsWithRef<ElementType>> | null;
   arrow?: boolean;
   backdrop?: boolean;
