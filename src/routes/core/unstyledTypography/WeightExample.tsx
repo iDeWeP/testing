@@ -5,9 +5,24 @@ import { UnstyledTypography } from '../../../core/components/UnstyledTypography/
 export const WeightExample = () => (
   <ExampleSection title="Weight">
     <ExampleCard>
-      <UnstyledTypography weight="normal">NORMAL</UnstyledTypography>
-      <UnstyledTypography weight="semi">SEMI</UnstyledTypography>
-      <UnstyledTypography weight="bold">BOLD</UnstyledTypography>
+      <UnstyledTypography
+        variant="none"
+        weight="normal"
+      >
+        NORMAL
+      </UnstyledTypography>
+      <UnstyledTypography
+        variant="none"
+        weight="semi"
+      >
+        SEMI
+      </UnstyledTypography>
+      <UnstyledTypography
+        variant="none"
+        weight="bold"
+      >
+        BOLD
+      </UnstyledTypography>
     </ExampleCard>
   </ExampleSection>
 );

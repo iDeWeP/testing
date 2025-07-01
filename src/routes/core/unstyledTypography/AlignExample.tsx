@@ -5,19 +5,31 @@ import { UnstyledTypography } from '../../../core/components/UnstyledTypography/
 export const AlignExample = () => (
   <ExampleSection title="Align">
     <ExampleCard vertical>
-      <UnstyledTypography align="left">
+      <UnstyledTypography
+        variant="none"
+        align="left"
+      >
         LEFT LEFT LEFT LEFT LEFT LEFT LEFT LEFT LEFT LEFT LEFT LEFT LEFT LEFT
         LEFT
       </UnstyledTypography>
-      <UnstyledTypography align="right">
+      <UnstyledTypography
+        variant="none"
+        align="right"
+      >
         RIGHT RIGHT RIGHT RIGHT RIGHT RIGHT RIGHT RIGHT RIGHT RIGHT RIGHT RIGHT
         RIGHT RIGHT RIGHT
       </UnstyledTypography>
-      <UnstyledTypography align="center">
+      <UnstyledTypography
+        variant="none"
+        align="center"
+      >
         CENTER CENTER CENTER CENTER CENTER CENTER CENTER CENTER CENTER CENTER
         CENTER CENTER CENTER CENTER CENTER
       </UnstyledTypography>
-      <UnstyledTypography align="justify">
+      <UnstyledTypography
+        variant="none"
+        align="justify"
+      >
         JUSTIFY JUSTIFY JUSTIFY JUSTIFY JUSTIFY JUSTIFY JUSTIFY JUSTIFY JUSTIFY
         JUSTIFY JUSTIFY JUSTIFY JUSTIFY JUSTIFY JUSTIFY
       </UnstyledTypography>

@@ -5,10 +5,30 @@ import { UnstyledTypography } from '../../../core/components/UnstyledTypography/
 export const UnderlineExample = () => (
   <ExampleSection title="Underline">
     <ExampleCard>
-      <UnstyledTypography underline="normal">NORMAL</UnstyledTypography>
-      <UnstyledTypography underline="none">NONE</UnstyledTypography>
-      <UnstyledTypography underline="hover">HOVER</UnstyledTypography>
-      <UnstyledTypography underline="always">ALWAYS</UnstyledTypography>
+      <UnstyledTypography
+        variant="none"
+        underline="normal"
+      >
+        NORMAL
+      </UnstyledTypography>
+      <UnstyledTypography
+        variant="none"
+        underline="none"
+      >
+        NONE
+      </UnstyledTypography>
+      <UnstyledTypography
+        variant="none"
+        underline="hover"
+      >
+        HOVER
+      </UnstyledTypography>
+      <UnstyledTypography
+        variant="none"
+        underline="always"
+      >
+        ALWAYS
+      </UnstyledTypography>
     </ExampleCard>
   </ExampleSection>
 );

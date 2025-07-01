@@ -5,12 +5,42 @@ import { UnstyledTypography } from '../../../core/components/UnstyledTypography/
 export const SizeExample = () => (
   <ExampleSection title="Size">
     <ExampleCard>
-      <UnstyledTypography size="xs">XS</UnstyledTypography>
-      <UnstyledTypography size="sm">SM</UnstyledTypography>
-      <UnstyledTypography size="md">MD</UnstyledTypography>
-      <UnstyledTypography size="lg">LG</UnstyledTypography>
-      <UnstyledTypography size="xl">XL</UnstyledTypography>
-      <UnstyledTypography size="xxl">XXL</UnstyledTypography>
+      <UnstyledTypography
+        variant="none"
+        size="xs"
+      >
+        XS
+      </UnstyledTypography>
+      <UnstyledTypography
+        variant="none"
+        size="sm"
+      >
+        SM
+      </UnstyledTypography>
+      <UnstyledTypography
+        variant="none"
+        size="md"
+      >
+        MD
+      </UnstyledTypography>
+      <UnstyledTypography
+        variant="none"
+        size="lg"
+      >
+        LG
+      </UnstyledTypography>
+      <UnstyledTypography
+        variant="none"
+        size="xl"
+      >
+        XL
+      </UnstyledTypography>
+      <UnstyledTypography
+        variant="none"
+        size="xxl"
+      >
+        XXL
+      </UnstyledTypography>
     </ExampleCard>
   </ExampleSection>
 );
