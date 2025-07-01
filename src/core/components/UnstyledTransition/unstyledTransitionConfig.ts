@@ -8,15 +8,15 @@ export const unstyledTransitionConfig: ComponentConfig<UnstyledTransitionConfigP
       in: false,
       unmountOnExit: false,
       peak: 'auto',
+      transition: 'fade',
+      duration: 1000,
+      transitionProps: {},
       variant: 'none',
       size: 'none',
       scale: 'normal',
       margin: 'none',
       border: false,
       radius: 'none',
-      color: 'neutral',
-      transition: 'fade',
-      duration: 1000,
-      transitionProps: {}
+      color: 'neutral'
     }
   };

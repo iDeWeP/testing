@@ -7,7 +7,6 @@ import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
 import { mergeProps } from '../../utils/merge-props/merge-props';
 import { mergeTransitionStyle } from '../../utils/merge-transition-style/merge-transition-style';
 import { UnstyledBox } from '../UnstyledBox/UnstyledBox';
-import { unstyledBoxConfig } from '../UnstyledBox/unstyledBoxConfig';
 import type { UnstyledTransitionProps } from './UnstyledTransition.types';
 import { unstyledTransitionConfig } from './unstyledTransitionConfig';
 
@@ -19,13 +18,13 @@ export const UnstyledTransition = <E extends ElementType = 'div'>(
     in: isIn,
     unmountOnExit,
     peak,
-    scale = unstyledBoxConfig.props.scale,
     transition,
     duration,
     className,
     style,
     onTransitionEnd,
     transitionProps,
+    scale,
     ...restProps
   } = mergeProps(unstyledTransitionConfig.props, props);
 
