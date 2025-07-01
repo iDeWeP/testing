@@ -15,6 +15,10 @@ export type UnstyledSpinnerComponentsProps = {
   outerBorder?: ComponentRefProps<'circle'>;
 };
 
+type OptionalProps = {
+  trail?: boolean;
+};
+
 export type UnstyledSpinnerDefaultProps = {
   spin?: boolean;
   disabled?: boolean;
@@ -34,5 +38,5 @@ export type UnstyledSpinnerConfigProps = UnstyledSpinnerDefaultProps;
 
 export type UnstyledSpinnerProps = MergeProps<
   ComponentRefProps<'svg'>,
-  UnstyledSpinnerDefaultProps
+  UnstyledSpinnerDefaultProps & OptionalProps
 >;

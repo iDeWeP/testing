@@ -7,10 +7,15 @@ import { getTrailVariant } from './variant';
 export const styleUnstyledSpinnerTrail = (
   className: string,
   { disabled = false, variant = 'none', color = 'neutral' }: Classes
-) =>
-  mergeClasses(
-    generic.styles.color.stroke[getColor(color, disabled)][
-      getTrailVariant(variant)
-    ],
+) => {
+  const colorVariant = getTrailVariant(variant);
+
+  return mergeClasses(
+    colorVariant === 'none'
+      ? 'stroke-transparent'
+      : generic.styles.color.stroke[getColor(color, disabled)][
+          getTrailVariant(variant)
+        ],
     className
   );
+};

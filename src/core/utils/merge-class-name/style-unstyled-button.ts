@@ -24,7 +24,7 @@ export const styleUnstyledButton = (
     effect = 'none'
   }: Classes
 ) => {
-  const { bgVariant, textVariant } = getVariant(variant);
+  const { bgVariant, textVariant } = getVariant(variant, disabled);
   const { sizeScale, spacingScale } = getButtonScale(buttonScale, border);
   const statefulColor = getColor(color, disabled);
 

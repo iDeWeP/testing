@@ -1,4 +1,5 @@
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
+import { hasVariantBg } from '../../utils/merge-class-name/variant';
 import { mergeProps } from '../../utils/merge-props/merge-props';
 import type { UnstyledSpinnerProps } from './UnstyledSpinner.types';
 import { unstyledSpinnerConfig } from './unstyledSpinnerConfig';
@@ -19,6 +20,7 @@ export const UnstyledSpinner = (props: UnstyledSpinnerProps) => {
     color,
     className,
     componentsProps,
+    trail,
     ...restProps
   } = mergeProps(unstyledSpinnerConfig.props, props);
 
@@ -36,8 +38,7 @@ export const UnstyledSpinner = (props: UnstyledSpinnerProps) => {
     color
   });
 
-  const hasTrail =
-    variant === 'light' || variant === 'surface' || variant === 'solid';
+  const hasTrail = trail === undefined ? hasVariantBg(variant) : trail;
 
   return (
     <svg
