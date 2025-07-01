@@ -4,10 +4,15 @@ import { UnstyledBox } from '../../../core/components/UnstyledBox/UnstyledBox';
 import { UnstyledTransition } from '../../../core/components/UnstyledTransition/UnstyledTransition';
 import type { UnstyledTransitionProps } from '../../../core/components/UnstyledTransition/UnstyledTransition.types';
 
+type Props = {
+  light?: boolean;
+} & UnstyledTransitionProps<'div'>;
+
 export const ExampleUnstyledTransition = ({
+  light,
   children = 'UNSTYLED-TRANSITION',
   ...restProps
-}: UnstyledTransitionProps<'div'>) => {
+}: Props) => {
   const [isIn, setIsIn] = useState(false);
 
   const handleClick = useCallback(() => setIsIn((isIn) => !isIn), []);
@@ -18,7 +23,7 @@ export const ExampleUnstyledTransition = ({
       <ExampleCard>
         <UnstyledTransition
           in={isIn}
-          variant="none"
+          variant={light ? 'light' : 'none'}
           {...restProps}
         >
           <UnstyledBox variant="light">{children}</UnstyledBox>
