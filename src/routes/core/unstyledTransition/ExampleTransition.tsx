@@ -18,9 +18,10 @@ export const ExampleTransition = ({
       <ExampleCard>
         <UnstyledTransition
           in={isIn}
+          variant="none"
           {...restProps}
         >
-          <UnstyledBox>{children}</UnstyledBox>
+          <UnstyledBox variant="light">{children}</UnstyledBox>
         </UnstyledTransition>
       </ExampleCard>
     </>
