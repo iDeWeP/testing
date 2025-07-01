@@ -3,10 +3,16 @@ import { UnstyledPopper } from '../../../core/components/UnstyledPopper/Unstyled
 import type { UnstyledPopperProps } from '../../../core/components/UnstyledPopper/UnstyledPopper.types';
 
 type Props = {
+  clear?: boolean;
   label?: string;
 } & UnstyledPopperProps<'div'>;
 
-export const ExamplePopper = ({ label, children, ...restProps }: Props) => {
+export const ExampleUnstyledPopper = ({
+  clear,
+  label,
+  children,
+  ...restProps
+}: Props) => {
   /* const anchorRef = useRef<HTMLButtonElement>(null);
 
   const [isOpen, setIsOpen] = useState(false);
@@ -25,11 +31,13 @@ export const ExamplePopper = ({ label, children, ...restProps }: Props) => {
       // open={isOpen}
       // onClose={handleClose}
       // anchorRef={anchorRef}
+      trigger="click"
+      variant={clear ? 'none' : 'light'}
+      color="primary"
       anchor={
         <UnstyledButton
-          radius="none"
-          // onClick={handleClick}
-          // ref={anchorRef}
+        // onClick={handleClick}
+        // ref={anchorRef}
         >
           {`Toggle ${description}`}
         </UnstyledButton>

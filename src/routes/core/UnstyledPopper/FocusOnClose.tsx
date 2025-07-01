@@ -2,7 +2,7 @@ import { useRef } from 'react';
 import { ExampleCard } from '../../../components/ExampleCard';
 import { ExampleSection } from '../../../components/ExampleSection';
 import { UnstyledButton } from '../../../core/components/UnstyledButton/UnstyledButton';
-import { ExamplePopper } from './ExamplePopper';
+import { ExampleUnstyledPopper } from './ExampleUnstyledPopper';
 
 export const FocusOnCloseExample = () => {
   const ref = useRef(null);
@@ -10,7 +10,7 @@ export const FocusOnCloseExample = () => {
   return (
     <ExampleSection title="Focus on close">
       <ExampleCard>
-        <ExamplePopper
+        <ExampleUnstyledPopper
           focusOnClose={false}
           closeOnEsc
           label="false"
@@ -18,8 +18,8 @@ export const FocusOnCloseExample = () => {
           <UnstyledButton>#1 FALSE</UnstyledButton>
           <UnstyledButton>#2 FALSE</UnstyledButton>
           <UnstyledButton>#3 FALSE</UnstyledButton>
-        </ExamplePopper>
-        <ExamplePopper
+        </ExampleUnstyledPopper>
+        <ExampleUnstyledPopper
           focusOnClose
           closeOnEsc
           label="true"
@@ -27,8 +27,8 @@ export const FocusOnCloseExample = () => {
           <UnstyledButton>#1 TRUE</UnstyledButton>
           <UnstyledButton>#2 TRUE</UnstyledButton>
           <UnstyledButton>#3 TRUE</UnstyledButton>
-        </ExamplePopper>
-        <ExamplePopper
+        </ExampleUnstyledPopper>
+        <ExampleUnstyledPopper
           focusOnClose={ref}
           closeOnEsc
           label="ref"
@@ -36,7 +36,7 @@ export const FocusOnCloseExample = () => {
           <UnstyledButton>#1 REF</UnstyledButton>
           <UnstyledButton>#2 REF</UnstyledButton>
           <UnstyledButton>#3 REF</UnstyledButton>
-        </ExamplePopper>
+        </ExampleUnstyledPopper>
       </ExampleCard>
       <UnstyledButton ref={ref}>FOCUS ON CLOSE</UnstyledButton>
     </ExampleSection>

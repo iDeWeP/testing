@@ -1,14 +1,13 @@
 import { ExampleCard } from '../../../components/ExampleCard';
 import { ExampleSection } from '../../../components/ExampleSection';
-import { ExamplePopper } from './ExamplePopper';
+import { ExampleUnstyledPopper } from './ExampleUnstyledPopper';
 
 export const DefaultExample = () => (
   <ExampleSection title="Default">
     <ExampleCard>
-      <ExamplePopper />
-      <ExamplePopper backdrop>BACKDROP</ExamplePopper>
-      <ExamplePopper arrow>ARROW</ExamplePopper>
-      <ExamplePopper arrow defaultOpen>ARROW</ExamplePopper>
+      <ExampleUnstyledPopper />
+      <ExampleUnstyledPopper backdrop>BACKDROP</ExampleUnstyledPopper>
+      <ExampleUnstyledPopper arrow>ARROW</ExampleUnstyledPopper>
     </ExampleCard>
   </ExampleSection>
 );

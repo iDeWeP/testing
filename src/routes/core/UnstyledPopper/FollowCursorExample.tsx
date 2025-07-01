@@ -1,12 +1,12 @@
 import { ExampleCard } from '../../../components/ExampleCard';
 import { ExampleSection } from '../../../components/ExampleSection';
-import { ExamplePopper } from './ExamplePopper';
+import { ExampleUnstyledPopper } from './ExampleUnstyledPopper';
 
 export const FollowCursorExample = () => (
   <ExampleSection title="Follow cursor">
     <ExampleCard>
-      <ExamplePopper followCursor={false}>FALSE</ExamplePopper>
-      <ExamplePopper followCursor>TRUE</ExamplePopper>
+      <ExampleUnstyledPopper followCursor={false}>FALSE</ExampleUnstyledPopper>
+      <ExampleUnstyledPopper followCursor>TRUE</ExampleUnstyledPopper>
     </ExampleCard>
   </ExampleSection>
 );

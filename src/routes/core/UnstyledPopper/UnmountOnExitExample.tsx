@@ -1,12 +1,12 @@
 import { ExampleCard } from '../../../components/ExampleCard';
 import { ExampleSection } from '../../../components/ExampleSection';
-import { ExamplePopper } from './ExamplePopper';
+import { ExampleUnstyledPopper } from './ExampleUnstyledPopper';
 
 export const UnmountOnExitExample = () => (
   <ExampleSection title="Unmount on exit">
     <ExampleCard>
-      <ExamplePopper unmountOnExit={false}>FALSE</ExamplePopper>
-      <ExamplePopper unmountOnExit>TRUE</ExamplePopper>
+      <ExampleUnstyledPopper unmountOnExit={false}>FALSE</ExampleUnstyledPopper>
+      <ExampleUnstyledPopper unmountOnExit>TRUE</ExampleUnstyledPopper>
     </ExampleCard>
   </ExampleSection>
 );

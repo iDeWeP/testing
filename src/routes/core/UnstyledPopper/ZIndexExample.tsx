@@ -1,11 +1,11 @@
 import { ExampleCard } from '../../../components/ExampleCard';
 import { ExampleSection } from '../../../components/ExampleSection';
-import { ExamplePopper } from './ExamplePopper';
+import { ExampleUnstyledPopper } from './ExampleUnstyledPopper';
 
 export const ZIndexExample = () => (
   <ExampleSection title="Z-index">
     <ExampleCard>
-      <ExamplePopper zIndex={6000}>6000</ExamplePopper>
+      <ExampleUnstyledPopper zIndex={6000}>6000</ExampleUnstyledPopper>
     </ExampleCard>
   </ExampleSection>
 );

@@ -1,11 +1,11 @@
 import { ExampleCard } from '../../../components/ExampleCard';
 import { ExampleSection } from '../../../components/ExampleSection';
-import { ExamplePopper } from './ExamplePopper';
+import { ExampleUnstyledPopper } from './ExampleUnstyledPopper';
 
 export const DurationExample = () => (
   <ExampleSection title="Duration">
     <ExampleCard>
-      <ExamplePopper duration={3000}>3000</ExamplePopper>
+      <ExampleUnstyledPopper duration={3000}>3000</ExampleUnstyledPopper>
     </ExampleCard>
   </ExampleSection>
 );
