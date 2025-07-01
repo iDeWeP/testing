@@ -37,7 +37,7 @@ export const styleUnstyledButton = (
     generic.styles.spacing.normal[spacingScale][size],
     generic.styles.margin[margin],
     generic.styles.border[getBorder(border)],
-    generic.styles.radius.md[radius],
+    generic.styles.radius[radius],
     generic.styles.size.font[size],
     generic.styles.color.bg[statefulColor][bgVariant],
     generic.styles.color.text[statefulColor][textVariant],

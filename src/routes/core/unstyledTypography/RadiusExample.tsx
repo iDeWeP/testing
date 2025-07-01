@@ -43,6 +43,12 @@ export const RadiusExample = () => (
       </ExampleUnstyledTypography>
       <ExampleUnstyledTypography
         light
+        radius="xxl"
+      >
+        XXL
+      </ExampleUnstyledTypography>
+      <ExampleUnstyledTypography
+        light
         radius="full"
       >
         FULL

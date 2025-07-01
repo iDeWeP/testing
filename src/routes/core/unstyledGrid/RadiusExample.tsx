@@ -43,6 +43,12 @@ export const RadiusExample = () => (
       </ExampleUnstyledGrid>
       <ExampleUnstyledGrid
         light
+        radius="xxl"
+      >
+        XXL
+      </ExampleUnstyledGrid>
+      <ExampleUnstyledGrid
+        light
         radius="full"
       >
         FULL

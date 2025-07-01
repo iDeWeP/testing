@@ -22,7 +22,7 @@ export const styleUnstyledCheckboxTrail = (
   return mergeClasses(
     unstyledCheckboxConfig.styles.trail.default,
     generic.styles.size.text.square[size],
-    generic.styles.radius.sm[radius],
+    generic.styles.radius[radius],
     generic.styles.color.bg.disabled[getVariant('none', disabled).bgVariant],
     generic.styles.color.border[colorVariant][getVariant(variant).textVariant],
     generic.styles.color.ring[colorVariant][getRingVariant(variant, disabled)],

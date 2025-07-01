@@ -11,6 +11,7 @@ export const RadiusExample = () => (
       <ExampleUnstyledButton radius="md">MD</ExampleUnstyledButton>
       <ExampleUnstyledButton radius="lg">LG</ExampleUnstyledButton>
       <ExampleUnstyledButton radius="xl">XL</ExampleUnstyledButton>
+      <ExampleUnstyledButton radius="xxl">XXL</ExampleUnstyledButton>
       <ExampleUnstyledButton radius="full">FULL</ExampleUnstyledButton>
     </ExampleCard>
   </ExampleSection>

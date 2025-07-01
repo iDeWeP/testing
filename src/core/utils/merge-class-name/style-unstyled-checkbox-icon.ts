@@ -26,7 +26,7 @@ export const styleUnstyledCheckboxIcon = (
     unstyledCheckboxConfig.styles.icon.default,
     generic.styles.size.text.square[size],
     generic.styles.border[getBorder(border)],
-    generic.styles.radius.sm[radius],
+    generic.styles.radius[radius],
     generic.styles.color.bg[colorVariant][bgVariant],
     generic.styles.color.border[colorVariant][textVariant],
     generic.styles.color.fill[colorVariant][textVariant],

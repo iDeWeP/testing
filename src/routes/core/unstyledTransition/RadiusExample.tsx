@@ -9,6 +9,7 @@ export const RadiusExample = () => (
     <ExampleUnstyledTransition radius="md">MD</ExampleUnstyledTransition>
     <ExampleUnstyledTransition radius="lg">LG</ExampleUnstyledTransition>
     <ExampleUnstyledTransition radius="xl">XL</ExampleUnstyledTransition>
+    <ExampleUnstyledTransition radius="xxl">XXL</ExampleUnstyledTransition>
     <ExampleUnstyledTransition radius="full">FULL</ExampleUnstyledTransition>
   </ExampleSection>
 );
