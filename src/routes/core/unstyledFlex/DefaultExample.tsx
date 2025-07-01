@@ -5,7 +5,7 @@ import { UnstyledFlex } from '../../../core/components/UnstyledFlex/UnstyledFlex
 export const DefaultExample = () => (
   <ExampleSection title="Default">
     <ExampleCard>
-      <UnstyledFlex>UNSTYLED-FLEX-BOX</UnstyledFlex>
+      <UnstyledFlex>UNSTYLED-FLEX</UnstyledFlex>
     </ExampleCard>
   </ExampleSection>
 );
