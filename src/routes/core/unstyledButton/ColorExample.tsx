@@ -1,58 +1,58 @@
-import { ExampleCard } from "../../../components/ExampleCard";
-import { ExampleSection } from "../../../components/ExampleSection";
-import { UnstyledButton } from "../../../core/components/UnstyledButton/UnstyledButton";
+import { ExampleCard } from '../../../components/ExampleCard';
+import { ExampleSection } from '../../../components/ExampleSection';
+import { ExampleUnstyledButton } from './ExampleUnstyledButton';
 
 export const ColorExample = () => (
   <ExampleSection title="Color">
     <ExampleCard>
-      <UnstyledButton
-        variant="light"
+      <ExampleUnstyledButton
+        light
         color="surface"
       >
         SURFACE
-      </UnstyledButton>
-      <UnstyledButton
-        variant="light"
+      </ExampleUnstyledButton>
+      <ExampleUnstyledButton
+        light
         color="neutral"
       >
         NEUTRAL
-      </UnstyledButton>
-      <UnstyledButton
-        variant="light"
+      </ExampleUnstyledButton>
+      <ExampleUnstyledButton
+        light
         color="primary"
       >
         PRIMARY
-      </UnstyledButton>
-      <UnstyledButton
-        variant="light"
+      </ExampleUnstyledButton>
+      <ExampleUnstyledButton
+        light
         color="secondary"
       >
         SECONDARY
-      </UnstyledButton>
-      <UnstyledButton
-        variant="light"
+      </ExampleUnstyledButton>
+      <ExampleUnstyledButton
+        light
         color="tertiary"
       >
         TERTIARY
-      </UnstyledButton>
-      <UnstyledButton
-        variant="light"
+      </ExampleUnstyledButton>
+      <ExampleUnstyledButton
+        light
         color="success"
       >
         SUCCESS
-      </UnstyledButton>
-      <UnstyledButton
-        variant="light"
+      </ExampleUnstyledButton>
+      <ExampleUnstyledButton
+        light
         color="warning"
       >
         WARNING
-      </UnstyledButton>
-      <UnstyledButton
-        variant="light"
+      </ExampleUnstyledButton>
+      <ExampleUnstyledButton
+        light
         color="error"
       >
         ERROR
-      </UnstyledButton>
+      </ExampleUnstyledButton>
     </ExampleCard>
   </ExampleSection>
 );

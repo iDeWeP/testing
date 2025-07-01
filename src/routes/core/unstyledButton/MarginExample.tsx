@@ -1,52 +1,52 @@
-import { ExampleCard } from "../../../components/ExampleCard";
-import { ExampleSection } from "../../../components/ExampleSection";
-import { UnstyledButton } from "../../../core/components/UnstyledButton/UnstyledButton";
+import { ExampleCard } from '../../../components/ExampleCard';
+import { ExampleSection } from '../../../components/ExampleSection';
+import { ExampleUnstyledButton } from './ExampleUnstyledButton';
 
 export const MarginExample = () => (
   <ExampleSection title="Margin">
     <ExampleCard align>
-      <UnstyledButton
-        variant="light"
+      <ExampleUnstyledButton
+        light
         margin="none"
       >
         NONE
-      </UnstyledButton>
-      <UnstyledButton
-        variant="light"
+      </ExampleUnstyledButton>
+      <ExampleUnstyledButton
+        light
         margin="xs"
       >
         XS
-      </UnstyledButton>
-      <UnstyledButton
-        variant="light"
+      </ExampleUnstyledButton>
+      <ExampleUnstyledButton
+        light
         margin="sm"
       >
         SM
-      </UnstyledButton>
-      <UnstyledButton
-        variant="light"
+      </ExampleUnstyledButton>
+      <ExampleUnstyledButton
+        light
         margin="md"
       >
         MD
-      </UnstyledButton>
-      <UnstyledButton
-        variant="light"
+      </ExampleUnstyledButton>
+      <ExampleUnstyledButton
+        light
         margin="lg"
       >
         LG
-      </UnstyledButton>
-      <UnstyledButton
-        variant="light"
+      </ExampleUnstyledButton>
+      <ExampleUnstyledButton
+        light
         margin="xl"
       >
         XL
-      </UnstyledButton>
-      <UnstyledButton
-        variant="light"
+      </ExampleUnstyledButton>
+      <ExampleUnstyledButton
+        light
         margin="xxl"
       >
         XXL
-      </UnstyledButton>
+      </ExampleUnstyledButton>
     </ExampleCard>
   </ExampleSection>
 );

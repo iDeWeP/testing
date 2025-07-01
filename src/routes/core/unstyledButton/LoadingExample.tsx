@@ -1,35 +1,34 @@
-import { ExampleCard } from "../../../components/ExampleCard";
-import { ExampleSection } from "../../../components/ExampleSection";
-import { UnstyledButton } from "../../../core/components/UnstyledButton/UnstyledButton";
-
+import { ExampleCard } from '../../../components/ExampleCard';
+import { ExampleSection } from '../../../components/ExampleSection';
+import { ExampleUnstyledButton } from './ExampleUnstyledButton';
 
 export const LoadingExample = () => (
   <ExampleSection title="Loading">
     <ExampleCard>
-      <UnstyledButton
+      <ExampleUnstyledButton
+        light
         loading={false}
-        variant="light"
       >
         FALSE
-      </UnstyledButton>
-      <UnstyledButton
+      </ExampleUnstyledButton>
+      <ExampleUnstyledButton
+        light
         loading
-        variant="light"
       >
         TRUE
-      </UnstyledButton>
-      <UnstyledButton
+      </ExampleUnstyledButton>
+      <ExampleUnstyledButton
+        light
         loading="left"
-        variant="light"
       >
         LEFT
-      </UnstyledButton>
-      <UnstyledButton
+      </ExampleUnstyledButton>
+      <ExampleUnstyledButton
+        light
         loading="right"
-        variant="light"
       >
         RIGHT
-      </UnstyledButton>
+      </ExampleUnstyledButton>
     </ExampleCard>
   </ExampleSection>
 );

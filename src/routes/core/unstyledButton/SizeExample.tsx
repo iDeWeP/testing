@@ -1,46 +1,46 @@
-import { ExampleCard } from "../../../components/ExampleCard";
-import { ExampleSection } from "../../../components/ExampleSection";
-import { UnstyledButton } from "../../../core/components/UnstyledButton/UnstyledButton";
+import { ExampleCard } from '../../../components/ExampleCard';
+import { ExampleSection } from '../../../components/ExampleSection';
+import { ExampleUnstyledButton } from './ExampleUnstyledButton';
 
 export const SizeExample = () => (
   <ExampleSection title="Size">
     <ExampleCard>
-      <UnstyledButton
-        variant="light"
+      <ExampleUnstyledButton
+        light
         size="xs"
       >
         XS
-      </UnstyledButton>
-      <UnstyledButton
-        variant="light"
+      </ExampleUnstyledButton>
+      <ExampleUnstyledButton
+        light
         size="sm"
       >
         SM
-      </UnstyledButton>
-      <UnstyledButton
-        variant="light"
+      </ExampleUnstyledButton>
+      <ExampleUnstyledButton
+        light
         size="md"
       >
         MD
-      </UnstyledButton>
-      <UnstyledButton
-        variant="light"
+      </ExampleUnstyledButton>
+      <ExampleUnstyledButton
+        light
         size="lg"
       >
         LG
-      </UnstyledButton>
-      <UnstyledButton
-        variant="light"
+      </ExampleUnstyledButton>
+      <ExampleUnstyledButton
+        light
         size="xl"
       >
         XL
-      </UnstyledButton>
-      <UnstyledButton
-        variant="light"
+      </ExampleUnstyledButton>
+      <ExampleUnstyledButton
+        light
         size="xxl"
       >
         XXL
-      </UnstyledButton>
+      </ExampleUnstyledButton>
     </ExampleCard>
   </ExampleSection>
 );

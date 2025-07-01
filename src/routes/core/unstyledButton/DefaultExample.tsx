@@ -1,24 +1,24 @@
 import { ExampleCard } from '../../../components/ExampleCard';
 import { ExampleSection } from '../../../components/ExampleSection';
-import { UnstyledButton } from '../../../core/components/UnstyledButton/UnstyledButton';
+import { ExampleUnstyledButton } from './ExampleUnstyledButton';
 
 export const DefaultExample = () => (
   <ExampleSection title="Default">
     <ExampleCard>
-      <UnstyledButton>UNSTYLED-BUTTON</UnstyledButton>
-      <UnstyledButton leftDecorator="LEFT-DECORATOR">
+      <ExampleUnstyledButton />
+      <ExampleUnstyledButton leftDecorator="LEFT-DECORATOR">
         UNSTYLED-BUTTON
-      </UnstyledButton>
-      <UnstyledButton rightDecorator="RIGHT-DECORATOR">
+      </ExampleUnstyledButton>
+      <ExampleUnstyledButton rightDecorator="RIGHT-DECORATOR">
         UNSTYLED-BUTTON
-      </UnstyledButton>
-      <UnstyledButton
+      </ExampleUnstyledButton>
+      <ExampleUnstyledButton
         leftDecorator="LEFT-DECORATOR"
         rightDecorator="RIGHT-DECORATOR"
       >
         UNSTYLED-BUTTON
-      </UnstyledButton>
-      <UnstyledButton ripple="none">RIPPLE-NONE</UnstyledButton>
+      </ExampleUnstyledButton>
+      <ExampleUnstyledButton ripple="none">RIPPLE-NONE</ExampleUnstyledButton>
     </ExampleCard>
   </ExampleSection>
 );
