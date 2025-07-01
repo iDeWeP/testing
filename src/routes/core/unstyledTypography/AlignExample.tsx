@@ -4,20 +4,20 @@ import { UnstyledTypography } from '../../../core/components/UnstyledTypography/
 
 export const AlignExample = () => (
   <ExampleSection title="Align">
-    <ExampleCard vertical>
+    <ExampleCard>
       <UnstyledTypography
         variant="none"
         align="left"
       >
         LEFT LEFT LEFT LEFT LEFT LEFT LEFT LEFT LEFT LEFT LEFT LEFT LEFT LEFT
-        LEFT
+        LEFT LEFT LEFT LEFT LEFT LEFT LEFT LEFT LEFT LEFT LEFT
       </UnstyledTypography>
       <UnstyledTypography
         variant="none"
         align="right"
       >
         RIGHT RIGHT RIGHT RIGHT RIGHT RIGHT RIGHT RIGHT RIGHT RIGHT RIGHT RIGHT
-        RIGHT RIGHT RIGHT
+        RIGHT RIGHT RIGHT RIGHT RIGHT RIGHT RIGHT RIGHT
       </UnstyledTypography>
       <UnstyledTypography
         variant="none"
