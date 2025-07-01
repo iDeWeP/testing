@@ -29,5 +29,6 @@ export const styleUnstyledSpinner = (
       getVariant(variant).textVariant
     ],
     unstyledSpinnerConfig.styles.root[getSpinnerTransition(spin, disabled)],
+    disabled && generic.styles.focusable.disabled,
     className
   );
