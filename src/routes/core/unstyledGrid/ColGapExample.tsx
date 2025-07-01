@@ -6,37 +6,58 @@ import { UnstyledGrid } from '../../../core/components/UnstyledGrid/UnstyledGrid
 export const ColGapExample = () => (
   <ExampleSection title="Col gap">
     <ExampleCard vertical>
-      <UnstyledGrid colGap="none">
+      <UnstyledGrid
+        flow="col"
+        colGap="none"
+      >
         <UnstyledBox>NONE #1</UnstyledBox>
         <UnstyledBox>NONE #2</UnstyledBox>
         <UnstyledBox>NONE #3</UnstyledBox>
       </UnstyledGrid>
-      <UnstyledGrid colGap="xs">
+      <UnstyledGrid
+        flow="col"
+        colGap="xs"
+      >
         <UnstyledBox>XS #1</UnstyledBox>
         <UnstyledBox>XS #2</UnstyledBox>
         <UnstyledBox>XS #3</UnstyledBox>
       </UnstyledGrid>
-      <UnstyledGrid colGap="sm">
+      <UnstyledGrid
+        flow="col"
+        colGap="sm"
+      >
         <UnstyledBox>SM #1</UnstyledBox>
         <UnstyledBox>SM #2</UnstyledBox>
         <UnstyledBox>SM #3</UnstyledBox>
       </UnstyledGrid>
-      <UnstyledGrid colGap="md">
+      <UnstyledGrid
+        flow="col"
+        colGap="md"
+      >
         <UnstyledBox>MD #1</UnstyledBox>
         <UnstyledBox>MD #2</UnstyledBox>
         <UnstyledBox>MD #3</UnstyledBox>
       </UnstyledGrid>
-      <UnstyledGrid colGap="lg">
+      <UnstyledGrid
+        flow="col"
+        colGap="lg"
+      >
         <UnstyledBox>LG #1</UnstyledBox>
         <UnstyledBox>LG #2</UnstyledBox>
         <UnstyledBox>LG #3</UnstyledBox>
       </UnstyledGrid>
-      <UnstyledGrid colGap="xl">
+      <UnstyledGrid
+        flow="col"
+        colGap="xl"
+      >
         <UnstyledBox>XL #1</UnstyledBox>
         <UnstyledBox>XL #2</UnstyledBox>
         <UnstyledBox>XL #3</UnstyledBox>
       </UnstyledGrid>
-      <UnstyledGrid colGap="xxl">
+      <UnstyledGrid
+        flow="col"
+        colGap="xxl"
+      >
         <UnstyledBox>XXL #1</UnstyledBox>
         <UnstyledBox>XXL #2</UnstyledBox>
         <UnstyledBox>XXL #3</UnstyledBox>

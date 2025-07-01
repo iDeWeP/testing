@@ -5,10 +5,7 @@ import { UnstyledGrid } from '../../../core/components/UnstyledGrid/UnstyledGrid
 
 export const AlignItemsExample = () => (
   <ExampleSection title="Align items">
-    <ExampleCard
-      vertical
-      stretch
-    >
+    <ExampleCard>
       <UnstyledGrid alignItems="stretch">
         <UnstyledBox>STRETCH #2</UnstyledBox>
         <UnstyledBox>STRETCH #1</UnstyledBox>

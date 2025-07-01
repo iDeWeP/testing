@@ -5,7 +5,7 @@ import { UnstyledGrid } from '../../../core/components/UnstyledGrid/UnstyledGrid
 
 export const RowGapExample = () => (
   <ExampleSection title="Row gap">
-    <ExampleCard vertical>
+    <ExampleCard>
       <UnstyledGrid rowGap="none">
         <UnstyledBox>NONE #1</UnstyledBox>
         <UnstyledBox>NONE #2</UnstyledBox>

@@ -10,7 +10,7 @@ export const unstyledGridConfig: ComponentConfig<UnstyledGridConfigProps> = {
     margin: 'none',
     border: false,
     radius: 'none',
-    color: 'primary',
+    color: 'neutral',
     flow: 'row',
     justifyContent: 'normal',
     alignContent: 'normal',
