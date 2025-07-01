@@ -6,21 +6,21 @@ type Props = MergeComponentProps<
   {
     disabled: boolean;
     variant: InputVariant;
-    labeled: boolean;
+    decorated: boolean;
   }
 >;
 
 export const UnstyledInputFieldSet = ({
   disabled,
   variant: inputVariant,
-  labeled,
+  decorated,
   className,
   ...restProps
 }: Props) => {
   const mergedClassName = mergeClassName('unstyledInputFieldSet', className, {
     disabled,
     inputVariant,
-    labeled
+    decorated
   });
 
   return (

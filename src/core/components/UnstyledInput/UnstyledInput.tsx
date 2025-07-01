@@ -81,7 +81,7 @@ export const UnstyledInput = (props: UnstyledInputProps) => {
       <UnstyledInputFieldSet
         disabled={disabled}
         variant={variant}
-        labeled={!!label}
+        decorated={!!label}
         {...componentsProps.fieldset}
       >
         <input
