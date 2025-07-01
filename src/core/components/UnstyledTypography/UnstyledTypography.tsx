@@ -5,7 +5,7 @@ import { UnstyledBox } from '../UnstyledBox/UnstyledBox';
 import type { UnstyledTypographyProps } from './UnstyledTypography.types';
 import { unstyledTypographyConfig } from './unstyledTypographyConfig';
 
-export const UnstyledTypography = <E extends ElementType = 'span'>(
+export const UnstyledTypography = <E extends ElementType = 'p'>(
   props: UnstyledTypographyProps<E>
 ) => {
   const {
