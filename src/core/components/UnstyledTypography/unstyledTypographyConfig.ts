@@ -5,7 +5,7 @@ export const unstyledTypographyConfig: ComponentConfig<UnstyledTypographyConfigP
   {
     props: {
       as: 'p',
-      size: 'md',
+      size: 'none',
       weight: 'normal',
       underline: 'normal',
       wordBreak: 'normal',

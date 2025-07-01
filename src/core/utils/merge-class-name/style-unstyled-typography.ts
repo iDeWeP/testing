@@ -5,7 +5,7 @@ import { mergeClasses } from './merge-classes';
 export const styleUnstyledTypography = (
   className: string,
   {
-    size = 'md',
+    size = 'none',
     weight = 'normal',
     underline = 'normal',
     wordBreak = 'normal',
