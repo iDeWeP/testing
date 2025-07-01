@@ -5,18 +5,18 @@ export const unstyledTypographyConfig: ComponentConfig<UnstyledTypographyConfigP
   {
     props: {
       as: 'p',
-      variant: 'none',
       size: 'md',
-      scale: 'normal',
-      margin: 'none',
-      border: false,
-      radius: 'none',
-      color: 'neutral',
       weight: 'normal',
       underline: 'normal',
       wordBreak: 'normal',
       wrap: 'wrap',
       align: 'left',
-      overflow: 'clip'
+      overflow: 'clip',
+      variant: 'none',
+      scale: 'normal',
+      margin: 'none',
+      border: false,
+      radius: 'none',
+      color: 'neutral'
     }
   };
