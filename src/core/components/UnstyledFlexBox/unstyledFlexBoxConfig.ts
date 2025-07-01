@@ -13,7 +13,7 @@ export const unstyledFlexBoxConfig: ComponentConfig<UnstyledFlexBoxConfigProps> 
       radius: 'none',
       color: 'neutral',
       direction: 'row',
-      wrap: 'wrap',
+      wrap: 'nowrap',
       justify: 'normal',
       align: 'stretch',
       gap: 'none'

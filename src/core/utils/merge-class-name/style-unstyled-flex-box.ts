@@ -6,7 +6,7 @@ export const styleUnstyledFlexBox = (
   className: string,
   {
     direction = 'row',
-    wrap = 'wrap',
+    wrap = 'nowrap',
     justifyContent = 'normal',
     alignItems = 'stretch',
     gap = 'none'
