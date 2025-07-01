@@ -1,9 +1,9 @@
 import type { ElementType } from 'react';
 import type {
-  UnstyledFlexBoxConfigProps,
-  UnstyledFlexBoxProps
-} from '../UnstyledFlexBox/UnstyledFlexBox.types';
+  UnstyledFlexConfigProps,
+  UnstyledFlexProps
+} from '../UnstyledFlex/UnstyledFlex.types';
 
-export type CardConfigProps = UnstyledFlexBoxConfigProps;
+export type CardConfigProps = UnstyledFlexConfigProps;
 
-export type CardProps<E extends ElementType> = UnstyledFlexBoxProps<E>;
+export type CardProps<E extends ElementType> = UnstyledFlexProps<E>;
