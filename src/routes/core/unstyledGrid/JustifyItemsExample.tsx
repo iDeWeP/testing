@@ -9,25 +9,37 @@ export const JustifyItemsExample = () => (
       vertical
       stretch
     >
-      <UnstyledGrid justifyItems="stretch">
-        <UnstyledBox>STRETCH #2</UnstyledBox>
-        <UnstyledBox>STRETCH #1</UnstyledBox>
-        <UnstyledBox>STRETCH #3</UnstyledBox>
+      <UnstyledGrid
+        variant="none"
+        justifyItems="stretch"
+      >
+        <UnstyledBox variant="light">STRETCH #2</UnstyledBox>
+        <UnstyledBox variant="light">STRETCH #1</UnstyledBox>
+        <UnstyledBox variant="light">STRETCH #3</UnstyledBox>
       </UnstyledGrid>
-      <UnstyledGrid justifyItems="start">
-        <UnstyledBox>START #1</UnstyledBox>
-        <UnstyledBox>START #2</UnstyledBox>
-        <UnstyledBox>START #3</UnstyledBox>
+      <UnstyledGrid
+        variant="none"
+        justifyItems="start"
+      >
+        <UnstyledBox variant="light">START #1</UnstyledBox>
+        <UnstyledBox variant="light">START #2</UnstyledBox>
+        <UnstyledBox variant="light">START #3</UnstyledBox>
       </UnstyledGrid>
-      <UnstyledGrid justifyItems="end">
-        <UnstyledBox>END #1</UnstyledBox>
-        <UnstyledBox>END #2</UnstyledBox>
-        <UnstyledBox>END #3</UnstyledBox>
+      <UnstyledGrid
+        variant="none"
+        justifyItems="end"
+      >
+        <UnstyledBox variant="light">END #1</UnstyledBox>
+        <UnstyledBox variant="light">END #2</UnstyledBox>
+        <UnstyledBox variant="light">END #3</UnstyledBox>
       </UnstyledGrid>
-      <UnstyledGrid justifyItems="center">
-        <UnstyledBox>CENTER #1</UnstyledBox>
-        <UnstyledBox>CENTER #2</UnstyledBox>
-        <UnstyledBox>CENTER #3</UnstyledBox>
+      <UnstyledGrid
+        variant="none"
+        justifyItems="center"
+      >
+        <UnstyledBox variant="light">CENTER #1</UnstyledBox>
+        <UnstyledBox variant="light">CENTER #2</UnstyledBox>
+        <UnstyledBox variant="light">CENTER #3</UnstyledBox>
       </UnstyledGrid>
     </ExampleCard>
   </ExampleSection>
