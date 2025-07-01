@@ -51,6 +51,12 @@ export const SizeExample = () => (
     <ExampleCard>
       <UnstyledBox
         variant="light"
+        size="none"
+      >
+        NONE
+      </UnstyledBox>
+      <UnstyledBox
+        variant="light"
         size="xs-xs"
       >
         XS-XS
