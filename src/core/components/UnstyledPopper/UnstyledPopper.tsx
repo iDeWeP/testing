@@ -118,9 +118,9 @@ export const UnstyledPopper = <E extends ElementType = 'div'>(
 
   useEscape(closeOnEsc && isOpen && handleClose);
 
-  useAutoFocus(focusOnOpen && isOpen, ref);
+  useAutoFocus(isOpen && focusOnOpen, ref);
 
-  useCloseFocus(focusOnClose && !isOpen, anchorRef);
+  useCloseFocus(!isOpen && focusOnClose, anchorRef);
 
   useFocusTrap(focusTrap && isOpen && ref);
 
