@@ -9,45 +9,69 @@ export const JustifyExample = () => (
       vertical
       stretch
     >
-      <UnstyledFlex justify="normal">
-        <UnstyledBox>NORMAL #2</UnstyledBox>
-        <UnstyledBox>NORMAL #1</UnstyledBox>
-        <UnstyledBox>NORMAL #3</UnstyledBox>
+      <UnstyledFlex
+        variant="none"
+        justify="normal"
+      >
+        <UnstyledBox variant="light">NORMAL #2</UnstyledBox>
+        <UnstyledBox variant="light">NORMAL #1</UnstyledBox>
+        <UnstyledBox variant="light">NORMAL #3</UnstyledBox>
       </UnstyledFlex>
-      <UnstyledFlex justify="stretch">
-        <UnstyledBox>STRETCH #2</UnstyledBox>
-        <UnstyledBox>STRETCH #1</UnstyledBox>
-        <UnstyledBox>STRETCH #3</UnstyledBox>
+      <UnstyledFlex
+        variant="none"
+        justify="stretch"
+      >
+        <UnstyledBox variant="light">STRETCH #2</UnstyledBox>
+        <UnstyledBox variant="light">STRETCH #1</UnstyledBox>
+        <UnstyledBox variant="light">STRETCH #3</UnstyledBox>
       </UnstyledFlex>
-      <UnstyledFlex justify="start">
-        <UnstyledBox>START #1</UnstyledBox>
-        <UnstyledBox>START #2</UnstyledBox>
-        <UnstyledBox>START #3</UnstyledBox>
+      <UnstyledFlex
+        variant="none"
+        justify="start"
+      >
+        <UnstyledBox variant="light">START #1</UnstyledBox>
+        <UnstyledBox variant="light">START #2</UnstyledBox>
+        <UnstyledBox variant="light">START #3</UnstyledBox>
       </UnstyledFlex>
-      <UnstyledFlex justify="end">
-        <UnstyledBox>END #1</UnstyledBox>
-        <UnstyledBox>END #2</UnstyledBox>
-        <UnstyledBox>END #3</UnstyledBox>
+      <UnstyledFlex
+        variant="none"
+        justify="end"
+      >
+        <UnstyledBox variant="light">END #1</UnstyledBox>
+        <UnstyledBox variant="light">END #2</UnstyledBox>
+        <UnstyledBox variant="light">END #3</UnstyledBox>
       </UnstyledFlex>
-      <UnstyledFlex justify="center">
-        <UnstyledBox>CENTER #1</UnstyledBox>
-        <UnstyledBox>CENTER #2</UnstyledBox>
-        <UnstyledBox>CENTER #3</UnstyledBox>
+      <UnstyledFlex
+        variant="none"
+        justify="center"
+      >
+        <UnstyledBox variant="light">CENTER #1</UnstyledBox>
+        <UnstyledBox variant="light">CENTER #2</UnstyledBox>
+        <UnstyledBox variant="light">CENTER #3</UnstyledBox>
       </UnstyledFlex>
-      <UnstyledFlex justify="evenly">
-        <UnstyledBox>EVENLY #1</UnstyledBox>
-        <UnstyledBox>EVENLY #2</UnstyledBox>
-        <UnstyledBox>EVENLY #3</UnstyledBox>
+      <UnstyledFlex
+        variant="none"
+        justify="evenly"
+      >
+        <UnstyledBox variant="light">EVENLY #1</UnstyledBox>
+        <UnstyledBox variant="light">EVENLY #2</UnstyledBox>
+        <UnstyledBox variant="light">EVENLY #3</UnstyledBox>
       </UnstyledFlex>
-      <UnstyledFlex justify="between">
-        <UnstyledBox>BETWEEN #1</UnstyledBox>
-        <UnstyledBox>BETWEEN #2</UnstyledBox>
-        <UnstyledBox>BETWEEN #3</UnstyledBox>
+      <UnstyledFlex
+        variant="none"
+        justify="between"
+      >
+        <UnstyledBox variant="light">BETWEEN #1</UnstyledBox>
+        <UnstyledBox variant="light">BETWEEN #2</UnstyledBox>
+        <UnstyledBox variant="light">BETWEEN #3</UnstyledBox>
       </UnstyledFlex>
-      <UnstyledFlex justify="around">
-        <UnstyledBox>AROUND #1</UnstyledBox>
-        <UnstyledBox>AROUND #2</UnstyledBox>
-        <UnstyledBox>AROUND #3</UnstyledBox>
+      <UnstyledFlex
+        variant="none"
+        justify="around"
+      >
+        <UnstyledBox variant="light">AROUND #1</UnstyledBox>
+        <UnstyledBox variant="light">AROUND #2</UnstyledBox>
+        <UnstyledBox variant="light">AROUND #3</UnstyledBox>
       </UnstyledFlex>
     </ExampleCard>
   </ExampleSection>
