@@ -16,9 +16,9 @@ import { portNode } from '../../../utils/utils/port-node/port-node';
 import { setProp } from '../../../utils/utils/set-prop/set-prop';
 import { useAutoFocus } from '../../hooks/use-auto-focus/use-auto-focus';
 import { useCloseFocus } from '../../hooks/use-close-focus/use-close-focus';
+import { useCollision } from '../../hooks/use-collision/use-collision';
 import { useControlledState } from '../../hooks/use-controlled-state/use-controlled-state';
 import { useDefaultRerender } from '../../hooks/use-default-rerender/use-default-rerender';
-import { usePlacementChange } from '../../hooks/use-placemenet-change/use-placement-change';
 import { useStartAnimation } from '../../hooks/use-start-animation/use-start-animation';
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
 import { mergePopperStyle } from '../../utils/merge-popper-style/merge-popper-style';
@@ -58,7 +58,7 @@ export const UnstyledPopper = <E extends ElementType = 'div'>(
     style,
     onOpen,
     onClose,
-    onPlacementChange,
+    onCollision,
     onTransitionEnd,
     portalEl,
     transitionProps,
@@ -104,7 +104,7 @@ export const UnstyledPopper = <E extends ElementType = 'div'>(
 
   useStartAnimation(isOpen, startAnimation);
 
-  usePlacementChange(mainAxis, onPlacementChange);
+  useCollision(mainAxis, onCollision);
 
   useWindowResize(isMovable && handleResize);
 
