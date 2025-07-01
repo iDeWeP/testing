@@ -1,58 +1,58 @@
 import { ExampleCard } from '../../../components/ExampleCard';
 import { ExampleSection } from '../../../components/ExampleSection';
-import { UnstyledFlex } from '../../../core/components/UnstyledFlex/UnstyledFlex';
+import { ExampleUnstyledFlex } from './ExampleUnstyledFlex';
 
 export const ColorExample = () => (
   <ExampleSection title="Color">
     <ExampleCard>
-      <UnstyledFlex
+      <ExampleUnstyledFlex
         variant="light"
         color="surface"
       >
         SURFACE
-      </UnstyledFlex>
-      <UnstyledFlex
+      </ExampleUnstyledFlex>
+      <ExampleUnstyledFlex
         variant="light"
         color="neutral"
       >
         NEUTRAL
-      </UnstyledFlex>
-      <UnstyledFlex
+      </ExampleUnstyledFlex>
+      <ExampleUnstyledFlex
         variant="light"
         color="primary"
       >
         PRIMARY
-      </UnstyledFlex>
-      <UnstyledFlex
+      </ExampleUnstyledFlex>
+      <ExampleUnstyledFlex
         variant="light"
         color="secondary"
       >
         SECONDARY
-      </UnstyledFlex>
-      <UnstyledFlex
+      </ExampleUnstyledFlex>
+      <ExampleUnstyledFlex
         variant="light"
         color="tertiary"
       >
         TERTIARY
-      </UnstyledFlex>
-      <UnstyledFlex
+      </ExampleUnstyledFlex>
+      <ExampleUnstyledFlex
         variant="light"
         color="success"
       >
         SUCCESS
-      </UnstyledFlex>
-      <UnstyledFlex
+      </ExampleUnstyledFlex>
+      <ExampleUnstyledFlex
         variant="light"
         color="warning"
       >
         WARNING
-      </UnstyledFlex>
-      <UnstyledFlex
+      </ExampleUnstyledFlex>
+      <ExampleUnstyledFlex
         variant="light"
         color="error"
       >
         ERROR
-      </UnstyledFlex>
+      </ExampleUnstyledFlex>
     </ExampleCard>
   </ExampleSection>
 );

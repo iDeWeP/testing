@@ -1,96 +1,96 @@
 import { ExampleCard } from '../../../components/ExampleCard';
 import { ExampleSection } from '../../../components/ExampleSection';
-import { UnstyledFlex } from '../../../core/components/UnstyledFlex/UnstyledFlex';
+import { ExampleUnstyledFlex } from './ExampleUnstyledFlex';
 
 export const SizeExample = () => (
   <ExampleSection title="Size">
     <ExampleCard>
-      <UnstyledFlex
+      <ExampleUnstyledFlex
         variant="light"
         size="none"
       >
         NONE
-      </UnstyledFlex>
-      <UnstyledFlex
+      </ExampleUnstyledFlex>
+      <ExampleUnstyledFlex
         variant="light"
         size="xs"
       >
         XS
-      </UnstyledFlex>
-      <UnstyledFlex
+      </ExampleUnstyledFlex>
+      <ExampleUnstyledFlex
         variant="light"
         size="sm"
       >
         SM
-      </UnstyledFlex>
-      <UnstyledFlex
+      </ExampleUnstyledFlex>
+      <ExampleUnstyledFlex
         variant="light"
         size="md"
       >
         MD
-      </UnstyledFlex>
-      <UnstyledFlex
+      </ExampleUnstyledFlex>
+      <ExampleUnstyledFlex
         variant="light"
         size="lg"
       >
         LG
-      </UnstyledFlex>
-      <UnstyledFlex
+      </ExampleUnstyledFlex>
+      <ExampleUnstyledFlex
         variant="light"
         size="xl"
       >
         XL
-      </UnstyledFlex>
-      <UnstyledFlex
+      </ExampleUnstyledFlex>
+      <ExampleUnstyledFlex
         variant="light"
         size="xxl"
       >
         XXL
-      </UnstyledFlex>
+      </ExampleUnstyledFlex>
     </ExampleCard>
     <ExampleCard>
-      <UnstyledFlex
+      <ExampleUnstyledFlex
         variant="light"
         size="none"
       >
         NONE
-      </UnstyledFlex>
-      <UnstyledFlex
+      </ExampleUnstyledFlex>
+      <ExampleUnstyledFlex
         variant="light"
         size="xs-xs"
       >
         XS-XS
-      </UnstyledFlex>
-      <UnstyledFlex
+      </ExampleUnstyledFlex>
+      <ExampleUnstyledFlex
         variant="light"
         size="sm-sm"
       >
         SM-SM
-      </UnstyledFlex>
-      <UnstyledFlex
+      </ExampleUnstyledFlex>
+      <ExampleUnstyledFlex
         variant="light"
         size="md-md"
       >
         MD-MD
-      </UnstyledFlex>
-      <UnstyledFlex
+      </ExampleUnstyledFlex>
+      <ExampleUnstyledFlex
         variant="light"
         size="lg-lg"
       >
         LG-LG
-      </UnstyledFlex>
-      <UnstyledFlex
+      </ExampleUnstyledFlex>
+      <ExampleUnstyledFlex
         variant="light"
         size="xl-xl"
       >
         XL-XL
-      </UnstyledFlex>
-      <UnstyledFlex
+      </ExampleUnstyledFlex>
+      <ExampleUnstyledFlex
         variant="light"
         size="xxl-xxl"
       >
         XXL-XXL
-      </UnstyledFlex>
+      </ExampleUnstyledFlex>
     </ExampleCard>
   </ExampleSection>
 );

@@ -1,28 +1,28 @@
 import { ExampleCard } from '../../../components/ExampleCard';
 import { ExampleSection } from '../../../components/ExampleSection';
-import { UnstyledFlex } from '../../../core/components/UnstyledFlex/UnstyledFlex';
+import { ExampleUnstyledFlex } from './ExampleUnstyledFlex';
 
 export const ScaleExample = () => (
   <ExampleSection title="Scale">
     <ExampleCard>
-      <UnstyledFlex
+      <ExampleUnstyledFlex
         variant="light"
         scale="normal"
       >
         NORMAL
-      </UnstyledFlex>
-      <UnstyledFlex
+      </ExampleUnstyledFlex>
+      <ExampleUnstyledFlex
         variant="light"
         scale="fit"
       >
         FIT
-      </UnstyledFlex>
-      <UnstyledFlex
+      </ExampleUnstyledFlex>
+      <ExampleUnstyledFlex
         variant="light"
         scale="full"
       >
         FULL
-      </UnstyledFlex>
+      </ExampleUnstyledFlex>
     </ExampleCard>
   </ExampleSection>
 );

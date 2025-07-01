@@ -1,67 +1,46 @@
 import { ExampleCard } from '../../../components/ExampleCard';
 import { ExampleSection } from '../../../components/ExampleSection';
 import { UnstyledBox } from '../../../core/components/UnstyledBox/UnstyledBox';
-import { UnstyledFlex } from '../../../core/components/UnstyledFlex/UnstyledFlex';
+import { ExampleUnstyledFlex } from './ExampleUnstyledFlex';
 
 export const GapExample = () => (
   <ExampleSection title="Gap">
     <ExampleCard vertical>
-      <UnstyledFlex
-        variant="none"
-        gap="none"
-      >
+      <ExampleUnstyledFlex gap="none">
         <UnstyledBox variant="light">NONE #1</UnstyledBox>
         <UnstyledBox variant="light">NONE #2</UnstyledBox>
         <UnstyledBox variant="light">NONE #3</UnstyledBox>
-      </UnstyledFlex>
-      <UnstyledFlex
-        variant="none"
-        gap="xs"
-      >
+      </ExampleUnstyledFlex>
+      <ExampleUnstyledFlex gap="xs">
         <UnstyledBox variant="light">XS #1</UnstyledBox>
         <UnstyledBox variant="light">XS #2</UnstyledBox>
         <UnstyledBox variant="light">XS #3</UnstyledBox>
-      </UnstyledFlex>
-      <UnstyledFlex
-        variant="none"
-        gap="sm"
-      >
+      </ExampleUnstyledFlex>
+      <ExampleUnstyledFlex gap="sm">
         <UnstyledBox variant="light">SM #1</UnstyledBox>
         <UnstyledBox variant="light">SM #2</UnstyledBox>
         <UnstyledBox variant="light">SM #3</UnstyledBox>
-      </UnstyledFlex>
-      <UnstyledFlex
-        variant="none"
-        gap="md"
-      >
+      </ExampleUnstyledFlex>
+      <ExampleUnstyledFlex gap="md">
         <UnstyledBox variant="light">MD #1</UnstyledBox>
         <UnstyledBox variant="light">MD #2</UnstyledBox>
         <UnstyledBox variant="light">MD #3</UnstyledBox>
-      </UnstyledFlex>
-      <UnstyledFlex
-        variant="none"
-        gap="lg"
-      >
+      </ExampleUnstyledFlex>
+      <ExampleUnstyledFlex gap="lg">
         <UnstyledBox variant="light">LG #1</UnstyledBox>
         <UnstyledBox variant="light">LG #2</UnstyledBox>
         <UnstyledBox variant="light">LG #3</UnstyledBox>
-      </UnstyledFlex>
-      <UnstyledFlex
-        variant="none"
-        gap="xl"
-      >
+      </ExampleUnstyledFlex>
+      <ExampleUnstyledFlex gap="xl">
         <UnstyledBox variant="light">XL #1</UnstyledBox>
         <UnstyledBox variant="light">XL #2</UnstyledBox>
         <UnstyledBox variant="light">XL #3</UnstyledBox>
-      </UnstyledFlex>
-      <UnstyledFlex
-        variant="none"
-        gap="xxl"
-      >
+      </ExampleUnstyledFlex>
+      <ExampleUnstyledFlex gap="xxl">
         <UnstyledBox variant="light">XXL #1</UnstyledBox>
         <UnstyledBox variant="light">XXL #2</UnstyledBox>
         <UnstyledBox variant="light">XXL #3</UnstyledBox>
-      </UnstyledFlex>
+      </ExampleUnstyledFlex>
     </ExampleCard>
   </ExampleSection>
 );

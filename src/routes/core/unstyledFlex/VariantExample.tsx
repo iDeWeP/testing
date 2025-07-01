@@ -1,52 +1,52 @@
 import { ExampleCard } from '../../../components/ExampleCard';
 import { ExampleSection } from '../../../components/ExampleSection';
-import { UnstyledFlex } from '../../../core/components/UnstyledFlex/UnstyledFlex';
+import { ExampleUnstyledFlex } from './ExampleUnstyledFlex';
 
 export const VariantExample = () => (
   <ExampleSection title="Variant">
     <ExampleCard>
-      <UnstyledFlex variant="none">NONE</UnstyledFlex>
-      <UnstyledFlex variant="text">TEXT</UnstyledFlex>
-      <UnstyledFlex variant="plain">PLAIN</UnstyledFlex>
-      <UnstyledFlex variant="light">LIGHT</UnstyledFlex>
-      <UnstyledFlex variant="surface">SURFACE</UnstyledFlex>
-      <UnstyledFlex variant="solid">SOLID</UnstyledFlex>
-      <UnstyledFlex
+      <ExampleUnstyledFlex variant="none">NONE</ExampleUnstyledFlex>
+      <ExampleUnstyledFlex variant="text">TEXT</ExampleUnstyledFlex>
+      <ExampleUnstyledFlex variant="plain">PLAIN</ExampleUnstyledFlex>
+      <ExampleUnstyledFlex variant="light">LIGHT</ExampleUnstyledFlex>
+      <ExampleUnstyledFlex variant="surface">SURFACE</ExampleUnstyledFlex>
+      <ExampleUnstyledFlex variant="solid">SOLID</ExampleUnstyledFlex>
+      <ExampleUnstyledFlex
         variant="none"
         border
       >
         NONE-BORDER
-      </UnstyledFlex>
-      <UnstyledFlex
+      </ExampleUnstyledFlex>
+      <ExampleUnstyledFlex
         variant="text"
         border
       >
         TEXT-BORDER
-      </UnstyledFlex>
-      <UnstyledFlex
+      </ExampleUnstyledFlex>
+      <ExampleUnstyledFlex
         variant="plain"
         border
       >
         PLAIN-BORDER
-      </UnstyledFlex>
-      <UnstyledFlex
+      </ExampleUnstyledFlex>
+      <ExampleUnstyledFlex
         variant="light"
         border
       >
         LIGHT-BORDER
-      </UnstyledFlex>
-      <UnstyledFlex
+      </ExampleUnstyledFlex>
+      <ExampleUnstyledFlex
         variant="surface"
         border
       >
         SURFACE-BORDER
-      </UnstyledFlex>
-      <UnstyledFlex
+      </ExampleUnstyledFlex>
+      <ExampleUnstyledFlex
         variant="solid"
         border
       >
         SOLID-BORDER
-      </UnstyledFlex>
+      </ExampleUnstyledFlex>
     </ExampleCard>
   </ExampleSection>
 );

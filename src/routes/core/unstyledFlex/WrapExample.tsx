@@ -1,35 +1,26 @@
 import { ExampleCard } from '../../../components/ExampleCard';
 import { ExampleSection } from '../../../components/ExampleSection';
 import { UnstyledBox } from '../../../core/components/UnstyledBox/UnstyledBox';
-import { UnstyledFlex } from '../../../core/components/UnstyledFlex/UnstyledFlex';
+import { ExampleUnstyledFlex } from './ExampleUnstyledFlex';
 
 export const WrapExample = () => (
   <ExampleSection title="Wrap">
     <ExampleCard>
-      <UnstyledFlex
-        variant="none"
-        wrap="nowrap"
-      >
+      <ExampleUnstyledFlex wrap="nowrap">
         <UnstyledBox variant="light">NOWRAP #1</UnstyledBox>
         <UnstyledBox variant="light">NOWRAP #2</UnstyledBox>
         <UnstyledBox variant="light">NOWRAP #3</UnstyledBox>
-      </UnstyledFlex>
-      <UnstyledFlex
-        variant="none"
-        wrap="wrap"
-      >
+      </ExampleUnstyledFlex>
+      <ExampleUnstyledFlex wrap="wrap">
         <UnstyledBox variant="light">WRAP #1</UnstyledBox>
         <UnstyledBox variant="light">WRAP #2</UnstyledBox>
         <UnstyledBox variant="light">WRAP #3</UnstyledBox>
-      </UnstyledFlex>
-      <UnstyledFlex
-        variant="none"
-        wrap="wrap-reverse"
-      >
+      </ExampleUnstyledFlex>
+      <ExampleUnstyledFlex wrap="wrap-reverse">
         <UnstyledBox variant="light">WRAP-REVERSE #1</UnstyledBox>
         <UnstyledBox variant="light">WRAP-REVERSE #2</UnstyledBox>
         <UnstyledBox variant="light">WRAP-REVERSE #3</UnstyledBox>
-      </UnstyledFlex>
+      </ExampleUnstyledFlex>
     </ExampleCard>
   </ExampleSection>
 );
