@@ -1,36 +1,36 @@
 import { ExampleSection } from '../../../components/ExampleSection';
-import { ExampleTransition } from './ExampleTransition';
+import { ExampleUnstyledTransition } from './ExampleUnstyledTransition';
 
 export const TransitionExample = () => (
   <ExampleSection title="Transition">
-    <ExampleTransition transition="fade">FADE</ExampleTransition>
-    <ExampleTransition transition="grow">GROW</ExampleTransition>
-    <ExampleTransition transition="grow-fade">GROW-FADE</ExampleTransition>
-    <ExampleTransition transition="slide-top">SLIDE-TOP</ExampleTransition>
-    <ExampleTransition transition="slide-bottom">
+    <ExampleUnstyledTransition transition="fade">FADE</ExampleUnstyledTransition>
+    <ExampleUnstyledTransition transition="grow">GROW</ExampleUnstyledTransition>
+    <ExampleUnstyledTransition transition="grow-fade">GROW-FADE</ExampleUnstyledTransition>
+    <ExampleUnstyledTransition transition="slide-top">SLIDE-TOP</ExampleUnstyledTransition>
+    <ExampleUnstyledTransition transition="slide-bottom">
       SLIDE-BOTTOM
-    </ExampleTransition>
-    <ExampleTransition transition="slide-left">SLIDE-LEFT</ExampleTransition>
-    <ExampleTransition transition="slide-right">SLIDE-RIGHT</ExampleTransition>
-    <ExampleTransition transition="slide-top-fade">
+    </ExampleUnstyledTransition>
+    <ExampleUnstyledTransition transition="slide-left">SLIDE-LEFT</ExampleUnstyledTransition>
+    <ExampleUnstyledTransition transition="slide-right">SLIDE-RIGHT</ExampleUnstyledTransition>
+    <ExampleUnstyledTransition transition="slide-top-fade">
       SLIDE-TOP-FADE
-    </ExampleTransition>
-    <ExampleTransition transition="slide-bottom-fade">
+    </ExampleUnstyledTransition>
+    <ExampleUnstyledTransition transition="slide-bottom-fade">
       SLIDE-BOTTOM-FADE
-    </ExampleTransition>
-    <ExampleTransition transition="slide-left-fade">
+    </ExampleUnstyledTransition>
+    <ExampleUnstyledTransition transition="slide-left-fade">
       SLIDE-LEFT-FADE
-    </ExampleTransition>
-    <ExampleTransition transition="slide-right-fade">
+    </ExampleUnstyledTransition>
+    <ExampleUnstyledTransition transition="slide-right-fade">
       SLIDE-RIGHT-FADE
-    </ExampleTransition>
-    <ExampleTransition transition="collapse-x">COLLAPSE-X</ExampleTransition>
-    <ExampleTransition transition="collapse-y">COLLAPSE-Y</ExampleTransition>
-    <ExampleTransition transition="collapse-x-fade">
+    </ExampleUnstyledTransition>
+    <ExampleUnstyledTransition transition="collapse-x">COLLAPSE-X</ExampleUnstyledTransition>
+    <ExampleUnstyledTransition transition="collapse-y">COLLAPSE-Y</ExampleUnstyledTransition>
+    <ExampleUnstyledTransition transition="collapse-x-fade">
       COLLAPSE-X-FADE
-    </ExampleTransition>
-    <ExampleTransition transition="collapse-y-fade">
+    </ExampleUnstyledTransition>
+    <ExampleUnstyledTransition transition="collapse-y-fade">
       COLLAPSE-Y-FADE
-    </ExampleTransition>
+    </ExampleUnstyledTransition>
   </ExampleSection>
 );

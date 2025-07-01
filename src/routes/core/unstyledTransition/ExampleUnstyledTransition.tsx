@@ -4,7 +4,7 @@ import { UnstyledBox } from '../../../core/components/UnstyledBox/UnstyledBox';
 import { UnstyledTransition } from '../../../core/components/UnstyledTransition/UnstyledTransition';
 import type { UnstyledTransitionProps } from '../../../core/components/UnstyledTransition/UnstyledTransition.types';
 
-export const ExampleTransition = ({
+export const ExampleUnstyledTransition = ({
   children = 'UNSTYLED-TRANSITION',
   ...restProps
 }: UnstyledTransitionProps<'div'>) => {

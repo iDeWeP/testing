@@ -1,8 +1,8 @@
 import { ExampleSection } from '../../../components/ExampleSection';
-import { ExampleTransition } from './ExampleTransition';
+import { ExampleUnstyledTransition } from './ExampleUnstyledTransition';
 
 export const DefaultExample = () => (
   <ExampleSection title="Default">
-    <ExampleTransition />
+    <ExampleUnstyledTransition />
   </ExampleSection>
 );

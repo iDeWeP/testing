@@ -1,8 +1,8 @@
 import { ExampleSection } from '../../../components/ExampleSection';
-import { ExampleTransition } from './ExampleTransition';
+import { ExampleUnstyledTransition } from './ExampleUnstyledTransition';
 
 export const DurationExample = () => (
   <ExampleSection title="Duration">
-    <ExampleTransition duration={3000}>3000</ExampleTransition>
+    <ExampleUnstyledTransition duration={3000}>3000</ExampleUnstyledTransition>
   </ExampleSection>
 );
