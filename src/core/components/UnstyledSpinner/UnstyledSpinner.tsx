@@ -36,6 +36,9 @@ export const UnstyledSpinner = (props: UnstyledSpinnerProps) => {
     color
   });
 
+  const hasTrail =
+    variant === 'light' || variant === 'surface' || variant === 'solid';
+
   return (
     <svg
       viewBox="0 0 40 40"
@@ -43,13 +46,15 @@ export const UnstyledSpinner = (props: UnstyledSpinnerProps) => {
       className={mergedClassName}
       {...restProps}
     >
-      <UnstyledSpinnerTrail
-        disabled={disabled}
-        strokeWidth={thickness}
-        variant={variant}
-        color={color}
-        {...componentsProps.trail}
-      />
+      {hasTrail && (
+        <UnstyledSpinnerTrail
+          disabled={disabled}
+          strokeWidth={thickness}
+          variant={variant}
+          color={color}
+          {...componentsProps.trail}
+        />
+      )}
       <circle
         cx="20"
         cy="20"
