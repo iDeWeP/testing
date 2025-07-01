@@ -43,14 +43,6 @@ export const UnstyledSpinner = (props: UnstyledSpinnerProps) => {
       className={mergedClassName}
       {...restProps}
     >
-      {border && (
-        <circle
-          cx="20"
-          cy="20"
-          r="20"
-          {...componentsProps.outerBorder}
-        />
-      )}
       <UnstyledSpinnerTrail
         disabled={disabled}
         strokeWidth={thickness}
@@ -67,6 +59,14 @@ export const UnstyledSpinner = (props: UnstyledSpinnerProps) => {
         strokeDashoffset={offset}
         {...componentsProps.bar}
       />
+      {border && (
+        <circle
+          cx="20"
+          cy="20"
+          r="20"
+          {...componentsProps.outerBorder}
+        />
+      )}
       {border && (
         <circle
           cx="20"
