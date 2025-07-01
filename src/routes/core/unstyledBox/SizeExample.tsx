@@ -6,43 +6,43 @@ export const SizeExample = () => (
   <ExampleSection title="Size">
     <ExampleCard>
       <ExampleUnstyledBox
-        variant="light"
+        light
         size="none"
       >
         NONE
       </ExampleUnstyledBox>
       <ExampleUnstyledBox
-        variant="light"
+        light
         size="xs"
       >
         XS
       </ExampleUnstyledBox>
       <ExampleUnstyledBox
-        variant="light"
+        light
         size="sm"
       >
         SM
       </ExampleUnstyledBox>
       <ExampleUnstyledBox
-        variant="light"
+        light
         size="md"
       >
         MD
       </ExampleUnstyledBox>
       <ExampleUnstyledBox
-        variant="light"
+        light
         size="lg"
       >
         LG
       </ExampleUnstyledBox>
       <ExampleUnstyledBox
-        variant="light"
+        light
         size="xl"
       >
         XL
       </ExampleUnstyledBox>
       <ExampleUnstyledBox
-        variant="light"
+        light
         size="xxl"
       >
         XXL
@@ -50,43 +50,43 @@ export const SizeExample = () => (
     </ExampleCard>
     <ExampleCard>
       <ExampleUnstyledBox
-        variant="light"
+        light
         size="none"
       >
         NONE
       </ExampleUnstyledBox>
       <ExampleUnstyledBox
-        variant="light"
+        light
         size="xs-xs"
       >
         XS-XS
       </ExampleUnstyledBox>
       <ExampleUnstyledBox
-        variant="light"
+        light
         size="sm-sm"
       >
         SM-SM
       </ExampleUnstyledBox>
       <ExampleUnstyledBox
-        variant="light"
+        light
         size="md-md"
       >
         MD-MD
       </ExampleUnstyledBox>
       <ExampleUnstyledBox
-        variant="light"
+        light
         size="lg-lg"
       >
         LG-LG
       </ExampleUnstyledBox>
       <ExampleUnstyledBox
-        variant="light"
+        light
         size="xl-xl"
       >
         XL-XL
       </ExampleUnstyledBox>
       <ExampleUnstyledBox
-        variant="light"
+        light
         size="xxl-xxl"
       >
         XXL-XXL
