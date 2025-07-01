@@ -12,6 +12,7 @@ export const ExampleUnstyledGrid = ({
 }: Props) => (
   <UnstyledGrid
     variant={light ? 'light' : 'none'}
+    color="primary"
     {...restProps}
   >
     {children}

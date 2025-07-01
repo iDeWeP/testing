@@ -12,6 +12,7 @@ export const ExampleUnstyledFlex = ({
 }: Props) => (
   <UnstyledFlex
     variant={light ? 'light' : 'none'}
+    color="primary"
     {...restProps}
   >
     {children}
