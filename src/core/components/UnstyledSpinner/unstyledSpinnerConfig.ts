@@ -1,6 +1,6 @@
 import type {
   CSSProps,
-  DefaultScale,
+  SizeScale,
   DefaultSize,
   ComponentConfig
 } from '../../types';
@@ -10,7 +10,7 @@ type Styles = {
   styles: {
     root: {
       default: CSSProps;
-      float: Record<DefaultScale, Record<DefaultSize, CSSProps>>;
+      float: Record<SizeScale, Record<DefaultSize, CSSProps>>;
       spin: CSSProps;
       rotate: CSSProps;
     };

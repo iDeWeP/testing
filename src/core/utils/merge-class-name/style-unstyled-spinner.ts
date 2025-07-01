@@ -13,8 +13,8 @@ export const styleUnstyledSpinner = (
     disabled = false,
     variant = 'none',
     float = false,
-    size = 'md',
-    defaultScale = 'normal',
+    defaultSize = 'md',
+    sizeScale = 'normal',
     margin = 'none',
     color = 'neutral'
   }: Classes
@@ -22,8 +22,8 @@ export const styleUnstyledSpinner = (
   mergeClasses(
     unstyledSpinnerConfig.styles.root.default,
     float && generic.styles.position.absolute,
-    float && unstyledSpinnerConfig.styles.root.float[defaultScale][size],
-    generic.styles.size[defaultScale].square[size],
+    float && unstyledSpinnerConfig.styles.root.float[sizeScale][defaultSize],
+    generic.styles.size[sizeScale].square[defaultSize],
     generic.styles.margin[margin],
     generic.styles.color.stroke[getColor(color, disabled)][
       getVariant(variant).textVariant

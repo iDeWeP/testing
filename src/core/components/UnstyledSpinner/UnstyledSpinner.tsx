@@ -11,9 +11,9 @@ export const UnstyledSpinner = (props: UnstyledSpinnerProps) => {
     value,
     variant,
     float,
-    size,
+    size: defaultSize,
     thickness,
-    scale: defaultScale,
+    scale: sizeScale,
     margin,
     border,
     color,
@@ -30,8 +30,8 @@ export const UnstyledSpinner = (props: UnstyledSpinnerProps) => {
     disabled,
     variant,
     float,
-    size,
-    defaultScale,
+    defaultSize,
+    sizeScale,
     margin,
     color
   });
