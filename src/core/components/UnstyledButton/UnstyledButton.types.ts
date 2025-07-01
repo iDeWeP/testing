@@ -13,7 +13,7 @@ import type {
   MergeProps
 } from '../../types';
 
-export type UnstyledButtonComponentProps = {
+export type UnstyledButtonComponentsProps = {
   ripple?: ComponentRefProps<'span'>;
   spinner?: ComponentRefProps<'svg'>;
   bar?: ComponentRefProps<'circle'>;
@@ -39,7 +39,7 @@ export type UnstyledButtonDefaultProps = {
   radius?: Radius;
   color?: Color;
   effect?: Effect;
-  componentsProps?: UnstyledButtonComponentProps;
+  componentsProps?: UnstyledButtonComponentsProps;
   ripple?: Ripple;
 };
 
