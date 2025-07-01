@@ -5,13 +5,48 @@ import { ExampleUnstyledTypography } from './ExampleUnstyledTypography';
 export const RadiusExample = () => (
   <ExampleSection title="Radius">
     <ExampleCard>
-      <ExampleUnstyledTypography radius="none">NONE</ExampleUnstyledTypography>
-      <ExampleUnstyledTypography radius="xs">XS</ExampleUnstyledTypography>
-      <ExampleUnstyledTypography radius="sm">SM</ExampleUnstyledTypography>
-      <ExampleUnstyledTypography radius="md">MD</ExampleUnstyledTypography>
-      <ExampleUnstyledTypography radius="lg">LG</ExampleUnstyledTypography>
-      <ExampleUnstyledTypography radius="xl">XL</ExampleUnstyledTypography>
-      <ExampleUnstyledTypography radius="full">FULL</ExampleUnstyledTypography>
+      <ExampleUnstyledTypography
+        light
+        radius="none"
+      >
+        NONE
+      </ExampleUnstyledTypography>
+      <ExampleUnstyledTypography
+        light
+        radius="xs"
+      >
+        XS
+      </ExampleUnstyledTypography>
+      <ExampleUnstyledTypography
+        light
+        radius="sm"
+      >
+        SM
+      </ExampleUnstyledTypography>
+      <ExampleUnstyledTypography
+        light
+        radius="md"
+      >
+        MD
+      </ExampleUnstyledTypography>
+      <ExampleUnstyledTypography
+        light
+        radius="lg"
+      >
+        LG
+      </ExampleUnstyledTypography>
+      <ExampleUnstyledTypography
+        light
+        radius="xl"
+      >
+        XL
+      </ExampleUnstyledTypography>
+      <ExampleUnstyledTypography
+        light
+        radius="full"
+      >
+        FULL
+      </ExampleUnstyledTypography>
     </ExampleCard>
   </ExampleSection>
 );

@@ -5,11 +5,24 @@ import { ExampleUnstyledTypography } from './ExampleUnstyledTypography';
 export const ScaleExample = () => (
   <ExampleSection title="Scale">
     <ExampleCard>
-      <ExampleUnstyledTypography scale="normal">
+      <ExampleUnstyledTypography
+        light
+        scale="normal"
+      >
         NORMAL
       </ExampleUnstyledTypography>
-      <ExampleUnstyledTypography scale="fit">FIT</ExampleUnstyledTypography>
-      <ExampleUnstyledTypography scale="full">FULL</ExampleUnstyledTypography>
+      <ExampleUnstyledTypography
+        light
+        scale="fit"
+      >
+        FIT
+      </ExampleUnstyledTypography>
+      <ExampleUnstyledTypography
+        light
+        scale="full"
+      >
+        FULL
+      </ExampleUnstyledTypography>
     </ExampleCard>
   </ExampleSection>
 );

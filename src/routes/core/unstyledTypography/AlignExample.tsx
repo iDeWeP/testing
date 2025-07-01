@@ -5,31 +5,19 @@ import { ExampleUnstyledTypography } from './ExampleUnstyledTypography';
 export const AlignExample = () => (
   <ExampleSection title="Align">
     <ExampleCard>
-      <ExampleUnstyledTypography
-        clear
-        align="left"
-      >
+      <ExampleUnstyledTypography align="left">
         LEFT LEFT LEFT LEFT LEFT LEFT LEFT LEFT LEFT LEFT LEFT LEFT LEFT LEFT
         LEFT LEFT LEFT LEFT LEFT LEFT LEFT LEFT LEFT LEFT LEFT
       </ExampleUnstyledTypography>
-      <ExampleUnstyledTypography
-        clear
-        align="right"
-      >
+      <ExampleUnstyledTypography align="right">
         RIGHT RIGHT RIGHT RIGHT RIGHT RIGHT RIGHT RIGHT RIGHT RIGHT RIGHT RIGHT
         RIGHT RIGHT RIGHT RIGHT RIGHT RIGHT RIGHT RIGHT
       </ExampleUnstyledTypography>
-      <ExampleUnstyledTypography
-        clear
-        align="center"
-      >
+      <ExampleUnstyledTypography align="center">
         CENTER CENTER CENTER CENTER CENTER CENTER CENTER CENTER CENTER CENTER
         CENTER CENTER CENTER CENTER CENTER
       </ExampleUnstyledTypography>
-      <ExampleUnstyledTypography
-        clear
-        align="justify"
-      >
+      <ExampleUnstyledTypography align="justify">
         JUSTIFY JUSTIFY JUSTIFY JUSTIFY JUSTIFY JUSTIFY JUSTIFY JUSTIFY JUSTIFY
         JUSTIFY JUSTIFY JUSTIFY JUSTIFY JUSTIFY JUSTIFY
       </ExampleUnstyledTypography>

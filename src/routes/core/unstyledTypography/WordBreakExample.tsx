@@ -5,31 +5,19 @@ import { ExampleUnstyledTypography } from './ExampleUnstyledTypography';
 export const WordBreakExample = () => (
   <ExampleSection title="Word break">
     <ExampleCard>
-      <ExampleUnstyledTypography
-        clear
-        wordBreak="normal"
-      >
+      <ExampleUnstyledTypography wordBreak="normal">
         NORMAL NORMAL NORMAL NORMAL NORMAL NORMAL NORMAL NORMAL NORMAL NORMAL
         NORMAL NORMAL NORMAL NORMAL NORMAL
       </ExampleUnstyledTypography>
-      <ExampleUnstyledTypography
-        clear
-        wordBreak="words"
-      >
+      <ExampleUnstyledTypography wordBreak="words">
         WORDS WORDS WORDS WORDS WORDS WORDS WORDS WORDS WORDS WORDS WORDS WORDS
         WORDS WORDS WORDS
       </ExampleUnstyledTypography>
-      <ExampleUnstyledTypography
-        clear
-        wordBreak="all"
-      >
+      <ExampleUnstyledTypography wordBreak="all">
         ALL ALL ALL ALL ALL ALL ALL ALL ALL ALL ALL ALL ALL ALL ALL ALL ALL ALL
         ALL ALL
       </ExampleUnstyledTypography>
-      <ExampleUnstyledTypography
-        clear
-        wordBreak="keep"
-      >
+      <ExampleUnstyledTypography wordBreak="keep">
         KEEP KEEP KEEP KEEP KEEP KEEP KEEP KEEP KEEP KEEP KEEP KEEP KEEP KEEP
         KEEP
       </ExampleUnstyledTypography>

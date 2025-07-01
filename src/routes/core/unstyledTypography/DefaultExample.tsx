@@ -5,7 +5,7 @@ import { ExampleUnstyledTypography } from './ExampleUnstyledTypography';
 export const DefaultExample = () => (
   <ExampleSection title="Default">
     <ExampleCard>
-      <ExampleUnstyledTypography clear />
+      <ExampleUnstyledTypography />
     </ExampleCard>
   </ExampleSection>
 );

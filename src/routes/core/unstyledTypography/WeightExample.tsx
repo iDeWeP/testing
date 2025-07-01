@@ -5,24 +5,11 @@ import { ExampleUnstyledTypography } from './ExampleUnstyledTypography';
 export const WeightExample = () => (
   <ExampleSection title="Weight">
     <ExampleCard>
-      <ExampleUnstyledTypography
-        clear
-        weight="normal"
-      >
+      <ExampleUnstyledTypography weight="normal">
         NORMAL
       </ExampleUnstyledTypography>
-      <ExampleUnstyledTypography
-        clear
-        weight="semi"
-      >
-        SEMI
-      </ExampleUnstyledTypography>
-      <ExampleUnstyledTypography
-        clear
-        weight="bold"
-      >
-        BOLD
-      </ExampleUnstyledTypography>
+      <ExampleUnstyledTypography weight="semi">SEMI</ExampleUnstyledTypography>
+      <ExampleUnstyledTypography weight="bold">BOLD</ExampleUnstyledTypography>
     </ExampleCard>
   </ExampleSection>
 );

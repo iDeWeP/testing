@@ -5,24 +5,15 @@ import { ExampleUnstyledTypography } from './ExampleUnstyledTypography';
 export const OverflowExample = () => (
   <ExampleSection title="Overflow">
     <ExampleCard>
-      <ExampleUnstyledTypography
-        clear
-        overflow="clip"
-      >
+      <ExampleUnstyledTypography overflow="clip">
         CLIP CLIP CLIP CLIP CLIP CLIP CLIP CLIP CLIP CLIP CLIP CLIP CLIP CLIP
         CLIP
       </ExampleUnstyledTypography>
-      <ExampleUnstyledTypography
-        clear
-        overflow="truncate"
-      >
+      <ExampleUnstyledTypography overflow="truncate">
         TRUNCATE TRUNCATE TRUNCATE TRUNCATE TRUNCATE TRUNCATE TRUNCATE TRUNCATE
         TRUNCATE TRUNCATE TRUNCATE TRUNCATE TRUNCATE TRUNCATE TRUNCATE
       </ExampleUnstyledTypography>
-      <ExampleUnstyledTypography
-        clear
-        overflow="ellipsis"
-      >
+      <ExampleUnstyledTypography overflow="ellipsis">
         ELLIPSIS ELLIPSIS ELLIPSIS ELLIPSIS ELLIPSIS ELLIPSIS ELLIPSIS ELLIPSIS
         ELLIPSIS ELLIPSIS ELLIPSIS ELLIPSIS ELLIPSIS ELLIPSIS ELLIPSIS
       </ExampleUnstyledTypography>

@@ -2,16 +2,16 @@ import { UnstyledTypography } from '../../../core/components/UnstyledTypography/
 import type { UnstyledTypographyProps } from '../../../core/components/UnstyledTypography/UnstyledTypography.types';
 
 type Props = {
-  clear?: boolean;
+  light?: boolean;
 } & UnstyledTypographyProps<'div'>;
 
 export const ExampleUnstyledTypography = ({
-  clear,
+  light,
   children = 'UNSTYLED-TYPOGRAPHY',
   ...restProps
 }: Props) => (
   <UnstyledTypography
-    variant={clear ? 'none' : 'light'}
+    variant={light ? 'light' : 'none'}
     color="primary"
     {...restProps}
   >
