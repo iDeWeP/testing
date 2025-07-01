@@ -26,7 +26,7 @@ export const styleUnstyledSpinner = (
     generic.styles.size[sizeScale].square[defaultSize],
     generic.styles.margin[margin],
     generic.styles.color.stroke[getColor(color, disabled)][
-      getVariant(variant).textVariant
+      getVariant(variant, disabled).textVariant
     ],
     unstyledSpinnerConfig.styles.root[getSpinnerTransition(spin, disabled)],
     disabled && generic.styles.focusable.disabled,

@@ -14,7 +14,7 @@ export const styleUnstyledSpinnerTrail = (
     colorVariant === 'none'
       ? 'stroke-transparent'
       : generic.styles.color.stroke[getColor(color, disabled)][
-          getTrailVariant(variant)
+          getTrailVariant(variant, disabled)
         ],
     className
   );
