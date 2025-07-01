@@ -50,12 +50,9 @@ export const UnstyledPopper = <E extends ElementType = 'div'>(
     lockScroll,
     unmountOnExit,
     peak,
-    variant,
     placement,
     offset,
     zIndex,
-    border,
-    color,
     duration,
     className,
     style,
@@ -70,6 +67,9 @@ export const UnstyledPopper = <E extends ElementType = 'div'>(
     arrow,
     backdrop,
     children,
+    variant,
+    border,
+    color,
     ...restProps
   } = mergeProps(unstyledPopperConfig.props, props);
 
