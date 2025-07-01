@@ -4,7 +4,7 @@ import { ExampleUnstyledSpinner } from './ExampleUnstyledSpinner';
 
 export const SizeExample = () => (
   <ExampleSection title="Size">
-    <ExampleCard align>
+    <ExampleCard>
       <ExampleUnstyledSpinner size="xs">XS</ExampleUnstyledSpinner>
       <ExampleUnstyledSpinner size="sm">SM</ExampleUnstyledSpinner>
       <ExampleUnstyledSpinner size="md">MD</ExampleUnstyledSpinner>
