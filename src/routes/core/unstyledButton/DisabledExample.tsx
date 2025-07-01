@@ -4,9 +4,19 @@ import { ExampleUnstyledButton } from './ExampleUnstyledButton';
 
 export const DisabledExample = () => (
   <ExampleSection title="Disabled">
-    <ExampleCard align>
-      <ExampleUnstyledButton disabled={false}>FALSE</ExampleUnstyledButton>
-      <ExampleUnstyledButton disabled>TRUE</ExampleUnstyledButton>
+    <ExampleCard>
+      <ExampleUnstyledButton
+        light
+        disabled={false}
+      >
+        FALSE
+      </ExampleUnstyledButton>
+      <ExampleUnstyledButton
+        light
+        disabled
+      >
+        TRUE
+      </ExampleUnstyledButton>
     </ExampleCard>
   </ExampleSection>
 );

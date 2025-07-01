@@ -13,7 +13,7 @@ import { VariantExample } from './VariantExample';
 
 const Page = () => (
   <>
-    <ExampleTitle>UnstyledBox</ExampleTitle>
+    <ExampleTitle>UnstyledButton</ExampleTitle>
     <DefaultExample />
     <LoadingExample />
     <DisabledExample />

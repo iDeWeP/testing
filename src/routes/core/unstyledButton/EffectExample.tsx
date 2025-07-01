@@ -5,8 +5,18 @@ import { ExampleUnstyledButton } from './ExampleUnstyledButton';
 export const EffectExample = () => (
   <ExampleSection title="Effect">
     <ExampleCard>
-      <ExampleUnstyledButton effect="none">NONE</ExampleUnstyledButton>
-      <ExampleUnstyledButton effect="shadow">SHADOW</ExampleUnstyledButton>
+      <ExampleUnstyledButton
+        light
+        effect="none"
+      >
+        NONE
+      </ExampleUnstyledButton>
+      <ExampleUnstyledButton
+        light
+        effect="shadow"
+      >
+        SHADOW
+      </ExampleUnstyledButton>
     </ExampleCard>
   </ExampleSection>
 );
