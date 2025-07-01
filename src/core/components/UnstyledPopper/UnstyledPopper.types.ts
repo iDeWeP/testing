@@ -16,9 +16,9 @@ import type {
   MergeProps
 } from '../../types';
 import type {
-  UnstyledFlexBoxConfigProps,
-  UnstyledFlexBoxProps
-} from '../UnstyledFlexBox/UnstyledFlexBox.types';
+  UnstyledFlexConfigProps,
+  UnstyledFlexProps
+} from '../UnstyledFlexBox/UnstyledFlex.types';
 
 export type UnstyledPopperArrowProps = {
   offset?: ArrowOffset;
@@ -72,11 +72,11 @@ export type UnstyledPopperDefaultProps = {
 };
 
 export type UnstyledPopperConfigProps = MergeProps<
-  UnstyledFlexBoxConfigProps,
+  UnstyledFlexConfigProps,
   UnstyledPopperDefaultProps
 >;
 
 export type UnstyledPopperProps<E extends ElementType> = MergeProps<
-  UnstyledFlexBoxProps<E>,
+  UnstyledFlexProps<E>,
   UnstyledPopperDefaultProps & OptionalProps
 >;
