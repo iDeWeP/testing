@@ -107,7 +107,8 @@ export type CrossAxis = CrossPlacement;
   | 'xl-xl'; */
 export type ArrowOffset = [number | string, number | string];
 // export type Overlap = 'square' | 'rounded' | 'circular';
-export type Size = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl';
+export type Size = 'none' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl';
+export type DefaultSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl';
 export type BoxSize =
   | 'none'
   | 'xs'
@@ -124,9 +125,8 @@ export type BoxSize =
   | 'xxl-xxl';
 export type InputSize = 'sm' | 'md' | 'lg';
 // export type TextareaSize = 'sm' | 'md' | 'lg' | 'full';
-// export type IconSize = 'none' | 'xs' | 'sm' | 'md' | 'lg' | 'xl';
 export type Scale = 'normal' | 'fit' | 'full';
-export type DefaultScale = 'normal' | 'text';
+export type SizeScale = 'normal' | 'text';
 export type ButtonScale = 'normal' | 'full' | 'fit' | 'square';
 // export type IconScale = 'default' | 'text' | 'square' | 'text-square';
 export type Margin =
@@ -238,7 +238,7 @@ export type Border =
   | 'top-right'
   | 'bottom-left'
   | 'bottom-right';
-export type Radius = 'none' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'full';
+export type Radius = 'none' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl' | 'full';
 export type Weight = 'normal' | 'semi' | 'bold';
 export type Underline = 'normal' | 'none' | 'hover' | 'always';
 export type WordBreak = 'normal' | 'words' | 'all' | 'keep';
@@ -332,16 +332,18 @@ export type Classes = {
   followCursor?: boolean;
   variant?: Variant;
   inputVariant?: InputVariant;
+  orientation?: Orientation;
   placement?: Placement;
   defaultPlacement?: DefaultPlacement;
   sidePlacement?: SidePlacement;
   float?: boolean;
   relative?: boolean;
   size?: Size;
+  defaultSize?: DefaultSize;
   inputSize?: InputSize;
   spacing?: BoxSize;
   scale?: Scale;
-  defaultScale?: DefaultScale;
+  sizeScale?: SizeScale;
   buttonScale?: ButtonScale;
   border?: Border;
   radius?: Radius;
@@ -369,7 +371,6 @@ export type Classes = {
   rippleEffect?: RippleEffect;
   transition?: Transition;
   decorated?: boolean;
-  labeled?: boolean;
   hasRipple?: boolean;
 };
 
