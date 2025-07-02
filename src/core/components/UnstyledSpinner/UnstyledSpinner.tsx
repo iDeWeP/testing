@@ -7,8 +7,8 @@ import { UnstyledSpinnerTrail } from './UnstyledSpinnerTrail';
 
 export const UnstyledSpinner = (props: UnstyledSpinnerProps) => {
   const {
+    disabled = false,
     spin,
-    disabled,
     value,
     variant,
     float,
@@ -28,8 +28,8 @@ export const UnstyledSpinner = (props: UnstyledSpinnerProps) => {
   const offset = length - (value * length) / 100;
 
   const mergedClassName = mergeClassName('unstyledSpinner', className, {
-    spin,
     disabled,
+    spin,
     variant,
     float,
     defaultSize,

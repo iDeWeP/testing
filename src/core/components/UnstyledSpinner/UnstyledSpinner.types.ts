@@ -16,12 +16,12 @@ export type UnstyledSpinnerComponentsProps = {
 };
 
 type OptionalProps = {
+  disabled?: boolean;
   trail?: boolean;
 };
 
 export type UnstyledSpinnerDefaultProps = {
   spin?: boolean;
-  disabled?: boolean;
   value?: number;
   variant?: Variant;
   float?: boolean;

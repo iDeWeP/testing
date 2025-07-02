@@ -21,7 +21,6 @@ export const unstyledSpinnerConfig: ComponentConfig<UnstyledSpinnerConfigProps> 
   Styles = {
   props: {
     spin: true,
-    disabled: false,
     value: 75,
     variant: 'none',
     float: false,
