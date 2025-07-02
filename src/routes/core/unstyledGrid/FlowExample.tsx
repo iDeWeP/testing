@@ -1,36 +1,36 @@
 import { ExampleCard } from '../../../components/ExampleCard';
 import { ExampleSection } from '../../../components/ExampleSection';
 import { UnstyledBox } from '../../../core/components/UnstyledBox/UnstyledBox';
-import { ExampleUnstyledGrid } from './ExampleUnstyledGrid';
+import { Example } from './Example';
 
 export const FlowExample = () => (
   <ExampleSection title="Flow">
     <ExampleCard>
-      <ExampleUnstyledGrid flow="row">
+      <Example flow="row">
         <UnstyledBox variant="light">ROW #1</UnstyledBox>
         <UnstyledBox variant="light">ROW #2</UnstyledBox>
         <UnstyledBox variant="light">ROW #3</UnstyledBox>
-      </ExampleUnstyledGrid>
-      <ExampleUnstyledGrid flow="col">
+      </Example>
+      <Example flow="col">
         <UnstyledBox variant="light">COL #1</UnstyledBox>
         <UnstyledBox variant="light">COL #2</UnstyledBox>
         <UnstyledBox variant="light">COL #3</UnstyledBox>
-      </ExampleUnstyledGrid>
-      <ExampleUnstyledGrid flow="dense">
+      </Example>
+      <Example flow="dense">
         <UnstyledBox variant="light">DENSE #1</UnstyledBox>
         <UnstyledBox variant="light">DENSE #2</UnstyledBox>
         <UnstyledBox variant="light">DENSE #3</UnstyledBox>
-      </ExampleUnstyledGrid>
-      <ExampleUnstyledGrid flow="row-dense">
+      </Example>
+      <Example flow="row-dense">
         <UnstyledBox variant="light">ROW-DENSE #1</UnstyledBox>
         <UnstyledBox variant="light">ROW-DENSE #2</UnstyledBox>
         <UnstyledBox variant="light">ROW-DENSE #3</UnstyledBox>
-      </ExampleUnstyledGrid>
-      <ExampleUnstyledGrid flow="col-dense">
+      </Example>
+      <Example flow="col-dense">
         <UnstyledBox variant="light">COL-DENSE #1</UnstyledBox>
         <UnstyledBox variant="light">COL-DENSE #2</UnstyledBox>
         <UnstyledBox variant="light">COL-DENSE #3</UnstyledBox>
-      </ExampleUnstyledGrid>
+      </Example>
     </ExampleCard>
   </ExampleSection>
 );

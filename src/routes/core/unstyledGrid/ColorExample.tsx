@@ -1,18 +1,18 @@
 import { ExampleCard } from '../../../components/ExampleCard';
 import { ExampleSection } from '../../../components/ExampleSection';
-import { ExampleUnstyledGrid } from './ExampleUnstyledGrid';
+import { Example } from './Example';
 
 export const ColorExample = () => (
   <ExampleSection title="Color">
     <ExampleCard>
-      <ExampleUnstyledGrid color="surface">SURFACE</ExampleUnstyledGrid>
-      <ExampleUnstyledGrid color="neutral">NEUTRAL</ExampleUnstyledGrid>
-      <ExampleUnstyledGrid color="primary">PRIMARY</ExampleUnstyledGrid>
-      <ExampleUnstyledGrid color="secondary">SECONDARY</ExampleUnstyledGrid>
-      <ExampleUnstyledGrid color="tertiary">TERTIARY</ExampleUnstyledGrid>
-      <ExampleUnstyledGrid color="success">SUCCESS</ExampleUnstyledGrid>
-      <ExampleUnstyledGrid color="warning">WARNING</ExampleUnstyledGrid>
-      <ExampleUnstyledGrid color="error">ERROR</ExampleUnstyledGrid>
+      <Example color="surface">SURFACE</Example>
+      <Example color="neutral">NEUTRAL</Example>
+      <Example color="primary">PRIMARY</Example>
+      <Example color="secondary">SECONDARY</Example>
+      <Example color="tertiary">TERTIARY</Example>
+      <Example color="success">SUCCESS</Example>
+      <Example color="warning">WARNING</Example>
+      <Example color="error">ERROR</Example>
     </ExampleCard>
   </ExampleSection>
 );

@@ -1,18 +1,18 @@
 import { ExampleCard } from '../../../components/ExampleCard';
 import { ExampleSection } from '../../../components/ExampleSection';
-import { ExampleUnstyledGrid } from './ExampleUnstyledGrid';
+import { Example } from './Example';
 
 export const RadiusExample = () => (
   <ExampleSection title="Radius">
     <ExampleCard>
-      <ExampleUnstyledGrid radius="none">NONE</ExampleUnstyledGrid>
-      <ExampleUnstyledGrid radius="xs">XS</ExampleUnstyledGrid>
-      <ExampleUnstyledGrid radius="sm">SM</ExampleUnstyledGrid>
-      <ExampleUnstyledGrid radius="md">MD</ExampleUnstyledGrid>
-      <ExampleUnstyledGrid radius="lg">LG</ExampleUnstyledGrid>
-      <ExampleUnstyledGrid radius="xl">XL</ExampleUnstyledGrid>
-      <ExampleUnstyledGrid radius="xxl">XXL</ExampleUnstyledGrid>
-      <ExampleUnstyledGrid radius="full">FULL</ExampleUnstyledGrid>
+      <Example radius="none">NONE</Example>
+      <Example radius="xs">XS</Example>
+      <Example radius="sm">SM</Example>
+      <Example radius="md">MD</Example>
+      <Example radius="lg">LG</Example>
+      <Example radius="xl">XL</Example>
+      <Example radius="xxl">XXL</Example>
+      <Example radius="full">FULL</Example>
     </ExampleCard>
   </ExampleSection>
 );

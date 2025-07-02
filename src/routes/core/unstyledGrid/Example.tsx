@@ -5,7 +5,7 @@ type Props = {
   clear?: boolean;
 } & UnstyledGridProps<'div'>;
 
-export const ExampleUnstyledGrid = ({
+export const Example = ({
   clear,
   children = 'UNSTYLED-GRID',
   ...restProps

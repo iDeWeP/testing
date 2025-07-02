@@ -1,18 +1,18 @@
 import { ExampleCard } from '../../../components/ExampleCard';
 import { ExampleSection } from '../../../components/ExampleSection';
-import { ExampleUnstyledGrid } from './ExampleUnstyledGrid';
+import { Example } from './Example';
 
 export const BorderExample = () => (
   <ExampleSection title="Border">
     <ExampleCard>
-      <ExampleUnstyledGrid border={false}>FALSE</ExampleUnstyledGrid>
-      <ExampleUnstyledGrid border="all">ALL</ExampleUnstyledGrid>
-      <ExampleUnstyledGrid border="x">X</ExampleUnstyledGrid>
-      <ExampleUnstyledGrid border="y">Y</ExampleUnstyledGrid>
-      <ExampleUnstyledGrid border="top">TOP</ExampleUnstyledGrid>
-      <ExampleUnstyledGrid border="bottom">BOTTOM</ExampleUnstyledGrid>
-      <ExampleUnstyledGrid border="left">LEFT</ExampleUnstyledGrid>
-      <ExampleUnstyledGrid border="right">RIGHT</ExampleUnstyledGrid>
+      <Example border={false}>FALSE</Example>
+      <Example border="all">ALL</Example>
+      <Example border="x">X</Example>
+      <Example border="y">Y</Example>
+      <Example border="top">TOP</Example>
+      <Example border="bottom">BOTTOM</Example>
+      <Example border="left">LEFT</Example>
+      <Example border="right">RIGHT</Example>
     </ExampleCard>
   </ExampleSection>
 );
