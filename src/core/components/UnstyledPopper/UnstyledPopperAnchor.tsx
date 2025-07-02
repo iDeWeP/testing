@@ -4,7 +4,6 @@ import {
   type ElementType,
   type MouseEvent,
   type ReactElement,
-  type Ref,
   type RefObject
 } from 'react';
 import { combineHandlers } from '../../../utils/utils/combine-handlers/combine-handlers';
@@ -38,24 +37,24 @@ export const UnstyledPopperAnchor = ({
   const { clickOpen, clickClose, hoverOpen, hoverClose } = getTriggers(trigger);
 
   const handleClick = combineHandlers(
-    children?.props.onClick,
+    children.props.onClick,
     clickOpen && !open && onOpen,
     clickClose && open && onClose,
     clickOpen && followCursor && !open && onCursorMove
   );
 
   const handleMouseEnter = combineHandlers(
-    children?.props.onMouseEnter,
+    children.props.onMouseEnter,
     hoverOpen && !open && onOpen
   );
 
   const handleMouseLeave = combineHandlers(
-    children?.props.onMouseLeave,
+    children.props.onMouseLeave,
     hoverClose && open && onClose
   );
 
   const handleMouseMove = combineHandlers(
-    children?.props.onMouseMove,
+    children.props.onMouseMove,
     followCursor && !isExited && onCursorMove
   );
 
@@ -64,9 +63,6 @@ export const UnstyledPopperAnchor = ({
     onMouseEnter: handleMouseEnter,
     onMouseLeave: handleMouseLeave,
     onMouseMove: handleMouseMove,
-    ref: mergeRefs(
-      forwardedRef,
-      (children as ReactElement & { ref?: Ref<HTMLElement> }).ref
-    )
+    ref: mergeRefs(children.props.ref, forwardedRef)
   });
 };
