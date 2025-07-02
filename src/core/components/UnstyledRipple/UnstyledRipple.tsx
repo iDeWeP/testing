@@ -5,8 +5,8 @@ import { unstyledRippleConfig } from './unstyledRippleConfig';
 
 export const UnstyledRipple = (props: UnstyledRippleProps) => {
   const {
-    valid,
-    invalid,
+    valid = false,
+    invalid = false,
     stateful,
     variant,
     color,

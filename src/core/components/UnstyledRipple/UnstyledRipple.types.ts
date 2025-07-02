@@ -6,9 +6,12 @@ import type {
   ComponentRefProps
 } from '../../types';
 
-export type UnstyledRippleDefaultProps = {
+type OptionalProps = {
   valid?: boolean;
   invalid?: boolean;
+};
+
+export type UnstyledRippleDefaultProps = {
   stateful?: boolean;
   variant?: Variant;
   color?: Color;
@@ -19,5 +22,5 @@ export type UnstyledRippleConfigProps = UnstyledRippleDefaultProps;
 
 export type UnstyledRippleProps = MergeProps<
   ComponentRefProps<'span'>,
-  UnstyledRippleDefaultProps
+  UnstyledRippleDefaultProps & OptionalProps
 >;

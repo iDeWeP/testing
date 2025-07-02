@@ -16,8 +16,6 @@ type Styles = {
 export const unstyledRippleConfig: ComponentConfig<UnstyledRippleConfigProps> &
   Styles = {
   props: {
-    valid: false,
-    invalid: false,
     stateful: false,
     variant: 'none',
     color: 'neutral',
