@@ -18,10 +18,8 @@ export const unstyledPopperConfig: ComponentConfig<UnstyledPopperConfigProps> &
   Styles = {
   props: {
     as: 'div',
-    defaultOpen: false,
+    open: false,
     collision: 'none',
-    trigger: 'none',
-    followCursor: false,
     closeOnOutClick: false,
     closeOnEsc: false,
     focusOnOpen: false,
@@ -37,7 +35,6 @@ export const unstyledPopperConfig: ComponentConfig<UnstyledPopperConfigProps> &
     portalEl: null,
     transitionProps: {},
     componentProps: {},
-    anchor: null,
     arrow: false,
     backdrop: false,
     direction: 'row',

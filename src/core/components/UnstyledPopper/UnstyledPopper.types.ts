@@ -1,17 +1,12 @@
-import type {
-  RefObject,
-  ReactElement,
-  ComponentPropsWithRef,
-  ElementType
-} from 'react';
+import type { RefObject, ElementType } from 'react';
 import type {
   ArrowOffset,
   SVGNodeProps,
   ComponentRefProps,
   TransitionProps,
+  Cursor,
   Placement,
   Collision,
-  Trigger,
   Peak,
   MergeProps
 } from '../../types';
@@ -39,18 +34,15 @@ export type UnstyledPopperComponentsProps = {
 };
 
 type OptionalProps = {
-  anchorRef?: RefObject<HTMLElement | null>;
-  open?: boolean;
-  onOpen?: VoidFunction;
+  anchorRef: RefObject<HTMLElement | null>;
+  followCursor?: Cursor;
   onClose?: VoidFunction;
-  onPlacementChange?: (placement: Placement) => void;
+  onCollision?: (placement: Placement) => void;
 };
 
 export type UnstyledPopperDefaultProps = {
-  defaultOpen?: boolean;
+  open?: boolean;
   collision?: Collision;
-  trigger?: Trigger;
-  followCursor?: boolean;
   closeOnOutClick?: boolean | RefObject<HTMLElement | null>;
   closeOnEsc?: boolean;
   focusOnOpen?: boolean | RefObject<HTMLElement | null>;
@@ -66,7 +58,6 @@ export type UnstyledPopperDefaultProps = {
   portalEl?: Element | null;
   transitionProps?: TransitionProps;
   componentProps?: UnstyledPopperComponentsProps;
-  anchor?: ReactElement<ComponentPropsWithRef<ElementType>> | null;
   arrow?: boolean;
   backdrop?: boolean;
 };
