@@ -6,7 +6,7 @@ export const PortalExample = () => (
   <ExampleSection title="Portal">
     <ExampleCard>
       <ExampleUnstyledPopover portalEl={null}>NULL</ExampleUnstyledPopover>
-      <ExampleUnstyledPopover portalEl={document.getElementById('Popover')}>
+      <ExampleUnstyledPopover portalEl={document.getElementById('popper')}>
         EL
       </ExampleUnstyledPopover>
     </ExampleCard>
