@@ -12,8 +12,8 @@ const placements = {
 export const mergeArrowStyle = (
   placement: DefaultPlacement,
   offset: ArrowOffset,
-  style?: CSSProperties,
-  defaultStyle?: CSSProperties
+  defaultStyle?: CSSProperties,
+  style?: CSSProperties
 ) => {
   const placementStyle: CSSProperties = {};
 
@@ -34,7 +34,7 @@ export const mergeArrowStyle = (
   return {
     transform: placements[placement],
     ...placementStyle,
-    ...style,
-    ...defaultStyle
+    ...defaultStyle,
+    ...style
   };
 };

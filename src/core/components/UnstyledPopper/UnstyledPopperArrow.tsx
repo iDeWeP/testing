@@ -36,7 +36,7 @@ export const UnstyledPopperArrow = ({
 }: Props) => {
   const mergedClassName = mergeClassName(
     'unstyledPopperArrow',
-    mergeClasses(className, children?.props.className),
+    mergeClasses(children?.props.className, className),
     {
       variant,
       defaultPlacement,
@@ -48,8 +48,8 @@ export const UnstyledPopperArrow = ({
   const mergedStyle = mergeArrowStyle(
     defaultPlacement,
     offset,
-    style,
-    children?.props.style
+    children?.props.style,
+    style
   );
 
   if (children) {
