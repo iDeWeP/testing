@@ -61,6 +61,8 @@ export const getCords = (
   const length = isHorizontal ? 'width' : 'height';
 
   return {
+    mainAxis,
+    crossAxis,
     ...getMainAxis(mainAxis, size),
     ...getFlipMainAxis(collision, mainAxis, view, size, overflow),
     ...getCrossAxis(crossAxis, orientation, dimension, size),
