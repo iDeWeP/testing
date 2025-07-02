@@ -2,16 +2,16 @@ import { UnstyledBox } from '../../../core/components/UnstyledBox/UnstyledBox';
 import type { UnstyledBoxProps } from '../../../core/components/UnstyledBox/UnstyledBox.types';
 
 type Props = {
-  light?: boolean;
+  clear?: boolean;
 } & UnstyledBoxProps<'div'>;
 
 export const ExampleUnstyledBox = ({
-  light,
+  clear,
   children = 'UNSTYLED-BOX',
   ...restProps
 }: Props) => (
   <UnstyledBox
-    variant={light ? 'light' : 'none'}
+    variant={clear ? 'none' : 'light'}
     color="primary"
     {...restProps}
   >

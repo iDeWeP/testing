@@ -5,7 +5,7 @@ import { ExampleUnstyledBox } from './ExampleUnstyledBox';
 export const DefaultExample = () => (
   <ExampleSection title="Default">
     <ExampleCard>
-      <ExampleUnstyledBox />
+      <ExampleUnstyledBox clear />
     </ExampleCard>
   </ExampleSection>
 );

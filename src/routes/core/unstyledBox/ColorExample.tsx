@@ -5,54 +5,14 @@ import { ExampleUnstyledBox } from './ExampleUnstyledBox';
 export const ColorExample = () => (
   <ExampleSection title="Color">
     <ExampleCard>
-      <ExampleUnstyledBox
-        light
-        color="surface"
-      >
-        SURFACE
-      </ExampleUnstyledBox>
-      <ExampleUnstyledBox
-        light
-        color="neutral"
-      >
-        NEUTRAL
-      </ExampleUnstyledBox>
-      <ExampleUnstyledBox
-        light
-        color="primary"
-      >
-        PRIMARY
-      </ExampleUnstyledBox>
-      <ExampleUnstyledBox
-        light
-        color="secondary"
-      >
-        SECONDARY
-      </ExampleUnstyledBox>
-      <ExampleUnstyledBox
-        light
-        color="tertiary"
-      >
-        TERTIARY
-      </ExampleUnstyledBox>
-      <ExampleUnstyledBox
-        light
-        color="success"
-      >
-        SUCCESS
-      </ExampleUnstyledBox>
-      <ExampleUnstyledBox
-        light
-        color="warning"
-      >
-        WARNING
-      </ExampleUnstyledBox>
-      <ExampleUnstyledBox
-        light
-        color="error"
-      >
-        ERROR
-      </ExampleUnstyledBox>
+      <ExampleUnstyledBox color="surface">SURFACE</ExampleUnstyledBox>
+      <ExampleUnstyledBox color="neutral">NEUTRAL</ExampleUnstyledBox>
+      <ExampleUnstyledBox color="primary">PRIMARY</ExampleUnstyledBox>
+      <ExampleUnstyledBox color="secondary">SECONDARY</ExampleUnstyledBox>
+      <ExampleUnstyledBox color="tertiary">TERTIARY</ExampleUnstyledBox>
+      <ExampleUnstyledBox color="success">SUCCESS</ExampleUnstyledBox>
+      <ExampleUnstyledBox color="warning">WARNING</ExampleUnstyledBox>
+      <ExampleUnstyledBox color="error">ERROR</ExampleUnstyledBox>
     </ExampleCard>
   </ExampleSection>
 );

@@ -5,92 +5,22 @@ import { ExampleUnstyledBox } from './ExampleUnstyledBox';
 export const SizeExample = () => (
   <ExampleSection title="Size">
     <ExampleCard>
-      <ExampleUnstyledBox
-        light
-        size="none"
-      >
-        NONE
-      </ExampleUnstyledBox>
-      <ExampleUnstyledBox
-        light
-        size="xs"
-      >
-        XS
-      </ExampleUnstyledBox>
-      <ExampleUnstyledBox
-        light
-        size="sm"
-      >
-        SM
-      </ExampleUnstyledBox>
-      <ExampleUnstyledBox
-        light
-        size="md"
-      >
-        MD
-      </ExampleUnstyledBox>
-      <ExampleUnstyledBox
-        light
-        size="lg"
-      >
-        LG
-      </ExampleUnstyledBox>
-      <ExampleUnstyledBox
-        light
-        size="xl"
-      >
-        XL
-      </ExampleUnstyledBox>
-      <ExampleUnstyledBox
-        light
-        size="xxl"
-      >
-        XXL
-      </ExampleUnstyledBox>
+      <ExampleUnstyledBox size="none">NONE</ExampleUnstyledBox>
+      <ExampleUnstyledBox size="xs">XS</ExampleUnstyledBox>
+      <ExampleUnstyledBox size="sm">SM</ExampleUnstyledBox>
+      <ExampleUnstyledBox size="md">MD</ExampleUnstyledBox>
+      <ExampleUnstyledBox size="lg">LG</ExampleUnstyledBox>
+      <ExampleUnstyledBox size="xl">XL</ExampleUnstyledBox>
+      <ExampleUnstyledBox size="xxl">XXL</ExampleUnstyledBox>
     </ExampleCard>
     <ExampleCard>
-      <ExampleUnstyledBox
-        light
-        size="none"
-      >
-        NONE
-      </ExampleUnstyledBox>
-      <ExampleUnstyledBox
-        light
-        size="xs-xs"
-      >
-        XS-XS
-      </ExampleUnstyledBox>
-      <ExampleUnstyledBox
-        light
-        size="sm-sm"
-      >
-        SM-SM
-      </ExampleUnstyledBox>
-      <ExampleUnstyledBox
-        light
-        size="md-md"
-      >
-        MD-MD
-      </ExampleUnstyledBox>
-      <ExampleUnstyledBox
-        light
-        size="lg-lg"
-      >
-        LG-LG
-      </ExampleUnstyledBox>
-      <ExampleUnstyledBox
-        light
-        size="xl-xl"
-      >
-        XL-XL
-      </ExampleUnstyledBox>
-      <ExampleUnstyledBox
-        light
-        size="xxl-xxl"
-      >
-        XXL-XXL
-      </ExampleUnstyledBox>
+      <ExampleUnstyledBox size="none">NONE</ExampleUnstyledBox>
+      <ExampleUnstyledBox size="xs-xs">XS-XS</ExampleUnstyledBox>
+      <ExampleUnstyledBox size="sm-sm">SM-SM</ExampleUnstyledBox>
+      <ExampleUnstyledBox size="md-md">MD-MD</ExampleUnstyledBox>
+      <ExampleUnstyledBox size="lg-lg">LG-LG</ExampleUnstyledBox>
+      <ExampleUnstyledBox size="xl-xl">XL-XL</ExampleUnstyledBox>
+      <ExampleUnstyledBox size="xxl-xxl">XXL-XXL</ExampleUnstyledBox>
     </ExampleCard>
   </ExampleSection>
 );
