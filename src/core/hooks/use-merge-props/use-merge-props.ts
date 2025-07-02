@@ -6,7 +6,6 @@ import {
 import { ConfigContext } from '../../contexts/config/config';
 import type { CoreComponentsConfig } from '../../contexts/config/config.types';
 import { mergeClasses } from '../../utils/merge-class-name/merge-classes';
-import { useTheme } from '../use-theme/use-theme';
 
 export const useMergeProps = <
   E extends ElementType,
@@ -18,10 +17,8 @@ export const useMergeProps = <
   props: P
 ): D & P => {
   const config = useContext(ConfigContext).core?.[component];
-  const theme = useTheme();
 
   return {
-    theme,
     ...defaultProps,
     ...config?.props,
     ...props,
