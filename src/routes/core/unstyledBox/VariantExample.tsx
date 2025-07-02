@@ -1,52 +1,52 @@
 import { ExampleCard } from '../../../components/ExampleCard';
 import { ExampleSection } from '../../../components/ExampleSection';
-import { ExampleUnstyledBox } from './ExampleUnstyledBox';
+import { Example } from './Example';
 
 export const VariantExample = () => (
   <ExampleSection title="Variant">
     <ExampleCard>
-      <ExampleUnstyledBox variant="none">NONE</ExampleUnstyledBox>
-      <ExampleUnstyledBox variant="text">TEXT</ExampleUnstyledBox>
-      <ExampleUnstyledBox variant="plain">PLAIN</ExampleUnstyledBox>
-      <ExampleUnstyledBox variant="light">LIGHT</ExampleUnstyledBox>
-      <ExampleUnstyledBox variant="surface">SURFACE</ExampleUnstyledBox>
-      <ExampleUnstyledBox variant="solid">SOLID</ExampleUnstyledBox>
-      <ExampleUnstyledBox
+      <Example variant="none">NONE</Example>
+      <Example variant="text">TEXT</Example>
+      <Example variant="plain">PLAIN</Example>
+      <Example variant="light">LIGHT</Example>
+      <Example variant="surface">SURFACE</Example>
+      <Example variant="solid">SOLID</Example>
+      <Example
         variant="none"
         border
       >
         NONE-BORDER
-      </ExampleUnstyledBox>
-      <ExampleUnstyledBox
+      </Example>
+      <Example
         variant="text"
         border
       >
         TEXT-BORDER
-      </ExampleUnstyledBox>
-      <ExampleUnstyledBox
+      </Example>
+      <Example
         variant="plain"
         border
       >
         PLAIN-BORDER
-      </ExampleUnstyledBox>
-      <ExampleUnstyledBox
+      </Example>
+      <Example
         variant="light"
         border
       >
         LIGHT-BORDER
-      </ExampleUnstyledBox>
-      <ExampleUnstyledBox
+      </Example>
+      <Example
         variant="surface"
         border
       >
         SURFACE-BORDER
-      </ExampleUnstyledBox>
-      <ExampleUnstyledBox
+      </Example>
+      <Example
         variant="solid"
         border
       >
         SOLID-BORDER
-      </ExampleUnstyledBox>
+      </Example>
     </ExampleCard>
   </ExampleSection>
 );

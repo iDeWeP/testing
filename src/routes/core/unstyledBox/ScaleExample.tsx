@@ -1,13 +1,13 @@
 import { ExampleCard } from '../../../components/ExampleCard';
 import { ExampleSection } from '../../../components/ExampleSection';
-import { ExampleUnstyledBox } from './ExampleUnstyledBox';
+import { Example } from './Example';
 
 export const ScaleExample = () => (
   <ExampleSection title="Scale">
     <ExampleCard>
-      <ExampleUnstyledBox scale="normal">NORMAL</ExampleUnstyledBox>
-      <ExampleUnstyledBox scale="fit">FIT</ExampleUnstyledBox>
-      <ExampleUnstyledBox scale="full">FULL</ExampleUnstyledBox>
+      <Example scale="normal">NORMAL</Example>
+      <Example scale="fit">FIT</Example>
+      <Example scale="full">FULL</Example>
     </ExampleCard>
   </ExampleSection>
 );

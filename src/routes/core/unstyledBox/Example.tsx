@@ -5,7 +5,7 @@ type Props = {
   clear?: boolean;
 } & UnstyledBoxProps<'div'>;
 
-export const ExampleUnstyledBox = ({
+export const Example = ({
   clear,
   children = 'UNSTYLED-BOX',
   ...restProps
