@@ -1,5 +1,4 @@
 import { ExampleTitle } from '../../../components/ExampleTitle';
-import { WrapExample } from '../unstyledFlex/WrapExample';
 import { AlignExample } from './AlignExample';
 import { BorderExample } from './BorderExample';
 import { ColorExample } from './ColorExample';
@@ -18,7 +17,6 @@ const Page = () => (
     <ExampleTitle>UnstyledPaper</ExampleTitle>
     <DefaultExample />
     <OrientationExample />
-    <WrapExample />
     <JustifyExample />
     <AlignExample />
     <GapExample />
