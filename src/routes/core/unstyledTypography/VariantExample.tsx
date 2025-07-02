@@ -1,60 +1,52 @@
 import { ExampleCard } from '../../../components/ExampleCard';
 import { ExampleSection } from '../../../components/ExampleSection';
-import { ExampleUnstyledTypography } from './ExampleUnstyledTypography';
+import { Example } from './Example';
 
 export const VariantExample = () => (
   <ExampleSection title="Variant">
     <ExampleCard>
-      <ExampleUnstyledTypography variant="none">NONE</ExampleUnstyledTypography>
-      <ExampleUnstyledTypography variant="text">TEXT</ExampleUnstyledTypography>
-      <ExampleUnstyledTypography variant="plain">
-        PLAIN
-      </ExampleUnstyledTypography>
-      <ExampleUnstyledTypography variant="light">
-        LIGHT
-      </ExampleUnstyledTypography>
-      <ExampleUnstyledTypography variant="surface">
-        SURFACE
-      </ExampleUnstyledTypography>
-      <ExampleUnstyledTypography variant="solid">
-        SOLID
-      </ExampleUnstyledTypography>
-      <ExampleUnstyledTypography
+      <Example variant="none">NONE</Example>
+      <Example variant="text">TEXT</Example>
+      <Example variant="plain">PLAIN</Example>
+      <Example variant="light">LIGHT</Example>
+      <Example variant="surface">SURFACE</Example>
+      <Example variant="solid">SOLID</Example>
+      <Example
         variant="none"
         border
       >
         NONE-BORDER
-      </ExampleUnstyledTypography>
-      <ExampleUnstyledTypography
+      </Example>
+      <Example
         variant="text"
         border
       >
         TEXT-BORDER
-      </ExampleUnstyledTypography>
-      <ExampleUnstyledTypography
+      </Example>
+      <Example
         variant="plain"
         border
       >
         PLAIN-BORDER
-      </ExampleUnstyledTypography>
-      <ExampleUnstyledTypography
+      </Example>
+      <Example
         variant="light"
         border
       >
         LIGHT-BORDER
-      </ExampleUnstyledTypography>
-      <ExampleUnstyledTypography
+      </Example>
+      <Example
         variant="surface"
         border
       >
         SURFACE-BORDER
-      </ExampleUnstyledTypography>
-      <ExampleUnstyledTypography
+      </Example>
+      <Example
         variant="solid"
         border
       >
         SOLID-BORDER
-      </ExampleUnstyledTypography>
+      </Example>
     </ExampleCard>
   </ExampleSection>
 );

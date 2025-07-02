@@ -5,7 +5,7 @@ type Props = {
   clear?: boolean;
 } & UnstyledTypographyProps<'div'>;
 
-export const ExampleUnstyledTypography = ({
+export const Example = ({
   clear,
   children = 'UNSTYLED-TYPOGRAPHY',
   ...restProps

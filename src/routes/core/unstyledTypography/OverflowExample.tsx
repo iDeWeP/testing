@@ -1,22 +1,22 @@
 import { ExampleCard } from '../../../components/ExampleCard';
 import { ExampleSection } from '../../../components/ExampleSection';
-import { ExampleUnstyledTypography } from './ExampleUnstyledTypography';
+import { Example } from './Example';
 
 export const OverflowExample = () => (
   <ExampleSection title="Overflow">
     <ExampleCard>
-      <ExampleUnstyledTypography overflow="clip">
+      <Example overflow="clip">
         CLIP CLIP CLIP CLIP CLIP CLIP CLIP CLIP CLIP CLIP CLIP CLIP CLIP CLIP
         CLIP
-      </ExampleUnstyledTypography>
-      <ExampleUnstyledTypography overflow="truncate">
+      </Example>
+      <Example overflow="truncate">
         TRUNCATE TRUNCATE TRUNCATE TRUNCATE TRUNCATE TRUNCATE TRUNCATE TRUNCATE
         TRUNCATE TRUNCATE TRUNCATE TRUNCATE TRUNCATE TRUNCATE TRUNCATE
-      </ExampleUnstyledTypography>
-      <ExampleUnstyledTypography overflow="ellipsis">
+      </Example>
+      <Example overflow="ellipsis">
         ELLIPSIS ELLIPSIS ELLIPSIS ELLIPSIS ELLIPSIS ELLIPSIS ELLIPSIS ELLIPSIS
         ELLIPSIS ELLIPSIS ELLIPSIS ELLIPSIS ELLIPSIS ELLIPSIS ELLIPSIS
-      </ExampleUnstyledTypography>
+      </Example>
     </ExampleCard>
   </ExampleSection>
 );

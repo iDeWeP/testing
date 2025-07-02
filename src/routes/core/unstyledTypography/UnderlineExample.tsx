@@ -1,22 +1,14 @@
 import { ExampleCard } from '../../../components/ExampleCard';
 import { ExampleSection } from '../../../components/ExampleSection';
-import { ExampleUnstyledTypography } from './ExampleUnstyledTypography';
+import { Example } from './Example';
 
 export const UnderlineExample = () => (
   <ExampleSection title="Underline">
     <ExampleCard>
-      <ExampleUnstyledTypography underline="normal">
-        NORMAL
-      </ExampleUnstyledTypography>
-      <ExampleUnstyledTypography underline="none">
-        NONE
-      </ExampleUnstyledTypography>
-      <ExampleUnstyledTypography underline="hover">
-        HOVER
-      </ExampleUnstyledTypography>
-      <ExampleUnstyledTypography underline="always">
-        ALWAYS
-      </ExampleUnstyledTypography>
+      <Example underline="normal">NORMAL</Example>
+      <Example underline="none">NONE</Example>
+      <Example underline="hover">HOVER</Example>
+      <Example underline="always">ALWAYS</Example>
     </ExampleCard>
   </ExampleSection>
 );

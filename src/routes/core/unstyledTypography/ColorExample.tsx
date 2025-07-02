@@ -1,32 +1,18 @@
 import { ExampleCard } from '../../../components/ExampleCard';
 import { ExampleSection } from '../../../components/ExampleSection';
-import { ExampleUnstyledTypography } from './ExampleUnstyledTypography';
+import { Example } from './Example';
 
 export const ColorExample = () => (
   <ExampleSection title="Color">
     <ExampleCard>
-      <ExampleUnstyledTypography color="surface">
-        SURFACE
-      </ExampleUnstyledTypography>
-      <ExampleUnstyledTypography color="neutral">
-        NEUTRAL
-      </ExampleUnstyledTypography>
-      <ExampleUnstyledTypography color="primary">
-        PRIMARY
-      </ExampleUnstyledTypography>
-      <ExampleUnstyledTypography color="secondary">
-        SECONDARY
-      </ExampleUnstyledTypography>
-      <ExampleUnstyledTypography color="tertiary">
-        TERTIARY
-      </ExampleUnstyledTypography>
-      <ExampleUnstyledTypography color="success">
-        SUCCESS
-      </ExampleUnstyledTypography>
-      <ExampleUnstyledTypography color="warning">
-        WARNING
-      </ExampleUnstyledTypography>
-      <ExampleUnstyledTypography color="error">ERROR</ExampleUnstyledTypography>
+      <Example color="surface">SURFACE</Example>
+      <Example color="neutral">NEUTRAL</Example>
+      <Example color="primary">PRIMARY</Example>
+      <Example color="secondary">SECONDARY</Example>
+      <Example color="tertiary">TERTIARY</Example>
+      <Example color="success">SUCCESS</Example>
+      <Example color="warning">WARNING</Example>
+      <Example color="error">ERROR</Example>
     </ExampleCard>
   </ExampleSection>
 );
