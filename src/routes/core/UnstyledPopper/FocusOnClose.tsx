@@ -11,7 +11,6 @@ export const FocusOnCloseExample = () => {
     <ExampleSection title="Focus on close">
       <ExampleCard>
         <ExampleUnstyledPopper
-          clear
           focusOnClose={false}
           closeOnEsc
           label="false"
@@ -21,7 +20,6 @@ export const FocusOnCloseExample = () => {
           <UnstyledButton variant="solid">#3 FALSE</UnstyledButton>
         </ExampleUnstyledPopper>
         <ExampleUnstyledPopper
-          clear
           focusOnClose
           closeOnEsc
           label="true"
@@ -31,7 +29,6 @@ export const FocusOnCloseExample = () => {
           <UnstyledButton variant="solid">#3 TRUE</UnstyledButton>
         </ExampleUnstyledPopper>
         <ExampleUnstyledPopper
-          clear
           focusOnClose={ref}
           closeOnEsc
           label="ref"

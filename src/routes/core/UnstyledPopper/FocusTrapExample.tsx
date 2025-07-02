@@ -7,7 +7,6 @@ export const FocusTrapExample = () => (
   <ExampleSection title="Focus trap">
     <ExampleCard>
       <ExampleUnstyledPopper
-        clear
         focusTrap={false}
         label="false"
       >
@@ -16,7 +15,6 @@ export const FocusTrapExample = () => (
         <UnstyledButton variant="solid">#3 FALSE</UnstyledButton>
       </ExampleUnstyledPopper>
       <ExampleUnstyledPopper
-        clear
         focusTrap
         label="true"
       >

@@ -6,18 +6,12 @@ import { ExampleUnstyledPopper } from './ExampleUnstyledPopper';
 export const OrientationExample = () => (
   <ExampleSection title="Orientation">
     <ExampleCard>
-      <ExampleUnstyledPopper
-        clear
-        orientation="horizontal"
-      >
+      <ExampleUnstyledPopper orientation="horizontal">
         <UnstyledBox variant="light">HORIZONTAL #1</UnstyledBox>
         <UnstyledBox variant="light">HORIZONTAL #2</UnstyledBox>
         <UnstyledBox variant="light">HORIZONTAL #3</UnstyledBox>
       </ExampleUnstyledPopper>
-      <ExampleUnstyledPopper
-        clear
-        orientation="vertical"
-      >
+      <ExampleUnstyledPopper orientation="vertical">
         <UnstyledBox variant="light">VERTICAL #1</UnstyledBox>
         <UnstyledBox variant="light">VERTICAL #2</UnstyledBox>
         <UnstyledBox variant="light">VERTICAL #3</UnstyledBox>
