@@ -12,19 +12,22 @@ export const styleTransition = (
 
   const enterDuration = transitionProps?.enterDuration ?? duration;
   const exitDuration = transitionProps?.exitDuration ?? duration;
-
-  if (isIn && enterDuration > 0) {
-    style.transitionDuration = `${enterDuration}ms`;
-  } else if (!isIn && exitDuration > 0) {
-    style.transitionDuration = `${exitDuration}ms`;
-  }
-
   const enterDelay = transitionProps?.enterDelay ?? 0;
   const exitDelay = transitionProps?.exitDelay ?? 0;
 
+  if (isIn && enterDuration > 0) {
+    style.transitionDuration = `${enterDuration}ms`;
+  }
+
+  if (!isIn && exitDuration > 0) {
+    style.transitionDuration = `${exitDuration}ms`;
+  }
+
   if (isIn && enterDelay > 0) {
     style.transitionDelay = `${enterDelay}ms`;
-  } else if (!isIn && exitDelay > 0) {
+  }
+
+  if (!isIn && exitDelay > 0) {
     style.transitionDelay = `${exitDelay}ms`;
   }
 

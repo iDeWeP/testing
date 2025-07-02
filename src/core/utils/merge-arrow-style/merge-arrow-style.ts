@@ -20,13 +20,19 @@ export const mergeArrowStyle = (
   if (placement === 'top') {
     placementStyle.bottom = getOffset(offset[1]);
     placementStyle.left = getOffset(offset[0]);
-  } else if (placement === 'bottom') {
+  }
+
+  if (placement === 'bottom') {
     placementStyle.top = getOffset(offset[1]);
     placementStyle.left = getOffset(offset[0]);
-  } else if (placement === 'left') {
+  }
+
+  if (placement === 'left') {
     placementStyle.top = getOffset(offset[0]);
     placementStyle.right = getOffset(offset[1]);
-  } else if (placement === 'right') {
+  }
+
+  if (placement === 'right') {
     placementStyle.top = getOffset(offset[0]);
     placementStyle.left = getOffset(offset[1]);
   }

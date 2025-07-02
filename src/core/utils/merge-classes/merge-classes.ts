@@ -1,2 +1,2 @@
-export const mergeClasses = (className?: string, defaultClassName?: string) =>
-  `${className ? className : ''} ${defaultClassName ? defaultClassName : ''}`;
+export const mergeClasses = (defaultClassName?: string, className?: string) =>
+  `${defaultClassName ? defaultClassName : ''} ${className ? className : ''}`;
