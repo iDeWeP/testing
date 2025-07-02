@@ -5,54 +5,28 @@ import { ExampleUnstyledTypography } from './ExampleUnstyledTypography';
 export const ColorExample = () => (
   <ExampleSection title="Color">
     <ExampleCard>
-      <ExampleUnstyledTypography
-        light
-        color="surface"
-      >
+      <ExampleUnstyledTypography color="surface">
         SURFACE
       </ExampleUnstyledTypography>
-      <ExampleUnstyledTypography
-        light
-        color="neutral"
-      >
+      <ExampleUnstyledTypography color="neutral">
         NEUTRAL
       </ExampleUnstyledTypography>
-      <ExampleUnstyledTypography
-        light
-        color="primary"
-      >
+      <ExampleUnstyledTypography color="primary">
         PRIMARY
       </ExampleUnstyledTypography>
-      <ExampleUnstyledTypography
-        light
-        color="secondary"
-      >
+      <ExampleUnstyledTypography color="secondary">
         SECONDARY
       </ExampleUnstyledTypography>
-      <ExampleUnstyledTypography
-        light
-        color="tertiary"
-      >
+      <ExampleUnstyledTypography color="tertiary">
         TERTIARY
       </ExampleUnstyledTypography>
-      <ExampleUnstyledTypography
-        light
-        color="success"
-      >
+      <ExampleUnstyledTypography color="success">
         SUCCESS
       </ExampleUnstyledTypography>
-      <ExampleUnstyledTypography
-        light
-        color="warning"
-      >
+      <ExampleUnstyledTypography color="warning">
         WARNING
       </ExampleUnstyledTypography>
-      <ExampleUnstyledTypography
-        light
-        color="error"
-      >
-        ERROR
-      </ExampleUnstyledTypography>
+      <ExampleUnstyledTypography color="error">ERROR</ExampleUnstyledTypography>
     </ExampleCard>
   </ExampleSection>
 );

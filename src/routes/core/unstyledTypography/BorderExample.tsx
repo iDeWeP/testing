@@ -5,52 +5,18 @@ import { ExampleUnstyledTypography } from './ExampleUnstyledTypography';
 export const BorderExample = () => (
   <ExampleSection title="Border">
     <ExampleCard>
-      <ExampleUnstyledTypography
-        light
-        border={false}
-      >
+      <ExampleUnstyledTypography border={false}>
         FALSE
       </ExampleUnstyledTypography>
-      <ExampleUnstyledTypography
-        light
-        border="all"
-      >
-        ALL
-      </ExampleUnstyledTypography>
-      <ExampleUnstyledTypography
-        light
-        border="x"
-      >
-        X
-      </ExampleUnstyledTypography>
-      <ExampleUnstyledTypography
-        light
-        border="y"
-      >
-        Y
-      </ExampleUnstyledTypography>
-      <ExampleUnstyledTypography
-        light
-        border="top"
-      >
-        TOP
-      </ExampleUnstyledTypography>
-      <ExampleUnstyledTypography
-        light
-        border="bottom"
-      >
+      <ExampleUnstyledTypography border="all">ALL</ExampleUnstyledTypography>
+      <ExampleUnstyledTypography border="x">X</ExampleUnstyledTypography>
+      <ExampleUnstyledTypography border="y">Y</ExampleUnstyledTypography>
+      <ExampleUnstyledTypography border="top">TOP</ExampleUnstyledTypography>
+      <ExampleUnstyledTypography border="bottom">
         BOTTOM
       </ExampleUnstyledTypography>
-      <ExampleUnstyledTypography
-        light
-        border="left"
-      >
-        LEFT
-      </ExampleUnstyledTypography>
-      <ExampleUnstyledTypography
-        light
-        border="right"
-      >
+      <ExampleUnstyledTypography border="left">LEFT</ExampleUnstyledTypography>
+      <ExampleUnstyledTypography border="right">
         RIGHT
       </ExampleUnstyledTypography>
     </ExampleCard>
