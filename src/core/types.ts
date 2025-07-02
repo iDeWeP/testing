@@ -321,14 +321,14 @@ export type TransitionProps = {
 };
 
 export type Classes = {
-  focused?: boolean;
-  shifted?: boolean;
   valid?: boolean;
   invalid?: boolean;
+  focused?: boolean;
+  shifted?: boolean;
   loading?: Loading;
+  disabled?: boolean;
   spin?: boolean;
   stateful?: boolean;
-  disabled?: boolean;
   followCursor?: boolean;
   variant?: Variant;
   inputVariant?: InputVariant;
