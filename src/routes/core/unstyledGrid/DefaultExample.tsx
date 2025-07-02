@@ -5,7 +5,7 @@ import { ExampleUnstyledGrid } from './ExampleUnstyledGrid';
 export const DefaultExample = () => (
   <ExampleSection title="Default">
     <ExampleCard>
-      <ExampleUnstyledGrid />
+      <ExampleUnstyledGrid clear />
     </ExampleCard>
   </ExampleSection>
 );
