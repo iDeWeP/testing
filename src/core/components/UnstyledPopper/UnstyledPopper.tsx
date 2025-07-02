@@ -54,8 +54,8 @@ export const UnstyledPopper = <E extends ElementType = 'div'>(
     style,
     onClose,
     onCollision,
-    onTransitionEnd,
     onKeyDown,
+    onTransitionEnd,
     portalEl,
     transitionProps,
     componentProps,
@@ -160,8 +160,8 @@ export const UnstyledPopper = <E extends ElementType = 'div'>(
         color={color}
         className={mergedClassName}
         style={mergedStyles}
-        onTransitionEnd={combineHandlers(onTransitionEnd, stopAnimation)}
         onKeyDown={combineHandlers(onKeyDown, handleEscape)}
+        onTransitionEnd={combineHandlers(onTransitionEnd, stopAnimation)}
         {...restProps}
       >
         {children}
