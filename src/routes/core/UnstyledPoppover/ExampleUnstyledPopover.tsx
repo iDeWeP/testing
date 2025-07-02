@@ -29,6 +29,7 @@ export const ExampleUnstyledPopover = ({
       <UnstyledPopover
         // anchorRef={ref}
         // open={isOpen}
+        trigger="click"
         variant={clear ? 'none' : 'light'}
         color="primary"
         // onClose={handleClose}

@@ -5,9 +5,10 @@ import { ExampleUnstyledPopover } from './ExampleUnstyledPopover';
 export const FollowCursorExample = () => (
   <ExampleSection title="Follow cursor">
     <ExampleCard>
-      <ExampleUnstyledPopover followCursor={{ x: 10, y: 10 }}>
-        10
+      <ExampleUnstyledPopover followCursor={false}>
+        FALSE
       </ExampleUnstyledPopover>
+      <ExampleUnstyledPopover followCursor>TRUE</ExampleUnstyledPopover>
     </ExampleCard>
   </ExampleSection>
 );

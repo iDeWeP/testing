@@ -23,6 +23,7 @@ import { PortalExample } from './PortalExample';
 import { RadiusExample } from './RadiusExample';
 import { ScaleExample } from './ScaleExample';
 import { SizeExample } from './SizeExample';
+import { TriggerExample } from './TriggerExample';
 import { UnmountOnExitExample } from './UnmountOnExitExample';
 import { VariantExample } from './VariantExample';
 import { ZIndexExample } from './ZIndexExample';
@@ -31,8 +32,9 @@ const Page = () => (
   <>
     <ExampleTitle>UnstyledPopover</ExampleTitle>
     <DefaultExample />
-    <CollisionExample />
     <FollowCursorExample />
+    <TriggerExample />
+    <CollisionExample />
     <CloseOnOutClickExample />
     <CloseOnEscExample />
     <FocusOnOpenExample />

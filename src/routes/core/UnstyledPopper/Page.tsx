@@ -31,8 +31,8 @@ const Page = () => (
   <>
     <ExampleTitle>UnstyledPopper</ExampleTitle>
     <DefaultExample />
-    <CollisionExample />
     <FollowCursorExample />
+    <CollisionExample />
     <CloseOnOutClickExample />
     <CloseOnEscExample />
     <FocusOnOpenExample />
