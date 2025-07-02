@@ -17,7 +17,9 @@ const variants = {
 };
 
 export const getVariant = (variant: Variant, isDisabled?: boolean) =>
-  isDisabled ? { ...variants.light } : { ...variants[variant] };
+  isDisabled
+    ? { ...variants[getDisabledVariant(variant)] }
+    : { ...variants[variant] };
 
 export const getRingVariant = (variant: Variant, isDisabled?: boolean) =>
   isDisabled ? 'none' : getVariant(variant).textVariant;
@@ -48,14 +50,28 @@ export const getArrowVariant = (
     ? getVariant(variant).textVariant
     : getVariant(variant).bgVariant;
 
-export const getTrailVariant = (variant: Variant) => {
+export const getTrailVariant = (variant: Variant, disabled?: boolean) => {
+  if (disabled) {
+    return getDisabledVariant(variant);
+  }
+
   if (variant === 'solid') {
     return 'default';
-  } else if (variant === 'light') {
+  }
+
+  if (variant === 'light') {
     return 'light';
-  } else if (variant === 'surface') {
+  }
+
+  if (variant === 'surface') {
     return 'on';
   }
 
   return 'none';
 };
+
+export const hasVariantBg = (variant: Variant) =>
+  variant === 'light' || variant === 'surface' || variant === 'solid';
+
+const getDisabledVariant = (variant: Variant) =>
+  hasVariantBg(variant) ? 'light' : variant;
