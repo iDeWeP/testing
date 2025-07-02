@@ -1,3 +1,4 @@
+import { useRef, useState, useCallback } from 'react';
 import { UnstyledButton } from '../../../core/components/UnstyledButton/UnstyledButton';
 import { UnstyledPopper } from '../../../core/components/UnstyledPopper/UnstyledPopper';
 import type { UnstyledPopperProps } from '../../../core/components/UnstyledPopper/UnstyledPopper.types';
@@ -13,12 +14,12 @@ export const ExampleUnstyledPopper = ({
   children,
   ...restProps
 }: Props) => {
-  /* const anchorRef = useRef<HTMLButtonElement>(null);
+  const ref = useRef<HTMLButtonElement>(null);
 
   const [isOpen, setIsOpen] = useState(false);
 
   const handleClick = useCallback(() => setIsOpen((isOpen) => !isOpen), []);
-  const handleClose = useCallback(() => setIsOpen(false), []); */
+  const handleClose = useCallback(() => setIsOpen(false), []);
 
   const description = label
     ? label.toUpperCase()
@@ -27,24 +28,24 @@ export const ExampleUnstyledPopper = ({
     : 'UNSTYLED-POPPER';
 
   return (
-    <UnstyledPopper
-      // open={isOpen}
-      // onClose={handleClose}
-      // anchorRef={anchorRef}
-      trigger="click"
-      variant={clear ? 'none' : 'light'}
-      color="primary"
-      anchor={
-        <UnstyledButton
-        // onClick={handleClick}
-        // ref={anchorRef}
-        >
-          {`Toggle ${description}`}
-        </UnstyledButton>
-      }
-      {...restProps}
-    >
-      {children ?? 'POPPER'}
-    </UnstyledPopper>
+    <>
+      <UnstyledButton
+        ref={ref}
+        variant="solid"
+        onClick={handleClick}
+      >
+        {`Toggle ${description}`}
+      </UnstyledButton>
+      <UnstyledPopper
+        anchorRef={ref}
+        open={isOpen}
+        variant={clear ? 'none' : 'light'}
+        color="primary"
+        onClose={handleClose}
+        {...restProps}
+      >
+        {children ?? 'POPPER'}
+      </UnstyledPopper>
+    </>
   );
 };
