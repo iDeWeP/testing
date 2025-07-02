@@ -1,4 +1,4 @@
-import type { Color, CSSProps } from '../types';
+import type { Color, CSSProps, Theme } from '../types';
 
 type MergedColor = 'disabled' | Color;
 type GapDirection = 'default' | 'row' | 'col';
@@ -53,13 +53,13 @@ type Generic = {
     textAlign: Styles;
     textOverflow: Styles;
     color: {
-      bg: Record<MergedColor, Styles>;
-      border: Record<MergedColor, Styles>;
-      text: Record<MergedColor, Styles>;
-      fill: Record<MergedColor, Styles>;
-      stroke: Record<MergedColor, Styles>;
-      ring: Record<MergedColor, Styles>;
-      input: Record<Color, Styles>;
+      bg: Record<Theme, Record<MergedColor, Styles>>;
+      border: Record<Theme, Record<MergedColor, Styles>>;
+      text: Record<Theme, Record<MergedColor, Styles>>;
+      fill: Record<Theme, Record<MergedColor, Styles>>;
+      stroke: Record<Theme, Record<MergedColor, Styles>>;
+      ring: Record<Theme, Record<MergedColor, Styles>>;
+      input: Record<Theme, Record<Color, Styles>>;
     };
     direction: Styles;
     flow: Styles;
@@ -1596,674 +1596,1363 @@ export const generic: Generic = {
     },
     color: {
       bg: {
-        disabled: {
-          default: {
-            color: 'bg-disabled-500'
+        light: {
+          disabled: {
+            default: {
+              color: 'bg-disabled-500'
+            },
+            light: {
+              color: 'bg-disabled-300'
+            },
+            on: {
+              color: 'bg-disabled-50'
+            }
           },
-          light: {
-            color: 'bg-disabled-300'
+          surface: {
+            default: {
+              color: 'bg-surface-500'
+            },
+            light: {
+              color: 'bg-surface-300'
+            },
+            on: {
+              color: 'bg-surface-50'
+            }
           },
-          on: {
-            color: 'bg-disabled-50'
+          neutral: {
+            default: {
+              color: 'bg-neutral-500'
+            },
+            light: {
+              color: 'bg-neutral-300'
+            },
+            on: {
+              color: 'bg-neutral-50'
+            }
+          },
+          primary: {
+            default: {
+              color: 'bg-primary-500'
+            },
+            light: {
+              color: 'bg-primary-300'
+            },
+            on: {
+              color: 'bg-primary-50'
+            }
+          },
+          secondary: {
+            default: {
+              color: 'bg-secondary-500'
+            },
+            light: {
+              color: 'bg-secondary-300'
+            },
+            on: {
+              color: 'bg-secondary-50'
+            }
+          },
+          tertiary: {
+            default: {
+              color: 'bg-tertiary-500'
+            },
+            light: {
+              color: 'bg-tertiary-300'
+            },
+            on: {
+              color: 'bg-tertiary-50'
+            }
+          },
+          success: {
+            default: {
+              color: 'bg-success-500'
+            },
+            light: {
+              color: 'bg-success-300'
+            },
+            on: {
+              color: 'bg-success-50'
+            }
+          },
+          warning: {
+            default: {
+              color: 'bg-warning-500'
+            },
+            light: {
+              color: 'bg-warning-300'
+            },
+            on: {
+              color: 'bg-warning-50'
+            }
+          },
+          error: {
+            default: {
+              color: 'bg-error-500'
+            },
+            light: {
+              color: 'bg-error-300'
+            },
+            on: {
+              color: 'bg-error-50'
+            }
           }
         },
-        surface: {
-          default: {
-            color: 'bg-surface-500'
+        dark: {
+          disabled: {
+            default: {
+              color: 'bg-disabled-600'
+            },
+            light: {
+              color: 'bg-disabled-400'
+            },
+            on: {
+              color: 'bg-disabled-100'
+            }
           },
-          light: {
-            color: 'bg-surface-300'
+          surface: {
+            default: {
+              color: 'bg-surface-600'
+            },
+            light: {
+              color: 'bg-surface-400'
+            },
+            on: {
+              color: 'bg-surface-100'
+            }
           },
-          on: {
-            color: 'bg-surface-50'
-          }
-        },
-        neutral: {
-          default: {
-            color: 'bg-neutral-500'
+          neutral: {
+            default: {
+              color: 'bg-neutral-600'
+            },
+            light: {
+              color: 'bg-neutral-400'
+            },
+            on: {
+              color: 'bg-neutral-100'
+            }
           },
-          light: {
-            color: 'bg-neutral-300'
+          primary: {
+            default: {
+              color: 'bg-primary-600'
+            },
+            light: {
+              color: 'bg-primary-400'
+            },
+            on: {
+              color: 'bg-primary-100'
+            }
           },
-          on: {
-            color: 'bg-neutral-50'
-          }
-        },
-        primary: {
-          default: {
-            color: 'bg-primary-500'
+          secondary: {
+            default: {
+              color: 'bg-secondary-600'
+            },
+            light: {
+              color: 'bg-secondary-400'
+            },
+            on: {
+              color: 'bg-secondary-100'
+            }
           },
-          light: {
-            color: 'bg-primary-300'
+          tertiary: {
+            default: {
+              color: 'bg-tertiary-600'
+            },
+            light: {
+              color: 'bg-tertiary-400'
+            },
+            on: {
+              color: 'bg-tertiary-100'
+            }
           },
-          on: {
-            color: 'bg-primary-50'
-          }
-        },
-        secondary: {
-          default: {
-            color: 'bg-secondary-500'
+          success: {
+            default: {
+              color: 'bg-success-600'
+            },
+            light: {
+              color: 'bg-success-400'
+            },
+            on: {
+              color: 'bg-success-100'
+            }
           },
-          light: {
-            color: 'bg-secondary-300'
+          warning: {
+            default: {
+              color: 'bg-warning-600'
+            },
+            light: {
+              color: 'bg-warning-400'
+            },
+            on: {
+              color: 'bg-warning-100'
+            }
           },
-          on: {
-            color: 'bg-secondary-50'
-          }
-        },
-        tertiary: {
-          default: {
-            color: 'bg-tertiary-500'
-          },
-          light: {
-            color: 'bg-tertiary-300'
-          },
-          on: {
-            color: 'bg-tertiary-50'
-          }
-        },
-        success: {
-          default: {
-            color: 'bg-success-500'
-          },
-          light: {
-            color: 'bg-success-300'
-          },
-          on: {
-            color: 'bg-success-50'
-          }
-        },
-        warning: {
-          default: {
-            color: 'bg-warning-500'
-          },
-          light: {
-            color: 'bg-warning-300'
-          },
-          on: {
-            color: 'bg-warning-50'
-          }
-        },
-        error: {
-          default: {
-            color: 'bg-error-500'
-          },
-          light: {
-            color: 'bg-error-300'
-          },
-          on: {
-            color: 'bg-error-50'
+          error: {
+            default: {
+              color: 'bg-error-600'
+            },
+            light: {
+              color: 'bg-error-400'
+            },
+            on: {
+              color: 'bg-error-100'
+            }
           }
         }
       },
       border: {
-        disabled: {
-          default: {
-            color: 'border-disabled-500'
+        light: {
+          disabled: {
+            default: {
+              color: 'border-disabled-500'
+            },
+            light: {
+              color: 'border-disabled-300'
+            },
+            on: {
+              color: 'border-disabled-50'
+            }
           },
-          light: {
-            color: 'border-disabled-300'
+          surface: {
+            default: {
+              color: 'border-surface-500'
+            },
+            light: {
+              color: 'border-surface-300'
+            },
+            on: {
+              color: 'border-surface-50'
+            }
           },
-          on: {
-            color: 'border-disabled-50'
+          neutral: {
+            default: {
+              color: 'border-neutral-500'
+            },
+            light: {
+              color: 'border-neutral-300'
+            },
+            on: {
+              color: 'border-neutral-50'
+            }
+          },
+          primary: {
+            default: {
+              color: 'border-primary-500'
+            },
+            light: {
+              color: 'border-primary-300'
+            },
+            on: {
+              color: 'border-primary-50'
+            }
+          },
+          secondary: {
+            default: {
+              color: 'border-secondary-500'
+            },
+            light: {
+              color: 'border-secondary-300'
+            },
+            on: {
+              color: 'border-secondary-50'
+            }
+          },
+          tertiary: {
+            default: {
+              color: 'border-tertiary-500'
+            },
+            light: {
+              color: 'border-tertiary-300'
+            },
+            on: {
+              color: 'border-tertiary-50'
+            }
+          },
+          success: {
+            default: {
+              color: 'border-success-500'
+            },
+            light: {
+              color: 'border-success-300'
+            },
+            on: {
+              color: 'border-success-50'
+            }
+          },
+          warning: {
+            default: {
+              color: 'border-warning-500'
+            },
+            light: {
+              color: 'border-warning-300'
+            },
+            on: {
+              color: 'border-warning-50'
+            }
+          },
+          error: {
+            default: {
+              color: 'border-error-500'
+            },
+            light: {
+              color: 'border-error-300'
+            },
+            on: {
+              color: 'border-error-50'
+            }
           }
         },
-        surface: {
-          default: {
-            color: 'border-surface-500'
+        dark: {
+          disabled: {
+            default: {
+              color: 'border-disabled-600'
+            },
+            light: {
+              color: 'border-disabled-400'
+            },
+            on: {
+              color: 'border-disabled-100'
+            }
           },
-          light: {
-            color: 'border-surface-300'
+          surface: {
+            default: {
+              color: 'border-surface-600'
+            },
+            light: {
+              color: 'border-surface-400'
+            },
+            on: {
+              color: 'border-surface-100'
+            }
           },
-          on: {
-            color: 'border-surface-50'
-          }
-        },
-        neutral: {
-          default: {
-            color: 'border-neutral-500'
+          neutral: {
+            default: {
+              color: 'border-neutral-600'
+            },
+            light: {
+              color: 'border-neutral-400'
+            },
+            on: {
+              color: 'border-neutral-100'
+            }
           },
-          light: {
-            color: 'border-neutral-300'
+          primary: {
+            default: {
+              color: 'border-primary-600'
+            },
+            light: {
+              color: 'border-primary-400'
+            },
+            on: {
+              color: 'border-primary-100'
+            }
           },
-          on: {
-            color: 'border-neutral-50'
-          }
-        },
-        primary: {
-          default: {
-            color: 'border-primary-500'
+          secondary: {
+            default: {
+              color: 'border-secondary-600'
+            },
+            light: {
+              color: 'border-secondary-400'
+            },
+            on: {
+              color: 'border-secondary-100'
+            }
           },
-          light: {
-            color: 'border-primary-300'
+          tertiary: {
+            default: {
+              color: 'border-tertiary-600'
+            },
+            light: {
+              color: 'border-tertiary-400'
+            },
+            on: {
+              color: 'border-tertiary-100'
+            }
           },
-          on: {
-            color: 'border-primary-50'
-          }
-        },
-        secondary: {
-          default: {
-            color: 'border-secondary-500'
+          success: {
+            default: {
+              color: 'border-success-600'
+            },
+            light: {
+              color: 'border-success-400'
+            },
+            on: {
+              color: 'border-success-100'
+            }
           },
-          light: {
-            color: 'border-secondary-300'
+          warning: {
+            default: {
+              color: 'border-warning-600'
+            },
+            light: {
+              color: 'border-warning-400'
+            },
+            on: {
+              color: 'border-warning-100'
+            }
           },
-          on: {
-            color: 'border-secondary-50'
-          }
-        },
-        tertiary: {
-          default: {
-            color: 'border-tertiary-500'
-          },
-          light: {
-            color: 'border-tertiary-300'
-          },
-          on: {
-            color: 'border-tertiary-50'
-          }
-        },
-        success: {
-          default: {
-            color: 'border-success-500'
-          },
-          light: {
-            color: 'border-success-300'
-          },
-          on: {
-            color: 'border-success-50'
-          }
-        },
-        warning: {
-          default: {
-            color: 'border-warning-500'
-          },
-          light: {
-            color: 'border-warning-300'
-          },
-          on: {
-            color: 'border-warning-50'
-          }
-        },
-        error: {
-          default: {
-            color: 'border-error-500'
-          },
-          light: {
-            color: 'border-error-300'
-          },
-          on: {
-            color: 'border-error-50'
+          error: {
+            default: {
+              color: 'border-error-600'
+            },
+            light: {
+              color: 'border-error-400'
+            },
+            on: {
+              color: 'border-error-100'
+            }
           }
         }
       },
       text: {
-        disabled: {
-          default: {
-            color: 'text-disabled-500'
+        light: {
+          disabled: {
+            default: {
+              color: 'text-disabled-500'
+            },
+            light: {
+              color: 'text-disabled-300'
+            },
+            on: {
+              color: 'text-disabled-50'
+            }
           },
-          light: {
-            color: 'text-disabled-300'
+          surface: {
+            default: {
+              color: 'text-surface-500'
+            },
+            light: {
+              color: 'text-surface-300'
+            },
+            on: {
+              color: 'text-surface-50'
+            }
           },
-          on: {
-            color: 'text-disabled-50'
+          neutral: {
+            default: {
+              color: 'text-neutral-500'
+            },
+            light: {
+              color: 'text-neutral-300'
+            },
+            on: {
+              color: 'text-neutral-50'
+            }
+          },
+          primary: {
+            default: {
+              color: 'text-primary-500'
+            },
+            light: {
+              color: 'text-primary-300'
+            },
+            on: {
+              color: 'text-primary-50'
+            }
+          },
+          secondary: {
+            default: {
+              color: 'text-secondary-500'
+            },
+            light: {
+              color: 'text-secondary-300'
+            },
+            on: {
+              color: 'text-secondary-50'
+            }
+          },
+          tertiary: {
+            default: {
+              color: 'text-tertiary-500'
+            },
+            light: {
+              color: 'text-tertiary-300'
+            },
+            on: {
+              color: 'text-tertiary-50'
+            }
+          },
+          success: {
+            default: {
+              color: 'text-success-500'
+            },
+            light: {
+              color: 'text-success-300'
+            },
+            on: {
+              color: 'text-success-50'
+            }
+          },
+          warning: {
+            default: {
+              color: 'text-warning-500'
+            },
+            light: {
+              color: 'text-warning-300'
+            },
+            on: {
+              color: 'text-warning-50'
+            }
+          },
+          error: {
+            default: {
+              color: 'text-error-500'
+            },
+            light: {
+              color: 'text-error-300'
+            },
+            on: {
+              color: 'text-error-50'
+            }
           }
         },
-        surface: {
-          default: {
-            color: 'text-surface-500'
+        dark: {
+          disabled: {
+            default: {
+              color: 'text-disabled-600'
+            },
+            light: {
+              color: 'text-disabled-400'
+            },
+            on: {
+              color: 'text-disabled-100'
+            }
           },
-          light: {
-            color: 'text-surface-300'
+          surface: {
+            default: {
+              color: 'text-surface-600'
+            },
+            light: {
+              color: 'text-surface-400'
+            },
+            on: {
+              color: 'text-surface-100'
+            }
           },
-          on: {
-            color: 'text-surface-50'
-          }
-        },
-        neutral: {
-          default: {
-            color: 'text-neutral-500'
+          neutral: {
+            default: {
+              color: 'text-neutral-600'
+            },
+            light: {
+              color: 'text-neutral-400'
+            },
+            on: {
+              color: 'text-neutral-100'
+            }
           },
-          light: {
-            color: 'text-neutral-300'
+          primary: {
+            default: {
+              color: 'text-primary-600'
+            },
+            light: {
+              color: 'text-primary-400'
+            },
+            on: {
+              color: 'text-primary-100'
+            }
           },
-          on: {
-            color: 'text-neutral-50'
-          }
-        },
-        primary: {
-          default: {
-            color: 'text-primary-500'
+          secondary: {
+            default: {
+              color: 'text-secondary-600'
+            },
+            light: {
+              color: 'text-secondary-400'
+            },
+            on: {
+              color: 'text-secondary-100'
+            }
           },
-          light: {
-            color: 'text-primary-300'
+          tertiary: {
+            default: {
+              color: 'text-tertiary-600'
+            },
+            light: {
+              color: 'text-tertiary-400'
+            },
+            on: {
+              color: 'text-tertiary-100'
+            }
           },
-          on: {
-            color: 'text-primary-50'
-          }
-        },
-        secondary: {
-          default: {
-            color: 'text-secondary-500'
+          success: {
+            default: {
+              color: 'text-success-600'
+            },
+            light: {
+              color: 'text-success-400'
+            },
+            on: {
+              color: 'text-success-100'
+            }
           },
-          light: {
-            color: 'text-secondary-300'
+          warning: {
+            default: {
+              color: 'text-warning-600'
+            },
+            light: {
+              color: 'text-warning-400'
+            },
+            on: {
+              color: 'text-warning-100'
+            }
           },
-          on: {
-            color: 'text-secondary-50'
-          }
-        },
-        tertiary: {
-          default: {
-            color: 'text-tertiary-500'
-          },
-          light: {
-            color: 'text-tertiary-300'
-          },
-          on: {
-            color: 'text-tertiary-50'
-          }
-        },
-        success: {
-          default: {
-            color: 'text-success-500'
-          },
-          light: {
-            color: 'text-success-300'
-          },
-          on: {
-            color: 'text-success-50'
-          }
-        },
-        warning: {
-          default: {
-            color: 'text-warning-500'
-          },
-          light: {
-            color: 'text-warning-300'
-          },
-          on: {
-            color: 'text-warning-50'
-          }
-        },
-        error: {
-          default: {
-            color: 'text-error-500'
-          },
-          light: {
-            color: 'text-error-300'
-          },
-          on: {
-            color: 'text-error-50'
+          error: {
+            default: {
+              color: 'text-error-600'
+            },
+            light: {
+              color: 'text-error-400'
+            },
+            on: {
+              color: 'text-error-100'
+            }
           }
         }
       },
       fill: {
-        disabled: {
-          default: {
-            color: 'fill-disabled-500'
+        light: {
+          disabled: {
+            default: {
+              color: 'fill-disabled-500'
+            },
+            light: {
+              color: 'fill-disabled-300'
+            },
+            on: {
+              color: 'fill-disabled-50'
+            }
           },
-          light: {
-            color: 'fill-disabled-300'
+          surface: {
+            default: {
+              color: 'fill-surface-500'
+            },
+            light: {
+              color: 'fill-surface-300'
+            },
+            on: {
+              color: 'fill-surface-50'
+            }
           },
-          on: {
-            color: 'fill-disabled-50'
+          neutral: {
+            default: {
+              color: 'fill-neutral-500'
+            },
+            light: {
+              color: 'fill-neutral-300'
+            },
+            on: {
+              color: 'fill-neutral-50'
+            }
+          },
+          primary: {
+            default: {
+              color: 'fill-primary-500'
+            },
+            light: {
+              color: 'fill-primary-300'
+            },
+            on: {
+              color: 'fill-primary-50'
+            }
+          },
+          secondary: {
+            default: {
+              color: 'fill-secondary-500'
+            },
+            light: {
+              color: 'fill-secondary-300'
+            },
+            on: {
+              color: 'fill-secondary-50'
+            }
+          },
+          tertiary: {
+            default: {
+              color: 'fill-tertiary-500'
+            },
+            light: {
+              color: 'fill-tertiary-300'
+            },
+            on: {
+              color: 'fill-tertiary-50'
+            }
+          },
+          success: {
+            default: {
+              color: 'fill-success-500'
+            },
+            light: {
+              color: 'fill-success-300'
+            },
+            on: {
+              color: 'fill-success-50'
+            }
+          },
+          warning: {
+            default: {
+              color: 'fill-warning-500'
+            },
+            light: {
+              color: 'fill-warning-300'
+            },
+            on: {
+              color: 'fill-warning-50'
+            }
+          },
+          error: {
+            default: {
+              color: 'fill-error-500'
+            },
+            light: {
+              color: 'fill-error-300'
+            },
+            on: {
+              color: 'fill-error-50'
+            }
           }
         },
-        surface: {
-          default: {
-            color: 'fill-surface-500'
+        dark: {
+          disabled: {
+            default: {
+              color: 'fill-disabled-600'
+            },
+            light: {
+              color: 'fill-disabled-400'
+            },
+            on: {
+              color: 'fill-disabled-100'
+            }
           },
-          light: {
-            color: 'fill-surface-300'
+          surface: {
+            default: {
+              color: 'fill-surface-600'
+            },
+            light: {
+              color: 'fill-surface-400'
+            },
+            on: {
+              color: 'fill-surface-100'
+            }
           },
-          on: {
-            color: 'fill-surface-50'
-          }
-        },
-        neutral: {
-          default: {
-            color: 'fill-neutral-500'
+          neutral: {
+            default: {
+              color: 'fill-neutral-600'
+            },
+            light: {
+              color: 'fill-neutral-400'
+            },
+            on: {
+              color: 'fill-neutral-100'
+            }
           },
-          light: {
-            color: 'fill-neutral-300'
+          primary: {
+            default: {
+              color: 'fill-primary-600'
+            },
+            light: {
+              color: 'fill-primary-400'
+            },
+            on: {
+              color: 'fill-primary-100'
+            }
           },
-          on: {
-            color: 'fill-neutral-50'
-          }
-        },
-        primary: {
-          default: {
-            color: 'fill-primary-500'
+          secondary: {
+            default: {
+              color: 'fill-secondary-600'
+            },
+            light: {
+              color: 'fill-secondary-400'
+            },
+            on: {
+              color: 'fill-secondary-100'
+            }
           },
-          light: {
-            color: 'fill-primary-300'
+          tertiary: {
+            default: {
+              color: 'fill-tertiary-600'
+            },
+            light: {
+              color: 'fill-tertiary-400'
+            },
+            on: {
+              color: 'fill-tertiary-100'
+            }
           },
-          on: {
-            color: 'fill-primary-50'
-          }
-        },
-        secondary: {
-          default: {
-            color: 'fill-secondary-500'
+          success: {
+            default: {
+              color: 'fill-success-600'
+            },
+            light: {
+              color: 'fill-success-400'
+            },
+            on: {
+              color: 'fill-success-100'
+            }
           },
-          light: {
-            color: 'fill-secondary-300'
+          warning: {
+            default: {
+              color: 'fill-warning-600'
+            },
+            light: {
+              color: 'fill-warning-400'
+            },
+            on: {
+              color: 'fill-warning-100'
+            }
           },
-          on: {
-            color: 'fill-secondary-50'
-          }
-        },
-        tertiary: {
-          default: {
-            color: 'fill-tertiary-500'
-          },
-          light: {
-            color: 'fill-tertiary-300'
-          },
-          on: {
-            color: 'fill-tertiary-50'
-          }
-        },
-        success: {
-          default: {
-            color: 'fill-success-500'
-          },
-          light: {
-            color: 'fill-success-300'
-          },
-          on: {
-            color: 'fill-success-50'
-          }
-        },
-        warning: {
-          default: {
-            color: 'fill-warning-500'
-          },
-          light: {
-            color: 'fill-warning-300'
-          },
-          on: {
-            color: 'fill-warning-50'
-          }
-        },
-        error: {
-          default: {
-            color: 'fill-error-500'
-          },
-          light: {
-            color: 'fill-error-300'
-          },
-          on: {
-            color: 'fill-error-50'
+          error: {
+            default: {
+              color: 'fill-error-600'
+            },
+            light: {
+              color: 'fill-error-400'
+            },
+            on: {
+              color: 'fill-error-100'
+            }
           }
         }
       },
       stroke: {
-        disabled: {
-          default: {
-            color: 'stroke-disabled-500'
+        light: {
+          disabled: {
+            default: {
+              color: 'stroke-disabled-500'
+            },
+            light: {
+              color: 'stroke-disabled-300'
+            },
+            on: {
+              color: 'stroke-disabled-50'
+            }
           },
-          light: {
-            color: 'stroke-disabled-300'
+          surface: {
+            default: {
+              color: 'stroke-surface-500'
+            },
+            light: {
+              color: 'stroke-surface-300'
+            },
+            on: {
+              color: 'stroke-surface-50'
+            }
           },
-          on: {
-            color: 'stroke-disabled-50'
+          neutral: {
+            default: {
+              color: 'stroke-neutral-500'
+            },
+            light: {
+              color: 'stroke-neutral-300'
+            },
+            on: {
+              color: 'stroke-neutral-50'
+            }
+          },
+          primary: {
+            default: {
+              color: 'stroke-primary-500'
+            },
+            light: {
+              color: 'stroke-primary-300'
+            },
+            on: {
+              color: 'stroke-primary-50'
+            }
+          },
+          secondary: {
+            default: {
+              color: 'stroke-secondary-500'
+            },
+            light: {
+              color: 'stroke-secondary-300'
+            },
+            on: {
+              color: 'stroke-secondary-50'
+            }
+          },
+          tertiary: {
+            default: {
+              color: 'stroke-tertiary-500'
+            },
+            light: {
+              color: 'stroke-tertiary-300'
+            },
+            on: {
+              color: 'stroke-tertiary-50'
+            }
+          },
+          success: {
+            default: {
+              color: 'stroke-success-500'
+            },
+            light: {
+              color: 'stroke-success-300'
+            },
+            on: {
+              color: 'stroke-success-50'
+            }
+          },
+          warning: {
+            default: {
+              color: 'stroke-warning-500'
+            },
+            light: {
+              color: 'stroke-warning-300'
+            },
+            on: {
+              color: 'stroke-warning-50'
+            }
+          },
+          error: {
+            default: {
+              color: 'stroke-error-500'
+            },
+            light: {
+              color: 'stroke-error-300'
+            },
+            on: {
+              color: 'stroke-error-50'
+            }
           }
         },
-        surface: {
-          default: {
-            color: 'stroke-surface-500'
+        dark: {
+          disabled: {
+            default: {
+              color: 'stroke-disabled-600'
+            },
+            light: {
+              color: 'stroke-disabled-400'
+            },
+            on: {
+              color: 'stroke-disabled-100'
+            }
           },
-          light: {
-            color: 'stroke-surface-300'
+          surface: {
+            default: {
+              color: 'stroke-surface-600'
+            },
+            light: {
+              color: 'stroke-surface-400'
+            },
+            on: {
+              color: 'stroke-surface-100'
+            }
           },
-          on: {
-            color: 'stroke-surface-50'
-          }
-        },
-        neutral: {
-          default: {
-            color: 'stroke-neutral-500'
+          neutral: {
+            default: {
+              color: 'stroke-neutral-600'
+            },
+            light: {
+              color: 'stroke-neutral-400'
+            },
+            on: {
+              color: 'stroke-neutral-100'
+            }
           },
-          light: {
-            color: 'stroke-neutral-300'
+          primary: {
+            default: {
+              color: 'stroke-primary-600'
+            },
+            light: {
+              color: 'stroke-primary-400'
+            },
+            on: {
+              color: 'stroke-primary-100'
+            }
           },
-          on: {
-            color: 'stroke-neutral-50'
-          }
-        },
-        primary: {
-          default: {
-            color: 'stroke-primary-500'
+          secondary: {
+            default: {
+              color: 'stroke-secondary-600'
+            },
+            light: {
+              color: 'stroke-secondary-400'
+            },
+            on: {
+              color: 'stroke-secondary-100'
+            }
           },
-          light: {
-            color: 'stroke-primary-300'
+          tertiary: {
+            default: {
+              color: 'stroke-tertiary-600'
+            },
+            light: {
+              color: 'stroke-tertiary-400'
+            },
+            on: {
+              color: 'stroke-tertiary-100'
+            }
           },
-          on: {
-            color: 'stroke-primary-50'
-          }
-        },
-        secondary: {
-          default: {
-            color: 'stroke-secondary-500'
+          success: {
+            default: {
+              color: 'stroke-success-600'
+            },
+            light: {
+              color: 'stroke-success-400'
+            },
+            on: {
+              color: 'stroke-success-100'
+            }
           },
-          light: {
-            color: 'stroke-secondary-300'
+          warning: {
+            default: {
+              color: 'stroke-warning-600'
+            },
+            light: {
+              color: 'stroke-warning-400'
+            },
+            on: {
+              color: 'stroke-warning-100'
+            }
           },
-          on: {
-            color: 'stroke-secondary-50'
-          }
-        },
-        tertiary: {
-          default: {
-            color: 'stroke-tertiary-500'
-          },
-          light: {
-            color: 'stroke-tertiary-300'
-          },
-          on: {
-            color: 'stroke-tertiary-50'
-          }
-        },
-        success: {
-          default: {
-            color: 'stroke-success-500'
-          },
-          light: {
-            color: 'stroke-success-300'
-          },
-          on: {
-            color: 'stroke-success-50'
-          }
-        },
-        warning: {
-          default: {
-            color: 'stroke-warning-500'
-          },
-          light: {
-            color: 'stroke-warning-300'
-          },
-          on: {
-            color: 'stroke-warning-50'
-          }
-        },
-        error: {
-          default: {
-            color: 'stroke-error-500'
-          },
-          light: {
-            color: 'stroke-error-300'
-          },
-          on: {
-            color: 'stroke-error-50'
+          error: {
+            default: {
+              color: 'stroke-error-600'
+            },
+            light: {
+              color: 'stroke-error-400'
+            },
+            on: {
+              color: 'stroke-error-100'
+            }
           }
         }
       },
       ring: {
-        disabled: {
-          default: {
-            color: 'ring-disabled-500'
+        light: {
+          disabled: {
+            default: {
+              color: 'ring-disabled-500'
+            },
+            light: {
+              color: 'ring-disabled-300'
+            },
+            on: {
+              color: 'ring-disabled-50'
+            }
           },
-          light: {
-            color: 'ring-disabled-300'
+          surface: {
+            default: {
+              color: 'ring-surface-500'
+            },
+            light: {
+              color: 'ring-surface-300'
+            },
+            on: {
+              color: 'ring-surface-50'
+            }
           },
-          on: {
-            color: 'ring-disabled-50'
+          neutral: {
+            default: {
+              color: 'ring-neutral-500'
+            },
+            light: {
+              color: 'ring-neutral-300'
+            },
+            on: {
+              color: 'ring-neutral-50'
+            }
+          },
+          primary: {
+            default: {
+              color: 'ring-primary-500'
+            },
+            light: {
+              color: 'ring-primary-300'
+            },
+            on: {
+              color: 'ring-primary-50'
+            }
+          },
+          secondary: {
+            default: {
+              color: 'ring-secondary-500'
+            },
+            light: {
+              color: 'ring-secondary-300'
+            },
+            on: {
+              color: 'ring-secondary-50'
+            }
+          },
+          tertiary: {
+            default: {
+              color: 'ring-tertiary-500'
+            },
+            light: {
+              color: 'ring-tertiary-300'
+            },
+            on: {
+              color: 'ring-tertiary-50'
+            }
+          },
+          success: {
+            default: {
+              color: 'ring-success-500'
+            },
+            light: {
+              color: 'ring-success-300'
+            },
+            on: {
+              color: 'ring-success-50'
+            }
+          },
+          warning: {
+            default: {
+              color: 'ring-warning-500'
+            },
+            light: {
+              color: 'ring-warning-300'
+            },
+            on: {
+              color: 'ring-warning-50'
+            }
+          },
+          error: {
+            default: {
+              color: 'ring-error-500'
+            },
+            light: {
+              color: 'ring-error-300'
+            },
+            on: {
+              color: 'ring-error-50'
+            }
           }
         },
-        surface: {
-          default: {
-            color: 'ring-surface-500'
+        dark: {
+          disabled: {
+            default: {
+              color: 'ring-disabled-600'
+            },
+            light: {
+              color: 'ring-disabled-400'
+            },
+            on: {
+              color: 'ring-disabled-100'
+            }
           },
-          light: {
-            color: 'ring-surface-300'
+          surface: {
+            default: {
+              color: 'ring-surface-600'
+            },
+            light: {
+              color: 'ring-surface-400'
+            },
+            on: {
+              color: 'ring-surface-100'
+            }
           },
-          on: {
-            color: 'ring-surface-50'
-          }
-        },
-        neutral: {
-          default: {
-            color: 'ring-neutral-500'
+          neutral: {
+            default: {
+              color: 'ring-neutral-600'
+            },
+            light: {
+              color: 'ring-neutral-400'
+            },
+            on: {
+              color: 'ring-neutral-100'
+            }
           },
-          light: {
-            color: 'ring-neutral-300'
+          primary: {
+            default: {
+              color: 'ring-primary-600'
+            },
+            light: {
+              color: 'ring-primary-400'
+            },
+            on: {
+              color: 'ring-primary-100'
+            }
           },
-          on: {
-            color: 'ring-neutral-50'
-          }
-        },
-        primary: {
-          default: {
-            color: 'ring-primary-500'
+          secondary: {
+            default: {
+              color: 'ring-secondary-600'
+            },
+            light: {
+              color: 'ring-secondary-400'
+            },
+            on: {
+              color: 'ring-secondary-100'
+            }
           },
-          light: {
-            color: 'ring-primary-300'
+          tertiary: {
+            default: {
+              color: 'ring-tertiary-600'
+            },
+            light: {
+              color: 'ring-tertiary-400'
+            },
+            on: {
+              color: 'ring-tertiary-100'
+            }
           },
-          on: {
-            color: 'ring-primary-50'
-          }
-        },
-        secondary: {
-          default: {
-            color: 'ring-secondary-500'
+          success: {
+            default: {
+              color: 'ring-success-600'
+            },
+            light: {
+              color: 'ring-success-400'
+            },
+            on: {
+              color: 'ring-success-100'
+            }
           },
-          light: {
-            color: 'ring-secondary-300'
+          warning: {
+            default: {
+              color: 'ring-warning-600'
+            },
+            light: {
+              color: 'ring-warning-400'
+            },
+            on: {
+              color: 'ring-warning-100'
+            }
           },
-          on: {
-            color: 'ring-secondary-50'
-          }
-        },
-        tertiary: {
-          default: {
-            color: 'ring-tertiary-500'
-          },
-          light: {
-            color: 'ring-tertiary-300'
-          },
-          on: {
-            color: 'ring-tertiary-50'
-          }
-        },
-        success: {
-          default: {
-            color: 'ring-success-500'
-          },
-          light: {
-            color: 'ring-success-300'
-          },
-          on: {
-            color: 'ring-success-50'
-          }
-        },
-        warning: {
-          default: {
-            color: 'ring-warning-500'
-          },
-          light: {
-            color: 'ring-warning-300'
-          },
-          on: {
-            color: 'ring-warning-50'
-          }
-        },
-        error: {
-          default: {
-            color: 'ring-error-500'
-          },
-          light: {
-            color: 'ring-error-300'
-          },
-          on: {
-            color: 'ring-error-50'
+          error: {
+            default: {
+              color: 'ring-error-600'
+            },
+            light: {
+              color: 'ring-error-400'
+            },
+            on: {
+              color: 'ring-error-100'
+            }
           }
         }
       },
       input: {
-        surface: {
-          default: {
-            group: '[.focused]:text-surface-500 [.focused]:fill-surface-500'
+        light: {
+          surface: {
+            default: {
+              group: '[.focused]:text-surface-500 [.focused]:fill-surface-500'
+            },
+            on: {
+              group: '[.focused]:text-surface-50 [.focused]:fill-surface-50'
+            }
           },
-          on: {
-            group: '[.focused]:text-surface-50 [.focused]:fill-surface-50'
+          neutral: {
+            default: {
+              group: '[.focused]:text-neutral-500 [.focused]:fill-neutral-500'
+            },
+            on: {
+              group: '[.focused]:text-neutral-50 [.focused]:fill-neutral-50'
+            }
+          },
+          primary: {
+            default: {
+              group: '[.focused]:text-primary-500 [.focused]:fill-primary-500'
+            },
+            on: {
+              group: '[.focused]:text-primary-50 [.focused]:fill-primary-50'
+            }
+          },
+          secondary: {
+            default: {
+              group:
+                '[.focused]:text-secondary-500 [.focused]:fill-secondary-500'
+            },
+            on: {
+              group: '[.focused]:text-secondary-50 [.focused]:fill-secondary-50'
+            }
+          },
+          tertiary: {
+            default: {
+              group: '[.focused]:text-tertiary-500 [.focused]:fill-tertiary-500'
+            },
+            on: {
+              group: '[.focused]:text-tertiary-50 [.focused]:fill-tertiary-50'
+            }
+          },
+          success: {
+            default: {
+              group: '[.focused]:text-success-500 [.focused]:fill-success-500'
+            },
+            on: {
+              group: '[.focused]:text-success-50 [.focused]:fill-success-50'
+            }
+          },
+          warning: {
+            default: {
+              group: '[.focused]:text-warning-500 [.focused]:fill-warning-500'
+            },
+            on: {
+              group: '[.focused]:text-warning-50 [.focused]:fill-warning-50'
+            }
+          },
+          error: {
+            default: {
+              group: '[.focused]:text-error-500 [.focused]:fill-error-500'
+            },
+            on: {
+              group: '[.focused]:text-error-50 [.focused]:fill-error-50'
+            }
           }
         },
-        neutral: {
-          default: {
-            group: '[.focused]:text-neutral-500 [.focused]:fill-neutral-500'
+        dark: {
+          surface: {
+            default: {
+              group: '[.focused]:text-surface-600 [.focused]:fill-surface-600'
+            },
+            on: {
+              group: '[.focused]:text-surface-100 [.focused]:fill-surface-100'
+            }
           },
-          on: {
-            group: '[.focused]:text-neutral-50 [.focused]:fill-neutral-50'
-          }
-        },
-        primary: {
-          default: {
-            group: '[.focused]:text-primary-500 [.focused]:fill-primary-500'
+          neutral: {
+            default: {
+              group: '[.focused]:text-neutral-600 [.focused]:fill-neutral-600'
+            },
+            on: {
+              group: '[.focused]:text-neutral-100 [.focused]:fill-neutral-100'
+            }
           },
-          on: {
-            group: '[.focused]:text-primary-50 [.focused]:fill-primary-50'
-          }
-        },
-        secondary: {
-          default: {
-            group: '[.focused]:text-secondary-500 [.focused]:fill-secondary-500'
+          primary: {
+            default: {
+              group: '[.focused]:text-primary-600 [.focused]:fill-primary-600'
+            },
+            on: {
+              group: '[.focused]:text-primary-100 [.focused]:fill-primary-100'
+            }
           },
-          on: {
-            group: '[.focused]:text-secondary-50 [.focused]:fill-secondary-50'
-          }
-        },
-        tertiary: {
-          default: {
-            group: '[.focused]:text-tertiary-500 [.focused]:fill-tertiary-500'
+          secondary: {
+            default: {
+              group:
+                '[.focused]:text-secondary-600 [.focused]:fill-secondary-600'
+            },
+            on: {
+              group:
+                '[.focused]:text-secondary-100 [.focused]:fill-secondary-100'
+            }
           },
-          on: {
-            group: '[.focused]:text-tertiary-50 [.focused]:fill-tertiary-50'
-          }
-        },
-        success: {
-          default: {
-            group: '[.focused]:text-success-500 [.focused]:fill-success-500'
+          tertiary: {
+            default: {
+              group: '[.focused]:text-tertiary-600 [.focused]:fill-tertiary-600'
+            },
+            on: {
+              group: '[.focused]:text-tertiary-100 [.focused]:fill-tertiary-100'
+            }
           },
-          on: {
-            group: '[.focused]:text-success-50 [.focused]:fill-success-50'
-          }
-        },
-        warning: {
-          default: {
-            group: '[.focused]:text-warning-500 [.focused]:fill-warning-500'
+          success: {
+            default: {
+              group: '[.focused]:text-success-600 [.focused]:fill-success-600'
+            },
+            on: {
+              group: '[.focused]:text-success-100 [.focused]:fill-success-100'
+            }
           },
-          on: {
-            group: '[.focused]:text-warning-50 [.focused]:fill-warning-50'
-          }
-        },
-        error: {
-          default: {
-            group: '[.focused]:text-error-500 [.focused]:fill-error-500'
+          warning: {
+            default: {
+              group: '[.focused]:text-warning-600 [.focused]:fill-warning-600'
+            },
+            on: {
+              group: '[.focused]:text-warning-100 [.focused]:fill-warning-100'
+            }
           },
-          on: {
-            group: '[.focused]:text-error-50 [.focused]:fill-error-50'
+          error: {
+            default: {
+              group: '[.focused]:text-error-600 [.focused]:fill-error-600'
+            },
+            on: {
+              group: '[.focused]:text-error-100 [.focused]:fill-error-100'
+            }
           }
         }
       }
