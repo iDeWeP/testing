@@ -1,4 +1,5 @@
 import { useState, useCallback } from 'react';
+import { combineFunctions } from '../../../utils/utils/combine-functions/combine-functions';
 
 export const useControlledState = (
   defaultOpen: boolean,
@@ -16,7 +17,7 @@ export const useControlledState = (
 
   return {
     isOpen: open ?? isOpen,
-    handleOpen: isControlled ? onOpen : handleOpen,
-    handleClose: isControlled ? onClose : handleClose
+    handleOpen: isControlled ? onOpen : combineFunctions(onOpen, handleOpen),
+    handleClose: isControlled ? onClose : combineFunctions(onClose, handleClose)
   };
 };
