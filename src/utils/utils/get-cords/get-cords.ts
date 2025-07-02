@@ -33,8 +33,7 @@ export const getCords = (
   placement: Placement,
   offset: number,
   isPorted: boolean,
-  cursor?: Cursor,
-  isFollowingCursor?: boolean
+  cursor?: Cursor
 ): Cord => {
   const { mainAxis, crossAxis } = getAxises(placement);
   const cord = { top: 0, left: 0, mainAxis, crossAxis };
@@ -43,12 +42,7 @@ export const getCords = (
     return cord;
   }
 
-  const anchor = getAnchorDimensions(
-    anchorRef.current,
-    isPorted,
-    isFollowingCursor,
-    cursor
-  );
+  const anchor = getAnchorDimensions(anchorRef.current, isPorted, cursor);
   const el = getElDimensions(ref.current.getBoundingClientRect(), offset);
   const view = getViewDimensions();
 

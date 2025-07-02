@@ -3,7 +3,6 @@ import type { Cursor } from '../../../core/types';
 export const getAnchorDimensions = (
   anchor: HTMLElement,
   isPorted: boolean,
-  isFollowingCursor?: boolean,
   cursor?: Cursor
 ) => {
   const dimensions = {
@@ -18,28 +17,28 @@ export const getAnchorDimensions = (
   };
 
   const portedX =
-    (isFollowingCursor ? dimensions.cursorX : dimensions.x) +
+    (cursor ? dimensions.cursorX : dimensions.x) +
     document.documentElement.scrollLeft;
 
   const portedY =
-    (isFollowingCursor ? dimensions.cursorY : dimensions.y) +
+    (cursor ? dimensions.cursorY : dimensions.y) +
     document.documentElement.scrollTop;
 
-  const left = isFollowingCursor
+  const left = cursor
     ? dimensions.left + dimensions.cursorX - dimensions.x
     : dimensions.left;
 
-  const top = isFollowingCursor
+  const top = cursor
     ? dimensions.top + dimensions.cursorY - dimensions.y
     : dimensions.top;
 
   const anchorDimensions = {
     left: isPorted ? portedX : left,
     top: isPorted ? portedY : top,
-    x: isFollowingCursor ? dimensions.cursorX : dimensions.x,
-    y: isFollowingCursor ? dimensions.cursorY : dimensions.y,
-    width: isFollowingCursor ? 0 : dimensions.width,
-    height: isFollowingCursor ? 0 : dimensions.height,
+    x: cursor ? dimensions.cursorX : dimensions.x,
+    y: cursor ? dimensions.cursorY : dimensions.y,
+    width: cursor ? 0 : dimensions.width,
+    height: cursor ? 0 : dimensions.height,
     offsetWidth: 0,
     offsetHeight: 0
   };
