@@ -35,8 +35,8 @@ export const UnstyledPopper = <E extends ElementType = 'div'>(
     ref: forwardedRef,
     anchorRef,
     open: isOpen,
-    collision,
     followCursor,
+    collision,
     closeOnOutClick,
     closeOnEsc,
     focusOnOpen,
@@ -74,14 +74,13 @@ export const UnstyledPopper = <E extends ElementType = 'div'>(
   const { animation, startAnimation, stopAnimation } = useAnimation(isOpen);
 
   const isMovable = collision !== 'none' && (isOpen || !animation.isExited);
-
   const { top, left, mainAxis } = getCords(
-    anchorRef,
     ref,
     collision,
     placement,
     offset,
     !!portalEl,
+    anchorRef,
     followCursor
   );
 

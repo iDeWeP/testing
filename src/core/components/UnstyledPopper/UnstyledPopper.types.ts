@@ -34,7 +34,7 @@ export type UnstyledPopperComponentsProps = {
 };
 
 type OptionalProps = {
-  anchorRef: RefObject<HTMLElement | null>;
+  anchorRef?: RefObject<HTMLElement | null>;
   followCursor?: Cursor;
   onClose?: VoidFunction;
   onCollision?: (placement: Placement) => void;

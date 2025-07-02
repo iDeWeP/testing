@@ -27,18 +27,18 @@ type Cord = {
 };
 
 export const getCords = (
-  anchorRef: RefObject<HTMLElement | null>,
   ref: RefObject<HTMLDivElement | null>,
   collision: Collision,
   placement: Placement,
   offset: number,
   isPorted: boolean,
+  anchorRef?: RefObject<HTMLElement | null>,
   cursor?: Cursor
 ): Cord => {
   const { mainAxis, crossAxis } = getAxises(placement);
   const cord = { top: 0, left: 0, mainAxis, crossAxis };
 
-  if (!ref.current || !anchorRef.current) {
+  if (!ref.current || !anchorRef?.current) {
     return cord;
   }
 
