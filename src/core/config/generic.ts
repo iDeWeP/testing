@@ -1,6 +1,5 @@
 import type { Color, CSSProps } from '../types';
 
-type DefaultRadius = 'sm' | 'md' | 'lg';
 type MergedColor = 'disabled' | Color;
 type GapDirection = 'default' | 'row' | 'col';
 type SpacingScale =
@@ -46,7 +45,7 @@ type Generic = {
     };
     margin: Styles;
     border: Styles;
-    radius: Record<DefaultRadius, Styles>;
+    radius: Styles;
     weight: Styles;
     underline: Styles;
     wordBreak: Styles;
@@ -71,7 +70,6 @@ type Generic = {
     alignItems: Styles;
     gap: Record<GapDirection, Styles>;
     effect: Styles;
-    transition: Styles;
     cursor: Styles;
   };
 };
@@ -1346,497 +1344,194 @@ export const generic: Generic = {
       }
     },
     radius: {
+      xs: {
+        borderRadius: 'rounded-sm'
+      },
       sm: {
-        xs: {
-          borderRadius: 'rounded-sm'
-        },
-        sm: {
-          borderRadius: 'rounded'
-        },
-        md: {
-          borderRadius: 'rounded-md'
-        },
-        lg: {
-          borderRadius: 'rounded-lg'
-        },
-        xl: {
-          borderRadius: 'rounded-xl'
-        },
-        full: {
-          borderRadius: 'rounded-full'
-        },
-        'xs-top': {
-          borderRadius: 'rounded-t-sm'
-        },
-        'xs-bottom': {
-          borderRadius: 'rounded-b-sm'
-        },
-        'xs-left': {
-          borderRadius: 'rounded-l-sm'
-        },
-        'xs-right': {
-          borderRadius: 'rounded-r-sm'
-        },
-        'xs-top-left': {
-          borderRadius: 'rounded-tl-sm'
-        },
-        'xs-top-right': {
-          borderRadius: 'rounded-tr-sm'
-        },
-        'xs-bottom-left': {
-          borderRadius: 'rounded-bl-sm'
-        },
-        'xs-bottom-right': {
-          borderRadius: 'rounded-br-sm'
-        },
-        'sm-top': {
-          borderRadius: 'rounded-t'
-        },
-        'sm-bottom': {
-          borderRadius: 'rounded-b'
-        },
-        'sm-left': {
-          borderRadius: 'rounded-l'
-        },
-        'sm-right': {
-          borderRadius: 'rounded-r'
-        },
-        'sm-top-left': {
-          borderRadius: 'rounded-tl'
-        },
-        'sm-top-right': {
-          borderRadius: 'rounded-tr'
-        },
-        'sm-bottom-left': {
-          borderRadius: 'rounded-bl'
-        },
-        'sm-bottom-right': {
-          borderRadius: 'rounded-br'
-        },
-        'md-top': {
-          borderRadius: 'rounded-t-md'
-        },
-        'md-bottom': {
-          borderRadius: 'rounded-b-md'
-        },
-        'md-left': {
-          borderRadius: 'rounded-l-md'
-        },
-        'md-right': {
-          borderRadius: 'rounded-r-md'
-        },
-        'md-top-left': {
-          borderRadius: 'rounded-tl-md'
-        },
-        'md-top-right': {
-          borderRadius: 'rounded-tr-md'
-        },
-        'md-bottom-left': {
-          borderRadius: 'rounded-bl-md'
-        },
-        'md-bottom-right': {
-          borderRadius: 'rounded-br-md'
-        },
-        'lg-top': {
-          borderRadius: 'rounded-t-lg'
-        },
-        'lg-bottom': {
-          borderRadius: 'rounded-b-lg'
-        },
-        'lg-left': {
-          borderRadius: 'rounded-l-lg'
-        },
-        'lg-right': {
-          borderRadius: 'rounded-r-lg'
-        },
-        'lg-top-left': {
-          borderRadius: 'rounded-tl-lg'
-        },
-        'lg-top-right': {
-          borderRadius: 'rounded-tr-lg'
-        },
-        'lg-bottom-left': {
-          borderRadius: 'rounded-bl-lg'
-        },
-        'lg-bottom-right': {
-          borderRadius: 'rounded-br-lg'
-        },
-        'xl-top': {
-          borderRadius: 'rounded-t-xl'
-        },
-        'xl-bottom': {
-          borderRadius: 'rounded-b-xl'
-        },
-        'xl-left': {
-          borderRadius: 'rounded-l-xl'
-        },
-        'xl-right': {
-          borderRadius: 'rounded-r-xl'
-        },
-        'xl-top-left': {
-          borderRadius: 'rounded-tl-xl'
-        },
-        'xl-top-right': {
-          borderRadius: 'rounded-tr-xl'
-        },
-        'xl-bottom-left': {
-          borderRadius: 'rounded-bl-xl'
-        },
-        'xl-bottom-right': {
-          borderRadius: 'rounded-br-xl'
-        },
-        'full-top': {
-          borderRadius: 'rounded-t-full'
-        },
-        'full-bottom': {
-          borderRadius: 'rounded-b-full'
-        },
-        'full-left': {
-          borderRadius: 'rounded-l-full'
-        },
-        'full-right': {
-          borderRadius: 'rounded-r-full'
-        },
-        'full-top-left': {
-          borderRadius: 'rounded-tl-full'
-        },
-        'full-top-right': {
-          borderRadius: 'rounded-tr-full'
-        },
-        'full-bottom-left': {
-          borderRadius: 'rounded-bl-full'
-        },
-        'full-bottom-right': {
-          borderRadius: 'rounded-br-full'
-        }
+        borderRadius: 'rounded-md'
       },
       md: {
-        xs: {
-          borderRadius: 'rounded'
-        },
-        sm: {
-          borderRadius: 'rounded-md'
-        },
-        md: {
-          borderRadius: 'rounded-lg'
-        },
-        lg: {
-          borderRadius: 'rounded-xl'
-        },
-        xl: {
-          borderRadius: 'rounded-2xl'
-        },
-        full: {
-          borderRadius: 'rounded-full'
-        },
-        'xs-top': {
-          borderRadius: 'rounded-t'
-        },
-        'xs-bottom': {
-          borderRadius: 'rounded-b'
-        },
-        'xs-left': {
-          borderRadius: 'rounded-l'
-        },
-        'xs-right': {
-          borderRadius: 'rounded-r'
-        },
-        'xs-top-left': {
-          borderRadius: 'rounded-tl'
-        },
-        'xs-top-right': {
-          borderRadius: 'rounded-tr'
-        },
-        'xs-bottom-left': {
-          borderRadius: 'rounded-bl'
-        },
-        'xs-bottom-right': {
-          borderRadius: 'rounded-br'
-        },
-        'sm-top': {
-          borderRadius: 'rounded-t-md'
-        },
-        'sm-bottom': {
-          borderRadius: 'rounded-b-md'
-        },
-        'sm-left': {
-          borderRadius: 'rounded-l-md'
-        },
-        'sm-right': {
-          borderRadius: 'rounded-r-md'
-        },
-        'sm-top-left': {
-          borderRadius: 'rounded-tl-md'
-        },
-        'sm-top-right': {
-          borderRadius: 'rounded-tr-md'
-        },
-        'sm-bottom-left': {
-          borderRadius: 'rounded-bl-md'
-        },
-        'sm-bottom-right': {
-          borderRadius: 'rounded-br-md'
-        },
-        'md-top': {
-          borderRadius: 'rounded-t-lg'
-        },
-        'md-bottom': {
-          borderRadius: 'rounded-b-lg'
-        },
-        'md-left': {
-          borderRadius: 'rounded-l-lg'
-        },
-        'md-right': {
-          borderRadius: 'rounded-r-lg'
-        },
-        'md-top-left': {
-          borderRadius: 'rounded-tl-lg'
-        },
-        'md-top-right': {
-          borderRadius: 'rounded-tr-lg'
-        },
-        'md-bottom-left': {
-          borderRadius: 'rounded-bl-lg'
-        },
-        'md-bottom-right': {
-          borderRadius: 'rounded-br-lg'
-        },
-        'lg-top': {
-          borderRadius: 'rounded-t-xl'
-        },
-        'lg-bottom': {
-          borderRadius: 'rounded-b-xl'
-        },
-        'lg-left': {
-          borderRadius: 'rounded-l-xl'
-        },
-        'lg-right': {
-          borderRadius: 'rounded-r-xl'
-        },
-        'lg-top-left': {
-          borderRadius: 'rounded-tl-xl'
-        },
-        'lg-top-right': {
-          borderRadius: 'rounded-tr-xl'
-        },
-        'lg-bottom-left': {
-          borderRadius: 'rounded-bl-xl'
-        },
-        'lg-bottom-right': {
-          borderRadius: 'rounded-br-xl'
-        },
-        'xl-top': {
-          borderRadius: 'rounded-t-2xl'
-        },
-        'xl-bottom': {
-          borderRadius: 'rounded-b-2xl'
-        },
-        'xl-left': {
-          borderRadius: 'rounded-l-2xl'
-        },
-        'xl-right': {
-          borderRadius: 'rounded-r-2xl'
-        },
-        'xl-top-left': {
-          borderRadius: 'rounded-tl-2xl'
-        },
-        'xl-top-right': {
-          borderRadius: 'rounded-tr-2xl'
-        },
-        'xl-bottom-left': {
-          borderRadius: 'rounded-bl-2xl'
-        },
-        'xl-bottom-right': {
-          borderRadius: 'rounded-br-2xl'
-        },
-        'full-top': {
-          borderRadius: 'rounded-t-full'
-        },
-        'full-bottom': {
-          borderRadius: 'rounded-b-full'
-        },
-        'full-left': {
-          borderRadius: 'rounded-l-full'
-        },
-        'full-right': {
-          borderRadius: 'rounded-r-full'
-        },
-        'full-top-left': {
-          borderRadius: 'rounded-tl-full'
-        },
-        'full-top-right': {
-          borderRadius: 'rounded-tr-full'
-        },
-        'full-bottom-left': {
-          borderRadius: 'rounded-bl-full'
-        },
-        'full-bottom-right': {
-          borderRadius: 'rounded-br-full'
-        }
+        borderRadius: 'rounded-lg'
       },
       lg: {
-        xs: {
-          borderRadius: 'rounded-md'
-        },
-        sm: {
-          borderRadius: 'rounded-lg'
-        },
-        md: {
-          borderRadius: 'rounded-xl'
-        },
-        lg: {
-          borderRadius: 'rounded-2xl'
-        },
-        xl: {
-          borderRadius: 'rounded-3xl'
-        },
-        full: {
-          borderRadius: 'rounded-full'
-        },
-        'xs-top': {
-          borderRadius: 'rounded-t-md'
-        },
-        'xs-bottom': {
-          borderRadius: 'rounded-b-md'
-        },
-        'xs-left': {
-          borderRadius: 'rounded-l-md'
-        },
-        'xs-right': {
-          borderRadius: 'rounded-r-md'
-        },
-        'xs-top-left': {
-          borderRadius: 'rounded-tl-md'
-        },
-        'xs-top-right': {
-          borderRadius: 'rounded-tr-md'
-        },
-        'xs-bottom-left': {
-          borderRadius: 'rounded-bl-md'
-        },
-        'xs-bottom-right': {
-          borderRadius: 'rounded-br-md'
-        },
-        'sm-top': {
-          borderRadius: 'rounded-t-lg'
-        },
-        'sm-bottom': {
-          borderRadius: 'rounded-b-lg'
-        },
-        'sm-left': {
-          borderRadius: 'rounded-l-lg'
-        },
-        'sm-right': {
-          borderRadius: 'rounded-r-lg'
-        },
-        'sm-top-left': {
-          borderRadius: 'rounded-tl-lg'
-        },
-        'sm-top-right': {
-          borderRadius: 'rounded-tr-lg'
-        },
-        'sm-bottom-left': {
-          borderRadius: 'rounded-bl-lg'
-        },
-        'sm-bottom-right': {
-          borderRadius: 'rounded-br-lg'
-        },
-        'md-top': {
-          borderRadius: 'rounded-t-xl'
-        },
-        'md-bottom': {
-          borderRadius: 'rounded-b-xl'
-        },
-        'md-left': {
-          borderRadius: 'rounded-l-xl'
-        },
-        'md-right': {
-          borderRadius: 'rounded-r-xl'
-        },
-        'md-top-left': {
-          borderRadius: 'rounded-tl-xl'
-        },
-        'md-top-right': {
-          borderRadius: 'rounded-tr-xl'
-        },
-        'md-bottom-left': {
-          borderRadius: 'rounded-bl-xl'
-        },
-        'md-bottom-right': {
-          borderRadius: 'rounded-br-xl'
-        },
-        'lg-top': {
-          borderRadius: 'rounded-t-2xl'
-        },
-        'lg-bottom': {
-          borderRadius: 'rounded-b-2xl'
-        },
-        'lg-left': {
-          borderRadius: 'rounded-l-2xl'
-        },
-        'lg-right': {
-          borderRadius: 'rounded-r-2xl'
-        },
-        'lg-top-left': {
-          borderRadius: 'rounded-tl-2xl'
-        },
-        'lg-top-right': {
-          borderRadius: 'rounded-tr-2xl'
-        },
-        'lg-bottom-left': {
-          borderRadius: 'rounded-bl-2xl'
-        },
-        'lg-bottom-right': {
-          borderRadius: 'rounded-br-2xl'
-        },
-        'xl-top': {
-          borderRadius: 'rounded-t-3xl'
-        },
-        'xl-bottom': {
-          borderRadius: 'rounded-b-3xl'
-        },
-        'xl-left': {
-          borderRadius: 'rounded-l-3xl'
-        },
-        'xl-right': {
-          borderRadius: 'rounded-r-3xl'
-        },
-        'xl-top-left': {
-          borderRadius: 'rounded-tl-3xl'
-        },
-        'xl-top-right': {
-          borderRadius: 'rounded-tr-3xl'
-        },
-        'xl-bottom-left': {
-          borderRadius: 'rounded-bl-3xl'
-        },
-        'xl-bottom-right': {
-          borderRadius: 'rounded-br-3xl'
-        },
-        'full-top': {
-          borderRadius: 'rounded-t-full'
-        },
-        'full-bottom': {
-          borderRadius: 'rounded-b-full'
-        },
-        'full-left': {
-          borderRadius: 'rounded-l-full'
-        },
-        'full-right': {
-          borderRadius: 'rounded-r-full'
-        },
-        'full-top-left': {
-          borderRadius: 'rounded-tl-full'
-        },
-        'full-top-right': {
-          borderRadius: 'rounded-tr-full'
-        },
-        'full-bottom-left': {
-          borderRadius: 'rounded-bl-full'
-        },
-        'full-bottom-right': {
-          borderRadius: 'rounded-br-full'
-        }
+        borderRadius: 'rounded-xl'
+      },
+      xl: {
+        borderRadius: 'rounded-2xl'
+      },
+      xxl: {
+        borderRadius: 'rounded-3xl'
+      },
+      full: {
+        borderRadius: 'rounded-full'
+      },
+      'xs-top': {
+        borderRadius: 'rounded-t-sm'
+      },
+      'xs-bottom': {
+        borderRadius: 'rounded-b-sm'
+      },
+      'xs-left': {
+        borderRadius: 'rounded-l-sm'
+      },
+      'xs-right': {
+        borderRadius: 'rounded-r-sm'
+      },
+      'xs-top-left': {
+        borderRadius: 'rounded-tl-sm'
+      },
+      'xs-top-right': {
+        borderRadius: 'rounded-tr-sm'
+      },
+      'xs-bottom-left': {
+        borderRadius: 'rounded-bl-sm'
+      },
+      'xs-bottom-right': {
+        borderRadius: 'rounded-br'
+      },
+      'sm-top': {
+        borderRadius: 'rounded-t-md'
+      },
+      'sm-bottom': {
+        borderRadius: 'rounded-b-md'
+      },
+      'sm-left': {
+        borderRadius: 'rounded-l-md'
+      },
+      'sm-right': {
+        borderRadius: 'rounded-r-md'
+      },
+      'sm-top-left': {
+        borderRadius: 'rounded-tl-md'
+      },
+      'sm-top-right': {
+        borderRadius: 'rounded-tr-md'
+      },
+      'sm-bottom-left': {
+        borderRadius: 'rounded-bl-md'
+      },
+      'sm-bottom-right': {
+        borderRadius: 'rounded-br-md'
+      },
+      'md-top': {
+        borderRadius: 'rounded-t-lg'
+      },
+      'md-bottom': {
+        borderRadius: 'rounded-b-lg'
+      },
+      'md-left': {
+        borderRadius: 'rounded-l-lg'
+      },
+      'md-right': {
+        borderRadius: 'rounded-r-lg'
+      },
+      'md-top-left': {
+        borderRadius: 'rounded-tl-lg'
+      },
+      'md-top-right': {
+        borderRadius: 'rounded-tr-lg'
+      },
+      'md-bottom-left': {
+        borderRadius: 'rounded-bl-lg'
+      },
+      'md-bottom-right': {
+        borderRadius: 'rounded-br-lg'
+      },
+      'lg-top': {
+        borderRadius: 'rounded-t-xl'
+      },
+      'lg-bottom': {
+        borderRadius: 'rounded-b-xl'
+      },
+      'lg-left': {
+        borderRadius: 'rounded-l-xl'
+      },
+      'lg-right': {
+        borderRadius: 'rounded-r-xl'
+      },
+      'lg-top-left': {
+        borderRadius: 'rounded-tl-xl'
+      },
+      'lg-top-right': {
+        borderRadius: 'rounded-tr-xl'
+      },
+      'lg-bottom-left': {
+        borderRadius: 'rounded-bl-xl'
+      },
+      'lg-bottom-right': {
+        borderRadius: 'rounded-br-xl'
+      },
+      'xl-top': {
+        borderRadius: 'rounded-t-2xl'
+      },
+      'xl-bottom': {
+        borderRadius: 'rounded-b-2xl'
+      },
+      'xl-left': {
+        borderRadius: 'rounded-l-2xl'
+      },
+      'xl-right': {
+        borderRadius: 'rounded-r-2xl'
+      },
+      'xl-top-left': {
+        borderRadius: 'rounded-tl-2xl'
+      },
+      'xl-top-right': {
+        borderRadius: 'rounded-tr-2xl'
+      },
+      'xl-bottom-left': {
+        borderRadius: 'rounded-bl-2xl'
+      },
+      'xl-bottom-right': {
+        borderRadius: 'rounded-br-2xl'
+      },
+      'xxl-top': {
+        borderRadius: 'rounded-t-3xl'
+      },
+      'xxl-bottom': {
+        borderRadius: 'rounded-b-3xl'
+      },
+      'xxl-left': {
+        borderRadius: 'rounded-l-3xl'
+      },
+      'xxl-right': {
+        borderRadius: 'rounded-r-3xl'
+      },
+      'xxl-top-left': {
+        borderRadius: 'rounded-tl-3xl'
+      },
+      'xxl-top-right': {
+        borderRadius: 'rounded-tr-3xl'
+      },
+      'xxl-bottom-left': {
+        borderRadius: 'rounded-bl-3xl'
+      },
+      'xxl-bottom-right': {
+        borderRadius: 'rounded-br-3xl'
+      },
+      'full-top': {
+        borderRadius: 'rounded-t-full'
+      },
+      'full-bottom': {
+        borderRadius: 'rounded-b-full'
+      },
+      'full-left': {
+        borderRadius: 'rounded-l-full'
+      },
+      'full-right': {
+        borderRadius: 'rounded-r-full'
+      },
+      'full-top-left': {
+        borderRadius: 'rounded-tl-full'
+      },
+      'full-top-right': {
+        borderRadius: 'rounded-tr-full'
+      },
+      'full-bottom-left': {
+        borderRadius: 'rounded-bl-full'
+      },
+      'full-bottom-right': {
+        borderRadius: 'rounded-br-full'
       }
     },
     weight: {
@@ -2750,37 +2445,6 @@ export const generic: Generic = {
         active: 'active:shadow-none',
         focus: 'focus:shadow-none',
         focusVisible: 'focus-visible:shadow-none'
-      }
-    },
-    transition: {
-      fade: {
-        transition: 'transition-opacity'
-      },
-      transform: {
-        transition: 'transition-transform'
-      },
-      'transform-fade': {
-        transition: 'transition-[transform,_opacity]'
-      },
-      'collapse-x': {
-        display: 'flex',
-        overflow: 'overflow-hidden',
-        textWrap: 'text-nowrap',
-        transition: 'transition-width'
-      },
-      'collapse-y': {
-        overflow: 'overflow-hidden',
-        transition: 'transition-height'
-      },
-      'collapse-x-fade': {
-        display: 'flex',
-        overflow: 'overflow-hidden',
-        textWrap: 'text-nowrap',
-        transition: 'transition-[width,_opacity]'
-      },
-      'collapse-y-fade': {
-        overflow: 'overflow-hidden',
-        transition: 'transition-[height,_opacity]'
       }
     },
     cursor: {
