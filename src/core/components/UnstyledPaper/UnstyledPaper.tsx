@@ -10,6 +10,7 @@ export const UnstyledPaper = <E extends ElementType = 'div'>(
 ) => {
   const {
     orientation,
+    shadow,
     justify: justifyContent,
     align: alignItems,
     gap,
@@ -19,6 +20,7 @@ export const UnstyledPaper = <E extends ElementType = 'div'>(
 
   const mergedClassName = mergeClassName('unstyledPaper', className, {
     orientation,
+    shadow,
     justifyContent,
     alignItems,
     gap

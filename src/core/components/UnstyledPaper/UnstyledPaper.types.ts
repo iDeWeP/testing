@@ -1,6 +1,7 @@
 import type { ElementType } from 'react';
 import type {
   Orientation,
+  Shadow,
   JustifyContent,
   AlignItems,
   Gap,
@@ -13,6 +14,7 @@ import type {
 
 export type UnstyledPaperDefaultProps = {
   orientation?: Orientation;
+  shadow?: Shadow;
   justify?: JustifyContent;
   align?: AlignItems;
   gap?: Gap;

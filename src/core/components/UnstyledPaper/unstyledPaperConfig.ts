@@ -5,6 +5,7 @@ export const unstyledPaperConfig: ComponentConfig<UnstyledPaperConfigProps> = {
   props: {
     as: 'div',
     orientation: 'horizontal',
+    shadow: 'none',
     justify: 'normal',
     align: 'stretch',
     gap: 'none',
