@@ -5,10 +5,7 @@ import { ExampleUnstyledPopper } from './ExampleUnstyledPopper';
 
 export const JustifyExample = () => (
   <ExampleSection title="Justify">
-    <ExampleCard
-      vertical
-      stretch
-    >
+    <ExampleCard>
       <ExampleUnstyledPopper
         clear
         justify="normal"

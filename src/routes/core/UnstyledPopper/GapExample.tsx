@@ -5,7 +5,7 @@ import { ExampleUnstyledPopper } from './ExampleUnstyledPopper';
 
 export const GapExample = () => (
   <ExampleSection title="Gap">
-    <ExampleCard vertical>
+    <ExampleCard>
       <ExampleUnstyledPopper
         clear
         gap="none"
