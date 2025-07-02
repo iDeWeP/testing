@@ -13,7 +13,6 @@ import { OffsetExample } from './OffsetExample';
 import { PeakExample } from './PeakExample';
 import { PlacementExample } from './PlacementExample';
 import { PortalExample } from './PortalExample';
-import { TriggerExample } from './TriggerExample';
 import { UnmountOnExitExample } from './UnmountOnExitExample';
 import { ZIndexExample } from './ZIndexExample';
 
@@ -21,8 +20,8 @@ const Page = () => (
   <>
     <ExampleTitle>Popper</ExampleTitle>
     <DefaultExample />
+    <PlacementExample />
     <CollisionExample />
-    <TriggerExample />
     <FollowCursorExample />
     <CloseOnOutClickExample />
     <CloseOnEscExample />

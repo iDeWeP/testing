@@ -5,7 +5,7 @@ import { ExampleUnstyledPopper } from './ExampleUnstyledPopper';
 export const DefaultExample = () => (
   <ExampleSection title="Default">
     <ExampleCard>
-      <ExampleUnstyledPopper />
+      <ExampleUnstyledPopper clear />
       <ExampleUnstyledPopper backdrop>BACKDROP</ExampleUnstyledPopper>
       <ExampleUnstyledPopper arrow>ARROW</ExampleUnstyledPopper>
     </ExampleCard>
