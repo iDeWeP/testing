@@ -36,13 +36,15 @@ export const useAnimation = (isEntered?: boolean) => {
 
   const stopAnimation = useCallback(
     () =>
-      setAnimation((prevState) =>
-        prevState === ENTERING
-          ? ENTERED
-          : prevState === EXITING
-          ? EXITED
-          : prevState
-      ),
+      setAnimation((prevState) => {
+        if (prevState === ENTERING) {
+          return ENTERED;
+        } else if (prevState === EXITING) {
+          return EXITED;
+        }
+
+        return prevState;
+      }),
     []
   );
 
