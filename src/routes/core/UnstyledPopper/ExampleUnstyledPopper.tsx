@@ -21,11 +21,9 @@ export const ExampleUnstyledPopper = ({
   const handleClick = useCallback(() => setIsOpen((isOpen) => !isOpen), []);
   const handleClose = useCallback(() => setIsOpen(false), []);
 
-  const description = label
-    ? label.toUpperCase()
-    : typeof children === 'string'
-    ? children.toUpperCase()
-    : 'UNSTYLED-POPPER';
+  const description =
+    typeof children === 'string' ? children.toUpperCase() : 'UNSTYLED-POPPER';
+  const buttonDescription = label ? label.toUpperCase() : description;
 
   return (
     <>
@@ -34,7 +32,7 @@ export const ExampleUnstyledPopper = ({
         variant="solid"
         onClick={handleClick}
       >
-        {`Toggle ${description}`}
+        {`Toggle ${buttonDescription}`}
       </UnstyledButton>
       <UnstyledPopper
         anchorRef={ref}
