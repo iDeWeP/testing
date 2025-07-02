@@ -1,7 +1,7 @@
 import { type ElementType, useRef } from 'react';
 import { useAnimation } from '../../../hooks/hooks/use-animation/use-animation';
-import { useEscape } from '../../../hooks/hooks/use-escape/use-escape';
 import { useFocusTrap } from '../../../hooks/hooks/use-focus-trap/use-focus-trap';
+import { useKeyDown } from '../../../hooks/hooks/use-key-down/use-key-down';
 import { useLockScroll } from '../../../hooks/hooks/use-lock-scroll/use-lock-scroll';
 import { useOutClick } from '../../../hooks/hooks/use-out-click/use-out-click';
 import { useOverflow } from '../../../hooks/hooks/use-overflow/use-overflow';
@@ -55,6 +55,7 @@ export const UnstyledPopper = <E extends ElementType = 'div'>(
     onClose,
     onCollision,
     onTransitionEnd,
+    onKeyDown,
     portalEl,
     transitionProps,
     componentProps,
@@ -101,8 +102,6 @@ export const UnstyledPopper = <E extends ElementType = 'div'>(
     typeof closeOnOutClick === 'boolean' ? anchorRef : closeOnOutClick
   );
 
-  useEscape(closeOnEsc && isOpen && onClose);
-
   useAutoFocus(isOpen && focusOnOpen, ref);
 
   useCloseFocus(!isOpen && focusOnClose, anchorRef);
@@ -110,6 +109,8 @@ export const UnstyledPopper = <E extends ElementType = 'div'>(
   useFocusTrap(focusTrap && isOpen && ref);
 
   useLockScroll(lockScroll && isOpen);
+
+  const handleEscape = useKeyDown('Escape', closeOnEsc && isOpen && onClose);
 
   if (unmountOnExit && !isOpen && animation.isExited) {
     return undefined;
@@ -153,12 +154,14 @@ export const UnstyledPopper = <E extends ElementType = 'div'>(
       )}
       <UnstyledPaper
         ref={mergeRefs(forwardedRef, ref)}
+        tabIndex={-1}
         variant={variant}
         border={border}
         color={color}
         className={mergedClassName}
         style={mergedStyles}
         onTransitionEnd={combineHandlers(onTransitionEnd, stopAnimation)}
+        onKeyDown={combineHandlers(onKeyDown, handleEscape)}
         {...restProps}
       >
         {children}

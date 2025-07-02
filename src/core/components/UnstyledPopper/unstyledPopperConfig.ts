@@ -54,7 +54,8 @@ export const unstyledPopperConfig: ComponentConfig<UnstyledPopperConfigProps> &
       default: {
         position: 'absolute',
         transition: 'transition-opacity',
-        transitionTimingFunction: 'easy-in-out'
+        transitionTimingFunction: 'easy-in-out',
+        focus: 'focus:outline-none'
       }
     },
     backdrop: {
