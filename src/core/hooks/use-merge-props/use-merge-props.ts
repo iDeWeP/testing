@@ -5,6 +5,7 @@ import {
 } from 'react';
 import { ConfigContext } from '../../contexts/config/config';
 import type { CoreComponentsConfig } from '../../contexts/config/config.types';
+import { mergeClasses } from '../../utils/merge-class-name/merge-classes';
 
 export const useMergeProps = <
   E extends ElementType,
@@ -21,6 +22,6 @@ export const useMergeProps = <
     ...defaultProps,
     ...config?.props,
     ...props,
-    className: `${config?.styles} ${props.className}`
+    className: mergeClasses(config?.styles, props.className)
   };
 };
