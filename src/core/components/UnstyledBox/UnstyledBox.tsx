@@ -1,4 +1,5 @@
 import type { ElementType } from 'react';
+import { useTheme } from '../../hooks/use-theme/use-theme';
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
 import { mergeProps } from '../../utils/merge-props/merge-props';
 import type { UnstyledBoxProps } from './UnstyledBox.types';
@@ -20,7 +21,10 @@ export const UnstyledBox = <E extends ElementType = 'div'>(
     ...restProps
   } = mergeProps(unstyledBoxConfig.props, props);
 
+  const theme = useTheme();
+
   const mergedClassName = mergeClassName('unstyledBox', className, {
+    theme,
     variant,
     spacing,
     scale,
