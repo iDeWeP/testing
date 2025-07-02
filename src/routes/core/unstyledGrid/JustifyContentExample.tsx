@@ -4,7 +4,7 @@ import { UnstyledBox } from '../../../core/components/UnstyledBox/UnstyledBox';
 import { ExampleUnstyledGrid } from './ExampleUnstyledGrid';
 
 export const JustifyContentExample = () => (
-  <ExampleSection title="JustifyContent">
+  <ExampleSection title="Justify content">
     <ExampleCard
       vertical
       stretch
