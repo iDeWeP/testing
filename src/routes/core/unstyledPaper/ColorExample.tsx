@@ -1,18 +1,18 @@
 import { ExampleCard } from '../../../components/ExampleCard';
 import { ExampleSection } from '../../../components/ExampleSection';
-import { ExampleUnstyledPaper } from './ExampleUnstyledPaper';
+import { Example } from './Example';
 
 export const ColorExample = () => (
   <ExampleSection title="Color">
     <ExampleCard>
-      <ExampleUnstyledPaper color="surface">SURFACE</ExampleUnstyledPaper>
-      <ExampleUnstyledPaper color="neutral">NEUTRAL</ExampleUnstyledPaper>
-      <ExampleUnstyledPaper color="primary">PRIMARY</ExampleUnstyledPaper>
-      <ExampleUnstyledPaper color="secondary">SECONDARY</ExampleUnstyledPaper>
-      <ExampleUnstyledPaper color="tertiary">TERTIARY</ExampleUnstyledPaper>
-      <ExampleUnstyledPaper color="success">SUCCESS</ExampleUnstyledPaper>
-      <ExampleUnstyledPaper color="warning">WARNING</ExampleUnstyledPaper>
-      <ExampleUnstyledPaper color="error">ERROR</ExampleUnstyledPaper>
+      <Example color="surface">SURFACE</Example>
+      <Example color="neutral">NEUTRAL</Example>
+      <Example color="primary">PRIMARY</Example>
+      <Example color="secondary">SECONDARY</Example>
+      <Example color="tertiary">TERTIARY</Example>
+      <Example color="success">SUCCESS</Example>
+      <Example color="warning">WARNING</Example>
+      <Example color="error">ERROR</Example>
     </ExampleCard>
   </ExampleSection>
 );

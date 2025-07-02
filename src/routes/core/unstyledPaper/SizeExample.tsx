@@ -1,26 +1,26 @@
 import { ExampleCard } from '../../../components/ExampleCard';
 import { ExampleSection } from '../../../components/ExampleSection';
-import { ExampleUnstyledPaper } from './ExampleUnstyledPaper';
+import { Example } from './Example';
 
 export const SizeExample = () => (
   <ExampleSection title="Size">
     <ExampleCard>
-      <ExampleUnstyledPaper size="none">NONE</ExampleUnstyledPaper>
-      <ExampleUnstyledPaper size="xs">XS</ExampleUnstyledPaper>
-      <ExampleUnstyledPaper size="sm">SM</ExampleUnstyledPaper>
-      <ExampleUnstyledPaper size="md">MD</ExampleUnstyledPaper>
-      <ExampleUnstyledPaper size="lg">LG</ExampleUnstyledPaper>
-      <ExampleUnstyledPaper size="xl">XL</ExampleUnstyledPaper>
-      <ExampleUnstyledPaper size="xxl">XXL</ExampleUnstyledPaper>
+      <Example size="none">NONE</Example>
+      <Example size="xs">XS</Example>
+      <Example size="sm">SM</Example>
+      <Example size="md">MD</Example>
+      <Example size="lg">LG</Example>
+      <Example size="xl">XL</Example>
+      <Example size="xxl">XXL</Example>
     </ExampleCard>
     <ExampleCard>
-      <ExampleUnstyledPaper size="none">NONE</ExampleUnstyledPaper>
-      <ExampleUnstyledPaper size="xs-xs">XS-XS</ExampleUnstyledPaper>
-      <ExampleUnstyledPaper size="sm-sm">SM-SM</ExampleUnstyledPaper>
-      <ExampleUnstyledPaper size="md-md">MD-MD</ExampleUnstyledPaper>
-      <ExampleUnstyledPaper size="lg-lg">LG-LG</ExampleUnstyledPaper>
-      <ExampleUnstyledPaper size="xl-xl">XL-XL</ExampleUnstyledPaper>
-      <ExampleUnstyledPaper size="xxl-xxl">XXL-XXL</ExampleUnstyledPaper>
+      <Example size="none">NONE</Example>
+      <Example size="xs-xs">XS-XS</Example>
+      <Example size="sm-sm">SM-SM</Example>
+      <Example size="md-md">MD-MD</Example>
+      <Example size="lg-lg">LG-LG</Example>
+      <Example size="xl-xl">XL-XL</Example>
+      <Example size="xxl-xxl">XXL-XXL</Example>
     </ExampleCard>
   </ExampleSection>
 );

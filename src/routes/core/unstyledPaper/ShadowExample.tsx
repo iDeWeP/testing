@@ -1,17 +1,17 @@
 import { ExampleCard } from '../../../components/ExampleCard';
 import { ExampleSection } from '../../../components/ExampleSection';
-import { ExampleUnstyledPaper } from './ExampleUnstyledPaper';
+import { Example } from './Example';
 
 export const ShadowExample = () => (
   <ExampleSection title="Shadow">
     <ExampleCard>
-      <ExampleUnstyledPaper shadow="none">NONE</ExampleUnstyledPaper>
-      <ExampleUnstyledPaper shadow="xs">XS</ExampleUnstyledPaper>
-      <ExampleUnstyledPaper shadow="sm">SM</ExampleUnstyledPaper>
-      <ExampleUnstyledPaper shadow="md">MD</ExampleUnstyledPaper>
-      <ExampleUnstyledPaper shadow="lg">LG</ExampleUnstyledPaper>
-      <ExampleUnstyledPaper shadow="xl">XL</ExampleUnstyledPaper>
-      <ExampleUnstyledPaper shadow="xxl">XXL</ExampleUnstyledPaper>
+      <Example shadow="none">NONE</Example>
+      <Example shadow="xs">XS</Example>
+      <Example shadow="sm">SM</Example>
+      <Example shadow="md">MD</Example>
+      <Example shadow="lg">LG</Example>
+      <Example shadow="xl">XL</Example>
+      <Example shadow="xxl">XXL</Example>
     </ExampleCard>
   </ExampleSection>
 );

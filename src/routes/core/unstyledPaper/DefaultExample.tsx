@@ -1,11 +1,11 @@
 import { ExampleCard } from '../../../components/ExampleCard';
 import { ExampleSection } from '../../../components/ExampleSection';
-import { ExampleUnstyledPaper } from './ExampleUnstyledPaper';
+import { Example } from './Example';
 
 export const DefaultExample = () => (
   <ExampleSection title="Default">
     <ExampleCard>
-      <ExampleUnstyledPaper clear />
+      <Example clear />
     </ExampleCard>
   </ExampleSection>
 );
