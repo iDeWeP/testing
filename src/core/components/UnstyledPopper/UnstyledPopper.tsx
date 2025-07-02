@@ -22,7 +22,7 @@ import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
 import { mergePopperStyle } from '../../utils/merge-popper-style/merge-popper-style';
 import { mergeProps } from '../../utils/merge-props/merge-props';
 import { mergeTransitionProps } from '../../utils/merge-transition-props/merge-transition-props';
-import { UnstyledFlex } from '../UnstyledFlex/UnstyledFlex';
+import { UnstyledPaper } from '../UnstyledPaper/UnstyledPaper';
 import type { UnstyledPopperProps } from './UnstyledPopper.types';
 import { UnstyledPopperArrow } from './UnstyledPopperArrow';
 import { UnstyledPopperBackdrop } from './UnstyledPopperBackdrop';
@@ -148,7 +148,7 @@ export const UnstyledPopper = <E extends ElementType = 'div'>(
           )}
         />
       )}
-      <UnstyledFlex
+      <UnstyledPaper
         ref={mergeRefs(forwardedRef, ref)}
         variant={variant}
         border={border}
@@ -169,7 +169,7 @@ export const UnstyledPopper = <E extends ElementType = 'div'>(
             {...componentProps.arrow}
           />
         )}
-      </UnstyledFlex>
+      </UnstyledPaper>
     </>,
     portalEl
   );
