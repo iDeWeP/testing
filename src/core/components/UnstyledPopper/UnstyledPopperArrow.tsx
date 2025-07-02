@@ -9,6 +9,7 @@ import type {
 } from '../../types';
 import { mergeArrowStyle } from '../../utils/merge-arrow-style/merge-arrow-style';
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
+import { mergeClasses } from '../../utils/merge-class-name/merge-classes';
 
 type Props = MergeComponentProps<
   'svg',
@@ -35,7 +36,7 @@ export const UnstyledPopperArrow = ({
 }: Props) => {
   const mergedClassName = mergeClassName(
     'unstyledPopperArrow',
-    `${className} ${children?.props.className}`,
+    mergeClasses(className, children?.props.className),
     {
       variant,
       defaultPlacement,
