@@ -14,25 +14,30 @@ export const FocusOnOpenExample = () => {
           focusOnOpen={false}
           label="false"
         >
-          <UnstyledButton>#1 FALSE</UnstyledButton>
-          <UnstyledButton>#2 FALSE</UnstyledButton>
-          <UnstyledButton>#3 FALSE</UnstyledButton>
+          <UnstyledButton variant="solid">#1 FALSE</UnstyledButton>
+          <UnstyledButton variant="solid">#2 FALSE</UnstyledButton>
+          <UnstyledButton variant="solid">#3 FALSE</UnstyledButton>
         </ExampleUnstyledPopper>
         <ExampleUnstyledPopper
           focusOnOpen
           label="true"
         >
-          <UnstyledButton>#1 FOCUS ON OPEN</UnstyledButton>
-          <UnstyledButton>#2 TRUE</UnstyledButton>
-          <UnstyledButton>#3 TRUE</UnstyledButton>
+          <UnstyledButton variant="solid">#1 FOCUS ON OPEN</UnstyledButton>
+          <UnstyledButton variant="solid">#2 TRUE</UnstyledButton>
+          <UnstyledButton variant="solid">#3 TRUE</UnstyledButton>
         </ExampleUnstyledPopper>
         <ExampleUnstyledPopper
           focusOnOpen={ref}
           label="ref"
         >
-          <UnstyledButton>#1 REF</UnstyledButton>
-          <UnstyledButton ref={ref}>#2 FOCUS ON OPEN</UnstyledButton>
-          <UnstyledButton>#3 REF</UnstyledButton>
+          <UnstyledButton variant="solid">#1 REF</UnstyledButton>
+          <UnstyledButton
+            ref={ref}
+            variant="solid"
+          >
+            #2 FOCUS ON OPEN
+          </UnstyledButton>
+          <UnstyledButton variant="solid">#3 REF</UnstyledButton>
         </ExampleUnstyledPopper>
       </ExampleCard>
     </ExampleSection>

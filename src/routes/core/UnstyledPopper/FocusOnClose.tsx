@@ -15,30 +15,35 @@ export const FocusOnCloseExample = () => {
           closeOnEsc
           label="false"
         >
-          <UnstyledButton>#1 FALSE</UnstyledButton>
-          <UnstyledButton>#2 FALSE</UnstyledButton>
-          <UnstyledButton>#3 FALSE</UnstyledButton>
+          <UnstyledButton variant="solid">#1 FALSE</UnstyledButton>
+          <UnstyledButton variant="solid">#2 FALSE</UnstyledButton>
+          <UnstyledButton variant="solid">#3 FALSE</UnstyledButton>
         </ExampleUnstyledPopper>
         <ExampleUnstyledPopper
           focusOnClose
           closeOnEsc
           label="true"
         >
-          <UnstyledButton>#1 TRUE</UnstyledButton>
-          <UnstyledButton>#2 TRUE</UnstyledButton>
-          <UnstyledButton>#3 TRUE</UnstyledButton>
+          <UnstyledButton variant="solid">#1 TRUE</UnstyledButton>
+          <UnstyledButton variant="solid">#2 TRUE</UnstyledButton>
+          <UnstyledButton variant="solid">#3 TRUE</UnstyledButton>
         </ExampleUnstyledPopper>
         <ExampleUnstyledPopper
           focusOnClose={ref}
           closeOnEsc
           label="ref"
         >
-          <UnstyledButton>#1 REF</UnstyledButton>
-          <UnstyledButton>#2 REF</UnstyledButton>
-          <UnstyledButton>#3 REF</UnstyledButton>
+          <UnstyledButton variant="solid">#1 REF</UnstyledButton>
+          <UnstyledButton variant="solid">#2 REF</UnstyledButton>
+          <UnstyledButton variant="solid">#3 REF</UnstyledButton>
         </ExampleUnstyledPopper>
       </ExampleCard>
-      <UnstyledButton ref={ref}>FOCUS ON CLOSE</UnstyledButton>
+      <UnstyledButton
+        ref={ref}
+        variant="solid"
+      >
+        FOCUS ON CLOSE
+      </UnstyledButton>
     </ExampleSection>
   );
 };
