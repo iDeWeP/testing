@@ -19,12 +19,14 @@ export const styleCollapse = (
     const length = isHorizontal ? width : sizes?.height ?? 'auto';
 
     return { [dimension]: peak === 'auto' ? length : peak };
-  } else if (isEntered) {
+  }
+
+  if (isEntered) {
     const width = scale === 'full' ? '100%' : 'auto';
     const length = isHorizontal ? width : 'auto';
 
     return { [dimension]: peak === 'auto' ? length : peak };
-  } else {
-    return { [dimension]: '0px' };
   }
+
+  return { [dimension]: '0px' };
 };
