@@ -4,7 +4,7 @@ import { ExampleUnstyledPopper } from './ExampleUnstyledPopper';
 
 export const MarginExample = () => (
   <ExampleSection title="Margin">
-    <ExampleCard align>
+    <ExampleCard>
       <ExampleUnstyledPopper margin="none">NONE</ExampleUnstyledPopper>
       <ExampleUnstyledPopper margin="xs">XS</ExampleUnstyledPopper>
       <ExampleUnstyledPopper margin="sm">SM</ExampleUnstyledPopper>
