@@ -23,14 +23,14 @@ export type UnstyledButtonComponentsProps = {
 };
 
 type OptionalProps = {
+  loading?: Loading;
+  disabled?: boolean;
   leftDecorator?: ReactNode;
   rightDecorator?: ReactNode;
 };
 
 export type UnstyledButtonDefaultProps = {
   as?: ElementType;
-  loading?: Loading;
-  disabled?: boolean;
   variant?: Variant;
   size?: DefaultSize;
   scale?: ButtonScale;

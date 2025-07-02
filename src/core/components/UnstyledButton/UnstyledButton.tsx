@@ -12,8 +12,8 @@ export const UnstyledButton = <E extends ElementType = 'button'>(
 ) => {
   const {
     as: Component,
-    loading,
-    disabled,
+    loading = false,
+    disabled = false,
     variant,
     size,
     scale: buttonScale,
@@ -52,8 +52,8 @@ export const UnstyledButton = <E extends ElementType = 'button'>(
 
   const spinnerNode = (
     <UnstyledSpinner
-      spin
       disabled={disabled}
+      spin
       value={75}
       variant={setVariant(variant)}
       float={loading === true}
@@ -87,8 +87,6 @@ export const UnstyledButton = <E extends ElementType = 'button'>(
       {loading === 'right' && spinnerNode}
       {hasRipple && (
         <UnstyledRipple
-          valid={false}
-          invalid={false}
           stateful={false}
           variant={variant}
           color={color}
