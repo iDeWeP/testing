@@ -5,7 +5,7 @@ import { ExampleUnstyledFlex } from './ExampleUnstyledFlex';
 export const DefaultExample = () => (
   <ExampleSection title="Default">
     <ExampleCard>
-      <ExampleUnstyledFlex />
+      <ExampleUnstyledFlex clear />
     </ExampleCard>
   </ExampleSection>
 );

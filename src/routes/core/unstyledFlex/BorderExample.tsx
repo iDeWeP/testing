@@ -5,54 +5,14 @@ import { ExampleUnstyledFlex } from './ExampleUnstyledFlex';
 export const BorderExample = () => (
   <ExampleSection title="Border">
     <ExampleCard>
-      <ExampleUnstyledFlex
-        light
-        border={false}
-      >
-        FALSE
-      </ExampleUnstyledFlex>
-      <ExampleUnstyledFlex
-        light
-        border="all"
-      >
-        ALL
-      </ExampleUnstyledFlex>
-      <ExampleUnstyledFlex
-        light
-        border="x"
-      >
-        X
-      </ExampleUnstyledFlex>
-      <ExampleUnstyledFlex
-        light
-        border="y"
-      >
-        Y
-      </ExampleUnstyledFlex>
-      <ExampleUnstyledFlex
-        light
-        border="top"
-      >
-        TOP
-      </ExampleUnstyledFlex>
-      <ExampleUnstyledFlex
-        light
-        border="bottom"
-      >
-        BOTTOM
-      </ExampleUnstyledFlex>
-      <ExampleUnstyledFlex
-        light
-        border="left"
-      >
-        LEFT
-      </ExampleUnstyledFlex>
-      <ExampleUnstyledFlex
-        light
-        border="right"
-      >
-        RIGHT
-      </ExampleUnstyledFlex>
+      <ExampleUnstyledFlex border={false}>FALSE</ExampleUnstyledFlex>
+      <ExampleUnstyledFlex border="all">ALL</ExampleUnstyledFlex>
+      <ExampleUnstyledFlex border="x">X</ExampleUnstyledFlex>
+      <ExampleUnstyledFlex border="y">Y</ExampleUnstyledFlex>
+      <ExampleUnstyledFlex border="top">TOP</ExampleUnstyledFlex>
+      <ExampleUnstyledFlex border="bottom">BOTTOM</ExampleUnstyledFlex>
+      <ExampleUnstyledFlex border="left">LEFT</ExampleUnstyledFlex>
+      <ExampleUnstyledFlex border="right">RIGHT</ExampleUnstyledFlex>
     </ExampleCard>
   </ExampleSection>
 );

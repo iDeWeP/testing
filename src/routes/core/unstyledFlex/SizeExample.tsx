@@ -5,92 +5,22 @@ import { ExampleUnstyledFlex } from './ExampleUnstyledFlex';
 export const SizeExample = () => (
   <ExampleSection title="Size">
     <ExampleCard>
-      <ExampleUnstyledFlex
-        light
-        size="none"
-      >
-        NONE
-      </ExampleUnstyledFlex>
-      <ExampleUnstyledFlex
-        light
-        size="xs"
-      >
-        XS
-      </ExampleUnstyledFlex>
-      <ExampleUnstyledFlex
-        light
-        size="sm"
-      >
-        SM
-      </ExampleUnstyledFlex>
-      <ExampleUnstyledFlex
-        light
-        size="md"
-      >
-        MD
-      </ExampleUnstyledFlex>
-      <ExampleUnstyledFlex
-        light
-        size="lg"
-      >
-        LG
-      </ExampleUnstyledFlex>
-      <ExampleUnstyledFlex
-        light
-        size="xl"
-      >
-        XL
-      </ExampleUnstyledFlex>
-      <ExampleUnstyledFlex
-        light
-        size="xxl"
-      >
-        XXL
-      </ExampleUnstyledFlex>
+      <ExampleUnstyledFlex size="none">NONE</ExampleUnstyledFlex>
+      <ExampleUnstyledFlex size="xs">XS</ExampleUnstyledFlex>
+      <ExampleUnstyledFlex size="sm">SM</ExampleUnstyledFlex>
+      <ExampleUnstyledFlex size="md">MD</ExampleUnstyledFlex>
+      <ExampleUnstyledFlex size="lg">LG</ExampleUnstyledFlex>
+      <ExampleUnstyledFlex size="xl">XL</ExampleUnstyledFlex>
+      <ExampleUnstyledFlex size="xxl">XXL</ExampleUnstyledFlex>
     </ExampleCard>
     <ExampleCard>
-      <ExampleUnstyledFlex
-        light
-        size="none"
-      >
-        NONE
-      </ExampleUnstyledFlex>
-      <ExampleUnstyledFlex
-        light
-        size="xs-xs"
-      >
-        XS-XS
-      </ExampleUnstyledFlex>
-      <ExampleUnstyledFlex
-        light
-        size="sm-sm"
-      >
-        SM-SM
-      </ExampleUnstyledFlex>
-      <ExampleUnstyledFlex
-        light
-        size="md-md"
-      >
-        MD-MD
-      </ExampleUnstyledFlex>
-      <ExampleUnstyledFlex
-        light
-        size="lg-lg"
-      >
-        LG-LG
-      </ExampleUnstyledFlex>
-      <ExampleUnstyledFlex
-        light
-        size="xl-xl"
-      >
-        XL-XL
-      </ExampleUnstyledFlex>
-      <ExampleUnstyledFlex
-        light
-        size="xxl-xxl"
-      >
-        XXL-XXL
-      </ExampleUnstyledFlex>
+      <ExampleUnstyledFlex size="none">NONE</ExampleUnstyledFlex>
+      <ExampleUnstyledFlex size="xs-xs">XS-XS</ExampleUnstyledFlex>
+      <ExampleUnstyledFlex size="sm-sm">SM-SM</ExampleUnstyledFlex>
+      <ExampleUnstyledFlex size="md-md">MD-MD</ExampleUnstyledFlex>
+      <ExampleUnstyledFlex size="lg-lg">LG-LG</ExampleUnstyledFlex>
+      <ExampleUnstyledFlex size="xl-xl">XL-XL</ExampleUnstyledFlex>
+      <ExampleUnstyledFlex size="xxl-xxl">XXL-XXL</ExampleUnstyledFlex>
     </ExampleCard>
   </ExampleSection>
 );

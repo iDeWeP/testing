@@ -5,54 +5,14 @@ import { ExampleUnstyledFlex } from './ExampleUnstyledFlex';
 export const RadiusExample = () => (
   <ExampleSection title="Radius">
     <ExampleCard>
-      <ExampleUnstyledFlex
-        light
-        radius="none"
-      >
-        NONE
-      </ExampleUnstyledFlex>
-      <ExampleUnstyledFlex
-        light
-        radius="xs"
-      >
-        XS
-      </ExampleUnstyledFlex>
-      <ExampleUnstyledFlex
-        light
-        radius="sm"
-      >
-        SM
-      </ExampleUnstyledFlex>
-      <ExampleUnstyledFlex
-        light
-        radius="md"
-      >
-        MD
-      </ExampleUnstyledFlex>
-      <ExampleUnstyledFlex
-        light
-        radius="lg"
-      >
-        LG
-      </ExampleUnstyledFlex>
-      <ExampleUnstyledFlex
-        light
-        radius="xl"
-      >
-        XL
-      </ExampleUnstyledFlex>
-      <ExampleUnstyledFlex
-        light
-        radius="xxl"
-      >
-        XXL
-      </ExampleUnstyledFlex>
-      <ExampleUnstyledFlex
-        light
-        radius="full"
-      >
-        FULL
-      </ExampleUnstyledFlex>
+      <ExampleUnstyledFlex radius="none">NONE</ExampleUnstyledFlex>
+      <ExampleUnstyledFlex radius="xs">XS</ExampleUnstyledFlex>
+      <ExampleUnstyledFlex radius="sm">SM</ExampleUnstyledFlex>
+      <ExampleUnstyledFlex radius="md">MD</ExampleUnstyledFlex>
+      <ExampleUnstyledFlex radius="lg">LG</ExampleUnstyledFlex>
+      <ExampleUnstyledFlex radius="xl">XL</ExampleUnstyledFlex>
+      <ExampleUnstyledFlex radius="xxl">XXL</ExampleUnstyledFlex>
+      <ExampleUnstyledFlex radius="full">FULL</ExampleUnstyledFlex>
     </ExampleCard>
   </ExampleSection>
 );
