@@ -39,7 +39,9 @@ export const useAnimation = (isEntered?: boolean) => {
       setAnimation((prevState) => {
         if (prevState === ENTERING) {
           return ENTERED;
-        } else if (prevState === EXITING) {
+        }
+
+        if (prevState === EXITING) {
           return EXITED;
         }
 
