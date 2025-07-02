@@ -10,6 +10,8 @@ export const useAutoFocus = <E extends HTMLElement>(
       const focusableEls = getFocusableElements(autoRef.current);
 
       if (!focusableEls) {
+        autoRef.current?.focus();
+
         return;
       }
 
