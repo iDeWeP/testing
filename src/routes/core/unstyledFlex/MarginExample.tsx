@@ -1,17 +1,17 @@
 import { ExampleCard } from '../../../components/ExampleCard';
 import { ExampleSection } from '../../../components/ExampleSection';
-import { ExampleUnstyledFlex } from './ExampleUnstyledFlex';
+import { Example } from './Example';
 
 export const MarginExample = () => (
   <ExampleSection title="Margin">
     <ExampleCard align>
-      <ExampleUnstyledFlex margin="none">NONE</ExampleUnstyledFlex>
-      <ExampleUnstyledFlex margin="xs">XS</ExampleUnstyledFlex>
-      <ExampleUnstyledFlex margin="sm">SM</ExampleUnstyledFlex>
-      <ExampleUnstyledFlex margin="md">MD</ExampleUnstyledFlex>
-      <ExampleUnstyledFlex margin="lg">LG</ExampleUnstyledFlex>
-      <ExampleUnstyledFlex margin="xl">XL</ExampleUnstyledFlex>
-      <ExampleUnstyledFlex margin="xxl">XXL</ExampleUnstyledFlex>
+      <Example margin="none">NONE</Example>
+      <Example margin="xs">XS</Example>
+      <Example margin="sm">SM</Example>
+      <Example margin="md">MD</Example>
+      <Example margin="lg">LG</Example>
+      <Example margin="xl">XL</Example>
+      <Example margin="xxl">XXL</Example>
     </ExampleCard>
   </ExampleSection>
 );

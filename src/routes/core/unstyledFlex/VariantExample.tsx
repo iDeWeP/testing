@@ -1,52 +1,52 @@
 import { ExampleCard } from '../../../components/ExampleCard';
 import { ExampleSection } from '../../../components/ExampleSection';
-import { ExampleUnstyledFlex } from './ExampleUnstyledFlex';
+import { Example } from './Example';
 
 export const VariantExample = () => (
   <ExampleSection title="Variant">
     <ExampleCard>
-      <ExampleUnstyledFlex variant="none">NONE</ExampleUnstyledFlex>
-      <ExampleUnstyledFlex variant="text">TEXT</ExampleUnstyledFlex>
-      <ExampleUnstyledFlex variant="plain">PLAIN</ExampleUnstyledFlex>
-      <ExampleUnstyledFlex variant="light">LIGHT</ExampleUnstyledFlex>
-      <ExampleUnstyledFlex variant="surface">SURFACE</ExampleUnstyledFlex>
-      <ExampleUnstyledFlex variant="solid">SOLID</ExampleUnstyledFlex>
-      <ExampleUnstyledFlex
+      <Example variant="none">NONE</Example>
+      <Example variant="text">TEXT</Example>
+      <Example variant="plain">PLAIN</Example>
+      <Example variant="light">LIGHT</Example>
+      <Example variant="surface">SURFACE</Example>
+      <Example variant="solid">SOLID</Example>
+      <Example
         variant="none"
         border
       >
         NONE-BORDER
-      </ExampleUnstyledFlex>
-      <ExampleUnstyledFlex
+      </Example>
+      <Example
         variant="text"
         border
       >
         TEXT-BORDER
-      </ExampleUnstyledFlex>
-      <ExampleUnstyledFlex
+      </Example>
+      <Example
         variant="plain"
         border
       >
         PLAIN-BORDER
-      </ExampleUnstyledFlex>
-      <ExampleUnstyledFlex
+      </Example>
+      <Example
         variant="light"
         border
       >
         LIGHT-BORDER
-      </ExampleUnstyledFlex>
-      <ExampleUnstyledFlex
+      </Example>
+      <Example
         variant="surface"
         border
       >
         SURFACE-BORDER
-      </ExampleUnstyledFlex>
-      <ExampleUnstyledFlex
+      </Example>
+      <Example
         variant="solid"
         border
       >
         SOLID-BORDER
-      </ExampleUnstyledFlex>
+      </Example>
     </ExampleCard>
   </ExampleSection>
 );

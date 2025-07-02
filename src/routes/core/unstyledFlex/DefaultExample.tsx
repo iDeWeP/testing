@@ -1,11 +1,11 @@
 import { ExampleCard } from '../../../components/ExampleCard';
 import { ExampleSection } from '../../../components/ExampleSection';
-import { ExampleUnstyledFlex } from './ExampleUnstyledFlex';
+import { Example } from './Example';
 
 export const DefaultExample = () => (
   <ExampleSection title="Default">
     <ExampleCard>
-      <ExampleUnstyledFlex clear />
+      <Example clear />
     </ExampleCard>
   </ExampleSection>
 );

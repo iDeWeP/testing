@@ -1,18 +1,18 @@
 import { ExampleCard } from '../../../components/ExampleCard';
 import { ExampleSection } from '../../../components/ExampleSection';
-import { ExampleUnstyledFlex } from './ExampleUnstyledFlex';
+import { Example } from './Example';
 
 export const BorderExample = () => (
   <ExampleSection title="Border">
     <ExampleCard>
-      <ExampleUnstyledFlex border={false}>FALSE</ExampleUnstyledFlex>
-      <ExampleUnstyledFlex border="all">ALL</ExampleUnstyledFlex>
-      <ExampleUnstyledFlex border="x">X</ExampleUnstyledFlex>
-      <ExampleUnstyledFlex border="y">Y</ExampleUnstyledFlex>
-      <ExampleUnstyledFlex border="top">TOP</ExampleUnstyledFlex>
-      <ExampleUnstyledFlex border="bottom">BOTTOM</ExampleUnstyledFlex>
-      <ExampleUnstyledFlex border="left">LEFT</ExampleUnstyledFlex>
-      <ExampleUnstyledFlex border="right">RIGHT</ExampleUnstyledFlex>
+      <Example border={false}>FALSE</Example>
+      <Example border="all">ALL</Example>
+      <Example border="x">X</Example>
+      <Example border="y">Y</Example>
+      <Example border="top">TOP</Example>
+      <Example border="bottom">BOTTOM</Example>
+      <Example border="left">LEFT</Example>
+      <Example border="right">RIGHT</Example>
     </ExampleCard>
   </ExampleSection>
 );

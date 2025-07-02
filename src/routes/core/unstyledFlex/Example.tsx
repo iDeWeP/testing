@@ -5,7 +5,7 @@ type Props = {
   clear?: boolean;
 } & UnstyledFlexProps<'div'>;
 
-export const ExampleUnstyledFlex = ({
+export const Example = ({
   clear,
   children = 'UNSTYLED-FLEX',
   ...restProps
