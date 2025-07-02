@@ -15,7 +15,7 @@ export const UnstyledTransition = <E extends ElementType = 'div'>(
 ) => {
   const {
     ref: forwardedRef,
-    in: isIn,
+    in: isIn = false,
     unmountOnExit,
     peak,
     transition,

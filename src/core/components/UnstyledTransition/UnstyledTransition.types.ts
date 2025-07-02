@@ -10,8 +10,11 @@ import type {
   UnstyledBoxProps
 } from '../UnstyledBox/UnstyledBox.types';
 
-export type UnstyledTransitionDefaultProps = {
+type OptionalProps = {
   in?: boolean;
+};
+
+export type UnstyledTransitionDefaultProps = {
   unmountOnExit?: boolean;
   peak?: Peak;
   transition?: Transition;
@@ -26,5 +29,5 @@ export type UnstyledTransitionConfigProps = MergeProps<
 
 export type UnstyledTransitionProps<E extends ElementType> = MergeProps<
   UnstyledBoxProps<E>,
-  UnstyledTransitionDefaultProps
+  UnstyledTransitionDefaultProps & OptionalProps
 >;

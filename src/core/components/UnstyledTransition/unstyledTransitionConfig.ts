@@ -11,7 +11,6 @@ export const unstyledTransitionConfig: ComponentConfig<UnstyledTransitionConfigP
   Styles = {
   props: {
     as: 'div',
-    in: false,
     unmountOnExit: false,
     peak: 'auto',
     transition: 'fade',
