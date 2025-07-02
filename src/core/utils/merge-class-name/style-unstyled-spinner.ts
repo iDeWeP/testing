@@ -9,8 +9,8 @@ import { getVariant } from './variant';
 export const styleUnstyledSpinner = (
   className: string,
   {
-    spin = true,
     disabled = false,
+    spin = true,
     variant = 'none',
     float = false,
     defaultSize = 'md',
