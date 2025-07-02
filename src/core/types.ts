@@ -321,6 +321,7 @@ export type TransitionProps = {
 };
 
 export type Classes = {
+  theme?: Theme;
   valid?: boolean;
   invalid?: boolean;
   focused?: boolean;
