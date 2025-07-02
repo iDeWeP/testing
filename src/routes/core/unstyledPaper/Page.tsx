@@ -9,6 +9,7 @@ import { MarginExample } from './MarginExample';
 import { OrientationExample } from './OrientationExample';
 import { RadiusExample } from './RadiusExample';
 import { ScaleExample } from './ScaleExample';
+import { ShadowExample } from './ShadowExample';
 import { SizeExample } from './SizeExample';
 import { VariantExample } from './VariantExample';
 
@@ -17,6 +18,7 @@ const Page = () => (
     <ExampleTitle>UnstyledPaper</ExampleTitle>
     <DefaultExample />
     <OrientationExample />
+    <ShadowExample />
     <JustifyExample />
     <AlignExample />
     <GapExample />
