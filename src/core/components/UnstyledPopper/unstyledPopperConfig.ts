@@ -18,7 +18,6 @@ export const unstyledPopperConfig: ComponentConfig<UnstyledPopperConfigProps> &
   Styles = {
   props: {
     as: 'div',
-    open: false,
     collision: 'none',
     closeOnOutClick: false,
     closeOnEsc: false,

@@ -35,7 +35,7 @@ export const UnstyledPopper = <E extends ElementType = 'div'>(
   const {
     ref: forwardedRef,
     anchorRef,
-    open: isOpen,
+    open: isOpen = false,
     followCursor,
     collision,
     closeOnOutClick,

@@ -35,13 +35,13 @@ export type UnstyledPopperComponentsProps = {
 
 type OptionalProps = {
   anchorRef?: RefObject<HTMLElement | null>;
+  open?: boolean;
   followCursor?: Cursor;
   onClose?: VoidFunction;
   onCollision?: (placement: Placement) => void;
 };
 
 export type UnstyledPopperDefaultProps = {
-  open?: boolean;
   collision?: Collision;
   closeOnOutClick?: boolean | RefObject<HTMLElement | null>;
   closeOnEsc?: boolean;
