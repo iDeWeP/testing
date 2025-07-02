@@ -74,7 +74,7 @@ export const UnstyledPopper = <E extends ElementType = 'div'>(
   const { handleResize } = useResize();
   const { animation, startAnimation, stopAnimation } = useAnimation(isOpen);
 
-  const isMovable = collision !== 'none' && (isOpen || !animation.isExited);
+  const isMovable = isOpen || !animation.isExited;
   const { top, left, mainAxis } = getCords(
     ref,
     collision,
@@ -85,11 +85,11 @@ export const UnstyledPopper = <E extends ElementType = 'div'>(
     followCursor
   );
 
-  useOverflow();
-
   useStartAnimation(isOpen, startAnimation);
 
   useCollision(mainAxis, onCollision);
+
+  useOverflow();
 
   useWindowResize(isMovable && handleResize);
 
