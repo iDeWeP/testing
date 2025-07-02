@@ -5,54 +5,14 @@ import { ExampleUnstyledGrid } from './ExampleUnstyledGrid';
 export const BorderExample = () => (
   <ExampleSection title="Border">
     <ExampleCard>
-      <ExampleUnstyledGrid
-        light
-        border={false}
-      >
-        FALSE
-      </ExampleUnstyledGrid>
-      <ExampleUnstyledGrid
-        light
-        border="all"
-      >
-        ALL
-      </ExampleUnstyledGrid>
-      <ExampleUnstyledGrid
-        light
-        border="x"
-      >
-        X
-      </ExampleUnstyledGrid>
-      <ExampleUnstyledGrid
-        light
-        border="y"
-      >
-        Y
-      </ExampleUnstyledGrid>
-      <ExampleUnstyledGrid
-        light
-        border="top"
-      >
-        TOP
-      </ExampleUnstyledGrid>
-      <ExampleUnstyledGrid
-        light
-        border="bottom"
-      >
-        BOTTOM
-      </ExampleUnstyledGrid>
-      <ExampleUnstyledGrid
-        light
-        border="left"
-      >
-        LEFT
-      </ExampleUnstyledGrid>
-      <ExampleUnstyledGrid
-        light
-        border="right"
-      >
-        RIGHT
-      </ExampleUnstyledGrid>
+      <ExampleUnstyledGrid border={false}>FALSE</ExampleUnstyledGrid>
+      <ExampleUnstyledGrid border="all">ALL</ExampleUnstyledGrid>
+      <ExampleUnstyledGrid border="x">X</ExampleUnstyledGrid>
+      <ExampleUnstyledGrid border="y">Y</ExampleUnstyledGrid>
+      <ExampleUnstyledGrid border="top">TOP</ExampleUnstyledGrid>
+      <ExampleUnstyledGrid border="bottom">BOTTOM</ExampleUnstyledGrid>
+      <ExampleUnstyledGrid border="left">LEFT</ExampleUnstyledGrid>
+      <ExampleUnstyledGrid border="right">RIGHT</ExampleUnstyledGrid>
     </ExampleCard>
   </ExampleSection>
 );

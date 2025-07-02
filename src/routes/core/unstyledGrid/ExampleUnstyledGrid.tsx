@@ -2,16 +2,16 @@ import { UnstyledGrid } from '../../../core/components/UnstyledGrid/UnstyledGrid
 import type { UnstyledGridProps } from '../../../core/components/UnstyledGrid/UnstyledGrid.types';
 
 type Props = {
-  light?: boolean;
+  clear?: boolean;
 } & UnstyledGridProps<'div'>;
 
 export const ExampleUnstyledGrid = ({
-  light,
+  clear,
   children = 'UNSTYLED-GRID',
   ...restProps
 }: Props) => (
   <UnstyledGrid
-    variant={light ? 'light' : 'none'}
+    variant={clear ? 'none' : 'light'}
     color="primary"
     {...restProps}
   >

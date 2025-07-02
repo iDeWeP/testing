@@ -5,24 +5,9 @@ import { ExampleUnstyledGrid } from './ExampleUnstyledGrid';
 export const ScaleExample = () => (
   <ExampleSection title="Scale">
     <ExampleCard>
-      <ExampleUnstyledGrid
-        light
-        scale="normal"
-      >
-        NORMAL
-      </ExampleUnstyledGrid>
-      <ExampleUnstyledGrid
-        light
-        scale="fit"
-      >
-        FIT
-      </ExampleUnstyledGrid>
-      <ExampleUnstyledGrid
-        light
-        scale="full"
-      >
-        FULL
-      </ExampleUnstyledGrid>
+      <ExampleUnstyledGrid scale="normal">NORMAL</ExampleUnstyledGrid>
+      <ExampleUnstyledGrid scale="fit">FIT</ExampleUnstyledGrid>
+      <ExampleUnstyledGrid scale="full">FULL</ExampleUnstyledGrid>
     </ExampleCard>
   </ExampleSection>
 );

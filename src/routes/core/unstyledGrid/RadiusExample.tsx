@@ -5,54 +5,14 @@ import { ExampleUnstyledGrid } from './ExampleUnstyledGrid';
 export const RadiusExample = () => (
   <ExampleSection title="Radius">
     <ExampleCard>
-      <ExampleUnstyledGrid
-        light
-        radius="none"
-      >
-        NONE
-      </ExampleUnstyledGrid>
-      <ExampleUnstyledGrid
-        light
-        radius="xs"
-      >
-        XS
-      </ExampleUnstyledGrid>
-      <ExampleUnstyledGrid
-        light
-        radius="sm"
-      >
-        SM
-      </ExampleUnstyledGrid>
-      <ExampleUnstyledGrid
-        light
-        radius="md"
-      >
-        MD
-      </ExampleUnstyledGrid>
-      <ExampleUnstyledGrid
-        light
-        radius="lg"
-      >
-        LG
-      </ExampleUnstyledGrid>
-      <ExampleUnstyledGrid
-        light
-        radius="xl"
-      >
-        XL
-      </ExampleUnstyledGrid>
-      <ExampleUnstyledGrid
-        light
-        radius="xxl"
-      >
-        XXL
-      </ExampleUnstyledGrid>
-      <ExampleUnstyledGrid
-        light
-        radius="full"
-      >
-        FULL
-      </ExampleUnstyledGrid>
+      <ExampleUnstyledGrid radius="none">NONE</ExampleUnstyledGrid>
+      <ExampleUnstyledGrid radius="xs">XS</ExampleUnstyledGrid>
+      <ExampleUnstyledGrid radius="sm">SM</ExampleUnstyledGrid>
+      <ExampleUnstyledGrid radius="md">MD</ExampleUnstyledGrid>
+      <ExampleUnstyledGrid radius="lg">LG</ExampleUnstyledGrid>
+      <ExampleUnstyledGrid radius="xl">XL</ExampleUnstyledGrid>
+      <ExampleUnstyledGrid radius="xxl">XXL</ExampleUnstyledGrid>
+      <ExampleUnstyledGrid radius="full">FULL</ExampleUnstyledGrid>
     </ExampleCard>
   </ExampleSection>
 );
