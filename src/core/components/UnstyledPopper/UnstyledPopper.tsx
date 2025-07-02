@@ -4,6 +4,7 @@ import { useEscape } from '../../../hooks/hooks/use-escape/use-escape';
 import { useFocusTrap } from '../../../hooks/hooks/use-focus-trap/use-focus-trap';
 import { useLockScroll } from '../../../hooks/hooks/use-lock-scroll/use-lock-scroll';
 import { useOutClick } from '../../../hooks/hooks/use-out-click/use-out-click';
+import { useOverflow } from '../../../hooks/hooks/use-overflow/use-overflow';
 import { useResize } from '../../../hooks/hooks/use-resize/use-resize';
 import { useScroll } from '../../../hooks/hooks/use-scroll/use-scroll';
 import { useWindowResize } from '../../../hooks/hooks/use-window-resize/use-window-resize';
@@ -83,6 +84,8 @@ export const UnstyledPopper = <E extends ElementType = 'div'>(
     anchorRef,
     followCursor
   );
+
+  useOverflow();
 
   useStartAnimation(isOpen, startAnimation);
 
