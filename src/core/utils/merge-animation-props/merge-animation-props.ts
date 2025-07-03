@@ -1,8 +1,8 @@
-import type { TransitionProps } from '../../types';
+import type { AnimationProps } from '../../types';
 
-export const mergeTransitionProps = (
-  defaultProps: TransitionProps,
-  props?: TransitionProps
+export const mergeAnimationProps = (
+  defaultProps: AnimationProps,
+  props?: AnimationProps
 ) => ({
   enterDuration: defaultProps?.enterDuration,
   exitDuration: defaultProps?.exitDuration,
