@@ -11,6 +11,7 @@ import { getVariant, getRingVariant } from './variant';
 export const styleUnstyledButton = (
   className: string,
   {
+    theme = 'light',
     loading = false,
     disabled = false,
     variant = 'none',
@@ -39,10 +40,10 @@ export const styleUnstyledButton = (
     generic.styles.border[getBorder(border)],
     generic.styles.radius[radius],
     generic.styles.size.font[size],
-    generic.styles.color.bg[statefulColor][bgVariant],
-    generic.styles.color.text[statefulColor][textVariant],
-    generic.styles.color.fill[statefulColor][textVariant],
-    generic.styles.color.ring[statefulColor][
+    generic.styles.color.bg[theme][statefulColor][bgVariant],
+    generic.styles.color.text[theme][statefulColor][textVariant],
+    generic.styles.color.fill[theme][statefulColor][textVariant],
+    generic.styles.color.ring[theme][statefulColor][
       getRingVariant(variant, disabled || !!loading)
     ],
     generic.styles.loading[getLoadingState(loading)],
