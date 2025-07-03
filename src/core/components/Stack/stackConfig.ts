@@ -1,15 +1,7 @@
-import type { CSSProps, ComponentConfig } from '../../types';
+import type { ComponentConfig } from '../../types';
 import type { StackConfigProps } from './Stack.types';
 
-type Styles = {
-  styles: {
-    root: {
-      default: CSSProps;
-    };
-  };
-};
-
-export const stackConfig: ComponentConfig<StackConfigProps> & Styles = {
+export const stackConfig: ComponentConfig<StackConfigProps> = {
   props: {
     as: 'div',
     gap: 'none',
@@ -43,13 +35,5 @@ export const stackConfig: ComponentConfig<StackConfigProps> & Styles = {
     shadow: 'none',
     gx: 'none',
     gy: 'none'
-  },
-  styles: {
-    root: {
-      default: {
-        display: 'flex',
-        flexDirection: 'flex-col'
-      }
-    }
   }
 };
