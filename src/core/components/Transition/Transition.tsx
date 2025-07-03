@@ -23,7 +23,7 @@ export const Transition = <E extends ElementType = 'div'>(
     className,
     style,
     onTransitionEnd,
-    transitionProps,
+    animationProps,
     ...restProps
   } = mergeProps(unstyledTransitionConfig.props, props);
 
@@ -49,7 +49,7 @@ export const Transition = <E extends ElementType = 'div'>(
     transition,
     duration,
     style,
-    transitionProps
+    animationProps
   );
 
   return (
