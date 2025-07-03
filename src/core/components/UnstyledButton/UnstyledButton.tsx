@@ -2,6 +2,7 @@ import type { ElementType } from 'react';
 import { useTheme } from '../../hooks/use-theme/use-theme';
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
 import { mergeProps } from '../../utils/merge-props/merge-props';
+import { setAria } from '../../utils/set-aria/set-aria';
 import { setVariant } from '../../utils/set-variant/set-variant';
 import { UnstyledRipple } from '../UnstyledRipple/UnstyledRipple';
 import { UnstyledSpinner } from '../UnstyledSpinner/UnstyledSpinner';
@@ -82,6 +83,7 @@ export const UnstyledButton = <E extends ElementType = 'button'>(
       disabled={disabled || !!loading}
       type="button"
       className={mergedClassName}
+      {...setAria('button', Component)}
       {...restProps}
     >
       {loading && loading !== 'right' && spinnerNode}
