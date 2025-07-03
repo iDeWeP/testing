@@ -1,11 +1,9 @@
 import { ExampleSection } from '../../../components/ExampleSection';
-import { ExampleUnstyledTransition } from './ExampleUnstyledTransition';
+import { Example } from './Example';
 
 export const UnmountOnExitExample = () => (
   <ExampleSection title="Unmount on exit">
-    <ExampleUnstyledTransition unmountOnExit={false}>
-      FALSE
-    </ExampleUnstyledTransition>
-    <ExampleUnstyledTransition unmountOnExit>TRUE</ExampleUnstyledTransition>
+    <Example unmountOnExit={false}>FALSE</Example>
+    <Example unmountOnExit>TRUE</Example>
   </ExampleSection>
 );

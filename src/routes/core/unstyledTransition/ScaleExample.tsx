@@ -1,10 +1,10 @@
 import { ExampleSection } from '../../../components/ExampleSection';
-import { ExampleUnstyledTransition } from './ExampleUnstyledTransition';
+import { Example } from './Example';
 
 export const ScaleExample = () => (
   <ExampleSection title="Scale">
-    <ExampleUnstyledTransition scale="normal">NORMAL</ExampleUnstyledTransition>
-    <ExampleUnstyledTransition scale="fit">FIT</ExampleUnstyledTransition>
-    <ExampleUnstyledTransition scale="full">FULL</ExampleUnstyledTransition>
+    <Example scale="normal">NORMAL</Example>
+    <Example scale="fit">FIT</Example>
+    <Example scale="full">FULL</Example>
   </ExampleSection>
 );

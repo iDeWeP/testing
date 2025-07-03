@@ -1,15 +1,15 @@
 import { ExampleSection } from '../../../components/ExampleSection';
-import { ExampleUnstyledTransition } from './ExampleUnstyledTransition';
+import { Example } from './Example';
 
 export const RadiusExample = () => (
   <ExampleSection title="Radius">
-    <ExampleUnstyledTransition radius="none">NONE</ExampleUnstyledTransition>
-    <ExampleUnstyledTransition radius="xs">XS</ExampleUnstyledTransition>
-    <ExampleUnstyledTransition radius="sm">SM</ExampleUnstyledTransition>
-    <ExampleUnstyledTransition radius="md">MD</ExampleUnstyledTransition>
-    <ExampleUnstyledTransition radius="lg">LG</ExampleUnstyledTransition>
-    <ExampleUnstyledTransition radius="xl">XL</ExampleUnstyledTransition>
-    <ExampleUnstyledTransition radius="xxl">XXL</ExampleUnstyledTransition>
-    <ExampleUnstyledTransition radius="full">FULL</ExampleUnstyledTransition>
+    <Example radius="none">NONE</Example>
+    <Example radius="xs">XS</Example>
+    <Example radius="sm">SM</Example>
+    <Example radius="md">MD</Example>
+    <Example radius="lg">LG</Example>
+    <Example radius="xl">XL</Example>
+    <Example radius="xxl">XXL</Example>
+    <Example radius="full">FULL</Example>
   </ExampleSection>
 );

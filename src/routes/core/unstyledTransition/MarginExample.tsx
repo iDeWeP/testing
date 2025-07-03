@@ -1,14 +1,14 @@
 import { ExampleSection } from '../../../components/ExampleSection';
-import { ExampleUnstyledTransition } from './ExampleUnstyledTransition';
+import { Example } from './Example';
 
 export const MarginExample = () => (
   <ExampleSection title="Margin">
-    <ExampleUnstyledTransition margin="none">NONE</ExampleUnstyledTransition>
-    <ExampleUnstyledTransition margin="xs">XS</ExampleUnstyledTransition>
-    <ExampleUnstyledTransition margin="sm">SM</ExampleUnstyledTransition>
-    <ExampleUnstyledTransition margin="md">MD</ExampleUnstyledTransition>
-    <ExampleUnstyledTransition margin="lg">LG</ExampleUnstyledTransition>
-    <ExampleUnstyledTransition margin="xl">XL</ExampleUnstyledTransition>
-    <ExampleUnstyledTransition margin="xxl">XXL</ExampleUnstyledTransition>
+    <Example margin="none">NONE</Example>
+    <Example margin="xs">XS</Example>
+    <Example margin="sm">SM</Example>
+    <Example margin="md">MD</Example>
+    <Example margin="lg">LG</Example>
+    <Example margin="xl">XL</Example>
+    <Example margin="xxl">XXL</Example>
   </ExampleSection>
 );

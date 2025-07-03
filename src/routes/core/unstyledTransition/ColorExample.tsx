@@ -1,55 +1,55 @@
 import { ExampleSection } from '../../../components/ExampleSection';
-import { ExampleUnstyledTransition } from './ExampleUnstyledTransition';
+import { Example } from './Example';
 
 export const ColorExample = () => (
   <ExampleSection title="Color">
-    <ExampleUnstyledTransition
+    <Example
       clear
       color="surface"
     >
       SURFACE
-    </ExampleUnstyledTransition>
-    <ExampleUnstyledTransition
+    </Example>
+    <Example
       clear
       color="neutral"
     >
       NEUTRAL
-    </ExampleUnstyledTransition>
-    <ExampleUnstyledTransition
+    </Example>
+    <Example
       clear
       color="primary"
     >
       PRIMARY
-    </ExampleUnstyledTransition>
-    <ExampleUnstyledTransition
+    </Example>
+    <Example
       clear
       color="secondary"
     >
       SECONDARY
-    </ExampleUnstyledTransition>
-    <ExampleUnstyledTransition
+    </Example>
+    <Example
       clear
       color="tertiary"
     >
       TERTIARY
-    </ExampleUnstyledTransition>
-    <ExampleUnstyledTransition
+    </Example>
+    <Example
       clear
       color="success"
     >
       SUCCESS
-    </ExampleUnstyledTransition>
-    <ExampleUnstyledTransition
+    </Example>
+    <Example
       clear
       color="warning"
     >
       WARNING
-    </ExampleUnstyledTransition>
-    <ExampleUnstyledTransition
+    </Example>
+    <Example
       clear
       color="error"
     >
       ERROR
-    </ExampleUnstyledTransition>
+    </Example>
   </ExampleSection>
 );

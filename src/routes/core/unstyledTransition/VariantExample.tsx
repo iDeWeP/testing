@@ -1,85 +1,85 @@
 import { ExampleSection } from '../../../components/ExampleSection';
-import { ExampleUnstyledTransition } from './ExampleUnstyledTransition';
+import { Example } from './Example';
 
 export const VariantExample = () => (
   <ExampleSection title="Variant">
-    <ExampleUnstyledTransition
+    <Example
       clear
       variant="none"
     >
       NONE
-    </ExampleUnstyledTransition>
-    <ExampleUnstyledTransition
+    </Example>
+    <Example
       clear
       variant="text"
     >
       TEXT
-    </ExampleUnstyledTransition>
-    <ExampleUnstyledTransition
+    </Example>
+    <Example
       clear
       variant="plain"
     >
       PLAIN
-    </ExampleUnstyledTransition>
-    <ExampleUnstyledTransition
+    </Example>
+    <Example
       clear
       variant="light"
     >
       LIGHT
-    </ExampleUnstyledTransition>
-    <ExampleUnstyledTransition
+    </Example>
+    <Example
       clear
       variant="surface"
     >
       SURFACE
-    </ExampleUnstyledTransition>
-    <ExampleUnstyledTransition
+    </Example>
+    <Example
       clear
       variant="solid"
     >
       SOLID
-    </ExampleUnstyledTransition>
-    <ExampleUnstyledTransition
+    </Example>
+    <Example
       clear
       variant="none"
       border
     >
       NONE-BORDER
-    </ExampleUnstyledTransition>
-    <ExampleUnstyledTransition
+    </Example>
+    <Example
       clear
       variant="text"
       border
     >
       TEXT-BORDER
-    </ExampleUnstyledTransition>
-    <ExampleUnstyledTransition
+    </Example>
+    <Example
       clear
       variant="plain"
       border
     >
       PLAIN-BORDER
-    </ExampleUnstyledTransition>
-    <ExampleUnstyledTransition
+    </Example>
+    <Example
       clear
       variant="light"
       border
     >
       LIGHT-BORDER
-    </ExampleUnstyledTransition>
-    <ExampleUnstyledTransition
+    </Example>
+    <Example
       clear
       variant="surface"
       border
     >
       SURFACE-BORDER
-    </ExampleUnstyledTransition>
-    <ExampleUnstyledTransition
+    </Example>
+    <Example
       clear
       variant="solid"
       border
     >
       SOLID-BORDER
-    </ExampleUnstyledTransition>
+    </Example>
   </ExampleSection>
 );

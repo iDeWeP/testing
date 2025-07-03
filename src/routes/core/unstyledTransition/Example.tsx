@@ -8,7 +8,7 @@ type Props = {
   clear?: boolean;
 } & UnstyledTransitionProps<'div'>;
 
-export const ExampleUnstyledTransition = ({
+export const Example = ({
   clear,
   children = 'UNSTYLED-TRANSITION',
   ...restProps

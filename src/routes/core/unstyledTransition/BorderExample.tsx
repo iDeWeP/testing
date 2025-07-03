@@ -1,17 +1,15 @@
 import { ExampleSection } from '../../../components/ExampleSection';
-import { ExampleUnstyledTransition } from './ExampleUnstyledTransition';
+import { Example } from './Example';
 
 export const BorderExample = () => (
   <ExampleSection title="Border">
-    <ExampleUnstyledTransition border={false}>FALSE</ExampleUnstyledTransition>
-    <ExampleUnstyledTransition border="all">ALL</ExampleUnstyledTransition>
-    <ExampleUnstyledTransition border="x">X</ExampleUnstyledTransition>
-    <ExampleUnstyledTransition border="y">Y</ExampleUnstyledTransition>
-    <ExampleUnstyledTransition border="top">TOP</ExampleUnstyledTransition>
-    <ExampleUnstyledTransition border="bottom">
-      BOTTOM
-    </ExampleUnstyledTransition>
-    <ExampleUnstyledTransition border="left">LEFT</ExampleUnstyledTransition>
-    <ExampleUnstyledTransition border="right">RIGHT</ExampleUnstyledTransition>
+    <Example border={false}>FALSE</Example>
+    <Example border="all">ALL</Example>
+    <Example border="x">X</Example>
+    <Example border="y">Y</Example>
+    <Example border="top">TOP</Example>
+    <Example border="bottom">BOTTOM</Example>
+    <Example border="left">LEFT</Example>
+    <Example border="right">RIGHT</Example>
   </ExampleSection>
 );
