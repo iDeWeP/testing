@@ -35,7 +35,7 @@ export const UnstyledButton = <E extends ElementType = 'button'>(
   const theme = useTheme();
 
   const isRelative =
-    ripple !== 'none' && loading !== 'left' && loading !== 'right' && !disabled;
+    loading !== 'left' && loading !== 'right' && !disabled && ripple !== 'none';
 
   const mergedClassName = mergeClassName('unstyledButton', className, {
     theme,
