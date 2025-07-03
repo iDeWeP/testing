@@ -24,7 +24,6 @@ export const UnstyledTransition = <E extends ElementType = 'div'>(
     style,
     onTransitionEnd,
     transitionProps,
-    scale,
     ...restProps
   } = mergeProps(unstyledTransitionConfig.props, props);
 
@@ -47,7 +46,6 @@ export const UnstyledTransition = <E extends ElementType = 'div'>(
     isIn,
     animation,
     peak,
-    scale,
     transition,
     duration,
     style,
@@ -57,7 +55,6 @@ export const UnstyledTransition = <E extends ElementType = 'div'>(
   return (
     <UnstyledBox
       ref={mergeRefs(forwardedRef, ref)}
-      scale={scale}
       className={mergedClassName}
       style={mergedStyles}
       onTransitionEnd={combineHandlers(onTransitionEnd, stopAnimation)}
