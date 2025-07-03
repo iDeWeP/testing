@@ -5,6 +5,7 @@ import { Example } from './Example';
 export const ColorExample = () => (
   <ExampleSection title="Color">
     <ExampleCard>
+      <Example color="none">NONE</Example>
       <Example color="surface">SURFACE</Example>
       <Example color="neutral">NEUTRAL</Example>
       <Example color="primary">PRIMARY</Example>

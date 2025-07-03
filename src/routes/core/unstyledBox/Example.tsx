@@ -11,8 +11,8 @@ export const Example = ({
   ...restProps
 }: Props) => (
   <UnstyledBox
-    variant={clear ? 'none' : 'light'}
-    color="primary"
+    variant="light"
+    color={clear ? 'none' : 'primary'}
     {...restProps}
   >
     {children}
