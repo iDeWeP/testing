@@ -5,6 +5,7 @@ import { Example } from './Example';
 export const SizeExample = () => (
   <ExampleSection title="Size">
     <ExampleCard>
+      <Example size="none">NONE</Example>
       <Example size="xs">XS</Example>
       <Example size="sm">SM</Example>
       <Example size="md">MD</Example>
