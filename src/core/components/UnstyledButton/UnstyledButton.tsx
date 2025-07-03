@@ -1,4 +1,5 @@
 import type { ElementType } from 'react';
+import { useTheme } from '../../hooks/use-theme/use-theme';
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
 import { mergeProps } from '../../utils/merge-props/merge-props';
 import { setVariant } from '../../utils/set-variant/set-variant';
@@ -31,10 +32,13 @@ export const UnstyledButton = <E extends ElementType = 'button'>(
     ...restProps
   } = mergeProps(unstyledButtonConfig.props, props);
 
+  const theme = useTheme();
+
   const isRelative =
     ripple !== 'none' && loading !== 'left' && loading !== 'right' && !disabled;
 
   const mergedClassName = mergeClassName('unstyledButton', className, {
+    theme,
     loading,
     disabled,
     variant,
