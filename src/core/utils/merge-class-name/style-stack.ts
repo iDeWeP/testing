@@ -1,5 +1,5 @@
-import { stackConfig } from '../../components/Stack/stackConfig';
+import { sharedStyles } from '../../config/shared-styles';
 import { mergeClasses } from './merge-classes';
 
 export const styleStack = (className: string) =>
-  mergeClasses(stackConfig.styles.root.default, className);
+  mergeClasses(sharedStyles.stack, className);
