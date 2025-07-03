@@ -1,5 +1,5 @@
 import type { ElementType } from 'react';
-import type { Gap } from '../../types';
+import type { Gap, MergeProps } from '../../types';
 import type {
   UnstyledBoxConfigProps,
   UnstyledBoxProps
@@ -9,7 +9,12 @@ export type FlexDefaultProps = {
   gap?: Gap;
 };
 
-export type FlexConfigProps = UnstyledBoxConfigProps;
+export type FlexConfigProps = MergeProps<
+  UnstyledBoxConfigProps,
+  FlexDefaultProps
+>;
 
-export type FlexProps<E extends ElementType> = UnstyledBoxProps<E> &
-  FlexDefaultProps;
+export type FlexProps<E extends ElementType> = MergeProps<
+  UnstyledBoxProps<E>,
+  FlexDefaultProps
+>;
