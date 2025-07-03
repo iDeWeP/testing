@@ -1,14 +1,14 @@
 import { ExampleCard } from '../../../components/ExampleCard';
 import { ExampleSection } from '../../../components/ExampleSection';
-import { ExampleUnstyledButton } from './ExampleUnstyledButton';
+import { Example } from './Example';
 
 export const LoadingExample = () => (
   <ExampleSection title="Loading">
     <ExampleCard>
-      <ExampleUnstyledButton loading={false}>FALSE</ExampleUnstyledButton>
-      <ExampleUnstyledButton loading>TRUE</ExampleUnstyledButton>
-      <ExampleUnstyledButton loading="left">LEFT</ExampleUnstyledButton>
-      <ExampleUnstyledButton loading="right">RIGHT</ExampleUnstyledButton>
+      <Example loading={false}>FALSE</Example>
+      <Example loading>TRUE</Example>
+      <Example loading="left">LEFT</Example>
+      <Example loading="right">RIGHT</Example>
     </ExampleCard>
   </ExampleSection>
 );

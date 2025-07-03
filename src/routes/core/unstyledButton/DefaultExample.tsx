@@ -1,24 +1,20 @@
 import { ExampleCard } from '../../../components/ExampleCard';
 import { ExampleSection } from '../../../components/ExampleSection';
-import { ExampleUnstyledButton } from './ExampleUnstyledButton';
+import { Example } from './Example';
 
 export const DefaultExample = () => (
   <ExampleSection title="Default">
     <ExampleCard>
-      <ExampleUnstyledButton clear />
-      <ExampleUnstyledButton leftDecorator="LEFT-DECORATOR">
-        UNSTYLED-BUTTON
-      </ExampleUnstyledButton>
-      <ExampleUnstyledButton rightDecorator="RIGHT-DECORATOR">
-        UNSTYLED-BUTTON
-      </ExampleUnstyledButton>
-      <ExampleUnstyledButton
+      <Example clear />
+      <Example leftDecorator="LEFT-DECORATOR">UNSTYLED-BUTTON</Example>
+      <Example rightDecorator="RIGHT-DECORATOR">UNSTYLED-BUTTON</Example>
+      <Example
         leftDecorator="LEFT-DECORATOR"
         rightDecorator="RIGHT-DECORATOR"
       >
         UNSTYLED-BUTTON
-      </ExampleUnstyledButton>
-      <ExampleUnstyledButton ripple="none">RIPPLE-NONE</ExampleUnstyledButton>
+      </Example>
+      <Example ripple="none">RIPPLE-NONE</Example>
     </ExampleCard>
   </ExampleSection>
 );

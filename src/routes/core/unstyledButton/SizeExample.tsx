@@ -1,16 +1,16 @@
 import { ExampleCard } from '../../../components/ExampleCard';
 import { ExampleSection } from '../../../components/ExampleSection';
-import { ExampleUnstyledButton } from './ExampleUnstyledButton';
+import { Example } from './Example';
 
 export const SizeExample = () => (
   <ExampleSection title="Size">
     <ExampleCard>
-      <ExampleUnstyledButton size="xs">XS</ExampleUnstyledButton>
-      <ExampleUnstyledButton size="sm">SM</ExampleUnstyledButton>
-      <ExampleUnstyledButton size="md">MD</ExampleUnstyledButton>
-      <ExampleUnstyledButton size="lg">LG</ExampleUnstyledButton>
-      <ExampleUnstyledButton size="xl">XL</ExampleUnstyledButton>
-      <ExampleUnstyledButton size="xxl">XXL</ExampleUnstyledButton>
+      <Example size="xs">XS</Example>
+      <Example size="sm">SM</Example>
+      <Example size="md">MD</Example>
+      <Example size="lg">LG</Example>
+      <Example size="xl">XL</Example>
+      <Example size="xxl">XXL</Example>
     </ExampleCard>
   </ExampleSection>
 );

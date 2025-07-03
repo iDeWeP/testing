@@ -1,18 +1,18 @@
 import { ExampleCard } from '../../../components/ExampleCard';
 import { ExampleSection } from '../../../components/ExampleSection';
-import { ExampleUnstyledButton } from './ExampleUnstyledButton';
+import { Example } from './Example';
 
 export const RadiusExample = () => (
   <ExampleSection title="Radius">
     <ExampleCard>
-      <ExampleUnstyledButton radius="none">NONE</ExampleUnstyledButton>
-      <ExampleUnstyledButton radius="xs">XS</ExampleUnstyledButton>
-      <ExampleUnstyledButton radius="sm">SM</ExampleUnstyledButton>
-      <ExampleUnstyledButton radius="md">MD</ExampleUnstyledButton>
-      <ExampleUnstyledButton radius="lg">LG</ExampleUnstyledButton>
-      <ExampleUnstyledButton radius="xl">XL</ExampleUnstyledButton>
-      <ExampleUnstyledButton radius="xxl">XXL</ExampleUnstyledButton>
-      <ExampleUnstyledButton radius="full">FULL</ExampleUnstyledButton>
+      <Example radius="none">NONE</Example>
+      <Example radius="xs">XS</Example>
+      <Example radius="sm">SM</Example>
+      <Example radius="md">MD</Example>
+      <Example radius="lg">LG</Example>
+      <Example radius="xl">XL</Example>
+      <Example radius="xxl">XXL</Example>
+      <Example radius="full">FULL</Example>
     </ExampleCard>
   </ExampleSection>
 );

@@ -1,52 +1,52 @@
 import { ExampleCard } from '../../../components/ExampleCard';
 import { ExampleSection } from '../../../components/ExampleSection';
-import { ExampleUnstyledButton } from './ExampleUnstyledButton';
+import { Example } from './Example';
 
 export const VariantExample = () => (
   <ExampleSection title="Variant">
     <ExampleCard>
-      <ExampleUnstyledButton variant="none">NONE</ExampleUnstyledButton>
-      <ExampleUnstyledButton variant="text">TEXT</ExampleUnstyledButton>
-      <ExampleUnstyledButton variant="plain">PLAIN</ExampleUnstyledButton>
-      <ExampleUnstyledButton variant="light">LIGHT</ExampleUnstyledButton>
-      <ExampleUnstyledButton variant="surface">SURFACE</ExampleUnstyledButton>
-      <ExampleUnstyledButton variant="solid">SOLID</ExampleUnstyledButton>
-      <ExampleUnstyledButton
+      <Example variant="none">NONE</Example>
+      <Example variant="text">TEXT</Example>
+      <Example variant="plain">PLAIN</Example>
+      <Example variant="light">LIGHT</Example>
+      <Example variant="surface">SURFACE</Example>
+      <Example variant="solid">SOLID</Example>
+      <Example
         variant="none"
         border
       >
         NONE-BORDER
-      </ExampleUnstyledButton>
-      <ExampleUnstyledButton
+      </Example>
+      <Example
         variant="text"
         border
       >
         TEXT-BORDER
-      </ExampleUnstyledButton>
-      <ExampleUnstyledButton
+      </Example>
+      <Example
         variant="plain"
         border
       >
         PLAIN-BORDER
-      </ExampleUnstyledButton>
-      <ExampleUnstyledButton
+      </Example>
+      <Example
         variant="light"
         border
       >
         LIGHT-BORDER
-      </ExampleUnstyledButton>
-      <ExampleUnstyledButton
+      </Example>
+      <Example
         variant="surface"
         border
       >
         SURFACE-BORDER
-      </ExampleUnstyledButton>
-      <ExampleUnstyledButton
+      </Example>
+      <Example
         variant="solid"
         border
       >
         SOLID-BORDER
-      </ExampleUnstyledButton>
+      </Example>
     </ExampleCard>
   </ExampleSection>
 );

@@ -1,12 +1,12 @@
 import { ExampleCard } from '../../../components/ExampleCard';
 import { ExampleSection } from '../../../components/ExampleSection';
-import { ExampleUnstyledButton } from './ExampleUnstyledButton';
+import { Example } from './Example';
 
 export const DisabledExample = () => (
   <ExampleSection title="Disabled">
     <ExampleCard>
-      <ExampleUnstyledButton disabled={false}>FALSE</ExampleUnstyledButton>
-      <ExampleUnstyledButton disabled>TRUE</ExampleUnstyledButton>
+      <Example disabled={false}>FALSE</Example>
+      <Example disabled>TRUE</Example>
     </ExampleCard>
   </ExampleSection>
 );

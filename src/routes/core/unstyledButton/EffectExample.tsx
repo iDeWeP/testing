@@ -1,12 +1,12 @@
 import { ExampleCard } from '../../../components/ExampleCard';
 import { ExampleSection } from '../../../components/ExampleSection';
-import { ExampleUnstyledButton } from './ExampleUnstyledButton';
+import { Example } from './Example';
 
 export const EffectExample = () => (
   <ExampleSection title="Effect">
     <ExampleCard>
-      <ExampleUnstyledButton effect="none">NONE</ExampleUnstyledButton>
-      <ExampleUnstyledButton effect="shadow">SHADOW</ExampleUnstyledButton>
+      <Example effect="none">NONE</Example>
+      <Example effect="shadow">SHADOW</Example>
     </ExampleCard>
   </ExampleSection>
 );
