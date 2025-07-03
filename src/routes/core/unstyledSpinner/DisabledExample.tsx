@@ -1,12 +1,12 @@
 import { ExampleCard } from '../../../components/ExampleCard';
 import { ExampleSection } from '../../../components/ExampleSection';
-import { ExampleUnstyledSpinner } from './ExampleUnstyledSpinner';
+import { Example } from './Example';
 
 export const DisabledExample = () => (
   <ExampleSection title="Disabled">
     <ExampleCard>
-      <ExampleUnstyledSpinner disabled={false}>FALSE</ExampleUnstyledSpinner>
-      <ExampleUnstyledSpinner disabled={true}>TRUE</ExampleUnstyledSpinner>
+      <Example disabled={false}>FALSE</Example>
+      <Example disabled>TRUE</Example>
     </ExampleCard>
   </ExampleSection>
 );

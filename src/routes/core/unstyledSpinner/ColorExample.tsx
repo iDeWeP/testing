@@ -1,20 +1,18 @@
 import { ExampleCard } from '../../../components/ExampleCard';
 import { ExampleSection } from '../../../components/ExampleSection';
-import { ExampleUnstyledSpinner } from './ExampleUnstyledSpinner';
+import { Example } from './Example';
 
 export const ColorExample = () => (
   <ExampleSection title="Color">
     <ExampleCard>
-      <ExampleUnstyledSpinner color="surface">SURFACE</ExampleUnstyledSpinner>
-      <ExampleUnstyledSpinner color="neutral">NEUTRAL</ExampleUnstyledSpinner>
-      <ExampleUnstyledSpinner color="primary">PRIMARY</ExampleUnstyledSpinner>
-      <ExampleUnstyledSpinner color="secondary">
-        SECONDARY
-      </ExampleUnstyledSpinner>
-      <ExampleUnstyledSpinner color="tertiary">TERTIARY</ExampleUnstyledSpinner>
-      <ExampleUnstyledSpinner color="success">SUCCESS</ExampleUnstyledSpinner>
-      <ExampleUnstyledSpinner color="warning">WARNING</ExampleUnstyledSpinner>
-      <ExampleUnstyledSpinner color="error">ERROR</ExampleUnstyledSpinner>
+      <Example color="surface">SURFACE</Example>
+      <Example color="neutral">NEUTRAL</Example>
+      <Example color="primary">PRIMARY</Example>
+      <Example color="secondary">SECONDARY</Example>
+      <Example color="tertiary">TERTIARY</Example>
+      <Example color="success">SUCCESS</Example>
+      <Example color="warning">WARNING</Example>
+      <Example color="error">ERROR</Example>
     </ExampleCard>
   </ExampleSection>
 );

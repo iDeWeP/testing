@@ -1,12 +1,12 @@
 import { ExampleCard } from '../../../components/ExampleCard';
 import { ExampleSection } from '../../../components/ExampleSection';
-import { ExampleUnstyledSpinner } from './ExampleUnstyledSpinner';
+import { Example } from './Example';
 
 export const FloatExample = () => (
   <ExampleSection title="Float">
     <ExampleCard>
-      <ExampleUnstyledSpinner float={false}>FALSE</ExampleUnstyledSpinner>
-      <ExampleUnstyledSpinner float={true}>TRUE</ExampleUnstyledSpinner>
+      <Example float={false}>FALSE</Example>
+      <Example float>TRUE</Example>
     </ExampleCard>
   </ExampleSection>
 );

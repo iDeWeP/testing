@@ -1,52 +1,52 @@
 import { ExampleCard } from '../../../components/ExampleCard';
 import { ExampleSection } from '../../../components/ExampleSection';
-import { ExampleUnstyledSpinner } from './ExampleUnstyledSpinner';
+import { Example } from './Example';
 
 export const VariantExample = () => (
   <ExampleSection title="Variant">
     <ExampleCard>
-      <ExampleUnstyledSpinner variant="none">NONE</ExampleUnstyledSpinner>
-      <ExampleUnstyledSpinner variant="text">TEXT</ExampleUnstyledSpinner>
-      <ExampleUnstyledSpinner variant="plain">PLAIN</ExampleUnstyledSpinner>
-      <ExampleUnstyledSpinner variant="light">LIGHT</ExampleUnstyledSpinner>
-      <ExampleUnstyledSpinner variant="surface">SURFACE</ExampleUnstyledSpinner>
-      <ExampleUnstyledSpinner variant="solid">SOLID</ExampleUnstyledSpinner>
-      <ExampleUnstyledSpinner
+      <Example variant="none">NONE</Example>
+      <Example variant="text">TEXT</Example>
+      <Example variant="plain">PLAIN</Example>
+      <Example variant="light">LIGHT</Example>
+      <Example variant="surface">SURFACE</Example>
+      <Example variant="solid">SOLID</Example>
+      <Example
         variant="none"
         border
       >
         NONE-BORDER
-      </ExampleUnstyledSpinner>
-      <ExampleUnstyledSpinner
+      </Example>
+      <Example
         variant="text"
         border
       >
         TEXT-BORDER
-      </ExampleUnstyledSpinner>
-      <ExampleUnstyledSpinner
+      </Example>
+      <Example
         variant="plain"
         border
       >
         PLAIN-BORDER
-      </ExampleUnstyledSpinner>
-      <ExampleUnstyledSpinner
+      </Example>
+      <Example
         variant="light"
         border
       >
         LIGHT-BORDER
-      </ExampleUnstyledSpinner>
-      <ExampleUnstyledSpinner
+      </Example>
+      <Example
         variant="surface"
         border
       >
         SURFACE-BORDER
-      </ExampleUnstyledSpinner>
-      <ExampleUnstyledSpinner
+      </Example>
+      <Example
         variant="solid"
         border
       >
         SOLID-BORDER
-      </ExampleUnstyledSpinner>
+      </Example>
     </ExampleCard>
   </ExampleSection>
 );

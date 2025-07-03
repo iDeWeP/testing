@@ -1,11 +1,11 @@
 import { ExampleCard } from '../../../components/ExampleCard';
 import { ExampleSection } from '../../../components/ExampleSection';
-import { ExampleUnstyledSpinner } from './ExampleUnstyledSpinner';
+import { Example } from './Example';
 
 export const ThicknessExample = () => (
   <ExampleSection title="Thickness">
     <ExampleCard>
-      <ExampleUnstyledSpinner thickness={8}>8</ExampleUnstyledSpinner>
+      <Example thickness={8}>8</Example>
     </ExampleCard>
   </ExampleSection>
 );

@@ -1,12 +1,12 @@
 import { ExampleCard } from '../../../components/ExampleCard';
 import { ExampleSection } from '../../../components/ExampleSection';
-import { ExampleUnstyledSpinner } from './ExampleUnstyledSpinner';
+import { Example } from './Example';
 
 export const ScaleExample = () => (
   <ExampleSection title="Scale">
     <ExampleCard>
-      <ExampleUnstyledSpinner scale="normal">NORNAL</ExampleUnstyledSpinner>
-      <ExampleUnstyledSpinner scale="text">TEXT</ExampleUnstyledSpinner>
+      <Example scale="normal">NORNAL</Example>
+      <Example scale="text">TEXT</Example>
     </ExampleCard>
   </ExampleSection>
 );
