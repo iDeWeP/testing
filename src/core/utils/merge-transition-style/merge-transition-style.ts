@@ -1,12 +1,12 @@
 import type { RefObject, CSSProperties } from 'react';
 import type { Animation } from '../../../hooks/hooks/use-animation/use-animation';
 import type { Peak, Scale, Transition, TransitionProps } from '../../types';
+import { getFadeStyle } from '../get-fade-style/get-fade-style';
+import { styleCollapse } from '../style-collapse/style-collapse';
 import { styleFade } from '../style-fade/style-fade';
+import { styleGrow } from '../style-grow/style-grow';
+import { styleSlide } from '../style-slide/style-slide';
 import { styleTransition } from '../style-transition/style-transition';
-import { getFadeStyle } from './get-fade-style';
-import { styleCollapse } from './style-collapse';
-import { styleGrow } from './style-grow';
-import { styleSlide } from './style-slide';
 
 const setStyle = {
   collapse: styleCollapse,
