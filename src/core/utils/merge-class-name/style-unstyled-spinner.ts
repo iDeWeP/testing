@@ -9,6 +9,7 @@ import { getVariant } from './variant';
 export const styleUnstyledSpinner = (
   className: string,
   {
+    theme = 'light',
     disabled = false,
     spin = true,
     variant = 'none',
@@ -25,7 +26,7 @@ export const styleUnstyledSpinner = (
     float && unstyledSpinnerConfig.styles.root.float[sizeScale][defaultSize],
     generic.styles.size[sizeScale].square[defaultSize],
     generic.styles.margin[margin],
-    generic.styles.color.stroke[getColor(color, disabled)][
+    generic.styles.color.stroke[theme][getColor(color, disabled)][
       getVariant(variant, disabled).textVariant
     ],
     unstyledSpinnerConfig.styles.root[getSpinnerTransition(spin, disabled)],
