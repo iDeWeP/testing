@@ -1,4 +1,4 @@
-import type { ComponentConfig, CSSProps } from '../../types';
+import type { CSSProps, ComponentConfig } from '../../types';
 import type { StackConfigProps } from './Stack.types';
 
 type Styles = {
