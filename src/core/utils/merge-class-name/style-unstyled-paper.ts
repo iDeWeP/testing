@@ -7,6 +7,7 @@ export const styleUnstyledPaper = (
   className: string,
   {
     orientation = 'horizontal',
+    shadow = 'none',
     justifyContent = 'normal',
     alignItems = 'stretch',
     gap = 'none'
@@ -15,6 +16,7 @@ export const styleUnstyledPaper = (
   mergeClasses(
     generic.styles.display.flex,
     generic.styles.direction[getDirection(orientation)],
+    generic.styles.shadow[shadow],
     generic.styles.justifyContent[justifyContent],
     generic.styles.alignItems[alignItems],
     generic.styles.gap.default[gap],

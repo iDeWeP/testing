@@ -7,6 +7,7 @@ import { getVariant } from './variant';
 export const styleUnstyledBox = (
   className: string,
   {
+    theme = 'light',
     variant = 'none',
     spacing = 'none',
     scale = 'normal',
@@ -24,9 +25,9 @@ export const styleUnstyledBox = (
     generic.styles.margin[margin],
     generic.styles.border[getBorder(border)],
     generic.styles.radius[radius],
-    generic.styles.color.bg[color][bgVariant],
-    generic.styles.color.text[color][textVariant],
-    generic.styles.color.fill[color][textVariant],
+    generic.styles.color.bg[theme][color][bgVariant],
+    generic.styles.color.text[theme][color][textVariant],
+    generic.styles.color.fill[theme][color][textVariant],
     className
   );
 };
