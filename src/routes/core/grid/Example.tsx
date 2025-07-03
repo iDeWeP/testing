@@ -5,4 +5,3 @@ export const Example = ({
   children = 'GRID',
   ...restProps
 }: GridProps<'div'>) => <Grid {...restProps}>{children}</Grid>;
-D
