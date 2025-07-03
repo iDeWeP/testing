@@ -1,4 +1,4 @@
-import { systemStyles } from '../../config/systemStyles';
+import { systemStyles } from '../../config/system-styles';
 import type { Classes } from '../../types';
 import { getBorder } from './border';
 import { getColor } from './color';
