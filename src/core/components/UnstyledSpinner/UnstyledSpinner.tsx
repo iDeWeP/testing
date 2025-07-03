@@ -1,3 +1,4 @@
+import { useTheme } from '../../hooks/use-theme/use-theme';
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
 import { hasVariantBg } from '../../utils/merge-class-name/variant';
 import { mergeProps } from '../../utils/merge-props/merge-props';
@@ -24,10 +25,14 @@ export const UnstyledSpinner = (props: UnstyledSpinnerProps) => {
     ...restProps
   } = mergeProps(unstyledSpinnerConfig.props, props);
 
+  const theme = useTheme();
+
   const length = 2 * Math.PI * (20 - thickness / 2);
   const offset = length - (value * length) / 100;
+  const hasTrail = trail === undefined ? hasVariantBg(variant) : trail;
 
   const mergedClassName = mergeClassName('unstyledSpinner', className, {
+    theme,
     disabled,
     spin,
     variant,
@@ -38,8 +43,6 @@ export const UnstyledSpinner = (props: UnstyledSpinnerProps) => {
     color
   });
 
-  const hasTrail = trail === undefined ? hasVariantBg(variant) : trail;
-
   return (
     <svg
       viewBox="0 0 40 40"
@@ -49,6 +52,7 @@ export const UnstyledSpinner = (props: UnstyledSpinnerProps) => {
     >
       {hasTrail && (
         <UnstyledSpinnerTrail
+          theme={theme}
           disabled={disabled}
           strokeWidth={thickness}
           variant={variant}

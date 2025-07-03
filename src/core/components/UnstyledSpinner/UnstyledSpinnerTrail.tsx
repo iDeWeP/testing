@@ -1,9 +1,10 @@
-import type { MergeComponentProps, Variant, Color } from '../../types';
+import type { MergeComponentProps, Theme, Variant, Color } from '../../types';
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
 
 type Props = MergeComponentProps<
   'circle',
   {
+    theme: Theme;
     disabled: boolean;
     variant: Variant;
     color: Color;
@@ -11,6 +12,7 @@ type Props = MergeComponentProps<
 >;
 
 export const UnstyledSpinnerTrail = ({
+  theme,
   disabled,
   variant,
   color,
@@ -18,6 +20,7 @@ export const UnstyledSpinnerTrail = ({
   ...restProps
 }: Props) => {
   const mergedClassName = mergeClassName('unstyledSpinnerTrail', className, {
+    theme,
     disabled,
     variant,
     color
