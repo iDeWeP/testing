@@ -5,7 +5,7 @@ import { Example } from './Example';
 
 export const GapExample = () => (
   <ExampleSection title="Gap">
-    <ExampleCard>
+    <ExampleCard col>
       <Example gap="none">
         <ExampleBox>NONE #1</ExampleBox>
         <ExampleBox>NONE #2</ExampleBox>
