@@ -4,6 +4,7 @@ import type { FlexConfigProps } from './Flex.types';
 export const flexConfig: ComponentConfig<FlexConfigProps> = {
   props: {
     as: 'div',
+    gap: 'none',
     variant: 'text',
     padding: 'none',
     px: 'none',
@@ -32,7 +33,6 @@ export const flexConfig: ComponentConfig<FlexConfigProps> = {
     font: 'none',
     color: 'none',
     shadow: 'none',
-    gap: 'none',
     gx: 'none',
     gy: 'none'
   }
