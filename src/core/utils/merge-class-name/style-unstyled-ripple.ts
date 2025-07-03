@@ -8,6 +8,7 @@ import { getVariant } from './variant';
 export const styleUnstyledRipple = (
   className: string,
   {
+    theme = 'light',
     valid = false,
     invalid = false,
     stateful = false,
@@ -18,7 +19,7 @@ export const styleUnstyledRipple = (
   mergeClasses(
     unstyledRippleConfig.styles.root.default,
     stateful && unstyledRippleConfig.styles.root.stateful,
-    unstyledRippleConfig.styles.root.color[
+    unstyledRippleConfig.styles.root.color[theme][
       getValidityColor(color, valid, invalid)
     ][getRippleState(stateful)][getVariant(variant).textVariant],
     className
