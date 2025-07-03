@@ -29,7 +29,6 @@ export const UnstyledSpinner = (props: UnstyledSpinnerProps) => {
 
   const length = 2 * Math.PI * (20 - thickness / 2);
   const offset = length - (value * length) / 100;
-  const hasTrail = trail === undefined ? hasVariantBg(variant) : trail;
 
   const mergedClassName = mergeClassName('unstyledSpinner', className, {
     theme,
@@ -42,6 +41,8 @@ export const UnstyledSpinner = (props: UnstyledSpinnerProps) => {
     margin,
     color
   });
+
+  const hasTrail = trail === undefined ? hasVariantBg(variant) : trail;
 
   return (
     <svg
