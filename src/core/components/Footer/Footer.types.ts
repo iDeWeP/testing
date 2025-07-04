@@ -5,16 +5,16 @@ import type {
   UnstyledBoxProps
 } from '../UnstyledBox/UnstyledBox.types';
 
-export type FlexDefaultProps = {
+export type FooterDefaultProps = {
   gap?: Gap;
 };
 
-export type FlexConfigProps = MergeProps<
+export type FooterConfigProps = MergeProps<
   UnstyledBoxConfigProps,
-  FlexDefaultProps
+  FooterDefaultProps
 >;
 
-export type FlexProps<E extends ElementType> = MergeProps<
+export type FooterProps<E extends ElementType> = MergeProps<
   UnstyledBoxProps<E>,
-  FlexDefaultProps
+  FooterDefaultProps
 >;
