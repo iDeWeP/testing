@@ -6,7 +6,6 @@ import type {
 } from '../UnstyledBox/UnstyledBox.types';
 
 export type TextDefaultProps = {
-  as?: ElementType;
   variant?: Variant;
   font?: Font;
   color?: Color;
