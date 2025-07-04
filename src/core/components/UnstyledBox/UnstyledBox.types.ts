@@ -4,14 +4,14 @@ import type {
   Padding,
   Margin,
   Border,
+  DefaultBorder,
   Radius,
   Font,
   Color,
   Shadow,
   Gap,
   MergeProps,
-  ComponentRefProps,
-  DefaultBorder
+  ComponentRefProps
 } from '../../types';
 
 export type UnstyledBoxDefaultProps = {
