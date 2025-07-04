@@ -16,7 +16,7 @@ export const Title = <E extends ElementType = 'h3'>(props: TitleProps<E>) => {
 
   return (
     <UnstyledBox
-      font="none"
+      font="unset"
       className={mergedClassName}
       {...restProps}
     />
