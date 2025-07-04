@@ -68,7 +68,7 @@ export const styleUnstyledBox = (
     systemStyles.radius.tr[rtr],
     systemStyles.radius.bl[rbl],
     systemStyles.radius.br[rbr],
-    systemStyles.font[font],
+    systemStyles.size.font[font],
     systemStyles.color.bg[theme][bgColor],
     systemStyles.color.text[theme][textColor],
     systemStyles.color.fill[theme][textColor],
