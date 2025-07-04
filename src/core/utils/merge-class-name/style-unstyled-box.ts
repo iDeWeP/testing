@@ -1,6 +1,5 @@
 import { systemStyles } from '../../config/system-styles';
 import type { Classes } from '../../types';
-import { getBorder } from './border';
 import { getColor } from './color';
 import { mergeClasses } from './merge-classes';
 
@@ -24,6 +23,12 @@ export const styleUnstyledBox = (
     ml = 'unset',
     mr = 'unset',
     border = 'unset',
+    bx = 'unset',
+    by = 'unset',
+    bt = 'unset',
+    bb = 'unset',
+    bl = 'unset',
+    br = 'unset',
     radius = 'unset',
     rt = 'unset',
     rb = 'unset',
@@ -58,7 +63,13 @@ export const styleUnstyledBox = (
     systemStyles.margin.b[mb],
     systemStyles.margin.l[ml],
     systemStyles.margin.r[mr],
-    systemStyles.border[getBorder(border)],
+    systemStyles.border.all[border],
+    systemStyles.border.x[bx],
+    systemStyles.border.y[by],
+    systemStyles.border.t[bt],
+    systemStyles.border.b[bb],
+    systemStyles.border.l[bl],
+    systemStyles.border.r[br],
     systemStyles.radius.all[radius],
     systemStyles.radius.t[rt],
     systemStyles.radius.b[rb],
