@@ -8,13 +8,13 @@ import { headerConfig } from './headerConfig';
 export const Header = <E extends ElementType = 'header'>(
   props: HeaderProps<E>
 ) => {
-  const { className, ...restProps } = useMergeProps(
+  const { orientation, className, ...restProps } = useMergeProps(
     'header',
     headerConfig.props,
     props
   );
 
-  const mergedClassName = mergeClassName('flex', className);
+  const mergedClassName = mergeClassName('list', className, { orientation });
 
   return (
     <UnstyledBox

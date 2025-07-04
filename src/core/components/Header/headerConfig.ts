@@ -4,6 +4,7 @@ import type { HeaderConfigProps } from './Header.types';
 export const headerConfig: ComponentConfig<HeaderConfigProps> = {
   props: {
     as: 'header',
+    orientation: 'row',
     gap: 'none',
     variant: 'text',
     padding: 'none',

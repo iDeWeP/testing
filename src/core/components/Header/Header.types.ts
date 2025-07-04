@@ -1,11 +1,12 @@
 import type { ElementType } from 'react';
-import type { Gap, MergeProps } from '../../types';
+import type { Orientation, Gap, MergeProps } from '../../types';
 import type {
   UnstyledBoxConfigProps,
   UnstyledBoxProps
 } from '../UnstyledBox/UnstyledBox.types';
 
 export type HeaderDefaultProps = {
+  orientation?: Orientation;
   gap?: Gap;
 };
 
