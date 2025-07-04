@@ -5,7 +5,7 @@ import { mergeClasses } from './merge-classes';
 
 export const styleCard = (
   className: string,
-  { orientation = 'row', containerSize = 'none' }: Classes
+  { orientation = 'row', containerSize = 'unset' }: Classes
 ) =>
   mergeClasses(
     sharedStyles.display.flex,
