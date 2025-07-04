@@ -5,7 +5,7 @@ import { Example } from './Example';
 
 export const OrientationExample = () => (
   <ExampleSection title="Orientation">
-    <ExampleCard col>
+    <ExampleCard>
       <Example orientation="row">
         <ExampleBox>ROW #1</ExampleBox>
         <ExampleBox>ROW #2</ExampleBox>
