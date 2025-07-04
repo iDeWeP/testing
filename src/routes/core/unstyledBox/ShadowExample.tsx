@@ -5,6 +5,7 @@ import { Example } from './Example';
 export const ShadowExample = () => (
   <ExampleSection title="Shadow">
     <ExampleCard>
+      <Example shadow="unset">UNSET</Example>
       <Example shadow="none">NONE</Example>
       <Example shadow="xs">XS</Example>
       <Example shadow="sm">SM</Example>

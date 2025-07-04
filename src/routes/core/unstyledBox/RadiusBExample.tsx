@@ -5,6 +5,7 @@ import { Example } from './Example';
 export const RadiusBExample = () => (
   <ExampleSection title="Radiu B">
     <ExampleCard>
+      <Example rb="unset">UNSET</Example>
       <Example rb="none">NONE</Example>
       <Example rb="xs">XS</Example>
       <Example rb="sm">SM</Example>

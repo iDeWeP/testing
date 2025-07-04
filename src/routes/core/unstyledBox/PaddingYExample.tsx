@@ -5,6 +5,7 @@ import { Example } from './Example';
 export const PaddingYExample = () => (
   <ExampleSection title="Padding Y">
     <ExampleCard>
+      <Example py="unset">UNSET</Example>
       <Example py="none">NONE</Example>
       <Example py="xs">XS</Example>
       <Example py="sm">SM</Example>

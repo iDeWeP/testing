@@ -5,6 +5,7 @@ import { Example } from './Example';
 export const MarginRExample = () => (
   <ExampleSection title="Margin R">
     <ExampleCard>
+      <Example mr="unset">UNSET</Example>
       <Example mr="none">NONE</Example>
       <Example mr="xs">XS</Example>
       <Example mr="sm">SM</Example>
