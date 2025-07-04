@@ -1,5 +1,11 @@
 import { ExampleTitle } from '../../../components/ExampleTitle';
+import { BorderBExample } from './BorderBExample';
 import { BorderExample } from './BorderExample';
+import { BorderLExample } from './BorderLExample';
+import { BorderRExample } from './BorderRExample';
+import { BorderTExample } from './BorderTExample';
+import { BorderXExample } from './BorderXExample';
+import { BorderYExample } from './BorderYExample';
 import { ColorExample } from './ColorExample';
 import { DefaultExample } from './DefaultExample';
 import { FontExample } from './FontExample';
@@ -52,6 +58,12 @@ const Page = () => (
     <MarginLExample />
     <MarginRExample />
     <BorderExample />
+    <BorderXExample />
+    <BorderYExample />
+    <BorderTExample />
+    <BorderBExample />
+    <BorderLExample />
+    <BorderRExample />
     <RadiusExample />
     <RadiusTExample />
     <RadiusBExample />
