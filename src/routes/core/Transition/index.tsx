@@ -1,7 +1,7 @@
 import { lazy } from 'react';
 import type { RouteObject } from 'react-router';
 
-export const UnstyledTransitionRoute: RouteObject = {
-  path: '/core/unstyled-transition',
+export const TransitionRoute: RouteObject = {
+  path: '/core/transition',
   Component: lazy(() => import('./Page'))
 };

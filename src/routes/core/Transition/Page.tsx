@@ -7,7 +7,7 @@ import { UnmountOnExitExample } from './UnmountOnExitExample';
 
 const Page = () => (
   <>
-    <ExampleTitle>UnstyledTransition</ExampleTitle>
+    <ExampleTitle>Transition</ExampleTitle>
     <DefaultExample />
     <UnmountOnExitExample />
     <PeakExample />
