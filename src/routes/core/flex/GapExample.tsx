@@ -6,6 +6,11 @@ import { Example } from './Example';
 export const GapExample = () => (
   <ExampleSection title="Gap">
     <ExampleCard col>
+      <Example gap="unset">
+        <ExampleBox>UNSET #1</ExampleBox>
+        <ExampleBox>UNSET #2</ExampleBox>
+        <ExampleBox>UNSET #3</ExampleBox>
+      </Example>
       <Example gap="none">
         <ExampleBox>NONE #1</ExampleBox>
         <ExampleBox>NONE #2</ExampleBox>

@@ -8,6 +8,14 @@ export const GapXExample = () => (
     <ExampleCard col>
       <Example
         col
+        gx="unset"
+      >
+        <ExampleBox>UNSET #1</ExampleBox>
+        <ExampleBox>UNSET #2</ExampleBox>
+        <ExampleBox>UNSET #3</ExampleBox>
+      </Example>
+      <Example
+        col
         gx="none"
       >
         <ExampleBox>NONE #1</ExampleBox>

@@ -6,6 +6,11 @@ import { Example } from './Example';
 export const GapYExample = () => (
   <ExampleSection title="Gap Y">
     <ExampleCard>
+      <Example gy="unset">
+        <ExampleBox>UNSET #1</ExampleBox>
+        <ExampleBox>UNSET #2</ExampleBox>
+        <ExampleBox>UNSET #3</ExampleBox>
+      </Example>
       <Example gy="none">
         <ExampleBox>NONE #1</ExampleBox>
         <ExampleBox>NONE #2</ExampleBox>
