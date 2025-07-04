@@ -7,8 +7,8 @@ const Page = () => (
   <>
     <ExampleTitle>Footer</ExampleTitle>
     <DefaultExample />
-    <GapExample />
     <OrientationExample />
+    <GapExample />
   </>
 );
 
