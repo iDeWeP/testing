@@ -3,7 +3,7 @@ import type { FooterConfigProps } from './Footer.types';
 
 export const footerConfig: ComponentConfig<FooterConfigProps> = {
   props: {
-    as: 'div',
+    as: 'footer',
     gap: 'none',
     variant: 'text',
     padding: 'none',

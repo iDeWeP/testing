@@ -5,7 +5,9 @@ import { UnstyledBox } from '../UnstyledBox/UnstyledBox';
 import type { FooterProps } from './Footer.types';
 import { footerConfig } from './footerConfig';
 
-export const Footer = <E extends ElementType = 'div'>(props: FooterProps<E>) => {
+export const Footer = <E extends ElementType = 'footer'>(
+  props: FooterProps<E>
+) => {
   const { className, ...restProps } = useMergeProps(
     'footer',
     footerConfig.props,
