@@ -14,7 +14,7 @@ export const Footer = <E extends ElementType = 'footer'>(
     props
   );
 
-  const mergedClassName = mergeClassName('flex', className);
+  const mergedClassName = mergeClassName('list', className, { orientation });
 
   return (
     <UnstyledBox

@@ -4,6 +4,7 @@ import type { FooterConfigProps } from './Footer.types';
 export const footerConfig: ComponentConfig<FooterConfigProps> = {
   props: {
     as: 'footer',
+    orientation: 'row',
     gap: 'none',
     variant: 'text',
     padding: 'none',
