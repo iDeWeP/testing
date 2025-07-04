@@ -4,4 +4,6 @@ import type { NavigationProps } from '../../../core/components/Navigation/Naviga
 export const Example = ({
   children = 'NAVIGATION',
   ...restProps
-}: NavigationProps<'div'>) => <Navigation {...restProps}>{children}</Navigation>;
+}: NavigationProps<'div'>) => (
+  <Navigation {...restProps}>{children}</Navigation>
+);
