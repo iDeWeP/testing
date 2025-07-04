@@ -8,7 +8,7 @@ import { footerConfig } from './footerConfig';
 export const Footer = <E extends ElementType = 'footer'>(
   props: FooterProps<E>
 ) => {
-  const { className, ...restProps } = useMergeProps(
+  const { orientation, className, ...restProps } = useMergeProps(
     'footer',
     footerConfig.props,
     props
