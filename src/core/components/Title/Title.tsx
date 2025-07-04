@@ -1,9 +1,9 @@
 import type { ElementType } from 'react';
 import { useMergeProps } from '../../hooks/use-merge-props/use-merge-props';
+import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
 import { UnstyledBox } from '../UnstyledBox/UnstyledBox';
 import type { TitleProps } from './Title.types';
 import { titleConfig } from './titleConfig';
-import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
 
 export const Title = <E extends ElementType = 'h3'>(props: TitleProps<E>) => {
   const { font, className, ...restProps } = useMergeProps(

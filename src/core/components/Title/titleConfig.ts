@@ -3,7 +3,7 @@ import type { TitleConfigProps } from './Title.types';
 
 export const titleConfig: ComponentConfig<TitleConfigProps> = {
   props: {
-    as: 'p',
+    as: 'h3',
     variant: 'text',
     font: 'md',
     color: 'surface',
