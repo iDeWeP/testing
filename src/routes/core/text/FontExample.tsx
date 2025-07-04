@@ -5,7 +5,7 @@ import { Example } from './Example';
 export const FontExample = () => (
   <ExampleSection title="Font">
     <ExampleCard>
-      <Example font="none">NONE</Example>
+      <Example font="unset">UNSET</Example>
       <Example font="xs">XS</Example>
       <Example font="sm">SM</Example>
       <Example font="md">MD</Example>
