@@ -10,7 +10,8 @@ import type {
   Shadow,
   Gap,
   MergeProps,
-  ComponentRefProps
+  ComponentRefProps,
+  DefaultBorder
 } from '../../types';
 
 export type UnstyledBoxDefaultProps = {
@@ -31,6 +32,12 @@ export type UnstyledBoxDefaultProps = {
   ml?: Margin;
   mr?: Margin;
   border?: Border;
+  bx?: DefaultBorder;
+  by?: DefaultBorder;
+  bt?: DefaultBorder;
+  bb?: DefaultBorder;
+  bl?: DefaultBorder;
+  br?: DefaultBorder;
   radius?: Radius;
   rt?: Radius;
   rb?: Radius;
