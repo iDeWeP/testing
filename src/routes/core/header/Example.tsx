@@ -4,4 +4,4 @@ import type { HeaderProps } from '../../../core/components/Header/Header.types';
 export const Example = ({
   children = 'HEADER',
   ...restProps
-}: HeaderProps<'div'>) => <Header {...restProps}>{children}</Header>;
+}: HeaderProps<'header'>) => <Header {...restProps}>{children}</Header>;

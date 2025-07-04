@@ -4,4 +4,4 @@ import type { MainProps } from '../../../core/components/Main/Main.types';
 export const Example = ({
   children = 'MAIN',
   ...restProps
-}: MainProps<'div'>) => <Main {...restProps}>{children}</Main>;
+}: MainProps<'main'>) => <Main {...restProps}>{children}</Main>;

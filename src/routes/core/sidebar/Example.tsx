@@ -4,4 +4,4 @@ import type { SidebarProps } from '../../../core/components/Sidebar/Sidebar.type
 export const Example = ({
   children = 'SIDEBAR',
   ...restProps
-}: SidebarProps<'div'>) => <Sidebar {...restProps}>{children}</Sidebar>;
+}: SidebarProps<'aside'>) => <Sidebar {...restProps}>{children}</Sidebar>;

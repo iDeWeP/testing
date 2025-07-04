@@ -4,4 +4,4 @@ import type { SectionProps } from '../../../core/components/Section/Section.type
 export const Example = ({
   children = 'SECTION',
   ...restProps
-}: SectionProps<'div'>) => <Section {...restProps}>{children}</Section>;
+}: SectionProps<'section'>) => <Section {...restProps}>{children}</Section>;
