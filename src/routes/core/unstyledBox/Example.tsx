@@ -12,7 +12,7 @@ export const Example = ({
 }: Props) => (
   <UnstyledBox
     variant="light"
-    color={clear ? 'unset' : 'unset'}
+    color={clear ? 'unset' : 'primary'}
     {...restProps}
   >
     {children}
