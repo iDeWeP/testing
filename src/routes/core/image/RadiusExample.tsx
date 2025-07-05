@@ -11,6 +11,10 @@ export const RadiusExample = () => (
         src={imagePath}
       />
       <Example
+        radius="none"
+        src={imagePath}
+      />
+      <Example
         radius="xs"
         src={imagePath}
       />
