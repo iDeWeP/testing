@@ -6,7 +6,7 @@ import { VariantExample } from './VariantExample';
 
 const Page = () => (
   <>
-    <ExampleTitle>Text</ExampleTitle>
+    <ExampleTitle>Title</ExampleTitle>
     <DefaultExample />
     <VariantExample />
     <FontExample />
