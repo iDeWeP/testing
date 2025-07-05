@@ -12,6 +12,7 @@ export const RadiusExample = () => (
       <Example radius="lg">LG</Example>
       <Example radius="xl">XL</Example>
       <Example radius="xxl">XXL</Example>
+      <Example radius="full">FULL</Example>
     </ExampleCard>
   </ExampleSection>
 );
