@@ -6,6 +6,7 @@ export const SizeExample = () => (
   <ExampleSection title="Size">
     <ExampleCard>
       <Example size="unset">UNSET</Example>
+      <Example size="none">NONE</Example>
       <Example size="xs">XS</Example>
       <Example size="sm">SM</Example>
       <Example size="md">MD</Example>
@@ -15,6 +16,7 @@ export const SizeExample = () => (
     </ExampleCard>
     <ExampleCard>
       <Example size="unset">UNSET</Example>
+      <Example size="none">NONE</Example>
       <Example size="xs-xs">XS-XS</Example>
       <Example size="sm-sm">SM-SM</Example>
       <Example size="md-md">MD-MD</Example>
