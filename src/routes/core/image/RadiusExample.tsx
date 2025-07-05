@@ -5,13 +5,13 @@ import { Example } from './Example';
 export const RadiusExample = () => (
   <ExampleSection title="Radius">
     <ExampleCard>
-      <Example radius="unset">UNSET</Example>
-      <Example radius="xs">XS</Example>
-      <Example radius="sm">SM</Example>
-      <Example radius="md">MD</Example>
-      <Example radius="lg">LG</Example>
-      <Example radius="xl">XL</Example>
-      <Example radius="xxl">XXL</Example>
+      <Example radius="unset" />
+      <Example radius="xs" />
+      <Example radius="sm" />
+      <Example radius="md" />
+      <Example radius="lg" />
+      <Example radius="xl" />
+      <Example radius="xxl" />
     </ExampleCard>
   </ExampleSection>
 );
