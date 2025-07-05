@@ -1,7 +1,7 @@
 import { lazy } from 'react';
 import type { RouteObject } from 'react-router';
 
-export const TextRoute: RouteObject = {
-  path: '/core/text',
+export const AnchorRoute: RouteObject = {
+  path: '/core/anchor',
   Component: lazy(() => import('./Page'))
 };
