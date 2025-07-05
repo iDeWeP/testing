@@ -2,8 +2,8 @@ import { ExampleCard } from '../../../components/ExampleCard';
 import { ExampleSection } from '../../../components/ExampleSection';
 import { Example } from './Example';
 
-export const SizeExample = () => (
-  <ExampleSection title="Size">
+export const ShadowExample = () => (
+  <ExampleSection title="Shadow">
     <ExampleCard>
       <Example shadow="unset">UNSET</Example>
       <Example shadow="xs">XS</Example>

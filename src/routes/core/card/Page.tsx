@@ -1,16 +1,24 @@
 import { ExampleTitle } from '../../../components/ExampleTitle';
 import { ColorExample } from './ColorExample';
 import { DefaultExample } from './DefaultExample';
-import { FontExample } from './FontExample';
+import { GapExample } from './GapExample';
+import { OrientationExample } from './OrientationExample';
+import { RadiusExample } from './RadiusExample';
+import { ShadowExample } from './ShadowExample';
+import { SizeExample } from './SizeExample';
 import { VariantExample } from './VariantExample';
 
 const Page = () => (
   <>
-    <ExampleTitle>Text</ExampleTitle>
+    <ExampleTitle>Card</ExampleTitle>
     <DefaultExample />
     <VariantExample />
-    <FontExample />
+    <OrientationExample />
+    <SizeExample />
+    <RadiusExample />
     <ColorExample />
+    <ShadowExample />
+    <GapExample />
   </>
 );
 
