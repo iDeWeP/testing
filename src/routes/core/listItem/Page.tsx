@@ -1,7 +1,10 @@
 import { ExampleTitle } from '../../../components/ExampleTitle';
-import { FontExample } from '../text/FontExample';
 import { ColorExample } from './ColorExample';
 import { DefaultExample } from './DefaultExample';
+import { GapExample } from './GapExample';
+import { OrientationExample } from './OrientationExample';
+import { RadiusExample } from './RadiusExample';
+import { SizeExample } from './SizeExample';
 import { VariantExample } from './VariantExample';
 
 const Page = () => (
@@ -9,8 +12,11 @@ const Page = () => (
     <ExampleTitle>ListItem</ExampleTitle>
     <DefaultExample />
     <VariantExample />
-    <FontExample />
+    <OrientationExample />
+    <SizeExample />
+    <RadiusExample />
     <ColorExample />
+    <GapExample />
   </>
 );
 
