@@ -3,25 +3,46 @@ import { mergeProps } from '../../utils/merge-props/merge-props';
 import { UnstyledRipple } from '../UnstyledRipple/UnstyledRipple';
 import type { UnstyledCheckboxProps } from './UnstyledCheckbox.types';
 import { unstyledCheckboxConfig } from './unstyledCheckboxConfig';
-import { UnstyledCheckboxContainer } from './UnstyledCheckboxContainer';
-import { UnstyledCheckboxIcon } from './UnstyledCheckboxIcon';
+import type { UnstyledCheckboxContainer } from './UnstyledCheckboxContainer';
+import type { UnstyledCheckboxIcon } from './UnstyledCheckboxIcon';
 import { UnstyledCheckboxTrail } from './UnstyledCheckboxTrail';
 
 export const UnstyledCheckbox = (props: UnstyledCheckboxProps) => {
   const {
     ref: forwardedRef,
     inputRef,
-    checked,
-    valid,
-    invalid,
-    disabled,
+    checked = false,
+    valid = false,
+    invalid = false,
+    disabled = false,
     type,
     variant,
     size,
     margin,
+    mx,
+    my,
+    mt,
+    mb,
+    ml,
+    mr,
     border,
+    bx,
+    by,
+    bt,
+    bb,
+    bl,
+    br,
     radius,
+    rt,
+    rb,
+    rl,
+    rr,
+    rtl,
+    rtr,
+    rbl,
+    rbr,
     color,
+    shadow,
     className,
     componentsProps,
     ripple,
@@ -37,8 +58,23 @@ export const UnstyledCheckbox = (props: UnstyledCheckboxProps) => {
     <UnstyledCheckboxContainer
       ref={forwardedRef}
       size={size}
-      margin={margin}
       hasRipple={ripple !== 'none'}
+      margin={margin}
+      mx={mx}
+      my={my}
+      mt={mt}
+      mb={mb}
+      ml={ml}
+      mr={mr}
+      radius={radius}
+      rt={rt}
+      rb={rb}
+      rl={rl}
+      rr={rr}
+      rtl={rtl}
+      rtr={rtr}
+      rbl={rbl}
+      rbr={rbr}
       {...componentsProps.container}
     >
       <input
@@ -66,18 +102,42 @@ export const UnstyledCheckbox = (props: UnstyledCheckboxProps) => {
         disabled={disabled}
         size={size}
         radius={radius}
+        rt={rt}
+        rb={rb}
+        rl={rl}
+        rr={rr}
+        rtl={rtl}
+        rtr={rtr}
+        rbl={rbl}
+        rbr={rbr}
+        shadow={shadow}
         {...componentsProps.trail}
       />
       <UnstyledCheckboxIcon
+        inputType={type}
         valid={valid}
         invalid={invalid}
         disabled={disabled}
-        inputType={type}
         variant={variant}
         size={size}
         border={border}
+        bx={bx}
+        by={by}
+        bt={bt}
+        bb={bb}
+        bl={bl}
+        br={br}
         radius={radius}
+        rt={rt}
+        rb={rb}
+        rl={rl}
+        rr={rr}
+        rtl={rtl}
+        rtr={rtr}
+        rbl={rbl}
+        rbr={rbr}
         color={color}
+        shadow={shadow}
         {...componentsProps.icon}
       >
         {children}

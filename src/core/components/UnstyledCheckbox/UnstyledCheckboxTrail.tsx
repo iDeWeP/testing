@@ -1,4 +1,11 @@
-import type { MergeComponentProps, Size, Radius } from '../../types';
+import type {
+  MergeComponentProps,
+  DefaultSize,
+  Border,
+  DefaultBorder,
+  Radius,
+  Shadow
+} from '../../types';
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
 
 type Props = MergeComponentProps<
@@ -7,8 +14,24 @@ type Props = MergeComponentProps<
     valid: boolean;
     invalid: boolean;
     disabled: boolean;
-    size: Size;
+    size: DefaultSize;
+    border?: Border;
+    bx?: DefaultBorder;
+    by?: DefaultBorder;
+    bt?: DefaultBorder;
+    bb?: DefaultBorder;
+    bl?: DefaultBorder;
+    br?: DefaultBorder;
     radius: Radius;
+    rt: Radius;
+    rb: Radius;
+    rl: Radius;
+    rr: Radius;
+    rtl: Radius;
+    rtr: Radius;
+    rbl: Radius;
+    rbr: Radius;
+    shadow: Shadow;
   }
 >;
 
@@ -17,7 +40,23 @@ export const UnstyledCheckboxTrail = ({
   invalid,
   disabled,
   size,
+  border,
+  bx,
+  by,
+  bt,
+  bb,
+  bl,
+  br,
   radius,
+  rt,
+  rb,
+  rl,
+  rr,
+  rtl,
+  rtr,
+  rbl,
+  rbr,
+  shadow,
   className,
   ...restProps
 }: Props) => {
@@ -26,7 +65,23 @@ export const UnstyledCheckboxTrail = ({
     invalid,
     disabled,
     size,
-    radius
+    border,
+    bx,
+    by,
+    bt,
+    bb,
+    bl,
+    br,
+    radius,
+    rt,
+    rb,
+    rl,
+    rr,
+    rtl,
+    rtr,
+    rbl,
+    rbr,
+    shadow
   });
 
   return (

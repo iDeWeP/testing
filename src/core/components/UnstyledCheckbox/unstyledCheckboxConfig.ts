@@ -15,69 +15,84 @@ type Styles = {
     icon: {
       default: CSSProps;
     };
+    shared: {
+      default: CSSProps;
+    };
   };
 };
 
 export const unstyledCheckboxConfig: ComponentConfig<UnstyledCheckboxConfigProps> &
   Styles = {
   props: {
-    checked: false,
-    valid: false,
-    invalid: false,
-    disabled: false,
     type: 'checkbox',
-    variant: 'none',
+    variant: 'text',
     size: 'md',
-    margin: 'none',
-    border: false,
-    radius: 'none',
-    color: 'neutral',
+    margin: 'unset',
+    mx: 'unset',
+    my: 'unset',
+    mt: 'unset',
+    mb: 'unset',
+    ml: 'unset',
+    mr: 'unset',
+    border: 'unset',
+    bx: 'unset',
+    by: 'unset',
+    bt: 'unset',
+    bb: 'unset',
+    bl: 'unset',
+    br: 'unset',
+    radius: 'unset',
+    rt: 'unset',
+    rb: 'unset',
+    rl: 'unset',
+    rr: 'unset',
+    rtl: 'unset',
+    rtr: 'unset',
+    rbl: 'unset',
+    rbr: 'unset',
+    color: 'unset',
+    shadow: 'unset',
     componentsProps: {},
-    ripple: 'normal'
+    ripple: 'none'
   },
   styles: {
     root: {
       default: {
         display: 'inline-flex',
-        position: 'relative', // ???
-        borderRadius: 'rounded-full' // ???
+        position: 'relative'
       }
     },
     input: {
       default: {
         width: 'w-full',
         height: 'h-full',
-        appearance: 'appearance-none', // ???
-        focus: 'focus:outline-none', // ???
+        appearance: 'appearance-none',
+        focus: 'focus:outline-none',
         group: 'peer'
       }
     },
     trail: {
       default: {
-        position: 'absolute',
-        top: 'top-2/4',
-        left: 'left-2/4',
-        translate: '-translate-x-2/4 -translate-y-2/4',
-        borderWidth: 'border',
-        transition: 'transition-opacity',
-        transitionDuration: 'duration-500',
-        transitionTimingFunction: 'ease-in-out',
-        pointerEvents: 'pointer-events-none',
-        group: 'peer-focus-visible:ring-4 peer-checked:opacity-0'
+        group: 'peer-checked:opacity-0'
       }
     },
     icon: {
+      default: {
+        opacity: 'opacity-0',
+        group: 'peer-checked:opacity-100'
+      }
+    },
+    shared: {
       default: {
         position: 'absolute',
         top: 'top-2/4',
         left: 'left-2/4',
         translate: '-translate-x-2/4 -translate-y-2/4',
-        opacity: 'opacity-0',
         transition: 'transition-opacity',
         transitionDuration: 'duration-500',
         transitionTimingFunction: 'ease-in-out',
         pointerEvents: 'pointer-events-none',
-        group: 'peer-focus-visible:ring-4 peer-checked:opacity-100'
+        group: 'peer-focus-visible:ring-4'
       }
     }
   }

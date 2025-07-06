@@ -1,40 +1,91 @@
 import type { RefObject } from 'react';
 import type {
+  Radius,
   ComponentRefProps,
+  Border,
+  DefaultBorder,
   SVGNodeProps,
   Variant,
-  Size,
+  DefaultSize,
   Margin,
-  Radius,
   Color,
+  Shadow,
   Ripple,
   MergeProps
 } from '../../types';
+import type { UnstyledRippleProps } from '../UnstyledRipple/UnstyledRipple.types';
+
+type UnstyledCheckboxContainerProps = {
+  radius?: Radius;
+  rt?: Radius;
+  rb?: Radius;
+  rl?: Radius;
+  rr?: Radius;
+  rtl?: Radius;
+  rtr?: Radius;
+  rbl?: Radius;
+  rbr?: Radius;
+} & ComponentRefProps<'div'>;
+
+export type UnstyledCheckboxIconProps = ComponentRefProps<'svg'>;
+
+export type UnstyledCheckboxTrailProps = {
+  border?: Border;
+  bx?: DefaultBorder;
+  by?: DefaultBorder;
+  bt?: DefaultBorder;
+  bb?: DefaultBorder;
+  bl?: DefaultBorder;
+  br?: DefaultBorder;
+} & ComponentRefProps<'span'>;
+
+export type UnstyledCheckboxRippleProps = ComponentRefProps<'span'>;
 
 export type UnstyledCheckboxComponentsProps = {
-  container?: ComponentRefProps<'div'>;
-  icon?: ComponentRefProps<'svg'>;
-  trail?: ComponentRefProps<'span'>;
-  ripple?: ComponentRefProps<'span'>;
+  container?: UnstyledCheckboxContainerProps;
+  icon?: UnstyledCheckboxIconProps;
+  trail?: UnstyledCheckboxTrailProps;
+  ripple?: UnstyledRippleProps;
 };
 
 type OptionalProps = {
   inputRef?: RefObject<HTMLInputElement | null>;
-  children?: SVGNodeProps;
-};
-
-export type UnstyledCheckboxDefaultProps = {
   checked?: boolean;
   valid?: boolean;
   invalid?: boolean;
   disabled?: boolean;
+  children?: SVGNodeProps;
+};
+
+export type UnstyledCheckboxDefaultProps = {
   type?: 'checkbox' | 'radio';
   variant?: Variant;
-  size?: Size;
+  size?: DefaultSize;
   margin?: Margin;
-  border?: boolean;
+  mx?: Margin;
+  my?: Margin;
+  mt?: Margin;
+  mb?: Margin;
+  ml?: Margin;
+  mr?: Margin;
+  border?: Border;
+  bx?: DefaultBorder;
+  by?: DefaultBorder;
+  bt?: DefaultBorder;
+  bb?: DefaultBorder;
+  bl?: DefaultBorder;
+  br?: DefaultBorder;
   radius?: Radius;
+  rt?: Radius;
+  rb?: Radius;
+  rl?: Radius;
+  rr?: Radius;
+  rtl?: Radius;
+  rtr?: Radius;
+  rbl?: Radius;
+  rbr?: Radius;
   color?: Color;
+  shadow?: Shadow;
   componentsProps?: UnstyledCheckboxComponentsProps;
   ripple?: Ripple;
 };

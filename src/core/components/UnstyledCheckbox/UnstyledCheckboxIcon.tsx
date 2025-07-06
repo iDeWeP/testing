@@ -2,46 +2,81 @@ import { cloneElement } from 'react';
 import type {
   MergeComponentProps,
   Variant,
-  Size,
+  DefaultSize,
+  Border,
+  DefaultBorder,
   Radius,
   Color,
+  Shadow,
   SVGNodeProps
 } from '../../types';
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
+import { mergeClasses } from '../../utils/merge-class-name/merge-classes';
+import type { setAria } from '../../utils/set-aria/set-aria';
 
 type Props = MergeComponentProps<
   'svg',
   {
+    inputType: 'checkbox' | 'radio';
     valid: boolean;
     invalid: boolean;
     disabled: boolean;
-    inputType: 'checkbox' | 'radio';
     variant: Variant;
-    size: Size;
-    border: boolean;
+    size: DefaultSize;
+    border: Border;
+    bx: DefaultBorder;
+    by: DefaultBorder;
+    bt: DefaultBorder;
+    bb: DefaultBorder;
+    bl: DefaultBorder;
+    br: DefaultBorder;
     radius: Radius;
+    rt: Radius;
+    rb: Radius;
+    rl: Radius;
+    rr: Radius;
+    rtl: Radius;
+    rtr: Radius;
+    rbl: Radius;
+    rbr: Radius;
     color: Color;
+    shadow: Shadow;
     children?: SVGNodeProps;
   }
 >;
 
 export const UnstyledCheckboxIcon = ({
+  inputType,
   valid,
   invalid,
   disabled,
-  inputType,
   variant,
   size,
   border,
+  bx,
+  by,
+  bt,
+  bb,
+  bl,
+  br,
   radius,
+  rt,
+  rb,
+  rl,
+  rr,
+  rtl,
+  rtr,
+  rbl,
+  rbr,
   color,
+  shadow,
   className,
   children,
   ...restProps
 }: Props) => {
   const mergedClassName = mergeClassName(
     'unstyledCheckboxIcon',
-    `${className} ${children?.props.className}`,
+    mergeClasses(children?.props.className, className),
     {
       valid,
       invalid,
@@ -49,15 +84,30 @@ export const UnstyledCheckboxIcon = ({
       variant,
       size,
       border,
+      bx,
+      by,
+      bt,
+      bb,
+      bl,
+      br,
       radius,
-      color
+      rt,
+      rb,
+      rl,
+      rr,
+      rtl,
+      rtr,
+      rbl,
+      rbr,
+      color,
+      shadow
     }
   );
 
   if (children) {
     return cloneElement(children, {
       className: mergedClassName,
-      'aria-hidden': true,
+      ...setAria('checkboxIcon'),
       ...restProps
     });
   }
@@ -66,7 +116,7 @@ export const UnstyledCheckboxIcon = ({
     <svg
       viewBox="0 0 24 24"
       className={mergedClassName}
-      aria-hidden="true"
+      {...setAria('checkboxIcon')}
       {...restProps}
     >
       {inputType === 'checkbox' && (
