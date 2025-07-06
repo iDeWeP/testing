@@ -3,8 +3,8 @@ import { mergeProps } from '../../utils/merge-props/merge-props';
 import { UnstyledRipple } from '../UnstyledRipple/UnstyledRipple';
 import type { UnstyledCheckboxProps } from './UnstyledCheckbox.types';
 import { unstyledCheckboxConfig } from './unstyledCheckboxConfig';
-import type { UnstyledCheckboxContainer } from './UnstyledCheckboxContainer';
-import type { UnstyledCheckboxIcon } from './UnstyledCheckboxIcon';
+import { UnstyledCheckboxContainer } from './UnstyledCheckboxContainer';
+import { UnstyledCheckboxIcon } from './UnstyledCheckboxIcon';
 import { UnstyledCheckboxTrail } from './UnstyledCheckboxTrail';
 
 export const UnstyledCheckbox = (props: UnstyledCheckboxProps) => {

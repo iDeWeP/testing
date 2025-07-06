@@ -12,7 +12,7 @@ import type {
 } from '../../types';
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
 import { mergeClasses } from '../../utils/merge-class-name/merge-classes';
-import type { setAria } from '../../utils/set-aria/set-aria';
+import { setAria } from '../../utils/set-aria/set-aria';
 
 type Props = MergeComponentProps<
   'svg',
@@ -51,7 +51,7 @@ export const UnstyledCheckboxIcon = ({
   invalid,
   disabled,
   variant,
-  size,
+  size: defaultSize,
   border,
   bx,
   by,
@@ -82,7 +82,7 @@ export const UnstyledCheckboxIcon = ({
       invalid,
       disabled,
       variant,
-      size,
+      defaultSize,
       border,
       bx,
       by,
