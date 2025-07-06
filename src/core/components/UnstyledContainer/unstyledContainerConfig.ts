@@ -1,0 +1,39 @@
+import type { ComponentConfig } from '../../types';
+import type { UnstyledContainerConfigProps } from './UnstyledContainer.types';
+
+export const unstyledContainerConfig: ComponentConfig<UnstyledContainerConfigProps> =
+  {
+    props: {
+      as: 'div',
+      variant: 'text',
+      margin: 'unset',
+      mx: 'unset',
+      my: 'unset',
+      mt: 'unset',
+      mb: 'unset',
+      ml: 'unset',
+      mr: 'unset',
+      border: 'unset',
+      bx: 'unset',
+      by: 'unset',
+      bt: 'unset',
+      bb: 'unset',
+      bl: 'unset',
+      br: 'unset',
+      radius: 'unset',
+      rt: 'unset',
+      rb: 'unset',
+      rl: 'unset',
+      rr: 'unset',
+      rtl: 'unset',
+      rtr: 'unset',
+      rbl: 'unset',
+      rbr: 'unset',
+      font: 'unset',
+      color: 'unset',
+      shadow: 'unset',
+      gap: 'unset',
+      gx: 'unset',
+      gy: 'unset'
+    }
+  };
