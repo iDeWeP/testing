@@ -1,5 +1,5 @@
 import { unstyledCheckboxConfig } from '../../components/UnstyledCheckbox/unstyledCheckboxConfig';
-import { generic } from '../../config/generic';
+import { systemStyles } from '../../config/system-styles';
 import type { Classes } from '../../types';
 import { mergeClasses } from './merge-classes';
 import { getInputScale } from './scale';
@@ -10,6 +10,6 @@ export const styleUnstyledCheckboxContainer = (
 ) =>
   mergeClasses(
     unstyledCheckboxConfig.styles.root.default,
-    generic.styles.size[getInputScale(hasRipple)].square[size],
+    systemStyles.size[getInputScale(hasRipple)].square[size],
     className
   );
