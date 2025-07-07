@@ -62,7 +62,7 @@ export const styleUnstyledCheckboxIcon = (
     systemStyles.radius.tl[rtl],
     systemStyles.radius.tr[rtr],
     systemStyles.radius.bl[rbl],
-    systemStyles.radius.r[rbr],
+    systemStyles.radius.br[rbr],
     systemStyles.color.bg[theme][bgColor],
     systemStyles.color.fill[theme][textColor],
     isBordered && systemStyles.color.border[theme][textColor],
