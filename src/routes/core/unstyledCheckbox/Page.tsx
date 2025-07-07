@@ -8,6 +8,8 @@ import { BorderXExample } from './BorderXExample';
 import { BorderYExample } from './BorderYExample';
 import { ColorExample } from './ColorExample';
 import { DefaultExample } from './DefaultExample';
+import { DisabledExample } from './DisabledExample';
+import { InvalidExample } from './InvalidExample';
 import { MarginBExample } from './MarginBExample';
 import { MarginExample } from './MarginExample';
 import { MarginLExample } from './MarginLExample';
@@ -27,12 +29,16 @@ import { RadiusTRExample } from './RadiusTRExample';
 import { RippleExample } from './RippleExample';
 import { ShadowExample } from './ShadowExample';
 import { SizeExample } from './SizeExample';
+import { ValidExample } from './ValidExample';
 import { VariantExample } from './VariantExample';
 
 const Page = () => (
   <>
     <ExampleTitle>UnstyledCheckbox</ExampleTitle>
     <DefaultExample />
+    <ValidExample />
+    <InvalidExample />
+    <DisabledExample />
     <VariantExample />
     <SizeExample />
     <MarginExample />
