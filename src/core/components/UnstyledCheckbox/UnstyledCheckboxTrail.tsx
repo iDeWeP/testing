@@ -5,7 +5,7 @@ import type {
   Border,
   DefaultBorder,
   Radius,
-  Color,
+  TrailColor,
   Shadow
 } from '../../types';
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
@@ -34,7 +34,7 @@ type Props = MergeComponentProps<
     rtr: Radius;
     rbl: Radius;
     rbr: Radius;
-    color: Color;
+    color: TrailColor;
     shadow: Shadow;
   }
 >;
@@ -61,7 +61,7 @@ export const UnstyledCheckboxTrail = ({
   rtr,
   rbl,
   rbr,
-  color,
+  color: trailColor,
   shadow,
   className,
   ...restProps
@@ -88,7 +88,7 @@ export const UnstyledCheckboxTrail = ({
     rtr,
     rbl,
     rbr,
-    color,
+    trailColor,
     shadow
   });
 
