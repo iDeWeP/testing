@@ -1,6 +1,9 @@
 import type { Color, Variant } from '../../types';
 import { hasVariantBg } from './variant';
 
+const _getStateColor = (color: Color, isValid?: boolean, isInvalid?: boolean) =>
+  isValid ? 'success' : isInvalid ? 'error' : color;
+
 const variants = {
   plain: (color: Color) => ({
     bgColor: 'none',
@@ -38,8 +41,18 @@ export const getColor = (
     };
   }
 
-  return variants[variant](getStateColor(color, isValid, isInvalid));
+  return variants[variant](_getStateColor(color, isValid, isInvalid));
 };
 
-const getStateColor = (color: Color, isValid?: boolean, isInvalid?: boolean) =>
-  isValid ? 'success' : isInvalid ? 'error' : color;
+export const getRippleColor = (
+  variant: Variant,
+  color: Color,
+  isValid?: boolean,
+  isInvalid?: boolean
+) =>
+  variants[variant === 'plain' || variant === 'surface' ? 'plain' : 'text'](
+    _getStateColor(color, isValid, isInvalid)
+  ).textColor;
+
+export const getStateColor = (color: Color) =>
+  color === 'unset' ? 'unset' : 'surface';

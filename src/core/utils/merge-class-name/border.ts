@@ -1,4 +1,4 @@
-import type { Border, DefaultPlacement } from '../../types';
+import type { Border, DefaultBorder, DefaultPlacement } from '../../types';
 
 const placementsMap = {
   left: 'right',
@@ -29,3 +29,21 @@ export const isPopperBordered = (
 
   return border.includes(placementsMap[placement]);
 };
+
+export const isCheckboxBordered = (
+  border?: Border,
+  bx?: DefaultBorder,
+  by?: DefaultBorder,
+  bt?: DefaultBorder,
+  bb?: DefaultBorder,
+  bl?: DefaultBorder,
+  br?: DefaultBorder
+) =>
+  border === 'auto' ||
+  border === 'set' ||
+  bx === 'set' ||
+  by === 'set' ||
+  bt === 'set' ||
+  bb === 'set' ||
+  bl === 'set' ||
+  br === 'set';

@@ -5,6 +5,3 @@ export const getFocusableState = (isDisabled: boolean, isLoading?: Loading) =>
 
 export const getLoadingState = (loading: Loading) =>
   !loading ? 'none' : loading === true ? 'hide' : 'normal';
-
-export const getRippleState = (stateful: boolean) =>
-  stateful ? 'stateful' : 'stateless';
