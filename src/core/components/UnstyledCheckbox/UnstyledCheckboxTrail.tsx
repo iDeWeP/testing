@@ -1,5 +1,6 @@
 import type {
   MergeComponentProps,
+  Theme,
   DefaultSize,
   Border,
   DefaultBorder,
@@ -11,6 +12,7 @@ import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
 type Props = MergeComponentProps<
   'span',
   {
+    theme: Theme;
     valid: boolean;
     invalid: boolean;
     disabled: boolean;
@@ -36,6 +38,7 @@ type Props = MergeComponentProps<
 >;
 
 export const UnstyledCheckboxTrail = ({
+  theme,
   valid,
   invalid,
   disabled,
@@ -61,6 +64,7 @@ export const UnstyledCheckboxTrail = ({
   ...restProps
 }: Props) => {
   const mergedClassName = mergeClassName('unstyledCheckboxTrail', className, {
+    theme,
     valid,
     invalid,
     disabled,

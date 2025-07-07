@@ -89,7 +89,7 @@ export const unstyledCheckboxConfig: ComponentConfig<UnstyledCheckboxConfigProps
         left: 'left-2/4',
         translate: '-translate-x-2/4 -translate-y-2/4',
         transition: 'transition-opacity',
-        transitionDuration: 'duration-500',
+        transitionDuration: 'duration-150',
         transitionTimingFunction: 'ease-in-out',
         pointerEvents: 'pointer-events-none',
         group: 'peer-focus-visible:ring-4'

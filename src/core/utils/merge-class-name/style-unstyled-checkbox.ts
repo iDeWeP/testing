@@ -2,7 +2,6 @@ import { unstyledCheckboxConfig } from '../../components/UnstyledCheckbox/unstyl
 import { sharedStyles } from '../../config/shared-styles';
 import type { Classes } from '../../types';
 import { mergeClasses } from './merge-classes';
-import { getFocusableContainerState } from './state';
 
 export const styleUnstyledCheckbox = (
   className: string,
@@ -10,6 +9,6 @@ export const styleUnstyledCheckbox = (
 ) =>
   mergeClasses(
     unstyledCheckboxConfig.styles.input.default,
-    sharedStyles.focusable[getFocusableContainerState(disabled)],
+    disabled && sharedStyles.cursor.disabled,
     className
   );

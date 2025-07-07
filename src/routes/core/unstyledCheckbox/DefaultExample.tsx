@@ -5,7 +5,7 @@ import { Example } from './Example';
 export const DefaultExample = () => (
   <ExampleSection title="Default">
     <ExampleCard>
-      <Example />
+      <Example clear />
     </ExampleCard>
   </ExampleSection>
 );

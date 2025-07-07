@@ -2,7 +2,7 @@ import { unstyledCheckboxConfig } from '../../components/UnstyledCheckbox/unstyl
 import { systemStyles } from '../../config/system-styles';
 import type { Classes } from '../../types';
 import { isCheckboxBordered } from './border';
-import { getColor } from './color';
+import { getColor, getStateColor } from './color';
 import { mergeClasses } from './merge-classes';
 
 export const styleUnstyledCheckboxTrail = (
@@ -29,12 +29,13 @@ export const styleUnstyledCheckboxTrail = (
     rtr = 'unset',
     rbl = 'unset',
     rbr = 'unset',
+    color = 'unset',
     shadow = 'unset'
   }: Classes
 ) => {
   const { bgColor, textColor } = getColor(
     'light',
-    'surface',
+    getStateColor(color),
     disabled,
     valid,
     invalid
