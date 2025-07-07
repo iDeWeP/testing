@@ -6,7 +6,6 @@ export const DefaultExample = () => (
   <ExampleSection title="Default">
     <ExampleCard>
       <Example />
-      <Example ripple="normal" />
     </ExampleCard>
   </ExampleSection>
 );

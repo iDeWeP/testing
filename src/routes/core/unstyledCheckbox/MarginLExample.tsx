@@ -5,14 +5,14 @@ import { Example } from './Example';
 export const MarginLExample = () => (
   <ExampleSection title="Margin L">
     <ExampleCard>
-      <Example ml="unset">UNSET</Example>
-      <Example ml="none">NONE</Example>
-      <Example ml="xs">XS</Example>
-      <Example ml="sm">SM</Example>
-      <Example ml="md">MD</Example>
-      <Example ml="lg">LG</Example>
-      <Example ml="xl">XL</Example>
-      <Example ml="xxl">XXL</Example>
+      <Example ml="unset" />
+      <Example ml="none" />
+      <Example ml="xs" />
+      <Example ml="sm" />
+      <Example ml="md" />
+      <Example ml="lg" />
+      <Example ml="xl" />
+      <Example ml="xxl" />
     </ExampleCard>
   </ExampleSection>
 );

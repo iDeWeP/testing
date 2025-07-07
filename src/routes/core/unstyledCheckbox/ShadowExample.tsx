@@ -5,14 +5,14 @@ import { Example } from './Example';
 export const ShadowExample = () => (
   <ExampleSection title="Shadow">
     <ExampleCard>
-      <Example shadow="unset">UNSET</Example>
-      <Example shadow="none">NONE</Example>
-      <Example shadow="xs">XS</Example>
-      <Example shadow="sm">SM</Example>
-      <Example shadow="md">MD</Example>
-      <Example shadow="lg">LG</Example>
-      <Example shadow="xl">XL</Example>
-      <Example shadow="xxl">XXL</Example>
+      <Example shadow="unset" />
+      <Example shadow="none" />
+      <Example shadow="xs" />
+      <Example shadow="sm" />
+      <Example shadow="md" />
+      <Example shadow="lg" />
+      <Example shadow="xl" />
+      <Example shadow="xxl" />
     </ExampleCard>
   </ExampleSection>
 );

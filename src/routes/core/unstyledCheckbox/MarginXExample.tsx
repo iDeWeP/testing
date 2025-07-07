@@ -5,14 +5,14 @@ import { Example } from './Example';
 export const MarginXExample = () => (
   <ExampleSection title="Margin X">
     <ExampleCard>
-      <Example mx="unset">UNSET</Example>
-      <Example mx="none">NONE</Example>
-      <Example mx="xs">XS</Example>
-      <Example mx="sm">SM</Example>
-      <Example mx="md">MD</Example>
-      <Example mx="lg">LG</Example>
-      <Example mx="xl">XL</Example>
-      <Example mx="xxl">XXL</Example>
+      <Example mx="unset" />
+      <Example mx="none" />
+      <Example mx="xs" />
+      <Example mx="sm" />
+      <Example mx="md" />
+      <Example mx="lg" />
+      <Example mx="xl" />
+      <Example mx="xxl" />
     </ExampleCard>
   </ExampleSection>
 );

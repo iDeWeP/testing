@@ -5,15 +5,15 @@ import { Example } from './Example';
 export const RadiusBLExample = () => (
   <ExampleSection title="Radius BL">
     <ExampleCard>
-      <Example rbl="unset">UNSET</Example>
-      <Example rbl="none">NONE</Example>
-      <Example rbl="xs">XS</Example>
-      <Example rbl="sm">SM</Example>
-      <Example rbl="md">MD</Example>
-      <Example rbl="lg">LG</Example>
-      <Example rbl="xl">XL</Example>
-      <Example rbl="xxl">XXL</Example>
-      <Example rbl="full">FULL</Example>
+      <Example rbl="unset" />
+      <Example rbl="none" />
+      <Example rbl="xs" />
+      <Example rbl="sm" />
+      <Example rbl="md" />
+      <Example rbl="lg" />
+      <Example rbl="xl" />
+      <Example rbl="xxl" />
+      <Example rbl="full" />
     </ExampleCard>
   </ExampleSection>
 );

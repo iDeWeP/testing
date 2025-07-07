@@ -5,9 +5,9 @@ import { Example } from './Example';
 export const BorderTExample = () => (
   <ExampleSection title="Border T">
     <ExampleCard>
-      <Example bt="unset">UNSET</Example>
-      <Example bt="none">NONE</Example>
-      <Example bt="set">SET</Example>
+      <Example bt="unset" />
+      <Example bt="none" />
+      <Example bt="set" />
     </ExampleCard>
   </ExampleSection>
 );

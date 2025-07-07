@@ -5,14 +5,14 @@ import { Example } from './Example';
 export const MarginTExample = () => (
   <ExampleSection title="Margin T">
     <ExampleCard>
-      <Example mt="unset">UNSET</Example>
-      <Example mt="none">NONE</Example>
-      <Example mt="xs">XS</Example>
-      <Example mt="sm">SM</Example>
-      <Example mt="md">MD</Example>
-      <Example mt="lg">LG</Example>
-      <Example mt="xl">XL</Example>
-      <Example mt="xxl">XXL</Example>
+      <Example mt="unset" />
+      <Example mt="none" />
+      <Example mt="xs" />
+      <Example mt="sm" />
+      <Example mt="md" />
+      <Example mt="lg" />
+      <Example mt="xl" />
+      <Example mt="xxl" />
     </ExampleCard>
   </ExampleSection>
 );

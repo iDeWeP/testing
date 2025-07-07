@@ -5,9 +5,9 @@ import { Example } from './Example';
 export const BorderXExample = () => (
   <ExampleSection title="Border X">
     <ExampleCard>
-      <Example bx="unset">UNSET</Example>
-      <Example bx="none">NONE</Example>
-      <Example bx="set">SET</Example>
+      <Example bx="unset" />
+      <Example bx="none" />
+      <Example bx="set" />
     </ExampleCard>
   </ExampleSection>
 );
