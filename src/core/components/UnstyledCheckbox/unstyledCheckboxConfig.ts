@@ -53,7 +53,7 @@ export const unstyledCheckboxConfig: ComponentConfig<UnstyledCheckboxConfigProps
     color: 'unset',
     shadow: 'unset',
     componentsProps: {},
-    ripple: 'none'
+    ripple: 'normal'
   },
   styles: {
     root: {
