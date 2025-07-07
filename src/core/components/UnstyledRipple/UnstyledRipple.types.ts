@@ -1,5 +1,6 @@
 import type {
   Variant,
+  RipplePlacement,
   Color,
   RippleEffect,
   MergeProps,
@@ -14,6 +15,7 @@ type OptionalProps = {
 export type UnstyledRippleDefaultProps = {
   stateful?: boolean;
   variant?: Variant;
+  placement?: RipplePlacement;
   color?: Color;
   effect?: RippleEffect;
 };
