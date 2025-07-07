@@ -1,8 +1,8 @@
 import type {
   CSSProps,
+  RipplePlacement,
   Theme,
-  ComponentConfig,
-  RipplePlacement
+  ComponentConfig
 } from '../../types';
 import type { UnstyledRippleConfigProps } from './UnstyledRipple.types';
 
