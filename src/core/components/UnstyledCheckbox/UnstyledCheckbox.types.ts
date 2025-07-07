@@ -3,15 +3,15 @@ import type {
   Radius,
   Border,
   DefaultBorder,
-  Color,
+  RippleEffect,
   SVGNodeProps,
   Variant,
   DefaultSize,
   Margin,
+  Color,
   Shadow,
   Ripple,
-  MergeProps,
-  RippleEffect
+  MergeProps
 } from '../../types';
 import type { UnstyledRippleProps } from '../UnstyledRipple/UnstyledRipple.types';
 
