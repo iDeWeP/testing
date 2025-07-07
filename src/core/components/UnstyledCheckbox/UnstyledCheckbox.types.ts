@@ -10,7 +10,8 @@ import type {
   Margin,
   Shadow,
   Ripple,
-  MergeProps
+  MergeProps,
+  RippleEffect
 } from '../../types';
 import type { UnstyledRippleProps } from '../UnstyledRipple/UnstyledRipple.types';
 
@@ -39,10 +40,12 @@ export type UnstyledCheckboxTrailProps = {
   bb?: DefaultBorder;
   bl?: DefaultBorder;
   br?: DefaultBorder;
-  color?: Color;
+  color?: 'unset';
 } & ComponentPropsWithRef<'span'>;
 
-export type UnstyledCheckboxRippleProps = ComponentPropsWithRef<'span'>;
+export type UnstyledCheckboxRippleProps = {
+  effect?: RippleEffect;
+} & ComponentPropsWithRef<'span'>;
 
 export type UnstyledCheckboxComponentsProps = {
   container?: UnstyledCheckboxContainerProps;

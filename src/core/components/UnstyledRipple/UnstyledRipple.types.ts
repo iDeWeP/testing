@@ -1,10 +1,10 @@
+import type { ComponentPropsWithRef } from 'react';
 import type {
   Variant,
   RipplePlacement,
   Color,
   RippleEffect,
-  MergeProps,
-  ComponentRefProps
+  MergeProps
 } from '../../types';
 
 type OptionalProps = {
@@ -23,6 +23,6 @@ export type UnstyledRippleDefaultProps = {
 export type UnstyledRippleConfigProps = UnstyledRippleDefaultProps;
 
 export type UnstyledRippleProps = MergeProps<
-  ComponentRefProps<'span'>,
+  ComponentPropsWithRef<'span'>,
   UnstyledRippleDefaultProps & OptionalProps
 >;
