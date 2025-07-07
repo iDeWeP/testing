@@ -25,7 +25,7 @@ export const unstyledCheckboxConfig: ComponentConfig<UnstyledCheckboxConfigProps
   Styles = {
   props: {
     type: 'checkbox',
-    variant: 'text',
+    variant: 'solid',
     size: 'md',
     margin: 'unset',
     mx: 'unset',
