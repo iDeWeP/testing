@@ -80,7 +80,7 @@ export const UnstyledCheckbox = (props: UnstyledCheckboxProps) => {
         className={mergedClassName}
         {...restProps}
       />
-      {ripple !== 'none' && !disabled && (
+      {ripple !== 'none' && (
         <UnstyledRipple
           valid={valid}
           invalid={invalid}
