@@ -1,14 +1,13 @@
-import type { RefObject } from 'react';
+import type { ComponentPropsWithRef, RefObject } from 'react';
 import type {
   Radius,
-  ComponentRefProps,
   Border,
   DefaultBorder,
+  Color,
   SVGNodeProps,
   Variant,
   DefaultSize,
   Margin,
-  Color,
   Shadow,
   Ripple,
   MergeProps
@@ -25,9 +24,12 @@ type UnstyledCheckboxContainerProps = {
   rtr?: Radius;
   rbl?: Radius;
   rbr?: Radius;
-} & ComponentRefProps<'div'>;
+} & ComponentPropsWithRef<'div'>;
 
-export type UnstyledCheckboxIconProps = ComponentRefProps<'svg'>;
+export type UnstyledCheckboxIconProps = Omit<
+  ComponentPropsWithRef<'svg'>,
+  'by' | 'radius' | 'color'
+>;
 
 export type UnstyledCheckboxTrailProps = {
   border?: Border;
@@ -38,9 +40,9 @@ export type UnstyledCheckboxTrailProps = {
   bl?: DefaultBorder;
   br?: DefaultBorder;
   color?: Color;
-} & ComponentRefProps<'span'>;
+} & ComponentPropsWithRef<'span'>;
 
-export type UnstyledCheckboxRippleProps = ComponentRefProps<'span'>;
+export type UnstyledCheckboxRippleProps = ComponentPropsWithRef<'span'>;
 
 export type UnstyledCheckboxComponentsProps = {
   container?: UnstyledCheckboxContainerProps;
@@ -94,6 +96,6 @@ export type UnstyledCheckboxDefaultProps = {
 export type UnstyledCheckboxConfigProps = UnstyledCheckboxDefaultProps;
 
 export type UnstyledCheckboxProps = MergeProps<
-  ComponentRefProps<'input'>,
+  ComponentPropsWithRef<'input'>,
   UnstyledCheckboxDefaultProps & OptionalProps
 >;
