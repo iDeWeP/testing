@@ -1,5 +1,6 @@
 import { useTheme } from '../../hooks/use-theme/use-theme';
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
+import { setRippleVariant } from '../../utils/merge-class-name/variant';
 import { mergeProps } from '../../utils/merge-props/merge-props';
 import { UnstyledRipple } from '../UnstyledRipple/UnstyledRipple';
 import type { UnstyledCheckboxProps } from './UnstyledCheckbox.types';
@@ -87,7 +88,7 @@ export const UnstyledCheckbox = (props: UnstyledCheckboxProps) => {
           valid={valid}
           invalid={invalid}
           stateful
-          variant="text"
+          variant={setRippleVariant(variant)}
           placement="normal"
           color={color}
           effect={ripple}
