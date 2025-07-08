@@ -4,9 +4,9 @@ import type { TitleConfigProps } from './Title.types';
 export const titleConfig: ComponentConfig<TitleConfigProps> = {
   props: {
     as: 'h3',
-    variant: 'text',
     font: 'md',
     color: 'surface',
+    variant: 'text',
     padding: 'unset',
     px: 'unset',
     py: 'unset',
@@ -21,7 +21,7 @@ export const titleConfig: ComponentConfig<TitleConfigProps> = {
     mb: 'unset',
     ml: 'unset',
     mr: 'unset',
-    border: 'unset',
+    border: 'auto',
     bx: 'unset',
     by: 'unset',
     bt: 'unset',

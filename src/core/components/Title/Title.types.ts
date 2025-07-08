@@ -1,12 +1,11 @@
 import type { ElementType } from 'react';
-import type { Variant, Font, Color, MergeProps } from '../../types';
+import type { Font, Color, MergeProps } from '../../types';
 import type {
   UnstyledBoxConfigProps,
   UnstyledBoxProps
 } from '../UnstyledBox/UnstyledBox.types';
 
 export type TitleDefaultProps = {
-  variant?: Variant;
   font?: Font;
   color?: Color;
 };
