@@ -4,11 +4,11 @@ import type { CardConfigProps } from './Card.types';
 export const cardConfig: ComponentConfig<CardConfigProps> = {
   props: {
     as: 'div',
-    variant: 'surface',
+    variant: 'solid',
     orientation: 'col',
     size: 'md',
     radius: 'lg',
-    color: 'surface',
+    color: 'surface-on',
     shadow: 'md',
     gap: 'unset',
     padding: 'unset',
