@@ -4,9 +4,9 @@ import type { AnchorConfigProps } from './Anchor.types';
 export const anchorConfig: ComponentConfig<AnchorConfigProps> = {
   props: {
     as: 'a',
-    variant: 'text',
     font: 'md',
     color: 'surface',
+    variant: 'text',
     padding: 'unset',
     px: 'unset',
     py: 'unset',
