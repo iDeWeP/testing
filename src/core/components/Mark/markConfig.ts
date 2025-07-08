@@ -6,7 +6,7 @@ export const markConfig: ComponentConfig<MarkConfigProps> = {
     as: 'span',
     font: 'md',
     color: 'primary',
-    variant: 'text',
+    variant: 'light',
     padding: 'unset',
     px: 'unset',
     py: 'unset',
