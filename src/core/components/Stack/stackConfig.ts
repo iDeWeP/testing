@@ -20,7 +20,7 @@ export const stackConfig: ComponentConfig<StackConfigProps> = {
     mb: 'unset',
     ml: 'unset',
     mr: 'unset',
-    border: 'unset',
+    border: 'auto',
     bx: 'unset',
     by: 'unset',
     bt: 'unset',
