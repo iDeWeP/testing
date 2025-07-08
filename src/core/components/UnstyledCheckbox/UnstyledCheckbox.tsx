@@ -87,7 +87,7 @@ export const UnstyledCheckbox = (props: UnstyledCheckboxProps) => {
           valid={valid}
           invalid={invalid}
           stateful
-          variant={variant}
+          variant="text"
           placement="normal"
           color={color}
           effect={ripple}

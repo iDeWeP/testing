@@ -45,7 +45,7 @@ export const UnstyledCheckboxTrail = ({
   invalid,
   disabled,
   size: defaultSize,
-  border,
+  border = 'set',
   bx,
   by,
   bt,
