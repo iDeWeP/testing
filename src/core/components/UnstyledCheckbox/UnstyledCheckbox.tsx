@@ -57,11 +57,13 @@ export const UnstyledCheckbox = (props: UnstyledCheckboxProps) => {
     disabled
   });
 
+  const hasRipple = ripple !== 'none';
+
   return (
     <UnstyledCheckboxContainer
       ref={forwardedRef}
       size={size}
-      hasRipple={ripple !== 'none'}
+      hasRipple={hasRipple}
       margin={margin}
       mx={mx}
       my={my}
@@ -80,7 +82,7 @@ export const UnstyledCheckbox = (props: UnstyledCheckboxProps) => {
         className={mergedClassName}
         {...restProps}
       />
-      {ripple !== 'none' && (
+      {hasRipple && (
         <UnstyledRipple
           valid={valid}
           invalid={invalid}
