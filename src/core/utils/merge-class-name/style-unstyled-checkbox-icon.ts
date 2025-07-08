@@ -41,7 +41,16 @@ export const styleUnstyledCheckboxIcon = (
     valid,
     invalid
   );
-  const isBordered = isCheckboxBordered(border, bx, by, bt, bb, bl, br);
+  const isBordered = isCheckboxBordered(
+    border,
+    bx,
+    by,
+    bt,
+    bb,
+    bl,
+    br,
+    variant
+  );
 
   return mergeClasses(
     unstyledCheckboxConfig.styles.shared.default,
