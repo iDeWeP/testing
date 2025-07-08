@@ -4,11 +4,11 @@ import type { MarkConfigProps } from './Mark.types';
 export const markConfig: ComponentConfig<MarkConfigProps> = {
   props: {
     as: 'span',
-    variant: 'text',
     font: 'md',
     color: 'primary',
+    variant: 'text',
     padding: 'unset',
-    px: 'xs',
+    px: 'unset',
     py: 'unset',
     pt: 'unset',
     pb: 'unset',
@@ -21,7 +21,7 @@ export const markConfig: ComponentConfig<MarkConfigProps> = {
     mb: 'unset',
     ml: 'unset',
     mr: 'unset',
-    border: 'unset',
+    border: 'auto',
     bx: 'unset',
     by: 'unset',
     bt: 'unset',
