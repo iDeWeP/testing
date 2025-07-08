@@ -4,11 +4,11 @@ import type { ListItemConfigProps } from './ListItem.types';
 export const listItemConfig: ComponentConfig<ListItemConfigProps> = {
   props: {
     as: 'li',
-    variant: 'surface',
+    variant: 'solid',
     orientation: 'col',
     size: 'md',
     radius: 'lg',
-    color: 'surface',
+    color: 'surface-on',
     gap: 'unset',
     padding: 'unset',
     px: 'unset',
@@ -24,7 +24,7 @@ export const listItemConfig: ComponentConfig<ListItemConfigProps> = {
     mb: 'unset',
     ml: 'unset',
     mr: 'unset',
-    border: 'unset',
+    border: 'auto',
     bx: 'unset',
     by: 'unset',
     bt: 'unset',
