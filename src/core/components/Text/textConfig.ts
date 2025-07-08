@@ -4,9 +4,9 @@ import type { TextConfigProps } from './Text.types';
 export const textConfig: ComponentConfig<TextConfigProps> = {
   props: {
     as: 'p',
-    variant: 'text',
     font: 'md',
     color: 'surface',
+    variant: 'text',
     padding: 'unset',
     px: 'unset',
     py: 'unset',
@@ -21,7 +21,7 @@ export const textConfig: ComponentConfig<TextConfigProps> = {
     mb: 'unset',
     ml: 'unset',
     mr: 'unset',
-    border: 'unset',
+    border: 'auto',
     bx: 'unset',
     by: 'unset',
     bt: 'unset',
