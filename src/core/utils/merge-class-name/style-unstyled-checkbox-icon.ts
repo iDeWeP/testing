@@ -1,7 +1,7 @@
 import { unstyledCheckboxConfig } from '../../components/UnstyledCheckbox/unstyledCheckboxConfig';
 import { systemStyles } from '../../config/system-styles';
 import type { Classes } from '../../types';
-import { isCheckboxBordered } from './border';
+import { isCheckboxBordered, getBorder } from './border';
 import { getColor } from './color';
 import { mergeClasses } from './merge-classes';
 
@@ -47,7 +47,7 @@ export const styleUnstyledCheckboxIcon = (
     unstyledCheckboxConfig.styles.shared.default,
     unstyledCheckboxConfig.styles.icon.default,
     systemStyles.size.text.square[defaultSize],
-    systemStyles.border.all[border],
+    systemStyles.border.all[getBorder(variant, border)],
     systemStyles.border.x[bx],
     systemStyles.border.y[by],
     systemStyles.border.t[bt],
