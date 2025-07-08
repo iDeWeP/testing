@@ -6,9 +6,8 @@ export const VariantExample = () => (
   <ExampleSection title="Variant">
     <ExampleCard>
       <Example variant="text" />
-      <Example variant="plain" />
+      <Example variant="outlined" />
       <Example variant="light" />
-      <Example variant="surface" />
       <Example variant="solid" />
     </ExampleCard>
   </ExampleSection>
