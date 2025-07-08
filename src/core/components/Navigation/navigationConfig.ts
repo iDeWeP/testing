@@ -21,7 +21,7 @@ export const navigationConfig: ComponentConfig<NavigationConfigProps> = {
     mb: 'unset',
     ml: 'unset',
     mr: 'unset',
-    border: 'unset',
+    border: 'auto',
     bx: 'unset',
     by: 'unset',
     bt: 'unset',
