@@ -15,7 +15,7 @@ import type {
 } from '../../types';
 import type { UnstyledRippleProps } from '../UnstyledRipple/UnstyledRipple.types';
 
-type UnstyledCheckboxContainerProps = {
+export type UnstyledCheckboxContainerProps = {
   radius?: Radius;
   rt?: Radius;
   rb?: Radius;
