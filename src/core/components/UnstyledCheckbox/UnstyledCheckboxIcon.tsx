@@ -130,7 +130,7 @@ export const UnstyledCheckboxIcon = ({
         <circle
           cx="12"
           cy="12"
-          r={variant === 'plain' || variant === 'text' ? '8' : '4'}
+          r={variant === 'text' ? '8' : '4'}
         />
       )}
     </svg>
