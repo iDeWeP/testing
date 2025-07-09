@@ -4,9 +4,7 @@ import { setProp } from '../../../utils/utils/set-prop/set-prop';
 import { useFocusHandler } from '../../hooks/use-focus-handler/use-focus-handler';
 import type {
   MergeComponentProps,
-  InputVariant,
   InputSize,
-  Scale,
   Margin,
   Color
 } from '../../types';
@@ -21,10 +19,14 @@ type Props = MergeComponentProps<
     valid: boolean;
     invalid: boolean;
     disabled: boolean;
-    variant: InputVariant;
     size: InputSize;
-    scale: Scale;
     margin: Margin;
+    mx: Margin;
+    my: Margin;
+    mt: Margin;
+    mb: Margin;
+    ml: Margin;
+    mr: Margin;
     color: Color;
   }
 >;
@@ -36,10 +38,14 @@ export const UnstyledInputContainer = ({
   valid,
   invalid,
   disabled,
-  variant: inputVariant,
   size: inputSize,
-  scale,
   margin,
+  mx,
+  my,
+  mt,
+  mb,
+  ml,
+  mr,
   color,
   className,
   onFocus,
@@ -51,10 +57,14 @@ export const UnstyledInputContainer = ({
     valid,
     invalid,
     disabled,
-    inputVariant,
-    inputSize,
-    scale,
+    size: inputSize,
     margin,
+    mx,
+    my,
+    mt,
+    mb,
+    ml,
+    mr,
     color
   });
 

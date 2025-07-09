@@ -8,7 +8,10 @@ import type {
   MergeProps
 } from '../../types';
 
-export type UnstyledInputContainerProps = ComponentPropsWithRef<'div'>;
+export type UnstyledInputContainerProps = Omit<
+  ComponentPropsWithRef<'div'>,
+  'color'
+>;
 export type UnstyledInputLabelProps = ComponentPropsWithRef<'label'>;
 export type UnstyledInputDecoratorProps = ComponentPropsWithRef<'span'>;
 export type UnstyledInputFieldsetProps = ComponentPropsWithRef<'fieldset'>;

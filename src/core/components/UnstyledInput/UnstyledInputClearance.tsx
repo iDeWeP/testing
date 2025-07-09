@@ -1,7 +1,7 @@
-import type { ComponentRefProps } from '../../types';
+import type { ComponentPropsWithRef } from 'react';
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
 
-type Props = ComponentRefProps<'legend'>;
+type Props = ComponentPropsWithRef<'legend'>;
 
 export const UnstyledInputClearance = ({ className, ...restProps }: Props) => {
   const mergedClassName = mergeClassName('unstyledInputClearance', className);

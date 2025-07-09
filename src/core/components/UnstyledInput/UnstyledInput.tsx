@@ -3,6 +3,7 @@ import { combineHandlers } from '../../../utils/utils/combine-handlers/combine-h
 import { mergeRefs } from '../../../utils/utils/merge-refs/merge-refs';
 import { setProp } from '../../../utils/utils/set-prop/set-prop';
 import { useControlledState } from '../../hooks/use-controlled-state/use-controlled-state';
+import { useTheme } from '../../hooks/use-theme/use-theme';
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
 import { mergeProps } from '../../utils/merge-props/merge-props';
 import type { UnstyledInputProps } from './UnstyledInput.types';
@@ -10,7 +11,7 @@ import { UnstyledInputClearance } from './UnstyledInputClearance';
 import { unstyledInputConfig } from './unstyledInputConfig';
 import { UnstyledInputContainer } from './UnstyledInputContainer';
 import { UnstyledInputDecorator } from './UnstyledInputDecorator';
-import { UnstyledInputFieldSet } from './UnstyledInputFieldSet';
+import { UnstyledInputFieldset } from './UnstyledInputFieldset';
 import { UnstyledInputLabel } from './UnstyledInputLabel';
 
 export const UnstyledInput = (props: UnstyledInputProps) => {
@@ -19,17 +20,30 @@ export const UnstyledInput = (props: UnstyledInputProps) => {
     inputRef,
     focused,
     shifted,
-    valid,
-    invalid,
-    disabled,
+    valid = false,
+    invalid = false,
+    disabled = false,
     id,
     value,
     placeholder,
     variant,
     size,
-    scale,
     margin,
+    mx,
+    my,
+    mt,
+    mb,
+    ml,
+    mr,
     radius,
+    rt,
+    rb,
+    rl,
+    rr,
+    rtl,
+    rtr,
+    rbl,
+    rbr,
     color,
     className,
     onFocus,
@@ -41,13 +55,15 @@ export const UnstyledInput = (props: UnstyledInputProps) => {
     ...restProps
   } = mergeProps(unstyledInputConfig.props, props);
 
+  const theme = useTheme();
+
   const ref = useRef<HTMLInputElement>(null);
 
   const {
     isOpen: isFocused,
     handleOpen: handleFocus,
     handleClose: handleBlur
-  } = useControlledState(false, focused);
+  } = useControlledState(false, focused, onFocus, onBlur);
 
   const mergedClassName = mergeClassName('unstyledInput', className, {
     disabled
@@ -62,26 +78,39 @@ export const UnstyledInput = (props: UnstyledInputProps) => {
       valid={valid}
       invalid={invalid}
       disabled={disabled}
-      variant={variant}
       size={size}
-      scale={scale}
       margin={margin}
+      mx={mx}
+      my={my}
+      mt={mt}
+      mb={mb}
+      ml={ml}
+      mr={mr}
       color={color}
       {...componentsProps.container}
     >
       <UnstyledInputDecorator
+        theme={theme}
         disabled={disabled}
         variant={variant}
         placement="left"
         radius={radius}
+        rt={rt}
+        rb={rb}
+        rl={rl}
+        rr={rr}
+        rtl={rtl}
+        rtr={rtr}
+        rbl={rbl}
+        rbr={rbr}
         {...componentsProps.leftDecorator}
       >
         {leftDecorator}
       </UnstyledInputDecorator>
-      <UnstyledInputFieldSet
+      <UnstyledInputFieldset
+        theme={theme}
         disabled={disabled}
         variant={variant}
-        decorated={!!label}
         {...componentsProps.fieldset}
       >
         <input
@@ -97,7 +126,7 @@ export const UnstyledInput = (props: UnstyledInputProps) => {
           onBlur={combineHandlers(onBlur, handleBlur)}
           {...restProps}
         />
-        {label && (variant === 'outlined' || variant === 'outlined-plain') && (
+        {label && variant === 'outlined' && (
           <UnstyledInputClearance {...componentsProps.clearance}>
             {label}
           </UnstyledInputClearance>
@@ -112,12 +141,21 @@ export const UnstyledInput = (props: UnstyledInputProps) => {
             {label}
           </UnstyledInputLabel>
         )}
-      </UnstyledInputFieldSet>
+      </UnstyledInputFieldset>
       <UnstyledInputDecorator
+        theme={theme}
         disabled={disabled}
         variant={variant}
         placement="right"
         radius={radius}
+        rt={rt}
+        rb={rb}
+        rl={rl}
+        rr={rr}
+        rtl={rtl}
+        rtr={rtr}
+        rbl={rbl}
+        rbr={rbr}
         {...componentsProps.rightDecorator}
       >
         {rightDecorator}
