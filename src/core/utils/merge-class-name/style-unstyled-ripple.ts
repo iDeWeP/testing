@@ -1,6 +1,6 @@
 import { unstyledRippleConfig } from '../../components/UnstyledRipple/unstyledRippleConfig';
 import type { Classes } from '../../types';
-import { getRippleColor, getTrailColor } from './color';
+import { getRippleColor, getDefaultColor } from './color';
 import { mergeClasses } from './merge-classes';
 
 export const styleUnstyledRipple = (
@@ -26,7 +26,7 @@ export const styleUnstyledRipple = (
       ],
     stateful &&
       unstyledRippleConfig.styles.root.color[ripplePlacement].stateless[theme][
-        getRippleColor(variant, getTrailColor(color), valid, invalid)
+        getRippleColor(variant, getDefaultColor(color), valid, invalid)
       ],
     stateful &&
       unstyledRippleConfig.styles.root.color[ripplePlacement].stateful[theme][
