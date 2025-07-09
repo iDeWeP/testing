@@ -8,7 +8,6 @@ export const styleUnstyledCheckboxContainer = (
   className: string,
   {
     size = 'md',
-    hasRipple = false,
     margin = 'unset',
     mx = 'unset',
     my = 'unset',
@@ -24,7 +23,8 @@ export const styleUnstyledCheckboxContainer = (
     rtl = 'unset',
     rtr = 'unset',
     rbl = 'unset',
-    rbr = 'unset'
+    rbr = 'unset',
+    hasRipple = false
   }: Classes
 ) =>
   mergeClasses(
