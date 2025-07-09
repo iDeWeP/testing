@@ -1,3 +1,4 @@
+import { unstyledInputConfig } from '../../components/UnstyledInput/unstyledInputConfig';
 import { sharedStyles } from '../../config/shared-styles';
 import { systemStyles } from '../../config/system-styles';
 import type { Classes } from '../../types';
@@ -8,6 +9,7 @@ import { getInputSize } from './spacing';
 export const styleUnstyledInputContainer = (
   className: string,
   {
+    inputType = 'input',
     theme = 'light',
     focused = false,
     shifted = false,
@@ -16,6 +18,7 @@ export const styleUnstyledInputContainer = (
     disabled = false,
     inputVariant = 'default',
     inputSize = 'md',
+    resize = false,
     margin = 'unset',
     mx = 'unset',
     my = 'unset',
@@ -26,6 +29,7 @@ export const styleUnstyledInputContainer = (
     color = 'unset'
   }: Classes
 ) => {
+  const size = getInputSize(inputSize, resize);
   const { textColor } = getColor(
     'text',
     getDefaultColor(color),
@@ -35,10 +39,10 @@ export const styleUnstyledInputContainer = (
   );
 
   return mergeClasses(
-    focused && sharedStyles.inputContainer.focused,
-    shifted && sharedStyles.inputContainer.shifted,
-    sharedStyles.inputContainer.default,
-    systemStyles.size.normal.normal[getInputSize(inputSize)],
+    focused && unstyledInputConfig.styles.container.focused,
+    shifted && unstyledInputConfig.styles.container.shifted,
+    unstyledInputConfig.styles.container.default,
+    unstyledInputConfig.styles.container.size[inputType][size],
     systemStyles.margin.all[margin],
     systemStyles.margin.x[mx],
     systemStyles.margin.y[my],
@@ -49,7 +53,7 @@ export const styleUnstyledInputContainer = (
     inputVariant === 'outlined' && systemStyles.border.all,
     systemStyles.color.text[theme][textColor],
     systemStyles.color.fill[theme][textColor],
-    systemStyles.color.focused[theme][
+    unstyledInputConfig.styles.container.color[theme][
       getColor('text', color, disabled, valid, invalid).textColor
     ],
     disabled && sharedStyles.focusable.disabled,

@@ -1,3 +1,4 @@
+import { unstyledInputConfig } from '../../components/UnstyledInput/unstyledInputConfig';
 import { sharedStyles } from '../../config/shared-styles';
 import { systemStyles } from '../../config/system-styles';
 import type { Classes } from '../../types';
@@ -9,6 +10,7 @@ import { getInputSpacing } from './spacing';
 export const styleUnstyledInputDecorator = (
   className: string,
   {
+    inputType = 'input',
     theme = 'light',
     disabled = false,
     inputVariant = 'default',
@@ -26,6 +28,7 @@ export const styleUnstyledInputDecorator = (
     decorated = false
   }: Classes
 ) => {
+  const isTextarea = inputType === 'textarea';
   const isOutlined = inputVariant === 'outlined';
   const { l, r, tl, tr, bl, br } = getInputRadius(
     inputVariant,
@@ -42,12 +45,13 @@ export const styleUnstyledInputDecorator = (
   );
 
   return mergeClasses(
-    sharedStyles.inputDecorator.default,
-    sharedStyles.inputDecorator.spacing[sidePlacement][
+    unstyledInputConfig.styles.decorator.default,
+    unstyledInputConfig.styles.decorator.spacing[sidePlacement][
       getInputSpacing(decorated)
     ],
-    isOutlined && sharedStyles.inputDecorator.outlined[sidePlacement],
-    sharedStyles.inputGeneric.variant[inputVariant],
+    isOutlined && unstyledInputConfig.styles.decorator.outlined[sidePlacement],
+    unstyledInputConfig.styles.generic.variant.default[inputVariant],
+    unstyledInputConfig.styles.generic.variant[inputType][inputVariant],
     systemStyles.radius.l[l],
     systemStyles.radius.r[r],
     systemStyles.radius.tl[tl],
@@ -57,6 +61,7 @@ export const styleUnstyledInputDecorator = (
     systemStyles.color.bg[theme][
       getInputColor(inputVariant, getDefaultColor(color), disabled).bgColor
     ],
+    isTextarea && sharedStyles.alignItems.end,
     className
   );
 };
