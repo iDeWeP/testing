@@ -11,8 +11,6 @@ import { UnstyledCheckboxTrail } from './UnstyledCheckboxTrail';
 
 export const UnstyledCheckbox = (props: UnstyledCheckboxProps) => {
   const {
-    ref: forwardedRef,
-    inputRef,
     checked = false,
     valid = false,
     invalid = false,
@@ -60,9 +58,7 @@ export const UnstyledCheckbox = (props: UnstyledCheckboxProps) => {
 
   return (
     <UnstyledCheckboxContainer
-      ref={forwardedRef}
       size={size}
-      hasRipple={ripple !== 'none'}
       margin={margin}
       mx={mx}
       my={my}
@@ -71,10 +67,10 @@ export const UnstyledCheckbox = (props: UnstyledCheckboxProps) => {
       ml={ml}
       mr={mr}
       radius="full"
+      hasRipple={ripple !== 'none'}
       {...componentsProps.container}
     >
       <input
-        ref={inputRef}
         checked={checked}
         disabled={disabled}
         type={type}

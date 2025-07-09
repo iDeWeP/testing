@@ -10,7 +10,6 @@ type Props = MergeComponentProps<
   'div',
   {
     size: DefaultSize;
-    hasRipple: boolean;
     margin: Margin;
     mx: Margin;
     my: Margin;
@@ -27,12 +26,12 @@ type Props = MergeComponentProps<
     rtr?: Radius;
     rbl?: Radius;
     rbr?: Radius;
+    hasRipple: boolean;
   }
 >;
 
 export const UnstyledCheckboxContainer = ({
   size,
-  hasRipple,
   margin,
   mx,
   my,
@@ -49,6 +48,7 @@ export const UnstyledCheckboxContainer = ({
   rtr,
   rbl,
   rbr,
+  hasRipple,
   className,
   ...restProps
 }: Props) => {
@@ -57,7 +57,6 @@ export const UnstyledCheckboxContainer = ({
     className,
     {
       size,
-      hasRipple,
       margin,
       mx,
       my,
@@ -73,7 +72,8 @@ export const UnstyledCheckboxContainer = ({
       rtl,
       rtr,
       rbl,
-      rbr
+      rbr,
+      hasRipple
     }
   );
 

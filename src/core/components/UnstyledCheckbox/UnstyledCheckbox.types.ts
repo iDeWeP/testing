@@ -1,4 +1,4 @@
-import type { ComponentPropsWithRef, RefObject } from 'react';
+import type { ComponentPropsWithRef } from 'react';
 import type {
   Radius,
   Border,
@@ -55,7 +55,6 @@ export type UnstyledCheckboxComponentsProps = {
 };
 
 type OptionalProps = {
-  inputRef?: RefObject<HTMLInputElement | null>;
   checked?: boolean;
   valid?: boolean;
   invalid?: boolean;
