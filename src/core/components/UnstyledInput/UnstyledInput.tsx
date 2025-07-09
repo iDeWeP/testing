@@ -13,6 +13,7 @@ import { UnstyledInputContainer } from './UnstyledInputContainer';
 import { UnstyledInputDecorator } from './UnstyledInputDecorator';
 import { UnstyledInputFieldset } from './UnstyledInputFieldset';
 import { UnstyledInputLabel } from './UnstyledInputLabel';
+import { setAria } from '../../utils/set-aria/set-aria';
 
 export const UnstyledInput = <E extends ElementType>(
   props: UnstyledInputProps<E>
@@ -77,9 +78,9 @@ export const UnstyledInput = <E extends ElementType>(
 
   return (
     <UnstyledInputContainer
+      inputType={Component}
       inputRef={setProp(focused === undefined, ref)}
       theme={theme}
-      inputType={Component}
       focused={isFocused}
       shifted={shifted ?? (!!label && (isFocused || !!value))}
       valid={valid}
@@ -99,8 +100,8 @@ export const UnstyledInput = <E extends ElementType>(
       {...componentsProps.container}
     >
       <UnstyledInputDecorator
-        theme={theme}
         inputType={Component}
+        theme={theme}
         disabled={disabled}
         variant={variant}
         placement="left"
@@ -119,8 +120,8 @@ export const UnstyledInput = <E extends ElementType>(
         {leftDecorator}
       </UnstyledInputDecorator>
       <UnstyledInputFieldset
-        theme={theme}
         inputType={Component}
+        theme={theme}
         disabled={disabled}
         variant={variant}
         color={color}
@@ -134,7 +135,7 @@ export const UnstyledInput = <E extends ElementType>(
           placeholder={setProp(isFocused, placeholder)}
           type="text"
           className={mergedClassName}
-          aria-invalid={invalid}
+          {...setAria('input', { isInvalid: invalid })}
           onFocus={combineHandlers(onFocus, handleFocus)}
           onBlur={combineHandlers(onBlur, handleBlur)}
           {...restProps}
@@ -157,8 +158,8 @@ export const UnstyledInput = <E extends ElementType>(
         )}
       </UnstyledInputFieldset>
       <UnstyledInputDecorator
-        theme={theme}
         inputType={Component}
+        theme={theme}
         disabled={disabled}
         variant={variant}
         placement="right"

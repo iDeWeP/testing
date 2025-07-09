@@ -11,8 +11,8 @@ import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
 type Props = MergeComponentProps<
   'span',
   {
-    theme: Theme;
     inputType: 'input' | 'textarea';
+    theme: Theme;
     disabled: boolean;
     variant: InputVariant;
     placement: SidePlacement;
@@ -30,8 +30,8 @@ type Props = MergeComponentProps<
 >;
 
 export const UnstyledInputDecorator = ({
-  theme,
   inputType,
+  theme,
   disabled,
   variant: inputVariant,
   placement: sidePlacement,
@@ -50,8 +50,8 @@ export const UnstyledInputDecorator = ({
   ...restProps
 }: Props) => {
   const mergedClassName = mergeClassName('unstyledInputDecorator', className, {
-    theme,
     inputType,
+    theme,
     disabled,
     inputVariant,
     sidePlacement,

@@ -15,9 +15,9 @@ import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
 type Props = MergeComponentProps<
   'div',
   {
+    inputType: 'input' | 'textarea';
     inputRef?: RefObject<HTMLInputElement | HTMLTextAreaElement | null>;
     theme: Theme;
-    inputType: 'input' | 'textarea';
     focused: boolean;
     shifted: boolean;
     valid: boolean;
@@ -38,9 +38,9 @@ type Props = MergeComponentProps<
 >;
 
 export const UnstyledInputContainer = ({
+  inputType,
   inputRef,
   theme,
-  inputType,
   focused,
   shifted,
   valid,
@@ -62,8 +62,8 @@ export const UnstyledInputContainer = ({
   ...restProps
 }: Props) => {
   const mergedClassName = mergeClassName('unstyledInputContainer', className, {
-    theme,
     inputType,
+    theme,
     focused,
     shifted,
     valid,

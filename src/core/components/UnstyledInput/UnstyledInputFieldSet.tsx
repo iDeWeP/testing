@@ -9,8 +9,8 @@ import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
 type Props = MergeComponentProps<
   'fieldset',
   {
-    theme: Theme;
     inputType: 'input' | 'textarea';
+    theme: Theme;
     disabled: boolean;
     variant: InputVariant;
     color: Color;
@@ -18,8 +18,8 @@ type Props = MergeComponentProps<
 >;
 
 export const UnstyledInputFieldset = ({
-  theme,
   inputType,
+  theme,
   disabled,
   variant: inputVariant,
   color,
@@ -27,8 +27,8 @@ export const UnstyledInputFieldset = ({
   ...restProps
 }: Props) => {
   const mergedClassName = mergeClassName('unstyledInputFieldset', className, {
-    theme,
     inputType,
+    theme,
     disabled,
     inputVariant,
     color
