@@ -1,16 +1,15 @@
 import { unstyledInputConfig } from '../../components/UnstyledInput/unstyledInputConfig';
+import { sharedStyles } from '../../config/shared-styles';
 import type { Classes } from '../../types';
 import { mergeClasses } from './merge-classes';
-import { getInputVariant } from './variants';
 
 export const styleUnstyledInputLabel = (
   className: string,
   { inputVariant = 'default', inputSize = 'md' }: Classes
 ) =>
   mergeClasses(
-    unstyledInputConfig.styles.label.default,
-    unstyledInputConfig.styles.label.variant[
-      getInputVariant(inputVariant).variant
-    ][inputSize],
+    sharedStyles.inputLabel.default,
+    sharedStyles.inputGeneric.default,
+    unstyledInputConfig.styles.label.variant[inputVariant][inputSize],
     className
   );
