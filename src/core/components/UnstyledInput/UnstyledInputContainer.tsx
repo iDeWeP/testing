@@ -57,7 +57,7 @@ export const UnstyledInputContainer = ({
     valid,
     invalid,
     disabled,
-    size: inputSize,
+    inputSize,
     margin,
     mx,
     my,

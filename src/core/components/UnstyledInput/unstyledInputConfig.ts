@@ -35,7 +35,7 @@ export const unstyledInputConfig: ComponentConfig<UnstyledInputConfigProps> &
     rtr: 'unset',
     rbl: 'unset',
     rbr: 'unset',
-    color: 'neutral',
+    color: 'unset',
     componentsProps: {}
   },
   styles: {
