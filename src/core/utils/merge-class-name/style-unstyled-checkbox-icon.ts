@@ -34,14 +34,6 @@ export const styleUnstyledCheckboxIcon = (
     shadow = 'unset'
   }: Classes
 ) => {
-  const { bgColor, textColor } = getCheckboxColor(
-    variant,
-    color,
-    disabled,
-    valid,
-    invalid,
-    true
-  );
   const isBordered = isCheckboxBordered(
     border,
     bx,
@@ -51,6 +43,14 @@ export const styleUnstyledCheckboxIcon = (
     bl,
     br,
     variant
+  );
+  const { bgColor, textColor } = getCheckboxColor(
+    variant,
+    color,
+    disabled,
+    valid,
+    invalid,
+    true
   );
 
   return mergeClasses(
