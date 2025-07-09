@@ -1,11 +1,14 @@
-import { useState, useCallback } from 'react';
-import { combineFunctions } from '../../../utils/utils/combine-functions/combine-functions';
+import { type SyntheticEvent, useState, useCallback } from 'react';
+import { combineHandlers } from '../../../utils/utils/combine-handlers/combine-handlers';
 
-export const useControlledState = (
+export const useControlledState = <
+  O extends SyntheticEvent,
+  C extends SyntheticEvent
+>(
   defaultOpen: boolean,
   open?: boolean,
-  onOpen?: VoidFunction,
-  onClose?: VoidFunction
+  onOpen?: ((event: O) => void | undefined) | VoidFunction,
+  onClose?: ((event: C) => void | undefined) | VoidFunction
 ) => {
   const [isOpen, setIsOpen] = useState(defaultOpen);
 
@@ -17,7 +20,7 @@ export const useControlledState = (
 
   return {
     isOpen: open ?? isOpen,
-    handleOpen: isControlled ? onOpen : combineFunctions(onOpen, handleOpen),
-    handleClose: isControlled ? onClose : combineFunctions(onClose, handleClose)
+    handleOpen: isControlled ? onOpen : combineHandlers(onOpen, handleOpen),
+    handleClose: isControlled ? onClose : combineHandlers(onClose, handleClose)
   };
 };
