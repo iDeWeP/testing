@@ -4,6 +4,8 @@ import { setProp } from '../../../utils/utils/set-prop/set-prop';
 import { useFocusHandler } from '../../hooks/use-focus-handler/use-focus-handler';
 import type {
   MergeComponentProps,
+  Theme,
+  InputVariant,
   InputSize,
   Margin,
   Color
@@ -14,12 +16,16 @@ type Props = MergeComponentProps<
   'div',
   {
     inputRef?: RefObject<HTMLInputElement | HTMLTextAreaElement | null>;
+    theme: Theme;
+    inputType: 'input' | 'textarea';
     focused: boolean;
     shifted: boolean;
     valid: boolean;
     invalid: boolean;
     disabled: boolean;
+    varaint: InputVariant;
     size: InputSize;
+    resize: boolean;
     margin: Margin;
     mx: Margin;
     my: Margin;
@@ -33,12 +39,16 @@ type Props = MergeComponentProps<
 
 export const UnstyledInputContainer = ({
   inputRef,
+  theme,
+  inputType,
   focused,
   shifted,
   valid,
   invalid,
   disabled,
+  varaint: inputVariant,
   size: inputSize,
+  resize,
   margin,
   mx,
   my,
@@ -52,12 +62,16 @@ export const UnstyledInputContainer = ({
   ...restProps
 }: Props) => {
   const mergedClassName = mergeClassName('unstyledInputContainer', className, {
+    theme,
+    inputType,
     focused,
     shifted,
     valid,
     invalid,
     disabled,
+    inputVariant,
     inputSize,
+    resize,
     margin,
     mx,
     my,

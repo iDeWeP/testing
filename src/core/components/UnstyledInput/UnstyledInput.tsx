@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { type ElementType, useRef } from 'react';
 import { combineHandlers } from '../../../utils/utils/combine-handlers/combine-handlers';
 import { mergeRefs } from '../../../utils/utils/merge-refs/merge-refs';
 import { setProp } from '../../../utils/utils/set-prop/set-prop';
@@ -14,10 +14,12 @@ import { UnstyledInputDecorator } from './UnstyledInputDecorator';
 import { UnstyledInputFieldset } from './UnstyledInputFieldset';
 import { UnstyledInputLabel } from './UnstyledInputLabel';
 
-export const UnstyledInput = (props: UnstyledInputProps) => {
+export const UnstyledInput = <E extends ElementType>(
+  props: UnstyledInputProps<E>
+) => {
   const {
+    as: Component,
     ref: forwardedRef,
-    inputRef,
     focused,
     shifted,
     valid = false,
@@ -27,7 +29,8 @@ export const UnstyledInput = (props: UnstyledInputProps) => {
     value,
     placeholder,
     variant,
-    size,
+    size: inputSize,
+    resize,
     margin,
     mx,
     my,
@@ -57,7 +60,7 @@ export const UnstyledInput = (props: UnstyledInputProps) => {
 
   const theme = useTheme();
 
-  const ref = useRef<HTMLInputElement>(null);
+  const ref = useRef(null);
 
   const {
     isOpen: isFocused,
@@ -66,19 +69,25 @@ export const UnstyledInput = (props: UnstyledInputProps) => {
   } = useControlledState(false, focused, onFocus, onBlur);
 
   const mergedClassName = mergeClassName('unstyledInput', className, {
-    disabled
+    inputType: Component,
+    disabled,
+    inputSize,
+    resize
   });
 
   return (
     <UnstyledInputContainer
-      ref={forwardedRef}
       inputRef={setProp(focused === undefined, ref)}
+      theme={theme}
+      inputType={Component}
       focused={isFocused}
       shifted={shifted ?? (!!label && (isFocused || !!value))}
       valid={valid}
       invalid={invalid}
       disabled={disabled}
-      size={size}
+      varaint={variant}
+      size={inputSize}
+      resize={resize}
       margin={margin}
       mx={mx}
       my={my}
@@ -91,6 +100,7 @@ export const UnstyledInput = (props: UnstyledInputProps) => {
     >
       <UnstyledInputDecorator
         theme={theme}
+        inputType={Component}
         disabled={disabled}
         variant={variant}
         placement="left"
@@ -103,18 +113,21 @@ export const UnstyledInput = (props: UnstyledInputProps) => {
         rtr={rtr}
         rbl={rbl}
         rbr={rbr}
+        color={color}
         {...componentsProps.leftDecorator}
       >
         {leftDecorator}
       </UnstyledInputDecorator>
       <UnstyledInputFieldset
         theme={theme}
+        inputType={Component}
         disabled={disabled}
         variant={variant}
+        color={color}
         {...componentsProps.fieldset}
       >
-        <input
-          ref={mergeRefs(inputRef, ref)}
+        <Component
+          ref={mergeRefs(forwardedRef, ref)}
           disabled={disabled}
           id={id}
           value={value}
@@ -133,8 +146,9 @@ export const UnstyledInput = (props: UnstyledInputProps) => {
         )}
         {label && (
           <UnstyledInputLabel
+            inputType={Component}
             variant={variant}
-            size={size}
+            size={inputSize}
             htmlFor={id}
             {...componentsProps.label}
           >
@@ -144,6 +158,7 @@ export const UnstyledInput = (props: UnstyledInputProps) => {
       </UnstyledInputFieldset>
       <UnstyledInputDecorator
         theme={theme}
+        inputType={Component}
         disabled={disabled}
         variant={variant}
         placement="right"
@@ -156,6 +171,7 @@ export const UnstyledInput = (props: UnstyledInputProps) => {
         rtr={rtr}
         rbl={rbl}
         rbr={rbr}
+        color={color}
         {...componentsProps.rightDecorator}
       >
         {rightDecorator}

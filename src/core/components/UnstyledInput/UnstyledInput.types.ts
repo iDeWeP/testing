@@ -1,5 +1,6 @@
-import type { ComponentPropsWithRef, RefObject, ReactNode } from 'react';
+import type { ReactNode, ElementType, ComponentPropsWithRef } from 'react';
 import type {
+  ComponentRefProps,
   InputVariant,
   InputSize,
   Margin,
@@ -8,14 +9,11 @@ import type {
   MergeProps
 } from '../../types';
 
-export type UnstyledInputContainerProps = Omit<
-  ComponentPropsWithRef<'div'>,
-  'color'
->;
-export type UnstyledInputLabelProps = ComponentPropsWithRef<'label'>;
-export type UnstyledInputDecoratorProps = ComponentPropsWithRef<'span'>;
-export type UnstyledInputFieldsetProps = ComponentPropsWithRef<'fieldset'>;
-export type UnstyledInputClearanceProps = ComponentPropsWithRef<'legend'>;
+export type UnstyledInputContainerProps = ComponentRefProps<'div'>;
+export type UnstyledInputLabelProps = ComponentRefProps<'label'>;
+export type UnstyledInputDecoratorProps = ComponentRefProps<'span'>;
+export type UnstyledInputFieldsetProps = ComponentRefProps<'fieldset'>;
+export type UnstyledInputClearanceProps = ComponentRefProps<'legend'>;
 
 export type UnstyledInputComponentsProps = {
   container?: UnstyledInputContainerProps;
@@ -27,7 +25,6 @@ export type UnstyledInputComponentsProps = {
 };
 
 type OptionalProps = {
-  inputRef?: RefObject<HTMLInputElement | null>;
   focused?: boolean;
   shifted?: boolean;
   valid?: boolean;
@@ -39,8 +36,10 @@ type OptionalProps = {
 };
 
 export type UnstyledInputDefaultProps = {
+  as?: 'input' | 'textarea';
   variant?: InputVariant;
   size?: InputSize;
+  resize?: boolean;
   margin?: Margin;
   mx?: Margin;
   my?: Margin;
@@ -63,7 +62,7 @@ export type UnstyledInputDefaultProps = {
 
 export type UnstyledInputConfigProps = UnstyledInputDefaultProps;
 
-export type UnstyledInputProps = MergeProps<
-  ComponentPropsWithRef<'input'>,
+export type UnstyledInputProps<E extends ElementType> = MergeProps<
+  ComponentPropsWithRef<E>,
   UnstyledInputDefaultProps & OptionalProps
 >;

@@ -1,9 +1,10 @@
 import type {
   MergeComponentProps,
+  Theme,
   InputVariant,
   SidePlacement,
   Radius,
-  Theme
+  Color
 } from '../../types';
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
 
@@ -11,6 +12,7 @@ type Props = MergeComponentProps<
   'span',
   {
     theme: Theme;
+    inputType: 'input' | 'textarea';
     disabled: boolean;
     variant: InputVariant;
     placement: SidePlacement;
@@ -23,11 +25,13 @@ type Props = MergeComponentProps<
     rtr: Radius;
     rbl: Radius;
     rbr: Radius;
+    color: Color;
   }
 >;
 
 export const UnstyledInputDecorator = ({
   theme,
+  inputType,
   disabled,
   variant: inputVariant,
   placement: sidePlacement,
@@ -40,12 +44,14 @@ export const UnstyledInputDecorator = ({
   rtr,
   rbl,
   rbr,
+  color,
   className,
   children,
   ...restProps
 }: Props) => {
   const mergedClassName = mergeClassName('unstyledInputDecorator', className, {
     theme,
+    inputType,
     disabled,
     inputVariant,
     sidePlacement,
@@ -58,6 +64,7 @@ export const UnstyledInputDecorator = ({
     rtr,
     rbl,
     rbr,
+    color,
     decorated: !!children
   });
 
