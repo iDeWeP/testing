@@ -1,13 +1,14 @@
-import { unstyledInputConfig } from '../../components/UnstyledInput/unstyledInputConfig';
-import { generic } from '../../config/generic';
+import { sharedStyles } from '../../config/shared-styles';
+import { systemStyles } from '../../config/system-styles';
 import type { Classes } from '../../types';
-import { getColor } from './color';
+import { getColor, getDefaultColor } from './color';
 import { mergeClasses } from './merge-classes';
-import { getInputVariant } from './variants';
+import { getInputSize } from './spacing';
 
 export const styleUnstyledInputContainer = (
   className: string,
   {
+    theme = 'light',
     focused = false,
     shifted = false,
     valid = false,
@@ -15,30 +16,43 @@ export const styleUnstyledInputContainer = (
     disabled = false,
     inputVariant = 'default',
     inputSize = 'md',
-    scale = 'normal',
-    margin = 'none',
-    color = 'neutral'
+    margin = 'unset',
+    mx = 'unset',
+    my = 'unset',
+    mt = 'unset',
+    mb = 'unset',
+    ml = 'unset',
+    mr = 'unset',
+    color = 'unset'
   }: Classes
 ) => {
-  const { textVariant, focusedVariant } = getInputVariant(
-    inputVariant,
+  const { textColor } = getColor(
+    'text',
+    getDefaultColor(color),
     disabled,
     valid,
     invalid
   );
-  const colorVariant = getColor('surface', disabled, valid, invalid);
 
   return mergeClasses(
-    focused && generic.styles.state.focused,
-    shifted && generic.styles.state.shifted,
-    unstyledInputConfig.styles.root.default,
-    unstyledInputConfig.styles.root.size[inputSize],
-    generic.styles.scale[scale],
-    generic.styles.margin[margin],
-    generic.styles.color.text[colorVariant][textVariant],
-    generic.styles.color.fill[colorVariant][textVariant],
-    generic.styles.color.input[color][focusedVariant],
-    disabled && generic.styles.focusable.disabled,
+    focused && sharedStyles.inputContainer.focused,
+    shifted && sharedStyles.inputContainer.shifted,
+    sharedStyles.inputContainer.default,
+    systemStyles.size.normal.normal[getInputSize(inputSize)],
+    systemStyles.margin.all[margin],
+    systemStyles.margin.x[mx],
+    systemStyles.margin.y[my],
+    systemStyles.margin.t[mt],
+    systemStyles.margin.b[mb],
+    systemStyles.margin.l[ml],
+    systemStyles.margin.r[mr],
+    inputVariant === 'outlined' && systemStyles.border.all,
+    systemStyles.color.text[theme][textColor],
+    systemStyles.color.fill[theme][textColor],
+    systemStyles.color.focused[theme][
+      getColor('text', color, disabled, valid, invalid).textColor
+    ],
+    disabled && sharedStyles.focusable.disabled,
     className
   );
 };

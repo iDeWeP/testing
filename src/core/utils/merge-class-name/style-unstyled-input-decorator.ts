@@ -1,36 +1,62 @@
-import { unstyledInputConfig } from '../../components/UnstyledInput/unstyledInputConfig';
-import { generic } from '../../config/generic';
+import { sharedStyles } from '../../config/shared-styles';
+import { systemStyles } from '../../config/system-styles';
 import type { Classes } from '../../types';
-import { getColor } from './color';
+import { getInputColor, getDefaultColor } from './color';
 import { mergeClasses } from './merge-classes';
 import { getInputRadius } from './radius';
 import { getInputSpacing } from './spacing';
-import { getInputVariant } from './variants';
 
 export const styleUnstyledInputDecorator = (
   className: string,
   {
+    theme = 'light',
     disabled = false,
     inputVariant = 'default',
     sidePlacement = 'left',
-    radius = 'none',
+    radius = 'unset',
+    rt = 'unset',
+    rb = 'unset',
+    rl = 'unset',
+    rr = 'unset',
+    rtl = 'unset',
+    rtr = 'unset',
+    rbl = 'unset',
+    rbr = 'unset',
+    color = 'unset',
     decorated = false
   }: Classes
 ) => {
-  const { variant, bgVariant } = getInputVariant(inputVariant, disabled);
+  const isOutlined = inputVariant === 'outlined';
+  const { l, r, tl, tr, bl, br } = getInputRadius(
+    inputVariant,
+    sidePlacement,
+    radius,
+    rt,
+    rb,
+    rl,
+    rr,
+    rtl,
+    rtr,
+    rbl,
+    rbr
+  );
 
   return mergeClasses(
-    unstyledInputConfig.styles.decorator.default,
-    unstyledInputConfig.styles.decorator.spacing[sidePlacement][
+    sharedStyles.inputDecorator.default,
+    sharedStyles.inputDecorator.spacing[sidePlacement][
       getInputSpacing(decorated)
     ],
-    variant === 'outlined' &&
-      unstyledInputConfig.styles.decorator.outlined[sidePlacement],
-    unstyledInputConfig.styles.generic.variant[variant],
-    generic.styles.radius.lg[
-      getInputRadius(inputVariant, sidePlacement, radius)
+    isOutlined && sharedStyles.inputDecorator.outlined[sidePlacement],
+    sharedStyles.inputGeneric.variant[inputVariant],
+    systemStyles.radius.l[l],
+    systemStyles.radius.r[r],
+    systemStyles.radius.tl[tl],
+    systemStyles.radius.tr[tr],
+    systemStyles.radius.bl[bl],
+    systemStyles.radius.br[br],
+    systemStyles.color.bg[theme][
+      getInputColor(inputVariant, getDefaultColor(color), disabled).bgColor
     ],
-    generic.styles.color.bg[getColor('surface', disabled)][bgVariant],
     className
   );
 };

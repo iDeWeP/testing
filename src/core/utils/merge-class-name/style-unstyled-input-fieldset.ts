@@ -1,21 +1,23 @@
-import { unstyledInputConfig } from '../../components/UnstyledInput/unstyledInputConfig';
-import { generic } from '../../config/generic';
+import { sharedStyles } from '../../config/shared-styles';
+import { systemStyles } from '../../config/system-styles';
 import type { Classes } from '../../types';
-import { getColor } from './color';
+import { getDefaultColor, getInputColor } from './color';
 import { mergeClasses } from './merge-classes';
-import { getInputVariant } from './variants';
 
-export const styleUnstyledInputFieldSet = (
+export const styleUnstyledInputFieldset = (
   className: string,
-  { disabled = false, inputVariant = 'default', labeled = false }: Classes
-) => {
-  const { variant, bgVariant } = getInputVariant(inputVariant, disabled);
-
-  return mergeClasses(
-    unstyledInputConfig.styles.fieldset.default,
-    labeled && generic.styles.position.relative,
-    unstyledInputConfig.styles.generic.variant[variant],
-    generic.styles.color.bg[getColor('surface', disabled)][bgVariant],
+  {
+    theme = 'light',
+    disabled = false,
+    inputVariant = 'default',
+    color = 'unset'
+  }: Classes
+) =>
+  mergeClasses(
+    sharedStyles.inputFieldset.default,
+    sharedStyles.inputGeneric.variant[inputVariant],
+    systemStyles.color.bg[theme][
+      getInputColor(inputVariant, getDefaultColor(color), disabled).bgColor
+    ],
     className
   );
-};
