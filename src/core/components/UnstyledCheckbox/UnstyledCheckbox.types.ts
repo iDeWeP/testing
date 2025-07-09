@@ -1,6 +1,7 @@
 import type { ComponentPropsWithRef } from 'react';
 import type {
   Radius,
+  ComponentRefProps,
   Border,
   DefaultBorder,
   RippleEffect,
@@ -25,11 +26,11 @@ export type UnstyledCheckboxContainerProps = {
   rtr?: Radius;
   rbl?: Radius;
   rbr?: Radius;
-} & ComponentPropsWithRef<'div'>;
+} & ComponentRefProps<'div'>;
 
 export type UnstyledCheckboxIconProps = Omit<
-  ComponentPropsWithRef<'svg'>,
-  'by' | 'radius' | 'color'
+  ComponentRefProps<'svg'>,
+  'by' | 'radius'
 >;
 
 export type UnstyledCheckboxTrailProps = {
@@ -41,11 +42,11 @@ export type UnstyledCheckboxTrailProps = {
   bl?: DefaultBorder;
   br?: DefaultBorder;
   color?: 'transparent';
-} & ComponentPropsWithRef<'span'>;
+} & ComponentRefProps<'span'>;
 
 export type UnstyledCheckboxRippleProps = {
   effect?: RippleEffect;
-} & ComponentPropsWithRef<'span'>;
+} & ComponentRefProps<'span'>;
 
 export type UnstyledCheckboxComponentsProps = {
   container?: UnstyledCheckboxContainerProps;
