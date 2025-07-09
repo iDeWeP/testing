@@ -1,7 +1,9 @@
-import type { ForwardedRef } from 'react';
+import type { ComponentRef, ElementType, ForwardedRef } from 'react';
 
 export const mergeRefs =
-  <E extends HTMLElement>(...refs: (ForwardedRef<E> | undefined)[]) =>
+  <E extends ComponentRef<ElementType>>(
+    ...refs: (ForwardedRef<E> | undefined)[]
+  ) =>
   (element: E) =>
     refs.forEach((ref) => {
       if (typeof ref === 'function') {
