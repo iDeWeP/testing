@@ -29,6 +29,7 @@ export const styleUnstyledInputContainer = (
     color = 'unset'
   }: Classes
 ) => {
+  const isOutlined = inputVariant === 'outlined';
   const size = getInputSize(inputSize, resize);
   const { textColor } = getColor(
     'text',
@@ -50,7 +51,7 @@ export const styleUnstyledInputContainer = (
     systemStyles.margin.b[mb],
     systemStyles.margin.l[ml],
     systemStyles.margin.r[mr],
-    inputVariant === 'outlined' && systemStyles.border.all,
+    isOutlined && systemStyles.border.all,
     systemStyles.color.text[theme][textColor],
     systemStyles.color.fill[theme][textColor],
     unstyledInputConfig.styles.container.color[theme][
