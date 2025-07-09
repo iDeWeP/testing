@@ -1,10 +1,10 @@
 import type {
   CSSProps,
-  InputSize,
+  Theme,
   SidePlacement,
+  InputSize,
   InputVariant,
-  ComponentConfig,
-  Theme
+  ComponentConfig
 } from '../../types';
 import type { UnstyledInputConfigProps } from './UnstyledInput.types';
 
