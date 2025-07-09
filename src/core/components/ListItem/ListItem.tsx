@@ -5,9 +5,7 @@ import { UnstyledBox } from '../UnstyledBox/UnstyledBox';
 import type { ListItemProps } from './ListItem.types';
 import { listItemConfig } from './listItemConfig';
 
-export const ListItem = <E extends ElementType = 'li'>(
-  props: ListItemProps<E>
-) => {
+export const ListItem = <E extends ElementType>(props: ListItemProps<E>) => {
   const {
     orientation,
     size: containerSize,

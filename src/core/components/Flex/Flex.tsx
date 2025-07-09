@@ -5,7 +5,7 @@ import { UnstyledBox } from '../UnstyledBox/UnstyledBox';
 import type { FlexProps } from './Flex.types';
 import { flexConfig } from './flexConfig';
 
-export const Flex = <E extends ElementType = 'div'>(props: FlexProps<E>) => {
+export const Flex = <E extends ElementType>(props: FlexProps<E>) => {
   const { className, ...restProps } = useMergeProps(
     'flex',
     flexConfig.props,

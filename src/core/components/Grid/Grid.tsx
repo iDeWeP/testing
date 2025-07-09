@@ -5,7 +5,7 @@ import { UnstyledBox } from '../UnstyledBox/UnstyledBox';
 import type { GridProps } from './Grid.types';
 import { gridConfig } from './gridConfig';
 
-export const Grid = <E extends ElementType = 'div'>(props: GridProps<E>) => {
+export const Grid = <E extends ElementType>(props: GridProps<E>) => {
   const { className, ...restProps } = useMergeProps(
     'grid',
     gridConfig.props,

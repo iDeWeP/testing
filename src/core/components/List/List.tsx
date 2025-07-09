@@ -5,7 +5,7 @@ import { UnstyledBox } from '../UnstyledBox/UnstyledBox';
 import type { ListProps } from './List.types';
 import { listConfig } from './listConfig';
 
-export const List = <E extends ElementType = 'ul'>(props: ListProps<E>) => {
+export const List = <E extends ElementType>(props: ListProps<E>) => {
   const { orientation, className, ...restProps } = useMergeProps(
     'list',
     listConfig.props,

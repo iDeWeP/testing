@@ -5,7 +5,7 @@ import { UnstyledBox } from '../UnstyledBox/UnstyledBox';
 import type { NavigationProps } from './Navigation.types';
 import { navigationConfig } from './navigationConfig';
 
-export const Navigation = <E extends ElementType = 'nav'>(
+export const Navigation = <E extends ElementType>(
   props: NavigationProps<E>
 ) => {
   const { orientation, className, ...restProps } = useMergeProps(

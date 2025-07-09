@@ -5,7 +5,7 @@ import { UnstyledBox } from '../UnstyledBox/UnstyledBox';
 import type { TitleProps } from './Title.types';
 import { titleConfig } from './titleConfig';
 
-export const Title = <E extends ElementType = 'h3'>(props: TitleProps<E>) => {
+export const Title = <E extends ElementType>(props: TitleProps<E>) => {
   const { font, className, ...restProps } = useMergeProps(
     'title',
     titleConfig.props,

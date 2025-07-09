@@ -5,9 +5,7 @@ import { UnstyledBox } from '../UnstyledBox/UnstyledBox';
 import type { SectionProps } from './Section.types';
 import { sectionConfig } from './sectionConfig';
 
-export const Section = <E extends ElementType = 'section'>(
-  props: SectionProps<E>
-) => {
+export const Section = <E extends ElementType>(props: SectionProps<E>) => {
   const { orientation, className, ...restProps } = useMergeProps(
     'section',
     sectionConfig.props,

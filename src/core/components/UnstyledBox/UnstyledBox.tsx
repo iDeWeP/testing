@@ -5,7 +5,7 @@ import { mergeProps } from '../../utils/merge-props/merge-props';
 import type { UnstyledBoxProps } from './UnstyledBox.types';
 import { unstyledBoxConfig } from './unstyledBoxConfig';
 
-export const UnstyledBox = <E extends ElementType = 'div'>(
+export const UnstyledBox = <E extends ElementType>(
   props: UnstyledBoxProps<E>
 ) => {
   const {

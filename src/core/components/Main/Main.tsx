@@ -5,7 +5,7 @@ import { UnstyledBox } from '../UnstyledBox/UnstyledBox';
 import type { MainProps } from './Main.types';
 import { mainConfig } from './mainConfig';
 
-export const Main = <E extends ElementType = 'main'>(props: MainProps<E>) => {
+export const Main = <E extends ElementType>(props: MainProps<E>) => {
   const { orientation, className, ...restProps } = useMergeProps(
     'main',
     mainConfig.props,

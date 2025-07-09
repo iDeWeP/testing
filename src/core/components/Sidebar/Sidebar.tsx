@@ -5,9 +5,7 @@ import { UnstyledBox } from '../UnstyledBox/UnstyledBox';
 import type { SidebarProps } from './Sidebar.types';
 import { sidebarConfig } from './sidebarConfig';
 
-export const Sidebar = <E extends ElementType = 'aside'>(
-  props: SidebarProps<E>
-) => {
+export const Sidebar = <E extends ElementType>(props: SidebarProps<E>) => {
   const { orientation, className, ...restProps } = useMergeProps(
     'sidebar',
     sidebarConfig.props,

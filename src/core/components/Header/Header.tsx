@@ -5,9 +5,7 @@ import { UnstyledBox } from '../UnstyledBox/UnstyledBox';
 import type { HeaderProps } from './Header.types';
 import { headerConfig } from './headerConfig';
 
-export const Header = <E extends ElementType = 'header'>(
-  props: HeaderProps<E>
-) => {
+export const Header = <E extends ElementType>(props: HeaderProps<E>) => {
   const { orientation, className, ...restProps } = useMergeProps(
     'header',
     headerConfig.props,

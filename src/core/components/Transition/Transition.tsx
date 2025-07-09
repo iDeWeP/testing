@@ -10,7 +10,7 @@ import { UnstyledBox } from '../UnstyledBox/UnstyledBox';
 import type { TransitionProps } from './Transition.types';
 import { unstyledTransitionConfig } from './transitionConfig';
 
-export const Transition = <E extends ElementType = 'div'>(
+export const Transition = <E extends ElementType>(
   props: TransitionProps<E>
 ) => {
   const {

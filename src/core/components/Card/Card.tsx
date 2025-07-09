@@ -5,7 +5,7 @@ import { UnstyledBox } from '../UnstyledBox/UnstyledBox';
 import type { CardProps } from './Card.types';
 import { cardConfig } from './cardConfig';
 
-export const Card = <E extends ElementType = 'div'>(props: CardProps<E>) => {
+export const Card = <E extends ElementType>(props: CardProps<E>) => {
   const {
     orientation,
     size: containerSize,

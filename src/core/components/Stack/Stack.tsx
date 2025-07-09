@@ -5,7 +5,7 @@ import { UnstyledBox } from '../UnstyledBox/UnstyledBox';
 import type { StackProps } from './Stack.types';
 import { stackConfig } from './stackConfig';
 
-export const Stack = <E extends ElementType = 'div'>(props: StackProps<E>) => {
+export const Stack = <E extends ElementType>(props: StackProps<E>) => {
   const { className, ...restProps } = useMergeProps(
     'stack',
     stackConfig.props,
