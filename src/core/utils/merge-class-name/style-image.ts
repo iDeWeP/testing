@@ -1,5 +1,5 @@
-import { sharedStyles } from '../../config/shared-styles';
+import { imageConfig } from '../../components/Image/imageConfig';
 import { mergeClasses } from './merge-classes';
 
 export const styleImage = (className: string) =>
-  mergeClasses(sharedStyles.image.default, className);
+  mergeClasses(imageConfig.styles.root.default, className);
