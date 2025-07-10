@@ -6,12 +6,12 @@ export const getAnchorDimensions = (
   cursor?: Cursor
 ) => {
   const dimensions = {
+    top: anchor.offsetTop,
+    left: anchor.offsetLeft,
     x: anchor.getBoundingClientRect().x,
     y: anchor.getBoundingClientRect().y,
     cursorX: cursor?.x ?? 0,
     cursorY: cursor?.y ?? 0,
-    top: anchor.offsetTop,
-    left: anchor.offsetLeft,
     width: anchor.offsetWidth,
     height: anchor.offsetHeight
   };
