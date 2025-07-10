@@ -2,4 +2,8 @@ import { unstyledInputConfig } from '../../components/UnstyledInput/unstyledInpu
 import { mergeClasses } from './merge-classes';
 
 export const styleUnstyledInputClearance = (className: string) =>
-  mergeClasses(unstyledInputConfig.styles.clearance.default, className);
+  mergeClasses(
+    unstyledInputConfig.styles.clearance.default,
+    unstyledInputConfig.styles.generic.default,
+    className
+  );

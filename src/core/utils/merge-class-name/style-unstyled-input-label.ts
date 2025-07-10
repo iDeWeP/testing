@@ -8,6 +8,7 @@ export const styleUnstyledInputLabel = (
 ) =>
   mergeClasses(
     unstyledInputConfig.styles.label.default,
+    unstyledInputConfig.styles.generic.default,
     inputType === 'input' &&
       unstyledInputConfig.styles.label.variant.input[inputVariant][inputSize],
     inputType === 'textarea' &&

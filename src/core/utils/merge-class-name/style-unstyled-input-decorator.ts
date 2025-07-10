@@ -1,5 +1,4 @@
 import { unstyledInputConfig } from '../../components/UnstyledInput/unstyledInputConfig';
-import { sharedStyles } from '../../config/shared-styles';
 import { systemStyles } from '../../config/system-styles';
 import type { Classes } from '../../types';
 import { getInputColor, getDefaultColor } from './color';
@@ -28,7 +27,6 @@ export const styleUnstyledInputDecorator = (
     decorated = false
   }: Classes
 ) => {
-  const isTextarea = inputType === 'textarea';
   const isOutlined = inputVariant === 'outlined';
   const { l, r, tl, tr, bl, br } = getInputRadius(
     inputVariant,
@@ -61,7 +59,6 @@ export const styleUnstyledInputDecorator = (
     systemStyles.color.bg[theme][
       getInputColor(inputVariant, getDefaultColor(color), disabled).bgColor
     ],
-    isTextarea && sharedStyles.alignItems.end,
     className
   );
 };
