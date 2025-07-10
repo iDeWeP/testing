@@ -13,9 +13,9 @@ import type {
   MergeProps
 } from '../../types';
 import type {
-  UnstyledPaperConfigProps,
-  UnstyledPaperProps
-} from '../UnstyledPaper/UnstyledPaper.types';
+  UnstyledDropdownConfigProps,
+  UnstyledDropdownProps
+} from '../UnstyledDropdown/UnstyledDropdown.types';
 
 export type UnstyledPopperArrowProps = {
   offset?: ArrowOffset;
@@ -67,11 +67,11 @@ export type UnstyledPopperDefaultProps = {
 };
 
 export type UnstyledPopperConfigProps = MergeProps<
-  UnstyledPaperConfigProps,
+  UnstyledDropdownConfigProps,
   UnstyledPopperDefaultProps
 >;
 
 export type UnstyledPopperProps<E extends ElementType> = MergeProps<
-  UnstyledPaperProps<E>,
+  UnstyledDropdownProps<E>,
   UnstyledPopperDefaultProps & OptionalProps
 >;

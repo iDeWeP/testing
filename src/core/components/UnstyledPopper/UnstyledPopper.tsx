@@ -23,7 +23,7 @@ import { mergeAnimationProps } from '../../utils/merge-animation-props/merge-ani
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
 import { mergePopperStyle } from '../../utils/merge-popper-style/merge-popper-style';
 import { mergeProps } from '../../utils/merge-props/merge-props';
-import { UnstyledPaper } from '../UnstyledPaper/UnstyledPaper';
+import { UnstyledDropdown } from '../UnstyledDropdown/UnstyledDropdown';
 import type { UnstyledPopperProps } from './UnstyledPopper.types';
 import { UnstyledPopperArrow } from './UnstyledPopperArrow';
 import { UnstyledPopperBackdrop } from './UnstyledPopperBackdrop';
@@ -162,7 +162,7 @@ export const UnstyledPopper = <E extends ElementType>(
           )}
         />
       )}
-      <UnstyledPaper
+      <UnstyledDropdown
         ref={mergeRefs(forwardedRef, ref)}
         tabIndex={-1}
         variant={variant}
@@ -197,7 +197,7 @@ export const UnstyledPopper = <E extends ElementType>(
             {...componentProps.arrow}
           />
         )}
-      </UnstyledPaper>
+      </UnstyledDropdown>
     </>,
     portalEl
   );
