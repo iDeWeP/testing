@@ -4,7 +4,7 @@ import type { UnstyledBoxConfigProps } from './UnstyledBox.types';
 export const unstyledBoxConfig: ComponentConfig<UnstyledBoxConfigProps> = {
   props: {
     as: 'div',
-    variant: 'text',
+    variant: 'solid',
     padding: 'unset',
     px: 'unset',
     py: 'unset',
