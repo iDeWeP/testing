@@ -1,21 +1,40 @@
-import { generic } from '../../config/generic';
+import { sharedStyles } from '../../config/shared-styles';
+import { systemStyles } from '../../config/system-styles';
 import type { Classes } from '../../types';
+import { getArrowColor } from './color';
 import { mergeClasses } from './merge-classes';
-import { getArrowVariant } from './variant';
 
 export const styleUnstyledPopperArrow = (
   className: string,
   {
-    variant = 'none',
+    theme = 'light',
+    variant = 'solid',
     defaultPlacement = 'bottom',
-    border = false,
+    border = 'unset',
+    bx = 'unset',
+    by = 'unset',
+    bt = 'unset',
+    bb = 'unset',
+    bl = 'unset',
+    br = 'unset',
     color = 'neutral'
   }: Classes
 ) =>
   mergeClasses(
-    generic.styles.position.absolute,
-    generic.styles.color.fill[color][
-      getArrowVariant(variant, defaultPlacement, border)
+    sharedStyles.position.absolute,
+    systemStyles.color.fill[theme][
+      getArrowColor(
+        variant,
+        defaultPlacement,
+        color,
+        border,
+        bx,
+        by,
+        bt,
+        bb,
+        bl,
+        br
+      )
     ],
     className
   );

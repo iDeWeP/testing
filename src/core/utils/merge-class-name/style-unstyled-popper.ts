@@ -1,5 +1,5 @@
 import { unstyledPopperConfig } from '../../components/UnstyledPopper/unstyledPopperConfig';
-import { generic } from '../../config/generic';
+import { sharedStyles } from '../../config/shared-styles';
 import type { Classes } from '../../types';
 import { mergeClasses } from './merge-classes';
 
@@ -9,6 +9,6 @@ export const styleUnstyledPopper = (
 ) =>
   mergeClasses(
     unstyledPopperConfig.styles.root.default,
-    followCursor && generic.styles.cursor.none,
+    followCursor && sharedStyles.cursor.none,
     className
   );
