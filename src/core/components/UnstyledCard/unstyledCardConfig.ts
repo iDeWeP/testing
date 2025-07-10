@@ -4,9 +4,9 @@ import type { UnstyledCardConfigProps } from './UnstyledCard.types';
 export const unstyledCardConfig: ComponentConfig<UnstyledCardConfigProps> = {
   props: {
     as: 'div',
-    variant: 'text',
     orientation: 'row',
     size: 'unset',
+    variant: 'text',
     padding: 'unset',
     px: 'unset',
     py: 'unset',
