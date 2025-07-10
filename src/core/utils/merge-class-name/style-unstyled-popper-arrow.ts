@@ -26,14 +26,14 @@ export const styleUnstyledPopperArrow = (
       getArrowColor(
         variant,
         defaultPlacement,
-        color,
         border,
         bx,
         by,
         bt,
         bb,
         bl,
-        br
+        br,
+        color
       )
     ],
     className
