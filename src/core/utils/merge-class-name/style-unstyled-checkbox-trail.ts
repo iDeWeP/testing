@@ -2,7 +2,7 @@ import { unstyledCheckboxConfig } from '../../components/UnstyledCheckbox/unstyl
 import { systemStyles } from '../../config/system-styles';
 import type { Classes } from '../../types';
 import { isCheckboxBordered } from './border';
-import { getCheckboxColor, getDefaultColor } from './color';
+import { getColor, getDefaultColor } from './color';
 import { mergeClasses } from './merge-classes';
 
 export const styleUnstyledCheckboxTrail = (
@@ -34,12 +34,13 @@ export const styleUnstyledCheckboxTrail = (
   }: Classes
 ) => {
   const isBordered = isCheckboxBordered(border, bx, by, bt, bb, bl, br);
-  const { bgColor, textColor } = getCheckboxColor(
+  const { bgColor, textColor } = getColor(
     'light',
     getDefaultColor(trailColor),
     disabled,
     valid,
-    invalid
+    invalid,
+    false
   );
   const isTransparent = trailColor === 'transparent';
 

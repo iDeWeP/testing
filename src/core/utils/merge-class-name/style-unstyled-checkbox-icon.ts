@@ -2,7 +2,7 @@ import { unstyledCheckboxConfig } from '../../components/UnstyledCheckbox/unstyl
 import { systemStyles } from '../../config/system-styles';
 import type { Classes } from '../../types';
 import { isCheckboxBordered, getBorder } from './border';
-import { getCheckboxColor } from './color';
+import { getColor } from './color';
 import { mergeClasses } from './merge-classes';
 
 export const styleUnstyledCheckboxIcon = (
@@ -44,7 +44,7 @@ export const styleUnstyledCheckboxIcon = (
     br,
     variant
   );
-  const { bgColor, textColor } = getCheckboxColor(
+  const { bgColor, textColor } = getColor(
     variant,
     color,
     disabled,
