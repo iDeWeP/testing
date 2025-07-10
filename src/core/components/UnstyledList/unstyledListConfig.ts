@@ -5,7 +5,7 @@ export const unstyledListConfig: ComponentConfig<UnstyledListConfigProps> = {
   props: {
     as: 'div',
     orientation: 'row',
-    variant: 'text',
+    variant: 'solid',
     padding: 'unset',
     px: 'unset',
     py: 'unset',
