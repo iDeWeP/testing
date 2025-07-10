@@ -25,7 +25,7 @@ export const unstyledRippleConfig: ComponentConfig<UnstyledRippleConfigProps> &
   Styles = {
   props: {
     stateful: false,
-    variant: 'text',
+    variant: 'solid',
     placement: 'normal',
     color: 'unset',
     effect: 'normal'
