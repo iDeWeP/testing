@@ -89,7 +89,7 @@ export const unstyledInputConfig: ComponentConfig<UnstyledInputConfigProps> &
         display: 'inline-flex',
         font: 'text-md',
         transition: 'transition-colors',
-        transitionDuration: 'duration-500',
+        transitionDuration: 'duration-150',
         transitionTimingFunction: 'ease-in-out',
         group: 'group'
       },
@@ -113,7 +113,7 @@ export const unstyledInputConfig: ComponentConfig<UnstyledInputConfigProps> &
             height: 'h-24'
           },
           lg: {
-            height: 'h-28'
+            height: 'h-32'
           },
           full: {
             height: 'h-full'
@@ -274,13 +274,13 @@ export const unstyledInputConfig: ComponentConfig<UnstyledInputConfigProps> &
       },
       size: {
         sm: {
-          minHeight: 'min-h-15'
+          minHeight: 'min-h-14'
         },
         md: {
-          minHeight: 'min-h-19'
+          minHeight: 'min-h-18'
         },
         lg: {
-          minHeight: 'min-h-23'
+          minHeight: 'min-h-22'
         }
       },
       stable: {
@@ -304,7 +304,7 @@ export const unstyledInputConfig: ComponentConfig<UnstyledInputConfigProps> &
         position: 'absolute',
         left: 'left-1',
         transition: 'transition-all',
-        transitionDuration: 'duration-500',
+        transitionDuration: 'duration-150',
         transitionTimingFunction: 'ease-in-out',
         group: 'group-[.shifted]:h-4 group-[.shifted]:text-sm'
       },
@@ -320,25 +320,22 @@ export const unstyledInputConfig: ComponentConfig<UnstyledInputConfigProps> &
               group: 'group-[.shifted]:top-1'
             },
             lg: {
-              top: 'top-8',
+              top: 'top-10',
               group: 'group-[.shifted]:top-3'
             }
           },
           light: {
             sm: {
-              top: 'top-2/4',
-              translate: '-translate-y-2/4',
-              group: 'group-[.shifted]:top-0 group-[.shifted]:translate-y-0'
+              top: 'top-4',
+              group: 'group-[.shifted]:top-0'
             },
             md: {
-              top: 'top-2/4',
-              translate: '-translate-y-2/4',
-              group: 'group-[.shifted]:top-1 group-[.shifted]:translate-y-0'
+              top: 'top-6',
+              group: 'group-[.shifted]:top-1'
             },
             lg: {
-              top: 'top-2/4',
-              translate: '-translate-y-2/4',
-              group: 'group-[.shifted]:top-3 group-[.shifted]:translate-y-0'
+              top: 'top-10',
+              group: 'group-[.shifted]:top-3'
             }
           },
           outlined: {
