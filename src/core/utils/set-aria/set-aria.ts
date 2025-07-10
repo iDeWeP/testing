@@ -1,9 +1,16 @@
 import type { ElementType } from 'react';
 
-const types = {
-  button: (element?: ElementType) =>
-    element === 'button' ? {} : { tabIndex: 0, role: 'button' }
+type Values = {
+  element?: ElementType;
+  isInvalid?: boolean;
 };
 
-export const setAria = (type: keyof typeof types, element?: ElementType) =>
-  types[type](element);
+const types = {
+  button: ({ element }: Values) =>
+    element === 'button' ? {} : { tabIndex: 0, role: 'button' },
+  icon: () => ({ 'aria-hidden': true }),
+  input: ({ isInvalid }: Values) => ({ 'aria-invalid': !!isInvalid })
+};
+
+export const setAria = (type: keyof typeof types, values: Values = {}) =>
+  types[type](values);

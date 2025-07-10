@@ -1,9 +1,10 @@
 import type { Animation } from '../../../hooks/hooks/use-animation/use-animation';
 import { combineHandlers } from '../../../utils/utils/combine-handlers/combine-handlers';
 import { portNode } from '../../../utils/utils/port-node/port-node';
-import type { MergeComponentProps, Peak, TransitionProps } from '../../types';
+import type { MergeComponentProps, Peak, AnimationProps } from '../../types';
 import { mergeBackdropStyle } from '../../utils/merge-backdrop-style/merge-backdrop-style';
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
+import { setAria } from '../../utils/set-aria/set-aria';
 
 type Props = MergeComponentProps<
   'div',
@@ -17,7 +18,7 @@ type Props = MergeComponentProps<
     duration: number;
     onClose?: VoidFunction;
     portalEl: Element | null;
-    transitionProps?: TransitionProps;
+    animationProps?: AnimationProps;
   }
 >;
 
@@ -34,7 +35,7 @@ export const UnstyledPopperBackdrop = ({
   onClose,
   onClick,
   portalEl,
-  transitionProps,
+  animationProps,
   ...restProps
 }: Props) => {
   const mergedClassName = mergeClassName('unstyledPopperBackdrop', className, {
@@ -49,14 +50,14 @@ export const UnstyledPopperBackdrop = ({
     zIndex,
     duration,
     style,
-    transitionProps
+    animationProps
   );
 
   return portNode(
     <div
       className={mergedClassName}
       style={mergedStyle}
-      aria-hidden
+      {...setAria('icon')}
       onClick={combineHandlers(onClick, onClose)}
       {...restProps}
     />,

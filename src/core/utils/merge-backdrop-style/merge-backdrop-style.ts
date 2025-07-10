@@ -1,8 +1,8 @@
 import type { CSSProperties } from 'react';
 import type { Animation } from '../../../hooks/hooks/use-animation/use-animation';
-import type { Peak, TransitionProps } from '../../types';
+import type { Peak, AnimationProps } from '../../types';
+import { styleAnimation } from '../style-animation/style-animation';
 import { styleFade } from '../style-fade/style-fade';
-import { styleTransition } from '../style-transition/style-transition';
 
 export const mergeBackdropStyle = (
   isOpen: boolean,
@@ -11,11 +11,11 @@ export const mergeBackdropStyle = (
   zIndex: number,
   duration: number,
   style?: CSSProperties,
-  transitionProps?: TransitionProps
+  animationProps?: AnimationProps
 ): CSSProperties => ({
   zIndex,
   visibility: !isOpen && animation.isExited ? 'hidden' : 'visible',
-  ...styleTransition(isOpen, animation, duration, transitionProps),
+  ...styleAnimation(isOpen, animation, duration, animationProps),
   ...styleFade(animation, peak),
   ...style
 });

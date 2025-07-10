@@ -1,8 +1,15 @@
 import type { CSSProperties } from 'react';
 import type { Animation } from '../../../hooks/hooks/use-animation/use-animation';
-import type { Peak, TransitionProps } from '../../types';
+import type { Peak, Transition, AnimationProps } from '../../types';
+import { getFadeStyle } from '../get-fade-style/get-fade-style';
+import { styleAnimation } from '../style-animation/style-animation';
 import { styleFade } from '../style-fade/style-fade';
-import { styleTransition } from '../style-transition/style-transition';
+import { styleGrow } from '../style-grow/style-grow';
+
+const setStyle = {
+  fade: styleFade,
+  grow: styleGrow
+};
 
 export const mergePopperStyle = (
   isOpen: boolean,
@@ -11,15 +18,21 @@ export const mergePopperStyle = (
   top: number,
   left: number,
   zIndex: number,
+  transition: Transition,
   duration: number,
   style?: CSSProperties,
-  transitionProps?: TransitionProps
-): CSSProperties => ({
-  top,
-  left,
-  zIndex,
-  visibility: !isOpen && animation.isExited ? 'hidden' : 'visible',
-  ...styleTransition(isOpen, animation, duration, transitionProps),
-  ...styleFade(animation, peak),
-  ...style
-});
+  animationProps?: AnimationProps
+): CSSProperties => {
+  const transitions = transition.split('-');
+
+  return {
+    top,
+    left,
+    zIndex,
+    visibility: !isOpen && animation.isExited ? 'hidden' : 'visible',
+    ...styleAnimation(isOpen, animation, duration, animationProps),
+    ...getFadeStyle(animation, peak, transitions),
+    ...setStyle[transitions[0] as keyof typeof setStyle](animation, peak),
+    ...style
+  };
+};

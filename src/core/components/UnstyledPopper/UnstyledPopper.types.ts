@@ -3,17 +3,16 @@ import type {
   ArrowOffset,
   SVGNodeProps,
   ComponentRefProps,
-  TransitionProps,
+  AnimationProps,
   Cursor,
-  Placement,
+  CollisionFunction,
   Collision,
   Peak,
-  MergeProps
-} from '../../types';
-import type {
+  Placement,
+  MergeProps,
   UnstyledPaperConfigProps,
   UnstyledPaperProps
-} from '../UnstyledPaper/UnstyledPaper.types';
+} from '../../types';
 
 export type UnstyledPopperArrowProps = {
   offset?: ArrowOffset;
@@ -25,7 +24,7 @@ export type UnstyledPopperBackdropProps = {
   invisible?: boolean;
   blur?: boolean;
   portalEl?: Element | null;
-  transitionProps?: TransitionProps;
+  animationProps?: AnimationProps;
 } & ComponentRefProps<'div'>;
 
 export type UnstyledPopperComponentsProps = {
@@ -38,7 +37,7 @@ type OptionalProps = {
   open?: boolean;
   followCursor?: Cursor;
   onClose?: VoidFunction;
-  onCollision?: (placement: Placement) => void;
+  onCollision?: CollisionFunction;
 };
 
 export type UnstyledPopperDefaultProps = {
@@ -56,7 +55,7 @@ export type UnstyledPopperDefaultProps = {
   zIndex?: number;
   duration?: number;
   portalEl?: Element | null;
-  transitionProps?: TransitionProps;
+  animationProps?: AnimationProps;
   componentProps?: UnstyledPopperComponentsProps;
   arrow?: boolean;
   backdrop?: boolean;

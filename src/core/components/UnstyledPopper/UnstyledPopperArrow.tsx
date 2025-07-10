@@ -10,6 +10,7 @@ import type {
 import { mergeArrowStyle } from '../../utils/merge-arrow-style/merge-arrow-style';
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
 import { mergeClasses } from '../../utils/merge-class-name/merge-classes';
+import { setAria } from '../../utils/set-aria/set-aria';
 
 type Props = MergeComponentProps<
   'svg',
@@ -56,7 +57,7 @@ export const UnstyledPopperArrow = ({
     return cloneElement(children, {
       className: mergedClassName,
       style: mergedStyle,
-      'aria-hidden': true,
+      ...setAria('icon'),
       ...restProps
     });
   }
@@ -68,7 +69,7 @@ export const UnstyledPopperArrow = ({
       height="8"
       className={mergedClassName}
       style={mergedStyle}
-      aria-hidden="true"
+      {...setAria('icon')}
       {...restProps}
     >
       <polygon points="0,8 8,8 4,3" />

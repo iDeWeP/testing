@@ -111,7 +111,7 @@ export const UnstyledCheckboxIcon = ({
   if (children) {
     return cloneElement(children, {
       className: mergedClassName,
-      ...setAria('checkboxIcon'),
+      ...setAria('icon'),
       ...restProps
     });
   }
@@ -120,7 +120,7 @@ export const UnstyledCheckboxIcon = ({
     <svg
       viewBox="0 0 24 24"
       className={mergedClassName}
-      {...setAria('checkboxIcon')}
+      {...setAria('icon')}
       {...restProps}
     >
       {inputType === 'checkbox' && (
