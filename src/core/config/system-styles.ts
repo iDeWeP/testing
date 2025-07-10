@@ -4,6 +4,7 @@ type Styles = Record<string, CSSProps>;
 type SpacingType = 'all' | 'x' | 'y' | 't' | 'b' | 'l' | 'r';
 type RadiusType = 'all' | 't' | 'b' | 'l' | 'r' | 'tl' | 'tr' | 'bl' | 'br';
 type GapType = 'all' | 'x' | 'y';
+type BorderType = 'all' | 'x' | 'y' | 't' | 'b' | 'l' | 'r';
 
 type SystemStyles = {
   size: {
@@ -20,7 +21,7 @@ type SystemStyles = {
   };
   padding: Record<SpacingType, Styles>;
   margin: Record<SpacingType, Styles>;
-  border: Styles;
+  border: Record<BorderType, Styles>;
   radius: Record<RadiusType, Styles>;
   color: {
     bg: Record<Theme, Styles>;
@@ -140,7 +141,7 @@ export const systemStyles: SystemStyles = {
         fontSize: 'text-sm'
       },
       md: {
-        fontSize: 'text-base'
+        fontSize: 'text-md'
       },
       lg: {
         fontSize: 'text-lg'
@@ -166,7 +167,7 @@ export const systemStyles: SystemStyles = {
         fontSize: 'text-4xl'
       },
       xl: {
-        fontSize: 'text-5xk'
+        fontSize: 'text-5xl'
       },
       xxl: {
         fontSize: 'text-6xl'
@@ -175,6 +176,9 @@ export const systemStyles: SystemStyles = {
   },
   padding: {
     all: {
+      none: {
+        padding: 'p-0'
+      },
       xs: {
         padding: 'p-2'
       },
@@ -200,19 +204,22 @@ export const systemStyles: SystemStyles = {
         padding: 'px-4 py-2'
       },
       'md-md': {
-        padding: 'px-5 py-2.5'
-      },
-      'lg-lg': {
         padding: 'px-6 py-3'
       },
+      'lg-lg': {
+        padding: 'px-8 py-4'
+      },
       'xl-xl': {
-        padding: 'px-9 py-4.5'
+        padding: 'px-12 py-6'
       },
       'xxl-xxl': {
-        padding: 'px-12 py-6'
+        padding: 'px-16 py-8'
       }
     },
     x: {
+      none: {
+        padding: 'px-0'
+      },
       xs: {
         padding: 'px-2'
       },
@@ -233,6 +240,9 @@ export const systemStyles: SystemStyles = {
       }
     },
     y: {
+      none: {
+        padding: 'py-0'
+      },
       xs: {
         padding: 'py-2'
       },
@@ -253,6 +263,9 @@ export const systemStyles: SystemStyles = {
       }
     },
     t: {
+      none: {
+        padding: 'pt-0'
+      },
       xs: {
         padding: 'pt-2'
       },
@@ -273,6 +286,9 @@ export const systemStyles: SystemStyles = {
       }
     },
     b: {
+      none: {
+        padding: 'pb-0'
+      },
       xs: {
         padding: 'pb-2'
       },
@@ -293,6 +309,9 @@ export const systemStyles: SystemStyles = {
       }
     },
     l: {
+      none: {
+        padding: 'pl-0'
+      },
       xs: {
         padding: 'pl-2'
       },
@@ -313,6 +332,9 @@ export const systemStyles: SystemStyles = {
       }
     },
     r: {
+      none: {
+        padding: 'pr-0'
+      },
       xs: {
         padding: 'pr-2'
       },
@@ -335,6 +357,9 @@ export const systemStyles: SystemStyles = {
   },
   margin: {
     all: {
+      none: {
+        margin: 'm-0'
+      },
       xs: {
         margin: 'm-2'
       },
@@ -355,6 +380,9 @@ export const systemStyles: SystemStyles = {
       }
     },
     x: {
+      none: {
+        margin: 'mx-0'
+      },
       xs: {
         margin: 'mx-2'
       },
@@ -375,6 +403,9 @@ export const systemStyles: SystemStyles = {
       }
     },
     y: {
+      none: {
+        margin: 'my-0'
+      },
       xs: {
         margin: 'my-2'
       },
@@ -395,6 +426,9 @@ export const systemStyles: SystemStyles = {
       }
     },
     t: {
+      none: {
+        margin: 'mt-0'
+      },
       xs: {
         margin: 'mt-2'
       },
@@ -415,6 +449,9 @@ export const systemStyles: SystemStyles = {
       }
     },
     b: {
+      none: {
+        margin: 'mb-0'
+      },
       xs: {
         margin: 'mb-2'
       },
@@ -435,6 +472,9 @@ export const systemStyles: SystemStyles = {
       }
     },
     l: {
+      none: {
+        margin: 'ml-0'
+      },
       xs: {
         margin: 'ml-2'
       },
@@ -455,6 +495,9 @@ export const systemStyles: SystemStyles = {
       }
     },
     r: {
+      none: {
+        margin: 'mr-0'
+      },
       xs: {
         margin: 'mr-2'
       },
@@ -477,53 +520,67 @@ export const systemStyles: SystemStyles = {
   },
   border: {
     all: {
-      borderWidth: 'border'
+      none: {
+        borderWidth: 'border-0'
+      },
+      set: {
+        borderWidth: 'border'
+      }
     },
     x: {
-      borderWidth: 'border-x'
+      none: {
+        borderWidth: 'border-x-0'
+      },
+      set: {
+        borderWidth: 'border-x'
+      }
     },
     y: {
-      borderWidth: 'border-y'
+      none: {
+        borderWidth: 'border-y-0'
+      },
+      set: {
+        borderWidth: 'border-y'
+      }
     },
     t: {
-      borderWidth: 'border-t'
+      none: {
+        borderWidth: 'border-t-0'
+      },
+      set: {
+        borderWidth: 'border-t'
+      }
     },
     b: {
-      borderWidth: 'border-b'
+      none: {
+        borderWidth: 'border-b-0'
+      },
+      set: {
+        borderWidth: 'border-b'
+      }
     },
     l: {
-      borderWidth: 'border-l'
+      none: {
+        borderWidth: 'border-l-0'
+      },
+      set: {
+        borderWidth: 'border-l'
+      }
     },
     r: {
-      borderWidth: 'border-r'
-    },
-    xt: {
-      borderWidth: 'border-x border-t'
-    },
-    xb: {
-      borderWidth: 'border-x border-b'
-    },
-    yl: {
-      borderWidth: 'border-y border-l'
-    },
-    yr: {
-      borderWidth: 'border-y border-r'
-    },
-    tl: {
-      borderWidth: 'border-t border-l'
-    },
-    tr: {
-      borderWidth: 'border-t border-r'
-    },
-    bl: {
-      borderWidth: 'border-b border-l'
-    },
-    br: {
-      borderWidth: 'border-b border-r'
+      none: {
+        borderWidth: 'border-r-0'
+      },
+      set: {
+        borderWidth: 'border-r'
+      }
     }
   },
   radius: {
     all: {
+      none: {
+        borderRadius: 'rounded-none'
+      },
       xs: {
         borderRadius: 'rounded-sm'
       },
@@ -547,6 +604,9 @@ export const systemStyles: SystemStyles = {
       }
     },
     t: {
+      none: {
+        borderRadius: 'rounded-t-none'
+      },
       xs: {
         borderRadius: 'rounded-t-sm'
       },
@@ -570,6 +630,9 @@ export const systemStyles: SystemStyles = {
       }
     },
     b: {
+      none: {
+        borderRadius: 'rounded-b-none'
+      },
       xs: {
         borderRadius: 'rounded-b-sm'
       },
@@ -593,6 +656,9 @@ export const systemStyles: SystemStyles = {
       }
     },
     l: {
+      none: {
+        borderRadius: 'rounded-l-none'
+      },
       xs: {
         borderRadius: 'rounded-l-sm'
       },
@@ -616,6 +682,9 @@ export const systemStyles: SystemStyles = {
       }
     },
     r: {
+      none: {
+        borderRadius: 'rounded-r-none'
+      },
       xs: {
         borderRadius: 'rounded-r-sm'
       },
@@ -639,6 +708,9 @@ export const systemStyles: SystemStyles = {
       }
     },
     tl: {
+      none: {
+        borderRadius: 'rounded-tl-none'
+      },
       xs: {
         borderRadius: 'rounded-tl-sm'
       },
@@ -662,6 +734,9 @@ export const systemStyles: SystemStyles = {
       }
     },
     tr: {
+      none: {
+        borderRadius: 'rounded-tr-none'
+      },
       xs: {
         borderRadius: 'rounded-tr-sm'
       },
@@ -685,6 +760,9 @@ export const systemStyles: SystemStyles = {
       }
     },
     bl: {
+      none: {
+        borderRadius: 'rounded-bl-none'
+      },
       xs: {
         borderRadius: 'rounded-bl-sm'
       },
@@ -708,6 +786,9 @@ export const systemStyles: SystemStyles = {
       }
     },
     br: {
+      none: {
+        borderRadius: 'rounded-br-none'
+      },
       xs: {
         borderRadius: 'rounded-br-sm'
       },
@@ -732,6 +813,9 @@ export const systemStyles: SystemStyles = {
     }
   },
   shadow: {
+    none: {
+      boxShadow: 'shadow-none'
+    },
     xs: {
       boxShadow: 'shadow-xs'
     },
@@ -760,6 +844,9 @@ export const systemStyles: SystemStyles = {
         surface: {
           color: 'bg-surface-500'
         },
+        neutral: {
+          color: 'bg-neutral-500'
+        },
         primary: {
           color: 'bg-primary-500'
         },
@@ -784,6 +871,9 @@ export const systemStyles: SystemStyles = {
         'surface-light': {
           color: 'bg-surface-300'
         },
+        'neutral-light': {
+          color: 'bg-neutral-300'
+        },
         'primary-light': {
           color: 'bg-primary-300'
         },
@@ -807,6 +897,9 @@ export const systemStyles: SystemStyles = {
         },
         'surface-on': {
           color: 'bg-surface-50'
+        },
+        'neutral-on': {
+          color: 'bg-neutral-50'
         },
         'primary-on': {
           color: 'bg-primary-50'
@@ -834,6 +927,9 @@ export const systemStyles: SystemStyles = {
         surface: {
           color: 'bg-surface-600'
         },
+        neutral: {
+          color: 'bg-neutral-600'
+        },
         primary: {
           color: 'bg-primary-600'
         },
@@ -858,6 +954,9 @@ export const systemStyles: SystemStyles = {
         'surface-light': {
           color: 'bg-surface-400'
         },
+        'neutral-light': {
+          color: 'bg-neutral-400'
+        },
         'primary-light': {
           color: 'bg-primary-400'
         },
@@ -881,6 +980,9 @@ export const systemStyles: SystemStyles = {
         },
         'surface-on': {
           color: 'bg-surface-100'
+        },
+        'neutral-on': {
+          color: 'bg-neutral-100'
         },
         'primary-on': {
           color: 'bg-primary-100'
@@ -910,6 +1012,9 @@ export const systemStyles: SystemStyles = {
         surface: {
           color: 'border-surface-500'
         },
+        neutral: {
+          color: 'border-neutral-500'
+        },
         primary: {
           color: 'border-primary-500'
         },
@@ -934,6 +1039,9 @@ export const systemStyles: SystemStyles = {
         'surface-light': {
           color: 'border-surface-300'
         },
+        'neutral-light': {
+          color: 'border-neutral-300'
+        },
         'primary-light': {
           color: 'border-primary-300'
         },
@@ -957,6 +1065,9 @@ export const systemStyles: SystemStyles = {
         },
         'surface-on': {
           color: 'border-surface-50'
+        },
+        'neutral-on': {
+          color: 'border-neutral-50'
         },
         'primary-on': {
           color: 'border-primary-50'
@@ -984,6 +1095,9 @@ export const systemStyles: SystemStyles = {
         surface: {
           color: 'border-surface-600'
         },
+        neutral: {
+          color: 'border-neutral-600'
+        },
         primary: {
           color: 'border-primary-600'
         },
@@ -1008,6 +1122,9 @@ export const systemStyles: SystemStyles = {
         'surface-light': {
           color: 'border-surface-400'
         },
+        'neutral-light': {
+          color: 'border-neutral-400'
+        },
         'primary-light': {
           color: 'border-primary-400'
         },
@@ -1031,6 +1148,9 @@ export const systemStyles: SystemStyles = {
         },
         'surface-on': {
           color: 'border-surface-100'
+        },
+        'neutral-on': {
+          color: 'border-neutral-100'
         },
         'primary-on': {
           color: 'border-primary-100'
@@ -1060,6 +1180,9 @@ export const systemStyles: SystemStyles = {
         surface: {
           color: 'text-surface-500'
         },
+        neutral: {
+          color: 'text-neutral-500'
+        },
         primary: {
           color: 'text-primary-500'
         },
@@ -1084,6 +1207,9 @@ export const systemStyles: SystemStyles = {
         'surface-light': {
           color: 'text-surface-300'
         },
+        'neutral-light': {
+          color: 'text-neutral-300'
+        },
         'primary-light': {
           color: 'text-primary-300'
         },
@@ -1107,6 +1233,9 @@ export const systemStyles: SystemStyles = {
         },
         'surface-on': {
           color: 'text-surface-50'
+        },
+        'neutral-on': {
+          color: 'text-neutral-50'
         },
         'primary-on': {
           color: 'text-primary-50'
@@ -1134,6 +1263,9 @@ export const systemStyles: SystemStyles = {
         surface: {
           color: 'text-surface-600'
         },
+        neutral: {
+          color: 'text-neutral-600'
+        },
         primary: {
           color: 'text-primary-600'
         },
@@ -1158,6 +1290,9 @@ export const systemStyles: SystemStyles = {
         'surface-light': {
           color: 'text-surface-400'
         },
+        'neutral-light': {
+          color: 'text-neutral-400'
+        },
         'primary-light': {
           color: 'text-primary-400'
         },
@@ -1181,6 +1316,9 @@ export const systemStyles: SystemStyles = {
         },
         'surface-on': {
           color: 'text-surface-100'
+        },
+        'neutral-on': {
+          color: 'text-neutral-100'
         },
         'primary-on': {
           color: 'text-primary-100'
@@ -1210,6 +1348,9 @@ export const systemStyles: SystemStyles = {
         surface: {
           color: 'fill-surface-500'
         },
+        neutral: {
+          color: 'fill-neutral-500'
+        },
         primary: {
           color: 'fill-primary-500'
         },
@@ -1234,6 +1375,9 @@ export const systemStyles: SystemStyles = {
         'surface-light': {
           color: 'fill-surface-300'
         },
+        'neutral-light': {
+          color: 'fill-neutral-300'
+        },
         'primary-light': {
           color: 'fill-primary-300'
         },
@@ -1257,6 +1401,9 @@ export const systemStyles: SystemStyles = {
         },
         'surface-on': {
           color: 'fill-surface-50'
+        },
+        'neutral-on': {
+          color: 'fill-neutral-50'
         },
         'primary-on': {
           color: 'fill-primary-50'
@@ -1284,6 +1431,9 @@ export const systemStyles: SystemStyles = {
         surface: {
           color: 'fill-surface-600'
         },
+        neutral: {
+          color: 'fill-neutral-600'
+        },
         primary: {
           color: 'fill-primary-600'
         },
@@ -1308,6 +1458,9 @@ export const systemStyles: SystemStyles = {
         'surface-light': {
           color: 'fill-surface-400'
         },
+        'neutral-light': {
+          color: 'fill-neutral-400'
+        },
         'primary-light': {
           color: 'fill-primary-400'
         },
@@ -1331,6 +1484,9 @@ export const systemStyles: SystemStyles = {
         },
         'surface-on': {
           color: 'fill-surface-100'
+        },
+        'neutral-on': {
+          color: 'fill-neutral-100'
         },
         'primary-on': {
           color: 'fill-primary-100'
@@ -1360,6 +1516,9 @@ export const systemStyles: SystemStyles = {
         surface: {
           color: 'stroke-surface-500'
         },
+        neutral: {
+          color: 'stroke-neutral-500'
+        },
         primary: {
           color: 'stroke-primary-500'
         },
@@ -1384,6 +1543,9 @@ export const systemStyles: SystemStyles = {
         'surface-light': {
           color: 'stroke-surface-300'
         },
+        'neutral-light': {
+          color: 'stroke-neutral-300'
+        },
         'primary-light': {
           color: 'stroke-primary-300'
         },
@@ -1407,6 +1569,9 @@ export const systemStyles: SystemStyles = {
         },
         'surface-on': {
           color: 'stroke-surface-50'
+        },
+        'neutral-on': {
+          color: 'stroke-neutral-50'
         },
         'primary-on': {
           color: 'stroke-primary-50'
@@ -1434,6 +1599,9 @@ export const systemStyles: SystemStyles = {
         surface: {
           color: 'stroke-surface-600'
         },
+        neutral: {
+          color: 'stroke-neutral-600'
+        },
         primary: {
           color: 'stroke-primary-600'
         },
@@ -1458,6 +1626,9 @@ export const systemStyles: SystemStyles = {
         'surface-light': {
           color: 'stroke-surface-400'
         },
+        'neutral-light': {
+          color: 'stroke-neutral-400'
+        },
         'primary-light': {
           color: 'stroke-primary-400'
         },
@@ -1481,6 +1652,9 @@ export const systemStyles: SystemStyles = {
         },
         'surface-on': {
           color: 'stroke-surface-100'
+        },
+        'neutral-on': {
+          color: 'stroke-neutral-100'
         },
         'primary-on': {
           color: 'stroke-primary-100'
@@ -1510,6 +1684,9 @@ export const systemStyles: SystemStyles = {
         surface: {
           color: 'ring-surface-500'
         },
+        neutral: {
+          color: 'ring-neutral-500'
+        },
         primary: {
           color: 'ring-primary-500'
         },
@@ -1534,6 +1711,9 @@ export const systemStyles: SystemStyles = {
         'surface-light': {
           color: 'ring-surface-300'
         },
+        'neutral-light': {
+          color: 'ring-neutral-300'
+        },
         'primary-light': {
           color: 'ring-primary-300'
         },
@@ -1557,6 +1737,9 @@ export const systemStyles: SystemStyles = {
         },
         'surface-on': {
           color: 'ring-surface-50'
+        },
+        'neutral-on': {
+          color: 'ring-neutral-50'
         },
         'primary-on': {
           color: 'ring-primary-50'
@@ -1584,6 +1767,9 @@ export const systemStyles: SystemStyles = {
         surface: {
           color: 'ring-surface-600'
         },
+        neutral: {
+          color: 'ring-neutral-600'
+        },
         primary: {
           color: 'ring-primary-600'
         },
@@ -1607,6 +1793,9 @@ export const systemStyles: SystemStyles = {
         },
         'surface-light': {
           color: 'ring-surface-400'
+        },
+        'neutral-light': {
+          color: 'ring-neutral-400'
         },
         'primary-light': {
           color: 'ring-primary-400'
@@ -1632,6 +1821,9 @@ export const systemStyles: SystemStyles = {
         'surface-on': {
           color: 'ring-surface-100'
         },
+        'neutral-on': {
+          color: 'ring-neutral-100'
+        },
         'primary-on': {
           color: 'ring-primary-100'
         },
@@ -1655,6 +1847,9 @@ export const systemStyles: SystemStyles = {
   },
   gap: {
     all: {
+      none: {
+        gap: 'gap-0'
+      },
       xs: {
         gap: 'gap-2'
       },
@@ -1675,6 +1870,9 @@ export const systemStyles: SystemStyles = {
       }
     },
     x: {
+      none: {
+        gap: 'gap-x-0'
+      },
       xs: {
         gap: 'gap-x-2'
       },
@@ -1695,6 +1893,9 @@ export const systemStyles: SystemStyles = {
       }
     },
     y: {
+      none: {
+        gap: 'gap-y-0'
+      },
       xs: {
         gap: 'gap-y-2'
       },

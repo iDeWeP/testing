@@ -3,19 +3,36 @@ import type { CSSProps } from '../types';
 type Styles = Record<string, CSSProps>;
 
 type SharedStyles = {
+  focusable: Styles;
   display: Styles;
+  position: Styles;
   direction: Styles;
   transition: Styles;
-  image: CSSProps;
+  cursor: Styles;
 };
 
 export const sharedStyles: SharedStyles = {
+  focusable: {
+    default: {
+      focus: 'focus:outline-none',
+      focusVisible: 'focus-visible:ring-4'
+    },
+    disabled: {
+      cursor: 'cursor-not-allowed',
+      userSelect: 'select-none'
+    }
+  },
   display: {
     flex: {
       display: 'flex'
     },
     grid: {
       display: 'grid'
+    }
+  },
+  position: {
+    absolute: {
+      position: 'absolute'
     }
   },
   direction: {
@@ -54,8 +71,15 @@ export const sharedStyles: SharedStyles = {
       transition: 'transition-[height,_opacity]'
     }
   },
-  image: {
-    width: 'w-full',
-    maxWidth: 'max-w-none'
+  cursor: {
+    none: {
+      pointerEvents: 'pointer-events-none'
+    },
+    pointer: {
+      cursor: 'cursor-pointer'
+    },
+    disabled: {
+      cursor: 'cursor-not-allowed'
+    }
   }
 };
