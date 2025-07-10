@@ -17,7 +17,7 @@ export const styleUnstyledPopperArrow = (
     bb = 'unset',
     bl = 'unset',
     br = 'unset',
-    color = 'neutral'
+    color = 'unset'
   }: Classes
 ) =>
   mergeClasses(
