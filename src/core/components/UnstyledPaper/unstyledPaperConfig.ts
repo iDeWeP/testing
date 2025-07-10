@@ -4,7 +4,7 @@ import type { UnstyledPaperConfigProps } from './UnstyledPaper.types';
 export const unstyledPaperConfig: ComponentConfig<UnstyledPaperConfigProps> = {
   props: {
     as: 'div',
-    variant: 'text',
+    variant: 'solid',
     orientation: 'row',
     size: 'unset',
     padding: 'unset',
