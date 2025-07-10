@@ -1,7 +1,7 @@
 import { unstyledInputConfig } from '../../components/UnstyledInput/unstyledInputConfig';
 import { systemStyles } from '../../config/system-styles';
 import type { Classes } from '../../types';
-import { getInputColor, getDefaultColor } from './color';
+import { getInputColor } from './color';
 import { mergeClasses } from './merge-classes';
 import { getInputRadius } from './radius';
 import { getInputSpacing } from './spacing';
@@ -23,7 +23,6 @@ export const styleUnstyledInputDecorator = (
     rtr = 'unset',
     rbl = 'unset',
     rbr = 'unset',
-    color = 'unset',
     decorated = false
   }: Classes
 ) => {
@@ -56,9 +55,7 @@ export const styleUnstyledInputDecorator = (
     systemStyles.radius.tr[tr],
     systemStyles.radius.bl[bl],
     systemStyles.radius.br[br],
-    systemStyles.color.bg[theme][
-      getInputColor(inputVariant, getDefaultColor(color), disabled).bgColor
-    ],
+    systemStyles.color.bg[theme][getInputColor(inputVariant, disabled)],
     className
   );
 };
