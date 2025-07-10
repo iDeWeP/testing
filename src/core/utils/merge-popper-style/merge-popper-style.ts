@@ -1,6 +1,6 @@
 import type { CSSProperties } from 'react';
 import type { Animation } from '../../../hooks/hooks/use-animation/use-animation';
-import type { Peak, Transition, AnimationProps } from '../../types';
+import type { Peak, PopperTransition, AnimationProps } from '../../types';
 import { getFadeStyle } from '../get-fade-style/get-fade-style';
 import { styleAnimation } from '../style-animation/style-animation';
 import { styleFade } from '../style-fade/style-fade';
@@ -18,7 +18,7 @@ export const mergePopperStyle = (
   top: number,
   left: number,
   zIndex: number,
-  transition: Transition,
+  transition: PopperTransition,
   duration: number,
   style?: CSSProperties,
   animationProps?: AnimationProps

@@ -8,7 +8,9 @@ import type {
   CollisionFunction,
   Collision,
   Peak,
+  Orientation,
   Placement,
+  PopperTransition,
   MergeProps,
   UnstyledPaperConfigProps,
   UnstyledPaperProps
@@ -50,9 +52,12 @@ export type UnstyledPopperDefaultProps = {
   lockScroll?: boolean;
   unmountOnExit?: boolean;
   peak?: Peak;
+  orientation?: Orientation;
   placement?: Placement;
   offset?: number;
+  threshold?: number;
   zIndex?: number;
+  transition?: PopperTransition;
   duration?: number;
   portalEl?: Element | null;
   animationProps?: AnimationProps;

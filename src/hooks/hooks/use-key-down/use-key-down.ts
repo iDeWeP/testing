@@ -1,4 +1,4 @@
-import { useCallback } from 'react';
+import { useCallback, type KeyboardEvent } from 'react';
 import { setProp } from '../../../utils/utils/set-prop/set-prop';
 
 export const useKeyDown = (key: string, handler?: VoidFunction | false) => {
