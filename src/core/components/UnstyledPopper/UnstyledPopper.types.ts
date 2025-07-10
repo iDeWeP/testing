@@ -8,18 +8,19 @@ import type {
   CollisionFunction,
   Collision,
   Peak,
-  Orientation,
   Placement,
   PopperTransition,
-  MergeProps,
+  MergeProps
+} from '../../types';
+import type {
   UnstyledPaperConfigProps,
   UnstyledPaperProps
-} from '../../types';
+} from '../UnstyledPaper/UnstyledPaper.types';
 
 export type UnstyledPopperArrowProps = {
   offset?: ArrowOffset;
   children?: SVGNodeProps;
-} & ComponentRefProps<'svg'>;
+} & Omit<ComponentRefProps<'svg'>, 'by'>;
 
 export type UnstyledPopperBackdropProps = {
   zIndex?: number;
@@ -52,7 +53,6 @@ export type UnstyledPopperDefaultProps = {
   lockScroll?: boolean;
   unmountOnExit?: boolean;
   peak?: Peak;
-  orientation?: Orientation;
   placement?: Placement;
   offset?: number;
   threshold?: number;

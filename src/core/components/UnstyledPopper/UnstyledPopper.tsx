@@ -19,17 +19,17 @@ import { useCloseFocus } from '../../hooks/use-close-focus/use-close-focus';
 import { useCollision } from '../../hooks/use-collision/use-collision';
 import { useDefaultRerender } from '../../hooks/use-default-rerender/use-default-rerender';
 import { useStartAnimation } from '../../hooks/use-start-animation/use-start-animation';
+import { mergeAnimationProps } from '../../utils/merge-animation-props/merge-animation-props';
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
 import { mergePopperStyle } from '../../utils/merge-popper-style/merge-popper-style';
 import { mergeProps } from '../../utils/merge-props/merge-props';
-import { mergeTransitionProps } from '../../utils/merge-transition-props/merge-transition-props';
 import { UnstyledPaper } from '../UnstyledPaper/UnstyledPaper';
 import type { UnstyledPopperProps } from './UnstyledPopper.types';
 import { UnstyledPopperArrow } from './UnstyledPopperArrow';
 import { UnstyledPopperBackdrop } from './UnstyledPopperBackdrop';
 import { unstyledPopperConfig } from './unstyledPopperConfig';
 
-export const UnstyledPopper = <E extends ElementType = 'div'>(
+export const UnstyledPopper = <E extends ElementType>(
   props: UnstyledPopperProps<E>
 ) => {
   const {
@@ -48,7 +48,9 @@ export const UnstyledPopper = <E extends ElementType = 'div'>(
     peak,
     placement,
     offset,
+    threshold,
     zIndex,
+    transition,
     duration,
     className,
     style,
@@ -64,6 +66,12 @@ export const UnstyledPopper = <E extends ElementType = 'div'>(
     children,
     variant,
     border,
+    bx,
+    by,
+    bt,
+    bb,
+    bl,
+    br,
     color,
     ...restProps
   } = mergeProps(unstyledPopperConfig.props, props);
@@ -81,6 +89,7 @@ export const UnstyledPopper = <E extends ElementType = 'div'>(
     collision,
     placement,
     offset,
+    threshold,
     !!portalEl,
     anchorRef,
     followCursor
@@ -127,6 +136,7 @@ export const UnstyledPopper = <E extends ElementType = 'div'>(
     top,
     left,
     zIndex,
+    transition,
     duration,
     style,
     transitionProps
@@ -146,9 +156,9 @@ export const UnstyledPopper = <E extends ElementType = 'div'>(
           onClose={setProp(!!closeOnOutClick, onClose)}
           portalEl={null}
           {...componentProps.backdrop}
-          transitionProps={mergeTransitionProps(
+          animationProps={mergeAnimationProps(
             transitionProps,
-            componentProps.backdrop?.transitionProps
+            componentProps.backdrop?.animationProps
           )}
         />
       )}
@@ -157,6 +167,12 @@ export const UnstyledPopper = <E extends ElementType = 'div'>(
         tabIndex={-1}
         variant={variant}
         border={border}
+        bx={bx}
+        by={by}
+        bt={bt}
+        bb={bb}
+        bl={bl}
+        br={br}
         color={color}
         className={mergedClassName}
         style={mergedStyles}
@@ -171,6 +187,12 @@ export const UnstyledPopper = <E extends ElementType = 'div'>(
             placement={mainAxis}
             offset={['50%', 0]}
             border={border}
+            bx={bx}
+            by={by}
+            bt={bt}
+            bb={bb}
+            bl={bl}
+            br={br}
             color={color}
             {...componentProps.arrow}
           />

@@ -4,6 +4,7 @@ import type {
   Variant,
   DefaultPlacement,
   ArrowOffset,
+  DefaultBorder,
   Color,
   SVGNodeProps
 } from '../../types';
@@ -19,6 +20,12 @@ type Props = MergeComponentProps<
     placement: DefaultPlacement;
     offset: ArrowOffset;
     border: boolean;
+    bx: DefaultBorder;
+    by: DefaultBorder;
+    bt: DefaultBorder;
+    bb: DefaultBorder;
+    bl: DefaultBorder;
+    br: DefaultBorder;
     color: Color;
     children?: SVGNodeProps;
   }
@@ -29,6 +36,12 @@ export const UnstyledPopperArrow = ({
   placement: defaultPlacement,
   offset,
   border,
+  bx,
+  by,
+  bt,
+  bb,
+  bl,
+  br,
   color,
   className,
   style,
@@ -42,6 +55,12 @@ export const UnstyledPopperArrow = ({
       variant,
       defaultPlacement,
       border,
+      bx,
+      by,
+      bt,
+      bb,
+      bl,
+      br,
       color
     }
   );
