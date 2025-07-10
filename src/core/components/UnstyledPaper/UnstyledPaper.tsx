@@ -10,14 +10,14 @@ export const UnstyledPaper = <E extends ElementType>(
 ) => {
   const {
     orientation,
-    size: paperSize,
+    size: cardSize,
     className,
     ...restProps
   } = mergeProps(unstyledPaperConfig.props, props);
 
-  const mergedClassName = mergeClassName('unstyledPaper', className, {
+  const mergedClassName = mergeClassName('unstyledCard', className, {
     orientation,
-    paperSize
+    cardSize
   });
 
   return (
