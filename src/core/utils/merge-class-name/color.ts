@@ -1,29 +1,35 @@
-import type { Color, Variant } from '../../types';
+import type {
+  Color,
+  Variant,
+  TrailColor,
+  InputVariant,
+  DefaultPlacement,
+  Border,
+  DefaultBorder
+} from '../../types';
 import { hasVariantBg } from './variant';
 
-const _getStateColor = (color: Color, isValid?: boolean, isInvalid?: boolean) =>
-  isValid ? 'success' : isInvalid ? 'error' : color;
+const getStateColor = (color: Color, isValid?: boolean, isInvalid?: boolean) =>
+  isValid ? 'success' : isInvalid ? 'error' : color.replace('-on', '');
+
+const isColorReversed = (color: Color) => color.endsWith('-on');
 
 const variants = {
-  plain: (color: Color) => ({
+  outlined: (color: string, isReversed: boolean) => ({
     bgColor: 'none',
-    textColor: `${color}-on`
+    textColor: isReversed ? `${color}-on` : color
   }),
-  text: (color: Color) => ({
+  text: (color: string, isReversed: boolean) => ({
     bgColor: 'none',
-    textColor: color
+    textColor: isReversed ? `${color}-on` : color
   }),
-  light: (color: Color) => ({
-    bgColor: `${color}-light`,
-    textColor: color
+  light: (color: string, isReversed: boolean) => ({
+    bgColor: isReversed ? color : `${color}-light`,
+    textColor: isReversed ? `${color}-light` : color
   }),
-  surface: (color: Color) => ({
-    bgColor: `${color}-on`,
-    textColor: color
-  }),
-  solid: (color: Color) => ({
-    bgColor: color,
-    textColor: `${color}-on`
+  solid: (color: string, isReversed: boolean) => ({
+    bgColor: isReversed ? `${color}-on` : color,
+    textColor: isReversed ? color : `${color}-on`
   })
 };
 
@@ -32,16 +38,28 @@ export const getColor = (
   color: Color,
   isDisabled?: boolean,
   isValid?: boolean,
-  isInvalid?: boolean
+  isInvalid?: boolean,
+  checked?: boolean
 ) => {
-  if (isDisabled) {
+  if (isDisabled && !checked) {
     return {
-      bgColor: hasVariantBg(variant) ? 'disabled-light' : 'none',
+      bgColor:
+        checked === false || hasVariantBg(variant) ? 'disabled-light' : 'none',
       textColor: 'disabled'
     };
   }
 
-  return variants[variant](_getStateColor(color, isValid, isInvalid));
+  if (isDisabled && checked) {
+    return {
+      bgColor: hasVariantBg(variant) ? 'disabled' : 'none',
+      textColor: hasVariantBg(variant) ? 'disabled-on' : 'disabled'
+    };
+  }
+
+  return variants[variant](
+    getStateColor(color, isValid, isInvalid),
+    isColorReversed(color)
+  );
 };
 
 export const getRippleColor = (
@@ -50,9 +68,47 @@ export const getRippleColor = (
   isValid?: boolean,
   isInvalid?: boolean
 ) =>
-  variants[variant === 'plain' || variant === 'surface' ? 'plain' : 'text'](
-    _getStateColor(color, isValid, isInvalid)
+  variants[variant](
+    getStateColor(color, isValid, isInvalid),
+    isColorReversed(color)
   ).textColor;
 
-export const getStateColor = (color: Color) =>
+export const getDefaultColor = (color: TrailColor) =>
   color === 'unset' ? 'unset' : 'surface';
+
+export const getInputColor = (variant: InputVariant, isDisabled?: boolean) =>
+  isDisabled
+    ? 'disabled-light'
+    : variant === 'light'
+    ? 'surface-light'
+    : 'none';
+
+export const getArrowColor = (
+  variant: Variant,
+  placement: DefaultPlacement,
+  border: Border,
+  bx: DefaultBorder,
+  by: DefaultBorder,
+  bt: DefaultBorder,
+  bb: DefaultBorder,
+  bl: DefaultBorder,
+  br: DefaultBorder,
+  color: Color
+) => {
+  if (
+    (placement === 'top' &&
+      (bt === 'set' || (bt !== 'none' && by === 'set'))) ||
+    (placement === 'bottom' &&
+      (bb === 'set' || (bb !== 'none' && by === 'set'))) ||
+    (placement === 'left' &&
+      (bl === 'set' || (bl !== 'none' && bx === 'set'))) ||
+    (placement === 'right' &&
+      (br === 'set' || (br !== 'none' && bx === 'set'))) ||
+    (variant === 'outlined' && border === 'auto') ||
+    border === 'set'
+  ) {
+    return isColorReversed(color) ? getStateColor(color) : `${color}-on`;
+  }
+
+  return color;
+};
