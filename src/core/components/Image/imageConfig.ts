@@ -1,7 +1,15 @@
-import type { ComponentConfig } from '../../types';
+import type { CSSProps, ComponentConfig } from '../../types';
 import type { ImageConfigProps } from './Image.types';
 
-export const imageConfig: ComponentConfig<ImageConfigProps> = {
+type Styles = {
+  styles: {
+    root: {
+      default: CSSProps;
+    };
+  };
+};
+
+export const imageConfig: ComponentConfig<ImageConfigProps> & Styles = {
   props: {
     as: 'img',
     radius: 'unset',
@@ -41,5 +49,13 @@ export const imageConfig: ComponentConfig<ImageConfigProps> = {
     gap: 'unset',
     gx: 'unset',
     gy: 'unset'
+  },
+  styles: {
+    root: {
+      default: {
+        width: 'w-full',
+        maxWidth: 'max-w-none'
+      }
+    }
   }
 };
