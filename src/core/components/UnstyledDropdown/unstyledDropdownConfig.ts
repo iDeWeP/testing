@@ -1,5 +1,5 @@
 import type { ComponentConfig } from '../../types';
-import type { UnstyledPaperConfigProps } from './UnstyledPaper.types';
+import type { UnstyledPaperConfigProps } from './UnstyledDropdown.types';
 
 export const unstyledPaperConfig: ComponentConfig<UnstyledPaperConfigProps> = {
   props: {
