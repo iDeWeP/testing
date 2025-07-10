@@ -1,0 +1,47 @@
+import type { ComponentConfig } from '../../types';
+import type { UnstyledCardConfigProps } from './UnstyledCard.types';
+
+export const unstyledCardConfig: ComponentConfig<UnstyledCardConfigProps> = {
+  props: {
+    as: 'div',
+    variant: 'text',
+    orientation: 'row',
+    size: 'unset',
+    padding: 'unset',
+    px: 'unset',
+    py: 'unset',
+    pt: 'unset',
+    pb: 'unset',
+    pl: 'unset',
+    pr: 'unset',
+    margin: 'unset',
+    mx: 'unset',
+    my: 'unset',
+    mt: 'unset',
+    mb: 'unset',
+    ml: 'unset',
+    mr: 'unset',
+    border: 'auto',
+    bx: 'unset',
+    by: 'unset',
+    bt: 'unset',
+    bb: 'unset',
+    bl: 'unset',
+    br: 'unset',
+    radius: 'unset',
+    rt: 'unset',
+    rb: 'unset',
+    rl: 'unset',
+    rr: 'unset',
+    rtl: 'unset',
+    rtr: 'unset',
+    rbl: 'unset',
+    rbr: 'unset',
+    font: 'unset',
+    color: 'unset',
+    shadow: 'unset',
+    gap: 'unset',
+    gx: 'unset',
+    gy: 'unset'
+  }
+};
