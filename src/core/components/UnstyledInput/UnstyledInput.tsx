@@ -6,6 +6,7 @@ import { useControlledState } from '../../hooks/use-controlled-state/use-control
 import { useTheme } from '../../hooks/use-theme/use-theme';
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
 import { mergeProps } from '../../utils/merge-props/merge-props';
+import { setAria } from '../../utils/set-aria/set-aria';
 import type { UnstyledInputProps } from './UnstyledInput.types';
 import { UnstyledInputClearance } from './UnstyledInputClearance';
 import { unstyledInputConfig } from './unstyledInputConfig';
@@ -13,7 +14,6 @@ import { UnstyledInputContainer } from './UnstyledInputContainer';
 import { UnstyledInputDecorator } from './UnstyledInputDecorator';
 import { UnstyledInputFieldset } from './UnstyledInputFieldset';
 import { UnstyledInputLabel } from './UnstyledInputLabel';
-import { setAria } from '../../utils/set-aria/set-aria';
 
 export const UnstyledInput = <E extends ElementType>(
   props: UnstyledInputProps<E>
@@ -86,7 +86,6 @@ export const UnstyledInput = <E extends ElementType>(
       valid={valid}
       invalid={invalid}
       disabled={disabled}
-      varaint={variant}
       size={inputSize}
       resize={resize}
       margin={margin}
