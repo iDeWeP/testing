@@ -10,7 +10,7 @@ export const styleUnstyledRipple = (
     valid = false,
     invalid = false,
     stateful = false,
-    variant = 'text',
+    variant = 'solid',
     ripplePlacement = 'normal',
     color = 'unset'
   }: Classes
