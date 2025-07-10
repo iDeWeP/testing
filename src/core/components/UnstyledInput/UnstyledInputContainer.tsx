@@ -5,7 +5,6 @@ import { useFocusHandler } from '../../hooks/use-focus-handler/use-focus-handler
 import type {
   MergeComponentProps,
   Theme,
-  InputVariant,
   InputSize,
   Margin,
   Color
@@ -23,7 +22,6 @@ type Props = MergeComponentProps<
     valid: boolean;
     invalid: boolean;
     disabled: boolean;
-    varaint: InputVariant;
     size: InputSize;
     resize: boolean;
     margin: Margin;
@@ -46,7 +44,6 @@ export const UnstyledInputContainer = ({
   valid,
   invalid,
   disabled,
-  varaint: inputVariant,
   size: inputSize,
   resize,
   margin,
@@ -69,7 +66,6 @@ export const UnstyledInputContainer = ({
     valid,
     invalid,
     disabled,
-    inputVariant,
     inputSize,
     resize,
     margin,
