@@ -113,7 +113,6 @@ export const UnstyledInput = <E extends ElementType>(
         rtr={rtr}
         rbl={rbl}
         rbr={rbr}
-        color={color}
         {...componentsProps.leftDecorator}
       >
         {leftDecorator}
@@ -123,7 +122,6 @@ export const UnstyledInput = <E extends ElementType>(
         theme={theme}
         disabled={disabled}
         variant={variant}
-        color={color}
         {...componentsProps.fieldset}
       >
         <Component
@@ -171,7 +169,6 @@ export const UnstyledInput = <E extends ElementType>(
         rtr={rtr}
         rbl={rbl}
         rbr={rbr}
-        color={color}
         {...componentsProps.rightDecorator}
       >
         {rightDecorator}

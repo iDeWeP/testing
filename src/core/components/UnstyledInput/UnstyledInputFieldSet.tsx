@@ -1,9 +1,4 @@
-import type {
-  MergeComponentProps,
-  Theme,
-  InputVariant,
-  Color
-} from '../../types';
+import type { MergeComponentProps, Theme, InputVariant } from '../../types';
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
 
 type Props = MergeComponentProps<
@@ -13,7 +8,6 @@ type Props = MergeComponentProps<
     theme: Theme;
     disabled: boolean;
     variant: InputVariant;
-    color: Color;
   }
 >;
 
@@ -22,7 +16,6 @@ export const UnstyledInputFieldset = ({
   theme,
   disabled,
   variant: inputVariant,
-  color,
   className,
   ...restProps
 }: Props) => {
@@ -30,8 +23,7 @@ export const UnstyledInputFieldset = ({
     inputType,
     theme,
     disabled,
-    inputVariant,
-    color
+    inputVariant
   });
 
   return (

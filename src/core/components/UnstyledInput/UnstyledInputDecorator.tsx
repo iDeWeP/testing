@@ -3,8 +3,7 @@ import type {
   Theme,
   InputVariant,
   SidePlacement,
-  Radius,
-  Color
+  Radius
 } from '../../types';
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
 
@@ -25,7 +24,6 @@ type Props = MergeComponentProps<
     rtr: Radius;
     rbl: Radius;
     rbr: Radius;
-    color: Color;
   }
 >;
 
@@ -44,7 +42,6 @@ export const UnstyledInputDecorator = ({
   rtr,
   rbl,
   rbr,
-  color,
   className,
   children,
   ...restProps
@@ -64,7 +61,6 @@ export const UnstyledInputDecorator = ({
     rtr,
     rbl,
     rbr,
-    color,
     decorated: !!children
   });
 
