@@ -9,6 +9,7 @@ import type {
 import { isPlacementHorizontal } from '../is-placement-horizontal/is-placement-horizontal';
 import { calculateOverflowDimensions } from './calculate-overflow-dimensions';
 import { calculateSizeDimensions } from './calculate-size-dimensions';
+import type { TresholdDimensions } from './cords.types';
 import { getAnchorDimensions } from './get-anchor-dimensions';
 import { getAxises } from './get-axises';
 import { getCrossAxis } from './get-cross-axis';
@@ -31,6 +32,7 @@ export const getCords = (
   collision: Collision,
   placement: Placement,
   offset: number,
+  threshold: number,
   isPorted: boolean,
   anchorRef?: RefObject<HTMLElement | null>,
   cursor?: Cursor
@@ -44,7 +46,7 @@ export const getCords = (
 
   const anchor = getAnchorDimensions(anchorRef.current, isPorted, cursor);
   const el = getElDimensions(ref.current.getBoundingClientRect(), offset);
-  const view = getViewDimensions();
+  const view = getViewDimensions(threshold);
 
   const size = calculateSizeDimensions(anchor, el, view, offset);
   const overflow = calculateOverflowDimensions(anchor, el, view);
@@ -52,7 +54,9 @@ export const getCords = (
   const isHorizontal = isPlacementHorizontal(mainAxis);
   const orientation = isHorizontal ? 'horizontal' : 'vertical';
   const dimension = isHorizontal ? 'left' : 'top';
-  const length = isHorizontal ? 'width' : 'height';
+  const thresholdDimension: TresholdDimensions = isHorizontal
+    ? ['left', 'right']
+    : ['top', 'bottom'];
 
   return {
     mainAxis,
@@ -65,7 +69,7 @@ export const getCords = (
       crossAxis,
       orientation,
       dimension,
-      length,
+      thresholdDimension,
       anchor,
       el,
       view,
@@ -77,7 +81,7 @@ export const getCords = (
       crossAxis,
       orientation,
       dimension,
-      length,
+      thresholdDimension,
       anchor,
       el,
       view,
