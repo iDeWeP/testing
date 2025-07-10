@@ -59,7 +59,7 @@ export const UnstyledPopper = <E extends ElementType>(
     onKeyDown,
     onTransitionEnd,
     portalEl,
-    transitionProps,
+    animationProps,
     componentProps,
     arrow,
     backdrop,
@@ -99,7 +99,7 @@ export const UnstyledPopper = <E extends ElementType>(
 
   useCollision(mainAxis, onCollision);
 
-  useOverflow();
+  useOverflow(isOpen);
 
   useWindowResize(isMovable && handleResize);
 
@@ -139,7 +139,7 @@ export const UnstyledPopper = <E extends ElementType>(
     transition,
     duration,
     style,
-    transitionProps
+    animationProps
   );
 
   return portNode(
@@ -157,7 +157,7 @@ export const UnstyledPopper = <E extends ElementType>(
           portalEl={null}
           {...componentProps.backdrop}
           animationProps={mergeAnimationProps(
-            transitionProps,
+            animationProps,
             componentProps.backdrop?.animationProps
           )}
         />
