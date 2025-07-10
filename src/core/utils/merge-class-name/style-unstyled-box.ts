@@ -8,7 +8,7 @@ export const styleUnstyledBox = (
   className: string,
   {
     theme = 'light',
-    variant = 'text',
+    variant = 'solid',
     padding = 'unset',
     px = 'unset',
     py = 'unset',
