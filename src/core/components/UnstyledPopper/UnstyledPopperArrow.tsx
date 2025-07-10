@@ -4,6 +4,7 @@ import type {
   Variant,
   DefaultPlacement,
   ArrowOffset,
+  Border,
   DefaultBorder,
   Color,
   SVGNodeProps
@@ -19,7 +20,7 @@ type Props = MergeComponentProps<
     variant: Variant;
     placement: DefaultPlacement;
     offset: ArrowOffset;
-    border: boolean;
+    border: Border;
     bx: DefaultBorder;
     by: DefaultBorder;
     bt: DefaultBorder;
