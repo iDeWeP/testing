@@ -1,7 +1,8 @@
-import type { Orientation, Collision, CrossAxis } from '../../../core/types';
+import type { Collision, CrossAxis } from '../../../core/types';
 import type {
+  Orientation,
   Dimension,
-  Length,
+  TresholdDimensions,
   AnchorDimensions,
   ElDimensions,
   ViewDimensions,
@@ -14,17 +15,17 @@ const dimensions = {
   start: (
     orientation: Orientation,
     dimension: Dimension,
-    length: Length,
+    [start, end]: TresholdDimensions,
     anchor: AnchorDimensions,
     el: ElDimensions,
     view: ViewDimensions,
     size: SizeDimensions,
     overflow: OverflowDimensions
   ) => {
-    const isShorter = isElShorter(anchor, el, length);
+    const isShorter = isElShorter(anchor, el, end);
 
-    return (isShorter && overflow[orientation].anchorStart < 0) ||
-      (!isShorter && overflow[orientation].start > view[length])
+    return (isShorter && overflow[orientation].anchorStart < view[start]) ||
+      (!isShorter && overflow[orientation].start > view[end])
       ? // &&overflow[orientation].viewStart > overflow[orientation].viewEnd)
         { [dimension]: size[orientation].end }
       : {};
@@ -32,17 +33,17 @@ const dimensions = {
   end: (
     orientation: Orientation,
     dimension: Dimension,
-    length: Length,
+    [start, end]: TresholdDimensions,
     anchor: AnchorDimensions,
     el: ElDimensions,
     view: ViewDimensions,
     size: SizeDimensions,
     overflow: OverflowDimensions
   ) => {
-    const isShorter = isElShorter(anchor, el, length);
+    const isShorter = isElShorter(anchor, el, end);
 
-    return (isShorter && overflow[orientation].anchorEnd > view[length]) ||
-      (!isShorter && overflow[orientation].end < 0)
+    return (isShorter && overflow[orientation].anchorEnd > view[end]) ||
+      (!isShorter && overflow[orientation].end < view[start])
       ? // && overflow[orientation].viewStart < overflow[orientation].viewEnd)
         { [dimension]: size[orientation].start }
       : {};
@@ -54,7 +55,7 @@ export const getFlipCrossAxis = (
   crossAxis: CrossAxis,
   orientation: Orientation,
   dimension: Dimension,
-  length: Length,
+  tresholdDimensions: TresholdDimensions,
   anchor: AnchorDimensions,
   el: ElDimensions,
   view: ViewDimensions,
@@ -65,7 +66,7 @@ export const getFlipCrossAxis = (
     ? dimensions[crossAxis](
         orientation,
         dimension,
-        length,
+        tresholdDimensions,
         anchor,
         el,
         view,

@@ -24,17 +24,17 @@ export const getAnchorDimensions = (
     (cursor ? dimensions.cursorY : dimensions.y) +
     document.documentElement.scrollTop;
 
-  const left = cursor
-    ? dimensions.left + dimensions.cursorX - dimensions.x
-    : dimensions.left;
-
   const top = cursor
     ? dimensions.top + dimensions.cursorY - dimensions.y
     : dimensions.top;
 
+  const left = cursor
+    ? dimensions.left + dimensions.cursorX - dimensions.x
+    : dimensions.left;
+
   const anchorDimensions = {
-    left: isPorted ? portedX : left,
     top: isPorted ? portedY : top,
+    left: isPorted ? portedX : left,
     x: cursor ? dimensions.cursorX : dimensions.x,
     y: cursor ? dimensions.cursorY : dimensions.y,
     width: cursor ? 0 : dimensions.width,

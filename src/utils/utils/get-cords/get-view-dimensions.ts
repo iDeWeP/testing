@@ -1,6 +1,6 @@
-export const getViewDimensions = () => ({
-  top: document.documentElement.scrollTop,
-  left: document.documentElement.scrollLeft,
-  width: document.documentElement.clientWidth,
-  height: document.documentElement.clientHeight
+export const getViewDimensions = (threshold: number) => ({
+  top: threshold,
+  bottom: document.documentElement.clientHeight - threshold,
+  left: threshold,
+  right: document.documentElement.clientWidth - threshold
 });

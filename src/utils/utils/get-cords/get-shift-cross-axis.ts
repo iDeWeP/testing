@@ -1,13 +1,15 @@
-import type { Orientation, Collision, CrossAxis } from '../../../core/types';
+import type { Collision, CrossAxis } from '../../../core/types';
 import type {
+  Orientation,
   Dimension,
-  Length,
+  TresholdDimensions,
   AnchorDimensions,
   ElDimensions,
   ViewDimensions,
   SizeDimensions,
   OverflowDimensions
 } from './cords.types';
+import { getElDimension } from './get-el-dimension';
 import { isElShorter } from './is-el-shorter';
 
 const getOffsetSize = (orientation: Orientation) =>
@@ -20,29 +22,29 @@ const dimensions = {
   start: (
     orientation: Orientation,
     dimension: Dimension,
-    length: Length,
+    [start, end]: TresholdDimensions,
     anchor: AnchorDimensions,
     el: ElDimensions,
     view: ViewDimensions,
     size: SizeDimensions,
     overflow: OverflowDimensions
   ) => {
-    const isShorter = isElShorter(anchor, el, length);
+    const isShorter = isElShorter(anchor, el, end);
 
-    if (isShorter && overflow[orientation].anchorStart < 0) {
+    if (isShorter && overflow[orientation].anchorStart < view[start]) {
       return {
         [dimension]:
-          size[orientation].viewStart + el[length] <
+          size[orientation].viewStart + el[getElDimension(end)] <
           anchor[getOffsetSize(orientation)]
             ? size[orientation].viewStart
             : size[orientation].end
       };
     }
 
-    if (!isShorter && overflow[orientation].start > view[length]) {
+    if (!isShorter && overflow[orientation].start > view[end]) {
       return {
         [dimension]:
-          size[orientation].viewEnd + el[length] <
+          size[orientation].viewEnd + el[getElDimension(end)] <
           anchor[getOffsetSize(orientation)]
             ? size[orientation].end
             : size[orientation].viewEnd
@@ -52,16 +54,16 @@ const dimensions = {
   end: (
     orientation: Orientation,
     dimension: Dimension,
-    length: Length,
+    [start, end]: TresholdDimensions,
     anchor: AnchorDimensions,
     el: ElDimensions,
     view: ViewDimensions,
     size: SizeDimensions,
     overflow: OverflowDimensions
   ) => {
-    const isShorter = isElShorter(anchor, el, length);
+    const isShorter = isElShorter(anchor, el, end);
 
-    if (isShorter && overflow[orientation].anchorEnd > view[length]) {
+    if (isShorter && overflow[orientation].anchorEnd > view[end]) {
       return {
         [dimension]:
           size[orientation].viewEnd < anchor[getPosition(orientation)]
@@ -70,7 +72,7 @@ const dimensions = {
       };
     }
 
-    if (!isShorter && overflow[orientation].end < 0) {
+    if (!isShorter && overflow[orientation].end < view[start]) {
       return {
         [dimension]:
           size[orientation].viewStart < anchor[getPosition(orientation)]
@@ -82,16 +84,16 @@ const dimensions = {
   center: (
     orientation: Orientation,
     dimension: Dimension,
-    length: Length,
+    [start, end]: TresholdDimensions,
     anchor: AnchorDimensions,
     el: ElDimensions,
     view: ViewDimensions,
     size: SizeDimensions,
     overflow: OverflowDimensions
   ) => {
-    const isShorter = isElShorter(anchor, el, length);
+    const isShorter = isElShorter(anchor, el, end);
 
-    if (overflow[orientation].centerEnd > view[length]) {
+    if (overflow[orientation].centerEnd > view[end]) {
       if (isShorter) {
         return {
           [dimension]:
@@ -102,7 +104,7 @@ const dimensions = {
       } else {
         return {
           [dimension]:
-            size[orientation].viewEnd + el[length] <
+            size[orientation].viewEnd + el[getElDimension(end)] <
             anchor[getOffsetSize(orientation)]
               ? size[orientation].end
               : size[orientation].viewEnd
@@ -110,11 +112,11 @@ const dimensions = {
       }
     }
 
-    if (overflow[orientation].centerStart < 0) {
+    if (overflow[orientation].centerStart < view[start]) {
       if (isShorter) {
         return {
           [dimension]:
-            size[orientation].viewStart + el[length] <
+            size[orientation].viewStart + el[getElDimension(end)] <
             anchor[getOffsetSize(orientation)]
               ? size[orientation].viewStart
               : size[orientation].end
@@ -136,7 +138,7 @@ export const getShiftCrossAxis = (
   crossAxis: CrossAxis,
   orientation: Orientation,
   dimension: Dimension,
-  length: Length,
+  tresholdDimensions: TresholdDimensions,
   anchor: AnchorDimensions,
   el: ElDimensions,
   view: ViewDimensions,
@@ -147,7 +149,7 @@ export const getShiftCrossAxis = (
     ? dimensions[crossAxis](
         orientation,
         dimension,
-        length,
+        tresholdDimensions,
         anchor,
         el,
         view,

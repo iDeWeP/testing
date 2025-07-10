@@ -1,7 +1,12 @@
-import type { AnchorDimensions, ElDimensions, Length } from './cords.types';
+import type { AnchorDimensions, ElDimensions } from './cords.types';
+import { getElDimension } from './get-el-dimension';
 
 export const isElShorter = (
   anchor: AnchorDimensions,
   el: ElDimensions,
-  length: Length
-) => anchor[length] > el[length];
+  dimension: 'right' | 'bottom'
+) => {
+  const length = getElDimension(dimension);
+
+  return anchor[length] > el[length];
+};

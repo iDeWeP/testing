@@ -6,22 +6,30 @@ import type {
 } from './cords.types';
 
 const dimensions = {
-  top: (size: SizeDimensions, overflow: OverflowDimensions) =>
-    overflow.top < 0 ? { top: size.bottom, mainAxis: 'bottom' } : {},
+  top: (
+    size: SizeDimensions,
+    overflow: OverflowDimensions,
+    view: ViewDimensions
+  ) =>
+    overflow.top < view.top ? { top: size.bottom, mainAxis: 'bottom' } : {},
   bottom: (
     size: SizeDimensions,
     overflow: OverflowDimensions,
     view: ViewDimensions
   ) =>
-    overflow.bottom > view.height ? { top: size.top, mainAxis: 'top' } : {},
-  left: (size: SizeDimensions, overflow: OverflowDimensions) =>
-    overflow.left < 0 ? { left: size.left, mainAxis: 'right' } : {},
+    overflow.bottom > view.bottom ? { top: size.top, mainAxis: 'top' } : {},
+  left: (
+    size: SizeDimensions,
+    overflow: OverflowDimensions,
+    view: ViewDimensions
+  ) =>
+    overflow.left < view.left ? { left: size.left, mainAxis: 'right' } : {},
   right: (
     size: SizeDimensions,
     overflow: OverflowDimensions,
     view: ViewDimensions
   ) =>
-    overflow.right > view.width ? { left: size.left, mainAxis: 'left' } : {}
+    overflow.right > view.right ? { left: size.left, mainAxis: 'left' } : {}
 };
 
 export const getFlipMainAxis = (
