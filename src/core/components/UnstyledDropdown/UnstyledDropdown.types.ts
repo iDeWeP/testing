@@ -14,7 +14,7 @@ import type {
   MergeProps
 } from '../../types';
 
-export type UnstyledPaperDefaultProps = {
+export type UnstyledDropdownDefaultProps = {
   as?: ElementType;
   variant?: Variant;
   orientation?: Orientation;
@@ -50,9 +50,9 @@ export type UnstyledPaperDefaultProps = {
   gy?: Gap;
 };
 
-export type UnstyledPaperConfigProps = UnstyledPaperDefaultProps;
+export type UnstyledDropdownConfigProps = UnstyledDropdownDefaultProps;
 
-export type UnstyledPaperProps<E extends ElementType> = MergeProps<
+export type UnstyledDropdownProps<E extends ElementType> = MergeProps<
   ComponentPropsWithRef<E>,
-  UnstyledPaperDefaultProps
+  UnstyledDropdownDefaultProps
 >;

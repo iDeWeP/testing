@@ -2,18 +2,18 @@ import type { ElementType } from 'react';
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
 import { mergeProps } from '../../utils/merge-props/merge-props';
 import { UnstyledBox } from '../UnstyledBox/UnstyledBox';
-import type { UnstyledPaperProps } from './UnstyledDropdown.types';
-import { unstyledPaperConfig } from './unstyledDropdownConfig';
+import type { UnstyledDropdownProps } from './UnstyledDropdown.types';
+import { unstyledDropdownConfig } from './unstyledDropdownConfig';
 
-export const UnstyledPaper = <E extends ElementType>(
-  props: UnstyledPaperProps<E>
+export const UnstyledDropdown = <E extends ElementType>(
+  props: UnstyledDropdownProps<E>
 ) => {
   const {
     orientation,
     size: cardSize,
     className,
     ...restProps
-  } = mergeProps(unstyledPaperConfig.props, props);
+  } = mergeProps(unstyledDropdownConfig.props, props);
 
   const mergedClassName = mergeClassName('unstyledCard', className, {
     orientation,
