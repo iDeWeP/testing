@@ -16,7 +16,10 @@ export type ComponentConfig<P> = {
 
 export type SVGNodeProps = ReactElement<ComponentPropsWithRef<'svg'>>;
 
-export type MergeProps<D extends object, T extends object> = Omit<D, keyof T> &
+export type MergeProps<D extends object, T extends object> = Omit<
+  D,
+  keyof T | 'scale'
+> &
   T;
 
 export type MergeComponentProps<E extends ElementType, T> = Omit<
@@ -87,6 +90,7 @@ export type CardSize =
   | 'xl-xl'
   | 'xxl-xxl';
 export type InputSize = 'sm' | 'md' | 'lg';
+export type Scale = 'normal' | 'inner';
 export type Padding =
   | 'unset'
   | 'none'

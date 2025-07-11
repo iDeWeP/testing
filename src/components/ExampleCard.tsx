@@ -1,34 +1,17 @@
 import type { ReactNode } from 'react';
-import { Card } from '../core/components/Card/Card';
 
 type Props = {
-  stable?: boolean;
-  vertical?: boolean;
-  stretch?: boolean;
-  align?: boolean;
-  children: ReactNode;
+  col?: boolean;
+  children?: ReactNode;
 };
 
-export const ExampleCard = ({
-  stable = false,
-  vertical = false,
-  stretch = false,
-  align = false,
-  ...restProps
-}: Props) => {
-  const className = `relative bg-disabled-50 ${stable ? 'h-[16rem]' : ''}`;
+export const ExampleCard = ({ col, ...restProps }: Props) => {
+  const className = `relative bg-disabled-100 flex flex-wrap justify-evenly items-center ${
+    col ? 'flex-col' : ''
+  }`;
 
   return (
-    <Card
-      direction={vertical ? 'col' : 'row'}
-      wrap="wrap"
-      justify="evenly"
-      size="md-md"
-      align={align ? 'end' : stretch ? 'stretch' : 'center'}
-      gap="md"
-      variant="light"
-      border
-      radius="xl"
+    <div
       className={className}
       {...restProps}
     />

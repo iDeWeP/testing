@@ -1,5 +1,4 @@
 import type { ReactNode } from 'react';
-import { Card } from '../core/components/Card/Card';
 
 type Props = {
   title: string;
@@ -13,12 +12,12 @@ export const ExampleSection = ({ title, children }: Props) => {
     .replace(/\s{2,}/, ' ');
 
   return (
-    <Card
-      gap="md"
+    <div
       aria-labelledby={id}
+      className="flex flex-col"
     >
       <h1 id={id}>{title}</h1>
       {children}
-    </Card>
+    </div>
   );
 };
