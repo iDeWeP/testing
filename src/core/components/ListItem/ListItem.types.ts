@@ -2,32 +2,32 @@ import type { ElementType } from 'react';
 import type {
   Variant,
   Orientation,
-  ContainerSize,
+  CardSize,
   Radius,
   Color,
   Gap,
   MergeProps
 } from '../../types';
 import type {
-  UnstyledBoxConfigProps,
-  UnstyledBoxProps
-} from '../UnstyledBox/UnstyledBox.types';
+  UnstyledCardConfigProps,
+  UnstyledCardProps
+} from '../UnstyledCard/UnstyledCard.types';
 
 export type ListItemDefaultProps = {
   variant?: Variant;
   orientation?: Orientation;
-  size?: ContainerSize;
+  size?: CardSize;
   radius?: Radius;
   color?: Color;
   gap?: Gap;
 };
 
 export type ListItemConfigProps = MergeProps<
-  UnstyledBoxConfigProps,
+  UnstyledCardConfigProps,
   ListItemDefaultProps
 >;
 
 export type ListItemProps<E extends ElementType> = MergeProps<
-  UnstyledBoxProps<E>,
+  UnstyledCardProps<E>,
   ListItemDefaultProps
 >;
