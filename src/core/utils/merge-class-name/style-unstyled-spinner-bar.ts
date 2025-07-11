@@ -3,7 +3,7 @@ import type { Classes } from '../../types';
 import { getColor } from './color';
 import { mergeClasses } from './merge-classes';
 
-export const styleUnstyledSpinnerTrail = (
+export const styleUnstyledSpinnerBar = (
   className: string,
   {
     theme = 'light',
@@ -14,7 +14,7 @@ export const styleUnstyledSpinnerTrail = (
 ) =>
   mergeClasses(
     systemStyles.color.stroke[theme][
-      getColor(variant, color, disabled).bgColor
+      getColor(variant, color, disabled).textColor
     ],
     className
   );

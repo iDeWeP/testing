@@ -2,17 +2,14 @@ import { unstyledSpinnerConfig } from '../../components/UnstyledSpinner/unstyled
 import { sharedStyles } from '../../config/shared-styles';
 import { systemStyles } from '../../config/system-styles';
 import type { Classes } from '../../types';
-import { getColor } from './color';
 import { mergeClasses } from './merge-classes';
 import { getSpinnerTransition } from './transition';
 
 export const styleUnstyledSpinner = (
   className: string,
   {
-    theme = 'light',
     disabled = false,
     spin = true,
-    variant = 'text',
     float = false,
     defaultSize = 'md',
     scale = 'normal',
@@ -22,8 +19,7 @@ export const styleUnstyledSpinner = (
     mt = 'unset',
     mb = 'unset',
     ml = 'unset',
-    mr = 'unset',
-    color = 'unset'
+    mr = 'unset'
   }: Classes
 ) =>
   mergeClasses(
@@ -38,9 +34,6 @@ export const styleUnstyledSpinner = (
     systemStyles.margin.b[mb],
     systemStyles.margin.l[ml],
     systemStyles.margin.r[mr],
-    systemStyles.color.stroke[theme][
-      getColor(variant, color, disabled).textColor
-    ],
     unstyledSpinnerConfig.styles.root[getSpinnerTransition(spin, disabled)],
     disabled && sharedStyles.focusable.disabled,
     className
