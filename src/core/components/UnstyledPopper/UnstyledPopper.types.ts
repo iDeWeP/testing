@@ -35,7 +35,7 @@ export type UnstyledPopperComponentsProps = {
   backdrop?: UnstyledPopperBackdropProps;
 };
 
-type OptionalProps = {
+export type UnstyledPopperOptionalProps = {
   anchorRef?: RefObject<HTMLElement | null>;
   open?: boolean;
   followCursor?: Cursor;
@@ -73,5 +73,5 @@ export type UnstyledPopperConfigProps = MergeProps<
 
 export type UnstyledPopperProps<E extends ElementType> = MergeProps<
   UnstyledDropdownProps<E>,
-  UnstyledPopperDefaultProps & OptionalProps
+  UnstyledPopperDefaultProps & UnstyledPopperOptionalProps
 >;
