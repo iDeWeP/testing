@@ -35,12 +35,9 @@ export const UnstyledContainer = <E extends ElementType>(
     rtr,
     rbl,
     rbr,
-    font,
     color,
     shadow,
     gap,
-    gx,
-    gy,
     className,
     ...restProps
   } = mergeProps(unstyledContainerConfig.props, props);
@@ -74,12 +71,9 @@ export const UnstyledContainer = <E extends ElementType>(
     rtr,
     rbl,
     rbr,
-    font,
     color,
     shadow,
-    gap,
-    gx,
-    gy
+    gap
   });
 
   return (

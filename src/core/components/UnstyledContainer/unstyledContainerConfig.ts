@@ -30,7 +30,6 @@ export const unstyledContainerConfig: ComponentConfig<UnstyledContainerConfigPro
       rtr: 'unset',
       rbl: 'unset',
       rbr: 'unset',
-      font: 'unset',
       color: 'unset',
       shadow: 'unset',
       gap: 'unset'

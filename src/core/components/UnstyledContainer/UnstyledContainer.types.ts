@@ -1,12 +1,11 @@
 import type { ElementType, ComponentPropsWithRef } from 'react';
 import type {
   Variant,
-  DefaultSize,
+  Size,
   Margin,
   Border,
   DefaultBorder,
   Radius,
-  Font,
   Color,
   Shadow,
   Gap,
@@ -16,7 +15,7 @@ import type {
 export type UnstyledContainerDefaultProps = {
   as?: ElementType;
   variant?: Variant;
-  size?: DefaultSize;
+  size?: Size;
   margin?: Margin;
   mx?: Margin;
   my?: Margin;
@@ -40,7 +39,6 @@ export type UnstyledContainerDefaultProps = {
   rtr?: Radius;
   rbl?: Radius;
   rbr?: Radius;
-  font?: Font;
   color?: Color;
   shadow?: Shadow;
   gap?: Gap;
