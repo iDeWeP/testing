@@ -3,8 +3,8 @@ import { ColorExample } from './ColorExample';
 import { DefaultExample } from './DefaultExample';
 import { GapExample } from './GapExample';
 import { OrientationExample } from './OrientationExample';
+import { PaddingExample } from './PaddingExample';
 import { RadiusExample } from './RadiusExample';
-import { SizeExample } from './SizeExample';
 import { VariantExample } from './VariantExample';
 
 const Page = () => (
@@ -13,7 +13,7 @@ const Page = () => (
     <DefaultExample />
     <VariantExample />
     <OrientationExample />
-    <SizeExample />
+    <PaddingExample />
     <RadiusExample />
     <ColorExample />
     <GapExample />
