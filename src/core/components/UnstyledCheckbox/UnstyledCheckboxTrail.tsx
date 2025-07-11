@@ -1,6 +1,6 @@
+import { useTheme } from '../../hooks/use-theme/use-theme';
 import type {
   MergeComponentProps,
-  Theme,
   DefaultSize,
   Border,
   DefaultBorder,
@@ -13,7 +13,6 @@ import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
 type Props = MergeComponentProps<
   'span',
   {
-    theme: Theme;
     valid: boolean;
     invalid: boolean;
     disabled: boolean;
@@ -40,7 +39,6 @@ type Props = MergeComponentProps<
 >;
 
 export const UnstyledCheckboxTrail = ({
-  theme,
   valid,
   invalid,
   disabled,
@@ -66,6 +64,8 @@ export const UnstyledCheckboxTrail = ({
   className,
   ...restProps
 }: Props) => {
+  const theme = useTheme();
+
   const mergedClassName = mergeClassName('unstyledCheckboxTrail', className, {
     theme,
     valid,

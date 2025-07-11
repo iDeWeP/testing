@@ -1,7 +1,7 @@
 import { cloneElement } from 'react';
+import { useTheme } from '../../hooks/use-theme/use-theme';
 import type {
   MergeComponentProps,
-  Theme,
   Variant,
   DefaultSize,
   Border,
@@ -19,7 +19,6 @@ type Props = MergeComponentProps<
   'svg',
   {
     inputType: 'checkbox' | 'radio';
-    theme: Theme;
     valid: boolean;
     invalid: boolean;
     disabled: boolean;
@@ -49,7 +48,6 @@ type Props = MergeComponentProps<
 
 export const UnstyledCheckboxIcon = ({
   inputType,
-  theme,
   valid,
   invalid,
   disabled,
@@ -77,6 +75,8 @@ export const UnstyledCheckboxIcon = ({
   children,
   ...restProps
 }: Props) => {
+  const theme = useTheme();
+
   const mergedClassName = mergeClassName(
     'unstyledCheckboxIcon',
     mergeClasses(children?.props.className, className),

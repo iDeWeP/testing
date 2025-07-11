@@ -1,4 +1,3 @@
-import { useTheme } from '../../hooks/use-theme/use-theme';
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
 import { setRippleVariant } from '../../utils/merge-class-name/variant';
 import { mergeProps } from '../../utils/merge-props/merge-props';
@@ -50,8 +49,6 @@ export const UnstyledCheckbox = (props: UnstyledCheckboxProps) => {
     ...restProps
   } = mergeProps(unstyledCheckboxConfig.props, props);
 
-  const theme = useTheme();
-
   const mergedClassName = mergeClassName('unstyledCheckbox', className, {
     disabled
   });
@@ -90,7 +87,6 @@ export const UnstyledCheckbox = (props: UnstyledCheckboxProps) => {
         />
       )}
       <UnstyledCheckboxTrail
-        theme={theme}
         valid={valid}
         invalid={invalid}
         disabled={disabled}
@@ -110,7 +106,6 @@ export const UnstyledCheckbox = (props: UnstyledCheckboxProps) => {
       />
       <UnstyledCheckboxIcon
         inputType={type}
-        theme={theme}
         valid={valid}
         invalid={invalid}
         disabled={disabled}
