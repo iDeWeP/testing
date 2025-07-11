@@ -2,6 +2,7 @@ import type { ElementType } from 'react';
 import type {
   Variant,
   Orientation,
+  Padding,
   Radius,
   Color,
   Shadow,
@@ -16,6 +17,7 @@ import type {
 export type CardDefaultProps = {
   variant?: Variant;
   orientation?: Orientation;
+  padding?: Padding;
   radius?: Radius;
   color?: Color;
   shadow?: Shadow;
