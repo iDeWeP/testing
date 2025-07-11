@@ -1,7 +1,7 @@
 import { useRef } from 'react';
 import { ExampleCard } from '../../../components/ExampleCard';
 import { ExampleSection } from '../../../components/ExampleSection';
-import { UnstyledButton } from '../../../core/components/UnstyledButton/UnstyledButton';
+import { UnstyledButton } from '../../../core/components/Button/UnstyledButton';
 import { Example } from './Example';
 
 export const FocusOnCloseExample = () => {

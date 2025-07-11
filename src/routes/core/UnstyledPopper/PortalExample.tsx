@@ -6,9 +6,7 @@ export const PortalExample = () => (
   <ExampleSection title="Portal">
     <ExampleCard>
       <Example portalEl={null}>NULL</Example>
-      <Example portalEl={document.getElementById('popper')}>
-        EL
-      </Example>
+      <Example portalEl={document.getElementById('popper')}>EL</Example>
     </ExampleCard>
   </ExampleSection>
 );
