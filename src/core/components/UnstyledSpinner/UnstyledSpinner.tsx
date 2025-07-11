@@ -5,7 +5,6 @@ import { mergeProps } from '../../utils/merge-props/merge-props';
 import type { UnstyledSpinnerProps } from './UnstyledSpinner.types';
 import { UnstyledSpinnerBar } from './UnstyledSpinnerBar';
 import { unstyledSpinnerConfig } from './unstyledSpinnerConfig';
-import { UnstyledSpinnerTrail } from './UnstyledSpinnerTrail';
 
 export const UnstyledSpinner = (props: UnstyledSpinnerProps) => {
   const {
@@ -32,8 +31,6 @@ export const UnstyledSpinner = (props: UnstyledSpinnerProps) => {
     ...restProps
   } = mergeProps(unstyledSpinnerConfig.props, props);
 
-  const theme = useTheme();
-
   const length = 2 * Math.PI * (20 - thickness / 2);
   const offset = length - (value * length) / 100;
 
@@ -53,6 +50,8 @@ export const UnstyledSpinner = (props: UnstyledSpinnerProps) => {
   });
 
   const hasTrail = trail === undefined ? hasVariantBg(variant) : trail;
+  const hasBorder =
+    (variant === 'outlined' && border === 'auto') || border === 'set';
 
   return (
     <svg
@@ -62,9 +61,12 @@ export const UnstyledSpinner = (props: UnstyledSpinnerProps) => {
       {...restProps}
     >
       {hasTrail && (
-        <UnstyledSpinnerTrail
-          theme={theme}
+        <UnstyledSpinnerBar
+          barType="trail"
           disabled={disabled}
+          cx="20"
+          cy="20"
+          r="18"
           strokeWidth={thickness}
           variant={variant}
           color={color}
@@ -72,8 +74,11 @@ export const UnstyledSpinner = (props: UnstyledSpinnerProps) => {
         />
       )}
       <UnstyledSpinnerBar
-        theme={theme}
+        barType="bar"
         disabled={disabled}
+        cx="20"
+        cy="20"
+        r="18"
         strokeWidth={thickness}
         strokeDasharray={length}
         strokeDashoffset={offset}
@@ -81,19 +86,27 @@ export const UnstyledSpinner = (props: UnstyledSpinnerProps) => {
         color={color}
         {...componentsProps.bar}
       />
-      {border && (
-        <circle
+      {hasBorder && (
+        <UnstyledSpinnerBar
+          barType="bar"
+          disabled={disabled}
           cx="20"
           cy="20"
           r="20"
+          variant={variant}
+          color={color}
           {...componentsProps.outerBorder}
         />
       )}
-      {border && (
-        <circle
+      {hasBorder && (
+        <UnstyledSpinnerBar
+          barType="bar"
+          disabled={disabled}
           cx="20"
           cy="20"
           r={20 - thickness}
+          variant={variant}
+          color={color}
           {...componentsProps.innerBorder}
         />
       )}

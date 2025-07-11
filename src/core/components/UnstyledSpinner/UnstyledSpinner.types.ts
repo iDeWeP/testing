@@ -5,6 +5,7 @@ import type {
   DefaultSize,
   Scale,
   Margin,
+  SpinnerBorder,
   Color,
   MergeProps
 } from '../../types';
@@ -41,7 +42,7 @@ export type UnstyledSpinnerDefaultProps = {
   mb?: Margin;
   ml?: Margin;
   mr?: Margin;
-  border?: boolean;
+  border?: SpinnerBorder;
   color?: Color;
   componentsProps?: UnstyledSpinnerComponentsProps;
 };

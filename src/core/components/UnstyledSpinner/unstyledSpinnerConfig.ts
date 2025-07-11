@@ -34,7 +34,7 @@ export const unstyledSpinnerConfig: ComponentConfig<UnstyledSpinnerConfigProps> 
     mb: 'unset',
     ml: 'unset',
     mr: 'unset',
-    border: false,
+    border: 'auto',
     color: 'unset',
     componentsProps: {}
   },
