@@ -6,7 +6,6 @@ export const listItemConfig: ComponentConfig<ListItemConfigProps> = {
     as: 'li',
     variant: 'solid',
     orientation: 'col',
-    size: 'md',
     radius: 'lg',
     color: 'surface-on',
     gap: 'unset',

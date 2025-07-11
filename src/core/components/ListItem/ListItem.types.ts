@@ -2,7 +2,6 @@ import type { ElementType } from 'react';
 import type {
   Variant,
   Orientation,
-  CardSize,
   Radius,
   Color,
   Gap,
@@ -16,7 +15,6 @@ import type {
 export type ListItemDefaultProps = {
   variant?: Variant;
   orientation?: Orientation;
-  size?: CardSize;
   radius?: Radius;
   color?: Color;
   gap?: Gap;
