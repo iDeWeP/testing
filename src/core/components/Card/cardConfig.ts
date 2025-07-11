@@ -6,7 +6,6 @@ export const cardConfig: ComponentConfig<CardConfigProps> = {
     as: 'div',
     variant: 'solid',
     orientation: 'col',
-    size: 'md',
     radius: 'lg',
     color: 'surface-on',
     shadow: 'unset',
