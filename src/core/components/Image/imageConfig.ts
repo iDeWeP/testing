@@ -13,7 +13,7 @@ export const imageConfig: ComponentConfig<ImageConfigProps> & Styles = {
   props: {
     as: 'img',
     radius: 'unset',
-    variant: 'text',
+    variant: 'solid',
     padding: 'unset',
     px: 'unset',
     py: 'unset',
