@@ -112,3 +112,6 @@ export const getArrowColor = (
 
   return color;
 };
+
+export const getSpinnerColorType = (type: 'bar' | 'trail') =>
+  type === 'bar' ? 'textColor' : 'bgColor';
