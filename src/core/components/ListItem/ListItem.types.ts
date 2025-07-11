@@ -2,6 +2,7 @@ import type { ElementType } from 'react';
 import type {
   Variant,
   Orientation,
+  Padding,
   Radius,
   Color,
   Gap,
@@ -15,6 +16,7 @@ import type {
 export type ListItemDefaultProps = {
   variant?: Variant;
   orientation?: Orientation;
+  padding?: Padding;
   radius?: Radius;
   color?: Color;
   gap?: Gap;
