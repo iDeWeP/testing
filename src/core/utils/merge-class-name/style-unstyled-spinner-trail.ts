@@ -1,26 +1,22 @@
-import { generic } from '../../config/generic';
+import { systemStyles } from '../../config/system-styles';
 import type { Classes } from '../../types';
 import { getColor } from './color';
 import { mergeClasses } from './merge-classes';
-import { getTrailVariant } from './variant';
-
+import { isTrailTransparent } from './variant';
 export const styleUnstyledSpinnerTrail = (
   className: string,
   {
     theme = 'light',
     disabled = false,
-    variant = 'none',
-    color = 'neutral'
+    variant = 'text',
+    color = 'unset'
   }: Classes
-) => {
-  const colorVariant = getTrailVariant(variant);
-
-  return mergeClasses(
-    colorVariant === 'none'
+) =>
+  mergeClasses(
+    isTrailTransparent(variant)
       ? 'stroke-transparent'
-      : generic.styles.color.stroke[theme][getColor(color, disabled)][
-          getTrailVariant(variant, disabled)
+      : systemStyles.color.stroke[theme][
+          getColor(variant, color, disabled).bgColor
         ],
     className
   );
-};
