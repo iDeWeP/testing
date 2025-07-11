@@ -8,7 +8,7 @@ export const markConfig: ComponentConfig<MarkConfigProps> = {
     color: 'primary',
     variant: 'light',
     padding: 'unset',
-    px: 'unset',
+    px: 'xs',
     py: 'unset',
     pt: 'unset',
     pb: 'unset',
