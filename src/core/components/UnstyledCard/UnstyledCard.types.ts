@@ -1,5 +1,5 @@
 import type { ElementType } from 'react';
-import type { Orientation, CardSize, MergeProps } from '../../types';
+import type { Orientation, MergeProps } from '../../types';
 import type {
   UnstyledBoxConfigProps,
   UnstyledBoxProps
@@ -7,7 +7,6 @@ import type {
 
 export type UnstyledCardDefaultProps = {
   orientation?: Orientation;
-  size?: CardSize;
 };
 
 export type UnstyledCardConfigProps = MergeProps<

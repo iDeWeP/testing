@@ -5,7 +5,6 @@ export const unstyledCardConfig: ComponentConfig<UnstyledCardConfigProps> = {
   props: {
     as: 'div',
     orientation: 'row',
-    size: 'unset',
     variant: 'solid',
     padding: 'unset',
     px: 'unset',

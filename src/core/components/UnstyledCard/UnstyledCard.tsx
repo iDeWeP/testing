@@ -8,16 +8,13 @@ import { unstyledCardConfig } from './unstyledCardConfig';
 export const UnstyledCard = <E extends ElementType>(
   props: UnstyledCardProps<E>
 ) => {
-  const {
-    orientation,
-    size: cardSize,
-    className,
-    ...restProps
-  } = mergeProps(unstyledCardConfig.props, props);
+  const { orientation, className, ...restProps } = mergeProps(
+    unstyledCardConfig.props,
+    props
+  );
 
   const mergedClassName = mergeClassName('unstyledCard', className, {
-    orientation,
-    cardSize
+    orientation
   });
 
   return (
