@@ -237,6 +237,42 @@ export const systemStyles: SystemStyles = {
       },
       xxl: {
         padding: 'px-16'
+      },
+      'xs-xs': {
+        padding: 'px-2'
+      },
+      'sm-sm': {
+        padding: 'px-4'
+      },
+      'md-md': {
+        padding: 'px-6'
+      },
+      'lg-lg': {
+        padding: 'px-8'
+      },
+      'xl-xl': {
+        padding: 'px-12'
+      },
+      'xxl-xxl': {
+        padding: 'px-16'
+      },
+      'b-xs': {
+        padding: 'px-1.75'
+      },
+      'b-sm': {
+        padding: 'px-3.75'
+      },
+      'b-md': {
+        padding: 'px-5.75'
+      },
+      'b-lg': {
+        padding: 'px-7.75'
+      },
+      'b-xl': {
+        padding: 'px-11.75'
+      },
+      'b-xxl-': {
+        padding: 'px-15.75'
       }
     },
     y: {
@@ -260,6 +296,42 @@ export const systemStyles: SystemStyles = {
       },
       xxl: {
         padding: 'py-16'
+      },
+      'xs-xs': {
+        padding: 'py-1'
+      },
+      'sm-sm': {
+        padding: 'py-2'
+      },
+      'md-md': {
+        padding: 'py-3'
+      },
+      'lg-lg': {
+        padding: 'py-4'
+      },
+      'xl-xl': {
+        padding: 'py-6'
+      },
+      'xxl-xxl': {
+        padding: 'py-8'
+      },
+      'b-xs-xs': {
+        padding: 'py-0.75'
+      },
+      'b-sm-sm': {
+        padding: 'py-1.75'
+      },
+      'b-md-md': {
+        padding: 'py-2.75'
+      },
+      'b-lg-lg': {
+        padding: 'py-3.75'
+      },
+      'b-xl-xl': {
+        padding: 'py-5.75'
+      },
+      'b-xxl-xxl': {
+        padding: 'py-7.75'
       }
     },
     t: {
@@ -283,6 +355,42 @@ export const systemStyles: SystemStyles = {
       },
       xxl: {
         padding: 'pt-16'
+      },
+      'xs-xs': {
+        padding: 'pt-1'
+      },
+      'sm-sm': {
+        padding: 'pt-2'
+      },
+      'md-md': {
+        padding: 'pt-3'
+      },
+      'lg-lg': {
+        padding: 'pt-4'
+      },
+      'xl-xl': {
+        padding: 'pt-6'
+      },
+      'xxl-xxl': {
+        padding: 'pt-8'
+      },
+      'b-xs-xs': {
+        padding: 'pt-0.75'
+      },
+      'b-sm-sm': {
+        padding: 'pt-1.75'
+      },
+      'b-md-md': {
+        padding: 'pt-2.75'
+      },
+      'b-lg-lg': {
+        padding: 'pt-3.75'
+      },
+      'b-xl-xl': {
+        padding: 'pt-5.75'
+      },
+      'b-xxl-xxl': {
+        padding: 'pt-7.75'
       }
     },
     b: {
@@ -306,6 +414,42 @@ export const systemStyles: SystemStyles = {
       },
       xxl: {
         padding: 'pb-16'
+      },
+      'xs-xs': {
+        padding: 'pb-1'
+      },
+      'sm-sm': {
+        padding: 'pb-2'
+      },
+      'md-md': {
+        padding: 'pb-3'
+      },
+      'lg-lg': {
+        padding: 'pb-4'
+      },
+      'xl-xl': {
+        padding: 'pb-6'
+      },
+      'xxl-xxl': {
+        padding: 'pb-8'
+      },
+      'b-xs-xs': {
+        padding: 'pb-0.75'
+      },
+      'b-sm-sm': {
+        padding: 'pb-1.75'
+      },
+      'b-md-md': {
+        padding: 'pb-2.75'
+      },
+      'b-lg-lg': {
+        padding: 'pb-3.75'
+      },
+      'b-xl-xl': {
+        padding: 'pb-5.75'
+      },
+      'b-xxl-xxl': {
+        padding: 'pb-7.75'
       }
     },
     l: {
@@ -329,6 +473,42 @@ export const systemStyles: SystemStyles = {
       },
       xxl: {
         padding: 'pl-16'
+      },
+      'xs-xs': {
+        padding: 'pl-2'
+      },
+      'sm-sm': {
+        padding: 'pl-4'
+      },
+      'md-md': {
+        padding: 'pl-6'
+      },
+      'lg-lg': {
+        padding: 'pl-8'
+      },
+      'xl-xl': {
+        padding: 'pl-12'
+      },
+      'xxl-xxl': {
+        padding: 'pl-16'
+      },
+      'b-xs': {
+        padding: 'pl-1.75'
+      },
+      'b-sm': {
+        padding: 'pl-3.75'
+      },
+      'b-md': {
+        padding: 'pl-5.75'
+      },
+      'b-lg': {
+        padding: 'pl-7.75'
+      },
+      'b-xl': {
+        padding: 'pl-11.75'
+      },
+      'b-xxl-': {
+        padding: 'pl-15.75'
       }
     },
     r: {
@@ -352,6 +532,42 @@ export const systemStyles: SystemStyles = {
       },
       xxl: {
         padding: 'pr-16'
+      },
+      'xs-xs': {
+        padding: 'pr-2'
+      },
+      'sm-sm': {
+        padding: 'pr-4'
+      },
+      'md-md': {
+        padding: 'pr-6'
+      },
+      'lg-lg': {
+        padding: 'pr-8'
+      },
+      'xl-xl': {
+        padding: 'pr-12'
+      },
+      'xxl-xxl': {
+        padding: 'pr-16'
+      },
+      'b-xs': {
+        padding: 'pr-1.75'
+      },
+      'b-sm': {
+        padding: 'pr-3.75'
+      },
+      'b-md': {
+        padding: 'pr-5.75'
+      },
+      'b-lg': {
+        padding: 'pr-7.75'
+      },
+      'b-xl': {
+        padding: 'pr-11.75'
+      },
+      'b-xxl-': {
+        padding: 'pr-15.75'
       }
     }
   },
