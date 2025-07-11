@@ -12,7 +12,7 @@ export const Example = ({ clear, ...restProps }: Props) => {
   return (
     <UnstyledInput
       value={value}
-      variant='light'
+      variant="light"
       color={clear ? 'unset' : 'primary'}
       onChange={(event: ChangeEvent<HTMLTextAreaElement>) =>
         setValue(event.target.value)
