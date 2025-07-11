@@ -1,9 +1,9 @@
 import type { ElementType } from 'react';
 import type { Orientation, Gap, MergeProps } from '../../types';
 import type {
-  UnstyledListConfigProps,
-  UnstyledListProps
-} from '../UnstyledList/UnstyledList.types';
+  UnstyledCardConfigProps,
+  UnstyledCardProps
+} from '../UnstyledCard/UnstyledCard.types';
 
 export type ListDefaultProps = {
   orientation?: Orientation;
@@ -11,11 +11,11 @@ export type ListDefaultProps = {
 };
 
 export type ListConfigProps = MergeProps<
-  UnstyledListConfigProps,
+  UnstyledCardConfigProps,
   ListDefaultProps
 >;
 
 export type ListProps<E extends ElementType> = MergeProps<
-  UnstyledListProps<E>,
+  UnstyledCardProps<E>,
   ListDefaultProps
 >;
