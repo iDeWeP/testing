@@ -10,7 +10,7 @@ export const unstyledTransitionConfig: ComponentConfig<TransitionConfigProps> =
       transition: 'fade',
       duration: 1000,
       animationProps: {},
-      variant: 'text',
+      variant: 'solid',
       padding: 'unset',
       px: 'unset',
       py: 'unset',
