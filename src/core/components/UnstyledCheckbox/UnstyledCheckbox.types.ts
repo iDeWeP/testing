@@ -55,7 +55,7 @@ export type UnstyledCheckboxComponentsProps = {
   ripple?: UnstyledRippleProps;
 };
 
-type OptionalProps = {
+export type UnstyledCheckboxOptionalProps = {
   checked?: boolean;
   valid?: boolean;
   invalid?: boolean;
@@ -100,5 +100,5 @@ export type UnstyledCheckboxConfigProps = UnstyledCheckboxDefaultProps;
 
 export type UnstyledCheckboxProps = MergeProps<
   ComponentPropsWithRef<'input'>,
-  UnstyledCheckboxDefaultProps & OptionalProps
+  UnstyledCheckboxDefaultProps & UnstyledCheckboxOptionalProps
 >;
