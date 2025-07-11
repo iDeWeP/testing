@@ -7,7 +7,7 @@ export const gridConfig: ComponentConfig<GridConfigProps> = {
     gap: 'unset',
     gx: 'unset',
     gy: 'unset',
-    variant: 'text',
+    variant: 'solid',
     padding: 'unset',
     px: 'unset',
     py: 'unset',
