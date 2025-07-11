@@ -6,7 +6,7 @@ export const navigationConfig: ComponentConfig<NavigationConfigProps> = {
     as: 'nav',
     orientation: 'row',
     gap: 'unset',
-    variant: 'text',
+    variant: 'solid',
     padding: 'unset',
     px: 'unset',
     py: 'unset',
