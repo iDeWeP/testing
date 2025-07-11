@@ -24,7 +24,7 @@ export type UnstyledInputComponentsProps = {
   clearance?: UnstyledInputClearanceProps;
 };
 
-type OptionalProps = {
+export type UnstyledInputOptionalProps = {
   focused?: boolean;
   shifted?: boolean;
   valid?: boolean;
@@ -64,5 +64,5 @@ export type UnstyledInputConfigProps = UnstyledInputDefaultProps;
 
 export type UnstyledInputProps<E extends ElementType> = MergeProps<
   ComponentPropsWithRef<E>,
-  UnstyledInputDefaultProps & OptionalProps
+  UnstyledInputDefaultProps & UnstyledInputOptionalProps
 >;
