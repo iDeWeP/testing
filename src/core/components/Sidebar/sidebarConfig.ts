@@ -6,7 +6,7 @@ export const sidebarConfig: ComponentConfig<SidebarConfigProps> = {
     as: 'aside',
     orientation: 'col',
     gap: 'unset',
-    variant: 'text',
+    variant: 'solid',
     padding: 'unset',
     px: 'unset',
     py: 'unset',

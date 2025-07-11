@@ -1,9 +1,9 @@
 import type { ElementType } from 'react';
 import type { Orientation, Gap, MergeProps } from '../../types';
 import type {
-  UnstyledBoxConfigProps,
-  UnstyledBoxProps
-} from '../UnstyledBox/UnstyledBox.types';
+  UnstyledListConfigProps,
+  UnstyledListProps
+} from '../UnstyledList/UnstyledList.types';
 
 export type SidebarDefaultProps = {
   orientation?: Orientation;
@@ -11,11 +11,11 @@ export type SidebarDefaultProps = {
 };
 
 export type SidebarConfigProps = MergeProps<
-  UnstyledBoxConfigProps,
+  UnstyledListConfigProps,
   SidebarDefaultProps
 >;
 
 export type SidebarProps<E extends ElementType> = MergeProps<
-  UnstyledBoxProps<E>,
+  UnstyledListProps<E>,
   SidebarDefaultProps
 >;
