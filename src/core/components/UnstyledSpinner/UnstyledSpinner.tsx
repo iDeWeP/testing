@@ -3,6 +3,7 @@ import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
 import { hasVariantBg } from '../../utils/merge-class-name/variant';
 import { mergeProps } from '../../utils/merge-props/merge-props';
 import type { UnstyledSpinnerProps } from './UnstyledSpinner.types';
+import { UnstyledSpinnerBar } from './UnstyledSpinnerBar';
 import { unstyledSpinnerConfig } from './unstyledSpinnerConfig';
 import { UnstyledSpinnerTrail } from './UnstyledSpinnerTrail';
 
@@ -37,10 +38,8 @@ export const UnstyledSpinner = (props: UnstyledSpinnerProps) => {
   const offset = length - (value * length) / 100;
 
   const mergedClassName = mergeClassName('unstyledSpinner', className, {
-    theme,
     disabled,
     spin,
-    variant,
     float,
     defaultSize,
     scale,
@@ -50,8 +49,7 @@ export const UnstyledSpinner = (props: UnstyledSpinnerProps) => {
     mt,
     mb,
     ml,
-    mr,
-    color
+    mr
   });
 
   const hasTrail = trail === undefined ? hasVariantBg(variant) : trail;
@@ -73,13 +71,14 @@ export const UnstyledSpinner = (props: UnstyledSpinnerProps) => {
           {...componentsProps.trail}
         />
       )}
-      <circle
-        cx="20"
-        cy="20"
-        r="18"
+      <UnstyledSpinnerBar
+        theme={theme}
+        disabled={disabled}
         strokeWidth={thickness}
         strokeDasharray={length}
         strokeDashoffset={offset}
+        variant={variant}
+        color={color}
         {...componentsProps.bar}
       />
       {border && (
