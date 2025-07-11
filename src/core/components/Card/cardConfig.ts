@@ -9,7 +9,7 @@ export const cardConfig: ComponentConfig<CardConfigProps> = {
     size: 'md',
     radius: 'lg',
     color: 'surface-on',
-    shadow: 'md',
+    shadow: 'unset',
     gap: 'unset',
     padding: 'unset',
     px: 'unset',

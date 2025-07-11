@@ -2,7 +2,7 @@ import type { ElementType } from 'react';
 import type {
   Variant,
   Orientation,
-  ContainerSize,
+  CardSize,
   Radius,
   Color,
   Shadow,
@@ -10,14 +10,14 @@ import type {
   MergeProps
 } from '../../types';
 import type {
-  UnstyledBoxConfigProps,
-  UnstyledBoxProps
-} from '../UnstyledBox/UnstyledBox.types';
+  UnstyledCardConfigProps,
+  UnstyledCardProps
+} from '../UnstyledCard/UnstyledCard.types';
 
 export type CardDefaultProps = {
   variant?: Variant;
   orientation?: Orientation;
-  size?: ContainerSize;
+  size?: CardSize;
   radius?: Radius;
   color?: Color;
   shadow?: Shadow;
@@ -25,11 +25,11 @@ export type CardDefaultProps = {
 };
 
 export type CardConfigProps = MergeProps<
-  UnstyledBoxConfigProps,
+  UnstyledCardConfigProps,
   CardDefaultProps
 >;
 
 export type CardProps<E extends ElementType> = MergeProps<
-  UnstyledBoxProps<E>,
+  UnstyledCardProps<E>,
   CardDefaultProps
 >;
