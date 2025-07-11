@@ -5,7 +5,7 @@ import type {
   UnstyledPopperProps
 } from '../UnstyledPopper/UnstyledPopper.types';
 
-type OptionalProps = {
+export type UnstyledPopoverOptionalProps = {
   open?: boolean;
   onOpen?: VoidFunction;
   anchor?: ReactElement<ComponentPropsWithRef<ElementType>> | null;
@@ -24,5 +24,5 @@ export type UnstyledPopoverConfigProps = MergeProps<
 
 export type UnstyledPopoverProps<E extends ElementType> = MergeProps<
   UnstyledPopperProps<E>,
-  UnstyledPopoverDefaultProps & OptionalProps
+  UnstyledPopoverDefaultProps & UnstyledPopoverOptionalProps
 >;
