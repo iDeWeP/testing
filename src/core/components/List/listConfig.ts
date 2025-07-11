@@ -6,7 +6,7 @@ export const listConfig: ComponentConfig<ListConfigProps> = {
     as: 'ul',
     orientation: 'col',
     gap: 'unset',
-    variant: 'text',
+    variant: 'solid',
     padding: 'unset',
     px: 'unset',
     py: 'unset',
