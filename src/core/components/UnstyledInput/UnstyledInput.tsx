@@ -3,7 +3,6 @@ import { combineHandlers } from '../../../utils/utils/combine-handlers/combine-h
 import { mergeRefs } from '../../../utils/utils/merge-refs/merge-refs';
 import { setProp } from '../../../utils/utils/set-prop/set-prop';
 import { useControlledState } from '../../hooks/use-controlled-state/use-controlled-state';
-import { useTheme } from '../../hooks/use-theme/use-theme';
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
 import { mergeProps } from '../../utils/merge-props/merge-props';
 import { setAria } from '../../utils/set-aria/set-aria';
@@ -59,8 +58,6 @@ export const UnstyledInput = <E extends ElementType>(
     ...restProps
   } = mergeProps(unstyledInputConfig.props, props);
 
-  const theme = useTheme();
-
   const ref = useRef(null);
 
   const {
@@ -80,7 +77,6 @@ export const UnstyledInput = <E extends ElementType>(
     <UnstyledInputContainer
       inputType={Component}
       inputRef={setProp(focused === undefined, ref)}
-      theme={theme}
       focused={isFocused}
       shifted={shifted ?? (!!label && (isFocused || !!value))}
       valid={valid}
@@ -100,7 +96,6 @@ export const UnstyledInput = <E extends ElementType>(
     >
       <UnstyledInputDecorator
         inputType={Component}
-        theme={theme}
         disabled={disabled}
         variant={variant}
         placement="left"
@@ -119,7 +114,6 @@ export const UnstyledInput = <E extends ElementType>(
       </UnstyledInputDecorator>
       <UnstyledInputFieldset
         inputType={Component}
-        theme={theme}
         disabled={disabled}
         variant={variant}
         {...componentsProps.fieldset}
@@ -156,7 +150,6 @@ export const UnstyledInput = <E extends ElementType>(
       </UnstyledInputFieldset>
       <UnstyledInputDecorator
         inputType={Component}
-        theme={theme}
         disabled={disabled}
         variant={variant}
         placement="right"
