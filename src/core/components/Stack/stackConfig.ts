@@ -5,7 +5,7 @@ export const stackConfig: ComponentConfig<StackConfigProps> = {
   props: {
     as: 'div',
     gap: 'unset',
-    variant: 'text',
+    variant: 'solid',
     padding: 'unset',
     px: 'unset',
     py: 'unset',
