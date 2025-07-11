@@ -94,16 +94,16 @@ export const systemStyles: SystemStyles = {
           height: 'h-4'
         },
         md: {
-          height: 'h-4'
-        },
-        lg: {
           height: 'h-5'
         },
-        xl: {
+        lg: {
           height: 'h-6'
         },
-        xxl: {
+        xl: {
           height: 'h-7'
+        },
+        xxl: {
+          height: 'h-8'
         }
       },
       square: {
