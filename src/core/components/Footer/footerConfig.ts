@@ -6,7 +6,7 @@ export const footerConfig: ComponentConfig<FooterConfigProps> = {
     as: 'footer',
     orientation: 'row',
     gap: 'unset',
-    variant: 'text',
+    variant: 'solid',
     padding: 'unset',
     px: 'unset',
     py: 'unset',
