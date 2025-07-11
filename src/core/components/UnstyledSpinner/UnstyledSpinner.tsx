@@ -1,4 +1,3 @@
-import { useTheme } from '../../hooks/use-theme/use-theme';
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
 import { hasVariantBg } from '../../utils/merge-class-name/variant';
 import { mergeProps } from '../../utils/merge-props/merge-props';
