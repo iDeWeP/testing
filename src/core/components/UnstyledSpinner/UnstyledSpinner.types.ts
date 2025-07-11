@@ -2,7 +2,7 @@ import type { ComponentPropsWithRef } from 'react';
 import type {
   ComponentRefProps,
   Variant,
-  DefaultSize,
+  Size,
   Scale,
   Margin,
   SpinnerBorder,
@@ -32,7 +32,7 @@ export type UnstyledSpinnerDefaultProps = {
   value?: number;
   variant?: Variant;
   float?: boolean;
-  size?: DefaultSize;
+  size?: Size;
   thickness?: number;
   scale?: Scale;
   margin?: Margin;
