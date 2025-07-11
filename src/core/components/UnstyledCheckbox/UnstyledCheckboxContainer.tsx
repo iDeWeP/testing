@@ -1,15 +1,10 @@
-import type {
-  MergeComponentProps,
-  DefaultSize,
-  Margin,
-  Radius
-} from '../../types';
+import type { MergeComponentProps, Size, Margin, Radius } from '../../types';
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
 
 type Props = MergeComponentProps<
   'div',
   {
-    size: DefaultSize;
+    size: Size;
     margin: Margin;
     mx: Margin;
     my: Margin;

@@ -3,7 +3,7 @@ import { useTheme } from '../../hooks/use-theme/use-theme';
 import type {
   MergeComponentProps,
   Variant,
-  DefaultSize,
+  Size,
   Border,
   DefaultBorder,
   Radius,
@@ -23,7 +23,7 @@ type Props = MergeComponentProps<
     invalid: boolean;
     disabled: boolean;
     variant: Variant;
-    size: DefaultSize;
+    size: Size;
     border: Border;
     bx: DefaultBorder;
     by: DefaultBorder;
@@ -52,7 +52,7 @@ export const UnstyledCheckboxIcon = ({
   invalid,
   disabled,
   variant,
-  size: defaultSize,
+  size,
   border,
   bx,
   by,
@@ -86,7 +86,7 @@ export const UnstyledCheckboxIcon = ({
       invalid,
       disabled,
       variant,
-      defaultSize,
+      size,
       border,
       bx,
       by,
