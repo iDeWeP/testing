@@ -1,21 +1,27 @@
+import type { ComponentPropsWithRef } from 'react';
 import type {
   ComponentRefProps,
   Variant,
   DefaultSize,
-  SizeScale,
+  Scale,
   Margin,
   Color,
   MergeProps
 } from '../../types';
 
+export type UnstyledSpinnerBarProps = ComponentRefProps<'circle'>;
+export type UnstyledSpinnerTrailProps = ComponentRefProps<'circle'>;
+export type UnstyledSpinnerInnerBorder = ComponentRefProps<'circle'>;
+export type UnstyledSpinnerOuterBorder = ComponentRefProps<'circle'>;
+
 export type UnstyledSpinnerComponentsProps = {
-  bar?: ComponentRefProps<'circle'>;
-  trail?: ComponentRefProps<'circle'>;
-  innerBorder?: ComponentRefProps<'circle'>;
-  outerBorder?: ComponentRefProps<'circle'>;
+  bar?: UnstyledSpinnerBarProps;
+  trail?: UnstyledSpinnerTrailProps;
+  innerBorder?: UnstyledSpinnerInnerBorder;
+  outerBorder?: UnstyledSpinnerOuterBorder;
 };
 
-type OptionalProps = {
+type UnstyledSpinnerOptionalProps = {
   disabled?: boolean;
   trail?: boolean;
 };
@@ -27,8 +33,14 @@ export type UnstyledSpinnerDefaultProps = {
   float?: boolean;
   size?: DefaultSize;
   thickness?: number;
-  scale?: SizeScale;
+  scale?: Scale;
   margin?: Margin;
+  mx?: Margin;
+  my?: Margin;
+  mt?: Margin;
+  mb?: Margin;
+  ml?: Margin;
+  mr?: Margin;
   border?: boolean;
   color?: Color;
   componentsProps?: UnstyledSpinnerComponentsProps;
@@ -37,6 +49,6 @@ export type UnstyledSpinnerDefaultProps = {
 export type UnstyledSpinnerConfigProps = UnstyledSpinnerDefaultProps;
 
 export type UnstyledSpinnerProps = MergeProps<
-  ComponentRefProps<'svg'>,
-  UnstyledSpinnerDefaultProps & OptionalProps
+  ComponentPropsWithRef<'svg'>,
+  UnstyledSpinnerDefaultProps & UnstyledSpinnerOptionalProps
 >;

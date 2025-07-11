@@ -1,6 +1,6 @@
 import type {
   CSSProps,
-  SizeScale,
+  Scale,
   DefaultSize,
   ComponentConfig
 } from '../../types';
@@ -10,7 +10,7 @@ type Styles = {
   styles: {
     root: {
       default: CSSProps;
-      float: Record<SizeScale, Record<DefaultSize, CSSProps>>;
+      float: Record<Scale, Record<DefaultSize, CSSProps>>;
       spin: CSSProps;
       rotate: CSSProps;
     };
@@ -22,14 +22,20 @@ export const unstyledSpinnerConfig: ComponentConfig<UnstyledSpinnerConfigProps> 
   props: {
     spin: true,
     value: 75,
-    variant: 'none',
+    variant: 'text',
     float: false,
     size: 'md',
     thickness: 4,
     scale: 'normal',
-    margin: 'none',
+    margin: 'unset',
+    mx: 'unset',
+    my: 'unset',
+    mt: 'unset',
+    mb: 'unset',
+    ml: 'unset',
+    mr: 'unset',
     border: false,
-    color: 'neutral',
+    color: 'unset',
     componentsProps: {}
   },
   styles: {
@@ -66,7 +72,7 @@ export const unstyledSpinnerConfig: ComponentConfig<UnstyledSpinnerConfigProps> 
             left: 'left-[calc(50%_-_2.5rem)]'
           }
         },
-        text: {
+        inner: {
           xs: {
             top: 'top-[calc(50%_-_0.375)]',
             left: 'left-[calc(50%_-_0.375)]'

@@ -4,7 +4,8 @@ import { Example } from './Example';
 
 export const MarginExample = () => (
   <ExampleSection title="Margin">
-    <ExampleCard align>
+    <ExampleCard>
+      <Example margin="unset">UNSET</Example>
       <Example margin="none">NONE</Example>
       <Example margin="xs">XS</Example>
       <Example margin="sm">SM</Example>
