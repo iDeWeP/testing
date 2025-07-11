@@ -1,13 +1,13 @@
 import { ExampleCard } from '../../../components/ExampleCard';
 import { ExampleSection } from '../../../components/ExampleSection';
-import { ExampleUnstyledPopper } from './ExampleUnstyledPopper';
+import { Example } from './Example';
 
 export const CollisionExample = () => (
   <ExampleSection title="Collision">
     <ExampleCard>
-      <ExampleUnstyledPopper collision="none">NONE</ExampleUnstyledPopper>
-      <ExampleUnstyledPopper collision="shift">SHIFT</ExampleUnstyledPopper>
-      <ExampleUnstyledPopper collision="flip">FLIP</ExampleUnstyledPopper>
+      <Example collision="none">NONE</Example>
+      <Example collision="shift">SHIFT</Example>
+      <Example collision="flip">FLIP</Example>
     </ExampleCard>
   </ExampleSection>
 );

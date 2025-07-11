@@ -8,12 +8,7 @@ type Props = {
   label?: string;
 } & UnstyledPopperProps<'div'>;
 
-export const ExampleUnstyledPopper = ({
-  clear,
-  label,
-  children,
-  ...restProps
-}: Props) => {
+export const Example = ({ clear, label, children, ...restProps }: Props) => {
   const ref = useRef<HTMLButtonElement>(null);
 
   const [isOpen, setIsOpen] = useState(false);

@@ -1,14 +1,14 @@
 import { ExampleCard } from '../../../components/ExampleCard';
 import { ExampleSection } from '../../../components/ExampleSection';
-import { ExampleUnstyledPopper } from './ExampleUnstyledPopper';
+import { Example } from './Example';
 
 export const CloseOnOutClickExample = () => (
   <ExampleSection title="Close on out click">
     <ExampleCard>
-      <ExampleUnstyledPopper closeOnOutClick={false}>
+      <Example closeOnOutClick={false}>
         FALSE
-      </ExampleUnstyledPopper>
-      <ExampleUnstyledPopper closeOnOutClick>TRUE</ExampleUnstyledPopper>
+      </Example>
+      <Example closeOnOutClick>TRUE</Example>
     </ExampleCard>
   </ExampleSection>
 );

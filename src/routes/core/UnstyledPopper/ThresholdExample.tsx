@@ -2,11 +2,10 @@ import { ExampleCard } from '../../../components/ExampleCard';
 import { ExampleSection } from '../../../components/ExampleSection';
 import { Example } from './Example';
 
-export const CloseOnEscExample = () => (
-  <ExampleSection title="Close on esc">
+export const ThresholdExample = () => (
+  <ExampleSection title="Threshold">
     <ExampleCard>
-      <Example closeOnEsc={false}>FALSE</Example>
-      <Example closeOnEsc>TRUE</Example>
+      <Example threshold={16}>16</Example>
     </ExampleCard>
   </ExampleSection>
 );

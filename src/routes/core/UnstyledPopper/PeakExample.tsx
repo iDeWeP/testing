@@ -1,11 +1,11 @@
 import { ExampleCard } from '../../../components/ExampleCard';
 import { ExampleSection } from '../../../components/ExampleSection';
-import { ExampleUnstyledPopper } from './ExampleUnstyledPopper';
+import { Example } from './Example';
 
 export const PeakExample = () => (
   <ExampleSection title="Peak">
     <ExampleCard>
-      <ExampleUnstyledPopper peak={50}>50</ExampleUnstyledPopper>
+      <Example peak={50}>50</Example>
     </ExampleCard>
   </ExampleSection>
 );

@@ -1,50 +1,47 @@
 import { ExampleCard } from '../../../components/ExampleCard';
+import { ExampleFlex } from '../../../components/ExampleFlex';
 import { ExampleSection } from '../../../components/ExampleSection';
-import { UnstyledFlex } from '../../../core/components/UnstyledFlex/UnstyledFlex';
-import { ExampleUnstyledPopper } from './ExampleUnstyledPopper';
+import { Example } from './Example';
 
 export const PlacementExample = () => (
   <ExampleSection title="Placement">
-    <ExampleCard
-      vertical
-      stretch
-    >
-      <UnstyledFlex justify="evenly">
-        <ExampleUnstyledPopper placement="top-start">
+    <ExampleCard>
+      <ExampleFlex>
+        <Example placement="top-start">
           TOP-START
-        </ExampleUnstyledPopper>
-        <ExampleUnstyledPopper placement="top">TOP</ExampleUnstyledPopper>
-        <ExampleUnstyledPopper placement="top-end">
+        </Example>
+        <Example placement="top">TOP</Example>
+        <Example placement="top-end">
           TOP-END
-        </ExampleUnstyledPopper>
-      </UnstyledFlex>
-      <UnstyledFlex justify="evenly">
-        <ExampleUnstyledPopper placement="bottom-start">
+        </Example>
+      </ExampleFlex>
+      <ExampleFlex>
+        <Example placement="bottom-start">
           BOTTOM-START
-        </ExampleUnstyledPopper>
-        <ExampleUnstyledPopper placement="bottom">BOTTOM</ExampleUnstyledPopper>
-        <ExampleUnstyledPopper placement="bottom-end">
+        </Example>
+        <Example placement="bottom">BOTTOM</Example>
+        <Example placement="bottom-end">
           BOTTOM-END
-        </ExampleUnstyledPopper>
-      </UnstyledFlex>
-      <UnstyledFlex justify="evenly">
-        <ExampleUnstyledPopper placement="left-start">
+        </Example>
+      </ExampleFlex>
+      <ExampleFlex>
+        <Example placement="left-start">
           LEFT-START
-        </ExampleUnstyledPopper>
-        <ExampleUnstyledPopper placement="left">LEFT</ExampleUnstyledPopper>
-        <ExampleUnstyledPopper placement="left-end">
+        </Example>
+        <Example placement="left">LEFT</Example>
+        <Example placement="left-end">
           LEFT-END
-        </ExampleUnstyledPopper>
-      </UnstyledFlex>
-      <UnstyledFlex justify="evenly">
-        <ExampleUnstyledPopper placement="right-start">
+        </Example>
+      </ExampleFlex>
+      <ExampleFlex>
+        <Example placement="right-start">
           RIGHT-START
-        </ExampleUnstyledPopper>
-        <ExampleUnstyledPopper placement="right">RIGHT</ExampleUnstyledPopper>
-        <ExampleUnstyledPopper placement="right-end">
+        </Example>
+        <Example placement="right">RIGHT</Example>
+        <Example placement="right-end">
           RIGHT-END
-        </ExampleUnstyledPopper>
-      </UnstyledFlex>
+        </Example>
+      </ExampleFlex>
     </ExampleCard>
   </ExampleSection>
 );

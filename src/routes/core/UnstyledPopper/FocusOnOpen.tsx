@@ -2,7 +2,7 @@ import { useRef } from 'react';
 import { ExampleCard } from '../../../components/ExampleCard';
 import { ExampleSection } from '../../../components/ExampleSection';
 import { UnstyledButton } from '../../../core/components/UnstyledButton/UnstyledButton';
-import { ExampleUnstyledPopper } from './ExampleUnstyledPopper';
+import { Example } from './Example';
 
 export const FocusOnOpenExample = () => {
   const ref = useRef(null);
@@ -10,23 +10,23 @@ export const FocusOnOpenExample = () => {
   return (
     <ExampleSection title="Focus on open">
       <ExampleCard>
-        <ExampleUnstyledPopper
+        <Example
           focusOnOpen={false}
           label="false"
         >
           <UnstyledButton variant="solid">#1 FALSE</UnstyledButton>
           <UnstyledButton variant="solid">#2 FALSE</UnstyledButton>
           <UnstyledButton variant="solid">#3 FALSE</UnstyledButton>
-        </ExampleUnstyledPopper>
-        <ExampleUnstyledPopper
+        </Example>
+        <Example
           focusOnOpen
           label="true"
         >
           <UnstyledButton variant="solid">#1 FOCUS ON OPEN</UnstyledButton>
           <UnstyledButton variant="solid">#2 TRUE</UnstyledButton>
           <UnstyledButton variant="solid">#3 TRUE</UnstyledButton>
-        </ExampleUnstyledPopper>
-        <ExampleUnstyledPopper
+        </Example>
+        <Example
           focusOnOpen={ref}
           label="ref"
         >
@@ -38,7 +38,7 @@ export const FocusOnOpenExample = () => {
             #2 FOCUS ON OPEN
           </UnstyledButton>
           <UnstyledButton variant="solid">#3 REF</UnstyledButton>
-        </ExampleUnstyledPopper>
+        </Example>
       </ExampleCard>
     </ExampleSection>
   );

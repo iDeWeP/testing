@@ -1,12 +1,12 @@
 import { ExampleCard } from '../../../components/ExampleCard';
 import { ExampleSection } from '../../../components/ExampleSection';
-import { ExampleUnstyledPopper } from './ExampleUnstyledPopper';
+import { Example } from './Example';
 
 export const LockScrollExample = () => (
   <ExampleSection title="Lock scroll">
     <ExampleCard>
-      <ExampleUnstyledPopper lockScroll={false}>FALSE</ExampleUnstyledPopper>
-      <ExampleUnstyledPopper lockScroll>TRUE</ExampleUnstyledPopper>
+      <Example lockScroll={false}>FALSE</Example>
+      <Example lockScroll>TRUE</Example>
     </ExampleCard>
   </ExampleSection>
 );

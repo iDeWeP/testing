@@ -1,14 +1,14 @@
 import { ExampleCard } from '../../../components/ExampleCard';
 import { ExampleSection } from '../../../components/ExampleSection';
-import { ExampleUnstyledPopper } from './ExampleUnstyledPopper';
+import { Example } from './Example';
 
 export const PortalExample = () => (
   <ExampleSection title="Portal">
     <ExampleCard>
-      <ExampleUnstyledPopper portalEl={null}>NULL</ExampleUnstyledPopper>
-      <ExampleUnstyledPopper portalEl={document.getElementById('popper')}>
+      <Example portalEl={null}>NULL</Example>
+      <Example portalEl={document.getElementById('popper')}>
         EL
-      </ExampleUnstyledPopper>
+      </Example>
     </ExampleCard>
   </ExampleSection>
 );
