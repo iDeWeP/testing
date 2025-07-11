@@ -2,7 +2,6 @@ import type { ElementType, ComponentPropsWithRef } from 'react';
 import type {
   Variant,
   Orientation,
-  CardSize,
   Padding,
   Border,
   DefaultBorder,
@@ -18,7 +17,6 @@ export type UnstyledDropdownDefaultProps = {
   as?: ElementType;
   variant?: Variant;
   orientation?: Orientation;
-  size?: CardSize;
   padding?: Padding;
   px?: Padding;
   py?: Padding;

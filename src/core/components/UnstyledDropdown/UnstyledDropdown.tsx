@@ -8,16 +8,13 @@ import { unstyledDropdownConfig } from './unstyledDropdownConfig';
 export const UnstyledDropdown = <E extends ElementType>(
   props: UnstyledDropdownProps<E>
 ) => {
-  const {
-    orientation,
-    size: cardSize,
-    className,
-    ...restProps
-  } = mergeProps(unstyledDropdownConfig.props, props);
+  const { orientation, className, ...restProps } = mergeProps(
+    unstyledDropdownConfig.props,
+    props
+  );
 
   const mergedClassName = mergeClassName('unstyledCard', className, {
-    orientation,
-    cardSize
+    orientation
   });
 
   return (

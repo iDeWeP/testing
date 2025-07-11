@@ -7,7 +7,6 @@ export const unstyledDropdownConfig: ComponentConfig<UnstyledDropdownConfigProps
       as: 'div',
       variant: 'solid',
       orientation: 'row',
-      size: 'unset',
       padding: 'unset',
       px: 'unset',
       py: 'unset',
