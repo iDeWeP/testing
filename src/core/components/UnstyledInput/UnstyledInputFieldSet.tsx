@@ -1,11 +1,11 @@
-import type { MergeComponentProps, Theme, InputVariant } from '../../types';
+import { useTheme } from '../../hooks/use-theme/use-theme';
+import type { MergeComponentProps, InputVariant } from '../../types';
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
 
 type Props = MergeComponentProps<
   'fieldset',
   {
     inputType: 'input' | 'textarea';
-    theme: Theme;
     disabled: boolean;
     variant: InputVariant;
   }
@@ -13,12 +13,13 @@ type Props = MergeComponentProps<
 
 export const UnstyledInputFieldset = ({
   inputType,
-  theme,
   disabled,
   variant: inputVariant,
   className,
   ...restProps
 }: Props) => {
+  const theme = useTheme();
+
   const mergedClassName = mergeClassName('unstyledInputFieldset', className, {
     inputType,
     theme,

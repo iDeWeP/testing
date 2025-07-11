@@ -2,9 +2,9 @@ import type { RefObject } from 'react';
 import { combineHandlers } from '../../../utils/utils/combine-handlers/combine-handlers';
 import { setProp } from '../../../utils/utils/set-prop/set-prop';
 import { useFocusHandler } from '../../hooks/use-focus-handler/use-focus-handler';
+import { useTheme } from '../../hooks/use-theme/use-theme';
 import type {
   MergeComponentProps,
-  Theme,
   InputSize,
   Margin,
   Color
@@ -16,7 +16,6 @@ type Props = MergeComponentProps<
   {
     inputType: 'input' | 'textarea';
     inputRef?: RefObject<HTMLInputElement | HTMLTextAreaElement | null>;
-    theme: Theme;
     focused: boolean;
     shifted: boolean;
     valid: boolean;
@@ -38,7 +37,6 @@ type Props = MergeComponentProps<
 export const UnstyledInputContainer = ({
   inputType,
   inputRef,
-  theme,
   focused,
   shifted,
   valid,
@@ -58,6 +56,8 @@ export const UnstyledInputContainer = ({
   onFocus,
   ...restProps
 }: Props) => {
+  const theme = useTheme();
+
   const mergedClassName = mergeClassName('unstyledInputContainer', className, {
     inputType,
     theme,

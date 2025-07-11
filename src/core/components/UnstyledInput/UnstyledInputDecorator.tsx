@@ -1,6 +1,6 @@
+import { useTheme } from '../../hooks/use-theme/use-theme';
 import type {
   MergeComponentProps,
-  Theme,
   InputVariant,
   SidePlacement,
   Radius
@@ -11,7 +11,6 @@ type Props = MergeComponentProps<
   'span',
   {
     inputType: 'input' | 'textarea';
-    theme: Theme;
     disabled: boolean;
     variant: InputVariant;
     placement: SidePlacement;
@@ -29,7 +28,6 @@ type Props = MergeComponentProps<
 
 export const UnstyledInputDecorator = ({
   inputType,
-  theme,
   disabled,
   variant: inputVariant,
   placement: sidePlacement,
@@ -46,6 +44,8 @@ export const UnstyledInputDecorator = ({
   children,
   ...restProps
 }: Props) => {
+  const theme = useTheme();
+
   const mergedClassName = mergeClassName('unstyledInputDecorator', className, {
     inputType,
     theme,
