@@ -6,7 +6,7 @@ export const sectionConfig: ComponentConfig<SectionConfigProps> = {
     as: 'section',
     orientation: 'col',
     gap: 'unset',
-    variant: 'text',
+    variant: 'solid',
     padding: 'unset',
     px: 'unset',
     py: 'unset',
