@@ -72,7 +72,7 @@ export const unstyledSpinnerConfig: ComponentConfig<UnstyledSpinnerConfigProps> 
             left: 'left-[calc(50%_-_2.5rem)]'
           }
         },
-        inner: {
+        text: {
           xs: {
             top: 'top-[calc(50%_-_0.375)]',
             left: 'left-[calc(50%_-_0.375)]'
