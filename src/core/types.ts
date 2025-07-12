@@ -7,7 +7,7 @@ import type {
 
 export type ComponentRefProps<E extends ElementType> = Omit<
   ComponentPropsWithRef<E>,
-  'color'
+  'color' | 'scale'
 >;
 
 export type ComponentConfig<P> = {
@@ -68,13 +68,16 @@ export type Placement =
 export type DefaultPlacement = 'top' | 'bottom' | 'left' | 'right';
 export type CrossPlacement = 'start' | 'center' | 'end';
 export type SidePlacement = 'left' | 'right';
-export type RipplePlacement = 'normal' | 'inner';
 export type MainAxis = DefaultPlacement;
 export type CrossAxis = CrossPlacement;
 export type ArrowOffset = [number | string, number | string];
-export type Size = 'unset' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl';
-export type DefaultSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl';
-export type CardSize =
+export type Size = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl';
+export type InputSize = 'sm' | 'md' | 'lg';
+export type Scale = 'normal' | 'inner' | 'square';
+export type DefaultScale = 'normal' | 'text';
+export type ButtonScale = 'normal' | 'square';
+export type RippleScale = 'normal' | 'inner';
+export type Padding =
   | 'unset'
   | 'none'
   | 'xs'
@@ -89,17 +92,6 @@ export type CardSize =
   | 'lg-lg'
   | 'xl-xl'
   | 'xxl-xxl';
-export type InputSize = 'sm' | 'md' | 'lg';
-export type Scale = 'normal' | 'inner';
-export type Padding =
-  | 'unset'
-  | 'none'
-  | 'xs'
-  | 'sm'
-  | 'md'
-  | 'lg'
-  | 'xl'
-  | 'xxl';
 export type Margin =
   | 'unset'
   | 'none'
@@ -108,9 +100,16 @@ export type Margin =
   | 'md'
   | 'lg'
   | 'xl'
-  | 'xxl';
+  | 'xxl'
+  | 'xs-xs'
+  | 'sm-sm'
+  | 'md-md'
+  | 'lg-lg'
+  | 'xl-xl'
+  | 'xxl-xxl';
 export type Border = 'unset' | 'none' | 'auto' | 'set';
 export type DefaultBorder = 'unset' | 'none' | 'set';
+export type SpinnerBorder = 'unset' | 'auto' | 'set';
 export type Radius =
   | 'unset'
   | 'none'
@@ -196,9 +195,11 @@ export type CollisionFunction = (placement: Placement) => void;
 
 export type Classes = {
   inputType?: 'input' | 'textarea';
+  barType?: 'bar' | 'trail';
   theme?: Theme;
   focused?: boolean;
   shifted?: boolean;
+  spin?: boolean;
   valid?: boolean;
   invalid?: boolean;
   disabled?: boolean;
@@ -209,12 +210,13 @@ export type Classes = {
   orientation?: Orientation;
   defaultPlacement?: DefaultPlacement;
   sidePlacement?: SidePlacement;
-  ripplePlacement?: RipplePlacement;
+  float?: boolean;
   size?: Size;
-  defaultSize?: DefaultSize;
-  cardSize?: CardSize;
   inputSize?: InputSize;
   resize?: boolean;
+  scale?: Scale;
+  defaultScale?: DefaultScale;
+  rippleScale?: RippleScale;
   padding?: Padding;
   px?: Padding;
   py?: Padding;

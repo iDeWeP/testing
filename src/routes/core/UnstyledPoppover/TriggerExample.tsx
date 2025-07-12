@@ -1,6 +1,6 @@
 import { ExampleCard } from '../../../components/ExampleCard';
 import { ExampleSection } from '../../../components/ExampleSection';
-import { UnstyledFlex } from '../../../core/components/UnstyledFlex/UnstyledFlex';
+import { UnstyledFlex } from '../../../core/components/Flex/Flex';
 import { ExampleUnstyledPopover } from './ExampleUnstyledPopover';
 
 export const TriggerExample = () => (
