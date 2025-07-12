@@ -11,7 +11,7 @@ export const styleUnstyledRipple = (
     invalid = false,
     stateful = false,
     variant = 'solid',
-    ripplePlacement = 'normal',
+    rippleScale = 'normal',
     color = 'unset'
   }: Classes
 ) => {
@@ -21,15 +21,15 @@ export const styleUnstyledRipple = (
     unstyledRippleConfig.styles.root.default,
     stateful && unstyledRippleConfig.styles.root.stateful,
     !stateful &&
-      unstyledRippleConfig.styles.root.color[ripplePlacement].stateless[theme][
+      unstyledRippleConfig.styles.root.color[rippleScale].stateless[theme][
         textColor
       ],
     stateful &&
-      unstyledRippleConfig.styles.root.color[ripplePlacement].stateless[theme][
+      unstyledRippleConfig.styles.root.color[rippleScale].stateless[theme][
         getRippleColor(variant, getDefaultColor(color), valid, invalid)
       ],
     stateful &&
-      unstyledRippleConfig.styles.root.color[ripplePlacement].stateful[theme][
+      unstyledRippleConfig.styles.root.color[rippleScale].stateful[theme][
         textColor
       ],
     className
