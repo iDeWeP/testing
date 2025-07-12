@@ -5,6 +5,7 @@ type Styles = {
   styles: {
     root: {
       default: CSSProps;
+      loading: Record<string, CSSProps>;
     };
   };
 };
@@ -16,11 +17,11 @@ export const unstyledButtonConfig: ComponentConfig<UnstyledButtonConfigProps> &
     variant: 'solid',
     size: 'md',
     scale: 'normal',
-    radius: 'md',
-    color: 'neutral',
+    radius: 'unset',
+    color: 'unset',
     effect: 'unset',
     componentsProps: {},
-    ripple: 'normal',
+    ripple: 'none',
     margin: 'unset',
     mx: 'unset',
     my: 'unset',
@@ -50,11 +51,22 @@ export const unstyledButtonConfig: ComponentConfig<UnstyledButtonConfigProps> &
     root: {
       default: {
         display: 'inline-flex',
+        position: 'relative',
         font: 'font-semibold',
         textWrap: 'text-nowrap',
         justifyContent: 'justify-center',
         alignItems: 'items-center',
         userSelect: 'select-none'
+      },
+      loading: {
+        normal: {
+          opacity: 'opacity-50'
+        },
+        hide: {
+          color: 'text-transparent',
+          fill: 'fill-transparent',
+          opacity: 'opacity-50'
+        }
       }
     }
   }

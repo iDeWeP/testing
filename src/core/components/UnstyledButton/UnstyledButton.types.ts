@@ -33,6 +33,7 @@ export type UnstyledButtonComponentsProps = {
 };
 
 export type UnstyledButtonOptionalProps = {
+  checked?: boolean;
   loading?: Loading;
   disabled?: boolean;
   leftDecorator?: ReactNode;
