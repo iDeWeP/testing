@@ -5,7 +5,7 @@ export const listItemConfig: ComponentConfig<ListItemConfigProps> = {
   props: {
     as: 'li',
     variant: 'solid',
-    orientation: 'col',
+    orientation: 'row',
     padding: 'unset',
     radius: 'lg',
     color: 'surface-on',
