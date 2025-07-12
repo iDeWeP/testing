@@ -4,6 +4,7 @@ import type { Classes } from '../../types';
 import { isCheckboxBordered } from './border';
 import { getColor, getDefaultColor } from './color';
 import { mergeClasses } from './merge-classes';
+import { getCheckableVariant } from './variant';
 
 export const styleUnstyledCheckboxTrail = (
   className: string,
@@ -12,6 +13,7 @@ export const styleUnstyledCheckboxTrail = (
     valid = false,
     invalid = false,
     disabled = false,
+    variant = 'solid',
     size = 'md',
     border = 'unset',
     bx = 'unset',
@@ -29,20 +31,19 @@ export const styleUnstyledCheckboxTrail = (
     rtr = 'unset',
     rbl = 'unset',
     rbr = 'unset',
-    trailColor = 'unset',
+    color = 'unset',
     shadow = 'unset'
   }: Classes
 ) => {
   const isBordered = isCheckboxBordered(border, bx, by, bt, bb, bl, br);
   const { bgColor, textColor } = getColor(
-    'light',
-    getDefaultColor(trailColor),
+    getCheckableVariant(variant),
+    getDefaultColor(color),
     disabled,
     valid,
     invalid,
     false
   );
-  const isTransparent = trailColor === 'transparent';
 
   return mergeClasses(
     unstyledCheckboxConfig.styles.shared.default,
@@ -64,7 +65,7 @@ export const styleUnstyledCheckboxTrail = (
     systemStyles.radius.tr[rtr],
     systemStyles.radius.bl[rbl],
     systemStyles.radius.br[rbr],
-    !isTransparent && systemStyles.color.bg[theme][bgColor],
+    systemStyles.color.bg[theme][bgColor],
     isBordered && systemStyles.color.border[theme][textColor],
     systemStyles.color.ring[theme][textColor],
     systemStyles.shadow[shadow],
