@@ -13,16 +13,38 @@ export const unstyledButtonConfig: ComponentConfig<UnstyledButtonConfigProps> &
   Styles = {
   props: {
     as: 'button',
-    variant: 'none',
+    variant: 'solid',
     size: 'md',
     scale: 'normal',
-    margin: 'none',
-    border: false,
     radius: 'md',
     color: 'neutral',
-    effect: 'none',
+    effect: 'unset',
     componentsProps: {},
-    ripple: 'normal'
+    ripple: 'normal',
+    margin: 'unset',
+    mx: 'unset',
+    my: 'unset',
+    mt: 'unset',
+    mb: 'unset',
+    ml: 'unset',
+    mr: 'unset',
+    border: 'auto',
+    bx: 'unset',
+    by: 'unset',
+    bt: 'unset',
+    bb: 'unset',
+    bl: 'unset',
+    br: 'unset',
+    rt: 'unset',
+    rb: 'unset',
+    rl: 'unset',
+    rr: 'unset',
+    rtl: 'unset',
+    rtr: 'unset',
+    rbl: 'unset',
+    rbr: 'unset',
+    shadow: 'unset',
+    gap: 'unset'
   },
   styles: {
     root: {
@@ -32,7 +54,6 @@ export const unstyledButtonConfig: ComponentConfig<UnstyledButtonConfigProps> &
         textWrap: 'text-nowrap',
         justifyContent: 'justify-center',
         alignItems: 'items-center',
-        gap: 'gap-2',
         userSelect: 'select-none'
       }
     }

@@ -10,7 +10,7 @@ export const UnstyledRipple = (props: UnstyledRippleProps) => {
     invalid = false,
     stateful,
     variant,
-    placement: ripplePlacement,
+    scale: rippleScale,
     color,
     effect: rippleEffect,
     className,
@@ -25,7 +25,7 @@ export const UnstyledRipple = (props: UnstyledRippleProps) => {
     invalid,
     stateful,
     variant,
-    ripplePlacement,
+    rippleScale,
     color,
     rippleEffect
   });

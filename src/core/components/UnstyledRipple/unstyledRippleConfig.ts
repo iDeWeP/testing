@@ -1,6 +1,6 @@
 import type {
   CSSProps,
-  RipplePlacement,
+  RippleScale,
   Theme,
   ComponentConfig
 } from '../../types';
@@ -14,7 +14,7 @@ type Styles = {
       default: CSSProps;
       stateful: CSSProps;
       color: Record<
-        RipplePlacement,
+        RippleScale,
         Record<ColorState, Record<Theme, Record<string, CSSProps>>>
       >;
     };
@@ -26,7 +26,7 @@ export const unstyledRippleConfig: ComponentConfig<UnstyledRippleConfigProps> &
   props: {
     stateful: false,
     variant: 'solid',
-    placement: 'normal',
+    scale: 'normal',
     color: 'unset',
     effect: 'normal'
   },

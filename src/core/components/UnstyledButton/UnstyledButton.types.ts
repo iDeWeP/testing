@@ -3,26 +3,36 @@ import type {
   ComponentRefProps,
   Loading,
   Variant,
-  DefaultSize,
+  Size,
   ButtonScale,
-  Margin,
   Radius,
   Color,
   Effect,
   Ripple,
   MergeProps
 } from '../../types';
+import type {
+  UnstyledContainerConfigProps,
+  UnstyledContainerProps
+} from '../UnstyledContainer/UnstyledContainer.types';
+
+export type UnstyledButtonRippleProps = ComponentRefProps<'span'>;
+export type UnstyledButtonSpinnerProps = ComponentRefProps<'svg'>;
+export type UnstyledButtonBarProps = ComponentRefProps<'circle'>;
+export type UnstyledButtonTrailProps = ComponentRefProps<'circle'>;
+export type UnstyledButtonInnerBorderProps = ComponentRefProps<'circle'>;
+export type UnstyledButtonOuterBorderProps = ComponentRefProps<'circle'>;
 
 export type UnstyledButtonComponentsProps = {
-  ripple?: ComponentRefProps<'span'>;
-  spinner?: ComponentRefProps<'svg'>;
-  bar?: ComponentRefProps<'circle'>;
-  trail?: ComponentRefProps<'circle'>;
-  innerBorder?: ComponentRefProps<'circle'>;
-  outerBorder?: ComponentRefProps<'circle'>;
+  ripple?: UnstyledButtonRippleProps;
+  spinner?: UnstyledButtonSpinnerProps;
+  bar?: UnstyledButtonBarProps;
+  trail?: UnstyledButtonTrailProps;
+  innerBorder?: UnstyledButtonInnerBorderProps;
+  outerBorder?: UnstyledButtonOuterBorderProps;
 };
 
-type OptionalProps = {
+export type UnstyledButtonOptionalProps = {
   loading?: Loading;
   disabled?: boolean;
   leftDecorator?: ReactNode;
@@ -32,10 +42,8 @@ type OptionalProps = {
 export type UnstyledButtonDefaultProps = {
   as?: ElementType;
   variant?: Variant;
-  size?: DefaultSize;
+  size?: Size;
   scale?: ButtonScale;
-  margin?: Margin;
-  border?: boolean;
   radius?: Radius;
   color?: Color;
   effect?: Effect;
@@ -43,9 +51,12 @@ export type UnstyledButtonDefaultProps = {
   ripple?: Ripple;
 };
 
-export type UnstyledButtonConfigProps = UnstyledButtonDefaultProps;
+export type UnstyledButtonConfigProps = MergeProps<
+  UnstyledContainerConfigProps,
+  UnstyledButtonDefaultProps
+>;
 
 export type UnstyledButtonProps<E extends ElementType> = MergeProps<
-  ComponentRefProps<E>,
-  UnstyledButtonDefaultProps & OptionalProps
+  UnstyledContainerProps<E>,
+  UnstyledButtonDefaultProps & UnstyledButtonOptionalProps
 >;
