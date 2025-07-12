@@ -7,7 +7,7 @@ export const ScaleExample = () => (
     <ExampleCard>
       <Example scale="normal">NORMAL</Example>
       <Example scale="square">SQUARE</Example>
-      <Example scale="text">TEXT</Example>
+      <Example scale="inner">INNER</Example>
     </ExampleCard>
   </ExampleSection>
 );
