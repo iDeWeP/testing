@@ -11,8 +11,7 @@ export const Example = ({
   ...restProps
 }: Props) => (
   <UnstyledButton
-    variant={clear ? 'none' : 'light'}
-    color="primary"
+    color={clear ? 'unset' : 'primary'}
     {...restProps}
   >
     {children}

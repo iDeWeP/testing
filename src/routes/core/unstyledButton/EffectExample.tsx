@@ -5,7 +5,7 @@ import { Example } from './Example';
 export const EffectExample = () => (
   <ExampleSection title="Effect">
     <ExampleCard>
-      <Example effect="none">NONE</Example>
+      <Example effect="unset">UNSET</Example>
       <Example effect="shadow">SHADOW</Example>
     </ExampleCard>
   </ExampleSection>
