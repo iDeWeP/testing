@@ -1,11 +1,16 @@
-import type { CSSProps, Scale, Size, ComponentConfig } from '../../types';
+import type {
+  CSSProps,
+  DefaultScale,
+  Size,
+  ComponentConfig
+} from '../../types';
 import type { UnstyledSpinnerConfigProps } from './UnstyledSpinner.types';
 
 type Styles = {
   styles: {
     root: {
       default: CSSProps;
-      float: Record<Scale, Record<Size, CSSProps>>;
+      float: Record<DefaultScale, Record<Size, CSSProps>>;
       spin: CSSProps;
       rotate: CSSProps;
     };
