@@ -5,7 +5,7 @@ import type {
   Loading,
   Variant,
   Size,
-  ButtonScale,
+  Scale,
   Radius,
   Color,
   Effect,
@@ -51,7 +51,7 @@ export type UnstyledButtonDefaultProps = {
   as?: ElementType;
   variant?: Variant;
   size?: Size;
-  scale?: ButtonScale;
+  scale?: Scale;
   radius?: Radius;
   color?: Color;
   effect?: Effect;
