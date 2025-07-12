@@ -28,6 +28,9 @@ export const sharedStyles: SharedStyles = {
     },
     grid: {
       display: 'grid'
+    },
+    'inline-flex': {
+      display: 'inline-flex'
     }
   },
   position: {

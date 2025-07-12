@@ -13,6 +13,10 @@ type SystemStyles = {
       normal: Styles;
       square: Styles;
     };
+    inner: {
+      normal: Styles;
+      square: Styles;
+    };
     text: {
       normal: Styles;
       square: Styles;
@@ -86,7 +90,7 @@ export const systemStyles: SystemStyles = {
         }
       }
     },
-    text: {
+    inner: {
       normal: {
         xs: {
           height: 'h-4'
@@ -131,6 +135,54 @@ export const systemStyles: SystemStyles = {
         xxl: {
           width: 'w-9',
           height: 'h-9'
+        }
+      }
+    },
+    text: {
+      normal: {
+        xs: {
+          height: 'h-3'
+        },
+        sm: {
+          height: 'h-4'
+        },
+        md: {
+          height: 'h-5'
+        },
+        lg: {
+          height: 'h-6'
+        },
+        xl: {
+          height: 'h-7'
+        },
+        xxl: {
+          height: 'h-8'
+        }
+      },
+      square: {
+        xs: {
+          width: 'w-3',
+          height: 'h-3'
+        },
+        sm: {
+          width: 'w-4',
+          height: 'h-4'
+        },
+        md: {
+          width: 'w-5',
+          height: 'h-5'
+        },
+        lg: {
+          width: 'w-6',
+          height: 'h-6'
+        },
+        xl: {
+          width: 'w-7',
+          height: 'h-7'
+        },
+        xxl: {
+          width: 'w-8',
+          height: 'h-8'
         }
       }
     },
@@ -1001,7 +1053,7 @@ export const systemStyles: SystemStyles = {
         }
       }
     },
-    text: {
+    inner: {
       all: {
         xs: {
           padding: 'px-1 py-0.5'
