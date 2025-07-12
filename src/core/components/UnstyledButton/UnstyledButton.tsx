@@ -43,8 +43,6 @@ export const UnstyledButton = <E extends ElementType>(
     effect
   });
 
-  const hasRipple = ripple !== 'none' && !loading && !disabled;
-
   const spinnerNode = (
     <UnstyledSpinner
       disabled={disabled}
@@ -74,25 +72,29 @@ export const UnstyledButton = <E extends ElementType>(
     />
   );
 
+  const leftSpinner = loading && loading !== 'right' && spinnerNode;
+  const rightSpinner = loading === 'right' && spinnerNode;
+  const hasRipple = ripple !== 'none' && !loading && !disabled;
+
   return (
     <UnstyledContainer
       disabled={disabled || !!loading}
       type="button"
       variant={variant}
       size={size}
-      color={color}
+      color={checked === undefined ? color : 'surface'}
       className={mergedClassName}
       {...setAria('button', { element: Component })}
       {...restProps}
     >
-      {loading && loading !== 'right' && spinnerNode}
+      {leftSpinner}
       {leftDecorator}
       {children}
       {rightDecorator}
-      {loading === 'right' && spinnerNode}
+      {rightSpinner}
       {hasRipple && (
         <UnstyledRipple
-          stateful={false}
+          stateful={checked !== undefined}
           variant={variant}
           scale="inner"
           color={color}
