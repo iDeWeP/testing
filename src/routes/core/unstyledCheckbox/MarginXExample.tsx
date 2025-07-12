@@ -14,5 +14,15 @@ export const MarginXExample = () => (
       <Example mx="xl" />
       <Example mx="xxl" />
     </ExampleCard>
+    <ExampleCard>
+      <Example mx="unset" />
+      <Example mx="none" />
+      <Example mx="xs-xs" />
+      <Example mx="sm-sm" />
+      <Example mx="md-md" />
+      <Example mx="lg-lg" />
+      <Example mx="xl-xl" />
+      <Example mx="xxl-xxl" />
+    </ExampleCard>
   </ExampleSection>
 );
