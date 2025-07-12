@@ -126,7 +126,8 @@ export const UnstyledPopper = <E extends ElementType>(
   }
 
   const mergedClassName = mergeClassName('unstyledPopper', className, {
-    followCursor: !!followCursor
+    followCursor: !!followCursor,
+    transition
   });
 
   const mergedStyles = mergePopperStyle(
@@ -149,12 +150,11 @@ export const UnstyledPopper = <E extends ElementType>(
           open={isOpen}
           animation={animation}
           peak={peak}
-          zIndex={1000}
+          zIndex={zIndex}
           invisible
           blur={false}
           duration={duration}
           onClose={setProp(!!closeOnOutClick, onClose)}
-          portalEl={null}
           {...componentProps.backdrop}
           animationProps={mergeAnimationProps(
             animationProps,

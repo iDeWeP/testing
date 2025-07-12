@@ -17,7 +17,7 @@ type Props = MergeComponentProps<
     blur: boolean;
     duration: number;
     onClose?: VoidFunction;
-    portalEl: Element | null;
+    portalEl?: Element | null;
     animationProps?: AnimationProps;
   }
 >;
