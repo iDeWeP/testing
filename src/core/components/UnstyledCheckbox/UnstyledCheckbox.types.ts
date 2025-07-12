@@ -7,7 +7,7 @@ import type {
   RippleEffect,
   SVGNodeProps,
   Variant,
-  DefaultSize,
+  Size,
   Margin,
   Color,
   Shadow,
@@ -66,7 +66,7 @@ export type UnstyledCheckboxOptionalProps = {
 export type UnstyledCheckboxDefaultProps = {
   type?: 'checkbox' | 'radio';
   variant?: Variant;
-  size?: DefaultSize;
+  size?: Size;
   margin?: Margin;
   mx?: Margin;
   my?: Margin;
