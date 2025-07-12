@@ -1,9 +1,10 @@
+import { sharedStyles } from '../../config/shared-styles';
 import { systemStyles } from '../../config/system-styles';
 import type { Classes } from '../../types';
 import { getBorder } from './border';
 import { getColor } from './color';
 import { mergeClasses } from './merge-classes';
-import { getPadding } from './spacing';
+import { getPadding, getDefaultScale } from './spacing';
 
 export const styleUnstyledContainer = (
   className: string,
@@ -11,6 +12,7 @@ export const styleUnstyledContainer = (
     theme = 'light',
     variant = 'solid',
     size = 'md',
+    scale = 'normal',
     margin = 'unset',
     mx = 'unset',
     my = 'unset',
@@ -53,12 +55,14 @@ export const styleUnstyledContainer = (
   const { bgColor, textColor } = getColor(variant, color);
 
   return mergeClasses(
-    systemStyles.padding.x[x],
-    systemStyles.padding.y[y],
-    systemStyles.padding.t[t],
-    systemStyles.padding.b[b],
-    systemStyles.padding.l[l],
-    systemStyles.padding.r[r],
+    sharedStyles.display['inline-flex'],
+    systemStyles.size[getDefaultScale(scale)].normal[size],
+    systemStyles.padding[scale].x[x],
+    systemStyles.padding[scale].y[y],
+    systemStyles.padding[scale].t[t],
+    systemStyles.padding[scale].b[b],
+    systemStyles.padding[scale].l[l],
+    systemStyles.padding[scale].r[r],
     systemStyles.margin.all[margin],
     systemStyles.margin.x[mx],
     systemStyles.margin.y[my],
