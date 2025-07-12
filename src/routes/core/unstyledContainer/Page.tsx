@@ -1,5 +1,4 @@
 import { ExampleTitle } from '../../../components/ExampleTitle';
-import { SizeExample } from '../unstyledCheckbox/SizeExample';
 import { BorderBExample } from './BorderBExample';
 import { BorderExample } from './BorderExample';
 import { BorderLExample } from './BorderLExample';
@@ -27,6 +26,7 @@ import { RadiusTExample } from './RadiusTExample';
 import { RadiusTLExample } from './RadiusTLExample';
 import { RadiusTRExample } from './RadiusTRExample';
 import { ShadowExample } from './ShadowExample';
+import { SizeExample } from './SizeExample';
 import { VariantExample } from './VariantExample';
 
 const Page = () => (
