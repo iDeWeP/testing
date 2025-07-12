@@ -11,7 +11,6 @@ export const Example = ({
   ...restProps
 }: Props) => (
   <UnstyledCard
-    variant="light"
     color={clear ? 'unset' : 'primary'}
     {...restProps}
   >
