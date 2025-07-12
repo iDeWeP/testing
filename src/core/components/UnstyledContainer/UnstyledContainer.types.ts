@@ -2,6 +2,7 @@ import type { ElementType, ComponentPropsWithRef } from 'react';
 import type {
   Variant,
   Size,
+  Scale,
   Margin,
   Border,
   DefaultBorder,
@@ -16,6 +17,7 @@ export type UnstyledContainerDefaultProps = {
   as?: ElementType;
   variant?: Variant;
   size?: Size;
+  scale?: Scale;
   margin?: Margin;
   mx?: Margin;
   my?: Margin;

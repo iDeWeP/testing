@@ -7,6 +7,7 @@ export const unstyledContainerConfig: ComponentConfig<UnstyledContainerConfigPro
       as: 'div',
       variant: 'solid',
       size: 'md',
+      scale: 'normal',
       margin: 'unset',
       mx: 'unset',
       my: 'unset',
