@@ -4,7 +4,13 @@ import { ColorExample } from './ColorExample';
 import { DefaultExample } from './DefaultExample';
 import { DisabledExample } from './DisabledExample';
 import { FloatExample } from './FloatExample';
+import { MarginBExample } from './MarginBExample';
 import { MarginExample } from './MarginExample';
+import { MarginLExample } from './MarginLExample';
+import { MarginRExample } from './MarginRExample';
+import { MarginTExample } from './MarginTExample';
+import { MarginXExample } from './MarginXExample';
+import { MarginYExample } from './MarginYExample';
 import { ScaleExample } from './ScaleExample';
 import { SizeExample } from './SizeExample';
 import { SpinExample } from './SpinExample';
@@ -25,6 +31,12 @@ const Page = () => (
     <ScaleExample />
     <ThicknessExample />
     <MarginExample />
+    <MarginXExample />
+    <MarginYExample />
+    <MarginTExample />
+    <MarginBExample />
+    <MarginLExample />
+    <MarginRExample />
     <BorderExample />
     <ColorExample />
   </>
