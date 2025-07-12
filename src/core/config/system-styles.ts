@@ -1,6 +1,7 @@
 import type { CSSProps, Theme } from '../types';
 
 type Styles = Record<string, CSSProps>;
+type PaddingType = 'normal' | 'container';
 type SpacingType = 'all' | 'x' | 'y' | 't' | 'b' | 'l' | 'r';
 type RadiusType = 'all' | 't' | 'b' | 'l' | 'r' | 'tl' | 'tr' | 'bl' | 'br';
 type GapType = 'all' | 'x' | 'y';
@@ -19,7 +20,7 @@ type SystemStyles = {
     font: Styles;
     title: Styles;
   };
-  padding: Record<SpacingType, Styles>;
+  padding: Record<PaddingType, Record<SpacingType, Styles>>;
   margin: Record<SpacingType, Styles>;
   border: Record<BorderType, Styles>;
   radius: Record<RadiusType, Styles>;
@@ -175,399 +176,579 @@ export const systemStyles: SystemStyles = {
     }
   },
   padding: {
-    all: {
-      none: {
-        padding: 'p-0'
+    normal: {
+      all: {
+        none: {
+          padding: 'p-0'
+        },
+        xs: {
+          padding: 'p-2'
+        },
+        sm: {
+          padding: 'p-4'
+        },
+        md: {
+          padding: 'p-6'
+        },
+        lg: {
+          padding: 'p-8'
+        },
+        xl: {
+          padding: 'p-12'
+        },
+        xxl: {
+          padding: 'p-16'
+        },
+        'xs-xs': {
+          padding: 'px-2 py-1'
+        },
+        'sm-sm': {
+          padding: 'px-4 py-2'
+        },
+        'md-md': {
+          padding: 'px-6 py-3'
+        },
+        'lg-lg': {
+          padding: 'px-8 py-4'
+        },
+        'xl-xl': {
+          padding: 'px-12 py-6'
+        },
+        'xxl-xxl': {
+          padding: 'px-16 py-8'
+        }
       },
-      xs: {
-        padding: 'p-2'
+      x: {
+        none: {
+          padding: 'px-0'
+        },
+        xs: {
+          padding: 'px-2'
+        },
+        sm: {
+          padding: 'px-4'
+        },
+        md: {
+          padding: 'px-6'
+        },
+        lg: {
+          padding: 'px-8'
+        },
+        xl: {
+          padding: 'px-12'
+        },
+        xxl: {
+          padding: 'px-16'
+        },
+        'xs-xs': {
+          padding: 'px-2'
+        },
+        'sm-sm': {
+          padding: 'px-4'
+        },
+        'md-md': {
+          padding: 'px-6'
+        },
+        'lg-lg': {
+          padding: 'px-8'
+        },
+        'xl-xl': {
+          padding: 'px-12'
+        },
+        'xxl-xxl': {
+          padding: 'px-16'
+        }
       },
-      sm: {
-        padding: 'p-4'
+      y: {
+        none: {
+          padding: 'py-0'
+        },
+        xs: {
+          padding: 'py-2'
+        },
+        sm: {
+          padding: 'py-4'
+        },
+        md: {
+          padding: 'py-6'
+        },
+        lg: {
+          padding: 'py-8'
+        },
+        xl: {
+          padding: 'py-12'
+        },
+        xxl: {
+          padding: 'py-16'
+        },
+        'xs-xs': {
+          padding: 'py-1'
+        },
+        'sm-sm': {
+          padding: 'py-2'
+        },
+        'md-md': {
+          padding: 'py-3'
+        },
+        'lg-lg': {
+          padding: 'py-4'
+        },
+        'xl-xl': {
+          padding: 'py-6'
+        },
+        'xxl-xxl': {
+          padding: 'py-8'
+        }
       },
-      md: {
-        padding: 'p-6'
+      t: {
+        none: {
+          padding: 'pt-0'
+        },
+        xs: {
+          padding: 'pt-2'
+        },
+        sm: {
+          padding: 'pt-4'
+        },
+        md: {
+          padding: 'pt-6'
+        },
+        lg: {
+          padding: 'pt-8'
+        },
+        xl: {
+          padding: 'pt-12'
+        },
+        xxl: {
+          padding: 'pt-16'
+        },
+        'xs-xs': {
+          padding: 'pt-1'
+        },
+        'sm-sm': {
+          padding: 'pt-2'
+        },
+        'md-md': {
+          padding: 'pt-3'
+        },
+        'lg-lg': {
+          padding: 'pt-4'
+        },
+        'xl-xl': {
+          padding: 'pt-6'
+        },
+        'xxl-xxl': {
+          padding: 'pt-8'
+        }
       },
-      lg: {
-        padding: 'p-8'
+      b: {
+        none: {
+          padding: 'pb-0'
+        },
+        xs: {
+          padding: 'pb-2'
+        },
+        sm: {
+          padding: 'pb-4'
+        },
+        md: {
+          padding: 'pb-6'
+        },
+        lg: {
+          padding: 'pb-8'
+        },
+        xl: {
+          padding: 'pb-12'
+        },
+        xxl: {
+          padding: 'pb-16'
+        },
+        'xs-xs': {
+          padding: 'pb-1'
+        },
+        'sm-sm': {
+          padding: 'pb-2'
+        },
+        'md-md': {
+          padding: 'pb-3'
+        },
+        'lg-lg': {
+          padding: 'pb-4'
+        },
+        'xl-xl': {
+          padding: 'pb-6'
+        },
+        'xxl-xxl': {
+          padding: 'pb-8'
+        }
       },
-      xl: {
-        padding: 'p-12'
+      l: {
+        none: {
+          padding: 'pl-0'
+        },
+        xs: {
+          padding: 'pl-2'
+        },
+        sm: {
+          padding: 'pl-4'
+        },
+        md: {
+          padding: 'pl-6'
+        },
+        lg: {
+          padding: 'pl-8'
+        },
+        xl: {
+          padding: 'pl-12'
+        },
+        xxl: {
+          padding: 'pl-16'
+        },
+        'xs-xs': {
+          padding: 'pl-2'
+        },
+        'sm-sm': {
+          padding: 'pl-4'
+        },
+        'md-md': {
+          padding: 'pl-6'
+        },
+        'lg-lg': {
+          padding: 'pl-8'
+        },
+        'xl-xl': {
+          padding: 'pl-12'
+        },
+        'xxl-xxl': {
+          padding: 'pl-16'
+        }
       },
-      xxl: {
-        padding: 'p-16'
-      },
-      'xs-xs': {
-        padding: 'px-2 py-1'
-      },
-      'sm-sm': {
-        padding: 'px-4 py-2'
-      },
-      'md-md': {
-        padding: 'px-6 py-3'
-      },
-      'lg-lg': {
-        padding: 'px-8 py-4'
-      },
-      'xl-xl': {
-        padding: 'px-12 py-6'
-      },
-      'xxl-xxl': {
-        padding: 'px-16 py-8'
+      r: {
+        none: {
+          padding: 'pr-0'
+        },
+        xs: {
+          padding: 'pr-2'
+        },
+        sm: {
+          padding: 'pr-4'
+        },
+        md: {
+          padding: 'pr-6'
+        },
+        lg: {
+          padding: 'pr-8'
+        },
+        xl: {
+          padding: 'pr-12'
+        },
+        xxl: {
+          padding: 'pr-16'
+        },
+        'xs-xs': {
+          padding: 'pr-2'
+        },
+        'sm-sm': {
+          padding: 'pr-4'
+        },
+        'md-md': {
+          padding: 'pr-6'
+        },
+        'lg-lg': {
+          padding: 'pr-8'
+        },
+        'xl-xl': {
+          padding: 'pr-12'
+        },
+        'xxl-xxl': {
+          padding: 'pr-16'
+        }
       }
     },
-    x: {
-      none: {
-        padding: 'px-0'
-      },
-      xs: {
-        padding: 'px-2'
-      },
-      sm: {
-        padding: 'px-4'
-      },
-      md: {
-        padding: 'px-6'
-      },
-      lg: {
-        padding: 'px-8'
-      },
-      xl: {
-        padding: 'px-12'
-      },
-      xxl: {
-        padding: 'px-16'
-      },
-      'xs-xs': {
-        padding: 'px-2'
-      },
-      'sm-sm': {
-        padding: 'px-4'
-      },
-      'md-md': {
-        padding: 'px-6'
-      },
-      'lg-lg': {
-        padding: 'px-8'
-      },
-      'xl-xl': {
-        padding: 'px-12'
-      },
-      'xxl-xxl': {
-        padding: 'px-16'
-      },
-      'b-xs': {
-        padding: 'px-1.75'
-      },
-      'b-sm': {
-        padding: 'px-3.75'
-      },
-      'b-md': {
-        padding: 'px-5.75'
-      },
-      'b-lg': {
-        padding: 'px-7.75'
-      },
-      'b-xl': {
-        padding: 'px-11.75'
-      },
-      'b-xxl-': {
-        padding: 'px-15.75'
-      }
-    },
-    y: {
-      none: {
-        padding: 'py-0'
-      },
-      xs: {
-        padding: 'py-2'
-      },
-      sm: {
-        padding: 'py-4'
-      },
-      md: {
-        padding: 'py-6'
-      },
-      lg: {
-        padding: 'py-8'
-      },
-      xl: {
-        padding: 'py-12'
-      },
-      xxl: {
-        padding: 'py-16'
-      },
-      'xs-xs': {
-        padding: 'py-1'
-      },
-      'sm-sm': {
-        padding: 'py-2'
-      },
-      'md-md': {
-        padding: 'py-3'
-      },
-      'lg-lg': {
-        padding: 'py-4'
-      },
-      'xl-xl': {
-        padding: 'py-6'
-      },
-      'xxl-xxl': {
-        padding: 'py-8'
-      },
-      'b-xs-xs': {
-        padding: 'py-0.75'
-      },
-      'b-sm-sm': {
-        padding: 'py-1.75'
-      },
-      'b-md-md': {
-        padding: 'py-2.75'
-      },
-      'b-lg-lg': {
-        padding: 'py-3.75'
-      },
-      'b-xl-xl': {
-        padding: 'py-5.75'
-      },
-      'b-xxl-xxl': {
-        padding: 'py-7.75'
-      }
-    },
-    t: {
-      none: {
-        padding: 'pt-0'
-      },
-      xs: {
-        padding: 'pt-2'
-      },
-      sm: {
-        padding: 'pt-4'
-      },
-      md: {
-        padding: 'pt-6'
-      },
-      lg: {
-        padding: 'pt-8'
-      },
-      xl: {
-        padding: 'pt-12'
-      },
-      xxl: {
-        padding: 'pt-16'
-      },
-      'xs-xs': {
-        padding: 'pt-1'
-      },
-      'sm-sm': {
-        padding: 'pt-2'
-      },
-      'md-md': {
-        padding: 'pt-3'
-      },
-      'lg-lg': {
-        padding: 'pt-4'
-      },
-      'xl-xl': {
-        padding: 'pt-6'
-      },
-      'xxl-xxl': {
-        padding: 'pt-8'
-      },
-      'b-xs-xs': {
-        padding: 'pt-0.75'
-      },
-      'b-sm-sm': {
-        padding: 'pt-1.75'
-      },
-      'b-md-md': {
-        padding: 'pt-2.75'
-      },
-      'b-lg-lg': {
-        padding: 'pt-3.75'
-      },
-      'b-xl-xl': {
-        padding: 'pt-5.75'
-      },
-      'b-xxl-xxl': {
-        padding: 'pt-7.75'
-      }
-    },
-    b: {
-      none: {
-        padding: 'pb-0'
-      },
-      xs: {
-        padding: 'pb-2'
-      },
-      sm: {
-        padding: 'pb-4'
-      },
-      md: {
-        padding: 'pb-6'
-      },
-      lg: {
-        padding: 'pb-8'
-      },
-      xl: {
-        padding: 'pb-12'
-      },
-      xxl: {
-        padding: 'pb-16'
-      },
-      'xs-xs': {
-        padding: 'pb-1'
-      },
-      'sm-sm': {
-        padding: 'pb-2'
-      },
-      'md-md': {
-        padding: 'pb-3'
-      },
-      'lg-lg': {
-        padding: 'pb-4'
-      },
-      'xl-xl': {
-        padding: 'pb-6'
-      },
-      'xxl-xxl': {
-        padding: 'pb-8'
-      },
-      'b-xs-xs': {
-        padding: 'pb-0.75'
-      },
-      'b-sm-sm': {
-        padding: 'pb-1.75'
-      },
-      'b-md-md': {
-        padding: 'pb-2.75'
-      },
-      'b-lg-lg': {
-        padding: 'pb-3.75'
-      },
-      'b-xl-xl': {
-        padding: 'pb-5.75'
-      },
-      'b-xxl-xxl': {
-        padding: 'pb-7.75'
-      }
-    },
-    l: {
-      none: {
-        padding: 'pl-0'
-      },
-      xs: {
-        padding: 'pl-2'
-      },
-      sm: {
-        padding: 'pl-4'
-      },
-      md: {
-        padding: 'pl-6'
-      },
-      lg: {
-        padding: 'pl-8'
-      },
-      xl: {
-        padding: 'pl-12'
-      },
-      xxl: {
-        padding: 'pl-16'
-      },
-      'xs-xs': {
-        padding: 'pl-2'
-      },
-      'sm-sm': {
-        padding: 'pl-4'
-      },
-      'md-md': {
-        padding: 'pl-6'
-      },
-      'lg-lg': {
-        padding: 'pl-8'
-      },
-      'xl-xl': {
-        padding: 'pl-12'
-      },
-      'xxl-xxl': {
-        padding: 'pl-16'
-      },
-      'b-xs': {
-        padding: 'pl-1.75'
-      },
-      'b-sm': {
-        padding: 'pl-3.75'
-      },
-      'b-md': {
-        padding: 'pl-5.75'
-      },
-      'b-lg': {
-        padding: 'pl-7.75'
-      },
-      'b-xl': {
-        padding: 'pl-11.75'
-      },
-      'b-xxl-': {
-        padding: 'pl-15.75'
-      }
-    },
-    r: {
-      none: {
-        padding: 'pr-0'
-      },
-      xs: {
-        padding: 'pr-2'
-      },
-      sm: {
-        padding: 'pr-4'
-      },
-      md: {
-        padding: 'pr-6'
-      },
-      lg: {
-        padding: 'pr-8'
-      },
-      xl: {
-        padding: 'pr-12'
-      },
-      xxl: {
-        padding: 'pr-16'
-      },
-      'xs-xs': {
-        padding: 'pr-2'
-      },
-      'sm-sm': {
-        padding: 'pr-4'
-      },
-      'md-md': {
-        padding: 'pr-6'
-      },
-      'lg-lg': {
-        padding: 'pr-8'
-      },
-      'xl-xl': {
-        padding: 'pr-12'
-      },
-      'xxl-xxl': {
-        padding: 'pr-16'
-      },
-      'b-xs': {
-        padding: 'pr-1.75'
-      },
-      'b-sm': {
-        padding: 'pr-3.75'
-      },
-      'b-md': {
-        padding: 'pr-5.75'
-      },
-      'b-lg': {
-        padding: 'pr-7.75'
-      },
-      'b-xl': {
-        padding: 'pr-11.75'
-      },
-      'b-xxl-': {
-        padding: 'pr-15.75'
+    container: {
+      all: {
+        xs: {
+          padding: 'p-2'
+        },
+        sm: {
+          padding: 'p-4'
+        },
+        md: {
+          padding: 'p-6'
+        },
+        lg: {
+          padding: 'p-8'
+        },
+        xl: {
+          padding: 'p-12'
+        },
+        xxl: {
+          padding: 'p-16'
+        },
+        'xs-xs': {
+          padding: 'px-2 py-1'
+        },
+        'sm-sm': {
+          padding: 'px-4 py-2'
+        },
+        'md-md': {
+          padding: 'px-6 py-3'
+        },
+        'lg-lg': {
+          padding: 'px-8 py-4'
+        },
+        'xl-xl': {
+          padding: 'px-12 py-6'
+        },
+        'xxl-xxl': {
+          padding: 'px-16 py-8'
+        }
+      },
+      x: {
+        none: {
+          padding: 'px-0'
+        },
+        xs: {
+          padding: 'px-2'
+        },
+        sm: {
+          padding: 'px-4'
+        },
+        md: {
+          padding: 'px-6'
+        },
+        lg: {
+          padding: 'px-8'
+        },
+        xl: {
+          padding: 'px-12'
+        },
+        xxl: {
+          padding: 'px-16'
+        },
+        'xs-xs': {
+          padding: 'px-1.75'
+        },
+        'sm-sm': {
+          padding: 'px-3.75'
+        },
+        'md-md': {
+          padding: 'px-5.75'
+        },
+        'lg-lg': {
+          padding: 'px-7.75'
+        },
+        'xl-xl': {
+          padding: 'px-11.75'
+        },
+        'xxl-xxl': {
+          padding: 'px-15.75'
+        }
+      },
+      y: {
+        none: {
+          padding: 'py-0'
+        },
+        xs: {
+          padding: 'py-1'
+        },
+        sm: {
+          padding: 'py-2'
+        },
+        md: {
+          padding: 'py-3'
+        },
+        lg: {
+          padding: 'py-4'
+        },
+        xl: {
+          padding: 'py-6'
+        },
+        xxl: {
+          padding: 'py-8'
+        },
+        'xs-xs': {
+          padding: 'py-0.75'
+        },
+        'sm-sm': {
+          padding: 'py-1.75'
+        },
+        'md-md': {
+          padding: 'py-2.75'
+        },
+        'lg-lg': {
+          padding: 'py-3.75'
+        },
+        'xl-xl': {
+          padding: 'py-5.75'
+        },
+        'xxl-xxl': {
+          padding: 'py-7.75'
+        }
+      },
+      t: {
+        none: {
+          padding: 'pt-0'
+        },
+        xs: {
+          padding: 'pt-1'
+        },
+        sm: {
+          padding: 'pt-2'
+        },
+        md: {
+          padding: 'pt-3'
+        },
+        lg: {
+          padding: 'pt-4'
+        },
+        xl: {
+          padding: 'pt-6'
+        },
+        xxl: {
+          padding: 'pt-8'
+        },
+        'xs-xs': {
+          padding: 'pt-0.75'
+        },
+        'sm-sm': {
+          padding: 'pt-1.75'
+        },
+        'md-md': {
+          padding: 'pt-2.75'
+        },
+        'lg-lg': {
+          padding: 'pt-3.75'
+        },
+        'xl-xl': {
+          padding: 'pt-5.75'
+        },
+        'xxl-xxl': {
+          padding: 'pt-7.75'
+        }
+      },
+      b: {
+        none: {
+          padding: 'pb-0'
+        },
+        xs: {
+          padding: 'pb-1'
+        },
+        sm: {
+          padding: 'pb-2'
+        },
+        md: {
+          padding: 'pb-3'
+        },
+        lg: {
+          padding: 'pb-4'
+        },
+        xl: {
+          padding: 'pb-6'
+        },
+        xxl: {
+          padding: 'pb-8'
+        },
+        'xs-xs': {
+          padding: 'pb-0.75'
+        },
+        'sm-sm': {
+          padding: 'pb-1.75'
+        },
+        'md-md': {
+          padding: 'pb-2.75'
+        },
+        'lg-lg': {
+          padding: 'pb-3.75'
+        },
+        'xl-xl': {
+          padding: 'pb-5.75'
+        },
+        'xxl-xxl': {
+          padding: 'pb-7.75'
+        }
+      },
+      l: {
+        none: {
+          padding: 'pl-0'
+        },
+        xs: {
+          padding: 'pl-2'
+        },
+        sm: {
+          padding: 'pl-4'
+        },
+        md: {
+          padding: 'pl-6'
+        },
+        lg: {
+          padding: 'pl-8'
+        },
+        xl: {
+          padding: 'pl-12'
+        },
+        xxl: {
+          padding: 'pl-16'
+        },
+        'xs-xs': {
+          padding: 'pl-1.75'
+        },
+        'sm-sm': {
+          padding: 'pl-3.75'
+        },
+        'md-md': {
+          padding: 'pl-5.75'
+        },
+        'lg-lg': {
+          padding: 'pl-7.75'
+        },
+        'xl-xl': {
+          padding: 'pl-11.75'
+        },
+        'xxl-xxl': {
+          padding: 'pl-15.75'
+        }
+      },
+      r: {
+        none: {
+          padding: 'pr-0'
+        },
+        xs: {
+          padding: 'pr-2'
+        },
+        sm: {
+          padding: 'pr-4'
+        },
+        md: {
+          padding: 'pr-6'
+        },
+        lg: {
+          padding: 'pr-8'
+        },
+        xl: {
+          padding: 'pr-12'
+        },
+        xxl: {
+          padding: 'pr-16'
+        },
+        'xs-xs': {
+          padding: 'pr-1.75'
+        },
+        'sm-sm': {
+          padding: 'pr-3.75'
+        },
+        'md-md': {
+          padding: 'pr-5.75'
+        },
+        'lg-lg': {
+          padding: 'pr-7.75'
+        },
+        'xl-xl': {
+          padding: 'pr-11.75'
+        },
+        'xxl-xxl': {
+          padding: 'pr-15.75'
+        }
       }
     }
   },
