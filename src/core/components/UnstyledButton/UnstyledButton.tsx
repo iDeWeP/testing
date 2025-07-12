@@ -27,6 +27,7 @@ export const UnstyledButton = <E extends ElementType>(
     children,
     variant,
     size,
+    border,
     color,
     ...restProps
   } = mergeProps(unstyledButtonConfig.props, props);
@@ -80,8 +81,9 @@ export const UnstyledButton = <E extends ElementType>(
     <UnstyledContainer
       disabled={disabled || !!loading}
       type="button"
-      variant={variant}
+      variant={checked === undefined ? variant : 'light'}
       size={size}
+      border={checked === undefined ? border : 'set'}
       color={checked === undefined ? color : 'surface'}
       className={mergedClassName}
       {...setAria('button', { element: Component })}
