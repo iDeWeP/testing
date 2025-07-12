@@ -1,7 +1,7 @@
-import type { CSSProps, Theme } from '../types';
+import type { CSSProps, Scale, Theme } from '../types';
 
 type Styles = Record<string, CSSProps>;
-type PaddingType = 'normal' | 'container';
+type SpacingScale = 'default' | Scale;
 type SpacingType = 'all' | 'x' | 'y' | 't' | 'b' | 'l' | 'r';
 type RadiusType = 'all' | 't' | 'b' | 'l' | 'r' | 'tl' | 'tr' | 'bl' | 'br';
 type GapType = 'all' | 'x' | 'y';
@@ -20,7 +20,7 @@ type SystemStyles = {
     font: Styles;
     title: Styles;
   };
-  padding: Record<PaddingType, Record<SpacingType, Styles>>;
+  padding: Record<SpacingScale, Record<SpacingType, Styles>>;
   margin: Record<SpacingType, Styles>;
   border: Record<BorderType, Styles>;
   radius: Record<RadiusType, Styles>;
@@ -89,48 +89,48 @@ export const systemStyles: SystemStyles = {
     text: {
       normal: {
         xs: {
-          height: 'h-3'
-        },
-        sm: {
           height: 'h-4'
         },
-        md: {
+        sm: {
           height: 'h-5'
         },
-        lg: {
+        md: {
           height: 'h-6'
         },
-        xl: {
+        lg: {
           height: 'h-7'
         },
-        xxl: {
+        xl: {
           height: 'h-8'
+        },
+        xxl: {
+          height: 'h-9'
         }
       },
       square: {
         xs: {
-          width: 'w-3',
-          height: 'h-3'
-        },
-        sm: {
           width: 'w-4',
           height: 'h-4'
         },
-        md: {
+        sm: {
           width: 'w-5',
           height: 'h-5'
         },
-        lg: {
+        md: {
           width: 'w-6',
           height: 'h-6'
         },
-        xl: {
+        lg: {
           width: 'w-7',
           height: 'h-7'
         },
-        xxl: {
+        xl: {
           width: 'w-8',
           height: 'h-8'
+        },
+        xxl: {
+          width: 'w-9',
+          height: 'h-9'
         }
       }
     },
@@ -176,7 +176,7 @@ export const systemStyles: SystemStyles = {
     }
   },
   padding: {
-    normal: {
+    default: {
       all: {
         none: {
           padding: 'p-0'
@@ -465,49 +465,46 @@ export const systemStyles: SystemStyles = {
         }
       }
     },
-    container: {
+    normal: {
       all: {
         xs: {
-          padding: 'p-2'
-        },
-        sm: {
-          padding: 'p-4'
-        },
-        md: {
-          padding: 'p-6'
-        },
-        lg: {
-          padding: 'p-8'
-        },
-        xl: {
-          padding: 'p-12'
-        },
-        xxl: {
-          padding: 'p-16'
-        },
-        'xs-xs': {
           padding: 'px-2 py-1'
         },
-        'sm-sm': {
+        sm: {
           padding: 'px-4 py-2'
         },
-        'md-md': {
+        md: {
+          padding: 'px-5 py-2.5'
+        },
+        lg: {
           padding: 'px-6 py-3'
         },
+        xl: {
+          padding: 'px-9 py-4.5'
+        },
+        xxl: {
+          padding: 'p-12 py-6'
+        },
+        'xs-xs': {
+          padding: 'px-1.75 py-0.75'
+        },
+        'sm-sm': {
+          padding: 'px-3.75 py-1.75'
+        },
+        'md-md': {
+          padding: 'px-4.75 py-2.25'
+        },
         'lg-lg': {
-          padding: 'px-8 py-4'
+          padding: 'px-5.75 py-2.75'
         },
         'xl-xl': {
-          padding: 'px-12 py-6'
+          padding: 'px-8.75 py-4.25'
         },
         'xxl-xxl': {
-          padding: 'px-16 py-8'
+          padding: 'px-11.75 py-5.75'
         }
       },
       x: {
-        none: {
-          padding: 'px-0'
-        },
         xs: {
           padding: 'px-2'
         },
@@ -515,16 +512,16 @@ export const systemStyles: SystemStyles = {
           padding: 'px-4'
         },
         md: {
-          padding: 'px-6'
+          padding: 'px-5'
         },
         lg: {
-          padding: 'px-8'
+          padding: 'px-6'
         },
         xl: {
-          padding: 'px-12'
+          padding: 'px-9'
         },
         xxl: {
-          padding: 'px-16'
+          padding: 'px-12'
         },
         'xs-xs': {
           padding: 'px-1.75'
@@ -533,22 +530,19 @@ export const systemStyles: SystemStyles = {
           padding: 'px-3.75'
         },
         'md-md': {
-          padding: 'px-5.75'
+          padding: 'px-4.75'
         },
         'lg-lg': {
-          padding: 'px-7.75'
+          padding: 'px-5.75'
         },
         'xl-xl': {
-          padding: 'px-11.75'
+          padding: 'px-8.75'
         },
         'xxl-xxl': {
-          padding: 'px-15.75'
+          padding: 'px-11.75'
         }
       },
       y: {
-        none: {
-          padding: 'py-0'
-        },
         xs: {
           padding: 'py-1'
         },
@@ -556,16 +550,16 @@ export const systemStyles: SystemStyles = {
           padding: 'py-2'
         },
         md: {
-          padding: 'py-3'
+          padding: 'py-2.5'
         },
         lg: {
-          padding: 'py-4'
+          padding: 'py-3'
         },
         xl: {
-          padding: 'py-6'
+          padding: 'py-4.5'
         },
         xxl: {
-          padding: 'py-8'
+          padding: 'py-6'
         },
         'xs-xs': {
           padding: 'py-0.75'
@@ -574,22 +568,19 @@ export const systemStyles: SystemStyles = {
           padding: 'py-1.75'
         },
         'md-md': {
-          padding: 'py-2.75'
+          padding: 'py-2.25'
         },
         'lg-lg': {
-          padding: 'py-3.75'
+          padding: 'py-2.75'
         },
         'xl-xl': {
-          padding: 'py-5.75'
+          padding: 'py-4.25'
         },
         'xxl-xxl': {
-          padding: 'py-7.75'
+          padding: 'py-5.75'
         }
       },
       t: {
-        none: {
-          padding: 'pt-0'
-        },
         xs: {
           padding: 'pt-1'
         },
@@ -597,16 +588,16 @@ export const systemStyles: SystemStyles = {
           padding: 'pt-2'
         },
         md: {
-          padding: 'pt-3'
+          padding: 'pt-2.5'
         },
         lg: {
-          padding: 'pt-4'
+          padding: 'pt-3'
         },
         xl: {
-          padding: 'pt-6'
+          padding: 'pt-4.5'
         },
         xxl: {
-          padding: 'pt-8'
+          padding: 'pt-6'
         },
         'xs-xs': {
           padding: 'pt-0.75'
@@ -615,22 +606,19 @@ export const systemStyles: SystemStyles = {
           padding: 'pt-1.75'
         },
         'md-md': {
-          padding: 'pt-2.75'
+          padding: 'pt-2.25'
         },
         'lg-lg': {
-          padding: 'pt-3.75'
+          padding: 'pt-2.75'
         },
         'xl-xl': {
-          padding: 'pt-5.75'
+          padding: 'pt-4.25'
         },
         'xxl-xxl': {
-          padding: 'pt-7.75'
+          padding: 'pt-5.75'
         }
       },
       b: {
-        none: {
-          padding: 'pb-0'
-        },
         xs: {
           padding: 'pb-1'
         },
@@ -638,16 +626,16 @@ export const systemStyles: SystemStyles = {
           padding: 'pb-2'
         },
         md: {
-          padding: 'pb-3'
+          padding: 'pb-2.5'
         },
         lg: {
-          padding: 'pb-4'
+          padding: 'pb-3'
         },
         xl: {
-          padding: 'pb-6'
+          padding: 'pb-4.5'
         },
         xxl: {
-          padding: 'pb-8'
+          padding: 'pb-6'
         },
         'xs-xs': {
           padding: 'pb-0.75'
@@ -656,22 +644,19 @@ export const systemStyles: SystemStyles = {
           padding: 'pb-1.75'
         },
         'md-md': {
-          padding: 'pb-2.75'
+          padding: 'pb-2.25'
         },
         'lg-lg': {
-          padding: 'pb-3.75'
+          padding: 'pb-2.75'
         },
         'xl-xl': {
-          padding: 'pb-5.75'
+          padding: 'pb-4.25'
         },
         'xxl-xxl': {
-          padding: 'pb-7.75'
+          padding: 'pb-5.75'
         }
       },
       l: {
-        none: {
-          padding: 'pl-0'
-        },
         xs: {
           padding: 'pl-2'
         },
@@ -679,16 +664,16 @@ export const systemStyles: SystemStyles = {
           padding: 'pl-4'
         },
         md: {
-          padding: 'pl-6'
+          padding: 'pl-5'
         },
         lg: {
-          padding: 'pl-8'
+          padding: 'pl-6'
         },
         xl: {
-          padding: 'pl-12'
+          padding: 'pl-9'
         },
         xxl: {
-          padding: 'pl-16'
+          padding: 'pl-12'
         },
         'xs-xs': {
           padding: 'pl-1.75'
@@ -697,22 +682,19 @@ export const systemStyles: SystemStyles = {
           padding: 'pl-3.75'
         },
         'md-md': {
-          padding: 'pl-5.75'
+          padding: 'pl-4.75'
         },
         'lg-lg': {
-          padding: 'pl-7.75'
+          padding: 'pl-5.75'
         },
         'xl-xl': {
-          padding: 'pl-11.75'
+          padding: 'pl-8.75'
         },
         'xxl-xxl': {
-          padding: 'pl-15.75'
+          padding: 'pl-11.75'
         }
       },
       r: {
-        none: {
-          padding: 'pr-0'
-        },
         xs: {
           padding: 'pr-2'
         },
@@ -720,16 +702,16 @@ export const systemStyles: SystemStyles = {
           padding: 'pr-4'
         },
         md: {
-          padding: 'pr-6'
+          padding: 'pr-5'
         },
         lg: {
-          padding: 'pr-8'
+          padding: 'pr-6'
         },
         xl: {
-          padding: 'pr-12'
+          padding: 'pr-9'
         },
         xxl: {
-          padding: 'pr-16'
+          padding: 'pr-12'
         },
         'xs-xs': {
           padding: 'pr-1.75'
@@ -738,16 +720,552 @@ export const systemStyles: SystemStyles = {
           padding: 'pr-3.75'
         },
         'md-md': {
-          padding: 'pr-5.75'
+          padding: 'pr-4.75'
         },
         'lg-lg': {
-          padding: 'pr-7.75'
+          padding: 'pr-5.75'
         },
         'xl-xl': {
-          padding: 'pr-11.75'
+          padding: 'pr-8.75'
         },
         'xxl-xxl': {
-          padding: 'pr-15.75'
+          padding: 'pr-11.75'
+        }
+      }
+    },
+    square: {
+      all: {
+        xs: {
+          padding: 'p-1'
+        },
+        sm: {
+          padding: 'p-2'
+        },
+        md: {
+          padding: 'p-2.5'
+        },
+        lg: {
+          padding: 'p-3'
+        },
+        xl: {
+          padding: 'p-4.5'
+        },
+        xxl: {
+          padding: 'p-6'
+        },
+        'xs-xs': {
+          padding: 'p-0.75'
+        },
+        'sm-sm': {
+          padding: 'p-1.75'
+        },
+        'md-md': {
+          padding: 'p-2.25'
+        },
+        'lg-lg': {
+          padding: 'p-2.75'
+        },
+        'xl-xl': {
+          padding: 'p-4.25'
+        },
+        'xxl-xxl': {
+          padding: 'p-5.75'
+        }
+      },
+      x: {
+        xs: {
+          padding: 'px-1'
+        },
+        sm: {
+          padding: 'px-2'
+        },
+        md: {
+          padding: 'px-2.5'
+        },
+        lg: {
+          padding: 'px-3'
+        },
+        xl: {
+          padding: 'px-4.5'
+        },
+        xxl: {
+          padding: 'px-6'
+        },
+        'xs-xs': {
+          padding: 'px-0.75'
+        },
+        'sm-sm': {
+          padding: 'px-1.75'
+        },
+        'md-md': {
+          padding: 'px-2.25'
+        },
+        'lg-lg': {
+          padding: 'px-2.75'
+        },
+        'xl-xl': {
+          padding: 'px-4.25'
+        },
+        'xxl-xxl': {
+          padding: 'px-5.75'
+        }
+      },
+      y: {
+        xs: {
+          padding: 'py-1'
+        },
+        sm: {
+          padding: 'py-2'
+        },
+        md: {
+          padding: 'py-2.5'
+        },
+        lg: {
+          padding: 'py-3'
+        },
+        xl: {
+          padding: 'py-4.5'
+        },
+        xxl: {
+          padding: 'py-6'
+        },
+        'xs-xs': {
+          padding: 'py-0.75'
+        },
+        'sm-sm': {
+          padding: 'py-1.75'
+        },
+        'md-md': {
+          padding: 'py-2.25'
+        },
+        'lg-lg': {
+          padding: 'py-2.75'
+        },
+        'xl-xl': {
+          padding: 'py-4.25'
+        },
+        'xxl-xxl': {
+          padding: 'py-5.75'
+        }
+      },
+      t: {
+        xs: {
+          padding: 'pt-1'
+        },
+        sm: {
+          padding: 'pt-2'
+        },
+        md: {
+          padding: 'pt-2.5'
+        },
+        lg: {
+          padding: 'pt-3'
+        },
+        xl: {
+          padding: 'pt-4.5'
+        },
+        xxl: {
+          padding: 'pt-6'
+        },
+        'xs-xs': {
+          padding: 'pt-0.75'
+        },
+        'sm-sm': {
+          padding: 'pt-1.75'
+        },
+        'md-md': {
+          padding: 'pt-2.25'
+        },
+        'lg-lg': {
+          padding: 'pt-2.75'
+        },
+        'xl-xl': {
+          padding: 'pt-4.25'
+        },
+        'xxl-xxl': {
+          padding: 'pt-5.75'
+        }
+      },
+      b: {
+        xs: {
+          padding: 'pb-1'
+        },
+        sm: {
+          padding: 'pb-2'
+        },
+        md: {
+          padding: 'pb-2.5'
+        },
+        lg: {
+          padding: 'pb-3'
+        },
+        xl: {
+          padding: 'pb-4.5'
+        },
+        xxl: {
+          padding: 'pb-6'
+        },
+        'xs-xs': {
+          padding: 'pb-0.75'
+        },
+        'sm-sm': {
+          padding: 'pb-1.75'
+        },
+        'md-md': {
+          padding: 'pb-2.25'
+        },
+        'lg-lg': {
+          padding: 'pb-2.75'
+        },
+        'xl-xl': {
+          padding: 'pb-4.25'
+        },
+        'xxl-xxl': {
+          padding: 'pb-5.75'
+        }
+      },
+      l: {
+        xs: {
+          padding: 'pl-1'
+        },
+        sm: {
+          padding: 'pl-2'
+        },
+        md: {
+          padding: 'pl-2.5'
+        },
+        lg: {
+          padding: 'pl-3'
+        },
+        xl: {
+          padding: 'pl-4.5'
+        },
+        xxl: {
+          padding: 'pl-6'
+        },
+        'xs-xs': {
+          padding: 'pl-0.75'
+        },
+        'sm-sm': {
+          padding: 'pl-1.75'
+        },
+        'md-md': {
+          padding: 'pl-2.25'
+        },
+        'lg-lg': {
+          padding: 'pl-2.75'
+        },
+        'xl-xl': {
+          padding: 'pl-4.25'
+        },
+        'xxl-xxl': {
+          padding: 'pl-5.75'
+        }
+      },
+      r: {
+        xs: {
+          padding: 'pr-1'
+        },
+        sm: {
+          padding: 'pr-2'
+        },
+        md: {
+          padding: 'pr-2.5'
+        },
+        lg: {
+          padding: 'pr-3'
+        },
+        xl: {
+          padding: 'pr-4.5'
+        },
+        xxl: {
+          padding: 'pr-6'
+        },
+        'xs-xs': {
+          padding: 'pr-0.75'
+        },
+        'sm-sm': {
+          padding: 'pr-1.75'
+        },
+        'md-md': {
+          padding: 'pr-2.25'
+        },
+        'lg-lg': {
+          padding: 'pr-2.75'
+        },
+        'xl-xl': {
+          padding: 'pr-4.25'
+        },
+        'xxl-xxl': {
+          padding: 'pr-5.75'
+        }
+      }
+    },
+    text: {
+      all: {
+        xs: {
+          padding: 'px-1 py-0.5'
+        },
+        sm: {
+          padding: 'px-2 py-0.5'
+        },
+        md: {
+          padding: 'px-3 py-0.5'
+        },
+        lg: {
+          padding: 'px-4 py-0.5'
+        },
+        xl: {
+          padding: 'px-5 py-0.5'
+        },
+        xxl: {
+          padding: 'p-6 py-0.5'
+        },
+        'xs-xs': {
+          padding: 'px-0.75 py-0.25'
+        },
+        'sm-sm': {
+          padding: 'px-1.75 py-0.25'
+        },
+        'md-md': {
+          padding: 'px-2.75 py-0.25'
+        },
+        'lg-lg': {
+          padding: 'px-3.75 py-0.25'
+        },
+        'xl-xl': {
+          padding: 'px-4.75 py-0.25'
+        },
+        'xxl-xxl': {
+          padding: 'px-5.75 py-0.25'
+        }
+      },
+      x: {
+        xs: {
+          padding: 'px-1'
+        },
+        sm: {
+          padding: 'px-2'
+        },
+        md: {
+          padding: 'px-3'
+        },
+        lg: {
+          padding: 'px-4'
+        },
+        xl: {
+          padding: 'px-5'
+        },
+        xxl: {
+          padding: 'px-6'
+        },
+        'xs-xs': {
+          padding: 'px-0.75'
+        },
+        'sm-sm': {
+          padding: 'px-1.75'
+        },
+        'md-md': {
+          padding: 'px-2.75'
+        },
+        'lg-lg': {
+          padding: 'px-3.75'
+        },
+        'xl-xl': {
+          padding: 'px-4.75'
+        },
+        'xxl-xxl': {
+          padding: 'px-5.75'
+        }
+      },
+      y: {
+        xs: {
+          padding: 'py-0.5'
+        },
+        sm: {
+          padding: 'py-0.5'
+        },
+        md: {
+          padding: 'py-0.5'
+        },
+        lg: {
+          padding: 'py-0.5'
+        },
+        xl: {
+          padding: 'py-0.5'
+        },
+        xxl: {
+          padding: 'py-0.5'
+        },
+        'xs-xs': {
+          padding: 'py-0.25'
+        },
+        'sm-sm': {
+          padding: 'py-0.25'
+        },
+        'md-md': {
+          padding: 'py-0.25'
+        },
+        'lg-lg': {
+          padding: 'py-0.25'
+        },
+        'xl-xl': {
+          padding: 'py-0.25'
+        },
+        'xxl-xxl': {
+          padding: 'py-0.25'
+        }
+      },
+      t: {
+        xs: {
+          padding: 'pt-0.5'
+        },
+        sm: {
+          padding: 'pt-0.5'
+        },
+        md: {
+          padding: 'pt-0.5'
+        },
+        lg: {
+          padding: 'pt-0.5'
+        },
+        xl: {
+          padding: 'pt-0.5'
+        },
+        xxl: {
+          padding: 'pt-0.5'
+        },
+        'xs-xs': {
+          padding: 'pt-0.25'
+        },
+        'sm-sm': {
+          padding: 'pt-0.25'
+        },
+        'md-md': {
+          padding: 'pt-0.25'
+        },
+        'lg-lg': {
+          padding: 'pt-0.25'
+        },
+        'xl-xl': {
+          padding: 'pt-0.25'
+        },
+        'xxl-xxl': {
+          padding: 'pt-0.25'
+        }
+      },
+      b: {
+        xs: {
+          padding: 'pb-0.5'
+        },
+        sm: {
+          padding: 'pb-0.5'
+        },
+        md: {
+          padding: 'pb-0.5'
+        },
+        lg: {
+          padding: 'pb-0.5'
+        },
+        xl: {
+          padding: 'pb-0.5'
+        },
+        xxl: {
+          padding: 'pb-0.5'
+        },
+        'xs-xs': {
+          padding: 'pb-0.25'
+        },
+        'sm-sm': {
+          padding: 'pb-0.25'
+        },
+        'md-md': {
+          padding: 'pb-0.25'
+        },
+        'lg-lg': {
+          padding: 'pb-0.25'
+        },
+        'xl-xl': {
+          padding: 'pb-0.25'
+        },
+        'xxl-xxl': {
+          padding: 'pb-0.25'
+        }
+      },
+      l: {
+        xs: {
+          padding: 'pl-1'
+        },
+        sm: {
+          padding: 'pl-2'
+        },
+        md: {
+          padding: 'pl-3'
+        },
+        lg: {
+          padding: 'pl-4'
+        },
+        xl: {
+          padding: 'pl-5'
+        },
+        xxl: {
+          padding: 'pl-6'
+        },
+        'xs-xs': {
+          padding: 'pl-0.75'
+        },
+        'sm-sm': {
+          padding: 'pl-1.75'
+        },
+        'md-md': {
+          padding: 'pl-2.75'
+        },
+        'lg-lg': {
+          padding: 'pl-3.75'
+        },
+        'xl-xl': {
+          padding: 'pl-4.75'
+        },
+        'xxl-xxl': {
+          padding: 'pl-5.75'
+        }
+      },
+      r: {
+        xs: {
+          padding: 'pr-1'
+        },
+        sm: {
+          padding: 'pr-2'
+        },
+        md: {
+          padding: 'pr-3'
+        },
+        lg: {
+          padding: 'pr-4'
+        },
+        xl: {
+          padding: 'pr-5'
+        },
+        xxl: {
+          padding: 'pr-6'
+        },
+        'xs-xs': {
+          padding: 'pr-0.75'
+        },
+        'sm-sm': {
+          padding: 'pr-1.75'
+        },
+        'md-md': {
+          padding: 'pr-2.75'
+        },
+        'lg-lg': {
+          padding: 'pr-3.75'
+        },
+        'xl-xl': {
+          padding: 'pr-4.75'
+        },
+        'xxl-xxl': {
+          padding: 'pr-5.75'
         }
       }
     }
@@ -774,6 +1292,24 @@ export const systemStyles: SystemStyles = {
       },
       xxl: {
         margin: 'm-16'
+      },
+      'xs-xs': {
+        margin: 'm-1'
+      },
+      'sm-sm': {
+        margin: 'm-2'
+      },
+      'md-md': {
+        margin: 'm-3'
+      },
+      'lg-lg': {
+        margin: 'm-4'
+      },
+      'xl-xl': {
+        margin: 'm-6'
+      },
+      'xxl-xxl': {
+        margin: 'm-8'
       }
     },
     x: {
@@ -797,6 +1333,24 @@ export const systemStyles: SystemStyles = {
       },
       xxl: {
         margin: 'mx-16'
+      },
+      'xs-xs': {
+        margin: 'mx-1'
+      },
+      'sm-sm': {
+        margin: 'mx-2'
+      },
+      'md-md': {
+        margin: 'mx-3'
+      },
+      'lg-lg': {
+        margin: 'mx-4'
+      },
+      'xl-xl': {
+        margin: 'mx-6'
+      },
+      'xxl-xxl': {
+        margin: 'mx-8'
       }
     },
     y: {
@@ -820,6 +1374,24 @@ export const systemStyles: SystemStyles = {
       },
       xxl: {
         margin: 'my-16'
+      },
+      'xs-xs': {
+        margin: 'my-1'
+      },
+      'sm-sm': {
+        margin: 'my-2'
+      },
+      'md-md': {
+        margin: 'my-3'
+      },
+      'lg-lg': {
+        margin: 'my-4'
+      },
+      'xl-xl': {
+        margin: 'my-6'
+      },
+      'xxl-xxl': {
+        margin: 'my-8'
       }
     },
     t: {
@@ -843,6 +1415,24 @@ export const systemStyles: SystemStyles = {
       },
       xxl: {
         margin: 'mt-16'
+      },
+      'xs-xs': {
+        margin: 'mt-1'
+      },
+      'sm-sm': {
+        margin: 'mt-2'
+      },
+      'md-md': {
+        margin: 'mt-3'
+      },
+      'lg-lg': {
+        margin: 'mt-4'
+      },
+      'xl-xl': {
+        margin: 'mt-6'
+      },
+      'xxl-xxl': {
+        margin: 'mt-8'
       }
     },
     b: {
@@ -866,6 +1456,24 @@ export const systemStyles: SystemStyles = {
       },
       xxl: {
         margin: 'mb-16'
+      },
+      'xs-xs': {
+        margin: 'mb-1'
+      },
+      'sm-sm': {
+        margin: 'mb-2'
+      },
+      'md-md': {
+        margin: 'mb-3'
+      },
+      'lg-lg': {
+        margin: 'mb-4'
+      },
+      'xl-xl': {
+        margin: 'mb-6'
+      },
+      'xxl-xxl': {
+        margin: 'mb-8'
       }
     },
     l: {
@@ -889,6 +1497,24 @@ export const systemStyles: SystemStyles = {
       },
       xxl: {
         margin: 'ml-16'
+      },
+      'xs-xs': {
+        margin: 'ml-1'
+      },
+      'sm-sm': {
+        margin: 'ml-2'
+      },
+      'md-md': {
+        margin: 'ml-3'
+      },
+      'lg-lg': {
+        margin: 'ml-4'
+      },
+      'xl-xl': {
+        margin: 'ml-6'
+      },
+      'xxl-xxl': {
+        margin: 'ml-8'
       }
     },
     r: {
@@ -912,6 +1538,24 @@ export const systemStyles: SystemStyles = {
       },
       xxl: {
         margin: 'mr-16'
+      },
+      'xs-xs': {
+        margin: 'mr-1'
+      },
+      'sm-sm': {
+        margin: 'mr-2'
+      },
+      'md-md': {
+        margin: 'mr-3'
+      },
+      'lg-lg': {
+        margin: 'mr-4'
+      },
+      'xl-xl': {
+        margin: 'mr-6'
+      },
+      'xxl-xxl': {
+        margin: 'mr-8'
       }
     }
   },
