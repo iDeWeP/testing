@@ -40,7 +40,6 @@ export const unstyledPopperConfig: ComponentConfig<UnstyledPopperConfigProps> &
     backdrop: false,
     variant: 'solid',
     orientation: 'row',
-    size: 'unset',
     padding: 'unset',
     px: 'unset',
     py: 'unset',
@@ -75,7 +74,6 @@ export const unstyledPopperConfig: ComponentConfig<UnstyledPopperConfigProps> &
     root: {
       default: {
         position: 'absolute',
-        transition: 'transition-opacity',
         transitionTimingFunction: 'easy-in-out',
         focus: 'focus:outline-none'
       }
