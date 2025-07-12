@@ -6,9 +6,6 @@ export const DefaultExample = () => (
   <ExampleSection title="Default">
     <ExampleCard>
       <Example
-        as="textarea"
-        variant="outlined"
-        size="lg"
         leftDecorator="left"
         rightDecorator="right"
         label="label"
