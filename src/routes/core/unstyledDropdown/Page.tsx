@@ -12,6 +12,7 @@ import { FontExample } from './FontExample';
 import { GapExample } from './GapExample';
 import { GapXExample } from './GapXExample';
 import { GapYExample } from './GapYExample';
+import { OrientationExample } from './OrientationExample';
 import { PaddingBExample } from './PaddingBExample';
 import { PaddingExample } from './PaddingExample';
 import { PaddingLExample } from './PaddingLExample';
@@ -36,6 +37,7 @@ const Page = () => (
     <ExampleTitle>UnstyledDropdown</ExampleTitle>
     <DefaultExample />
     <VariantExample />
+    <OrientationExample />
     <PaddingExample />
     <PaddingXExample />
     <PaddingYExample />
