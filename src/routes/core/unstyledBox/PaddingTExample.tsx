@@ -14,5 +14,15 @@ export const PaddingTExample = () => (
       <Example pt="xl">XL</Example>
       <Example pt="xxl">XXL</Example>
     </ExampleCard>
+    <ExampleCard>
+      <Example pt="unset">UNSET</Example>
+      <Example pt="none">NONE</Example>
+      <Example pt="xs-xs">XS-XS</Example>
+      <Example pt="sm-sm">SM-SM</Example>
+      <Example pt="md-md">MD-MD</Example>
+      <Example pt="lg-lg">LG-LG</Example>
+      <Example pt="xl-xl">XL-XL</Example>
+      <Example pt="xxl-xxl">XXL-XXL</Example>
+    </ExampleCard>
   </ExampleSection>
 );

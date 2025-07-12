@@ -14,5 +14,15 @@ export const PaddingXExample = () => (
       <Example px="xl">XL</Example>
       <Example px="xxl">XXL</Example>
     </ExampleCard>
+    <ExampleCard>
+      <Example px="unset">UNSET</Example>
+      <Example px="none">NONE</Example>
+      <Example px="xs-xs">XS-XS</Example>
+      <Example px="sm-sm">SM-SM</Example>
+      <Example px="md-md">MD-MD</Example>
+      <Example px="lg-lg">LG-LG</Example>
+      <Example px="xl-xl">XL-XL</Example>
+      <Example px="xxl-xxl">XXL-XXL</Example>
+    </ExampleCard>
   </ExampleSection>
 );
