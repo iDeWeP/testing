@@ -11,8 +11,8 @@ export const styleUnstyledSpinner = (
     disabled = false,
     spin = true,
     float = false,
-    defaultSize = 'md',
-    scale = 'normal',
+    size = 'md',
+    defaultScale = 'normal',
     margin = 'unset',
     mx = 'unset',
     my = 'unset',
@@ -25,8 +25,8 @@ export const styleUnstyledSpinner = (
   mergeClasses(
     unstyledSpinnerConfig.styles.root.default,
     float && sharedStyles.position.absolute,
-    float && unstyledSpinnerConfig.styles.root.float[scale][defaultSize],
-    systemStyles.size[scale].square[defaultSize],
+    float && unstyledSpinnerConfig.styles.root.float[defaultScale][size],
+    systemStyles.size[defaultScale].square[size],
     systemStyles.margin.all[margin],
     systemStyles.margin.x[mx],
     systemStyles.margin.y[my],
@@ -35,6 +35,6 @@ export const styleUnstyledSpinner = (
     systemStyles.margin.l[ml],
     systemStyles.margin.r[mr],
     unstyledSpinnerConfig.styles.root[getSpinnerTransition(spin, disabled)],
-    disabled && sharedStyles.focusable.disabled,
+    disabled && sharedStyles.cursor.disabled,
     className
   );
