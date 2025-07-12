@@ -25,6 +25,7 @@ import { RadiusRExample } from './RadiusRExample';
 import { RadiusTExample } from './RadiusTExample';
 import { RadiusTLExample } from './RadiusTLExample';
 import { RadiusTRExample } from './RadiusTRExample';
+import { ScaleExample } from './ScaleExample';
 import { ShadowExample } from './ShadowExample';
 import { SizeExample } from './SizeExample';
 import { VariantExample } from './VariantExample';
@@ -35,6 +36,7 @@ const Page = () => (
     <DefaultExample />
     <VariantExample />
     <SizeExample />
+    <ScaleExample />
     <MarginExample />
     <MarginXExample />
     <MarginYExample />
