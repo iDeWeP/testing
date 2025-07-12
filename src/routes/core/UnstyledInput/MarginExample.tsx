@@ -14,5 +14,15 @@ export const MarginExample = () => (
       <Example margin="xl" />
       <Example margin="xxl" />
     </ExampleCard>
+    <ExampleCard>
+      <Example margin="unset" />
+      <Example margin="none" />
+      <Example margin="xs-xs" />
+      <Example margin="sm-sm" />
+      <Example margin="md-md" />
+      <Example margin="lg-lg" />
+      <Example margin="xl-xl" />
+      <Example margin="xxl-xxl" />
+    </ExampleCard>
   </ExampleSection>
 );
