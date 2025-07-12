@@ -4,7 +4,7 @@ import type { Classes } from '../../types';
 import { getBorder } from './border';
 import { getColor } from './color';
 import { mergeClasses } from './merge-classes';
-import { getPadding, getDefaultScale } from './spacing';
+import { getPadding, getDefaultScale, getSizeScale } from './spacing';
 
 export const styleUnstyledContainer = (
   className: string,
@@ -53,10 +53,11 @@ export const styleUnstyledContainer = (
     br
   );
   const { bgColor, textColor } = getColor(variant, color);
+  const isSquare = scale === 'square';
 
   return mergeClasses(
     sharedStyles.display['inline-flex'],
-    systemStyles.size[getDefaultScale(scale)].normal[size],
+    systemStyles.size[getDefaultScale(scale)][getSizeScale(scale)][size],
     systemStyles.padding[scale].x[x],
     systemStyles.padding[scale].y[y],
     systemStyles.padding[scale].t[t],
@@ -92,6 +93,7 @@ export const styleUnstyledContainer = (
     systemStyles.color.fill[theme][textColor],
     systemStyles.shadow[shadow],
     systemStyles.gap.all[gap],
+    isSquare && sharedStyles.scale.square,
     className
   );
 };
