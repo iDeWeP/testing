@@ -12,7 +12,7 @@ export const styleUnstyledCheckboxTrail = (
     valid = false,
     invalid = false,
     disabled = false,
-    defaultSize = 'md',
+    size = 'md',
     border = 'unset',
     bx = 'unset',
     by = 'unset',
@@ -47,7 +47,7 @@ export const styleUnstyledCheckboxTrail = (
   return mergeClasses(
     unstyledCheckboxConfig.styles.shared.default,
     unstyledCheckboxConfig.styles.trail.default,
-    systemStyles.size.text.square[defaultSize],
+    systemStyles.size.text.square[size],
     systemStyles.border.all[border],
     systemStyles.border.x[bx],
     systemStyles.border.y[by],
