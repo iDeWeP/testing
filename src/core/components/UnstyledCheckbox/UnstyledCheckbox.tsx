@@ -80,7 +80,7 @@ export const UnstyledCheckbox = (props: UnstyledCheckboxProps) => {
           invalid={invalid}
           stateful
           variant={setRippleVariant(variant)}
-          placement="normal"
+          scale="normal"
           color={color}
           effect={ripple}
           {...componentsProps.ripple}
