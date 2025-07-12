@@ -22,8 +22,8 @@ const Page = () => (
   <>
     <ExampleTitle>UnstyledSpinner</ExampleTitle>
     <DefaultExample />
-    <SpinExample />
     <DisabledExample />
+    <SpinExample />
     <ValueExample />
     <VariantExample />
     <FloatExample />
