@@ -19,7 +19,6 @@ export const styleUnstyledRipple = (
 
   return mergeClasses(
     unstyledRippleConfig.styles.root.default,
-    stateful && unstyledRippleConfig.styles.root.stateful,
     !stateful &&
       unstyledRippleConfig.styles.root.color[rippleScale].stateless[theme][
         textColor

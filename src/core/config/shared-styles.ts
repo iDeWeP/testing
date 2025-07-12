@@ -6,7 +6,9 @@ type SharedStyles = {
   focusable: Styles;
   display: Styles;
   position: Styles;
+  scale: Styles;
   direction: Styles;
+  effect: Styles;
   transition: Styles;
   cursor: Styles;
 };
@@ -38,9 +40,24 @@ export const sharedStyles: SharedStyles = {
       position: 'absolute'
     }
   },
+  scale: {
+    square: {
+      overflow: 'overflow-hidden'
+    }
+  },
   direction: {
     col: {
       flexDirection: 'flex-col'
+    }
+  },
+  effect: {
+    shadow: {
+      boxShadow: 'shadow-md',
+      transition: 'transition',
+      hover: 'hover:shadow-lg',
+      active: 'active:shadow-none',
+      focus: 'focus:shadow-none',
+      focusVisible: 'focus-visible:shadow-none'
     }
   },
   transition: {
