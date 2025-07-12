@@ -1,4 +1,5 @@
 import { unstyledInputConfig } from '../../components/UnstyledInput/unstyledInputConfig';
+import { sharedStyles } from '../../config/shared-styles';
 import { systemStyles } from '../../config/system-styles';
 import type { Classes } from '../../types';
 import { getInputColor } from './color';
@@ -23,6 +24,7 @@ export const styleUnstyledInputDecorator = (
     rtr = 'unset',
     rbl = 'unset',
     rbr = 'unset',
+    gap = 'unset',
     decorated = false
   }: Classes
 ) => {
@@ -42,7 +44,7 @@ export const styleUnstyledInputDecorator = (
   );
 
   return mergeClasses(
-    unstyledInputConfig.styles.decorator.default,
+    sharedStyles.display['inline-flex'],
     unstyledInputConfig.styles.decorator.spacing[sidePlacement][
       getInputSpacing(decorated)
     ],
@@ -56,6 +58,7 @@ export const styleUnstyledInputDecorator = (
     systemStyles.radius.bl[bl],
     systemStyles.radius.br[br],
     systemStyles.color.bg[theme][getInputColor(inputVariant, disabled)],
+    systemStyles.gap.all[gap],
     className
   );
 };
