@@ -1,11 +1,12 @@
 import { useTheme } from '../../hooks/use-theme/use-theme';
 import type {
   MergeComponentProps,
+  Variant,
   Size,
   Border,
   DefaultBorder,
   Radius,
-  TrailColor,
+  Color,
   Shadow
 } from '../../types';
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
@@ -16,6 +17,7 @@ type Props = MergeComponentProps<
     valid: boolean;
     invalid: boolean;
     disabled: boolean;
+    variant: Variant;
     size: Size;
     border?: Border;
     bx?: DefaultBorder;
@@ -33,7 +35,7 @@ type Props = MergeComponentProps<
     rtr: Radius;
     rbl: Radius;
     rbr: Radius;
-    color: TrailColor;
+    color: Color;
     shadow: Shadow;
   }
 >;
@@ -42,6 +44,7 @@ export const UnstyledCheckboxTrail = ({
   valid,
   invalid,
   disabled,
+  variant,
   size,
   border = 'set',
   bx,
@@ -59,7 +62,7 @@ export const UnstyledCheckboxTrail = ({
   rtr,
   rbl,
   rbr,
-  color: trailColor,
+  color,
   shadow,
   className,
   ...restProps
@@ -71,6 +74,7 @@ export const UnstyledCheckboxTrail = ({
     valid,
     invalid,
     disabled,
+    variant,
     size,
     border,
     bx,
@@ -88,7 +92,7 @@ export const UnstyledCheckboxTrail = ({
     rtr,
     rbl,
     rbr,
-    trailColor,
+    color,
     shadow
   });
 

@@ -41,7 +41,6 @@ export type UnstyledCheckboxTrailProps = {
   bb?: DefaultBorder;
   bl?: DefaultBorder;
   br?: DefaultBorder;
-  color?: 'transparent';
 } & ComponentRefProps<'span'>;
 
 export type UnstyledCheckboxRippleProps = {

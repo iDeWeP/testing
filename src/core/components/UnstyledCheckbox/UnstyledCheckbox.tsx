@@ -90,6 +90,7 @@ export const UnstyledCheckbox = (props: UnstyledCheckboxProps) => {
         valid={valid}
         invalid={invalid}
         disabled={disabled}
+        variant={variant}
         size={size}
         radius={radius}
         rt={rt}
