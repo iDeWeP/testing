@@ -4,7 +4,7 @@ import type { UnstyledInputProps } from '../../../core/components/UnstyledInput/
 
 type Props = {
   clear?: boolean;
-} & UnstyledInputProps<'textarea'>;
+} & UnstyledInputProps<'input'>;
 
 export const Example = ({ clear, ...restProps }: Props) => {
   const [value, setValue] = useState('');
