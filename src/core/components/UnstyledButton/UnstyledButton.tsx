@@ -1,7 +1,12 @@
 import type { ElementType } from 'react';
 import { useTheme } from '../../hooks/use-theme/use-theme';
-import { getReversedColor } from '../../utils/merge-class-name/color';
+import { setButtonBorder } from '../../utils/merge-class-name/border';
+import {
+  getReversedColor,
+  setButtonColor
+} from '../../utils/merge-class-name/color';
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
+import { setButtonVariant } from '../../utils/merge-class-name/variant';
 import { mergeProps } from '../../utils/merge-props/merge-props';
 import { setAria } from '../../utils/set-aria/set-aria';
 import { UnstyledContainer } from '../UnstyledContainer/UnstyledContainer';
@@ -81,10 +86,10 @@ export const UnstyledButton = <E extends ElementType>(
     <UnstyledContainer
       disabled={disabled || !!loading}
       type="button"
-      variant={checked === undefined ? variant : 'light'}
+      variant={setButtonVariant(variant, checked)}
       size={size}
-      border={checked === undefined ? border : 'set'}
-      color={checked === undefined ? color : 'surface'}
+      border={setButtonBorder(border, checked)}
+      color={setButtonColor(color, checked)}
       className={mergedClassName}
       {...setAria('button', { element: Component })}
       {...restProps}
