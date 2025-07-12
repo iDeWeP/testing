@@ -1,10 +1,21 @@
-import type { ComponentRefProps } from '../../types';
+import type { MergeComponentProps, Gap } from '../../types';
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
 
-type Props = ComponentRefProps<'legend'>;
+type Props = MergeComponentProps<
+  'legend',
+  {
+    gap: Gap;
+  }
+>;
 
-export const UnstyledInputClearance = ({ className, ...restProps }: Props) => {
-  const mergedClassName = mergeClassName('unstyledInputClearance', className);
+export const UnstyledInputClearance = ({
+  gap,
+  className,
+  ...restProps
+}: Props) => {
+  const mergedClassName = mergeClassName('unstyledInputClearance', className, {
+    gap
+  });
 
   return (
     <legend

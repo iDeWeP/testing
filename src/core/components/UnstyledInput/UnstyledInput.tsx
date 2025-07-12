@@ -48,6 +48,7 @@ export const UnstyledInput = <E extends ElementType>(
     rbl,
     rbr,
     color,
+    gap,
     className,
     onFocus,
     onBlur,
@@ -108,6 +109,7 @@ export const UnstyledInput = <E extends ElementType>(
         rtr={rtr}
         rbl={rbl}
         rbr={rbr}
+        gap={gap}
         {...componentsProps.leftDecorator}
       >
         {leftDecorator}
@@ -132,16 +134,20 @@ export const UnstyledInput = <E extends ElementType>(
           {...restProps}
         />
         {label && variant === 'outlined' && (
-          <UnstyledInputClearance {...componentsProps.clearance}>
+          <UnstyledInputClearance
+            gap={gap}
+            {...componentsProps.clearance}
+          >
             {label}
           </UnstyledInputClearance>
         )}
         {label && (
           <UnstyledInputLabel
             inputType={Component}
+            htmlFor={id}
             variant={variant}
             size={inputSize}
-            htmlFor={id}
+            gap={gap}
             {...componentsProps.label}
           >
             {label}
@@ -162,6 +168,7 @@ export const UnstyledInput = <E extends ElementType>(
         rtr={rtr}
         rbl={rbl}
         rbr={rbr}
+        gap={gap}
         {...componentsProps.rightDecorator}
       >
         {rightDecorator}

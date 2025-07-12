@@ -22,7 +22,6 @@ type Styles = {
       color: Record<Theme, Style>;
     };
     decorator: {
-      default: CSSProps;
       spacing: Record<SidePlacement, Style>;
       outlined: Style;
     };
@@ -55,7 +54,7 @@ export const unstyledInputConfig: ComponentConfig<UnstyledInputConfigProps> &
   Styles = {
   props: {
     as: 'input',
-    variant: 'default',
+    variant: 'outlined',
     size: 'md',
     resize: false,
     margin: 'unset',
@@ -75,6 +74,7 @@ export const unstyledInputConfig: ComponentConfig<UnstyledInputConfigProps> &
     rbl: 'unset',
     rbr: 'unset',
     color: 'unset',
+    gap: 'unset',
     componentsProps: {}
   },
   styles: {
@@ -224,10 +224,6 @@ export const unstyledInputConfig: ComponentConfig<UnstyledInputConfigProps> &
       }
     },
     decorator: {
-      default: {
-        display: 'inline-flex',
-        gap: 'gap-2'
-      },
       spacing: {
         left: {
           default: {
@@ -376,7 +372,6 @@ export const unstyledInputConfig: ComponentConfig<UnstyledInputConfigProps> &
       default: {
         textWrap: 'text-nowrap',
         alignItems: 'align-center',
-        gap: 'gap-2',
         pointerEvents: 'pointer-events-none',
         userSelect: 'select-none'
       },

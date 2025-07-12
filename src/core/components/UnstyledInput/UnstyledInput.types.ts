@@ -6,6 +6,7 @@ import type {
   Margin,
   Radius,
   Color,
+  Gap,
   MergeProps
 } from '../../types';
 
@@ -57,6 +58,7 @@ export type UnstyledInputDefaultProps = {
   rbl?: Radius;
   rbr?: Radius;
   color?: Color;
+  gap?: Gap;
   componentsProps?: UnstyledInputComponentsProps;
 };
 
