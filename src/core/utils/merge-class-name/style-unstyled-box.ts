@@ -50,13 +50,13 @@ export const styleUnstyledBox = (
   const { bgColor, textColor } = getColor(variant, color);
 
   return mergeClasses(
-    systemStyles.padding.all[padding],
-    systemStyles.padding.x[px],
-    systemStyles.padding.y[py],
-    systemStyles.padding.t[pt],
-    systemStyles.padding.b[pb],
-    systemStyles.padding.l[pl],
-    systemStyles.padding.r[pr],
+    systemStyles.padding.default.all[padding],
+    systemStyles.padding.default.x[px],
+    systemStyles.padding.default.y[py],
+    systemStyles.padding.default.t[pt],
+    systemStyles.padding.default.b[pb],
+    systemStyles.padding.default.l[pl],
+    systemStyles.padding.default.r[pr],
     systemStyles.margin.all[margin],
     systemStyles.margin.x[mx],
     systemStyles.margin.y[my],
