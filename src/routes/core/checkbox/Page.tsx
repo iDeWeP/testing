@@ -1,5 +1,4 @@
 import { ExampleTitle } from '../../../components/ExampleTitle';
-import { ShadowExample } from '../unstyledBox/ShadowExample';
 import { ColorExample } from './ColorExample';
 import { DefaultExample } from './DefaultExample';
 import { DisabledExample } from './DisabledExample';
@@ -21,7 +20,6 @@ const Page = () => (
     <SizeExample />
     <RadiusExample />
     <ColorExample />
-    <ShadowExample />
     <RippleExample />
   </>
 );
