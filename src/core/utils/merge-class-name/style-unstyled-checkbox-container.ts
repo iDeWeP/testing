@@ -7,7 +7,7 @@ import { getInputScale } from './scale';
 export const styleUnstyledCheckboxContainer = (
   className: string,
   {
-    size = 'md',
+    defaultSize = 'md',
     margin = 'unset',
     mx = 'unset',
     my = 'unset',
@@ -29,7 +29,7 @@ export const styleUnstyledCheckboxContainer = (
 ) =>
   mergeClasses(
     unstyledCheckboxConfig.styles.root.default,
-    systemStyles.size[getInputScale(hasRipple)].square[size],
+    systemStyles.size[getInputScale(hasRipple)].square[defaultSize],
     systemStyles.margin.all[margin],
     systemStyles.margin.x[mx],
     systemStyles.margin.y[my],

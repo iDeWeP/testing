@@ -13,7 +13,7 @@ export const styleUnstyledCheckboxIcon = (
     invalid = false,
     disabled = false,
     variant = 'solid',
-    size = 'md',
+    defaultSize = 'md',
     border = 'unset',
     bx = 'unset',
     by = 'unset',
@@ -56,7 +56,7 @@ export const styleUnstyledCheckboxIcon = (
   return mergeClasses(
     unstyledCheckboxConfig.styles.shared.default,
     unstyledCheckboxConfig.styles.icon.default,
-    systemStyles.size.text.square[size],
+    systemStyles.size.text.square[defaultSize],
     systemStyles.border.all[getBorder(variant, border)],
     systemStyles.border.x[bx],
     systemStyles.border.y[by],
