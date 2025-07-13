@@ -4,7 +4,7 @@ import { systemStyles } from '../../config/system-styles';
 import type { Classes } from '../../types';
 import { getColor } from './color';
 import { mergeClasses } from './merge-classes';
-import { getDefaultSize } from './spacing';
+import { getFontSize } from './spacing';
 
 export const styleCircularProgressLabel = (
   className: string,
@@ -20,7 +20,7 @@ export const styleCircularProgressLabel = (
 
   return mergeClasses(
     circularProgressConfig.styles.label.default,
-    systemStyles.size.font[getDefaultSize(size)],
+    systemStyles.size.font[getFontSize(size)],
     systemStyles.color.text[theme][textColor],
     systemStyles.color.fill[theme][textColor],
     disabled && sharedStyles.cursor.none,
