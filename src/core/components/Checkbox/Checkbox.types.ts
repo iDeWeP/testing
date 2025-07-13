@@ -12,7 +12,7 @@ import type {
   MergeProps
 } from '../../types';
 import type {
-  UnstyledCheckboxDefaultProps,
+  UnstyledCheckboxConfigProps,
   UnstyledCheckboxProps
 } from '../UnstyledCheckbox/UnstyledCheckbox.types';
 
@@ -69,7 +69,7 @@ export type CheckboxDefaultProps = {
 };
 
 export type CheckboxConfigProps = MergeProps<
-  UnstyledCheckboxDefaultProps,
+  UnstyledCheckboxConfigProps,
   CheckboxDefaultProps
 >;
 
