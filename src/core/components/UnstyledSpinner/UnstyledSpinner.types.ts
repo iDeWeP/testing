@@ -21,7 +21,7 @@ export type UnstyledSpinnerComponentsProps = {
   outerBorder?: UnstyledSpinnerOuterBorder;
 };
 
-type UnstyledSpinnerOptionalProps = {
+export type UnstyledSpinnerOptionalProps = {
   disabled?: boolean;
   trail?: boolean;
 };

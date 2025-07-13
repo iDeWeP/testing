@@ -22,7 +22,7 @@ export type SpinnerComponentsProps = {
   outerBorder?: SpinnerOuterBorder;
 };
 
-type SpinnerOptionalProps = {
+export type SpinnerOptionalProps = {
   disabled?: boolean;
   trail?: boolean;
 };
