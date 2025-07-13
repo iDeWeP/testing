@@ -10,7 +10,7 @@ import type {
   UnstyledSpinnerProps
 } from '../UnstyledSpinner/UnstyledSpinner.types';
 
-export type CircularProgressContainerProps = ComponentRefProps<'span'>;
+export type CircularProgressContainerProps = ComponentRefProps<'div'>;
 export type CircularProgressLabelProps = ComponentRefProps<'span'>;
 export type CircularProgressBarProps = ComponentRefProps<'circle'>;
 export type CircularProgressTrailProps = ComponentRefProps<'circle'>;
