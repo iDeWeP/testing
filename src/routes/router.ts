@@ -27,6 +27,11 @@ import { UnstyledContainerRoute } from './core/unstyledContainer';
 import { UnstyledDropdownRoute } from './core/unstyledDropdown';
 import { UnstyledPopperRoute } from './core/unstyledPopper';
 import { UnstyledButtonRoute } from './core/unstyledButton';
+import { AvatarRoute } from './core/avatar';
+import { BadgeRoute } from './core/badge';
+import { BoxRoute } from './core/box';
+import { CheckboxRoute } from './core/checkbox';
+import { SpinnerRoute } from './core/spinner';
 
 export const router = createBrowserRouter([
   {
@@ -34,7 +39,11 @@ export const router = createBrowserRouter([
     Component: RootRoute,
     children: [
       AnchorRoute,
+      AvatarRoute,
+      BadgeRoute,
+      BoxRoute,
       CardRoute,
+      CheckboxRoute,
       FlexRoute,
       FooterRoute,
       GridRoute,
@@ -47,19 +56,20 @@ export const router = createBrowserRouter([
       NavigationRoute,
       SectionRoute,
       SidebarRoute,
+      SpinnerRoute,
       StackRoute,
       TextRoute,
       TitleRoute,
-      UnstyledBoxRoute,
-      UnstyledCheckboxRoute,
-      UnstyledInputRoute,
       TransitionRoute,
-      UnstyledSpinnerRoute,
+      UnstyledBoxRoute,
+      UnstyledButtonRoute,
       UnstyledCardRoute,
+      UnstyledCheckboxRoute,
       UnstyledContainerRoute,
       UnstyledDropdownRoute,
+      UnstyledInputRoute,
       UnstyledPopperRoute,
-      UnstyledButtonRoute
+      UnstyledSpinnerRoute
     ]
   }
 ]);
