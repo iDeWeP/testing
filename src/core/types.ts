@@ -66,16 +66,21 @@ export type Placement =
   | 'right-start'
   | 'right-end';
 export type DefaultPlacement = 'top' | 'bottom' | 'left' | 'right';
+export type CornerPlacement =
+  | 'top-left'
+  | 'top-right'
+  | 'bottom-left'
+  | 'bottom-right';
 export type CrossPlacement = 'start' | 'center' | 'end';
 export type SidePlacement = 'left' | 'right';
 export type MainAxis = DefaultPlacement;
 export type CrossAxis = CrossPlacement;
 export type ArrowOffset = [number | string, number | string];
+export type Overlap = 'square' | 'rounded' | 'circular';
 export type Size = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl';
 export type InputSize = 'sm' | 'md' | 'lg';
-export type Scale = 'normal' | 'inner' | 'square';
+export type Scale = 'normal' | 'inner' | 'square' | 'inner-square';
 export type DefaultScale = 'normal' | 'text';
-export type ButtonScale = 'normal' | 'square';
 export type RippleScale = 'normal' | 'inner';
 export type Padding =
   | 'unset'
@@ -138,7 +143,6 @@ export type Color =
   | 'success-on'
   | 'warning-on'
   | 'error-on';
-export type TrailColor = Color | 'transparent';
 export type Shadow =
   | 'unset'
   | 'none'
@@ -197,6 +201,8 @@ export type Classes = {
   inputType?: 'input' | 'textarea';
   barType?: 'bar' | 'trail';
   theme?: Theme;
+  checked?: boolean;
+  loading?: Loading;
   focused?: boolean;
   shifted?: boolean;
   spin?: boolean;
@@ -209,8 +215,10 @@ export type Classes = {
   inputVariant?: InputVariant;
   orientation?: Orientation;
   defaultPlacement?: DefaultPlacement;
+  cornerPlacement?: CornerPlacement;
   sidePlacement?: SidePlacement;
   float?: boolean;
+  overlap?: Overlap;
   size?: Size;
   inputSize?: InputSize;
   resize?: boolean;
@@ -249,7 +257,7 @@ export type Classes = {
   rbr?: Radius;
   font?: Font;
   color?: Color;
-  trailColor?: TrailColor;
+  ring?: Color;
   shadow?: Shadow;
   invisible?: boolean;
   blur?: boolean;
@@ -257,8 +265,10 @@ export type Classes = {
   gx?: Gap;
   gy?: Gap;
   transition?: Transition;
+  effect?: Effect;
   rippleEffect?: RippleEffect;
   hasRipple?: boolean;
+  empty?: boolean;
   decorated?: boolean;
 };
 
@@ -311,6 +321,7 @@ type CSSPropKeys =
   | 'position'
   | 'resize'
   | 'right'
+  | 'ring'
   | 'stroke'
   | 'textAlign'
   | 'textDecoration'
