@@ -1,22 +1,22 @@
-import { ExampleTitle } from '../../../components/ExampleTitle';
-import { BorderExample } from './BorderExample';
-import { ColorExample } from './ColorExample';
-import { DefaultExample } from './DefaultExample';
-import { DisabledExample } from './DisabledExample';
-import { FloatExample } from './FloatExample';
-import { MarginBExample } from './MarginBExample';
-import { MarginExample } from './MarginExample';
-import { MarginLExample } from './MarginLExample';
-import { MarginRExample } from './MarginRExample';
-import { MarginTExample } from './MarginTExample';
-import { MarginXExample } from './MarginXExample';
-import { MarginYExample } from './MarginYExample';
-import { ScaleExample } from './ScaleExample';
-import { SizeExample } from './SizeExample';
-import { SpinExample } from './SpinExample';
-import { ThicknessExample } from './ThicknessExample';
-import { ValueExample } from './ValueExample';
-import { VariantExample } from './VariantExample';
+import { ExampleTitle } from "../../../components/ExampleTitle";
+import { BorderExample } from "./BorderExample";
+import { ColorExample } from "./ColorExample";
+import { DefaultExample } from "./DefaultExample";
+import { DisabledExample } from "./DisabledExample";
+import { FloatExample } from "./FloatExample";
+import { MarginBExample } from "./MarginBExample";
+import { MarginExample } from "./MarginExample";
+import { MarginLExample } from "./MarginLExample";
+import { MarginRExample } from "./MarginRExample";
+import { MarginTExample } from "./MarginTExample";
+import { MarginXExample } from "./MarginXExample";
+import { MarginYExample } from "./MarginYExample";
+import { SizeExample } from "./SizeExample";
+import { SpinExample } from "./SpinExample";
+import { ThicknessExample } from "./ThicknessExample";
+import { ValueExample } from "./ValueExample";
+import { VariantExample } from "./VariantExample";
+
 
 const Page = () => (
   <>
@@ -28,7 +28,6 @@ const Page = () => (
     <VariantExample />
     <FloatExample />
     <SizeExample />
-    <ScaleExample />
     <ThicknessExample />
     <MarginExample />
     <MarginXExample />
