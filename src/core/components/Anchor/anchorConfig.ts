@@ -5,7 +5,7 @@ export const anchorConfig: ComponentConfig<AnchorConfigProps> = {
   props: {
     as: 'a',
     font: 'md',
-    color: 'surface',
+    color: 'primary',
     variant: 'text',
     padding: 'unset',
     px: 'unset',
