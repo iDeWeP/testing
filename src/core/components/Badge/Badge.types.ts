@@ -3,7 +3,7 @@ import type {
   Variant,
   CornerPlacement,
   Overlap,
-  Size,
+  DefaultSize,
   Radius,
   Color,
   Shadow,
@@ -23,7 +23,7 @@ export type BadgeDefaultProps = {
   variant?: Variant;
   placement?: CornerPlacement;
   overlap?: Overlap;
-  size?: Size;
+  size?: DefaultSize;
   radius?: Radius;
   color?: Color;
   ring?: Color;

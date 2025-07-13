@@ -2,7 +2,7 @@ import type {
   CornerPlacement,
   Overlap,
   CSSProps,
-  Size,
+  DefaultSize,
   ComponentConfig
 } from '../../types';
 import type { BadgeConfigProps } from './Badge.types';
@@ -14,7 +14,7 @@ type Styles = {
     root: {
       placement: Record<CornerPlacement, Record<Overlap, CSSProps>>;
       transform: Record<CornerPlacement, CSSProps>;
-      size: Record<SizeType, Record<Size, CSSProps>>;
+      size: Record<SizeType, Record<DefaultSize, CSSProps>>;
     };
   };
 };

@@ -2,6 +2,7 @@ import type { ElementType } from 'react';
 import { useMergeProps } from '../../hooks/use-merge-props/use-merge-props';
 import { useTheme } from '../../hooks/use-theme/use-theme';
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
+import { getInnerSize } from '../../utils/merge-class-name/spacing';
 import { UnstyledContainer } from '../UnstyledContainer/UnstyledContainer';
 import type { BadgeProps } from './Badge.types';
 import { badgeConfig } from './badgeConfig';
@@ -15,33 +16,38 @@ export const Badge = <E extends ElementType>(props: BadgeProps<E>) => {
     ring,
     className,
     children,
-    size,
+    size: defaultSize,
     ...restProps
   } = useMergeProps('badge', badgeConfig.props, props);
 
   const theme = useTheme();
 
-  const isZero = children && +children === 0;
+  const isZero = !showZero && +children === 0;
+  const empty = !children || isZero;
 
   const mergedClassName = mergeClassName('badge', className, {
     theme,
     cornerPlacement,
     overlap,
-    size,
+    defaultSize,
     ring,
-    empty: !showZero && isZero ? false : !!children
+    empty
   });
 
-  const count = children && max && +children > max ? `${max}+` : children;
+  const count =
+    !isNaN(children) && max !== undefined && +children > max
+      ? `${max}+`
+      : children;
+  const node = isZero ? null : count;
 
   return (
     <UnstyledContainer
-      size={size}
-      scale="inner-square"
+      size={getInnerSize(defaultSize)}
+      scale={empty ? 'none' : 'circle'}
       className={mergedClassName}
       {...restProps}
     >
-      {!showZero && isZero ? null : count}
+      {node}
     </UnstyledContainer>
   );
 };
