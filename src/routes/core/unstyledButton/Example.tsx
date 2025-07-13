@@ -12,6 +12,7 @@ export const Example = ({
 }: Props) => (
   <UnstyledButton
     color={clear ? 'unset' : 'primary'}
+    ripple={clear ? 'none' : 'normal'}
     {...restProps}
   >
     {children}
