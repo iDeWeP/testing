@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react';
 
-export const getInitials = (children: ReactNode) =>
-  typeof children !== 'string'
+export const getInitials = (children?: ReactNode, isEnabled?: boolean) =>
+  !isEnabled || typeof children !== 'string'
     ? children
     : children
         .trim()
