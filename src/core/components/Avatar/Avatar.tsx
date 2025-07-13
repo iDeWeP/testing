@@ -13,7 +13,10 @@ export const Avatar = <E extends ElementType>(props: AvatarProps<E>) => {
   );
 
   return (
-    <UnstyledContainer {...restProps}>
+    <UnstyledContainer
+      scale="square"
+      {...restProps}
+    >
       {getInitials(children, initials)}
     </UnstyledContainer>
   );
