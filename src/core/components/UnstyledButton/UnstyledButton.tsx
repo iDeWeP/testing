@@ -84,6 +84,7 @@ export const UnstyledButton = <E extends ElementType>(
 
   return (
     <UnstyledContainer
+      as={Component}
       disabled={disabled || !!loading}
       type="button"
       variant={setButtonVariant(variant, checked)}

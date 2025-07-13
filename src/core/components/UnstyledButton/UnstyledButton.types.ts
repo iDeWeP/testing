@@ -46,7 +46,6 @@ export type UnstyledButtonOptionalProps = {
 };
 
 export type UnstyledButtonDefaultProps = {
-  as?: ElementType;
   variant?: Variant;
   size?: Size;
   scale?: Scale;
