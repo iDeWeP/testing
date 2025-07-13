@@ -1,9 +1,9 @@
-import { cloneElement } from 'react';
+import { type HTMLInputTypeAttribute, cloneElement } from 'react';
 import { useTheme } from '../../hooks/use-theme/use-theme';
 import type {
   MergeComponentProps,
   Variant,
-  Size,
+  DefaultSize,
   Border,
   DefaultBorder,
   Radius,
@@ -18,12 +18,12 @@ import { setAria } from '../../utils/set-aria/set-aria';
 type Props = MergeComponentProps<
   'svg',
   {
-    inputType: 'checkbox' | 'radio';
+    inputType: HTMLInputTypeAttribute;
     valid: boolean;
     invalid: boolean;
     disabled: boolean;
     variant: Variant;
-    size: Size;
+    size: DefaultSize;
     border: Border;
     bx: DefaultBorder;
     by: DefaultBorder;
@@ -52,7 +52,7 @@ export const UnstyledCheckboxIcon = ({
   invalid,
   disabled,
   variant,
-  size,
+  size: defaultSize,
   border,
   bx,
   by,
@@ -86,7 +86,7 @@ export const UnstyledCheckboxIcon = ({
       invalid,
       disabled,
       variant,
-      size,
+      defaultSize,
       border,
       bx,
       by,

@@ -2,7 +2,7 @@ import { useTheme } from '../../hooks/use-theme/use-theme';
 import type {
   MergeComponentProps,
   Variant,
-  Size,
+  DefaultSize,
   Border,
   DefaultBorder,
   Radius,
@@ -18,7 +18,7 @@ type Props = MergeComponentProps<
     invalid: boolean;
     disabled: boolean;
     variant: Variant;
-    size: Size;
+    size: DefaultSize;
     border?: Border;
     bx?: DefaultBorder;
     by?: DefaultBorder;
@@ -45,7 +45,7 @@ export const UnstyledCheckboxTrail = ({
   invalid,
   disabled,
   variant,
-  size,
+  size: defaultSize,
   border = 'set',
   bx,
   by,
@@ -75,7 +75,7 @@ export const UnstyledCheckboxTrail = ({
     invalid,
     disabled,
     variant,
-    size,
+    defaultSize,
     border,
     bx,
     by,

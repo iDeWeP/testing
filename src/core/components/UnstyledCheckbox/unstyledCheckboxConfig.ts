@@ -24,7 +24,6 @@ type Styles = {
 export const unstyledCheckboxConfig: ComponentConfig<UnstyledCheckboxConfigProps> &
   Styles = {
   props: {
-    type: 'checkbox',
     variant: 'solid',
     size: 'md',
     margin: 'unset',
@@ -53,7 +52,7 @@ export const unstyledCheckboxConfig: ComponentConfig<UnstyledCheckboxConfigProps
     color: 'unset',
     shadow: 'unset',
     componentsProps: {},
-    ripple: 'normal'
+    ripple: 'none'
   },
   styles: {
     root: {

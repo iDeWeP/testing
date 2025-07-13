@@ -1,10 +1,15 @@
-import type { MergeComponentProps, Size, Margin, Radius } from '../../types';
+import type {
+  MergeComponentProps,
+  DefaultSize,
+  Margin,
+  Radius
+} from '../../types';
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
 
 type Props = MergeComponentProps<
   'div',
   {
-    size: Size;
+    size: DefaultSize;
     margin: Margin;
     mx: Margin;
     my: Margin;
@@ -26,7 +31,7 @@ type Props = MergeComponentProps<
 >;
 
 export const UnstyledCheckboxContainer = ({
-  size,
+  size: defaultSize,
   margin,
   mx,
   my,
@@ -51,7 +56,7 @@ export const UnstyledCheckboxContainer = ({
     'unstyledCheckboxContainer',
     className,
     {
-      size,
+      defaultSize,
       margin,
       mx,
       my,

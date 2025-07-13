@@ -14,7 +14,7 @@ export const UnstyledCheckbox = (props: UnstyledCheckboxProps) => {
     valid = false,
     invalid = false,
     disabled = false,
-    type,
+    type = 'checkbox',
     variant,
     size,
     margin,

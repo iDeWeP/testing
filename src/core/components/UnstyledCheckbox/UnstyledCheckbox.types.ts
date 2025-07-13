@@ -7,14 +7,13 @@ import type {
   RippleEffect,
   SVGNodeProps,
   Variant,
-  Size,
+  DefaultSize,
   Margin,
   Color,
   Shadow,
   Ripple,
   MergeProps
 } from '../../types';
-import type { UnstyledRippleProps } from '../UnstyledRipple/UnstyledRipple.types';
 
 export type UnstyledCheckboxContainerProps = {
   radius?: Radius;
@@ -51,7 +50,7 @@ export type UnstyledCheckboxComponentsProps = {
   container?: UnstyledCheckboxContainerProps;
   icon?: UnstyledCheckboxIconProps;
   trail?: UnstyledCheckboxTrailProps;
-  ripple?: UnstyledRippleProps;
+  ripple?: UnstyledCheckboxRippleProps;
 };
 
 export type UnstyledCheckboxOptionalProps = {
@@ -63,9 +62,8 @@ export type UnstyledCheckboxOptionalProps = {
 };
 
 export type UnstyledCheckboxDefaultProps = {
-  type?: 'checkbox' | 'radio';
   variant?: Variant;
-  size?: Size;
+  size?: DefaultSize;
   margin?: Margin;
   mx?: Margin;
   my?: Margin;
