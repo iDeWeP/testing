@@ -11,7 +11,7 @@ type Styles = {
 
 export const appShellConfig: ComponentConfig<AppShellConfigProps> & Styles = {
   props: {
-    as: 'a',
+    as: 'div',
     variant: 'text',
     font: 'unset',
     color: 'unset',
