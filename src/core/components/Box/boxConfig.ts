@@ -36,7 +36,7 @@ export const boxConfig: ComponentConfig<BoxConfigProps> = {
     rbl: 'unset',
     rbr: 'unset',
     font: 'unset',
-    color: 'unset',
+    color: 'surface-on',
     shadow: 'unset',
     gap: 'unset',
     gx: 'unset',
