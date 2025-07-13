@@ -4,8 +4,8 @@ import type {
   SpinnerBorder,
   Loading,
   Variant,
-  Size,
-  Scale,
+  DefaultSize,
+  ButtonScale,
   Radius,
   Color,
   Effect,
@@ -47,8 +47,8 @@ export type UnstyledButtonOptionalProps = {
 
 export type UnstyledButtonDefaultProps = {
   variant?: Variant;
-  size?: Size;
-  scale?: Scale;
+  size?: DefaultSize;
+  scale?: ButtonScale;
   radius?: Radius;
   color?: Color;
   effect?: Effect;

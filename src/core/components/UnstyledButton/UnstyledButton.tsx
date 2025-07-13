@@ -1,14 +1,10 @@
 import type { ElementType } from 'react';
 import { useTheme } from '../../hooks/use-theme/use-theme';
-import { setButtonBorder } from '../../utils/merge-class-name/border';
-import {
-  getReversedColor,
-  setButtonColor
-} from '../../utils/merge-class-name/color';
+import { getReversedColor } from '../../utils/merge-class-name/color';
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
-import { setButtonVariant } from '../../utils/merge-class-name/variant';
 import { mergeProps } from '../../utils/merge-props/merge-props';
 import { setAria } from '../../utils/set-aria/set-aria';
+import { setButtonStyle } from '../../utils/set-button-style/set-button-style';
 import { UnstyledContainer } from '../UnstyledContainer/UnstyledContainer';
 import { UnstyledRipple } from '../UnstyledRipple/UnstyledRipple';
 import { UnstyledSpinner } from '../UnstyledSpinner/UnstyledSpinner';
@@ -81,16 +77,17 @@ export const UnstyledButton = <E extends ElementType>(
   const leftSpinner = loading && loading !== 'right' && spinnerNode;
   const rightSpinner = loading === 'right' && spinnerNode;
   const hasRipple = ripple !== 'none' && !loading && !disabled;
+  const styles = setButtonStyle(variant, border, color, checked);
 
   return (
     <UnstyledContainer
       as={Component}
       disabled={disabled || !!loading}
       type="button"
-      variant={setButtonVariant(variant, checked)}
+      variant={styles.variant}
       size={size}
-      border={setButtonBorder(border, checked)}
-      color={setButtonColor(color, checked)}
+      border={styles.border}
+      color={styles.color}
       className={mergedClassName}
       {...setAria('button', { element: Component })}
       {...restProps}
@@ -102,10 +99,10 @@ export const UnstyledButton = <E extends ElementType>(
       {rightSpinner}
       {hasRipple && (
         <UnstyledRipple
-          stateful={checked !== undefined}
-          variant={variant}
+          stateful={false}
+          variant={styles.variant}
           scale="inner"
-          color={color}
+          color={styles.color}
           effect={ripple}
           {...componentsProps.ripple}
         />
