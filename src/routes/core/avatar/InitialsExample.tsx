@@ -6,7 +6,7 @@ export const InitialsExample = () => (
   <ExampleSection title="Initials">
     <ExampleCard>
       <Example initials={false}>FALSE</Example>
-      <Example>TRUE</Example>
+      <Example initials>TRUE</Example>
     </ExampleCard>
   </ExampleSection>
 );
