@@ -25,7 +25,7 @@ export const CircularProgress = (props: CircularProgressProps) => {
         color={color}
         {...restProps}
       />
-      {label && (
+      {label && children && (
         <CircularProgressLabel
           disabled={disabled}
           variant={variant}
