@@ -4,6 +4,7 @@ import type { AvatarConfigProps } from './Avatar.types';
 export const avatarConfig: ComponentConfig<AvatarConfigProps> = {
   props: {
     as: 'div',
+    initials: true,
     variant: 'solid',
     size: 'md',
     radius: 'full',
