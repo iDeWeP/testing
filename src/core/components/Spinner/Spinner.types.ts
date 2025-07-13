@@ -2,9 +2,6 @@ import type {
   ComponentRefProps,
   Variant,
   DefaultSize,
-  DefaultScale,
-  Margin,
-  SpinnerBorder,
   Color,
   MergeProps
 } from '../../types';
@@ -34,18 +31,8 @@ export type SpinnerDefaultProps = {
   spin?: boolean;
   value?: number;
   variant?: Variant;
-  float?: boolean;
   size?: DefaultSize;
   thickness?: number;
-  scale?: DefaultScale;
-  margin?: Margin;
-  mx?: Margin;
-  my?: Margin;
-  mt?: Margin;
-  mb?: Margin;
-  ml?: Margin;
-  mr?: Margin;
-  border?: SpinnerBorder;
   color?: Color;
   componentsProps?: SpinnerComponentsProps;
 };
