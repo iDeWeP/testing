@@ -7,12 +7,12 @@ import { CircularProgressLabel } from './CircularProgressLabel';
 
 export const CircularProgress = (props: CircularProgressProps) => {
   const {
+    label,
+    children,
     disabled = false,
     variant,
     size,
     color,
-    label,
-    children,
     ...restProps
   } = useMergeProps('circularProgress', circularProgressConfig.props, props);
 
