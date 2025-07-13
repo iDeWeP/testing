@@ -13,12 +13,12 @@ import type {
   MergeProps
 } from '../../types';
 
-export type DividerLeftLineProps = ComponentRefProps<'hr'>;
-export type DividerRightLineProps = ComponentRefProps<'hr'>;
+export type DividerStartLineProps = ComponentRefProps<'hr'>;
+export type DividerEndLineProps = ComponentRefProps<'hr'>;
 
 export type DividerComponentsProps = {
-  leftLine?: DividerLeftLineProps;
-  rightLine?: DividerRightLineProps;
+  startLine?: DividerStartLineProps;
+  endLine?: DividerEndLineProps;
 };
 
 export type DividerDefaultProps = {
