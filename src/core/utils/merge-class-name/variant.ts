@@ -5,3 +5,6 @@ export const hasVariantBg = (variant: Variant) =>
 
 export const setRippleVariant = (variant: Variant) =>
   variant === 'light' ? 'light' : 'text';
+
+export const getCheckableVariant = (variant: Variant) =>
+  variant === 'light' || variant === 'solid' ? 'light' : variant;
