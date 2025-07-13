@@ -16,6 +16,7 @@ type SharedStyles = {
 export const sharedStyles: SharedStyles = {
   focusable: {
     default: {
+      ring: 'ring-offset-1',
       focus: 'focus:outline-none',
       focusVisible: 'focus-visible:ring-4'
     },

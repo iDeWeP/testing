@@ -1320,6 +1320,274 @@ export const systemStyles: SystemStyles = {
           padding: 'pr-5.75'
         }
       }
+    },
+    'inner-square': {
+      all: {
+        xs: {
+          padding: 'p-0.5'
+        },
+        sm: {
+          padding: 'p-0.5'
+        },
+        md: {
+          padding: 'p-0.5'
+        },
+        lg: {
+          padding: 'p-0.5'
+        },
+        xl: {
+          padding: 'p-0.5'
+        },
+        xxl: {
+          padding: 'p-0.5'
+        },
+        'xs-xs': {
+          padding: 'p-0.25'
+        },
+        'sm-sm': {
+          padding: 'p-0.25'
+        },
+        'md-md': {
+          padding: 'p-0.25'
+        },
+        'lg-lg': {
+          padding: 'p-0.25'
+        },
+        'xl-xl': {
+          padding: 'p-0.25'
+        },
+        'xxl-xxl': {
+          padding: 'p-0.25'
+        }
+      },
+      x: {
+        xs: {
+          padding: 'px-0.5'
+        },
+        sm: {
+          padding: 'px-0.5'
+        },
+        md: {
+          padding: 'px-0.5'
+        },
+        lg: {
+          padding: 'px-0.5'
+        },
+        xl: {
+          padding: 'px-0.5'
+        },
+        xxl: {
+          padding: 'px-0.5'
+        },
+        'xs-xs': {
+          padding: 'px-0.25'
+        },
+        'sm-sm': {
+          padding: 'px-0.25'
+        },
+        'md-md': {
+          padding: 'px-0.25'
+        },
+        'lg-lg': {
+          padding: 'px-0.25'
+        },
+        'xl-xl': {
+          padding: 'px-0.25'
+        },
+        'xxl-xxl': {
+          padding: 'px-0.25'
+        }
+      },
+      y: {
+        xs: {
+          padding: 'py-0.5'
+        },
+        sm: {
+          padding: 'py-0.5'
+        },
+        md: {
+          padding: 'py-0.5'
+        },
+        lg: {
+          padding: 'py-0.5'
+        },
+        xl: {
+          padding: 'py-0.5'
+        },
+        xxl: {
+          padding: 'py-0.5'
+        },
+        'xs-xs': {
+          padding: 'py-0.25'
+        },
+        'sm-sm': {
+          padding: 'py-0.25'
+        },
+        'md-md': {
+          padding: 'py-0.25'
+        },
+        'lg-lg': {
+          padding: 'py-0.25'
+        },
+        'xl-xl': {
+          padding: 'py-0.25'
+        },
+        'xxl-xxl': {
+          padding: 'py-0.25'
+        }
+      },
+      t: {
+        xs: {
+          padding: 'pt-0.5'
+        },
+        sm: {
+          padding: 'pt-0.5'
+        },
+        md: {
+          padding: 'pt-0.5'
+        },
+        lg: {
+          padding: 'pt-0.5'
+        },
+        xl: {
+          padding: 'pt-0.5'
+        },
+        xxl: {
+          padding: 'pt-0.5'
+        },
+        'xs-xs': {
+          padding: 'pt-0.25'
+        },
+        'sm-sm': {
+          padding: 'pt-0.25'
+        },
+        'md-md': {
+          padding: 'pt-0.25'
+        },
+        'lg-lg': {
+          padding: 'pt-0.25'
+        },
+        'xl-xl': {
+          padding: 'pt-0.25'
+        },
+        'xxl-xxl': {
+          padding: 'pt-0.25'
+        }
+      },
+      b: {
+        xs: {
+          padding: 'pb-0.5'
+        },
+        sm: {
+          padding: 'pb-0.5'
+        },
+        md: {
+          padding: 'pb-0.5'
+        },
+        lg: {
+          padding: 'pb-0.5'
+        },
+        xl: {
+          padding: 'pb-0.5'
+        },
+        xxl: {
+          padding: 'pb-0.5'
+        },
+        'xs-xs': {
+          padding: 'pb-0.25'
+        },
+        'sm-sm': {
+          padding: 'pb-0.25'
+        },
+        'md-md': {
+          padding: 'pb-0.25'
+        },
+        'lg-lg': {
+          padding: 'pb-0.25'
+        },
+        'xl-xl': {
+          padding: 'pb-0.25'
+        },
+        'xxl-xxl': {
+          padding: 'pb-0.25'
+        }
+      },
+      l: {
+        xs: {
+          padding: 'pl-0.5'
+        },
+        sm: {
+          padding: 'pl-0.5'
+        },
+        md: {
+          padding: 'pl-0.5'
+        },
+        lg: {
+          padding: 'pl-0.5'
+        },
+        xl: {
+          padding: 'pl-0.5'
+        },
+        xxl: {
+          padding: 'pl-0.5'
+        },
+        'xs-xs': {
+          padding: 'pl-0.25'
+        },
+        'sm-sm': {
+          padding: 'pl-0.25'
+        },
+        'md-md': {
+          padding: 'pl-0.25'
+        },
+        'lg-lg': {
+          padding: 'pl-0.25'
+        },
+        'xl-xl': {
+          padding: 'pl-0.25'
+        },
+        'xxl-xxl': {
+          padding: 'pl-0.25'
+        }
+      },
+      r: {
+        xs: {
+          padding: 'pr-0.5'
+        },
+        sm: {
+          padding: 'pr-0.5'
+        },
+        md: {
+          padding: 'pr-0.5'
+        },
+        lg: {
+          padding: 'pr-0.5'
+        },
+        xl: {
+          padding: 'pr-0.5'
+        },
+        xxl: {
+          padding: 'pr-0.5'
+        },
+        'xs-xs': {
+          padding: 'pr-0.25'
+        },
+        'sm-sm': {
+          padding: 'pr-0.25'
+        },
+        'md-md': {
+          padding: 'pr-0.25'
+        },
+        'lg-lg': {
+          padding: 'pr-0.25'
+        },
+        'xl-xl': {
+          padding: 'pr-0.25'
+        },
+        'xxl-xxl': {
+          padding: 'pr-0.25'
+        }
+      }
     }
   },
   margin: {
