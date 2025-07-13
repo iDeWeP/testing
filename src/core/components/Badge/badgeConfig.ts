@@ -1,7 +1,7 @@
 import type {
+  CSSProps,
   CornerPlacement,
   Overlap,
-  CSSProps,
   DefaultSize,
   ComponentConfig
 } from '../../types';
