@@ -4,6 +4,7 @@ import type { UnstyledButtonConfigProps } from './UnstyledButton.types';
 type Styles = {
   styles: {
     root: {
+      checked: CSSProps;
       default: CSSProps;
       loading: Record<string, CSSProps>;
     };
@@ -49,14 +50,12 @@ export const unstyledButtonConfig: ComponentConfig<UnstyledButtonConfigProps> &
   },
   styles: {
     root: {
+      checked: {
+        group: 'checked'
+      },
       default: {
-        display: 'inline-flex',
         position: 'relative',
-        font: 'font-semibold',
-        textWrap: 'text-nowrap',
-        justifyContent: 'justify-center',
-        alignItems: 'items-center',
-        userSelect: 'select-none'
+        font: 'font-semibold'
       },
       loading: {
         normal: {
