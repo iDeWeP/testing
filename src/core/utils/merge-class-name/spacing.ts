@@ -3,7 +3,8 @@ import type {
   Size,
   Variant,
   Border,
-  DefaultBorder
+  DefaultBorder,
+  Scale
 } from '../../types';
 
 export const getInputSize = (size: InputSize, resize: boolean) =>
@@ -13,7 +14,7 @@ export const getInputSpacing = (decorated: boolean) =>
   decorated ? 'decorated' : 'default';
 
 const setSize = (condition: boolean, size: Size) =>
-  condition ? `b-${size}-${size}` : `${size}-${size}`;
+  condition ? `${size}-${size}` : size;
 
 export const getPadding = (
   variant: Variant,
@@ -29,20 +30,30 @@ export const getPadding = (
   const isBordered =
     (variant === 'outlined' && border === 'auto') || border === 'set';
 
+  const x =
+    (bl === 'set' && br !== 'set' && !isBordered) ||
+    (bl !== 'set' && br === 'set' && !isBordered)
+      ? 'unset'
+      : setSize(isBordered || bx === 'set', size);
+
+  const y =
+    (bt === 'set' && bb !== 'set' && !isBordered) ||
+    (bt !== 'set' && bb === 'set' && !isBordered)
+      ? 'unset'
+      : setSize(isBordered || by === 'set', size);
+
   return {
-    x:
-      (bl === 'set' && br !== 'set' && !isBordered) ||
-      (bl !== 'set' && br === 'set' && !isBordered)
-        ? 'unset'
-        : setSize(isBordered || bx === 'set', size),
-    y:
-      (bt === 'set' && bb !== 'set' && !isBordered) ||
-      (bt !== 'set' && bb === 'set' && !isBordered)
-        ? 'unset'
-        : setSize(isBordered || by === 'set', size),
-    t: setSize(bt === 'set' || (isBordered && bt === 'none'), size),
-    b: setSize(bb === 'set' || (isBordered && bb === 'none'), size),
-    l: setSize(bl === 'set' || (isBordered && bl === 'none'), size),
-    r: setSize(br === 'set' || (isBordered && br === 'none'), size)
+    x,
+    y,
+    t: y === 'unset' ? setSize(bt === 'set', size) : 'unset',
+    b: y === 'unset' ? setSize(bb === 'set', size) : 'unset',
+    l: x === 'unset' ? setSize(bl === 'set', size) : 'unset',
+    r: x === 'unset' ? setSize(br === 'set', size) : 'unset'
   };
 };
+
+export const getDefaultScale = (scale: Scale) =>
+  scale === 'normal' || scale === 'square' ? 'normal' : 'inner';
+
+export const getSizeScale = (scale: Scale) =>
+  scale === 'normal' || scale === 'inner' ? 'normal' : 'square';
