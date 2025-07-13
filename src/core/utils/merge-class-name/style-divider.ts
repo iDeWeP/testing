@@ -2,7 +2,7 @@ import { dividerConfig } from '../../components/Divider/dividerConfig';
 import type { Classes } from '../../types';
 import { mergeClasses } from './merge-classes';
 
-export const styleDividerLine = (
+export const styleDivider = (
   className: string,
   { orientation = 'row', decorated = false }: Classes
 ) =>
