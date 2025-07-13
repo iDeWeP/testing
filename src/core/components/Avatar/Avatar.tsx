@@ -1,6 +1,6 @@
 import type { ElementType } from 'react';
+import { getInitials } from '../../../utils/utils/get-initials/get-initials';
 import { useMergeProps } from '../../hooks/use-merge-props/use-merge-props';
-import { getInitials } from '../../utils/get-initials/get-initials';
 import { UnstyledContainer } from '../UnstyledContainer/UnstyledContainer';
 import type { AvatarProps } from './Avatar.types';
 import { avatarConfig } from './avatarConfig';
