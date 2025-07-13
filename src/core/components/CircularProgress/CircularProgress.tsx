@@ -1,4 +1,5 @@
 import { useMergeProps } from '../../hooks/use-merge-props/use-merge-props';
+import { UnstyledSpinner } from '../UnstyledSpinner/UnstyledSpinner';
 import type { CircularProgressProps } from './CircularProgress.types';
 import { circularProgressConfig } from './circularProgressConfig';
 import { CircularProgressContainer } from './CircularProgressContainer';
@@ -17,7 +18,7 @@ export const CircularProgress = (props: CircularProgressProps) => {
 
   return (
     <CircularProgressContainer size={size}>
-      <UnstyledCircularProgress
+      <UnstyledSpinner
         disabled={disabled}
         variant={variant}
         size={size}

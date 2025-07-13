@@ -15,6 +15,7 @@ type Props = MergeComponentProps<
 export const CircularProgressLabel = ({
   disabled,
   variant,
+  size,
   color,
   className,
   ...restProps
@@ -25,6 +26,7 @@ export const CircularProgressLabel = ({
     theme,
     disabled,
     variant,
+    size,
     color
   });
 
