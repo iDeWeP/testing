@@ -1,12 +1,13 @@
-import { UnstyledBox } from '../core/components/UnstyledBox/UnstyledBox';
-import type { UnstyledBoxProps } from '../core/components/UnstyledBox/UnstyledBox.types';
+import { Card } from '../core/components/Card/Card';
+import type { CardProps } from '../core/components/Card/Card.types';
 
 export const ExampleAnchor = ({
   className,
   ...restProps
-}: UnstyledBoxProps<'div'>) => (
-  <UnstyledBox
+}: CardProps<'div'>) => (
+  <Card
     variant="solid"
+    padding="xs-xs"
     color="primary-on"
     className={`relative ${className}`}
     {...restProps}

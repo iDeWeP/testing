@@ -77,10 +77,23 @@ export type MainAxis = DefaultPlacement;
 export type CrossAxis = CrossPlacement;
 export type ArrowOffset = [number | string, number | string];
 export type Overlap = 'square' | 'rounded' | 'circular';
-export type Size = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl';
+export type Size =
+  | 'xs'
+  | 'sm'
+  | 'md'
+  | 'lg'
+  | 'xl'
+  | 'xxl'
+  | 'xs-xs'
+  | 'sm-sm'
+  | 'md-md'
+  | 'lg-lg'
+  | 'xl-xl'
+  | 'xxl-xxl';
+export type DefaultSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl';
 export type InputSize = 'sm' | 'md' | 'lg';
-export type Scale = 'normal' | 'inner' | 'square' | 'inner-square';
-export type DefaultScale = 'normal' | 'text';
+export type Scale = 'none' | 'normal' | 'square' | 'circle';
+export type DefaultScale = 'normal' | 'square';
 export type RippleScale = 'normal' | 'inner';
 export type Padding =
   | 'unset'
@@ -220,6 +233,7 @@ export type Classes = {
   float?: boolean;
   overlap?: Overlap;
   size?: Size;
+  defaultSize?: DefaultSize;
   inputSize?: InputSize;
   resize?: boolean;
   scale?: Scale;

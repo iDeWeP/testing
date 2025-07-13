@@ -6,12 +6,13 @@ type Props = {
 } & CardProps<'div'>;
 
 export const ExampleCard = ({ col, ...restProps }: Props) => {
-  const className = `relative bg-disabled-100 flex flex-wrap justify-evenly items-center ${
-    col ? 'flex-col' : ''
+  const className = `relative bg-disabled-100 flex-wrap justify-evenly items-center
   }`;
 
   return (
     <Card
+      orientation={col ? 'col' : 'row'}
+      color="unset"
       className={className}
       {...restProps}
     />
