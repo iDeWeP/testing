@@ -1,10 +1,11 @@
 import type {
   InputSize,
-  Size,
+  DefaultSize,
   Variant,
+  Size,
+  Scale,
   Border,
-  DefaultBorder,
-  Scale
+  DefaultBorder
 } from '../../types';
 
 export const getInputSize = (size: InputSize, resize: boolean) =>
@@ -13,12 +14,13 @@ export const getInputSize = (size: InputSize, resize: boolean) =>
 export const getInputSpacing = (decorated: boolean) =>
   decorated ? 'decorated' : 'default';
 
-const setSize = (condition: boolean, size: Size) =>
+const setSize = (condition: boolean, size: DefaultSize) =>
   condition ? `${size}-${size}` : size;
 
 export const getPadding = (
   variant: Variant,
   size: Size,
+  scale: Scale,
   border: Border,
   bx: DefaultBorder,
   by: DefaultBorder,
@@ -27,33 +29,37 @@ export const getPadding = (
   bl: DefaultBorder,
   br: DefaultBorder
 ) => {
+  const defaultSize = getDefaultSize(size);
   const isBordered =
     (variant === 'outlined' && border === 'auto') || border === 'set';
 
   const x =
+    scale === 'none' ||
     (bl === 'set' && br !== 'set' && !isBordered) ||
     (bl !== 'set' && br === 'set' && !isBordered)
       ? 'unset'
-      : setSize(isBordered || bx === 'set', size);
+      : setSize(isBordered || bx === 'set', defaultSize);
 
   const y =
+    scale === 'none' ||
     (bt === 'set' && bb !== 'set' && !isBordered) ||
     (bt !== 'set' && bb === 'set' && !isBordered)
       ? 'unset'
-      : setSize(isBordered || by === 'set', size);
+      : setSize(isBordered || by === 'set', defaultSize);
+
+  const isXSet = x === 'unset' && scale !== 'none';
+  const isYSet = y === 'unset' && scale !== 'none';
 
   return {
     x,
     y,
-    t: y === 'unset' ? setSize(bt === 'set', size) : 'unset',
-    b: y === 'unset' ? setSize(bb === 'set', size) : 'unset',
-    l: x === 'unset' ? setSize(bl === 'set', size) : 'unset',
-    r: x === 'unset' ? setSize(br === 'set', size) : 'unset'
+    t: isYSet ? setSize(bt === 'set', defaultSize) : 'unset',
+    b: isYSet ? setSize(bb === 'set', defaultSize) : 'unset',
+    l: isXSet ? setSize(bl === 'set', defaultSize) : 'unset',
+    r: isXSet ? setSize(br === 'set', defaultSize) : 'unset'
   };
 };
 
-export const getDefaultScale = (scale: Scale) =>
-  scale === 'normal' || scale === 'square' ? 'normal' : 'inner';
+export const getDefaultSize = (size: Size) => size.split('-')[0] as DefaultSize;
 
-export const getSizeScale = (scale: Scale) =>
-  scale === 'normal' || scale === 'inner' ? 'normal' : 'square';
+export const getInnerSize = (size: DefaultSize) => `${size}-${size}` as Size;
