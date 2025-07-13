@@ -12,6 +12,7 @@ type SizeType = 'normal' | 'empty';
 type Styles = {
   styles: {
     root: {
+      default: CSSProps;
       placement: Record<CornerPlacement, Record<Overlap, CSSProps>>;
       transform: Record<CornerPlacement, CSSProps>;
       size: Record<SizeType, Record<DefaultSize, CSSProps>>;
@@ -57,6 +58,10 @@ export const badgeConfig: ComponentConfig<BadgeConfigProps> & Styles = {
   },
   styles: {
     root: {
+      default: {
+        position: 'absolute',
+        zIndex: 'z-100'
+      },
       placement: {
         'top-left': {
           square: {
