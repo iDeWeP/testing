@@ -18,17 +18,15 @@ import type {
 } from '../UnstyledContainer/UnstyledContainer.types';
 
 export type UnstyledButtonRippleProps = ComponentRefProps<'span'>;
-
+export type UnstyledButtonBarProps = ComponentRefProps<'circle'>;
+export type UnstyledButtonTrailProps = ComponentRefProps<'circle'>;
+export type UnstyledButtonInnerBorderProps = ComponentRefProps<'circle'>;
+export type UnstyledButtonOuterBorderProps = ComponentRefProps<'circle'>;
 export type UnstyledButtonSpinnerProps = {
   value?: number;
   thickness?: number;
   border?: SpinnerBorder;
 } & ComponentRefProps<'svg'>;
-
-export type UnstyledButtonBarProps = ComponentRefProps<'circle'>;
-export type UnstyledButtonTrailProps = ComponentRefProps<'circle'>;
-export type UnstyledButtonInnerBorderProps = ComponentRefProps<'circle'>;
-export type UnstyledButtonOuterBorderProps = ComponentRefProps<'circle'>;
 
 export type UnstyledButtonComponentsProps = {
   ripple?: UnstyledButtonRippleProps;
