@@ -1,9 +1,14 @@
 import { UnstyledBox } from '../core/components/UnstyledBox/UnstyledBox';
 import type { UnstyledBoxProps } from '../core/components/UnstyledBox/UnstyledBox.types';
 
-export const ExampleBox = ({ ...restProps }: UnstyledBoxProps<'div'>) => (
+export const ExampleAnchor = ({
+  className,
+  ...restProps
+}: UnstyledBoxProps<'div'>) => (
   <UnstyledBox
-    color="primary"
+    variant="solid"
+    color="primary-on"
+    className={`relative ${className}`}
     {...restProps}
   />
 );

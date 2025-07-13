@@ -1,23 +1,11 @@
-/* import React, { type ReactNode, type FC } from 'react';
+import { Title } from '../core/components/Title/Title';
+import type { TitleProps } from '../core/components/Title/Title.types';
 
-import Heading from '../lib/idewep/core/components/Heading/Heading';
-
-interface MainTitleProps {
-  children: ReactNode;
-}
-
-const MainTitle: FC<MainTitleProps> = (props) => (
-  <Heading
-    size="1"
+export const ExampleTitle = ({ children }: TitleProps<'h1'>) => (
+  <Title
+    as="h1"
     color="primary"
-    {...props}
-  />
-);
-
-export default MainTitle; */
-
-import type { ComponentProps } from 'react';
-
-export const ExampleTitle = ({ children }: ComponentProps<'h1'>) => (
-  <h1>{children}</h1>
+  >
+    {children}
+  </Title>
 );

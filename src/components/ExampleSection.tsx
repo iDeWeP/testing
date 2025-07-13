@@ -1,9 +1,9 @@
-import type { ReactNode } from 'react';
+import { Section } from '../core/components/Section/Section';
+import type { SectionProps } from '../core/components/Section/Section.types';
 
 type Props = {
   title: string;
-  children: ReactNode;
-};
+} & SectionProps<'section'>;
 
 export const ExampleSection = ({ title, children }: Props) => {
   const id = title
@@ -12,12 +12,12 @@ export const ExampleSection = ({ title, children }: Props) => {
     .replace(/\s{2,}/, ' ');
 
   return (
-    <div
+    <Section
       aria-labelledby={id}
       className="flex flex-col"
     >
       <h1 id={id}>{title}</h1>
       {children}
-    </div>
+    </Section>
   );
 };
