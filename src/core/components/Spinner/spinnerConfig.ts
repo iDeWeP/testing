@@ -8,7 +8,7 @@ export const spinnerConfig: ComponentConfig<SpinnerConfigProps> = {
     variant: 'text',
     size: 'md',
     thickness: 4,
-    color: 'unset',
+    color: 'primary',
     componentsProps: {},
     float: false,
     margin: 'unset',

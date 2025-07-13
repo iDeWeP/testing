@@ -1,7 +1,7 @@
 import type {
   ComponentRefProps,
   Variant,
-  DefaultSize,
+  Size,
   Color,
   MergeProps
 } from '../../types';
@@ -31,7 +31,7 @@ export type SpinnerDefaultProps = {
   spin?: boolean;
   value?: number;
   variant?: Variant;
-  size?: DefaultSize;
+  size?: Size;
   thickness?: number;
   color?: Color;
   componentsProps?: SpinnerComponentsProps;
