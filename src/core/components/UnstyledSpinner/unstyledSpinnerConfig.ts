@@ -1,16 +1,13 @@
-import type {
-  CSSProps,
-  DefaultScale,
-  Size,
-  ComponentConfig
-} from '../../types';
+import type { CSSProps, ComponentConfig } from '../../types';
 import type { UnstyledSpinnerConfigProps } from './UnstyledSpinner.types';
+
+type Scale = 'normal' | 'inner';
 
 type Styles = {
   styles: {
     root: {
       default: CSSProps;
-      float: Record<DefaultScale, Record<Size, CSSProps>>;
+      float: Record<Scale, Record<string, CSSProps>>;
       spin: CSSProps;
       rotate: CSSProps;
     };
@@ -26,7 +23,6 @@ export const unstyledSpinnerConfig: ComponentConfig<UnstyledSpinnerConfigProps> 
     float: false,
     size: 'md',
     thickness: 4,
-    scale: 'normal',
     margin: 'unset',
     mx: 'unset',
     my: 'unset',
@@ -72,7 +68,7 @@ export const unstyledSpinnerConfig: ComponentConfig<UnstyledSpinnerConfigProps> 
             left: 'left-[calc(50%_-_2.5rem)]'
           }
         },
-        text: {
+        inner: {
           xs: {
             top: 'top-[calc(50%_-_0.375)]',
             left: 'left-[calc(50%_-_0.375)]'

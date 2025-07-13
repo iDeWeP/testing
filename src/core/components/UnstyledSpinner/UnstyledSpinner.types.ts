@@ -3,7 +3,6 @@ import type {
   ComponentRefProps,
   Variant,
   Size,
-  DefaultScale,
   Margin,
   SpinnerBorder,
   Color,
@@ -34,7 +33,6 @@ export type UnstyledSpinnerDefaultProps = {
   float?: boolean;
   size?: Size;
   thickness?: number;
-  scale?: DefaultScale;
   margin?: Margin;
   mx?: Margin;
   my?: Margin;
