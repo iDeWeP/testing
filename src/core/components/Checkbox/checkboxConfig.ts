@@ -5,6 +5,10 @@ export const checkboxConfig: ComponentConfig<CheckboxConfigProps> = {
   props: {
     variant: 'solid',
     size: 'md',
+    radius: 'sm',
+    color: 'primary',
+    componentsProps: {},
+    ripple: 'normal',
     margin: 'unset',
     mx: 'unset',
     my: 'unset',
@@ -19,7 +23,6 @@ export const checkboxConfig: ComponentConfig<CheckboxConfigProps> = {
     bb: 'unset',
     bl: 'unset',
     br: 'unset',
-    radius: 'unset',
     rt: 'unset',
     rb: 'unset',
     rl: 'unset',
@@ -28,9 +31,6 @@ export const checkboxConfig: ComponentConfig<CheckboxConfigProps> = {
     rtr: 'unset',
     rbl: 'unset',
     rbr: 'unset',
-    color: 'unset',
-    shadow: 'unset',
-    componentsProps: {},
-    ripple: 'normal'
+    shadow: 'unset'
   }
 };

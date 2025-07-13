@@ -1,4 +1,3 @@
-import type { ComponentPropsWithRef } from 'react';
 import type {
   Radius,
   ComponentRefProps,
@@ -8,12 +7,14 @@ import type {
   SVGNodeProps,
   Variant,
   DefaultSize,
-  Margin,
   Color,
-  Shadow,
   Ripple,
   MergeProps
 } from '../../types';
+import type {
+  UnstyledCheckboxDefaultProps,
+  UnstyledCheckboxProps
+} from '../UnstyledCheckbox/UnstyledCheckbox.types';
 
 export type CheckboxContainerProps = {
   radius?: Radius;
@@ -61,38 +62,18 @@ export type CheckboxOptionalProps = {
 export type CheckboxDefaultProps = {
   variant?: Variant;
   size?: DefaultSize;
-  margin?: Margin;
-  mx?: Margin;
-  my?: Margin;
-  mt?: Margin;
-  mb?: Margin;
-  ml?: Margin;
-  mr?: Margin;
-  border?: Border;
-  bx?: DefaultBorder;
-  by?: DefaultBorder;
-  bt?: DefaultBorder;
-  bb?: DefaultBorder;
-  bl?: DefaultBorder;
-  br?: DefaultBorder;
   radius?: Radius;
-  rt?: Radius;
-  rb?: Radius;
-  rl?: Radius;
-  rr?: Radius;
-  rtl?: Radius;
-  rtr?: Radius;
-  rbl?: Radius;
-  rbr?: Radius;
   color?: Color;
-  shadow?: Shadow;
   componentsProps?: CheckboxComponentsProps;
   ripple?: Ripple;
 };
 
-export type CheckboxConfigProps = CheckboxDefaultProps;
+export type CheckboxConfigProps = MergeProps<
+  UnstyledCheckboxDefaultProps,
+  CheckboxDefaultProps
+>;
 
 export type CheckboxProps = MergeProps<
-  ComponentPropsWithRef<'input'>,
+  UnstyledCheckboxProps,
   CheckboxDefaultProps & CheckboxOptionalProps
 >;
