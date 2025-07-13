@@ -1,53 +1,39 @@
 import { unstyledButtonConfig } from '../../components/UnstyledButton/unstyledButtonConfig';
-import { generic } from '../../config/generic';
+import { sharedStyles } from '../../config/shared-styles';
+import { systemStyles } from '../../config/system-styles';
 import type { Classes } from '../../types';
-import { getBorder } from './border';
-import { getColor } from './color';
+import { getColor, getCheckableColor } from './color';
 import { mergeClasses } from './merge-classes';
-import { getButtonScale } from './scale';
 import { getFocusableState, getLoadingState } from './state';
-import { getVariant, getRingVariant } from './variant';
 
 export const styleUnstyledButton = (
   className: string,
   {
     theme = 'light',
+    checked,
     loading = false,
     disabled = false,
-    variant = 'none',
-    relative = false,
-    size = 'md',
-    buttonScale = 'normal',
-    margin = 'none',
-    border = false,
-    radius = 'none',
-    color = 'neutral',
-    effect = 'none'
+    variant = 'solid',
+    color = 'unset',
+    effect = 'unset'
   }: Classes
 ) => {
-  const { bgVariant, textVariant } = getVariant(variant, disabled);
-  const { sizeScale, spacingScale } = getButtonScale(buttonScale, border);
-  const statefulColor = getColor(color, disabled);
+  const { bgColor, textColor } = getColor(
+    variant,
+    getCheckableColor(color, checked),
+    disabled
+  );
 
   return mergeClasses(
+    checked && unstyledButtonConfig.styles.root.checked,
     unstyledButtonConfig.styles.root.default,
-    generic.styles.focusable[getFocusableState(disabled, loading)],
-    relative && generic.styles.position.relative,
-    generic.styles.size.normal[sizeScale][size],
-    generic.styles.scale[buttonScale],
-    generic.styles.spacing.normal[spacingScale][size],
-    generic.styles.margin[margin],
-    generic.styles.border[getBorder(border)],
-    generic.styles.radius[radius],
-    generic.styles.size.font[size],
-    generic.styles.color.bg[theme][statefulColor][bgVariant],
-    generic.styles.color.text[theme][statefulColor][textVariant],
-    generic.styles.color.fill[theme][statefulColor][textVariant],
-    generic.styles.color.ring[theme][statefulColor][
-      getRingVariant(variant, disabled || !!loading)
-    ],
-    generic.styles.loading[getLoadingState(loading)],
-    generic.styles.effect[effect],
+    sharedStyles.focusable[getFocusableState(disabled, loading)],
+    disabled && systemStyles.color.bg[theme][bgColor],
+    disabled && systemStyles.color.text[theme][textColor],
+    disabled && systemStyles.color.fill[theme][textColor],
+    systemStyles.color.ring[theme][bgColor],
+    unstyledButtonConfig.styles.root.loading[getLoadingState(loading)],
+    sharedStyles.effect[effect],
     className
   );
 };

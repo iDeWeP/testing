@@ -1,3 +1,4 @@
+import { unstyledContainerConfig } from '../../components/UnstyledContainer/unstyledContainerConfig';
 import { sharedStyles } from '../../config/shared-styles';
 import { systemStyles } from '../../config/system-styles';
 import type { Classes } from '../../types';
@@ -53,10 +54,10 @@ export const styleUnstyledContainer = (
     br
   );
   const { bgColor, textColor } = getColor(variant, color);
-  const isSquare = scale === 'square';
+  const isSquare = scale === 'square' || scale === 'inner-square';
 
   return mergeClasses(
-    sharedStyles.display['inline-flex'],
+    unstyledContainerConfig.styles.root.default,
     systemStyles.size[getDefaultScale(scale)][getSizeScale(scale)][size],
     systemStyles.padding[scale].x[x],
     systemStyles.padding[scale].y[y],
