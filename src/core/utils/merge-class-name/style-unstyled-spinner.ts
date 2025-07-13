@@ -3,6 +3,7 @@ import { sharedStyles } from '../../config/shared-styles';
 import { systemStyles } from '../../config/system-styles';
 import type { Classes } from '../../types';
 import { mergeClasses } from './merge-classes';
+import { getScale } from './scale';
 import { getSpinnerTransition } from './transition';
 
 export const styleUnstyledSpinner = (
@@ -12,7 +13,6 @@ export const styleUnstyledSpinner = (
     spin = true,
     float = false,
     size = 'md',
-    defaultScale = 'normal',
     margin = 'unset',
     mx = 'unset',
     my = 'unset',
@@ -21,12 +21,14 @@ export const styleUnstyledSpinner = (
     ml = 'unset',
     mr = 'unset'
   }: Classes
-) =>
-  mergeClasses(
+) => {
+  const { defaultScale, sizeScale } = getScale(size, 'square');
+
+  return mergeClasses(
     unstyledSpinnerConfig.styles.root.default,
     float && sharedStyles.position.absolute,
-    float && unstyledSpinnerConfig.styles.root.float[defaultScale][size],
-    systemStyles.size[defaultScale].square[size],
+    float && unstyledSpinnerConfig.styles.root.float[defaultScale][sizeScale],
+    systemStyles.size[defaultScale].square[sizeScale],
     systemStyles.margin.all[margin],
     systemStyles.margin.x[mx],
     systemStyles.margin.y[my],
@@ -38,3 +40,4 @@ export const styleUnstyledSpinner = (
     disabled && sharedStyles.cursor.disabled,
     className
   );
+};
