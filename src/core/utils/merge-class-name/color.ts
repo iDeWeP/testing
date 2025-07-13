@@ -1,7 +1,6 @@
 import type {
   Color,
   Variant,
-  TrailColor,
   InputVariant,
   DefaultPlacement,
   Border,
@@ -41,7 +40,7 @@ export const getColor = (
   isInvalid?: boolean,
   checked?: boolean
 ) => {
-  if (isDisabled && !checked) {
+  if (!checked && isDisabled) {
     return {
       bgColor:
         checked === false || hasVariantBg(variant) ? 'disabled-light' : 'none',
@@ -49,7 +48,7 @@ export const getColor = (
     };
   }
 
-  if (isDisabled && checked) {
+  if (checked && isDisabled) {
     return {
       bgColor: hasVariantBg(variant) ? 'disabled' : 'none',
       textColor: hasVariantBg(variant) ? 'disabled-on' : 'disabled'
@@ -73,7 +72,7 @@ export const getRippleColor = (
     isColorReversed(color)
   ).textColor;
 
-export const getDefaultColor = (color: TrailColor) =>
+export const getDefaultColor = (color: Color) =>
   color === 'unset' ? 'unset' : 'surface';
 
 export const getInputColor = (variant: InputVariant, isDisabled?: boolean) =>
@@ -107,7 +106,7 @@ export const getArrowColor = (
     (variant === 'outlined' && border === 'auto') ||
     border === 'set'
   ) {
-    return isColorReversed(color) ? getStateColor(color) : `${color}-on`;
+    return getReversedColor(color);
   }
 
   return color;
@@ -115,3 +114,9 @@ export const getArrowColor = (
 
 export const getSpinnerColorType = (type: 'bar' | 'trail') =>
   type === 'bar' ? 'textColor' : 'bgColor';
+
+export const getReversedColor = (color: Color) =>
+  (isColorReversed(color) ? getStateColor(color) : `${color}-on`) as Color;
+
+export const getCheckableColor = (color: Color, checked?: boolean) =>
+  checked === false ? 'surface' : color;
