@@ -73,7 +73,7 @@ export type UnstyledCheckboxDefaultProps = {
   ml?: Margin;
   mr?: Margin;
   border?: Border;
-  b?: Border;
+  b?: DefaultBorder;
   bx?: DefaultBorder;
   by?: DefaultBorder;
   bt?: DefaultBorder;

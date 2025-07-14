@@ -25,6 +25,7 @@ type Props = MergeComponentProps<
     variant: Variant;
     size: DefaultSize;
     border: Border;
+    b: DefaultBorder;
     bx: DefaultBorder;
     by: DefaultBorder;
     bt: DefaultBorder;
@@ -54,6 +55,7 @@ export const UnstyledCheckboxIcon = ({
   variant,
   size: defaultSize,
   border,
+  b,
   bx,
   by,
   bt,
@@ -88,6 +90,7 @@ export const UnstyledCheckboxIcon = ({
       variant,
       defaultSize,
       border,
+      b,
       bx,
       by,
       bt,
