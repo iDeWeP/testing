@@ -7,9 +7,7 @@ export const avatarConfig: ComponentConfig<AvatarConfigProps> = {
     initials: true,
     variant: 'solid',
     size: 'md',
-    radius: 'full',
     color: 'primary',
-    shadow: 'unset',
     margin: 'unset',
     m: 'unset',
     mx: 'unset',
@@ -25,6 +23,7 @@ export const avatarConfig: ComponentConfig<AvatarConfigProps> = {
     bb: 'unset',
     bl: 'unset',
     br: 'unset',
+    radius: 'full',
     rt: 'unset',
     rb: 'unset',
     rl: 'unset',
@@ -33,6 +32,7 @@ export const avatarConfig: ComponentConfig<AvatarConfigProps> = {
     rtr: 'unset',
     rbl: 'unset',
     rbr: 'unset',
+    shadow: 'unset',
     gap: 'unset'
   }
 };

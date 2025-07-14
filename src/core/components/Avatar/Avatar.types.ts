@@ -1,12 +1,5 @@
 import type { ElementType } from 'react';
-import type {
-  Variant,
-  Size,
-  Radius,
-  Color,
-  Shadow,
-  MergeProps
-} from '../../types';
+import type { Variant, Size, Color, MergeProps } from '../../types';
 import type {
   UnstyledContainerConfigProps,
   UnstyledContainerProps
@@ -16,9 +9,7 @@ export type AvatarDefaultProps = {
   initials?: boolean;
   variant?: Variant;
   size?: Size;
-  radius?: Radius;
   color?: Color;
-  shadow?: Shadow;
 };
 
 export type AvatarConfigProps = MergeProps<
