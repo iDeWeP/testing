@@ -9,6 +9,7 @@ export const styleUnstyledCheckboxContainer = (
   {
     defaultSize = 'md',
     margin = 'unset',
+    m = 'unset',
     mx = 'unset',
     my = 'unset',
     mt = 'unset',
@@ -30,7 +31,8 @@ export const styleUnstyledCheckboxContainer = (
   mergeClasses(
     unstyledCheckboxConfig.styles.root.default,
     systemStyles.size[getInputScale(hasRipple)].square[defaultSize],
-    systemStyles.margin.all[margin],
+    systemStyles.margin.default[margin],
+    systemStyles.margin.all[m],
     systemStyles.margin.x[mx],
     systemStyles.margin.y[my],
     systemStyles.margin.t[mt],
