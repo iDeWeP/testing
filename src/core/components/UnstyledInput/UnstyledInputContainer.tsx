@@ -24,6 +24,7 @@ type Props = MergeComponentProps<
     size: InputSize;
     resize: boolean;
     margin: Margin;
+    m: Margin;
     mx: Margin;
     my: Margin;
     mt: Margin;
@@ -45,6 +46,7 @@ export const UnstyledInputContainer = ({
   size: inputSize,
   resize,
   margin,
+  m,
   mx,
   my,
   mt,
@@ -69,6 +71,7 @@ export const UnstyledInputContainer = ({
     inputSize,
     resize,
     margin,
+    m,
     mx,
     my,
     mt,

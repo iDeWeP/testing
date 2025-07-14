@@ -42,6 +42,7 @@ export type UnstyledInputDefaultProps = {
   size?: InputSize;
   resize?: boolean;
   margin?: Margin;
+  m?: Margin;
   mx?: Margin;
   my?: Margin;
   mt?: Margin;
