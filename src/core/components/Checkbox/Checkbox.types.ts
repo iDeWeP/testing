@@ -1,10 +1,4 @@
 import type {
-  Radius,
-  ComponentRefProps,
-  Border,
-  DefaultBorder,
-  RippleEffect,
-  SVGNodeProps,
   Variant,
   DefaultSize,
   Color,
@@ -12,37 +6,22 @@ import type {
   MergeProps
 } from '../../types';
 import type {
+  UnstyledCheckboxContainerProps,
+  UnstyledCheckboxIconProps,
+  UnstyledCheckboxTrailProps,
+  UnstyledCheckboxRippleProps,
+  UnstyledCheckboxOptionalProps,
   UnstyledCheckboxConfigProps,
   UnstyledCheckboxProps
 } from '../UnstyledCheckbox/UnstyledCheckbox.types';
 
-export type CheckboxContainerProps = {
-  radius?: Radius;
-  rt?: Radius;
-  rb?: Radius;
-  rl?: Radius;
-  rr?: Radius;
-  rtl?: Radius;
-  rtr?: Radius;
-  rbl?: Radius;
-  rbr?: Radius;
-} & ComponentRefProps<'div'>;
+export type CheckboxContainerProps = UnstyledCheckboxContainerProps;
 
-export type CheckboxIconProps = Omit<ComponentRefProps<'svg'>, 'by' | 'radius'>;
+export type CheckboxIconProps = UnstyledCheckboxIconProps;
 
-export type CheckboxTrailProps = {
-  border?: Border;
-  bx?: DefaultBorder;
-  by?: DefaultBorder;
-  bt?: DefaultBorder;
-  bb?: DefaultBorder;
-  bl?: DefaultBorder;
-  br?: DefaultBorder;
-} & ComponentRefProps<'span'>;
+export type CheckboxTrailProps = UnstyledCheckboxTrailProps;
 
-export type CheckboxRippleProps = {
-  effect?: RippleEffect;
-} & ComponentRefProps<'span'>;
+export type CheckboxRippleProps = UnstyledCheckboxRippleProps;
 
 export type CheckboxComponentsProps = {
   container?: CheckboxContainerProps;
@@ -51,18 +30,11 @@ export type CheckboxComponentsProps = {
   ripple?: CheckboxRippleProps;
 };
 
-export type CheckboxOptionalProps = {
-  checked?: boolean;
-  valid?: boolean;
-  invalid?: boolean;
-  disabled?: boolean;
-  children?: SVGNodeProps;
-};
+export type CheckboxOptionalProps = UnstyledCheckboxOptionalProps;
 
 export type CheckboxDefaultProps = {
   variant?: Variant;
   size?: DefaultSize;
-  radius?: Radius;
   color?: Color;
   componentsProps?: CheckboxComponentsProps;
   ripple?: Ripple;
