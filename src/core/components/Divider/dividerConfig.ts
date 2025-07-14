@@ -43,7 +43,6 @@ export const dividerConfig: ComponentConfig<DividerConfigProps> & Styles = {
   styles: {
     root: {
       decorated: {
-        font: 'text-sm',
         textWrap: 'text-nowrap',
         alignItems: 'items-center',
         userSelect: 'select-none'
