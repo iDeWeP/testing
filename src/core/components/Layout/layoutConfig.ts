@@ -13,9 +13,10 @@ type Styles = {
 export const layoutConfig: ComponentConfig<LayoutConfigProps> & Styles = {
   props: {
     as: 'div',
-    variant: 'text',
-    font: 'unset',
-    color: 'unset',
+    gap: 'unset',
+    gx: 'unset',
+    gy: 'unset',
+    variant: 'solid',
     padding: 'unset',
     p: 'unset',
     px: 'unset',
@@ -48,10 +49,9 @@ export const layoutConfig: ComponentConfig<LayoutConfigProps> & Styles = {
     rtr: 'unset',
     rbl: 'unset',
     rbr: 'unset',
-    shadow: 'unset',
-    gap: 'unset',
-    gx: 'unset',
-    gy: 'unset'
+    font: 'unset',
+    color: 'unset',
+    shadow: 'unset'
   },
   styles: {
     root: {
