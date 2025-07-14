@@ -33,6 +33,7 @@ export type UnstyledBoxDefaultProps = {
   ml?: Margin;
   mr?: Margin;
   border?: Border;
+  b?: DefaultBorder;
   bx?: DefaultBorder;
   by?: DefaultBorder;
   bt?: DefaultBorder;
@@ -40,6 +41,7 @@ export type UnstyledBoxDefaultProps = {
   bl?: DefaultBorder;
   br?: DefaultBorder;
   radius?: Radius;
+  r?: Radius;
   rt?: Radius;
   rb?: Radius;
   rl?: Radius;
