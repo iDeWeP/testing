@@ -5,9 +5,10 @@ import { Example } from './Example';
 export const ScaleExample = () => (
   <ExampleSection title="Scale">
     <ExampleCard>
+      <Example scale="none">NONE</Example>
       <Example scale="normal">NORMAL</Example>
       <Example scale="square">SQUARE</Example>
-      <Example scale="inner">INNER</Example>
+      <Example scale="circle">CIRCLE</Example>
     </ExampleCard>
   </ExampleSection>
 );
