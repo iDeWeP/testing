@@ -5,10 +5,10 @@ import { Example } from './Example';
 export const BorderExample = () => (
   <ExampleSection title="Border">
     <ExampleCard>
-      <Example border="unset">UNSET</Example>
-      <Example border="none">NONE</Example>
-      <Example border="auto">AUTO</Example>
-      <Example border="set">SET</Example>
+      <Example border="unset" />
+      <Example border="none" />
+      <Example border="auto" />
+      <Example border="set" />
     </ExampleCard>
   </ExampleSection>
 );

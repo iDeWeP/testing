@@ -5,24 +5,24 @@ import { Example } from './Example';
 export const MarginMLExample = () => (
   <ExampleSection title="Margin ML">
     <ExampleCard>
-      <Example ml="unset">UNSET</Example>
-      <Example ml="none">NONE</Example>
-      <Example ml="xs">XS</Example>
-      <Example ml="sm">SM</Example>
-      <Example ml="md">MD</Example>
-      <Example ml="lg">LG</Example>
-      <Example ml="xl">XL</Example>
-      <Example ml="xxl">XXL</Example>
+      <Example ml="unset" />
+      <Example ml="none" />
+      <Example ml="xs" />
+      <Example ml="sm" />
+      <Example ml="md" />
+      <Example ml="lg" />
+      <Example ml="xl" />
+      <Example ml="xxl" />
     </ExampleCard>
     <ExampleCard>
-      <Example ml="unset">UNSET</Example>
-      <Example ml="none">NONE</Example>
-      <Example ml="xs-xs">XS-XS</Example>
-      <Example ml="sm-sm">SM-SM</Example>
-      <Example ml="md-md">MD-MD</Example>
-      <Example ml="lg-lg">LG-LG</Example>
-      <Example ml="xl-xl">XL-XL</Example>
-      <Example ml="xxl-xxl">XXL-XXL</Example>
+      <Example ml="unset" />
+      <Example ml="none" />
+      <Example ml="xs-xs" />
+      <Example ml="sm-sm" />
+      <Example ml="md-md" />
+      <Example ml="lg-lg" />
+      <Example ml="xl-xl" />
+      <Example ml="xxl-xxl" />
     </ExampleCard>
   </ExampleSection>
 );

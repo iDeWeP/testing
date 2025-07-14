@@ -5,24 +5,24 @@ import { Example } from './Example';
 export const MarginMTExample = () => (
   <ExampleSection title="Margin MT">
     <ExampleCard>
-      <Example mt="unset">UNSET</Example>
-      <Example mt="none">NONE</Example>
-      <Example mt="xs">XS</Example>
-      <Example mt="sm">SM</Example>
-      <Example mt="md">MD</Example>
-      <Example mt="lg">LG</Example>
-      <Example mt="xl">XL</Example>
-      <Example mt="xxl">XXL</Example>
+      <Example mt="unset" />
+      <Example mt="none" />
+      <Example mt="xs" />
+      <Example mt="sm" />
+      <Example mt="md" />
+      <Example mt="lg" />
+      <Example mt="xl" />
+      <Example mt="xxl" />
     </ExampleCard>
     <ExampleCard>
-      <Example mt="unset">UNSET</Example>
-      <Example mt="none">NONE</Example>
-      <Example mt="xs-xs">XS-XS</Example>
-      <Example mt="sm-sm">SM-SM</Example>
-      <Example mt="md-md">MD-MD</Example>
-      <Example mt="lg-lg">LG-LG</Example>
-      <Example mt="xl-xl">XL-XL</Example>
-      <Example mt="xxl-xxl">XXL-XXL</Example>
+      <Example mt="unset" />
+      <Example mt="none" />
+      <Example mt="xs-xs" />
+      <Example mt="sm-sm" />
+      <Example mt="md-md" />
+      <Example mt="lg-lg" />
+      <Example mt="xl-xl" />
+      <Example mt="xxl-xxl" />
     </ExampleCard>
   </ExampleSection>
 );
