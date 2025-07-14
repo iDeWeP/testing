@@ -6,8 +6,4 @@ export const styleDividerLine = (
   className: string,
   { orientation = 'row' }: Classes
 ) =>
-  mergeClasses(
-    dividerConfig.styles.line.grow,
-    dividerConfig.styles.line.orientation[orientation],
-    className
-  );
+  mergeClasses(dividerConfig.styles.line.orientation[orientation], className);

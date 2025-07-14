@@ -9,7 +9,6 @@ type Styles = {
     };
     line: {
       orientation: Record<Orientation, CSSProps>;
-      grow: CSSProps;
     };
   };
 };
@@ -60,14 +59,13 @@ export const dividerConfig: ComponentConfig<DividerConfigProps> & Styles = {
     line: {
       orientation: {
         row: {
+          width: 'w-full',
           borderRadius: 'border-t'
         },
         col: {
+          height: 'h-full',
           borderRadius: 'border-t-0 border-r'
         }
-      },
-      grow: {
-        flexGrow: 'grow'
       }
     }
   }
