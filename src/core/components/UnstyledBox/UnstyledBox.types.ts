@@ -17,6 +17,7 @@ export type UnstyledBoxDefaultProps = {
   as?: ElementType;
   variant?: Variant;
   padding?: Padding;
+  p?: Padding;
   px?: Padding;
   py?: Padding;
   pt?: Padding;
@@ -24,6 +25,7 @@ export type UnstyledBoxDefaultProps = {
   pl?: Padding;
   pr?: Padding;
   margin?: Margin;
+  m?: Margin;
   mx?: Margin;
   my?: Margin;
   mt?: Margin;
