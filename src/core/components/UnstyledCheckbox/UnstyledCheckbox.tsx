@@ -18,6 +18,7 @@ export const UnstyledCheckbox = (props: UnstyledCheckboxProps) => {
     variant,
     size,
     margin,
+    m,
     mx,
     my,
     mt,
@@ -57,6 +58,7 @@ export const UnstyledCheckbox = (props: UnstyledCheckboxProps) => {
     <UnstyledCheckboxContainer
       size={size}
       margin={margin}
+      m={m}
       mx={mx}
       my={my}
       mt={mt}
