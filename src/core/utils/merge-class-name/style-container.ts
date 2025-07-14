@@ -8,7 +8,7 @@ import { mergeClasses } from './merge-classes';
 import { getScale } from './scale';
 import { getPadding } from './spacing';
 
-export const styleUnstyledContainer = (
+export const styleContainer = (
   className: string,
   {
     theme = 'light',
