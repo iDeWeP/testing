@@ -1,5 +1,6 @@
 import type { ElementType } from 'react';
 import { useMergeProps } from '../../hooks/use-merge-props/use-merge-props';
+import { useTheme } from '../../hooks/use-theme/use-theme';
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
 import { setAria } from '../../utils/set-aria/set-aria';
 import { UnstyledBox } from '../UnstyledBox/UnstyledBox';
@@ -15,19 +16,27 @@ export const Divider = <E extends ElementType>(props: DividerProps<E>) => {
     componentsProps,
     children,
     padding,
+    font,
+    color,
     ...restProps
   } = useMergeProps('divider', dividerConfig.props, props);
 
+  const theme = useTheme();
+
   const mergedClassName = mergeClassName('divider', className, {
+    theme,
     orientation,
     padding,
+    font,
+    color,
     decorated: !!children
   });
 
   return (
     <UnstyledBox
-      variant="text"
       padding="unset"
+      font="unset"
+      color="unset"
       className={mergedClassName}
       {...setAria('divider', { orientation })}
       {...restProps}
