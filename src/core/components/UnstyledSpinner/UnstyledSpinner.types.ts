@@ -34,6 +34,7 @@ export type UnstyledSpinnerDefaultProps = {
   size?: Size;
   thickness?: number;
   margin?: Margin;
+  m?: Margin;
   mx?: Margin;
   my?: Margin;
   mt?: Margin;

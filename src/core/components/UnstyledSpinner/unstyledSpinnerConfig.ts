@@ -24,6 +24,7 @@ export const unstyledSpinnerConfig: ComponentConfig<UnstyledSpinnerConfigProps> 
     size: 'md',
     thickness: 4,
     margin: 'unset',
+    m: 'unset',
     mx: 'unset',
     my: 'unset',
     mt: 'unset',
