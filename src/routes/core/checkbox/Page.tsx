@@ -3,7 +3,6 @@ import { ColorExample } from './ColorExample';
 import { DefaultExample } from './DefaultExample';
 import { DisabledExample } from './DisabledExample';
 import { InvalidExample } from './InvalidExample';
-import { RadiusExample } from './RadiusExample';
 import { RippleExample } from './RippleExample';
 import { SizeExample } from './SizeExample';
 import { ValidExample } from './ValidExample';
@@ -18,7 +17,6 @@ const Page = () => (
     <DisabledExample />
     <VariantExample />
     <SizeExample />
-    <RadiusExample />
     <ColorExample />
     <RippleExample />
   </>
