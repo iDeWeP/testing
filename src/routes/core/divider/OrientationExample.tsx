@@ -6,6 +6,8 @@ export const OrientationExample = () => (
   <ExampleSection title="Orientation">
     <ExampleCard>
       <Example orientation="row"></Example>
+    </ExampleCard>
+    <ExampleCard height>
       <Example orientation="col"></Example>
     </ExampleCard>
   </ExampleSection>
