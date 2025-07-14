@@ -5,7 +5,7 @@ export const labelConfig: ComponentConfig<LabelConfigProps> = {
   props: {
     as: 'label',
     placement: 'right',
-    font: 'md',
+    font: 'sm',
     color: 'surface',
     gap: 'xs',
     variant: 'text',
