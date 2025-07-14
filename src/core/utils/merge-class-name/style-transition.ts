@@ -3,7 +3,7 @@ import type { Classes } from '../../types';
 import { mergeClasses } from './merge-classes';
 import { getTransition } from './transition';
 
-export const styleUnstyledTransition = (
+export const styleTransition = (
   className: string,
   { transition = 'fade' }: Classes
 ) =>

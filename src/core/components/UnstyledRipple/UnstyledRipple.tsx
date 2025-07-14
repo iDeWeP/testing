@@ -19,7 +19,7 @@ export const UnstyledRipple = (props: UnstyledRippleProps) => {
 
   const theme = useTheme();
 
-  const mergedClassName = mergeClassName('unstyledRipple', className, {
+  const mergedClassName = mergeClassName('ripple', className, {
     theme,
     valid,
     invalid,

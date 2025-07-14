@@ -37,7 +37,7 @@ export const Transition = <E extends ElementType>(
     return undefined;
   }
 
-  const mergedClassName = mergeClassName('unstyledTransition', className, {
+  const mergedClassName = mergeClassName('transition', className, {
     transition
   });
 
