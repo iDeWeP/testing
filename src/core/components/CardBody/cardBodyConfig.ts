@@ -1,0 +1,48 @@
+import type { ComponentConfig } from '../../types';
+import type { CardBodyConfigProps } from './CardBody.types';
+
+export const cardBodyConfig: ComponentConfig<CardBodyConfigProps> = {
+  props: {
+    as: 'div',
+    variant: 'solid',
+    orientation: 'col',
+    padding: 'md',
+    color: 'unset',
+    gap: 'unset',
+    p: 'unset',
+    px: 'unset',
+    py: 'unset',
+    pt: 'unset',
+    pb: 'unset',
+    pl: 'unset',
+    pr: 'unset',
+    margin: 'unset',
+    m: 'unset',
+    mx: 'unset',
+    my: 'unset',
+    mt: 'unset',
+    mb: 'unset',
+    ml: 'unset',
+    mr: 'unset',
+    border: 'auto',
+    bx: 'unset',
+    by: 'unset',
+    bt: 'unset',
+    bb: 'unset',
+    bl: 'unset',
+    br: 'unset',
+    radius: 'unset',
+    rt: 'unset',
+    rb: 'unset',
+    rl: 'unset',
+    rr: 'unset',
+    rtl: 'unset',
+    rtr: 'unset',
+    rbl: 'unset',
+    rbr: 'unset',
+    font: 'unset',
+    shadow: 'unset',
+    gx: 'unset',
+    gy: 'unset'
+  }
+};
