@@ -7,6 +7,7 @@ import { InvalidExample } from './InvalidExample';
 import { MarginBExample } from './MarginBExample';
 import { MarginExample } from './MarginExample';
 import { MarginLExample } from './MarginLExample';
+import { MarginMExample } from './MarginMExample';
 import { MarginRExample } from './MarginRExample';
 import { MarginTExample } from './MarginTExample';
 import { MarginXExample } from './MarginXExample';
@@ -36,6 +37,7 @@ const Page = () => (
     <SizeExample />
     <ResizeExample />
     <MarginExample />
+    <MarginMExample />
     <MarginXExample />
     <MarginYExample />
     <MarginTExample />
