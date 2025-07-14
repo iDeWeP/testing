@@ -5,7 +5,9 @@ import type {
   Size,
   Scale,
   Border,
-  DefaultBorder
+  DefaultBorder,
+  Orientation,
+  Padding
 } from '../../types';
 
 export const getInputSize = (size: InputSize, resize: boolean) =>
@@ -69,3 +71,11 @@ export const getFontSize = (size: Size) => {
 
   return sizes.length === 2 ? 'xs' : sizes[0];
 };
+
+export const getDividerPadding = (
+  orientation: Orientation,
+  padding: Padding
+) => ({
+  x: orientation === 'row' ? padding : 'unset',
+  y: orientation === 'col' ? padding : 'unset'
+});
