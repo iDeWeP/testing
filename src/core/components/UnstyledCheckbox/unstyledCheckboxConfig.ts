@@ -27,6 +27,7 @@ export const unstyledCheckboxConfig: ComponentConfig<UnstyledCheckboxConfigProps
     variant: 'solid',
     size: 'md',
     margin: 'unset',
+    m: 'unset',
     mx: 'unset',
     my: 'unset',
     mt: 'unset',

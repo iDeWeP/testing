@@ -65,6 +65,7 @@ export type UnstyledCheckboxDefaultProps = {
   variant?: Variant;
   size?: DefaultSize;
   margin?: Margin;
+  m?: Margin;
   mx?: Margin;
   my?: Margin;
   mt?: Margin;

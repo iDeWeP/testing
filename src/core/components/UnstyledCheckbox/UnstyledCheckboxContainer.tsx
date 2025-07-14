@@ -11,6 +11,7 @@ type Props = MergeComponentProps<
   {
     size: DefaultSize;
     margin: Margin;
+    m: Margin;
     mx: Margin;
     my: Margin;
     mt: Margin;
@@ -33,6 +34,7 @@ type Props = MergeComponentProps<
 export const UnstyledCheckboxContainer = ({
   size: defaultSize,
   margin,
+  m,
   mx,
   my,
   mt,
@@ -58,6 +60,7 @@ export const UnstyledCheckboxContainer = ({
     {
       defaultSize,
       margin,
+      m,
       mx,
       my,
       mt,
