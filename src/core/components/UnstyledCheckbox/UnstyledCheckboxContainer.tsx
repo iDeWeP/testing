@@ -19,6 +19,7 @@ type Props = MergeComponentProps<
     ml: Margin;
     mr: Margin;
     radius?: Radius;
+    r?: Radius;
     rt?: Radius;
     rb?: Radius;
     rl?: Radius;
@@ -42,6 +43,7 @@ export const UnstyledCheckboxContainer = ({
   ml,
   mr,
   radius,
+  r,
   rt,
   rb,
   rl,
@@ -68,6 +70,7 @@ export const UnstyledCheckboxContainer = ({
       ml,
       mr,
       radius,
+      r,
       rt,
       rb,
       rl,

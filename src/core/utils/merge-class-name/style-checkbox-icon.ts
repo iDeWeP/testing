@@ -1,12 +1,11 @@
 import { unstyledCheckboxConfig } from '../../components/UnstyledCheckbox/unstyledCheckboxConfig';
 import { systemStyles } from '../../config/system-styles';
 import type { Classes } from '../../types';
-import { isCheckboxBordered } from './border';
-import { getColor, getDefaultColor } from './color';
+import { isCheckboxBordered, getBorder } from './border';
+import { getColor } from './color';
 import { mergeClasses } from './merge-classes';
-import { getCheckableVariant } from './variant';
 
-export const styleUnstyledCheckboxTrail = (
+export const styleCheckboxIcon = (
   className: string,
   {
     theme = 'light',
@@ -16,6 +15,7 @@ export const styleUnstyledCheckboxTrail = (
     variant = 'solid',
     defaultSize = 'md',
     border = 'unset',
+    b = 'unset',
     bx = 'unset',
     by = 'unset',
     bt = 'unset',
@@ -23,6 +23,7 @@ export const styleUnstyledCheckboxTrail = (
     bl = 'unset',
     br = 'unset',
     radius = 'unset',
+    r = 'unset',
     rt = 'unset',
     rb = 'unset',
     rl = 'unset',
@@ -35,21 +36,32 @@ export const styleUnstyledCheckboxTrail = (
     shadow = 'unset'
   }: Classes
 ) => {
-  const isBordered = isCheckboxBordered(border, bx, by, bt, bb, bl, br);
+  const isBordered = isCheckboxBordered(
+    border,
+    b,
+    bx,
+    by,
+    bt,
+    bb,
+    bl,
+    br,
+    variant
+  );
   const { bgColor, textColor } = getColor(
-    getCheckableVariant(variant),
-    getDefaultColor(color),
+    variant,
+    color,
     disabled,
     valid,
     invalid,
-    false
+    true
   );
 
   return mergeClasses(
     unstyledCheckboxConfig.styles.shared.default,
-    unstyledCheckboxConfig.styles.trail.default,
+    unstyledCheckboxConfig.styles.icon.default,
     systemStyles.size.text.square[defaultSize],
-    systemStyles.border.all[border],
+    systemStyles.border.all[getBorder(variant, border)],
+    systemStyles.border.all[b],
     systemStyles.border.x[bx],
     systemStyles.border.y[by],
     systemStyles.border.t[bt],
@@ -57,6 +69,7 @@ export const styleUnstyledCheckboxTrail = (
     systemStyles.border.l[bl],
     systemStyles.border.r[br],
     systemStyles.radius.all[radius],
+    systemStyles.radius.all[r],
     systemStyles.radius.t[rt],
     systemStyles.radius.b[rb],
     systemStyles.radius.l[rl],
@@ -66,6 +79,7 @@ export const styleUnstyledCheckboxTrail = (
     systemStyles.radius.bl[rbl],
     systemStyles.radius.br[rbr],
     systemStyles.color.bg[theme][bgColor],
+    systemStyles.color.fill[theme][textColor],
     isBordered && systemStyles.color.border[theme][textColor],
     systemStyles.color.ring[theme][textColor],
     systemStyles.shadow[shadow],

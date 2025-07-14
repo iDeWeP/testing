@@ -34,6 +34,7 @@ export const UnstyledCheckbox = (props: UnstyledCheckboxProps) => {
     bl,
     br,
     radius,
+    r,
     rt,
     rb,
     rl,
@@ -51,7 +52,7 @@ export const UnstyledCheckbox = (props: UnstyledCheckboxProps) => {
     ...restProps
   } = mergeProps(unstyledCheckboxConfig.props, props);
 
-  const mergedClassName = mergeClassName('unstyledCheckbox', className, {
+  const mergedClassName = mergeClassName('checkbox', className, {
     disabled
   });
 
@@ -96,6 +97,7 @@ export const UnstyledCheckbox = (props: UnstyledCheckboxProps) => {
         variant={variant}
         size={size}
         radius={radius}
+        r={r}
         rt={rt}
         rb={rb}
         rl={rl}
@@ -124,6 +126,7 @@ export const UnstyledCheckbox = (props: UnstyledCheckboxProps) => {
         bl={bl}
         br={br}
         radius={radius}
+        r={r}
         rt={rt}
         rb={rb}
         rl={rl}

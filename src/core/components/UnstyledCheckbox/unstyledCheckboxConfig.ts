@@ -43,6 +43,7 @@ export const unstyledCheckboxConfig: ComponentConfig<UnstyledCheckboxConfigProps
     bl: 'unset',
     br: 'unset',
     radius: 'unset',
+    r: 'unset',
     rt: 'unset',
     rb: 'unset',
     rl: 'unset',

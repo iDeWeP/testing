@@ -4,7 +4,7 @@ import type { Classes } from '../../types';
 import { mergeClasses } from './merge-classes';
 import { getInputScale } from './scale';
 
-export const styleUnstyledCheckboxContainer = (
+export const styleCheckboxContainer = (
   className: string,
   {
     defaultSize = 'md',
@@ -17,6 +17,7 @@ export const styleUnstyledCheckboxContainer = (
     ml = 'unset',
     mr = 'unset',
     radius = 'unset',
+    r = 'unset',
     rt = 'unset',
     rb = 'unset',
     rl = 'unset',
@@ -40,6 +41,7 @@ export const styleUnstyledCheckboxContainer = (
     systemStyles.margin.l[ml],
     systemStyles.margin.r[mr],
     systemStyles.radius.all[radius],
+    systemStyles.radius.all[r],
     systemStyles.radius.t[rt],
     systemStyles.radius.b[rb],
     systemStyles.radius.l[rl],

@@ -17,6 +17,7 @@ import type {
 
 export type UnstyledCheckboxContainerProps = {
   radius?: Radius;
+  r?: Radius;
   rt?: Radius;
   rb?: Radius;
   rl?: Radius;
@@ -34,6 +35,7 @@ export type UnstyledCheckboxIconProps = Omit<
 
 export type UnstyledCheckboxTrailProps = {
   border?: Border;
+  b?: DefaultBorder;
   bx?: DefaultBorder;
   by?: DefaultBorder;
   bt?: DefaultBorder;
@@ -81,6 +83,7 @@ export type UnstyledCheckboxDefaultProps = {
   bl?: DefaultBorder;
   br?: DefaultBorder;
   radius?: Radius;
+  r?: Radius;
   rt?: Radius;
   rb?: Radius;
   rl?: Radius;

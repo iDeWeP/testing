@@ -33,6 +33,7 @@ type Props = MergeComponentProps<
     bl: DefaultBorder;
     br: DefaultBorder;
     radius: Radius;
+    r: Radius;
     rt: Radius;
     rb: Radius;
     rl: Radius;
@@ -63,6 +64,7 @@ export const UnstyledCheckboxIcon = ({
   bl,
   br,
   radius,
+  r,
   rt,
   rb,
   rl,
@@ -98,6 +100,7 @@ export const UnstyledCheckboxIcon = ({
       bl,
       br,
       radius,
+      r,
       rt,
       rb,
       rl,
