@@ -3,7 +3,7 @@ import type { Classes } from '../../types';
 import { getRippleColor, getDefaultColor } from './color';
 import { mergeClasses } from './merge-classes';
 
-export const styleUnstyledRipple = (
+export const styleRipple = (
   className: string,
   {
     theme = 'light',
