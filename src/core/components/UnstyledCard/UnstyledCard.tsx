@@ -13,7 +13,7 @@ export const UnstyledCard = <E extends ElementType>(
     props
   );
 
-  const mergedClassName = mergeClassName('unstyledCard', className, {
+  const mergedClassName = mergeClassName('card', className, {
     orientation
   });
 
