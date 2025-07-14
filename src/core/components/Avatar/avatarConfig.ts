@@ -11,6 +11,7 @@ export const avatarConfig: ComponentConfig<AvatarConfigProps> = {
     color: 'primary',
     shadow: 'unset',
     margin: 'unset',
+    m: 'unset',
     mx: 'unset',
     my: 'unset',
     mt: 'unset',

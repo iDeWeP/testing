@@ -6,16 +6,21 @@ import type {
   MergeProps
 } from '../../types';
 import type {
+  UnstyledSpinnerBarProps,
+  UnstyledSpinnerTrailProps,
+  UnstyledSpinnerInnerBorder,
+  UnstyledSpinnerOuterBorder,
+  UnstyledSpinnerOptionalProps,
   UnstyledSpinnerConfigProps,
   UnstyledSpinnerProps
 } from '../UnstyledSpinner/UnstyledSpinner.types';
 
 export type CircularProgressContainerProps = ComponentRefProps<'div'>;
 export type CircularProgressLabelProps = ComponentRefProps<'span'>;
-export type CircularProgressBarProps = ComponentRefProps<'circle'>;
-export type CircularProgressTrailProps = ComponentRefProps<'circle'>;
-export type CircularProgressInnerBorder = ComponentRefProps<'circle'>;
-export type CircularProgressOuterBorder = ComponentRefProps<'circle'>;
+export type CircularProgressBarProps = UnstyledSpinnerBarProps;
+export type CircularProgressTrailProps = UnstyledSpinnerTrailProps;
+export type CircularProgressInnerBorder = UnstyledSpinnerInnerBorder;
+export type CircularProgressOuterBorder = UnstyledSpinnerOuterBorder;
 
 export type CircularProgressComponentsProps = {
   container?: CircularProgressContainerProps;
@@ -26,10 +31,7 @@ export type CircularProgressComponentsProps = {
   outerBorder?: CircularProgressOuterBorder;
 };
 
-export type CircularProgressOptionalProps = {
-  disabled?: boolean;
-  trail?: boolean;
-};
+export type CircularProgressOptionalProps = UnstyledSpinnerOptionalProps;
 
 export type CircularProgressDefaultProps = {
   spin?: boolean;

@@ -33,6 +33,7 @@ export const badgeConfig: ComponentConfig<BadgeConfigProps> & Styles = {
     ring: 'unset',
     shadow: 'unset',
     margin: 'unset',
+    m: 'unset',
     mx: 'unset',
     my: 'unset',
     mt: 'unset',

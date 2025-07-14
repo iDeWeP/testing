@@ -12,6 +12,7 @@ export const spinnerConfig: ComponentConfig<SpinnerConfigProps> = {
     componentsProps: {},
     float: false,
     margin: 'unset',
+    m: 'unset',
     mx: 'unset',
     my: 'unset',
     mt: 'unset',

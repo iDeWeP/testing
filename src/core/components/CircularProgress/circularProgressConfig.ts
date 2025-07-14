@@ -25,6 +25,7 @@ export const circularProgressConfig: ComponentConfig<CircularProgressConfigProps
     label: true,
     float: false,
     margin: 'unset',
+    m: 'unset',
     mx: 'unset',
     my: 'unset',
     mt: 'unset',
