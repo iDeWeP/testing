@@ -33,7 +33,7 @@ export const UnstyledSpinner = (props: UnstyledSpinnerProps) => {
   const length = 2 * Math.PI * (20 - thickness / 2);
   const offset = length - (value * length) / 100;
 
-  const mergedClassName = mergeClassName('unstyledSpinner', className, {
+  const mergedClassName = mergeClassName('spinner', className, {
     disabled,
     spin,
     float,

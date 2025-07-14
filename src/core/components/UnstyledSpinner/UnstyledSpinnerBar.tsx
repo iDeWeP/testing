@@ -22,7 +22,7 @@ export const UnstyledSpinnerBar = ({
 }: Props) => {
   const theme = useTheme();
 
-  const mergedClassName = mergeClassName('unstyledSpinnerBar', className, {
+  const mergedClassName = mergeClassName('spinnerBar', className, {
     barType,
     theme,
     disabled,

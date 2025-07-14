@@ -6,7 +6,7 @@ import { mergeClasses } from './merge-classes';
 import { getScale } from './scale';
 import { getSpinnerTransition } from './transition';
 
-export const styleUnstyledSpinner = (
+export const styleSpinner = (
   className: string,
   {
     disabled = false,

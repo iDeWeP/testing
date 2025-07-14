@@ -3,7 +3,7 @@ import type { Classes } from '../../types';
 import { getColor, getSpinnerColorType } from './color';
 import { mergeClasses } from './merge-classes';
 
-export const styleUnstyledSpinnerBar = (
+export const styleSpinnerBar = (
   className: string,
   {
     barType = 'bar',
