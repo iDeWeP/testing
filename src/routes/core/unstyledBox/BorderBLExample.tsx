@@ -2,12 +2,12 @@ import { ExampleCard } from '../../../components/ExampleCard';
 import { ExampleSection } from '../../../components/ExampleSection';
 import { Example } from './Example';
 
-export const BorderYExample = () => (
-  <ExampleSection title="Border Y">
+export const BorderBLExample = () => (
+  <ExampleSection title="Border BL">
     <ExampleCard>
-      <Example by="unset">UNSET</Example>
-      <Example by="none">NONE</Example>
-      <Example by="set">SET</Example>
+      <Example bl="unset">UNSET</Example>
+      <Example bl="none">NONE</Example>
+      <Example bl="set">SET</Example>
     </ExampleCard>
   </ExampleSection>
 );

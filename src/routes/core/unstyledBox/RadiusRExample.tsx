@@ -5,15 +5,15 @@ import { Example } from './Example';
 export const RadiusRExample = () => (
   <ExampleSection title="Radius R">
     <ExampleCard>
-      <Example rr="unset">UNSET</Example>
-      <Example rr="none">NONE</Example>
-      <Example rr="xs">XS</Example>
-      <Example rr="sm">SM</Example>
-      <Example rr="md">MD</Example>
-      <Example rr="lg">LG</Example>
-      <Example rr="xl">XL</Example>
-      <Example rr="xxl">XXL</Example>
-      <Example rr="full">FULL</Example>
+      <Example radius="unset">UNSET</Example>
+      <Example radius="none">NONE</Example>
+      <Example radius="xs">XS</Example>
+      <Example radius="sm">SM</Example>
+      <Example radius="md">MD</Example>
+      <Example radius="lg">LG</Example>
+      <Example radius="xl">XL</Example>
+      <Example radius="xxl">XXL</Example>
+      <Example radius="full">FULL</Example>
     </ExampleCard>
   </ExampleSection>
 );

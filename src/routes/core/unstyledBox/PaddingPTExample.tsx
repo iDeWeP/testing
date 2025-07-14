@@ -2,8 +2,8 @@ import { ExampleCard } from '../../../components/ExampleCard';
 import { ExampleSection } from '../../../components/ExampleSection';
 import { Example } from './Example';
 
-export const PaddingTExample = () => (
-  <ExampleSection title="Padding T">
+export const PaddingPTExample = () => (
+  <ExampleSection title="Padding PT">
     <ExampleCard>
       <Example pt="unset">UNSET</Example>
       <Example pt="none">NONE</Example>
