@@ -16,6 +16,7 @@ import { OrientationExample } from './OrientationExample';
 import { PaddingBExample } from './PaddingBExample';
 import { PaddingExample } from './PaddingExample';
 import { PaddingLExample } from './PaddingLExample';
+import { PaddingPExample } from './PaddingPExample';
 import { PaddingRExample } from './PaddingRExample';
 import { PaddingTExample } from './PaddingTExample';
 import { PaddingXExample } from './PaddingXExample';
@@ -39,6 +40,7 @@ const Page = () => (
     <VariantExample />
     <OrientationExample />
     <PaddingExample />
+    <PaddingPExample />
     <PaddingXExample />
     <PaddingYExample />
     <PaddingTExample />
