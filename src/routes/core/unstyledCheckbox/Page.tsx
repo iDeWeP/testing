@@ -1,32 +1,34 @@
 import { ExampleTitle } from '../../../components/ExampleTitle';
+import { BorderBBExample } from './BorderBBExample';
 import { BorderBExample } from './BorderBExample';
+import { BorderBLExample } from './BorderBLExample';
+import { BorderBRExample } from './BorderBRExample';
+import { BorderBTExample } from './BorderBTExample';
+import { BorderBXExample } from './BorderBXExample';
+import { BorderBYExample } from './BorderBYExample';
 import { BorderExample } from './BorderExample';
-import { BorderLExample } from './BorderLExample';
-import { BorderRExample } from './BorderRExample';
-import { BorderTExample } from './BorderTExample';
-import { BorderXExample } from './BorderXExample';
-import { BorderYExample } from './BorderYExample';
 import { ColorExample } from './ColorExample';
 import { DefaultExample } from './DefaultExample';
 import { DisabledExample } from './DisabledExample';
 import { InvalidExample } from './InvalidExample';
-import { MarginBExample } from './MarginBExample';
 import { MarginExample } from './MarginExample';
-import { MarginLExample } from './MarginLExample';
+import { MarginMBExample } from './MarginMBExample';
 import { MarginMExample } from './MarginMExample';
-import { MarginRExample } from './MarginRExample';
-import { MarginTExample } from './MarginTExample';
-import { MarginXExample } from './MarginXExample';
-import { MarginYExample } from './MarginYExample';
-import { RadiusBExample } from './RadiusBExample';
-import { RadiusBLExample } from './RadiusBLExample';
-import { RadiusBRExample } from './RadiusBRExample';
+import { MarginMLExample } from './MarginMLExample';
+import { MarginMRExample } from './MarginMRExample';
+import { MarginMTExample } from './MarginMTExample';
+import { MarginMXExample } from './MarginMXExample';
+import { MarginMYExample } from './MarginMYExample';
 import { RadiusExample } from './RadiusExample';
-import { RadiusLExample } from './RadiusLExample';
+import { RadiusRBExample } from './RadiusRBExample';
+import { RadiusRBLExample } from './RadiusRBLExample';
+import { RadiusRBRExample } from './RadiusRBRExample';
 import { RadiusRExample } from './RadiusRExample';
-import { RadiusTExample } from './RadiusTExample';
-import { RadiusTLExample } from './RadiusTLExample';
-import { RadiusTRExample } from './RadiusTRExample';
+import { RadiusRLExample } from './RadiusRLExample';
+import { RadiusRRExample } from './RadiusRRExample';
+import { RadiusRTExample } from './RadiusRTExample';
+import { RadiusRTLExample } from './RadiusRTLExample';
+import { RadiusRTRExample } from './RadiusRTRExample';
 import { RippleExample } from './RippleExample';
 import { ShadowExample } from './ShadowExample';
 import { SizeExample } from './SizeExample';
@@ -44,28 +46,30 @@ const Page = () => (
     <SizeExample />
     <MarginExample />
     <MarginMExample />
-    <MarginXExample />
-    <MarginYExample />
-    <MarginTExample />
-    <MarginBExample />
-    <MarginLExample />
-    <MarginRExample />
+    <MarginMXExample />
+    <MarginMYExample />
+    <MarginMTExample />
+    <MarginMBExample />
+    <MarginMLExample />
+    <MarginMRExample />
     <BorderExample />
-    <BorderXExample />
-    <BorderYExample />
-    <BorderTExample />
     <BorderBExample />
-    <BorderLExample />
-    <BorderRExample />
+    <BorderBXExample />
+    <BorderBYExample />
+    <BorderBTExample />
+    <BorderBBExample />
+    <BorderBLExample />
+    <BorderBRExample />
     <RadiusExample />
-    <RadiusTExample />
-    <RadiusBExample />
-    <RadiusLExample />
     <RadiusRExample />
-    <RadiusTLExample />
-    <RadiusTRExample />
-    <RadiusBLExample />
-    <RadiusBRExample />
+    <RadiusRTExample />
+    <RadiusRBExample />
+    <RadiusRLExample />
+    <RadiusRRExample />
+    <RadiusRTLExample />
+    <RadiusRTRExample />
+    <RadiusRBLExample />
+    <RadiusRBRExample />
     <ColorExample />
     <ShadowExample />
     <RippleExample />
