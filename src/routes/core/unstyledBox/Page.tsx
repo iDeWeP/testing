@@ -15,6 +15,7 @@ import { GapYExample } from './GapYExample';
 import { MarginBExample } from './MarginBExample';
 import { MarginExample } from './MarginExample';
 import { MarginLExample } from './MarginLExample';
+import { MarginMExample } from './MarginMExample';
 import { MarginRExample } from './MarginRExample';
 import { MarginTExample } from './MarginTExample';
 import { MarginXExample } from './MarginXExample';
@@ -22,6 +23,7 @@ import { MarginYExample } from './MarginYExample';
 import { PaddingBExample } from './PaddingBExample';
 import { PaddingExample } from './PaddingExample';
 import { PaddingLExample } from './PaddingLExample';
+import { PaddingPExample } from './PaddingPExample';
 import { PaddingRExample } from './PaddingRExample';
 import { PaddingTExample } from './PaddingTExample';
 import { PaddingXExample } from './PaddingXExample';
@@ -44,6 +46,7 @@ const Page = () => (
     <DefaultExample />
     <VariantExample />
     <PaddingExample />
+    <PaddingPExample />
     <PaddingXExample />
     <PaddingYExample />
     <PaddingTExample />
@@ -51,6 +54,7 @@ const Page = () => (
     <PaddingLExample />
     <PaddingRExample />
     <MarginExample />
+    <MarginMExample />
     <MarginXExample />
     <MarginYExample />
     <MarginTExample />
