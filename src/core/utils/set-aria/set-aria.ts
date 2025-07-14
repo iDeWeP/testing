@@ -1,13 +1,21 @@
 import type { ElementType } from 'react';
+import type { Orientation } from '../../types';
 
 type Values = {
   element?: ElementType;
   isInvalid?: boolean;
+  orientation?: Orientation;
 };
 
 const types = {
   button: ({ element }: Values) =>
     element === 'button' ? {} : { tabIndex: 0, role: 'button' },
+  divider: ({ orientation }: Values) => ({
+    role: 'separator',
+    'aria-orientation': (orientation === 'row' ? 'horizontal' : 'vertical') as
+      | 'horizontal'
+      | 'vertical'
+  }),
   icon: () => ({ 'aria-hidden': true }),
   input: ({ isInvalid }: Values) => ({ 'aria-invalid': !!isInvalid })
 };
