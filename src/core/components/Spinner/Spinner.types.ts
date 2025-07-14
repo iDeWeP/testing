@@ -1,19 +1,18 @@
+import type { Variant, Size, Color, MergeProps } from '../../types';
 import type {
-  ComponentRefProps,
-  Variant,
-  Size,
-  Color,
-  MergeProps
-} from '../../types';
-import type {
+  UnstyledSpinnerBarProps,
+  UnstyledSpinnerTrailProps,
+  UnstyledSpinnerInnerBorder,
+  UnstyledSpinnerOuterBorder,
+  UnstyledSpinnerOptionalProps,
   UnstyledSpinnerConfigProps,
   UnstyledSpinnerProps
 } from '../UnstyledSpinner/UnstyledSpinner.types';
 
-export type SpinnerBarProps = ComponentRefProps<'circle'>;
-export type SpinnerTrailProps = ComponentRefProps<'circle'>;
-export type SpinnerInnerBorder = ComponentRefProps<'circle'>;
-export type SpinnerOuterBorder = ComponentRefProps<'circle'>;
+export type SpinnerBarProps = UnstyledSpinnerBarProps;
+export type SpinnerTrailProps = UnstyledSpinnerTrailProps;
+export type SpinnerInnerBorder = UnstyledSpinnerInnerBorder;
+export type SpinnerOuterBorder = UnstyledSpinnerOuterBorder;
 
 export type SpinnerComponentsProps = {
   bar?: SpinnerBarProps;
@@ -22,10 +21,7 @@ export type SpinnerComponentsProps = {
   outerBorder?: SpinnerOuterBorder;
 };
 
-export type SpinnerOptionalProps = {
-  disabled?: boolean;
-  trail?: boolean;
-};
+export type SpinnerOptionalProps = UnstyledSpinnerOptionalProps;
 
 export type SpinnerDefaultProps = {
   spin?: boolean;
