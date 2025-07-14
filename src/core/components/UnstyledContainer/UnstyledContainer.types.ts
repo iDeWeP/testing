@@ -19,6 +19,7 @@ export type UnstyledContainerDefaultProps = {
   size?: Size;
   scale?: Scale;
   margin?: Margin;
+  m?: Margin;
   mx?: Margin;
   my?: Margin;
   mt?: Margin;
