@@ -56,32 +56,28 @@ export const UnstyledCheckboxContainer = ({
   className,
   ...restProps
 }: Props) => {
-  const mergedClassName = mergeClassName(
-    'unstyledCheckboxContainer',
-    className,
-    {
-      defaultSize,
-      margin,
-      m,
-      mx,
-      my,
-      mt,
-      mb,
-      ml,
-      mr,
-      radius,
-      r,
-      rt,
-      rb,
-      rl,
-      rr,
-      rtl,
-      rtr,
-      rbl,
-      rbr,
-      hasRipple
-    }
-  );
+  const mergedClassName = mergeClassName('checkboxContainer', className, {
+    defaultSize,
+    margin,
+    m,
+    mx,
+    my,
+    mt,
+    mb,
+    ml,
+    mr,
+    radius,
+    r,
+    rt,
+    rb,
+    rl,
+    rr,
+    rtl,
+    rtr,
+    rbl,
+    rbr,
+    hasRipple
+  });
 
   return (
     <div

@@ -73,7 +73,7 @@ export const UnstyledCheckboxTrail = ({
 }: Props) => {
   const theme = useTheme();
 
-  const mergedClassName = mergeClassName('unstyledCheckboxTrail', className, {
+  const mergedClassName = mergeClassName('checkboxTrail', className, {
     theme,
     valid,
     invalid,

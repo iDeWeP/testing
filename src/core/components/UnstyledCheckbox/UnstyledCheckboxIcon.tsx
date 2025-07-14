@@ -82,7 +82,7 @@ export const UnstyledCheckboxIcon = ({
   const theme = useTheme();
 
   const mergedClassName = mergeClassName(
-    'unstyledCheckboxIcon',
+    'checkboxIcon',
     mergeClasses(children?.props.className, className),
     {
       theme,
