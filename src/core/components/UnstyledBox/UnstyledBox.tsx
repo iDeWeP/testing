@@ -57,7 +57,7 @@ export const UnstyledBox = <E extends ElementType>(
 
   const theme = useTheme();
 
-  const mergedClassName = mergeClassName('unstyledBox', className, {
+  const mergedClassName = mergeClassName('box', className, {
     theme,
     variant,
     padding,
