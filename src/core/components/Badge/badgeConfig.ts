@@ -28,10 +28,8 @@ export const badgeConfig: ComponentConfig<BadgeConfigProps> & Styles = {
     placement: 'top-right',
     overlap: 'rounded',
     size: 'md',
-    radius: 'full',
     color: 'error',
     ring: 'unset',
-    shadow: 'unset',
     margin: 'unset',
     m: 'unset',
     mx: 'unset',
@@ -47,6 +45,7 @@ export const badgeConfig: ComponentConfig<BadgeConfigProps> & Styles = {
     bb: 'unset',
     bl: 'unset',
     br: 'unset',
+    radius: 'full',
     rt: 'unset',
     rb: 'unset',
     rl: 'unset',
@@ -55,6 +54,7 @@ export const badgeConfig: ComponentConfig<BadgeConfigProps> & Styles = {
     rtr: 'unset',
     rbl: 'unset',
     rbr: 'unset',
+    shadow: 'unset',
     gap: 'unset'
   },
   styles: {

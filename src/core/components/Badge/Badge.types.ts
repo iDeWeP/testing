@@ -4,9 +4,7 @@ import type {
   CornerPlacement,
   Overlap,
   DefaultSize,
-  Radius,
   Color,
-  Shadow,
   MergeProps
 } from '../../types';
 import type {
@@ -24,10 +22,8 @@ export type BadgeDefaultProps = {
   placement?: CornerPlacement;
   overlap?: Overlap;
   size?: DefaultSize;
-  radius?: Radius;
   color?: Color;
   ring?: Color;
-  shadow?: Shadow;
 };
 
 export type BadgeConfigProps = MergeProps<

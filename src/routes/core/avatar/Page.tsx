@@ -2,8 +2,6 @@ import { ExampleTitle } from '../../../components/ExampleTitle';
 import { ColorExample } from './ColorExample';
 import { DefaultExample } from './DefaultExample';
 import { InitialsExample } from './InitialsExample';
-import { RadiusExample } from './RadiusExample';
-import { ShadowExample } from './ShadowExample';
 import { SizeExample } from './SizeExample';
 import { VariantExample } from './VariantExample';
 
@@ -14,9 +12,7 @@ const Page = () => (
     <InitialsExample />
     <VariantExample />
     <SizeExample />
-    <RadiusExample />
     <ColorExample />
-    <ShadowExample />
   </>
 );
 
