@@ -63,3 +63,9 @@ export const getPadding = (
 export const getDefaultSize = (size: Size) => size.split('-')[0] as DefaultSize;
 
 export const getInnerSize = (size: DefaultSize) => `${size}-${size}` as Size;
+
+export const getFontSize = (size: Size) => {
+  const sizes = size.split('-');
+
+  return sizes.length === 2 ? 'xs' : sizes[0];
+};
