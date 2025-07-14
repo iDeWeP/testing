@@ -4,14 +4,14 @@ import { ColorExample } from './ColorExample';
 import { DefaultExample } from './DefaultExample';
 import { DisabledExample } from './DisabledExample';
 import { FloatExample } from './FloatExample';
-import { MarginBExample } from './MarginBExample';
 import { MarginExample } from './MarginExample';
-import { MarginLExample } from './MarginLExample';
+import { MarginMBExample } from './MarginMBExample';
 import { MarginMExample } from './MarginMExample';
-import { MarginRExample } from './MarginRExample';
-import { MarginTExample } from './MarginTExample';
-import { MarginXExample } from './MarginXExample';
-import { MarginYExample } from './MarginYExample';
+import { MarginMLExample } from './MarginMLExample';
+import { MarginMRExample } from './MarginMRExample';
+import { MarginMTExample } from './MarginMTExample';
+import { MarginMXExample } from './MarginMXExample';
+import { MarginMYExample } from './MarginMYExample';
 import { SizeExample } from './SizeExample';
 import { SpinExample } from './SpinExample';
 import { ThicknessExample } from './ThicknessExample';
@@ -31,12 +31,12 @@ const Page = () => (
     <ThicknessExample />
     <MarginExample />
     <MarginMExample />
-    <MarginXExample />
-    <MarginYExample />
-    <MarginTExample />
-    <MarginBExample />
-    <MarginLExample />
-    <MarginRExample />
+    <MarginMXExample />
+    <MarginMYExample />
+    <MarginMTExample />
+    <MarginMBExample />
+    <MarginMLExample />
+    <MarginMRExample />
     <BorderExample />
     <ColorExample />
   </>
