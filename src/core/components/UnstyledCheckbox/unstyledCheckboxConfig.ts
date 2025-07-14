@@ -35,6 +35,7 @@ export const unstyledCheckboxConfig: ComponentConfig<UnstyledCheckboxConfigProps
     ml: 'unset',
     mr: 'unset',
     border: 'auto',
+    b: 'unset',
     bx: 'unset',
     by: 'unset',
     bt: 'unset',
@@ -58,7 +59,7 @@ export const unstyledCheckboxConfig: ComponentConfig<UnstyledCheckboxConfigProps
   styles: {
     root: {
       default: {
-        display: 'inline-flex',
+        display: 'inline-block',
         position: 'relative'
       }
     },
