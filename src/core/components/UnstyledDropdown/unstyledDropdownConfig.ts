@@ -8,6 +8,7 @@ export const unstyledDropdownConfig: ComponentConfig<UnstyledDropdownConfigProps
       variant: 'solid',
       orientation: 'row',
       padding: 'unset',
+      p: 'unset',
       px: 'unset',
       py: 'unset',
       pt: 'unset',

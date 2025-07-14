@@ -18,6 +18,7 @@ export type UnstyledDropdownDefaultProps = {
   variant?: Variant;
   orientation?: Orientation;
   padding?: Padding;
+  p?: Padding;
   px?: Padding;
   py?: Padding;
   pt?: Padding;
