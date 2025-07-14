@@ -14,17 +14,20 @@ export const Divider = <E extends ElementType>(props: DividerProps<E>) => {
     className,
     componentsProps,
     children,
+    padding,
     ...restProps
   } = useMergeProps('divider', dividerConfig.props, props);
 
   const mergedClassName = mergeClassName('divider', className, {
     orientation,
+    padding,
     decorated: !!children
   });
 
   return (
     <UnstyledBox
       variant="text"
+      padding="unset"
       className={mergedClassName}
       {...setAria('divider', { orientation })}
       {...restProps}
