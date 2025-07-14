@@ -30,7 +30,7 @@ export type UnstyledCheckboxContainerProps = {
 
 export type UnstyledCheckboxIconProps = Omit<
   ComponentRefProps<'svg'>,
-  'by' | 'radius'
+  'by' | 'radius' | 'r'
 >;
 
 export type UnstyledCheckboxTrailProps = {
