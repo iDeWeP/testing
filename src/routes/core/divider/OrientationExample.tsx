@@ -5,10 +5,10 @@ import { Example } from './Example';
 export const OrientationExample = () => (
   <ExampleSection title="Orientation">
     <ExampleCard>
-      <Example orientation="row"></Example>
+      <Example orientation="row">ROW</Example>
     </ExampleCard>
     <ExampleCard height>
-      <Example orientation="col"></Example>
+      <Example orientation="col">COL</Example>
     </ExampleCard>
   </ExampleSection>
 );
