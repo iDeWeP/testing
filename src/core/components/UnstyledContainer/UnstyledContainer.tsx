@@ -48,7 +48,7 @@ export const UnstyledContainer = <E extends ElementType>(
 
   const theme = useTheme();
 
-  const mergedClassName = mergeClassName('unstyledContainer', className, {
+  const mergedClassName = mergeClassName('container', className, {
     theme,
     variant,
     size,
