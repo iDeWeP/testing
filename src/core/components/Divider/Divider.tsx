@@ -24,6 +24,7 @@ export const Divider = <E extends ElementType>(props: DividerProps<E>) => {
 
   return (
     <UnstyledBox
+      variant="text"
       className={mergedClassName}
       {...setAria('divider', { orientation })}
       {...restProps}

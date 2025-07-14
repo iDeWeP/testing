@@ -1,14 +1,12 @@
 import type { ElementType, ComponentPropsWithRef } from 'react';
 import type {
   ComponentRefProps,
-  Variant,
   Orientation,
   CrossPlacement,
   Padding,
   Margin,
   Font,
   Color,
-  Shadow,
   Gap,
   MergeProps
 } from '../../types';
@@ -23,10 +21,10 @@ export type DividerComponentsProps = {
 
 export type DividerDefaultProps = {
   as?: ElementType;
-  variant?: Variant;
   orientation?: Orientation;
   placement?: CrossPlacement;
   padding?: Padding;
+  p?: Padding;
   px?: Padding;
   py?: Padding;
   pt?: Padding;
@@ -34,6 +32,7 @@ export type DividerDefaultProps = {
   pl?: Padding;
   pr?: Padding;
   margin?: Margin;
+  m?: Margin;
   mx?: Margin;
   my?: Margin;
   mt?: Margin;
@@ -42,7 +41,6 @@ export type DividerDefaultProps = {
   mr?: Margin;
   font?: Font;
   color?: Color;
-  shadow?: Shadow;
   gap?: Gap;
   componentsProps?: DividerComponentsProps;
 };

@@ -17,10 +17,10 @@ type Styles = {
 export const dividerConfig: ComponentConfig<DividerConfigProps> & Styles = {
   props: {
     as: 'span',
-    variant: 'text',
     orientation: 'row',
     placement: 'center',
     padding: 'unset',
+    p: 'unset',
     px: 'unset',
     py: 'unset',
     pt: 'unset',
@@ -28,6 +28,7 @@ export const dividerConfig: ComponentConfig<DividerConfigProps> & Styles = {
     pl: 'unset',
     pr: 'unset',
     margin: 'unset',
+    m: 'unset',
     mx: 'unset',
     my: 'unset',
     mt: 'unset',
@@ -36,7 +37,6 @@ export const dividerConfig: ComponentConfig<DividerConfigProps> & Styles = {
     mr: 'unset',
     font: 'xs',
     color: 'surface',
-    shadow: 'unset',
     gap: 'xs',
     componentsProps: {}
   },
@@ -45,6 +45,7 @@ export const dividerConfig: ComponentConfig<DividerConfigProps> & Styles = {
       decorated: {
         font: 'text-sm',
         textWrap: 'text-nowrap',
+        alignItems: 'items-center',
         userSelect: 'select-none'
       },
       orientation: {
