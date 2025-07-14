@@ -12,7 +12,7 @@ export const Label = <E extends ElementType>(props: LabelProps<E>) => {
     props
   );
 
-  const mergedClassName = mergeClassName('unstyledCard', className, {
+  const mergedClassName = mergeClassName('label', className, {
     orientation: placement === 'top' || placement === 'bottom' ? 'col' : 'row'
   });
 
