@@ -1,6 +1,6 @@
 import type {
-  DefaultSize,
   Padding,
+  DefaultSize,
   Size,
   Variant,
   Scale,
