@@ -3,7 +3,6 @@ import { sharedStyles } from '../../config/shared-styles';
 import { systemStyles } from '../../config/system-styles';
 import type { Classes } from '../../types';
 import { mergeClasses } from './merge-classes';
-import { getScale } from './scale';
 import { getSpacing } from './spacing';
 import { getSpinnerTransition } from './transition';
 
@@ -24,15 +23,13 @@ export const styleSpinner = (
     mr = 'unset'
   }: Classes
 ) => {
-  const scales = getScale(size, 'square');
   const margins = getSpacing(margin);
 
   return mergeClasses(
     unstyledSpinnerConfig.styles.root.default,
     float && sharedStyles.position.absolute,
-    float &&
-      unstyledSpinnerConfig.styles.root.float[scales.default][scales.size],
-    systemStyles.size[scales.default].square[scales.size],
+    float && unstyledSpinnerConfig.styles.root.float[size],
+    systemStyles.size.normal.square[size],
     systemStyles.margin.all[margins.all],
     systemStyles.margin.x[margins.x],
     systemStyles.margin.y[margins.y],
