@@ -4,7 +4,7 @@ import { systemStyles } from '../../config/system-styles';
 import type { Classes } from '../../types';
 import { getColor } from './color';
 import { mergeClasses } from './merge-classes';
-import { getDividerPadding } from './spacing';
+import { getDividerPadding, getSpacing } from './spacing';
 
 export const styleDivider = (
   className: string,
@@ -33,15 +33,16 @@ export const styleDivider = (
     decorated = false
   }: Classes
 ) => {
-  const { x, y } = getDividerPadding(orientation, padding);
-  const textColor = getColor('text', color).textColor;
+  const paddings = getDividerPadding(orientation, padding);
+  const margins = getSpacing(margin);
+  const textColor = getColor('text', color).text;
 
   return mergeClasses(
     sharedStyles.display.flex,
     decorated && dividerConfig.styles.root.decorated,
     dividerConfig.styles.root.orientation[orientation],
-    systemStyles.padding.default.x[x],
-    systemStyles.padding.default.y[y],
+    systemStyles.padding.default.x[paddings.x],
+    systemStyles.padding.default.y[paddings.y],
     systemStyles.padding.default.all[p],
     systemStyles.padding.default.x[px],
     systemStyles.padding.default.y[py],
@@ -49,7 +50,9 @@ export const styleDivider = (
     systemStyles.padding.default.b[pb],
     systemStyles.padding.default.l[pl],
     systemStyles.padding.default.r[pr],
-    systemStyles.margin.default[margin],
+    systemStyles.margin.all[margins.all],
+    systemStyles.margin.x[margins.x],
+    systemStyles.margin.y[margins.y],
     systemStyles.margin.all[m],
     systemStyles.margin.x[mx],
     systemStyles.margin.y[my],
