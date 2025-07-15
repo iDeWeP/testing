@@ -2,6 +2,7 @@ import type {
   Padding,
   DefaultSize,
   Size,
+  Font,
   Variant,
   Scale,
   Border,
@@ -31,6 +32,12 @@ export const getSpacing = (spacing: Spacing, isSide?: boolean) => {
 export const isSpacingInner = (spacing: Spacing) => spacing.includes('-');
 
 export const getDefaultSize = (size: Size) => size.split('-')[0] as DefaultSize;
+
+export const getReversedFont = (font: Font) => {
+  const fonts = font.split('-');
+
+  return (fonts.length === 2 ? fonts[0] : `${font}-${font}`) as Font;
+};
 
 export const getDefaultSpacing = (spacing: Spacing) =>
   spacing.split('-')[0] as Spacing;
