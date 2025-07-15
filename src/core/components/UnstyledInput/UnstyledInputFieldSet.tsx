@@ -20,7 +20,7 @@ export const UnstyledInputFieldset = ({
 }: Props) => {
   const theme = useTheme();
 
-  const mergedClassName = mergeClassName('unstyledInputFieldset', className, {
+  const mergedClassName = mergeClassName('inputFieldset', className, {
     inputType,
     theme,
     disabled,

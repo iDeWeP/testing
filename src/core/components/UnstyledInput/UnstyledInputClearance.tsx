@@ -13,7 +13,7 @@ export const UnstyledInputClearance = ({
   className,
   ...restProps
 }: Props) => {
-  const mergedClassName = mergeClassName('unstyledInputClearance', className, {
+  const mergedClassName = mergeClassName('inputClearance', className, {
     gap
   });
 

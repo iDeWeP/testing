@@ -24,7 +24,7 @@ export const UnstyledInputLabel = ({
   className,
   ...restProps
 }: Props) => {
-  const mergedClassName = mergeClassName('unstyledInputLabel', className, {
+  const mergedClassName = mergeClassName('inputLabel', className, {
     inputType,
     inputVariant,
     inputSize,

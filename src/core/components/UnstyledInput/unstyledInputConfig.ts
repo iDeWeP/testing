@@ -66,6 +66,7 @@ export const unstyledInputConfig: ComponentConfig<UnstyledInputConfigProps> &
     ml: 'unset',
     mr: 'unset',
     radius: 'unset',
+    r: 'unset',
     rt: 'unset',
     rb: 'unset',
     rl: 'unset',

@@ -50,6 +50,7 @@ export type UnstyledInputDefaultProps = {
   ml?: Margin;
   mr?: Margin;
   radius?: Radius;
+  r?: Radius;
   rt?: Radius;
   rb?: Radius;
   rl?: Radius;

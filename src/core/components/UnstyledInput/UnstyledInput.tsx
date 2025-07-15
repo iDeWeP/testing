@@ -40,6 +40,7 @@ export const UnstyledInput = <E extends ElementType>(
     ml,
     mr,
     radius,
+    r,
     rt,
     rb,
     rl,
@@ -68,7 +69,7 @@ export const UnstyledInput = <E extends ElementType>(
     handleClose: handleBlur
   } = useControlledState(false, focused, onFocus, onBlur);
 
-  const mergedClassName = mergeClassName('unstyledInput', className, {
+  const mergedClassName = mergeClassName('input', className, {
     inputType: Component,
     disabled,
     inputSize,
@@ -103,6 +104,7 @@ export const UnstyledInput = <E extends ElementType>(
         variant={variant}
         placement="left"
         radius={radius}
+        r={r}
         rt={rt}
         rb={rb}
         rl={rl}
@@ -162,6 +164,7 @@ export const UnstyledInput = <E extends ElementType>(
         variant={variant}
         placement="right"
         radius={radius}
+        r={r}
         rt={rt}
         rb={rb}
         rl={rl}

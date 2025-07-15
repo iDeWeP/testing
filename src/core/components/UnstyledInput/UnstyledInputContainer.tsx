@@ -60,7 +60,7 @@ export const UnstyledInputContainer = ({
 }: Props) => {
   const theme = useTheme();
 
-  const mergedClassName = mergeClassName('unstyledInputContainer', className, {
+  const mergedClassName = mergeClassName('inputContainer', className, {
     inputType,
     theme,
     focused,

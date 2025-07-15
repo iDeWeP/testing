@@ -16,6 +16,7 @@ type Props = MergeComponentProps<
     variant: InputVariant;
     placement: SidePlacement;
     radius: Radius;
+    r: Radius;
     rt: Radius;
     rb: Radius;
     rl: Radius;
@@ -34,6 +35,7 @@ export const UnstyledInputDecorator = ({
   variant: inputVariant,
   placement: sidePlacement,
   radius,
+  r,
   rt,
   rb,
   rl,
@@ -49,13 +51,14 @@ export const UnstyledInputDecorator = ({
 }: Props) => {
   const theme = useTheme();
 
-  const mergedClassName = mergeClassName('unstyledInputDecorator', className, {
+  const mergedClassName = mergeClassName('inputDecorator', className, {
     inputType,
     theme,
     disabled,
     inputVariant,
     sidePlacement,
     radius,
+    r,
     rt,
     rb,
     rl,
