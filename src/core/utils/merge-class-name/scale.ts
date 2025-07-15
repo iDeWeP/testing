@@ -1,5 +1,5 @@
 import type { DefaultSize, Size, Scale } from '../../types';
-import { isSizeInner, getDefaultSize } from './spacing';
+import { isSpacingInner, getDefaultSize } from './spacing';
 
 type GetScale = {
   default: 'normal' | 'inner';
@@ -11,7 +11,7 @@ type GetScale = {
 };
 
 export const getScale = (size: Size, scale: Scale): GetScale => {
-  const isInner = isSizeInner(size);
+  const isInner = isSpacingInner(size);
   const defaultSize = getDefaultSize(size);
   const padding =
     scale === 'circle' || scale === 'square' ? 'square' : 'normal';
