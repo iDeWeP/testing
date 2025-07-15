@@ -37,7 +37,7 @@ export const circularProgressConfig: ComponentConfig<CircularProgressConfigProps
   styles: {
     root: {
       default: {
-        display: 'inline-block',
+        display: 'inline-flex',
         position: 'relative',
         borderRadius: 'rounded-full',
         overflow: 'overflow-hidden'

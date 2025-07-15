@@ -12,16 +12,42 @@ export const CircularProgress = (props: CircularProgressProps) => {
     disabled = false,
     variant,
     size,
+    margin,
+    m,
+    mx,
+    my,
+    mt,
+    mb,
+    ml,
+    mr,
     color,
     ...restProps
   } = useMergeProps('circularProgress', circularProgressConfig.props, props);
 
   return (
-    <CircularProgressContainer size={size}>
+    <CircularProgressContainer
+      size={size}
+      margin={margin}
+      m={m}
+      mx={mx}
+      my={my}
+      mt={mt}
+      mb={mb}
+      ml={ml}
+      mr={mr}
+    >
       <UnstyledSpinner
         disabled={disabled}
         variant={variant}
         size={size}
+        margin="unset"
+        m="unset"
+        mx="unset"
+        my="unset"
+        mt="unset"
+        mb="unset"
+        ml="unset"
+        mr="unset"
         color={color}
         {...restProps}
       />
