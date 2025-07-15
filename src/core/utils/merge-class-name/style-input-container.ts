@@ -4,7 +4,7 @@ import { systemStyles } from '../../config/system-styles';
 import type { Classes } from '../../types';
 import { getColor, getDefaultColor } from './color';
 import { mergeClasses } from './merge-classes';
-import { getInputSize } from './spacing';
+import { getInputSize, getSpacing } from './spacing';
 
 export const styleInputContainer = (
   className: string,
@@ -30,6 +30,7 @@ export const styleInputContainer = (
   }: Classes
 ) => {
   const size = getInputSize(inputSize, resize);
+  const margins = getSpacing(margin);
   const textColor = getColor(
     'text',
     getDefaultColor(color),
@@ -43,8 +44,9 @@ export const styleInputContainer = (
     shifted && unstyledInputConfig.styles.container.shifted,
     unstyledInputConfig.styles.container.default,
     unstyledInputConfig.styles.container.size[inputType][size],
-    systemStyles.margin.x[margin],
-    systemStyles.margin.y[margin],
+    systemStyles.margin.all[margins.all],
+    systemStyles.margin.x[margins.x],
+    systemStyles.margin.y[margins.y],
     systemStyles.margin.all[m],
     systemStyles.margin.x[mx],
     systemStyles.margin.y[my],
