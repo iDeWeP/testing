@@ -6,7 +6,7 @@ export const inputConfig: ComponentConfig<InputConfigProps> = {
     as: 'input',
     variant: 'outlined',
     size: 'md',
-    radius: 'md',
+    radius: 'lg',
     color: 'primary',
     gap: 'xs',
     componentsProps: {},
