@@ -1,26 +1,30 @@
 import type {
-  InputSize,
   DefaultSize,
-  Variant,
+  Padding,
   Size,
+  Variant,
   Scale,
   Border,
   DefaultBorder,
   Orientation,
-  Padding
+  InputSize
 } from '../../types';
 
 const setSize = (condition: boolean, size: DefaultSize) =>
   condition ? `${size}-${size}` : size;
 
-const setPadding = (condition: boolean, padding: Padding) =>
+const setSpacing = (condition: boolean, padding: Padding) =>
   condition ? padding : 'unset';
 
-export const getInputSize = (size: InputSize, resize: boolean) =>
-  resize ? 'full' : size;
+export const getDefaultSize = (size: Size) => size.split('-')[0] as DefaultSize;
 
-export const getInputSpacing = (decorated: boolean) =>
-  decorated ? 'decorated' : 'default';
+export const getInnerSize = (size: DefaultSize) => `${size}-${size}` as Size;
+
+export const getFontSize = (size: Size) => {
+  const sizes = size.split('-');
+
+  return sizes.length === 2 ? 'xs' : sizes[0];
+};
 
 export const getContainerPadding = (
   variant: Variant,
@@ -68,20 +72,16 @@ export const getContainerPadding = (
   };
 };
 
-export const getDefaultSize = (size: Size) => size.split('-')[0] as DefaultSize;
-
-export const getInnerSize = (size: DefaultSize) => `${size}-${size}` as Size;
-
-export const getFontSize = (size: Size) => {
-  const sizes = size.split('-');
-
-  return sizes.length === 2 ? 'xs' : sizes[0];
-};
-
 export const getDividerPadding = (
   orientation: Orientation,
   padding: Padding
 ) => ({
-  x: setPadding(orientation === 'row', padding),
-  y: setPadding(orientation === 'col', padding)
+  x: setSpacing(orientation === 'row', padding),
+  y: setSpacing(orientation === 'col', padding)
 });
+
+export const getInputSize = (size: InputSize, resize: boolean) =>
+  resize ? 'full' : size;
+
+export const getInputSpacing = (decorated: boolean) =>
+  decorated ? 'decorated' : 'default';
