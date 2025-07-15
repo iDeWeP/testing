@@ -57,8 +57,7 @@ export const unstyledButtonConfig: ComponentConfig<UnstyledButtonConfigProps> &
         group: 'checked'
       },
       default: {
-        position: 'relative',
-        font: 'font-semibold'
+        position: 'relative'
       },
       loading: {
         normal: {
