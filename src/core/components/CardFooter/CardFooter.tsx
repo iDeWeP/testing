@@ -8,19 +8,24 @@ import { cardFooterConfig } from './cardFooterConfig';
 export const CardFooter = <E extends ElementType>(
   props: CardFooterProps<E>
 ) => {
-  const { className, padding, ...restProps } = useMergeProps(
-    'cardFooter',
-    cardFooterConfig.props,
-    props
-  );
+  const { className, variant, padding, margin, border, radius, ...restProps } =
+    useMergeProps('cardFooter', cardFooterConfig.props, props);
 
   const mergedClassName = mergeClassName('cardFooter', className, {
-    padding
+    variant,
+    padding,
+    margin,
+    border,
+    radius
   });
 
   return (
     <UnstyledCard
+      variant={variant}
       padding="unset"
+      margin="unset"
+      border="unset"
+      radius="unset"
       className={mergedClassName}
       {...restProps}
     />
