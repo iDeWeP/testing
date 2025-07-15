@@ -2,20 +2,18 @@ import type {
   CSSProps,
   RippleScale,
   Theme,
+  CSSStyles,
   ComponentConfig
 } from '../../types';
 import type { UnstyledRippleConfigProps } from './UnstyledRipple.types';
 
-type ColorState = 'stateless' | 'stateful';
+type ColorType = 'stateless' | 'stateful';
 
 type Styles = {
   styles: {
     root: {
       default: CSSProps;
-      color: Record<
-        RippleScale,
-        Record<ColorState, Record<Theme, Record<string, CSSProps>>>
-      >;
+      color: Record<RippleScale, Record<ColorType, Record<Theme, CSSStyles>>>;
     };
   };
 };
