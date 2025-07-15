@@ -6,7 +6,7 @@ import { getBorder } from './border';
 import { getColor } from './color';
 import { mergeClasses } from './merge-classes';
 import { getScale } from './scale';
-import { getContainerPadding, getSpacing } from './spacing';
+import { getContainerPadding, getSpacing, getFontSize } from './spacing';
 
 export const styleContainer = (
   className: string,
@@ -62,10 +62,11 @@ export const styleContainer = (
   );
   const margins = getSpacing(margin);
   const colors = getColor(variant, color);
+  const isSquare = scale === 'square';
 
   return mergeClasses(
     unstyledContainerConfig.styles.root.default,
-    systemStyles.size[scales.default][scales.dimension][scales.size],
+    systemStyles.size.normal[scales.size][size],
     systemStyles.padding[scales.padding].x[paddings.x],
     systemStyles.padding[scales.padding].y[paddings.y],
     systemStyles.padding[scales.padding].t[paddings.t],
@@ -100,13 +101,13 @@ export const styleContainer = (
     systemStyles.radius.tr[rtr],
     systemStyles.radius.bl[rbl],
     systemStyles.radius.br[rbr],
-    systemStyles.size.font[scales.font],
+    systemStyles.size.font[getFontSize(size)],
     systemStyles.color.bg[theme][colors.bg],
     systemStyles.color.text[theme][colors.text],
     systemStyles.color.fill[theme][colors.text],
     systemStyles.shadow[shadow],
     systemStyles.gap.all[gap],
-    scales.isSquare && sharedStyles.scale.square,
+    isSquare && sharedStyles.scale.square,
     className
   );
 };
