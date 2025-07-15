@@ -6,7 +6,7 @@ import { getColor, getDefaultColor } from './color';
 import { mergeClasses } from './merge-classes';
 import { getInputSize } from './spacing';
 
-export const styleUnstyledInputContainer = (
+export const styleInputContainer = (
   className: string,
   {
     inputType = 'input',
@@ -30,20 +30,21 @@ export const styleUnstyledInputContainer = (
   }: Classes
 ) => {
   const size = getInputSize(inputSize, resize);
-  const { textColor } = getColor(
+  const textColor = getColor(
     'text',
     getDefaultColor(color),
     disabled,
     valid,
     invalid
-  );
+  ).text;
 
   return mergeClasses(
     focused && unstyledInputConfig.styles.container.focused,
     shifted && unstyledInputConfig.styles.container.shifted,
     unstyledInputConfig.styles.container.default,
     unstyledInputConfig.styles.container.size[inputType][size],
-    systemStyles.margin.default[margin],
+    systemStyles.margin.x[margin],
+    systemStyles.margin.y[margin],
     systemStyles.margin.all[m],
     systemStyles.margin.x[mx],
     systemStyles.margin.y[my],
@@ -54,7 +55,7 @@ export const styleUnstyledInputContainer = (
     systemStyles.color.text[theme][textColor],
     systemStyles.color.fill[theme][textColor],
     unstyledInputConfig.styles.container.color[theme][
-      getColor('text', color, disabled, valid, invalid).textColor
+      getColor('text', color, disabled, valid, invalid).text
     ],
     disabled && sharedStyles.focusable.disabled,
     className

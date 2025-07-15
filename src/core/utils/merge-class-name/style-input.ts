@@ -3,7 +3,7 @@ import { sharedStyles } from '../../config/shared-styles';
 import type { Classes } from '../../types';
 import { mergeClasses } from './merge-classes';
 
-export const styleUnstyledInput = (
+export const styleInput = (
   className: string,
   {
     inputType = 'input',

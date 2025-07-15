@@ -4,7 +4,7 @@ import type { Classes } from '../../types';
 import { getInputColor } from './color';
 import { mergeClasses } from './merge-classes';
 
-export const styleUnstyledInputFieldset = (
+export const styleInputFieldset = (
   className: string,
   {
     inputType = 'input',

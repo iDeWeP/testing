@@ -3,7 +3,7 @@ import { systemStyles } from '../../config/system-styles';
 import type { Classes } from '../../types';
 import { mergeClasses } from './merge-classes';
 
-export const styleUnstyledInputLabel = (
+export const styleInputLabel = (
   className: string,
   {
     inputType = 'input',

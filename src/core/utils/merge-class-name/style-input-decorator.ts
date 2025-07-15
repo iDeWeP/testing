@@ -4,10 +4,10 @@ import { systemStyles } from '../../config/system-styles';
 import type { Classes } from '../../types';
 import { getInputColor } from './color';
 import { mergeClasses } from './merge-classes';
-import { getInputRadius } from './radius';
+import { getInputRadius, getRadius } from './radius';
 import { getInputSpacing } from './spacing';
 
-export const styleUnstyledInputDecorator = (
+export const styleInputDecorator = (
   className: string,
   {
     inputType = 'input',
@@ -16,6 +16,7 @@ export const styleUnstyledInputDecorator = (
     inputVariant = 'default',
     sidePlacement = 'left',
     radius = 'unset',
+    r = 'unset',
     rt = 'unset',
     rb = 'unset',
     rl = 'unset',
@@ -29,19 +30,8 @@ export const styleUnstyledInputDecorator = (
   }: Classes
 ) => {
   const isOutlined = inputVariant === 'outlined';
-  const { l, r, tl, tr, bl, br } = getInputRadius(
-    inputVariant,
-    sidePlacement,
-    radius,
-    rt,
-    rb,
-    rl,
-    rr,
-    rtl,
-    rtr,
-    rbl,
-    rbr
-  );
+  const radiuses = getInputRadius(inputVariant, sidePlacement, radius);
+  const isLeft = sidePlacement === 'left';
 
   return mergeClasses(
     sharedStyles.display['inline-flex'],
@@ -51,12 +41,22 @@ export const styleUnstyledInputDecorator = (
     isOutlined && unstyledInputConfig.styles.decorator.outlined[sidePlacement],
     unstyledInputConfig.styles.generic.variant.default[inputVariant],
     unstyledInputConfig.styles.generic.variant[inputType][inputVariant],
-    systemStyles.radius.l[l],
-    systemStyles.radius.r[r],
-    systemStyles.radius.tl[tl],
-    systemStyles.radius.tr[tr],
-    systemStyles.radius.bl[bl],
-    systemStyles.radius.br[br],
+    systemStyles.radius.l[radiuses.l],
+    systemStyles.radius.r[radiuses.r],
+    systemStyles.radius.tl[radiuses.tl],
+    systemStyles.radius.tr[radiuses.tr],
+    systemStyles.radius.l[getRadius(isLeft, r)],
+    systemStyles.radius.r[getRadius(!isLeft, r)],
+    systemStyles.radius.tl[getRadius(isLeft, rt)],
+    systemStyles.radius.tr[getRadius(!isLeft, rt)],
+    systemStyles.radius.bl[getRadius(isLeft, rb)],
+    systemStyles.radius.br[getRadius(!isLeft, rb)],
+    systemStyles.radius.l[getRadius(isLeft, rl)],
+    systemStyles.radius.r[getRadius(!isLeft, rr)],
+    systemStyles.radius.tl[getRadius(isLeft, rtl)],
+    systemStyles.radius.tr[getRadius(!isLeft, rtr)],
+    systemStyles.radius.bl[getRadius(isLeft, rbl)],
+    systemStyles.radius.br[getRadius(!isLeft, rbr)],
     systemStyles.color.bg[theme][getInputColor(inputVariant, disabled)],
     systemStyles.gap.all[gap],
     className
