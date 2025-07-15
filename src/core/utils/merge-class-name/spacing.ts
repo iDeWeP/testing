@@ -10,10 +10,12 @@ import type {
   InputSize
 } from '../../types';
 
+type Spacing = Padding;
+
 const setSize = (condition: boolean, size: DefaultSize) =>
   condition ? `${size}-${size}` : size;
 
-const setSpacing = (condition: boolean, padding: Padding) =>
+const setSpacing = (condition: boolean, padding: Spacing) =>
   condition ? padding : 'unset';
 
 export const getSpacing = (spacing: Padding) => {
@@ -21,14 +23,17 @@ export const getSpacing = (spacing: Padding) => {
 
   return {
     all: setSpacing(!isInner, spacing),
-    x: setSpacing(isInner, spacing),
+    x: setSpacing(isInner, getDefaultSpacing(spacing)),
     y: setSpacing(isInner, spacing)
   };
 };
 
-export const isSpacingInner = (size: Padding) => size.includes('-');
+export const isSpacingInner = (spacing: Spacing) => spacing.includes('-');
 
 export const getDefaultSize = (size: Size) => size.split('-')[0] as DefaultSize;
+
+export const getDefaultSpacing = (spacing: Spacing) =>
+  spacing.split('-')[0] as Spacing;
 
 export const getInnerSize = (size: DefaultSize) => `${size}-${size}` as Size;
 
