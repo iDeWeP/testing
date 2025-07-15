@@ -16,7 +16,7 @@ export const styleCircularProgressLabel = (
     color = 'unset'
   }: Classes
 ) => {
-  const textColor = getColor(variant, color, disabled).textColor;
+  const textColor = getColor(variant, color, disabled).text;
 
   return mergeClasses(
     circularProgressConfig.styles.label.default,
