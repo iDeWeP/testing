@@ -109,3 +109,6 @@ export const getInputSize = (size: InputSize, resize: boolean) =>
 
 export const getInputSpacing = (decorated: boolean) =>
   decorated ? 'decorated' : 'default';
+
+export const setSpinnerSize = (size: Size) =>
+  isSpacingInner(size) ? 'xs' : (`${size}-${size}` as Size);

@@ -20,3 +20,6 @@ export const getScale = (size: Size, scale: Scale): GetScale => {
 
 export const getInputScale = (hasRipple: boolean) =>
   hasRipple ? 'normal' : 'text';
+
+export const getSpinnerScale = (size: Size) =>
+  isSpacingInner(size) ? 'text' : 'normal';
