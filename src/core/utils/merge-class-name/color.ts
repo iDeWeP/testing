@@ -8,29 +8,29 @@ import type {
 } from '../../types';
 import { hasVariantBg } from './variant';
 
+const variants = {
+  outlined: (color: string, isReversed: boolean) => ({
+    bg: 'none',
+    text: isReversed ? `${color}-on` : color
+  }),
+  text: (color: string, isReversed: boolean) => ({
+    bg: 'none',
+    text: isReversed ? `${color}-on` : color
+  }),
+  light: (color: string, isReversed: boolean) => ({
+    bg: isReversed ? color : `${color}-light`,
+    text: isReversed ? `${color}-light` : color
+  }),
+  solid: (color: string, isReversed: boolean) => ({
+    bg: isReversed ? `${color}-on` : color,
+    text: isReversed ? color : `${color}-on`
+  })
+};
+
 const getStateColor = (color: Color, isValid?: boolean, isInvalid?: boolean) =>
   isValid ? 'success' : isInvalid ? 'error' : color.replace('-on', '');
 
 const isColorReversed = (color: Color) => color.endsWith('-on');
-
-const variants = {
-  outlined: (color: string, isReversed: boolean) => ({
-    bgColor: 'none',
-    textColor: isReversed ? `${color}-on` : color
-  }),
-  text: (color: string, isReversed: boolean) => ({
-    bgColor: 'none',
-    textColor: isReversed ? `${color}-on` : color
-  }),
-  light: (color: string, isReversed: boolean) => ({
-    bgColor: isReversed ? color : `${color}-light`,
-    textColor: isReversed ? `${color}-light` : color
-  }),
-  solid: (color: string, isReversed: boolean) => ({
-    bgColor: isReversed ? `${color}-on` : color,
-    textColor: isReversed ? color : `${color}-on`
-  })
-};
 
 export const getColor = (
   variant: Variant,
@@ -42,16 +42,16 @@ export const getColor = (
 ) => {
   if (!checked && isDisabled) {
     return {
-      bgColor:
+      bg:
         checked === false || hasVariantBg(variant) ? 'disabled-light' : 'none',
-      textColor: 'disabled'
+      text: 'disabled'
     };
   }
 
   if (checked && isDisabled) {
     return {
-      bgColor: hasVariantBg(variant) ? 'disabled' : 'none',
-      textColor: hasVariantBg(variant) ? 'disabled-on' : 'disabled'
+      bg: hasVariantBg(variant) ? 'disabled' : 'none',
+      text: hasVariantBg(variant) ? 'disabled-on' : 'disabled'
     };
   }
 
@@ -70,7 +70,7 @@ export const getRippleColor = (
   variants[variant](
     getStateColor(color, isValid, isInvalid),
     isColorReversed(color)
-  ).textColor;
+  ).text;
 
 export const getDefaultColor = (color: Color) =>
   color === 'unset' ? 'unset' : 'surface';
@@ -113,7 +113,7 @@ export const getArrowColor = (
 };
 
 export const getSpinnerColorType = (type: 'bar' | 'trail') =>
-  type === 'bar' ? 'textColor' : 'bgColor';
+  type === 'bar' ? 'text' : 'bg';
 
 export const getReversedColor = (color: Color) =>
   (isColorReversed(color) ? getStateColor(color) : `${color}-on`) as Color;
