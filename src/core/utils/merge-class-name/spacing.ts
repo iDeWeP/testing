@@ -16,6 +16,18 @@ const setSize = (condition: boolean, size: DefaultSize) =>
 const setSpacing = (condition: boolean, padding: Padding) =>
   condition ? padding : 'unset';
 
+export const getSpacing = (spacing: Padding) => {
+  const isInner = isSpacingInner(spacing);
+
+  return {
+    all: setSpacing(!isInner, spacing),
+    x: setSpacing(isInner, spacing),
+    y: setSpacing(isInner, spacing)
+  };
+};
+
+export const isSpacingInner = (size: Padding) => size.includes('-');
+
 export const getDefaultSize = (size: Size) => size.split('-')[0] as DefaultSize;
 
 export const getInnerSize = (size: DefaultSize) => `${size}-${size}` as Size;

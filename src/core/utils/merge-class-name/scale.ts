@@ -1,5 +1,5 @@
 import type { DefaultSize, Size, Scale } from '../../types';
-import { getDefaultSize } from './spacing';
+import { isSizeInner, getDefaultSize } from './spacing';
 
 type GetScale = {
   default: 'normal' | 'inner';
@@ -9,8 +9,6 @@ type GetScale = {
   font: DefaultSize;
   isSquare: boolean;
 };
-
-const isSizeInner = (size: Size) => size.includes('-');
 
 export const getScale = (size: Size, scale: Scale): GetScale => {
   const isInner = isSizeInner(size);
