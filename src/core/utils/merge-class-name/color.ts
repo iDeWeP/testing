@@ -61,26 +61,14 @@ export const getColor = (
   );
 };
 
-export const getRippleColor = (
-  variant: Variant,
-  color: Color,
-  isValid?: boolean,
-  isInvalid?: boolean
-) =>
-  variants[variant](
-    getStateColor(color, isValid, isInvalid),
-    isColorReversed(color)
-  ).text;
-
 export const getDefaultColor = (color: Color) =>
   color === 'unset' ? 'unset' : 'surface';
 
-export const getInputColor = (variant: InputVariant, isDisabled?: boolean) =>
-  isDisabled
-    ? 'disabled-light'
-    : variant === 'light'
-    ? 'surface-light'
-    : 'none';
+export const getReversedColor = (color: Color) =>
+  (isColorReversed(color) ? getStateColor(color) : `${color}-on`) as Color;
+
+export const getCheckableColor = (color: Color, checked?: boolean) =>
+  checked === false ? 'surface' : color;
 
 export const getArrowColor = (
   variant: Variant,
@@ -112,11 +100,23 @@ export const getArrowColor = (
   return color;
 };
 
+export const getInputColor = (variant: InputVariant, isDisabled?: boolean) =>
+  isDisabled
+    ? 'disabled-light'
+    : variant === 'light'
+    ? 'surface-light'
+    : 'none';
+
+export const getRippleColor = (
+  variant: Variant,
+  color: Color,
+  isValid?: boolean,
+  isInvalid?: boolean
+) =>
+  variants[variant](
+    getStateColor(color, isValid, isInvalid),
+    isColorReversed(color)
+  ).text;
+
 export const getSpinnerColorType = (type: 'bar' | 'trail') =>
   type === 'bar' ? 'text' : 'bg';
-
-export const getReversedColor = (color: Color) =>
-  (isColorReversed(color) ? getStateColor(color) : `${color}-on`) as Color;
-
-export const getCheckableColor = (color: Color, checked?: boolean) =>
-  checked === false ? 'surface' : color;
