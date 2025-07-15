@@ -3,6 +3,7 @@ import { systemStyles } from '../../config/system-styles';
 import type { Classes } from '../../types';
 import { mergeClasses } from './merge-classes';
 import { getInputScale } from './scale';
+import { getSpacing } from './spacing';
 
 export const styleCheckboxContainer = (
   className: string,
@@ -28,11 +29,15 @@ export const styleCheckboxContainer = (
     rbr = 'unset',
     hasRipple = false
   }: Classes
-) =>
-  mergeClasses(
+) => {
+  const margins = getSpacing(margin);
+
+  return mergeClasses(
     unstyledCheckboxConfig.styles.root.default,
     systemStyles.size[getInputScale(hasRipple)].square[defaultSize],
-    systemStyles.margin.default[margin],
+    systemStyles.margin.all[margins.all],
+    systemStyles.margin.x[margins.x],
+    systemStyles.margin.y[margins.y],
     systemStyles.margin.all[m],
     systemStyles.margin.x[mx],
     systemStyles.margin.y[my],
@@ -52,3 +57,4 @@ export const styleCheckboxContainer = (
     systemStyles.radius.br[rbr],
     className
   );
+};

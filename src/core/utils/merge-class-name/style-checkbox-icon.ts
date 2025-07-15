@@ -47,14 +47,7 @@ export const styleCheckboxIcon = (
     br,
     variant
   );
-  const { bgColor, textColor } = getColor(
-    variant,
-    color,
-    disabled,
-    valid,
-    invalid,
-    true
-  );
+  const colors = getColor(variant, color, disabled, valid, invalid, true);
 
   return mergeClasses(
     unstyledCheckboxConfig.styles.shared.default,
@@ -78,10 +71,10 @@ export const styleCheckboxIcon = (
     systemStyles.radius.tr[rtr],
     systemStyles.radius.bl[rbl],
     systemStyles.radius.br[rbr],
-    systemStyles.color.bg[theme][bgColor],
-    systemStyles.color.fill[theme][textColor],
-    isBordered && systemStyles.color.border[theme][textColor],
-    systemStyles.color.ring[theme][textColor],
+    systemStyles.color.bg[theme][colors.bg],
+    isBordered && systemStyles.color.border[theme][colors.text],
+    systemStyles.color.fill[theme][colors.text],
+    systemStyles.color.ring[theme][colors.text],
     systemStyles.shadow[shadow],
     className
   );

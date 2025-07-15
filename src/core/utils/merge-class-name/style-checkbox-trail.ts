@@ -38,7 +38,7 @@ export const styleCheckboxTrail = (
   }: Classes
 ) => {
   const isBordered = isCheckboxBordered(border, b, bx, by, bt, bb, bl, br);
-  const { bgColor, textColor } = getColor(
+  const colors = getColor(
     getCheckableVariant(variant),
     getDefaultColor(color),
     disabled,
@@ -69,9 +69,9 @@ export const styleCheckboxTrail = (
     systemStyles.radius.tr[rtr],
     systemStyles.radius.bl[rbl],
     systemStyles.radius.br[rbr],
-    systemStyles.color.bg[theme][bgColor],
-    isBordered && systemStyles.color.border[theme][textColor],
-    systemStyles.color.ring[theme][textColor],
+    systemStyles.color.bg[theme][colors.bg],
+    isBordered && systemStyles.color.border[theme][colors.text],
+    systemStyles.color.ring[theme][colors.text],
     systemStyles.shadow[shadow],
     className
   );
