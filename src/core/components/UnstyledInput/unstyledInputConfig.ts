@@ -1,5 +1,6 @@
 import type {
   CSSProps,
+  CSSStyles,
   Theme,
   SidePlacement,
   InputSize,
@@ -8,7 +9,6 @@ import type {
 } from '../../types';
 import type { UnstyledInputConfigProps } from './UnstyledInput.types';
 
-type Style = Record<string, CSSProps>;
 type InputType = 'input' | 'textarea';
 type InputGenericType = 'default' | 'input' | 'textarea';
 
@@ -18,12 +18,12 @@ type Styles = {
       focused: CSSProps;
       shifted: CSSProps;
       default: CSSProps;
-      size: Record<InputType, Style>;
-      color: Record<Theme, Style>;
+      size: Record<InputType, CSSStyles>;
+      color: Record<Theme, CSSStyles>;
     };
     decorator: {
-      spacing: Record<SidePlacement, Style>;
-      outlined: Style;
+      spacing: Record<SidePlacement, CSSStyles>;
+      outlined: CSSStyles;
     };
     fieldset: {
       default: CSSProps;
@@ -39,13 +39,13 @@ type Styles = {
     label: {
       default: CSSProps;
       variant: {
-        input: Record<InputVariant, Style>;
-        textarea: Style;
+        input: Record<InputVariant, CSSStyles>;
+        textarea: CSSStyles;
       };
     };
     generic: {
       default: CSSProps;
-      variant: Record<InputGenericType, Style>;
+      variant: Record<InputGenericType, CSSStyles>;
     };
   };
 };
