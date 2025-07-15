@@ -13,5 +13,14 @@ export const FontExample = () => (
       <Example font="xl">XL</Example>
       <Example font="xxl">XXL</Example>
     </ExampleCard>
+    <ExampleCard>
+      <Example font="unset">UNSET</Example>
+      <Example font="xs-xs">XS-XS</Example>
+      <Example font="sm-sm">SM-SM</Example>
+      <Example font="md-md">MD-MD</Example>
+      <Example font="lg-lg">LG-LG</Example>
+      <Example font="xl-xl">XL-XL</Example>
+      <Example font="xxl-xxl">XXL-XXL</Example>
+    </ExampleCard>
   </ExampleSection>
 );
