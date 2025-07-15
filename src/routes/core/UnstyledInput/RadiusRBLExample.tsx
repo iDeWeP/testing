@@ -2,8 +2,8 @@ import { ExampleCard } from '../../../components/ExampleCard';
 import { ExampleSection } from '../../../components/ExampleSection';
 import { Example } from './Example';
 
-export const RadiusBLExample = () => (
-  <ExampleSection title="Radius BL">
+export const RadiusRBLExample = () => (
+  <ExampleSection title="Radius RBL">
     <ExampleCard>
       <Example rbl="unset" />
       <Example rbl="none" />

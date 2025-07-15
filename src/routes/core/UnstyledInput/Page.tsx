@@ -4,23 +4,24 @@ import { DefaultExample } from './DefaultExample';
 import { DisabledExample } from './DisabledExample';
 import { GapExample } from './GapExample';
 import { InvalidExample } from './InvalidExample';
-import { MarginBExample } from './MarginBExample';
 import { MarginExample } from './MarginExample';
-import { MarginLExample } from './MarginLExample';
+import { MarginMBExample } from './MarginMBExample';
 import { MarginMExample } from './MarginMExample';
-import { MarginRExample } from './MarginRExample';
-import { MarginTExample } from './MarginTExample';
-import { MarginXExample } from './MarginXExample';
-import { MarginYExample } from './MarginYExample';
-import { RadiusBExample } from './RadiusBExample';
-import { RadiusBLExample } from './RadiusBLExample';
-import { RadiusBRExample } from './RadiusBRExample';
+import { MarginMLExample } from './MarginMLExample';
+import { MarginMRExample } from './MarginMRExample';
+import { MarginMTExample } from './MarginMTExample';
+import { MarginMXExample } from './MarginMXExample';
+import { MarginMYExample } from './MarginMYExample';
 import { RadiusExample } from './RadiusExample';
-import { RadiusLExample } from './RadiusLExample';
+import { RadiusRBExample } from './RadiusRBExample';
+import { RadiusRBLExample } from './RadiusRBLExample';
+import { RadiusRBRExample } from './RadiusRBRExample';
 import { RadiusRExample } from './RadiusRExample';
-import { RadiusTExample } from './RadiusTExample';
-import { RadiusTLExample } from './RadiusTLExample';
-import { RadiusTRExample } from './RadiusTRExample';
+import { RadiusRLExample } from './RadiusRLExample';
+import { RadiusRRExample } from './RadiusRRExample';
+import { RadiusRTExample } from './RadiusRTExample';
+import { RadiusRTLExample } from './RadiusRTLExample';
+import { RadiusRTRExample } from './RadiusRTRExample';
 import { ResizeExample } from './ResizeExampe';
 import { SizeExample } from './SizeExample';
 import { ValidExample } from './ValidExample';
@@ -38,21 +39,22 @@ const Page = () => (
     <ResizeExample />
     <MarginExample />
     <MarginMExample />
-    <MarginXExample />
-    <MarginYExample />
-    <MarginTExample />
-    <MarginBExample />
-    <MarginLExample />
-    <MarginRExample />
+    <MarginMXExample />
+    <MarginMYExample />
+    <MarginMTExample />
+    <MarginMBExample />
+    <MarginMLExample />
+    <MarginMRExample />
     <RadiusExample />
-    <RadiusTExample />
-    <RadiusBExample />
-    <RadiusLExample />
     <RadiusRExample />
-    <RadiusTLExample />
-    <RadiusTRExample />
-    <RadiusBLExample />
-    <RadiusBRExample />
+    <RadiusRTExample />
+    <RadiusRBExample />
+    <RadiusRLExample />
+    <RadiusRRExample />
+    <RadiusRTLExample />
+    <RadiusRTRExample />
+    <RadiusRBLExample />
+    <RadiusRBRExample />
     <ColorExample />
     <GapExample />
   </>

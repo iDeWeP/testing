@@ -2,8 +2,8 @@ import { ExampleCard } from '../../../components/ExampleCard';
 import { ExampleSection } from '../../../components/ExampleSection';
 import { Example } from './Example';
 
-export const MarginXExample = () => (
-  <ExampleSection title="Margin X">
+export const MarginMXExample = () => (
+  <ExampleSection title="Margin MX">
     <ExampleCard>
       <Example mx="unset" />
       <Example mx="none" />
