@@ -3,6 +3,7 @@ import type { Classes } from '../../types';
 import { getBorder } from './border';
 import { getColor } from './color';
 import { mergeClasses } from './merge-classes';
+import { getSpacing } from './spacing';
 
 export const styleBox = (
   className: string,
@@ -51,10 +52,14 @@ export const styleBox = (
     gy = 'unset'
   }: Classes
 ) => {
-  const { bgColor, textColor } = getColor(variant, color);
+  const paddings = getSpacing(padding);
+  const margins = getSpacing(margin);
+  const colors = getColor(variant, color);
 
   return mergeClasses(
-    systemStyles.padding.default.default[padding],
+    systemStyles.padding.default.all[paddings.all],
+    systemStyles.padding.default.x[paddings.x],
+    systemStyles.padding.default.y[paddings.y],
     systemStyles.padding.default.all[p],
     systemStyles.padding.default.x[px],
     systemStyles.padding.default.y[py],
@@ -62,7 +67,9 @@ export const styleBox = (
     systemStyles.padding.default.b[pb],
     systemStyles.padding.default.l[pl],
     systemStyles.padding.default.r[pr],
-    systemStyles.margin.default[margin],
+    systemStyles.margin.all[margins.all],
+    systemStyles.margin.x[margins.x],
+    systemStyles.margin.y[margins.y],
     systemStyles.margin.all[m],
     systemStyles.margin.x[mx],
     systemStyles.margin.y[my],
@@ -89,9 +96,9 @@ export const styleBox = (
     systemStyles.radius.bl[rbl],
     systemStyles.radius.br[rbr],
     systemStyles.size.font[font],
-    systemStyles.color.bg[theme][bgColor],
-    systemStyles.color.text[theme][textColor],
-    systemStyles.color.fill[theme][textColor],
+    systemStyles.color.bg[theme][colors.bg],
+    systemStyles.color.text[theme][colors.text],
+    systemStyles.color.fill[theme][colors.text],
     systemStyles.shadow[shadow],
     systemStyles.gap.all[gap],
     systemStyles.gap.x[gx],
