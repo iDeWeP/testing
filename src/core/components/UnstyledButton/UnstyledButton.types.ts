@@ -4,8 +4,8 @@ import type {
   SpinnerBorder,
   Loading,
   Variant,
-  DefaultSize,
-  ButtonScale,
+  Size,
+  DefaultScale,
   Radius,
   Color,
   Effect,
@@ -16,12 +16,18 @@ import type {
   UnstyledContainerConfigProps,
   UnstyledContainerProps
 } from '../UnstyledContainer/UnstyledContainer.types';
+import type {
+  UnstyledSpinnerBarProps,
+  UnstyledSpinnerTrailProps,
+  UnstyledSpinnerInnerBorder,
+  UnstyledSpinnerOuterBorder
+} from '../UnstyledSpinner/UnstyledSpinner.types';
 
 export type UnstyledButtonRippleProps = ComponentRefProps<'span'>;
-export type UnstyledButtonBarProps = ComponentRefProps<'circle'>;
-export type UnstyledButtonTrailProps = ComponentRefProps<'circle'>;
-export type UnstyledButtonInnerBorderProps = ComponentRefProps<'circle'>;
-export type UnstyledButtonOuterBorderProps = ComponentRefProps<'circle'>;
+export type UnstyledButtonBarProps = UnstyledSpinnerBarProps;
+export type UnstyledButtonTrailProps = UnstyledSpinnerTrailProps;
+export type UnstyledButtonInnerBorderProps = UnstyledSpinnerInnerBorder;
+export type UnstyledButtonOuterBorderProps = UnstyledSpinnerOuterBorder;
 export type UnstyledButtonSpinnerProps = {
   value?: number;
   thickness?: number;
@@ -47,8 +53,8 @@ export type UnstyledButtonOptionalProps = {
 
 export type UnstyledButtonDefaultProps = {
   variant?: Variant;
-  size?: DefaultSize;
-  scale?: ButtonScale;
+  size?: Size;
+  scale?: DefaultScale;
   radius?: Radius;
   color?: Color;
   effect?: Effect;

@@ -2,6 +2,7 @@ import type { ElementType } from 'react';
 import { useTheme } from '../../hooks/use-theme/use-theme';
 import { getReversedColor } from '../../utils/merge-class-name/color';
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
+import { setSpinnerSize } from '../../utils/merge-class-name/spacing';
 import { mergeProps } from '../../utils/merge-props/merge-props';
 import { setAria } from '../../utils/set-aria/set-aria';
 import { setButtonStyle } from '../../utils/set-button-style/set-button-style';
@@ -52,10 +53,10 @@ export const UnstyledButton = <E extends ElementType>(
       value={75}
       variant="text"
       float={loading === true}
-      size={size}
+      size={setSpinnerSize(size)}
       thickness={4}
-      scale="text"
       margin="unset"
+      m="unset"
       mx="unset"
       my="unset"
       mt="unset"
@@ -99,10 +100,10 @@ export const UnstyledButton = <E extends ElementType>(
       {rightSpinner}
       {hasRipple && (
         <UnstyledRipple
-          stateful={false}
-          variant={styles.variant}
+          stateful={checked !== undefined}
+          variant={variant}
           scale="inner"
-          color={styles.color}
+          color={color}
           effect={ripple}
           {...componentsProps.ripple}
         />

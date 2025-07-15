@@ -1,4 +1,4 @@
-import type { CSSProps, ComponentConfig } from '../../types';
+import type { CSSProps, CSSStyles, ComponentConfig } from '../../types';
 import type { UnstyledButtonConfigProps } from './UnstyledButton.types';
 
 type Styles = {
@@ -6,7 +6,7 @@ type Styles = {
     root: {
       checked: CSSProps;
       default: CSSProps;
-      loading: Record<string, CSSProps>;
+      loading: CSSStyles;
     };
   };
 };
@@ -24,6 +24,7 @@ export const unstyledButtonConfig: ComponentConfig<UnstyledButtonConfigProps> &
     componentsProps: {},
     ripple: 'none',
     margin: 'unset',
+    m: 'unset',
     mx: 'unset',
     my: 'unset',
     mt: 'unset',
@@ -31,12 +32,14 @@ export const unstyledButtonConfig: ComponentConfig<UnstyledButtonConfigProps> &
     ml: 'unset',
     mr: 'unset',
     border: 'auto',
+    b: 'unset',
     bx: 'unset',
     by: 'unset',
     bt: 'unset',
     bb: 'unset',
     bl: 'unset',
     br: 'unset',
+    r: 'unset',
     rt: 'unset',
     rb: 'unset',
     rl: 'unset',
