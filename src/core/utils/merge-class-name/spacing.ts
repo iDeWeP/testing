@@ -10,20 +10,24 @@ import type {
   Padding
 } from '../../types';
 
+const setSize = (condition: boolean, size: DefaultSize) =>
+  condition ? `${size}-${size}` : size;
+
+const setPadding = (condition: boolean, padding: Padding) =>
+  condition ? padding : 'unset';
+
 export const getInputSize = (size: InputSize, resize: boolean) =>
   resize ? 'full' : size;
 
 export const getInputSpacing = (decorated: boolean) =>
   decorated ? 'decorated' : 'default';
 
-const setSize = (condition: boolean, size: DefaultSize) =>
-  condition ? `${size}-${size}` : size;
-
-export const getPadding = (
+export const getContainerPadding = (
   variant: Variant,
   size: Size,
   scale: Scale,
   border: Border,
+  b: Border,
   bx: DefaultBorder,
   by: DefaultBorder,
   bt: DefaultBorder,
@@ -33,7 +37,9 @@ export const getPadding = (
 ) => {
   const defaultSize = getDefaultSize(size);
   const isBordered =
-    (variant === 'outlined' && border === 'auto') || border === 'set';
+    (variant === 'outlined' && border === 'auto') ||
+    border === 'set' ||
+    b === 'set';
 
   const x =
     scale === 'none' ||
@@ -76,6 +82,6 @@ export const getDividerPadding = (
   orientation: Orientation,
   padding: Padding
 ) => ({
-  x: orientation === 'row' ? padding : 'unset',
-  y: orientation === 'col' ? padding : 'unset'
+  x: setPadding(orientation === 'row', padding),
+  y: setPadding(orientation === 'col', padding)
 });
