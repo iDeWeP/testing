@@ -2,11 +2,11 @@ import type { DefaultSize, Size, Scale } from '../../types';
 import { getDefaultSize } from './spacing';
 
 type GetScale = {
-  defaultScale: 'normal' | 'inner';
-  dimensionScale: 'normal' | 'square';
-  sizeScale: string;
-  paddingScale: 'normal' | 'square' | 'inner-normal' | 'inner-square';
-  fontSize: DefaultSize;
+  default: 'normal' | 'inner';
+  dimension: 'normal' | 'square';
+  size: string;
+  padding: 'normal' | 'square' | 'inner-normal' | 'inner-square';
+  font: DefaultSize;
   isSquare: boolean;
 };
 
@@ -19,11 +19,11 @@ export const getScale = (size: Size, scale: Scale): GetScale => {
     scale === 'circle' || scale === 'square' ? 'square' : 'normal';
 
   return {
-    defaultScale: isInner ? 'inner' : 'normal',
-    dimensionScale: scale === 'square' ? 'square' : 'normal',
-    sizeScale: scale === 'none' ? 'unset' : defaultSize,
-    paddingScale: isInner ? `inner-${padding}` : padding,
-    fontSize: isInner ? 'xs' : defaultSize,
+    default: isInner ? 'inner' : 'normal',
+    dimension: scale === 'square' ? 'square' : 'normal',
+    size: scale === 'none' ? 'unset' : defaultSize,
+    padding: isInner ? `inner-${padding}` : padding,
+    font: isInner ? 'xs' : defaultSize,
     isSquare: scale === 'square'
   };
 };
