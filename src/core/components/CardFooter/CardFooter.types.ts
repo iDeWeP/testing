@@ -3,6 +3,7 @@ import type {
   Variant,
   Orientation,
   Padding,
+  Radius,
   Color,
   Gap,
   MergeProps
@@ -16,6 +17,7 @@ export type CardFooterDefaultProps = {
   variant?: Variant;
   orientation?: Orientation;
   padding?: Padding;
+  radius?: Radius;
   color?: Color;
   gap?: Gap;
 };
