@@ -24,7 +24,7 @@ export const radioConfig: ComponentConfig<RadioConfigProps> = {
     bb: 'unset',
     bl: 'unset',
     br: 'unset',
-    radius: 'sm',
+    radius: 'full',
     r: 'unset',
     rt: 'unset',
     rb: 'unset',
