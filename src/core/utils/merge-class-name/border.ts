@@ -5,6 +5,7 @@ export const getBorder = (variant: Variant, border: Border) =>
 
 export const isCheckboxBordered = (
   border: Border,
+  b: DefaultBorder,
   bx: DefaultBorder,
   by: DefaultBorder,
   bt: DefaultBorder,
@@ -15,6 +16,7 @@ export const isCheckboxBordered = (
 ) =>
   (variant === 'outlined' && border === 'auto') ||
   border === 'set' ||
+  b === 'set' ||
   bx === 'set' ||
   by === 'set' ||
   bt === 'set' ||
