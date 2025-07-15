@@ -38,7 +38,7 @@ export const unstyledSpinnerConfig: ComponentConfig<UnstyledSpinnerConfigProps> 
   styles: {
     root: {
       default: {
-        display: 'inline-block',
+        display: 'inline-flex',
         borderRadius: 'rounded-full',
         color: 'fill-none'
       },
