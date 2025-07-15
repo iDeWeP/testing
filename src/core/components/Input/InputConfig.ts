@@ -1,5 +1,5 @@
 import type { ComponentConfig } from '../../types';
-import type { InputConfigProps } from './UnstyledInput.types';
+import type { InputConfigProps } from './Input.types';
 
 export const inputConfig: ComponentConfig<InputConfigProps> = {
   props: {
