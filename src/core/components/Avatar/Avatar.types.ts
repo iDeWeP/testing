@@ -1,23 +1,24 @@
 import type { ElementType } from 'react';
 import type { Variant, Size, Color, MergeProps } from '../../types';
 import type {
-  UnstyledContainerConfigProps,
-  UnstyledContainerProps
-} from '../UnstyledContainer/UnstyledContainer.types';
+  UnstyledAvatarConfigProps,
+  UnstyledAvatarProps
+} from '../UnstyledAvatar/UnstyledAvatar.types';
 
 export type AvatarDefaultProps = {
   initials?: boolean;
   variant?: Variant;
   size?: Size;
   color?: Color;
+  ring?: Color;
 };
 
 export type AvatarConfigProps = MergeProps<
-  UnstyledContainerConfigProps,
+  UnstyledAvatarConfigProps,
   AvatarDefaultProps
 >;
 
 export type AvatarProps<E extends ElementType> = MergeProps<
-  UnstyledContainerProps<E>,
+  UnstyledAvatarProps<E>,
   AvatarDefaultProps
 >;

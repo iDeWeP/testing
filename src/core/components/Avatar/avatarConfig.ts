@@ -8,6 +8,7 @@ export const avatarConfig: ComponentConfig<AvatarConfigProps> = {
     variant: 'solid',
     size: 'md',
     color: 'primary',
+    ring: 'unset',
     margin: 'unset',
     m: 'unset',
     mx: 'unset',
