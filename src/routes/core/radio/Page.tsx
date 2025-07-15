@@ -10,7 +10,7 @@ import { VariantExample } from './VariantExample';
 
 const Page = () => (
   <>
-    <ExampleTitle>Checkbox</ExampleTitle>
+    <ExampleTitle>Radio</ExampleTitle>
     <DefaultExample />
     <ValidExample />
     <InvalidExample />

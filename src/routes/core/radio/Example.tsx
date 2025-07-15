@@ -1,12 +1,12 @@
 import { useState } from 'react';
-import { Checkbox } from '../../../core/components/Checkbox/Checkbox';
-import type { CheckboxProps } from '../../../core/components/Checkbox/Checkbox.types';
+import { Radio } from '../../../core/components/Radio/Radio';
+import type { RadioProps } from '../../../core/components/Radio/Radio.types';
 
-export const Example = (props: CheckboxProps) => {
+export const Example = (props: RadioProps) => {
   const [isChecked, setIsChecked] = useState(false);
 
   return (
-    <Checkbox
+    <Radio
       checked={isChecked}
       onChange={() => setIsChecked((checked) => !checked)}
       {...props}
