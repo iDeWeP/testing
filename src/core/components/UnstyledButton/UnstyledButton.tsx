@@ -36,7 +36,7 @@ export const UnstyledButton = <E extends ElementType>(
 
   const theme = useTheme();
 
-  const mergedClassName = mergeClassName('unstyledButton', className, {
+  const mergedClassName = mergeClassName('button', className, {
     theme,
     checked,
     loading,
