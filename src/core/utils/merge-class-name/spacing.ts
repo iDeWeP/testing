@@ -18,13 +18,13 @@ const setSize = (condition: boolean, size: DefaultSize) =>
 const setSpacing = (condition: boolean, padding: Spacing) =>
   condition ? padding : 'unset';
 
-export const getSpacing = (spacing: Padding) => {
-  const isInner = isSpacingInner(spacing);
+export const getSpacing = (spacing: Spacing, isSide?: boolean) => {
+  const isSquare = !isSpacingInner(spacing) && !isSide;
 
   return {
-    all: setSpacing(!isInner, spacing),
-    x: setSpacing(isInner, getDefaultSpacing(spacing)),
-    y: setSpacing(isInner, spacing)
+    all: setSpacing(isSquare, spacing),
+    x: setSpacing(!isSquare, getDefaultSpacing(spacing)),
+    y: setSpacing(!isSquare, spacing)
   };
 };
 
