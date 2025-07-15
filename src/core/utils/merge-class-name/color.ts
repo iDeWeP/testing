@@ -1,10 +1,10 @@
 import type {
   Color,
   Variant,
-  InputVariant,
   DefaultPlacement,
   Border,
-  DefaultBorder
+  DefaultBorder,
+  InputVariant
 } from '../../types';
 import { hasVariantBg } from './variant';
 
