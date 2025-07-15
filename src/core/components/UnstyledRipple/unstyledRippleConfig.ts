@@ -683,6 +683,12 @@ export const unstyledRippleConfig: ComponentConfig<UnstyledRippleConfigProps> &
                 focus:
                   '[*:focus:hover>&]:bg-error-500/25 [*:focus>&]:bg-error-500/25'
               },
+              'surface-light': {
+                hover: '[*:hover>&]:bg-surface-250/20',
+                active: '[*:active:hover>&]:bg-surface-250/25',
+                focus:
+                  '[*:focus:hover>&]:bg-surface-250/25 [*:focus>&]:bg-surface-250/25'
+              },
               'neutral-light': {
                 hover: '[*:hover>&]:bg-neutral-250/20',
                 active: '[*:active:hover>&]:bg-neutral-250/25',
@@ -724,6 +730,12 @@ export const unstyledRippleConfig: ComponentConfig<UnstyledRippleConfigProps> &
                 active: '[*:active:hover>&]:bg-error-250/25',
                 focus:
                   '[*:focus:hover>&]:bg-error-250/25 [*:focus>&]:bg-error-250/25'
+              },
+              'surface-on': {
+                hover: '[*:hover>&]:bg-surface-50/20',
+                active: '[*:active:hover>&]:bg-surface-50/25',
+                focus:
+                  '[*:focus:hover>&]:bg-surface-50/25 [*:focus>&]:bg-surface-50/25'
               },
               'neutral-on': {
                 hover: '[*:hover>&]:bg-neutral-50/20',
@@ -817,6 +829,12 @@ export const unstyledRippleConfig: ComponentConfig<UnstyledRippleConfigProps> &
                 focus:
                   '[*:focus:hover>&]:bg-error-600/25 [*:focus>&]:bg-error-600/25'
               },
+              'surface-light': {
+                hover: '[*:hover>&]:bg-surface-400/20',
+                active: '[*:active:hover>&]:bg-surface-400/25',
+                focus:
+                  '[*:focus:hover>&]:bg-surface-400/25 [*:focus>&]:bg-surface-400/25'
+              },
               'neutral-light': {
                 hover: '[*:hover>&]:bg-neutral-400/20',
                 active: '[*:active:hover>&]:bg-neutral-400/25',
@@ -858,6 +876,12 @@ export const unstyledRippleConfig: ComponentConfig<UnstyledRippleConfigProps> &
                 active: '[*:active:hover>&]:bg-error-400/25',
                 focus:
                   '[*:focus:hover>&]:bg-error-400/25 [*:focus>&]:bg-error-400/25'
+              },
+              'surface-on': {
+                hover: '[*:hover>&]:bg-surface-200/20',
+                active: '[*:active:hover>&]:bg-surface-200/25',
+                focus:
+                  '[*:focus:hover>&]:bg-surface-200/25 [*:focus>&]:bg-surface-200/25'
               },
               'neutral-on': {
                 hover: '[*:hover>&]:bg-neutral-200/20',
@@ -953,6 +977,12 @@ export const unstyledRippleConfig: ComponentConfig<UnstyledRippleConfigProps> &
                 focus:
                   '[*.checked:focus:hover>&]:bg-error-500/25 [*.checked:focus>&]:bg-error-500/25'
               },
+              'surface-light': {
+                hover: '[*.checked:hover>&]:bg-surface-250/20',
+                active: '[*.checked:active:hover>&]:bg-surface-250/25',
+                focus:
+                  '[*.checked:focus:hover>&]:bg-surface-250/25 [*.checked:focus>&]:bg-surface-250/25'
+              },
               'neutral-light': {
                 hover: '[*.checked:hover>&]:bg-neutral-250/20',
                 active: '[*.checked:active:hover>&]:bg-neutral-250/25',
@@ -994,6 +1024,12 @@ export const unstyledRippleConfig: ComponentConfig<UnstyledRippleConfigProps> &
                 active: '[*.checked:active:hover>&]:bg-error-250/25',
                 focus:
                   '[*.checked:focus:hover>&]:bg-error-250/25 [*.checked:focus>&]:bg-error-250/25'
+              },
+              'surface-on': {
+                hover: '[*.checked:hover>&]:bg-surface-50/20',
+                active: '[*.checked:active:hover>&]:bg-surface-50/25',
+                focus:
+                  '[*.checked:focus:hover>&]:bg-surface-50/25 [*.checked:focus>&]:bg-surface-50/25'
               },
               'neutral-on': {
                 hover: '[*.checked:hover>&]:bg-neutral-50/20',
@@ -1087,6 +1123,12 @@ export const unstyledRippleConfig: ComponentConfig<UnstyledRippleConfigProps> &
                 focus:
                   '[*.checked:focus:hover>&]:bg-error-600/25 [*.checked:focus>&]:bg-error-600/25'
               },
+              'surface-light': {
+                hover: '[*.checked:hover>&]:bg-surface-400/20',
+                active: '[*.checked:active:hover>&]:bg-surface-400/25',
+                focus:
+                  '[*.checked:focus:hover>&]:bg-surface-400/25 [*.checked:focus>&]:bg-surface-400/25'
+              },
               'neutral-light': {
                 hover: '[*.checked:hover>&]:bg-neutral-400/20',
                 active: '[*.checked:active:hover>&]:bg-neutral-400/25',
@@ -1128,6 +1170,12 @@ export const unstyledRippleConfig: ComponentConfig<UnstyledRippleConfigProps> &
                 active: '[*.checked:active:hover>&]:bg-error-400/25',
                 focus:
                   '[*.checked:focus:hover>&]:bg-error-400/25 [*.checked:focus>&]:bg-error-400/25'
+              },
+              'surface-on': {
+                hover: '[*.checked:hover>&]:bg-surface-200/20',
+                active: '[*.checked:active:hover>&]:bg-surface-200/25',
+                focus:
+                  '[*.checked:focus:hover>&]:bg-surface-200/25 [*.checked:focus>&]:bg-surface-200/25'
               },
               'neutral-on': {
                 hover: '[*.checked:hover>&]:bg-neutral-200/20',
