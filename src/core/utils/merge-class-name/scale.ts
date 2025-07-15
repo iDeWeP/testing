@@ -4,6 +4,7 @@ import { isSpacingInner } from './spacing';
 type GetScale = {
   size: 'normal' | 'square';
   padding: 'normal' | 'square' | 'inner-normal' | 'inner-square';
+  isSquare: boolean;
 };
 
 export const getScale = (size: Size, scale: Scale): GetScale => {
@@ -12,7 +13,8 @@ export const getScale = (size: Size, scale: Scale): GetScale => {
 
   return {
     size: scale === 'square' ? 'square' : 'normal',
-    padding: isSpacingInner(size) ? `inner-${padding}` : padding
+    padding: isSpacingInner(size) ? `inner-${padding}` : padding,
+    isSquare: scale === 'square'
   };
 };
 

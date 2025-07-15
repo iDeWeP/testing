@@ -62,7 +62,6 @@ export const styleContainer = (
   );
   const margins = getSpacing(margin);
   const colors = getColor(variant, color);
-  const isSquare = scale === 'square';
 
   return mergeClasses(
     unstyledContainerConfig.styles.root.default,
@@ -107,7 +106,7 @@ export const styleContainer = (
     systemStyles.color.fill[theme][colors.text],
     systemStyles.shadow[shadow],
     systemStyles.gap.all[gap],
-    isSquare && sharedStyles.scale.square,
+    scales.isSquare && sharedStyles.scale.square,
     className
   );
 };
