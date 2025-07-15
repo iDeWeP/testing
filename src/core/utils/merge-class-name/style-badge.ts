@@ -22,6 +22,6 @@ export const styleBadge = (
     badgeConfig.styles.root.transform[cornerPlacement],
     badgeConfig.styles.root.size[empty ? 'empty' : 'normal'][defaultSize],
     ring !== 'unset' && sharedStyles.ring.normal,
-    systemStyles.color.ring[theme][getColor('solid', ring).bgColor],
+    systemStyles.color.ring[theme][getColor('solid', ring).bg],
     className
   );
