@@ -6,7 +6,7 @@ import { getBorder } from './border';
 import { getColor } from './color';
 import { mergeClasses } from './merge-classes';
 import { getScale } from './scale';
-import { getPadding } from './spacing';
+import { getContainerPadding, getSpacing } from './spacing';
 
 export const styleContainer = (
   className: string,
@@ -24,6 +24,7 @@ export const styleContainer = (
     ml = 'unset',
     mr = 'unset',
     border = 'auto',
+    b = 'unset',
     bx = 'unset',
     by = 'unset',
     bt = 'unset',
@@ -31,6 +32,7 @@ export const styleContainer = (
     bl = 'unset',
     br = 'unset',
     radius = 'unset',
+    r = 'unset',
     rt = 'unset',
     rb = 'unset',
     rl = 'unset',
@@ -44,19 +46,13 @@ export const styleContainer = (
     gap = 'unset'
   }: Classes
 ) => {
-  const {
-    defaultScale,
-    dimensionScale,
-    sizeScale,
-    paddingScale,
-    fontSize,
-    isSquare
-  } = getScale(size, scale);
-  const { x, y, t, b, l, r } = getPadding(
+  const scales = getScale(size, scale);
+  const paddings = getContainerPadding(
     variant,
     size,
     scale,
     border,
+    b,
     bx,
     by,
     bt,
@@ -64,18 +60,21 @@ export const styleContainer = (
     bl,
     br
   );
-  const { bgColor, textColor } = getColor(variant, color);
+  const margins = getSpacing(margin);
+  const colors = getColor(variant, color);
 
   return mergeClasses(
     unstyledContainerConfig.styles.root.default,
-    systemStyles.size[defaultScale][dimensionScale][sizeScale],
-    systemStyles.padding[paddingScale].x[x],
-    systemStyles.padding[paddingScale].y[y],
-    systemStyles.padding[paddingScale].t[t],
-    systemStyles.padding[paddingScale].b[b],
-    systemStyles.padding[paddingScale].l[l],
-    systemStyles.padding[paddingScale].r[r],
-    systemStyles.margin.default[margin],
+    systemStyles.size[scales.default][scales.dimension][scales.size],
+    systemStyles.padding[scales.padding].x[paddings.x],
+    systemStyles.padding[scales.padding].y[paddings.y],
+    systemStyles.padding[scales.padding].t[paddings.t],
+    systemStyles.padding[scales.padding].b[paddings.b],
+    systemStyles.padding[scales.padding].l[paddings.l],
+    systemStyles.padding[scales.padding].r[paddings.r],
+    systemStyles.margin.all[margins.all],
+    systemStyles.margin.x[margins.x],
+    systemStyles.margin.y[margins.y],
     systemStyles.margin.all[m],
     systemStyles.margin.x[mx],
     systemStyles.margin.y[my],
@@ -84,6 +83,7 @@ export const styleContainer = (
     systemStyles.margin.l[ml],
     systemStyles.margin.r[mr],
     systemStyles.border.all[getBorder(variant, border)],
+    systemStyles.border.all[b],
     systemStyles.border.x[bx],
     systemStyles.border.y[by],
     systemStyles.border.t[bt],
@@ -91,6 +91,7 @@ export const styleContainer = (
     systemStyles.border.l[bl],
     systemStyles.border.r[br],
     systemStyles.radius.all[radius],
+    systemStyles.radius.all[r],
     systemStyles.radius.t[rt],
     systemStyles.radius.b[rb],
     systemStyles.radius.l[rl],
@@ -99,13 +100,13 @@ export const styleContainer = (
     systemStyles.radius.tr[rtr],
     systemStyles.radius.bl[rbl],
     systemStyles.radius.br[rbr],
-    systemStyles.size.font[fontSize],
-    systemStyles.color.bg[theme][bgColor],
-    systemStyles.color.text[theme][textColor],
-    systemStyles.color.fill[theme][textColor],
+    systemStyles.size.font[scales.font],
+    systemStyles.color.bg[theme][colors.bg],
+    systemStyles.color.text[theme][colors.text],
+    systemStyles.color.fill[theme][colors.text],
     systemStyles.shadow[shadow],
     systemStyles.gap.all[gap],
-    isSquare && sharedStyles.scale.square,
+    scales.isSquare && sharedStyles.scale.square,
     className
   );
 };
