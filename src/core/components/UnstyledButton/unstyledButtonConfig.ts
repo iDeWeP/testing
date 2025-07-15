@@ -5,7 +5,6 @@ type Styles = {
   styles: {
     root: {
       checked: CSSProps;
-      default: CSSProps;
       loading: CSSStyles;
     };
   };
@@ -55,9 +54,6 @@ export const unstyledButtonConfig: ComponentConfig<UnstyledButtonConfigProps> &
     root: {
       checked: {
         group: 'checked'
-      },
-      default: {
-        position: 'relative'
       },
       loading: {
         normal: {
