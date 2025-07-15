@@ -17,14 +17,6 @@ import { MarginMRExample } from './MarginMRExample';
 import { MarginMTExample } from './MarginMTExample';
 import { MarginMXExample } from './MarginMXExample';
 import { MarginMYExample } from './MarginMYExample';
-import { PaddingExample } from './PaddingExample';
-import { PaddingPBExample } from './PaddingPBExample';
-import { PaddingPExample } from './PaddingPExample';
-import { PaddingPLExample } from './PaddingPLExample';
-import { PaddingPRExample } from './PaddingPRExample';
-import { PaddingPTExample } from './PaddingPTExample';
-import { PaddingPXExample } from './PaddingPXExample';
-import { PaddingPYExample } from './PaddingPYExample';
 import { RadiusExample } from './RadiusExample';
 import { RadiusRBExample } from './RadiusRBExample';
 import { RadiusRBLExample } from './RadiusRBLExample';
@@ -45,14 +37,6 @@ const Page = () => (
     <DefaultExample />
     <VariantExample />
     <SizeExample />
-    <PaddingExample />
-    <PaddingPExample />
-    <PaddingPXExample />
-    <PaddingPYExample />
-    <PaddingPTExample />
-    <PaddingPBExample />
-    <PaddingPLExample />
-    <PaddingPRExample />
     <MarginExample />
     <MarginMExample />
     <MarginMXExample />
