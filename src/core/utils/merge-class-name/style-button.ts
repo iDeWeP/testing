@@ -22,7 +22,7 @@ export const styleButton = (
 
   return mergeClasses(
     checked && unstyledButtonConfig.styles.root.checked,
-    unstyledButtonConfig.styles.root.default,
+    sharedStyles.position.relative,
     sharedStyles.focusable[getFocusableState(disabled, loading)],
     disabled && systemStyles.color.bg[theme][colors.bg],
     disabled && systemStyles.color.text[theme][colors.text],
