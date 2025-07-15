@@ -25,7 +25,7 @@ export const styleRipple = (
       ],
     stateful &&
       unstyledRippleConfig.styles.root.color[rippleScale].stateless[theme][
-        getRippleColor(variant, getDefaultColor(color), valid, invalid)
+        getRippleColor('text', getDefaultColor(color), valid, invalid)
       ],
     stateful &&
       unstyledRippleConfig.styles.root.color[rippleScale].stateful[theme][
