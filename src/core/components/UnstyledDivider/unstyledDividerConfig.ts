@@ -35,9 +35,9 @@ export const unstyledDividerConfig: ComponentConfig<UnstyledDividerConfigProps> 
     mb: 'unset',
     ml: 'unset',
     mr: 'unset',
-    font: 'xs',
-    color: 'surface',
-    gap: 'xs',
+    font: 'unset',
+    color: 'unset',
+    gap: 'unset',
     componentsProps: {}
   },
   styles: {
