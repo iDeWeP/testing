@@ -24,15 +24,17 @@ import type {
 } from '../UnstyledSpinner/UnstyledSpinner.types';
 
 export type UnstyledButtonRippleProps = ComponentRefProps<'span'>;
-export type UnstyledButtonBarProps = UnstyledSpinnerBarProps;
-export type UnstyledButtonTrailProps = UnstyledSpinnerTrailProps;
-export type UnstyledButtonInnerBorderProps = UnstyledSpinnerInnerBorder;
-export type UnstyledButtonOuterBorderProps = UnstyledSpinnerOuterBorder;
+
 export type UnstyledButtonSpinnerProps = {
   value?: number;
   thickness?: number;
   border?: SpinnerBorder;
 } & ComponentRefProps<'svg'>;
+
+export type UnstyledButtonBarProps = UnstyledSpinnerBarProps;
+export type UnstyledButtonTrailProps = UnstyledSpinnerTrailProps;
+export type UnstyledButtonInnerBorderProps = UnstyledSpinnerInnerBorder;
+export type UnstyledButtonOuterBorderProps = UnstyledSpinnerOuterBorder;
 
 export type UnstyledButtonComponentsProps = {
   ripple?: UnstyledButtonRippleProps;
