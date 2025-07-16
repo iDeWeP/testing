@@ -54,7 +54,9 @@ export const AvatarGroup = <E extends ElementType>(
           shadow="unset"
           gap="unset"
           {...componentsProps.surplus}
-        >{`+${count}`}</UnstyledAvatar>
+        >
+          +{count}
+        </UnstyledAvatar>
       )}
     </UnstyledGroup>
   );
