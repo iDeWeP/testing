@@ -7,8 +7,8 @@ import { UnstyledCard } from '../UnstyledCard/UnstyledCard';
 import type { AvatarGroupProps } from './AvatarGroup.types';
 import { avatarGroupConfig } from './avatarGroupConfig';
 
-export const AvatarGroup = <E extends ElementType, S extends ElementType>(
-  props: AvatarGroupProps<E, S>
+export const AvatarGroup = <E extends ElementType>(
+  props: AvatarGroupProps<E>
 ) => {
   const {
     max,

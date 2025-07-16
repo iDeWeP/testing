@@ -18,7 +18,7 @@ import type {
   UnstyledCardProps
 } from '../UnstyledCard/UnstyledCard.types';
 
-export type AvatarGroupsurplusProps<S extends ElementType> = {
+export type AvatarGroupsurplusProps = {
   as?: ElementType;
   variant?: Variant;
   size?: Size;
@@ -42,10 +42,10 @@ export type AvatarGroupsurplusProps<S extends ElementType> = {
   rbr?: Radius;
   color?: Color;
   shadow?: Shadow;
-} & ComponentRefProps<S>;
+} & ComponentRefProps<'div'>;
 
-export type AvatarGroupComponentsProps<S extends ElementType> = {
-  surplus?: AvatarGroupsurplusProps<S>;
+export type AvatarGroupComponentsProps = {
+  surplus?: AvatarGroupsurplusProps;
 };
 
 export type AvatarGroupOptionalProps = {
@@ -53,23 +53,20 @@ export type AvatarGroupOptionalProps = {
   total?: number;
 };
 
-export type AvatarGroupDefaultProps<S extends ElementType> = {
+export type AvatarGroupDefaultProps = {
   orientation?: Orientation;
   spacing?: Spacing;
   gap?: Gap;
-  componentsProps?: AvatarGroupComponentsProps<S>;
+  componentsProps?: AvatarGroupComponentsProps;
   surplus?: boolean;
 };
 
-export type AvatarGroupConfigProps<S extends ElementType> = MergeProps<
+export type AvatarGroupConfigProps = MergeProps<
   UnstyledCardConfigProps,
-  AvatarGroupDefaultProps<S>
+  AvatarGroupDefaultProps
 >;
 
-export type AvatarGroupProps<
-  E extends ElementType,
-  S extends ElementType
-> = MergeProps<
+export type AvatarGroupProps<E extends ElementType> = MergeProps<
   UnstyledCardProps<E>,
-  AvatarGroupDefaultProps<S> & AvatarGroupOptionalProps
+  AvatarGroupDefaultProps & AvatarGroupOptionalProps
 >;
