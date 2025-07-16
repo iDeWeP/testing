@@ -4,7 +4,7 @@ import { systemStyles } from '../../config/system-styles';
 import type { Classes } from '../../types';
 import { getColor } from './color';
 import { mergeClasses } from './merge-classes';
-import { getDividerPadding, getSpacing } from './spacing';
+import { getDividerSpacing } from './spacing';
 
 export const styleDivider = (
   className: string,
@@ -33,8 +33,8 @@ export const styleDivider = (
     decorated = false
   }: Classes
 ) => {
-  const paddings = getDividerPadding(orientation, padding);
-  const margins = getSpacing(margin);
+  const paddings = getDividerSpacing(orientation, padding);
+  const margins = getDividerSpacing(orientation, margin);
   const textColor = getColor('text', color).text;
 
   return mergeClasses(
@@ -50,7 +50,6 @@ export const styleDivider = (
     systemStyles.padding.default.b[pb],
     systemStyles.padding.default.l[pl],
     systemStyles.padding.default.r[pr],
-    systemStyles.margin.all[margins.all],
     systemStyles.margin.x[margins.x],
     systemStyles.margin.y[margins.y],
     systemStyles.margin.all[m],
