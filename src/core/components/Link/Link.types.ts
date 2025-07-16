@@ -11,22 +11,22 @@ import type {
 } from '../../types';
 import type {
   UnstyledButtonRippleProps,
+  UnstyledButtonSpinnerProps,
   UnstyledButtonBarProps,
   UnstyledButtonTrailProps,
   UnstyledButtonInnerBorderProps,
   UnstyledButtonOuterBorderProps,
-  UnstyledButtonSpinnerProps,
   UnstyledButtonOptionalProps,
   UnstyledButtonConfigProps,
   UnstyledButtonProps
 } from '../UnstyledButton/UnstyledButton.types';
 
 export type LinkRippleProps = UnstyledButtonRippleProps;
+export type LinkSpinnerProps = UnstyledButtonSpinnerProps;
 export type LinkBarProps = UnstyledButtonBarProps;
 export type LinkTrailProps = UnstyledButtonTrailProps;
 export type LinkInnerBorderProps = UnstyledButtonInnerBorderProps;
 export type LinkOuterBorderProps = UnstyledButtonOuterBorderProps;
-export type LinkSpinnerProps = UnstyledButtonSpinnerProps;
 
 export type LinkComponentsProps = {
   ripple?: LinkRippleProps;
