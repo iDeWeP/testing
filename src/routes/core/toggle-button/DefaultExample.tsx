@@ -5,7 +5,7 @@ import { Example } from './Example';
 export const DefaultExample = () => (
   <ExampleSection title="Default">
     <ExampleCard>
-      <Example clear />
+      <Example />
       <Example leftDecorator="LEFT-DECORATOR" />
       <Example rightDecorator="RIGHT-DECORATOR" />
       <Example

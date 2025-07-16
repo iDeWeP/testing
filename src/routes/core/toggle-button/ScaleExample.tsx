@@ -2,11 +2,11 @@ import { ExampleCard } from '../../../components/ExampleCard';
 import { ExampleSection } from '../../../components/ExampleSection';
 import { Example } from './Example';
 
-export const CheckedExample = () => (
-  <ExampleSection title="Checked">
+export const ScaleExample = () => (
+  <ExampleSection title="Scale">
     <ExampleCard>
-      <Example checked={false}>FALSE</Example>
-      <Example checked>TRUE</Example>
+      <Example scale="normal">NORMAL</Example>
+      <Example scale="square">SQUARE</Example>
     </ExampleCard>
   </ExampleSection>
 );
