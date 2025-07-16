@@ -75,6 +75,10 @@ export const UnstyledButton = <E extends ElementType>(
     />
   );
 
+  const buttonProps =
+    Component === 'button'
+      ? { disabled: disabled || !!loading, type: 'button' }
+      : {};
   const leftSpinner = loading && loading !== 'right' && spinnerNode;
   const rightSpinner = loading === 'right' && spinnerNode;
   const hasRipple = ripple !== 'none' && !loading && !disabled;
@@ -83,14 +87,16 @@ export const UnstyledButton = <E extends ElementType>(
   return (
     <UnstyledContainer
       as={Component}
-      disabled={disabled || !!loading}
-      type="button"
+      {...buttonProps}
       variant={styles.variant}
       size={size}
       border={styles.border}
       color={styles.color}
       className={mergedClassName}
-      {...setAria('button', { element: Component })}
+      {...setAria('button', {
+        element: Component,
+        isDisabled: disabled || !!loading
+      })}
       {...restProps}
     >
       {leftSpinner}
