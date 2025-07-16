@@ -1,4 +1,4 @@
-import type { ExampleTitle } from '../../../components/ExampleTitle';
+import { ExampleTitle } from '../../../components/ExampleTitle';
 import { BorderBBExample } from './BorderBBExample';
 import { BorderBExample } from './BorderBExample';
 import { BorderBLExample } from './BorderBLExample';
