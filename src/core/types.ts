@@ -63,6 +63,7 @@ export type Layout =
   | 'dashboard-center'
   | 'dashboard-right';
 export type Orientation = 'row' | 'col';
+export type DefaultPosition = 'absolute' | 'fixed';
 export type Placement =
   | 'top'
   | 'bottom'
@@ -281,6 +282,7 @@ export type Classes = {
   inputVariant?: InputVariant;
   layout?: Layout;
   orientation?: Orientation;
+  defaultPosition?: DefaultPosition;
   defaultPlacement?: DefaultPlacement;
   cornerPlacement?: CornerPlacement;
   sidePlacement?: SidePlacement;
