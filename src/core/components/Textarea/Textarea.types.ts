@@ -3,7 +3,6 @@ import type {
   InputSize,
   Radius,
   Color,
-  Gap,
   MergeProps
 } from '../../types';
 import type {
@@ -40,7 +39,6 @@ export type TextareaDefaultProps = {
   resize?: boolean;
   radius?: Radius;
   color?: Color;
-  gap?: Gap;
   componentsProps?: TextareaComponentsProps;
 };
 

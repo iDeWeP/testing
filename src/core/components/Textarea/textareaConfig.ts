@@ -9,7 +9,6 @@ export const textareaConfig: ComponentConfig<TextareaConfigProps> = {
     resize: false,
     radius: 'lg',
     color: 'primary',
-    gap: 'xs',
     componentsProps: {},
     margin: 'unset',
     m: 'unset',
@@ -27,6 +26,7 @@ export const textareaConfig: ComponentConfig<TextareaConfigProps> = {
     rtl: 'unset',
     rtr: 'unset',
     rbl: 'unset',
-    rbr: 'unset'
+    rbr: 'unset',
+    gap: 'xs'
   }
 };
