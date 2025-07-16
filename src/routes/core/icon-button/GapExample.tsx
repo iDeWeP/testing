@@ -14,15 +14,5 @@ export const GapExample = () => (
       <Example gap="xl">XL</Example>
       <Example gap="xxl">XXL</Example>
     </ExampleCard>
-    <ExampleCard>
-      <Example gap="unset">UNSET</Example>
-      <Example gap="none">NONE</Example>
-      <Example gap="xs-xs">XS-XS</Example>
-      <Example gap="sm-sm">SM-SM</Example>
-      <Example gap="md-md">MD-MD</Example>
-      <Example gap="lg-lg">LG-LG</Example>
-      <Example gap="xl-xl">XL-XL</Example>
-      <Example gap="xxl-xxl">XXL-XXL</Example>
-    </ExampleCard>
   </ExampleSection>
 );
