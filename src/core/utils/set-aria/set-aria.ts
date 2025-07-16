@@ -4,12 +4,16 @@ import type { Orientation } from '../../types';
 type Values = {
   element?: ElementType;
   isInvalid?: boolean;
+  isDisabled?: boolean;
   orientation?: Orientation;
 };
 
 const types = {
-  button: ({ element }: Values) =>
-    element === 'button' ? {} : { tabIndex: 0, role: 'button' },
+  button: ({ element, isDisabled }: Values) =>
+    element !== 'button' && {
+      role: 'button',
+      ...(isDisabled ? { 'aria-disabled': true } : { tabIndex: 0 })
+    },
   divider: ({ orientation }: Values) => ({
     role: 'separator',
     'aria-orientation': (orientation === 'row' ? 'horizontal' : 'vertical') as
