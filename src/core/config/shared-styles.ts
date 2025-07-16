@@ -1,16 +1,15 @@
-import type { CSSProps } from '../types';
-
-type Styles = Record<string, CSSProps>;
+import type { CSSStyles } from '../types';
 
 type SharedStyles = {
-  focusable: Styles;
-  display: Styles;
-  position: Styles;
-  scale: Styles;
-  direction: Styles;
-  effect: Styles;
-  transition: Styles;
-  cursor: Styles;
+  focusable: CSSStyles;
+  display: CSSStyles;
+  position: CSSStyles;
+  scale: CSSStyles;
+  ring: CSSStyles;
+  direction: CSSStyles;
+  effect: CSSStyles;
+  transition: CSSStyles;
+  cursor: CSSStyles;
 };
 
 export const sharedStyles: SharedStyles = {
@@ -39,11 +38,19 @@ export const sharedStyles: SharedStyles = {
   position: {
     absolute: {
       position: 'absolute'
+    },
+    relative: {
+      position: 'relative'
     }
   },
   scale: {
     square: {
       overflow: 'overflow-hidden'
+    }
+  },
+  ring: {
+    normal: {
+      ring: 'ring-2'
     }
   },
   direction: {

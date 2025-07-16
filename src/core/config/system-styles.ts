@@ -1,46 +1,35 @@
-import type { CSSProps, Scale, Theme } from '../types';
+import type { CSSStyles, Orientation, Theme } from '../types';
 
-type Styles = Record<string, CSSProps>;
-type SpacingScale = 'default' | Scale;
+type SizeType = 'normal' | 'square';
+type SpacingScale =
+  | 'default'
+  | 'normal'
+  | 'square'
+  | 'inner-normal'
+  | 'inner-square';
 type SpacingType = 'all' | 'x' | 'y' | 't' | 'b' | 'l' | 'r';
-type RadiusType = 'all' | 't' | 'b' | 'l' | 'r' | 'tl' | 'tr' | 'bl' | 'br';
-type GapType = 'all' | 'x' | 'y';
 type BorderType = 'all' | 'x' | 'y' | 't' | 'b' | 'l' | 'r';
+type RadiusType = 'all' | 't' | 'b' | 'l' | 'r' | 'tl' | 'tr' | 'bl' | 'br';
+type ColorType = 'bg' | 'border' | 'text' | 'fill' | 'stroke' | 'ring';
+type GapType = 'all' | 'x' | 'y';
 
-type SystemStyles = {
+type SystemCSSStyles = {
   size: {
-    normal: {
-      normal: Styles;
-      square: Styles;
-    };
-    inner: {
-      normal: Styles;
-      square: Styles;
-    };
-    text: {
-      normal: Styles;
-      square: Styles;
-    };
-    font: Styles;
-    title: Styles;
+    normal: Record<SizeType, CSSStyles>;
+    text: Record<SizeType, CSSStyles>;
+    font: CSSStyles;
   };
-  padding: Record<SpacingScale, Record<SpacingType, Styles>>;
-  margin: Record<SpacingType, Styles>;
-  border: Record<BorderType, Styles>;
-  radius: Record<RadiusType, Styles>;
-  color: {
-    bg: Record<Theme, Styles>;
-    border: Record<Theme, Styles>;
-    text: Record<Theme, Styles>;
-    fill: Record<Theme, Styles>;
-    stroke: Record<Theme, Styles>;
-    ring: Record<Theme, Styles>;
-  };
-  shadow: Styles;
-  gap: Record<GapType, Styles>;
+  padding: Record<SpacingScale, Record<SpacingType, CSSStyles>>;
+  margin: Record<SpacingType, CSSStyles>;
+  spacing: Record<Orientation, CSSStyles>;
+  border: Record<BorderType, CSSStyles>;
+  radius: Record<RadiusType, CSSStyles>;
+  color: Record<ColorType, Record<Theme, CSSStyles>>;
+  shadow: CSSStyles;
+  gap: Record<GapType, CSSStyles>;
 };
 
-export const systemStyles: SystemStyles = {
+export const systemStyles: SystemCSSStyles = {
   size: {
     normal: {
       normal: {
@@ -61,6 +50,24 @@ export const systemStyles: SystemStyles = {
         },
         xxl: {
           height: 'h-20'
+        },
+        'xs-xs': {
+          height: 'h-4'
+        },
+        'sm-sm': {
+          height: 'h-5'
+        },
+        'md-md': {
+          height: 'h-6'
+        },
+        'lg-lg': {
+          height: 'h-7'
+        },
+        'xl-xl': {
+          height: 'h-8'
+        },
+        'xxl-xxl': {
+          height: 'h-9'
         }
       },
       square: {
@@ -87,52 +94,28 @@ export const systemStyles: SystemStyles = {
         xxl: {
           width: 'w-20',
           height: 'h-20'
-        }
-      }
-    },
-    inner: {
-      normal: {
-        xs: {
-          height: 'h-4'
         },
-        sm: {
-          height: 'h-5'
-        },
-        md: {
-          height: 'h-6'
-        },
-        lg: {
-          height: 'h-7'
-        },
-        xl: {
-          height: 'h-8'
-        },
-        xxl: {
-          height: 'h-9'
-        }
-      },
-      square: {
-        xs: {
+        'xs-xs': {
           width: 'w-4',
           height: 'h-4'
         },
-        sm: {
+        'sm-sm': {
           width: 'w-5',
           height: 'h-5'
         },
-        md: {
+        'md-md': {
           width: 'w-6',
           height: 'h-6'
         },
-        lg: {
+        'lg-lg': {
           width: 'w-7',
           height: 'h-7'
         },
-        xl: {
+        'xl-xl': {
           width: 'w-8',
           height: 'h-8'
         },
-        xxl: {
+        'xxl-xxl': {
           width: 'w-9',
           height: 'h-9'
         }
@@ -157,6 +140,24 @@ export const systemStyles: SystemStyles = {
         },
         xxl: {
           height: 'h-8'
+        },
+        'xs-xs': {
+          height: 'h-8'
+        },
+        'sm-sm': {
+          height: 'h-9'
+        },
+        'md-md': {
+          height: 'h-10'
+        },
+        'lg-lg': {
+          height: 'h-11'
+        },
+        'xl-xl': {
+          height: 'h-13'
+        },
+        'xxl-xxl': {
+          height: 'h-15'
         }
       },
       square: {
@@ -183,6 +184,30 @@ export const systemStyles: SystemStyles = {
         xxl: {
           width: 'w-8',
           height: 'h-8'
+        },
+        'xs-xs': {
+          width: 'w-8',
+          height: 'h-8'
+        },
+        'sm-sm': {
+          width: 'w-9',
+          height: 'h-9'
+        },
+        'md-md': {
+          width: 'w-10',
+          height: 'h-10'
+        },
+        'lg-lg': {
+          width: 'w-11',
+          height: 'h-11'
+        },
+        'xl-xl': {
+          width: 'w-13',
+          height: 'h-13'
+        },
+        'xxl-xxl': {
+          width: 'w-15',
+          height: 'h-15'
         }
       }
     },
@@ -204,26 +229,24 @@ export const systemStyles: SystemStyles = {
       },
       xxl: {
         fontSize: 'text-2xl'
-      }
-    },
-    title: {
-      xs: {
-        fontSize: 'text-xl'
       },
-      sm: {
+      'xs-xs': {
         fontSize: 'text-2xl'
       },
-      md: {
+      'sm-sm': {
         fontSize: 'text-3xl'
       },
-      lg: {
+      'md-md': {
         fontSize: 'text-4xl'
       },
-      xl: {
+      'lg-lg': {
         fontSize: 'text-5xl'
       },
-      xxl: {
+      'xl-xl': {
         fontSize: 'text-6xl'
+      },
+      'xxl-xxl': {
+        fontSize: 'text-7xl'
       }
     }
   },
@@ -252,22 +275,22 @@ export const systemStyles: SystemStyles = {
           padding: 'p-16'
         },
         'xs-xs': {
-          padding: 'px-2 py-1'
+          padding: 'p-1'
         },
         'sm-sm': {
-          padding: 'px-4 py-2'
+          padding: 'p-2'
         },
         'md-md': {
-          padding: 'px-6 py-3'
+          padding: 'p-3'
         },
         'lg-lg': {
-          padding: 'px-8 py-4'
+          padding: 'p-4'
         },
         'xl-xl': {
-          padding: 'px-12 py-6'
+          padding: 'p-6'
         },
         'xxl-xxl': {
-          padding: 'px-16 py-8'
+          padding: 'p-8'
         }
       },
       x: {
@@ -293,22 +316,22 @@ export const systemStyles: SystemStyles = {
           padding: 'px-16'
         },
         'xs-xs': {
-          padding: 'px-2'
+          padding: 'px-1'
         },
         'sm-sm': {
-          padding: 'px-4'
+          padding: 'px-2'
         },
         'md-md': {
-          padding: 'px-6'
+          padding: 'px-3'
         },
         'lg-lg': {
-          padding: 'px-8'
+          padding: 'px-4'
         },
         'xl-xl': {
-          padding: 'px-12'
+          padding: 'px-6'
         },
         'xxl-xxl': {
-          padding: 'px-16'
+          padding: 'px-8'
         }
       },
       y: {
@@ -457,22 +480,22 @@ export const systemStyles: SystemStyles = {
           padding: 'pl-16'
         },
         'xs-xs': {
-          padding: 'pl-2'
+          padding: 'pl-1'
         },
         'sm-sm': {
-          padding: 'pl-4'
+          padding: 'pl-2'
         },
         'md-md': {
-          padding: 'pl-6'
+          padding: 'pl-3'
         },
         'lg-lg': {
-          padding: 'pl-8'
+          padding: 'pl-4'
         },
         'xl-xl': {
-          padding: 'pl-12'
+          padding: 'pl-6'
         },
         'xxl-xxl': {
-          padding: 'pl-16'
+          padding: 'pl-8'
         }
       },
       r: {
@@ -498,22 +521,22 @@ export const systemStyles: SystemStyles = {
           padding: 'pr-16'
         },
         'xs-xs': {
-          padding: 'pr-2'
+          padding: 'pr-1'
         },
         'sm-sm': {
-          padding: 'pr-4'
+          padding: 'pr-2'
         },
         'md-md': {
-          padding: 'pr-6'
+          padding: 'pr-3'
         },
         'lg-lg': {
-          padding: 'pr-8'
+          padding: 'pr-4'
         },
         'xl-xl': {
-          padding: 'pr-12'
+          padding: 'pr-6'
         },
         'xxl-xxl': {
-          padding: 'pr-16'
+          padding: 'pr-8'
         }
       }
     },
@@ -1053,43 +1076,43 @@ export const systemStyles: SystemStyles = {
         }
       }
     },
-    inner: {
+    'inner-normal': {
       all: {
         xs: {
           padding: 'px-1 py-0.5'
         },
         sm: {
-          padding: 'px-2 py-0.5'
+          padding: 'px-2 py-1'
         },
         md: {
-          padding: 'px-3 py-0.5'
+          padding: 'px-3 py-1.5'
         },
         lg: {
-          padding: 'px-4 py-0.5'
+          padding: 'px-4 py-2'
         },
         xl: {
-          padding: 'px-5 py-0.5'
+          padding: 'px-5 py-2.5'
         },
         xxl: {
-          padding: 'p-6 py-0.5'
+          padding: 'p-6 py-3'
         },
         'xs-xs': {
           padding: 'px-0.75 py-0.25'
         },
         'sm-sm': {
-          padding: 'px-1.75 py-0.25'
+          padding: 'px-1.75 py-0.75'
         },
         'md-md': {
-          padding: 'px-2.75 py-0.25'
+          padding: 'px-2.75 py-1.25'
         },
         'lg-lg': {
-          padding: 'px-3.75 py-0.25'
+          padding: 'px-3.75 py-1.75'
         },
         'xl-xl': {
-          padding: 'px-4.75 py-0.25'
+          padding: 'px-4.75 py-2.25'
         },
         'xxl-xxl': {
-          padding: 'px-5.75 py-0.25'
+          padding: 'px-5.75 py-2.75'
         }
       },
       x: {
@@ -1135,37 +1158,37 @@ export const systemStyles: SystemStyles = {
           padding: 'py-0.5'
         },
         sm: {
-          padding: 'py-0.5'
+          padding: 'py-1'
         },
         md: {
-          padding: 'py-0.5'
+          padding: 'py-1.5'
         },
         lg: {
-          padding: 'py-0.5'
+          padding: 'py-2'
         },
         xl: {
-          padding: 'py-0.5'
+          padding: 'py-2.5'
         },
         xxl: {
-          padding: 'py-0.5'
+          padding: 'py-3'
         },
         'xs-xs': {
           padding: 'py-0.25'
         },
         'sm-sm': {
-          padding: 'py-0.25'
+          padding: 'py-0.75'
         },
         'md-md': {
-          padding: 'py-0.25'
+          padding: 'py-1.25'
         },
         'lg-lg': {
-          padding: 'py-0.25'
+          padding: 'py-1.75'
         },
         'xl-xl': {
-          padding: 'py-0.25'
+          padding: 'py-2.25'
         },
         'xxl-xxl': {
-          padding: 'py-0.25'
+          padding: 'py-2.75'
         }
       },
       t: {
@@ -1173,37 +1196,37 @@ export const systemStyles: SystemStyles = {
           padding: 'pt-0.5'
         },
         sm: {
-          padding: 'pt-0.5'
+          padding: 'pt-1'
         },
         md: {
-          padding: 'pt-0.5'
+          padding: 'pt-1.5'
         },
         lg: {
-          padding: 'pt-0.5'
+          padding: 'pt-2'
         },
         xl: {
-          padding: 'pt-0.5'
+          padding: 'pt-2.5'
         },
         xxl: {
-          padding: 'pt-0.5'
+          padding: 'pt-3'
         },
         'xs-xs': {
           padding: 'pt-0.25'
         },
         'sm-sm': {
-          padding: 'pt-0.25'
+          padding: 'pt-0.75'
         },
         'md-md': {
-          padding: 'pt-0.25'
+          padding: 'pt-1.25'
         },
         'lg-lg': {
-          padding: 'pt-0.25'
+          padding: 'pt-1.75'
         },
         'xl-xl': {
-          padding: 'pt-0.25'
+          padding: 'pt-2.25'
         },
         'xxl-xxl': {
-          padding: 'pt-0.25'
+          padding: 'pt-2.75'
         }
       },
       b: {
@@ -1211,37 +1234,37 @@ export const systemStyles: SystemStyles = {
           padding: 'pb-0.5'
         },
         sm: {
-          padding: 'pb-0.5'
+          padding: 'pb-1'
         },
         md: {
-          padding: 'pb-0.5'
+          padding: 'pb-1.5'
         },
         lg: {
-          padding: 'pb-0.5'
+          padding: 'pb-2'
         },
         xl: {
-          padding: 'pb-0.5'
+          padding: 'pb-2.5'
         },
         xxl: {
-          padding: 'pb-0.5'
+          padding: 'pb-3'
         },
         'xs-xs': {
           padding: 'pb-0.25'
         },
         'sm-sm': {
-          padding: 'pb-0.25'
+          padding: 'pb-0.75'
         },
         'md-md': {
-          padding: 'pb-0.25'
+          padding: 'pb-1.25'
         },
         'lg-lg': {
-          padding: 'pb-0.25'
+          padding: 'pb-1.75'
         },
         'xl-xl': {
-          padding: 'pb-0.25'
+          padding: 'pb-2.25'
         },
         'xxl-xxl': {
-          padding: 'pb-0.25'
+          padding: 'pb-2.75'
         }
       },
       l: {
@@ -1327,37 +1350,37 @@ export const systemStyles: SystemStyles = {
           padding: 'p-0.5'
         },
         sm: {
-          padding: 'p-0.5'
+          padding: 'p-1'
         },
         md: {
-          padding: 'p-0.5'
+          padding: 'p-1.5'
         },
         lg: {
-          padding: 'p-0.5'
+          padding: 'p-2'
         },
         xl: {
-          padding: 'p-0.5'
+          padding: 'p-2.5'
         },
         xxl: {
-          padding: 'p-0.5'
+          padding: 'p-3'
         },
         'xs-xs': {
           padding: 'p-0.25'
         },
         'sm-sm': {
-          padding: 'p-0.25'
+          padding: 'p-0.75'
         },
         'md-md': {
-          padding: 'p-0.25'
+          padding: 'p-1.25'
         },
         'lg-lg': {
-          padding: 'p-0.25'
+          padding: 'p-1.75'
         },
         'xl-xl': {
-          padding: 'p-0.25'
+          padding: 'p-2.25'
         },
         'xxl-xxl': {
-          padding: 'p-0.25'
+          padding: 'p-2.75'
         }
       },
       x: {
@@ -1365,37 +1388,37 @@ export const systemStyles: SystemStyles = {
           padding: 'px-0.5'
         },
         sm: {
-          padding: 'px-0.5'
+          padding: 'px-1'
         },
         md: {
-          padding: 'px-0.5'
+          padding: 'px-1.5'
         },
         lg: {
-          padding: 'px-0.5'
+          padding: 'px-2'
         },
         xl: {
-          padding: 'px-0.5'
+          padding: 'px-2.5'
         },
         xxl: {
-          padding: 'px-0.5'
+          padding: 'px-3'
         },
         'xs-xs': {
           padding: 'px-0.25'
         },
         'sm-sm': {
-          padding: 'px-0.25'
+          padding: 'px-0.75'
         },
         'md-md': {
-          padding: 'px-0.25'
+          padding: 'px-1.25'
         },
         'lg-lg': {
-          padding: 'px-0.25'
+          padding: 'px-1.75'
         },
         'xl-xl': {
-          padding: 'px-0.25'
+          padding: 'px-2.25'
         },
         'xxl-xxl': {
-          padding: 'px-0.25'
+          padding: 'px-2.75'
         }
       },
       y: {
@@ -1403,37 +1426,37 @@ export const systemStyles: SystemStyles = {
           padding: 'py-0.5'
         },
         sm: {
-          padding: 'py-0.5'
+          padding: 'py-1'
         },
         md: {
-          padding: 'py-0.5'
+          padding: 'py-1.5'
         },
         lg: {
-          padding: 'py-0.5'
+          padding: 'py-2'
         },
         xl: {
-          padding: 'py-0.5'
+          padding: 'py-2.5'
         },
         xxl: {
-          padding: 'py-0.5'
+          padding: 'py-3'
         },
         'xs-xs': {
           padding: 'py-0.25'
         },
         'sm-sm': {
-          padding: 'py-0.25'
+          padding: 'py-0.75'
         },
         'md-md': {
-          padding: 'py-0.25'
+          padding: 'py-1.25'
         },
         'lg-lg': {
-          padding: 'py-0.25'
+          padding: 'py-1.75'
         },
         'xl-xl': {
-          padding: 'py-0.25'
+          padding: 'py-2.25'
         },
         'xxl-xxl': {
-          padding: 'py-0.25'
+          padding: 'py-2.75'
         }
       },
       t: {
@@ -1441,37 +1464,37 @@ export const systemStyles: SystemStyles = {
           padding: 'pt-0.5'
         },
         sm: {
-          padding: 'pt-0.5'
+          padding: 'pt-1'
         },
         md: {
-          padding: 'pt-0.5'
+          padding: 'pt-1.5'
         },
         lg: {
-          padding: 'pt-0.5'
+          padding: 'pt-2'
         },
         xl: {
-          padding: 'pt-0.5'
+          padding: 'pt-2.5'
         },
         xxl: {
-          padding: 'pt-0.5'
+          padding: 'pt-3'
         },
         'xs-xs': {
           padding: 'pt-0.25'
         },
         'sm-sm': {
-          padding: 'pt-0.25'
+          padding: 'pt-0.75'
         },
         'md-md': {
-          padding: 'pt-0.25'
+          padding: 'pt-1.25'
         },
         'lg-lg': {
-          padding: 'pt-0.25'
+          padding: 'pt-1.75'
         },
         'xl-xl': {
-          padding: 'pt-0.25'
+          padding: 'pt-2.25'
         },
         'xxl-xxl': {
-          padding: 'pt-0.25'
+          padding: 'pt-2.75'
         }
       },
       b: {
@@ -1479,37 +1502,37 @@ export const systemStyles: SystemStyles = {
           padding: 'pb-0.5'
         },
         sm: {
-          padding: 'pb-0.5'
+          padding: 'pb-1'
         },
         md: {
-          padding: 'pb-0.5'
+          padding: 'pb-1.5'
         },
         lg: {
-          padding: 'pb-0.5'
+          padding: 'pb-2'
         },
         xl: {
-          padding: 'pb-0.5'
+          padding: 'pb-2.5'
         },
         xxl: {
-          padding: 'pb-0.5'
+          padding: 'pb-3'
         },
         'xs-xs': {
           padding: 'pb-0.25'
         },
         'sm-sm': {
-          padding: 'pb-0.25'
+          padding: 'pb-0.75'
         },
         'md-md': {
-          padding: 'pb-0.25'
+          padding: 'pb-1.25'
         },
         'lg-lg': {
-          padding: 'pb-0.25'
+          padding: 'pb-1.75'
         },
         'xl-xl': {
-          padding: 'pb-0.25'
+          padding: 'pb-2.25'
         },
         'xxl-xxl': {
-          padding: 'pb-0.25'
+          padding: 'pb-2.75'
         }
       },
       l: {
@@ -1517,37 +1540,37 @@ export const systemStyles: SystemStyles = {
           padding: 'pl-0.5'
         },
         sm: {
-          padding: 'pl-0.5'
+          padding: 'pl-1'
         },
         md: {
-          padding: 'pl-0.5'
+          padding: 'pl-1.5'
         },
         lg: {
-          padding: 'pl-0.5'
+          padding: 'pl-2'
         },
         xl: {
-          padding: 'pl-0.5'
+          padding: 'pl-2.5'
         },
         xxl: {
-          padding: 'pl-0.5'
+          padding: 'pl-3'
         },
         'xs-xs': {
           padding: 'pl-0.25'
         },
         'sm-sm': {
-          padding: 'pl-0.25'
+          padding: 'pl-0.75'
         },
         'md-md': {
-          padding: 'pl-0.25'
+          padding: 'pl-1.25'
         },
         'lg-lg': {
-          padding: 'pl-0.25'
+          padding: 'pl-1.75'
         },
         'xl-xl': {
-          padding: 'pl-0.25'
+          padding: 'pl-2.25'
         },
         'xxl-xxl': {
-          padding: 'pl-0.25'
+          padding: 'pl-2.75'
         }
       },
       r: {
@@ -1555,37 +1578,37 @@ export const systemStyles: SystemStyles = {
           padding: 'pr-0.5'
         },
         sm: {
-          padding: 'pr-0.5'
+          padding: 'pr-1'
         },
         md: {
-          padding: 'pr-0.5'
+          padding: 'pr-1.5'
         },
         lg: {
-          padding: 'pr-0.5'
+          padding: 'pr-2'
         },
         xl: {
-          padding: 'pr-0.5'
+          padding: 'pr-2.5'
         },
         xxl: {
-          padding: 'pr-0.5'
+          padding: 'pr-3'
         },
         'xs-xs': {
           padding: 'pr-0.25'
         },
         'sm-sm': {
-          padding: 'pr-0.25'
+          padding: 'pr-0.75'
         },
         'md-md': {
-          padding: 'pr-0.25'
+          padding: 'pr-1.25'
         },
         'lg-lg': {
-          padding: 'pr-0.25'
+          padding: 'pr-1.75'
         },
         'xl-xl': {
-          padding: 'pr-0.25'
+          padding: 'pr-2.25'
         },
         'xxl-xxl': {
-          padding: 'pr-0.25'
+          padding: 'pr-2.75'
         }
       }
     }
@@ -1876,6 +1899,90 @@ export const systemStyles: SystemStyles = {
       },
       'xxl-xxl': {
         margin: 'mr-8'
+      }
+    }
+  },
+  spacing: {
+    row: {
+      none: {
+        margin: '-space-x-0'
+      },
+      xs: {
+        margin: '-space-x-2'
+      },
+      sm: {
+        margin: '-space-x-4'
+      },
+      md: {
+        margin: '-space-x-6'
+      },
+      lg: {
+        margin: '-space-x-8'
+      },
+      xl: {
+        margin: '-space-x-12'
+      },
+      xxl: {
+        margin: '-space-x-16'
+      },
+      'xs-xs': {
+        margin: '-space-x-1'
+      },
+      'sm-sm': {
+        margin: '-space-x-2'
+      },
+      'md-md': {
+        margin: '-space-x-3'
+      },
+      'lg-lg': {
+        margin: '-space-x-4'
+      },
+      'xl-xl': {
+        margin: '-space-x-6'
+      },
+      'xxl-xxl': {
+        margin: '-space-x-8'
+      }
+    },
+    col: {
+      none: {
+        margin: '-space-y-0'
+      },
+      xs: {
+        margin: '-space-y-2'
+      },
+      sm: {
+        margin: '-space-y-4'
+      },
+      md: {
+        margin: '-space-y-6'
+      },
+      lg: {
+        margin: '-space-y-8'
+      },
+      xl: {
+        margin: '-space-y-12'
+      },
+      xxl: {
+        margin: '-space-y-16'
+      },
+      'xs-xs': {
+        margin: '-space-y-1'
+      },
+      'sm-sm': {
+        margin: '-space-y-2'
+      },
+      'md-md': {
+        margin: '-space-y-3'
+      },
+      'lg-lg': {
+        margin: '-space-y-4'
+      },
+      'xl-xl': {
+        margin: '-space-y-6'
+      },
+      'xxl-xxl': {
+        margin: '-space-y-8'
       }
     }
   },
@@ -3228,6 +3335,24 @@ export const systemStyles: SystemStyles = {
       },
       xxl: {
         gap: 'gap-16'
+      },
+      'xs-xs': {
+        gap: 'gap-1'
+      },
+      'sm-sm': {
+        gap: 'gap-2'
+      },
+      'md-md': {
+        gap: 'gap-3'
+      },
+      'lg-lg': {
+        gap: 'gap-4'
+      },
+      'xl-xl': {
+        gap: 'gap-6'
+      },
+      'xxl-xxl': {
+        gap: 'gap-8'
       }
     },
     x: {
@@ -3251,6 +3376,24 @@ export const systemStyles: SystemStyles = {
       },
       xxl: {
         gap: 'gap-x-16'
+      },
+      'xs-xs': {
+        gap: 'gap-x-1'
+      },
+      'sm-sm': {
+        gap: 'gap-x-2'
+      },
+      'md-md': {
+        gap: 'gap-x-3'
+      },
+      'lg-lg': {
+        gap: 'gap-x-4'
+      },
+      'xl-xl': {
+        gap: 'gap-x-6'
+      },
+      'xxl-xxl': {
+        gap: 'gap-x-8'
       }
     },
     y: {
@@ -3274,6 +3417,24 @@ export const systemStyles: SystemStyles = {
       },
       xxl: {
         gap: 'gap-y-16'
+      },
+      'xs-xs': {
+        gap: 'gap-y-1'
+      },
+      'sm-sm': {
+        gap: 'gap-y-2'
+      },
+      'md-md': {
+        gap: 'gap-y-3'
+      },
+      'lg-lg': {
+        gap: 'gap-y-4'
+      },
+      'xl-xl': {
+        gap: 'gap-y-6'
+      },
+      'xxl-xxl': {
+        gap: 'gap-y-8'
       }
     }
   }
