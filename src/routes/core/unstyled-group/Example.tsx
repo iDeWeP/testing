@@ -1,4 +1,3 @@
-import { ExampleBox } from '../../../components/ExampleBox';
 import { UnstyledGroup } from '../../../core/components/UnstyledGroup/UnstyledGroup';
 import type { UnstyledGroupProps } from '../../../core/components/UnstyledGroup/UnstyledGroup.types';
 
@@ -11,8 +10,6 @@ export const Example = ({ clear, children = 'GROUP', ...restProps }: Props) => (
     color={clear ? 'unset' : 'primary'}
     {...restProps}
   >
-    <ExampleBox>{children}</ExampleBox>
-    <ExampleBox>{children}</ExampleBox>
-    <ExampleBox>{children}</ExampleBox>
+    {children}
   </UnstyledGroup>
 );
