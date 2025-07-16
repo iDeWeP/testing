@@ -12,5 +12,13 @@ export const SizeExample = () => (
       <Example size="xl">XL</Example>
       <Example size="xxl">XXL</Example>
     </ExampleCard>
+    <ExampleCard>
+      <Example size="xs-xs">XS-XS</Example>
+      <Example size="sm-sm">SM-SM</Example>
+      <Example size="md-md">MD-MD</Example>
+      <Example size="lg-lg">LG-LG</Example>
+      <Example size="xl-xl">XL-XL</Example>
+      <Example size="xxl-xxl">XXL-XXL</Example>
+    </ExampleCard>
   </ExampleSection>
 );

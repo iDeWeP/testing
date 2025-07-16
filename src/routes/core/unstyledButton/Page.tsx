@@ -1,11 +1,10 @@
 import { ExampleTitle } from '../../../components/ExampleTitle';
-import { BorderExample } from './BorderExample';
+import { CheckedExample } from './CheckedExample';
 import { ColorExample } from './ColorExample';
 import { DefaultExample } from './DefaultExample';
 import { DisabledExample } from './DisabledExample';
 import { EffectExample } from './EffectExample';
 import { LoadingExample } from './LoadingExample';
-import { MarginExample } from './MarginExample';
 import { RadiusExample } from './RadiusExample';
 import { ScaleExample } from './ScaleExample';
 import { SizeExample } from './SizeExample';
@@ -15,13 +14,12 @@ const Page = () => (
   <>
     <ExampleTitle>UnstyledButton</ExampleTitle>
     <DefaultExample />
+    <CheckedExample />
     <LoadingExample />
     <DisabledExample />
     <VariantExample />
     <SizeExample />
     <ScaleExample />
-    <MarginExample />
-    <BorderExample />
     <RadiusExample />
     <ColorExample />
     <EffectExample />
