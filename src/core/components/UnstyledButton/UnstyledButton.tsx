@@ -64,7 +64,7 @@ export const UnstyledButton = <E extends ElementType>(
       ml="unset"
       mr="unset"
       border="unset"
-      color={getReversedColor(color)}
+      color={getReversedColor(color, checked)}
       componentsProps={{
         bar: componentsProps.bar,
         trail: componentsProps.trail,
