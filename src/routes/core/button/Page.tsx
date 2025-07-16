@@ -1,5 +1,4 @@
 import { ExampleTitle } from '../../../components/ExampleTitle';
-import { CheckedExample } from './CheckedExample';
 import { ColorExample } from './ColorExample';
 import { DefaultExample } from './DefaultExample';
 import { DisabledExample } from './DisabledExample';
@@ -14,7 +13,6 @@ const Page = () => (
   <>
     <ExampleTitle>Button</ExampleTitle>
     <DefaultExample />
-    <CheckedExample />
     <LoadingExample />
     <DisabledExample />
     <VariantExample />
