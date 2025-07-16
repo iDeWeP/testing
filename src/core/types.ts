@@ -51,6 +51,17 @@ export type Trigger =
 export type Peak = 'auto' | number;
 export type Variant = 'outlined' | 'text' | 'light' | 'solid';
 export type InputVariant = 'default' | 'light' | 'outlined';
+export type Layout =
+  | 'default'
+  | 'row'
+  | 'col'
+  | 'left'
+  | 'center'
+  | 'right'
+  | 'dashboard'
+  | 'dashboard-left'
+  | 'dashboard-center'
+  | 'dashboard-right';
 export type Orientation = 'row' | 'col';
 export type Placement =
   | 'top'
@@ -125,7 +136,22 @@ export type Margin =
   | 'lg-lg'
   | 'xl-xl'
   | 'xxl-xxl';
-export type Border = 'unset' | 'none' | 'auto' | 'set';
+export type Spacing =
+  | 'unset'
+  | 'none'
+  | 'xs'
+  | 'sm'
+  | 'md'
+  | 'lg'
+  | 'xl'
+  | 'xxl'
+  | 'xs-xs'
+  | 'sm-sm'
+  | 'md-md'
+  | 'lg-lg'
+  | 'xl-xl'
+  | 'xxl-xxl';
+export type Border = 'unset' | 'none' | 'set' | 'auto';
 export type DefaultBorder = 'unset' | 'none' | 'set';
 export type SpinnerBorder = 'unset' | 'auto' | 'set';
 export type Radius =
@@ -165,8 +191,35 @@ export type Shadow =
   | 'lg'
   | 'xl'
   | 'xxl';
-export type Font = 'unset' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl';
-export type Gap = 'unset' | 'none' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl';
+export type Font =
+  | 'unset'
+  | 'xs'
+  | 'sm'
+  | 'md'
+  | 'lg'
+  | 'xl'
+  | 'xxl'
+  | 'xs-xs'
+  | 'sm-sm'
+  | 'md-md'
+  | 'lg-lg'
+  | 'xl-xl'
+  | 'xxl-xxl';
+export type Gap =
+  | 'unset'
+  | 'none'
+  | 'xs'
+  | 'sm'
+  | 'md'
+  | 'lg'
+  | 'xl'
+  | 'xxl'
+  | 'xs-xs'
+  | 'sm-sm'
+  | 'md-md'
+  | 'lg-lg'
+  | 'xl-xl'
+  | 'xxl-xxl';
 export type Effect = 'unset' | 'shadow';
 export type RippleEffect = 'normal';
 export type GrowTransition = 'grow' | 'grow-fade';
@@ -226,6 +279,7 @@ export type Classes = {
   followCursor?: boolean;
   variant?: Variant;
   inputVariant?: InputVariant;
+  layout?: Layout;
   orientation?: Orientation;
   defaultPlacement?: DefaultPlacement;
   cornerPlacement?: CornerPlacement;
@@ -240,6 +294,7 @@ export type Classes = {
   defaultScale?: DefaultScale;
   rippleScale?: RippleScale;
   padding?: Padding;
+  p?: Padding;
   px?: Padding;
   py?: Padding;
   pt?: Padding;
@@ -247,13 +302,16 @@ export type Classes = {
   pl?: Padding;
   pr?: Padding;
   margin?: Margin;
+  m?: Margin;
   mx?: Margin;
   my?: Margin;
   mt?: Margin;
   mb?: Margin;
   ml?: Margin;
   mr?: Margin;
+  spacing?: Spacing;
   border?: Border;
+  b?: DefaultBorder;
   bx?: DefaultBorder;
   by?: DefaultBorder;
   bt?: DefaultBorder;
@@ -261,6 +319,7 @@ export type Classes = {
   bl?: DefaultBorder;
   br?: DefaultBorder;
   radius?: Radius;
+  r?: Radius;
   rt?: Radius;
   rb?: Radius;
   rl?: Radius;
@@ -357,3 +416,5 @@ type CSSPropKeys =
 export type CSSProps = {
   [K in CSSPropKeys]?: string;
 };
+
+export type CSSStyles = Record<string, CSSProps>;
