@@ -1,4 +1,4 @@
-import { dividerConfig } from '../../components/Divider/dividerConfig';
+import { unstyledDividerConfig } from '../../components/UnstyledDivider/unstyledDividerConfig';
 import { sharedStyles } from '../../config/shared-styles';
 import { systemStyles } from '../../config/system-styles';
 import type { Classes } from '../../types';
@@ -39,8 +39,8 @@ export const styleDivider = (
 
   return mergeClasses(
     sharedStyles.display.flex,
-    decorated && dividerConfig.styles.root.decorated,
-    dividerConfig.styles.root.orientation[orientation],
+    decorated && unstyledDividerConfig.styles.root.decorated,
+    unstyledDividerConfig.styles.root.orientation[orientation],
     systemStyles.padding.default.x[paddings.x],
     systemStyles.padding.default.y[paddings.y],
     systemStyles.padding.default.all[p],

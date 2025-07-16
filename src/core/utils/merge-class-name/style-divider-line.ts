@@ -1,4 +1,4 @@
-import { dividerConfig } from '../../components/Divider/dividerConfig';
+import { unstyledDividerConfig } from '../../components/UnstyledDivider/unstyledDividerConfig';
 import type { Classes } from '../../types';
 import { mergeClasses } from './merge-classes';
 
@@ -6,4 +6,7 @@ export const styleDividerLine = (
   className: string,
   { orientation = 'row' }: Classes
 ) =>
-  mergeClasses(dividerConfig.styles.line.orientation[orientation], className);
+  mergeClasses(
+    unstyledDividerConfig.styles.line.orientation[orientation],
+    className
+  );
