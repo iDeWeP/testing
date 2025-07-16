@@ -6,6 +6,14 @@ type Props = {
 } & UnstyledCardFooterProps<'div'>;
 
 export const Example = ({
+  clear,
   children = 'UNSTYLED-CARD-FOOTER',
   ...restProps
-}: Props) => <UnstyledCardFooter {...restProps}>{children}</UnstyledCardFooter>;
+}: Props) => (
+  <UnstyledCardFooter
+    color={clear ? 'unset' : 'primary'}
+    {...restProps}
+  >
+    {children}
+  </UnstyledCardFooter>
+);
