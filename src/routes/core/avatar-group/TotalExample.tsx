@@ -2,14 +2,10 @@ import { ExampleCard } from '../../../components/ExampleCard';
 import { ExampleSection } from '../../../components/ExampleSection';
 import { Example } from './Example';
 
-export const DefaultExample = () => (
-  <ExampleSection title="Default">
+export const TotalExample = () => (
+  <ExampleSection title="Total">
     <ExampleCard>
-      <Example />
-      <Example
-        max={3}
-        total={10}
-      />
+      <Example total={10}>10</Example>
     </ExampleCard>
   </ExampleSection>
 );

@@ -7,8 +7,10 @@ export const Example = ({
   ...restProps
 }: AvatarGroupProps<'div'>) => (
   <AvatarGroup {...restProps}>
-    <ExampleAvatar>{`${children} #1`}</ExampleAvatar>
-    <ExampleAvatar>{`${children} #2`}</ExampleAvatar>
-    <ExampleAvatar>{`${children} #3`}</ExampleAvatar>
+    <ExampleAvatar>{children}</ExampleAvatar>
+    <ExampleAvatar>{children}</ExampleAvatar>
+    <ExampleAvatar>{children}</ExampleAvatar>
+    <ExampleAvatar>{children}</ExampleAvatar>
+    <ExampleAvatar>{children}</ExampleAvatar>
   </AvatarGroup>
 );
