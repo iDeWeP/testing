@@ -75,10 +75,10 @@ export const UnstyledButton = <E extends ElementType>(
     />
   );
 
-  const buttonProps =
-    Component === 'button'
-      ? { disabled: disabled || !!loading, type: 'button' }
-      : {};
+  const buttonProps = Component === 'button' && {
+    disabled: disabled || !!loading,
+    type: 'button'
+  };
   const leftSpinner = loading && loading !== 'right' && spinnerNode;
   const rightSpinner = loading === 'right' && spinnerNode;
   const hasRipple = ripple !== 'none' && !loading && !disabled;
