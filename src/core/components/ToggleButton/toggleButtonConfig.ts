@@ -7,7 +7,7 @@ export const toggleButtonConfig: ComponentConfig<ToggleButtonConfigProps> = {
     variant: 'solid',
     size: 'md',
     scale: 'normal',
-    radius: 'full',
+    radius: 'md',
     color: 'primary',
     effect: 'unset',
     componentsProps: {},

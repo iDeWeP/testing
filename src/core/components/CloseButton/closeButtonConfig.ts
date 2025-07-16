@@ -1,7 +1,7 @@
 import type { ComponentConfig } from '../../types';
-import type { IconButtonConfigProps } from './IconButton.types';
+import type { CloseButtonConfigProps } from './CloseButton.types';
 
-export const iconButtonConfig: ComponentConfig<IconButtonConfigProps> = {
+export const closeButtonConfig: ComponentConfig<CloseButtonConfigProps> = {
   props: {
     as: 'button',
     variant: 'solid',
@@ -37,6 +37,6 @@ export const iconButtonConfig: ComponentConfig<IconButtonConfigProps> = {
     rbl: 'unset',
     rbr: 'unset',
     shadow: 'unset',
-    gap: 'unset'
+    gap: 'xs'
   }
 };
