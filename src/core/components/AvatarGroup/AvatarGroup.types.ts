@@ -14,9 +14,9 @@ import type {
   MergeProps
 } from '../../types';
 import type {
-  UnstyledCardConfigProps,
-  UnstyledCardProps
-} from '../UnstyledCard/UnstyledCard.types';
+  UnstyledGroupConfigProps,
+  UnstyledGroupProps
+} from '../UnstyledGroup/UnstyledGroup.types';
 
 export type AvatarGroupsurplusProps = {
   as?: ElementType;
@@ -62,11 +62,11 @@ export type AvatarGroupDefaultProps = {
 };
 
 export type AvatarGroupConfigProps = MergeProps<
-  UnstyledCardConfigProps,
+  UnstyledGroupConfigProps,
   AvatarGroupDefaultProps
 >;
 
 export type AvatarGroupProps<E extends ElementType> = MergeProps<
-  UnstyledCardProps<E>,
+  UnstyledGroupProps<E>,
   AvatarGroupDefaultProps & AvatarGroupOptionalProps
 >;
