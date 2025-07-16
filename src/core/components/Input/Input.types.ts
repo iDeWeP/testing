@@ -3,7 +3,6 @@ import type {
   InputSize,
   Radius,
   Color,
-  Gap,
   MergeProps
 } from '../../types';
 import type {
@@ -39,7 +38,6 @@ export type InputDefaultProps = {
   size?: InputSize;
   radius?: Radius;
   color?: Color;
-  gap?: Gap;
   componentsProps?: InputComponentsProps;
 };
 

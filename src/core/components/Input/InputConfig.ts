@@ -8,7 +8,6 @@ export const inputConfig: ComponentConfig<InputConfigProps> = {
     size: 'md',
     radius: 'lg',
     color: 'primary',
-    gap: 'xs',
     componentsProps: {},
     resize: false,
     margin: 'unset',
@@ -27,6 +26,7 @@ export const inputConfig: ComponentConfig<InputConfigProps> = {
     rtl: 'unset',
     rtr: 'unset',
     rbl: 'unset',
-    rbr: 'unset'
+    rbr: 'unset',
+    gap: 'xs'
   }
 };
