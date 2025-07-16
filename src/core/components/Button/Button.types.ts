@@ -37,7 +37,7 @@ export type ButtonComponentsProps = {
   outerBorder?: ButtonOuterBorderProps;
 };
 
-export type ButtonOptionalProps = UnstyledButtonOptionalProps;
+export type ButtonOptionalProps = Omit<UnstyledButtonOptionalProps, 'checked'>;
 
 export type ButtonDefaultProps = {
   variant?: Variant;
@@ -56,6 +56,6 @@ export type ButtonConfigProps = MergeProps<
 >;
 
 export type ButtonProps<E extends ElementType> = MergeProps<
-  UnstyledButtonProps<E>,
+  Omit<UnstyledButtonProps<E>, 'checked'>,
   ButtonDefaultProps & ButtonOptionalProps
 >;
