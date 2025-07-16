@@ -15,7 +15,6 @@ import type {
   UnstyledButtonTrailProps,
   UnstyledButtonInnerBorderProps,
   UnstyledButtonOuterBorderProps,
-  UnstyledButtonOptionalProps,
   UnstyledButtonConfigProps,
   UnstyledButtonProps
 } from '../UnstyledButton/UnstyledButton.types';
@@ -36,12 +35,10 @@ export type IconButtonComponentsProps = {
   outerBorder?: IconButtonOuterBorderProps;
 };
 
-type OmitedProps = 'checked' | 'leftDecorator' | 'rightDecorator';
-
-export type IconButtonOptionalProps = Omit<
-  UnstyledButtonOptionalProps,
-  OmitedProps
->;
+export type IconButtonOptionalProps = {
+  loading?: boolean;
+  disabled?: boolean;
+};
 
 export type IconButtonDefaultProps = {
   variant?: Variant;
@@ -59,6 +56,6 @@ export type IconButtonConfigProps = MergeProps<
 >;
 
 export type IconButtonProps<E extends ElementType> = MergeProps<
-  Omit<UnstyledButtonProps<E>, OmitedProps>,
+  Omit<UnstyledButtonProps<E>, 'checked' | 'leftDecorator' | 'rightDecorator'>,
   IconButtonDefaultProps & IconButtonOptionalProps
 >;
