@@ -1,19 +1,7 @@
-import type { CSSProps, Orientation, ComponentConfig } from '../../types';
+import type { ComponentConfig } from '../../types';
 import type { DividerConfigProps } from './Divider.types';
 
-type Styles = {
-  styles: {
-    root: {
-      decorated: CSSProps;
-      orientation: Record<Orientation, CSSProps>;
-    };
-    line: {
-      orientation: Record<Orientation, CSSProps>;
-    };
-  };
-};
-
-export const dividerConfig: ComponentConfig<DividerConfigProps> & Styles = {
+export const dividerConfig: ComponentConfig<DividerConfigProps> = {
   props: {
     as: 'span',
     orientation: 'row',
@@ -38,35 +26,5 @@ export const dividerConfig: ComponentConfig<DividerConfigProps> & Styles = {
     color: 'surface',
     gap: 'xs',
     componentsProps: {}
-  },
-  styles: {
-    root: {
-      decorated: {
-        textWrap: 'text-nowrap',
-        alignItems: 'items-center',
-        userSelect: 'select-none'
-      },
-      orientation: {
-        row: {
-          width: 'w-full'
-        },
-        col: {
-          height: 'h-full',
-          flexDirection: 'flex-col'
-        }
-      }
-    },
-    line: {
-      orientation: {
-        row: {
-          width: 'w-full',
-          borderRadius: 'border-t'
-        },
-        col: {
-          height: 'h-full',
-          borderRadius: 'border-t-0 border-r'
-        }
-      }
-    }
   }
 };
