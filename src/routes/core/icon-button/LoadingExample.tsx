@@ -7,8 +7,6 @@ export const LoadingExample = () => (
     <ExampleCard>
       <Example loading={false}>FALSE</Example>
       <Example loading>TRUE</Example>
-      <Example loading="left">LEFT</Example>
-      <Example loading="right">RIGHT</Example>
     </ExampleCard>
   </ExampleSection>
 );
