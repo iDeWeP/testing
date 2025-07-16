@@ -36,9 +36,11 @@ export type IconButtonComponentsProps = {
   outerBorder?: IconButtonOuterBorderProps;
 };
 
+type OmitedProps = 'checked' | 'leftDecorator' | 'rightDecorator';
+
 export type IconButtonOptionalProps = Omit<
   UnstyledButtonOptionalProps,
-  'checked'
+  OmitedProps
 >;
 
 export type IconButtonDefaultProps = {
@@ -57,6 +59,6 @@ export type IconButtonConfigProps = MergeProps<
 >;
 
 export type IconButtonProps<E extends ElementType> = MergeProps<
-  Omit<UnstyledButtonProps<E>, 'checked'>,
+  Omit<UnstyledButtonProps<E>, OmitedProps>,
   IconButtonDefaultProps & IconButtonOptionalProps
 >;
