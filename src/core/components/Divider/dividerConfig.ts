@@ -7,6 +7,10 @@ export const dividerConfig: ComponentConfig<DividerConfigProps> = {
     orientation: 'row',
     placement: 'center',
     padding: 'unset',
+    font: 'xs',
+    color: 'surface',
+    gap: 'xs',
+    componentsProps: {},
     p: 'unset',
     px: 'unset',
     py: 'unset',
@@ -21,10 +25,6 @@ export const dividerConfig: ComponentConfig<DividerConfigProps> = {
     mt: 'unset',
     mb: 'unset',
     ml: 'unset',
-    mr: 'unset',
-    font: 'xs',
-    color: 'surface',
-    gap: 'xs',
-    componentsProps: {}
+    mr: 'unset'
   }
 };
