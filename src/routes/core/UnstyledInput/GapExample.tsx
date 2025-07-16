@@ -14,5 +14,15 @@ export const GapExample = () => (
       <Example gap="xl" />
       <Example gap="xxl" />
     </ExampleCard>
+    <ExampleCard>
+      <Example gap="unset" />
+      <Example gap="none" />
+      <Example gap="xs-xs" />
+      <Example gap="sm-sm" />
+      <Example gap="md-md" />
+      <Example gap="lg-lg" />
+      <Example gap="xl-xl" />
+      <Example gap="xxl-xxl" />
+    </ExampleCard>
   </ExampleSection>
 );
