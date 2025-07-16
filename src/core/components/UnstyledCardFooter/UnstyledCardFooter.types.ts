@@ -9,9 +9,9 @@ import type {
   MergeProps
 } from '../../types';
 import type {
-  UnstyledCardConfigProps,
-  UnstyledCardProps
-} from '../UnstyledCard/UnstyledCard.types';
+  UnstyledBoxConfigProps,
+  UnstyledBoxProps
+} from '../UnstyledBox/UnstyledBox.types';
 
 export type UnstyledCardFooterDefaultProps = {
   variant?: Variant;
@@ -23,11 +23,11 @@ export type UnstyledCardFooterDefaultProps = {
 };
 
 export type UnstyledCardFooterConfigProps = MergeProps<
-  UnstyledCardConfigProps,
+  UnstyledBoxConfigProps,
   UnstyledCardFooterDefaultProps
 >;
 
 export type UnstyledCardFooterProps<E extends ElementType> = MergeProps<
-  UnstyledCardProps<E>,
+  UnstyledBoxProps<E>,
   UnstyledCardFooterDefaultProps
 >;
