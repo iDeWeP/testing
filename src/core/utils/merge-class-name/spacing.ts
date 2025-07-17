@@ -96,12 +96,12 @@ export const getContainerPadding = (
   };
 };
 
-export const getDividerPadding = (
+export const getDividerSpacing = (
   orientation: Orientation,
-  padding: Padding
+  spacing: Spacing
 ) => ({
-  x: setSpacing(orientation === 'row', padding),
-  y: setSpacing(orientation === 'col', padding)
+  x: setSpacing(orientation === 'row', spacing),
+  y: setSpacing(orientation === 'col', spacing)
 });
 
 export const getInputSize = (size: InputSize, resize: boolean) =>
