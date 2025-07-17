@@ -288,6 +288,7 @@ export type Classes = {
   defaultPlacement?: DefaultPlacement;
   cornerPlacement?: CornerPlacement;
   sidePlacement?: SidePlacement;
+  cardPlacement?: CardPlacement;
   float?: boolean;
   overlap?: Overlap;
   size?: Size;
