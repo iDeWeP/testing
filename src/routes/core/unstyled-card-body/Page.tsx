@@ -30,6 +30,7 @@ import { PaddingPRExample } from './PaddingPRExample';
 import { PaddingPTExample } from './PaddingPTExample';
 import { PaddingPXExample } from './PaddingPXExample';
 import { PaddingPYExample } from './PaddingPYExample';
+import { PlacementExample } from './PlacementExample';
 import { RadiusExample } from './RadiusExample';
 import { RadiusRBExample } from './RadiusRBExample';
 import { RadiusRBLExample } from './RadiusRBLExample';
@@ -49,6 +50,7 @@ const Page = () => (
     <DefaultExample />
     <VariantExample />
     <OrientationExample />
+    <PlacementExample />
     <PaddingExample />
     <RadiusExample />
     <ColorExample />
