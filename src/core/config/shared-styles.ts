@@ -5,6 +5,7 @@ type SharedStyles = {
   display: CSSStyles;
   position: CSSStyles;
   scale: CSSStyles;
+  width: CSSStyles;
   ring: CSSStyles;
   direction: CSSStyles;
   effect: CSSStyles;
@@ -36,16 +37,27 @@ export const sharedStyles: SharedStyles = {
     }
   },
   position: {
+    relative: {
+      position: 'relative'
+    },
     absolute: {
       position: 'absolute'
     },
-    relative: {
-      position: 'relative'
+    fixed: {
+      position: 'fixed'
     }
   },
   scale: {
     square: {
       overflow: 'overflow-hidden'
+    }
+  },
+  width: {
+    fit: {
+      width: 'w-fit'
+    },
+    full: {
+      width: 'w-full'
     }
   },
   ring: {

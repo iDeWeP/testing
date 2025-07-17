@@ -14,6 +14,7 @@ type ColorType = 'bg' | 'border' | 'text' | 'fill' | 'stroke' | 'ring';
 type GapType = 'all' | 'x' | 'y';
 
 type SystemCSSStyles = {
+  placement: CSSStyles;
   size: {
     normal: Record<SizeType, CSSStyles>;
     text: Record<SizeType, CSSStyles>;
@@ -30,6 +31,24 @@ type SystemCSSStyles = {
 };
 
 export const systemStyles: SystemCSSStyles = {
+  placement: {
+    'top-left': {
+      top: 'top-0',
+      left: 'left-0'
+    },
+    'top-right': {
+      top: 'top-0',
+      right: 'right-0'
+    },
+    'bottom-left': {
+      bottom: 'bottom-0',
+      left: 'left-0'
+    },
+    'bottom-right': {
+      bottom: 'bottom-0',
+      right: 'right-0'
+    }
+  },
   size: {
     normal: {
       normal: {
