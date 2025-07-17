@@ -10,6 +10,7 @@ export const textareaConfig: ComponentConfig<TextareaConfigProps> = {
     radius: 'lg',
     color: 'primary',
     componentsProps: {},
+    width: 'normal',
     margin: 'unset',
     m: 'unset',
     mx: 'unset',
