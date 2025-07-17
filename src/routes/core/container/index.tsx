@@ -1,7 +1,7 @@
 import { lazy } from 'react';
 import type { RouteObject } from 'react-router';
 
-export const UnstyledContainerRoute: RouteObject = {
-  path: '/core/unstyled-container',
+export const ContainerRoute: RouteObject = {
+  path: '/core/container',
   Component: lazy(() => import('./Page'))
 };
