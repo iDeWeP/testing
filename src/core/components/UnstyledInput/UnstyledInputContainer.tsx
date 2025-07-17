@@ -6,6 +6,7 @@ import { useTheme } from '../../hooks/use-theme/use-theme';
 import type {
   MergeComponentProps,
   InputSize,
+  Width,
   Margin,
   Color
 } from '../../types';
@@ -23,6 +24,7 @@ type Props = MergeComponentProps<
     disabled: boolean;
     size: InputSize;
     resize: boolean;
+    width: Width;
     margin: Margin;
     m: Margin;
     mx: Margin;
@@ -45,6 +47,7 @@ export const UnstyledInputContainer = ({
   disabled,
   size: inputSize,
   resize,
+  width,
   margin,
   m,
   mx,
@@ -70,6 +73,7 @@ export const UnstyledInputContainer = ({
     disabled,
     inputSize,
     resize,
+    width,
     margin,
     m,
     mx,

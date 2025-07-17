@@ -57,6 +57,7 @@ export const unstyledInputConfig: ComponentConfig<UnstyledInputConfigProps> &
     variant: 'outlined',
     size: 'md',
     resize: false,
+    width: 'normal',
     margin: 'unset',
     m: 'unset',
     mx: 'unset',

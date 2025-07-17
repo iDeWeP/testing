@@ -31,6 +31,7 @@ export const UnstyledInput = <E extends ElementType>(
     variant,
     size: inputSize,
     resize,
+    width,
     margin,
     m,
     mx,
@@ -87,6 +88,7 @@ export const UnstyledInput = <E extends ElementType>(
       disabled={disabled}
       size={inputSize}
       resize={resize}
+      width={width}
       margin={margin}
       m={m}
       mx={mx}

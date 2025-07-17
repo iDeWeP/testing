@@ -3,6 +3,7 @@ import type {
   ComponentRefProps,
   InputVariant,
   InputSize,
+  Width,
   Margin,
   Radius,
   Color,
@@ -41,6 +42,7 @@ export type UnstyledInputDefaultProps = {
   variant?: InputVariant;
   size?: InputSize;
   resize?: boolean;
+  width?: Width;
   margin?: Margin;
   m?: Margin;
   mx?: Margin;
