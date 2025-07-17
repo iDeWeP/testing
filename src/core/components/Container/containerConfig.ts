@@ -35,6 +35,6 @@ export const containerConfig: ComponentConfig<ContainerConfigProps> = {
     rbl: 'unset',
     rbr: 'unset',
     shadow: 'unset',
-    gap: 'xs',
+    gap: 'xs'
   }
 };
