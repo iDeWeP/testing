@@ -1,19 +1,7 @@
-import { UnstyledDropdown } from '../../../core/components/UnstyledDropdown/UnstyledDropdown';
-import type { UnstyledDropdownProps } from '../../../core/components/UnstyledDropdown/UnstyledDropdown.types';
-
-type Props = {
-  clear?: boolean;
-} & UnstyledDropdownProps<'div'>;
+import { Dropdown } from '../../../core/components/Dropdown/Dropdown';
+import type { DropdownProps } from '../../../core/components/Dropdown/Dropdown.types';
 
 export const Example = ({
-  clear,
-  children = 'UNSTYLED-DROPDOWN',
+  children = 'DROPDOWN',
   ...restProps
-}: Props) => (
-  <UnstyledDropdown
-    color={clear ? 'unset' : 'primary'}
-    {...restProps}
-  >
-    {children}
-  </UnstyledDropdown>
-);
+}: DropdownProps<'div'>) => <Dropdown {...restProps}>{children}</Dropdown>;
