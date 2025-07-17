@@ -3,7 +3,6 @@ import type {
   Variant,
   Size,
   Scale,
-  Width,
   Margin,
   Border,
   DefaultBorder,
@@ -19,7 +18,6 @@ export type UnstyledContainerDefaultProps = {
   variant?: Variant;
   size?: Size;
   scale?: Scale;
-  width?: Width;
   margin?: Margin;
   m?: Margin;
   mx?: Margin;
