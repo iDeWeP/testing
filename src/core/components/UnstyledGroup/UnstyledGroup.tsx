@@ -8,7 +8,7 @@ import { unstyledGroupConfig } from './unstyledGroupConfig';
 export const UnstyledGroup = <E extends ElementType>(
   props: UnstyledGroupProps<E>
 ) => {
-  const { spacing, className, orientation, ...restProps } = mergeProps(
+  const { orientation, spacing, className, ...restProps } = mergeProps(
     unstyledGroupConfig.props,
     props
   );
