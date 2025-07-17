@@ -45,7 +45,7 @@ import { VariantExample } from './VariantExample';
 
 const Page = () => (
   <>
-    <ExampleTitle>UnstyledCardFooter</ExampleTitle>
+    <ExampleTitle>UnstyledCardBody</ExampleTitle>
     <DefaultExample />
     <VariantExample />
     <OrientationExample />
