@@ -2,6 +2,7 @@ import type { ElementType } from 'react';
 import type {
   Variant,
   Orientation,
+  CardPlacement,
   Padding,
   Radius,
   Color,
@@ -9,13 +10,14 @@ import type {
   MergeProps
 } from '../../types';
 import type {
-  UnstyledCardConfigProps,
-  UnstyledCardProps
-} from '../UnstyledCard/UnstyledCard.types';
+  UnstyledCardBodyConfigProps,
+  UnstyledCardBodyProps
+} from '../UnstyledCardBody/UnstyledCardBody.types';
 
 export type CardBodyDefaultProps = {
   variant?: Variant;
   orientation?: Orientation;
+  placement?: CardPlacement;
   padding?: Padding;
   radius?: Radius;
   color?: Color;
@@ -23,11 +25,11 @@ export type CardBodyDefaultProps = {
 };
 
 export type CardBodyConfigProps = MergeProps<
-  UnstyledCardConfigProps,
+  UnstyledCardBodyConfigProps,
   CardBodyDefaultProps
 >;
 
 export type CardBodyProps<E extends ElementType> = MergeProps<
-  UnstyledCardProps<E>,
+  UnstyledCardBodyProps<E>,
   CardBodyDefaultProps
 >;
