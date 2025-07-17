@@ -53,7 +53,7 @@ export const styleCheckboxIcon = (
     unstyledCheckboxConfig.styles.shared.default,
     unstyledCheckboxConfig.styles.icon.default,
     systemStyles.size.text.square[defaultSize],
-    systemStyles.border.all[getBorder(variant, border)],
+    systemStyles.border.all[getBorder(variant, border).all],
     systemStyles.border.all[b],
     systemStyles.border.x[bx],
     systemStyles.border.y[by],

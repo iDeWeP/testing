@@ -16,18 +16,18 @@ export const styleCardFooter = (
     radius = 'unset'
   }: Classes
 ) => {
-  const paddings = getSpacing(padding, true);
-  const margins = getSpacing(margin, true);
-  const defaultBorder = getBorder(variant, border);
+  const paddings = getSpacing(padding, 'bottom');
+  const margins = getSpacing(margin, 'bottom');
+  const borders = getBorder(variant, border, 'bottom');
 
   return mergeClasses(
     sharedStyles.display.flex,
     systemStyles.padding.default.x[paddings.x],
-    systemStyles.padding.default.b[paddings.y],
+    systemStyles.padding.default.b[paddings.b],
     systemStyles.margin.x[margins.x],
-    systemStyles.margin.b[margins.y],
-    systemStyles.border.x[defaultBorder],
-    systemStyles.border.b[defaultBorder],
+    systemStyles.margin.b[margins.b],
+    systemStyles.border.x[borders.x],
+    systemStyles.border.b[borders.b],
     systemStyles.radius.b[radius],
     sharedStyles.direction[orientation],
     className
