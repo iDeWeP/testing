@@ -26,6 +26,7 @@ import { ResizeExample } from './ResizeExampe';
 import { SizeExample } from './SizeExample';
 import { ValidExample } from './ValidExample';
 import { VariantExample } from './VariantExample';
+import { WidthExample } from './WidthExample';
 
 const Page = () => (
   <>
@@ -37,6 +38,7 @@ const Page = () => (
     <VariantExample />
     <SizeExample />
     <ResizeExample />
+    <WidthExample />
     <MarginExample />
     <MarginMExample />
     <MarginMXExample />
