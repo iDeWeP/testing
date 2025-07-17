@@ -4,6 +4,7 @@ import { DefaultExample } from './DefaultExample';
 import { GapExample } from './GapExample';
 import { OrientationExample } from './OrientationExample';
 import { PaddingExample } from './PaddingExample';
+import { PlacementExample } from './PlacementExample';
 import { RadiusExample } from './RadiusExample';
 import { VariantExample } from './VariantExample';
 
@@ -13,6 +14,7 @@ const Page = () => (
     <DefaultExample />
     <VariantExample />
     <OrientationExample />
+    <PlacementExample />
     <PaddingExample />
     <RadiusExample />
     <ColorExample />
