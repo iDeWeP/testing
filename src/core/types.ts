@@ -84,6 +84,7 @@ export type CornerPlacement =
   | 'bottom-left'
   | 'bottom-right';
 export type CrossPlacement = 'start' | 'center' | 'end';
+export type CardPlacement = 'none' | 'top' | 'center' | 'bottom';
 export type SidePlacement = 'left' | 'right';
 export type MainAxis = DefaultPlacement;
 export type CrossAxis = CrossPlacement;
@@ -107,6 +108,7 @@ export type InputSize = 'sm' | 'md' | 'lg';
 export type Scale = 'none' | 'normal' | 'square' | 'circle';
 export type DefaultScale = 'normal' | 'square';
 export type RippleScale = 'normal' | 'inner';
+export type Width = 'normal' | 'fit' | 'full';
 export type Padding =
   | 'unset'
   | 'none'
@@ -295,6 +297,7 @@ export type Classes = {
   scale?: Scale;
   defaultScale?: DefaultScale;
   rippleScale?: RippleScale;
+  width?: Width;
   padding?: Padding;
   p?: Padding;
   px?: Padding;
