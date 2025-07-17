@@ -1,6 +1,7 @@
 import type {
   Padding,
   DefaultSize,
+  CardPlacement,
   Size,
   Font,
   Variant,
@@ -10,22 +11,23 @@ import type {
   Orientation,
   InputSize
 } from '../../types';
+import { setClass } from '../set-class/set-class';
 
 type Spacing = Padding;
 
 const setSize = (condition: boolean, size: DefaultSize) =>
   condition ? `${size}-${size}` : size;
 
-const setSpacing = (condition: boolean, padding: Spacing) =>
-  condition ? padding : 'unset';
-
-export const getSpacing = (spacing: Spacing, isSide?: boolean) => {
-  const isSquare = !isSpacingInner(spacing) && !isSide;
+export const getSpacing = (spacing: Spacing, placement?: CardPlacement) => {
+  const isDefaultPlacement = !placement || placement === 'none';
+  const isSquare = !isSpacingInner(spacing) && isDefaultPlacement;
 
   return {
-    all: setSpacing(isSquare, spacing),
-    x: setSpacing(!isSquare, getDefaultSpacing(spacing)),
-    y: setSpacing(!isSquare, spacing)
+    all: setClass(isSquare, spacing),
+    x: setClass(!isSquare, getDefaultSpacing(spacing)),
+    y: setClass(!isSquare && isDefaultPlacement, spacing),
+    b: setClass(!isSquare && placement === 'bottom', spacing),
+    t: setClass(!isSquare && placement === 'top', spacing)
   };
 };
 
@@ -100,8 +102,8 @@ export const getDividerSpacing = (
   orientation: Orientation,
   spacing: Spacing
 ) => ({
-  x: setSpacing(orientation === 'row', spacing),
-  y: setSpacing(orientation === 'col', spacing)
+  x: setClass(orientation === 'row', spacing),
+  y: setClass(orientation === 'col', spacing)
 });
 
 export const getInputSize = (size: InputSize, resize: boolean) =>
