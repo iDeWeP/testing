@@ -34,7 +34,7 @@ export type UnstyledCheckboxIconProps = Omit<
 >;
 
 export type UnstyledCheckboxTrailProps = {
-  border?: Border;
+  border?: DefaultBorder;
   b?: DefaultBorder;
   bx?: DefaultBorder;
   by?: DefaultBorder;
