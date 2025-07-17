@@ -64,8 +64,12 @@ export const getColor = (
 export const getDefaultColor = (color: Color) =>
   color === 'unset' ? 'unset' : 'surface';
 
-export const getReversedColor = (color: Color) =>
-  (isColorReversed(color) ? getStateColor(color) : `${color}-on`) as Color;
+export const getReversedColor = (color: Color, isChecked?: boolean) =>
+  isChecked === false
+    ? 'surface'
+    : ((isColorReversed(color)
+        ? getStateColor(color)
+        : `${color}-on`) as Color);
 
 export const getCheckableColor = (color: Color, checked?: boolean) =>
   checked === false ? 'surface' : color;
