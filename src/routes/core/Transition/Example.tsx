@@ -5,7 +5,7 @@ import type { TransitionProps } from '../../../core/components/Transition/Transi
 import { UnstyledBox } from '../../../core/components/UnstyledBox/UnstyledBox';
 
 export const Example = ({
-  children = 'UNSTYLED-TRANSITION',
+  children = 'TRANSITION',
   ...restProps
 }: TransitionProps<'div'>) => {
   const [isIn, setIsIn] = useState(false);
@@ -14,7 +14,7 @@ export const Example = ({
 
   return (
     <>
-      <button onClick={handleClick}>{`Toggle ${children}`}</button>
+      <button onClick={handleClick}>Toggle {children}</button>
       <ExampleCard>
         <Transition
           in={isIn}
