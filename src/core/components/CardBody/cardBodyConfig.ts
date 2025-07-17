@@ -7,7 +7,7 @@ export const cardBodyConfig: ComponentConfig<CardBodyConfigProps> = {
     variant: 'solid',
     orientation: 'col',
     placement: 'none',
-    padding: 'unset',
+    padding: 'md',
     radius: 'unset',
     color: 'unset',
     gap: 'unset',
