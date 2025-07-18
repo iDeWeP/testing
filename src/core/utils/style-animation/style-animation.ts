@@ -1,5 +1,6 @@
 import type { CSSProperties } from 'react';
 import type { Animation } from '../../../hooks/hooks/use-animation/use-animation';
+import { setProp } from '../../../utils/utils/set-prop/set-prop';
 import type { AnimationProps } from '../../types';
 
 export const styleAnimation = (
@@ -7,7 +8,7 @@ export const styleAnimation = (
   { isEntering, isEntered, isExiting, isExited }: Animation,
   duration: number,
   animationProps?: AnimationProps
-) => {
+): CSSProperties => {
   const style: CSSProperties = {};
 
   const enterDuration = animationProps?.enterDuration ?? duration;
@@ -31,21 +32,12 @@ export const styleAnimation = (
     style.transitionDelay = `${exitDelay}ms`;
   }
 
-  if (isEntered && animationProps?.enteredStyle) {
-    return { ...style, ...animationProps.enteredStyle };
-  }
-
-  if (isEntering && animationProps?.enteringStyle) {
-    return { ...style, ...animationProps.enteringStyle };
-  }
-
-  if (isExited && animationProps?.exitedStyle) {
-    return { ...style, ...animationProps.exitedStyle };
-  }
-
-  if (isExiting && animationProps?.exitingStyle) {
-    return { ...style, ...animationProps.exitingStyle };
-  }
-
-  return style;
+  return {
+    visibility: !isIn && isExited ? 'hidden' : 'visible',
+    ...setProp(isEntered, animationProps?.enteredStyle),
+    ...setProp(isEntering, animationProps?.enteringStyle),
+    ...setProp(isExited, animationProps?.exitedStyle),
+    ...setProp(isExiting, animationProps?.exitingStyle),
+    ...style
+  };
 };
