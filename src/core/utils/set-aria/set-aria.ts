@@ -5,6 +5,9 @@ type Values = {
   element?: ElementType;
   isInvalid?: boolean;
   isDisabled?: boolean;
+  min?: number;
+  max?: number;
+  value?: number;
   orientation?: Orientation;
 };
 
@@ -21,7 +24,13 @@ const types = {
       | 'vertical'
   }),
   icon: () => ({ 'aria-hidden': true }),
-  input: ({ isInvalid }: Values) => ({ 'aria-invalid': !!isInvalid })
+  input: ({ isInvalid }: Values) => ({ 'aria-invalid': !!isInvalid }),
+  linearProgress: ({ min, max, value }: Values) => ({
+    role: 'progressbar',
+    'aria-valuemin': min,
+    'aria-valuemax': max,
+    'aria-valuenow': value
+  })
 };
 
 export const setAria = (type: keyof typeof types, values: Values = {}) =>
