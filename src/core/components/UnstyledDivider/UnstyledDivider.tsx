@@ -63,7 +63,7 @@ export const UnstyledDivider = <E extends ElementType>(
     font,
     color,
     gap,
-    decorated: !!children
+    decorated: children
   });
 
   return (
