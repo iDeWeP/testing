@@ -23,7 +23,7 @@ export const getBorder = (
   };
 };
 
-export const isCheckboxBordered = (
+export const isBordered = (
   border: Border,
   b: DefaultBorder,
   bx: DefaultBorder,
