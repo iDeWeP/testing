@@ -1,4 +1,4 @@
-import type { Gap, MergeComponentProps, Orientation } from '../../types';
+import type { MergeComponentProps, Orientation, Gap } from '../../types';
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
 
 type Props = MergeComponentProps<
