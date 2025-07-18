@@ -3,11 +3,19 @@ import { setProp } from '../../../utils/utils/set-prop/set-prop';
 import type { CSSProps } from '../../types';
 
 export const mergeClasses = (
-  ...classNames: (CSSProps | string | boolean | number | undefined)[]
+  ...classNames: (
+    | undefined
+    | null
+    | CSSProps
+    | string
+    | boolean
+    | number
+    | bigint
+  )[]
 ) => {
   const className = classNames
     .map((className) => {
-      if (typeof className === 'object') {
+      if (className && typeof className === 'object') {
         return Object.values(className).join(' ');
       }
 
@@ -21,5 +29,5 @@ export const mergeClasses = (
     .trim()
     .replace(/\s{2,}/, ' ');
 
-  return setProp(!!className, twMerge(className));
+  return setProp(className, twMerge(className));
 };
