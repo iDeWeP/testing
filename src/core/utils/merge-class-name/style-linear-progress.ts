@@ -1,19 +1,19 @@
 import { unstyledLinearProgressConfig } from '../../components/UnstyledLinearProgress/unstyledLinearProgressConfig';
 import { systemStyles } from '../../config/system-styles';
 import type { Classes } from '../../types';
-import { getBorder } from './border';
+import { getBorder, isBordered } from './border';
 import { getColor } from './color';
 import { mergeClasses } from './merge-classes';
-import { getSpacing, getDecoratedSpacing } from './spacing';
+import { getSpacing, getSpacingType } from './spacing';
 
 export const styleLinearProgress = (
   className: string,
   {
     theme = 'light',
     disabled = false,
-    variant = 'solid',
+    variant = 'light',
     orientation = 'row',
-    defaultSize = 'md',
+    size = 'md',
     margin = 'unset',
     m = 'unset',
     mx = 'unset',
@@ -46,15 +46,13 @@ export const styleLinearProgress = (
   }: Classes
 ) => {
   const margins = getSpacing(margin);
+  const colors = getColor(variant, color, disabled);
 
   return mergeClasses(
-    unstyledLinearProgressConfig.styles.bar.default,
-    decorated && unstyledLinearProgressConfig.styles.bar.decorated,
-    unstyledLinearProgressConfig.styles.bar.orientation[orientation],
     unstyledLinearProgressConfig.styles.root.orientation[orientation],
     unstyledLinearProgressConfig.styles.root.size[orientation][
-      getDecoratedSpacing(decorated)
-    ][defaultSize],
+      getSpacingType(decorated)
+    ][size],
     systemStyles.margin.all[margins.all],
     systemStyles.margin.x[margins.x],
     systemStyles.margin.y[margins.y],
@@ -83,7 +81,9 @@ export const styleLinearProgress = (
     systemStyles.radius.tr[rtr],
     systemStyles.radius.bl[rbl],
     systemStyles.radius.br[rbr],
-    systemStyles.color.bg[theme][getColor(variant, color, disabled).text],
+    systemStyles.color.bg[theme][colors.bg],
+    isBordered(border, b, bx, by, bt, bb, bl, br) &&
+      systemStyles.color.border[theme][colors.text],
     systemStyles.shadow[shadow],
     className
   );
