@@ -15,9 +15,9 @@ type Styles = {
 export const circularProgressConfig: ComponentConfig<CircularProgressConfigProps> &
   Styles = {
   props: {
-    spin: true,
+    spin: false,
     value: 75,
-    variant: 'text',
+    variant: 'light',
     size: 'md',
     thickness: 4,
     color: 'primary',
