@@ -1,7 +1,7 @@
 import type { ElementType } from 'react';
 import type {
   Variant,
-  Size,
+  DefaultSize,
   Radius,
   Color,
   Effect,
@@ -40,7 +40,7 @@ export type ChipOptionalProps = Omit<UnstyledButtonOptionalProps, 'checked'>;
 
 export type ChipDefaultProps = {
   variant?: Variant;
-  size?: Size;
+  size?: DefaultSize;
   radius?: Radius;
   color?: Color;
   effect?: Effect;
