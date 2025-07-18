@@ -11,5 +11,5 @@ export const useKeyDown = (key: string, handler?: VoidFunction | false) => {
     [key, handler]
   );
 
-  return setProp(!!handler, handleKeyDown);
+  return setProp(handler, handleKeyDown);
 };
