@@ -1,7 +1,6 @@
 import type { ReactNode, ElementType } from 'react';
 import type {
   ComponentRefProps,
-  SpinnerBorder,
   Loading,
   Variant,
   Size,
@@ -17,6 +16,7 @@ import type {
   UnstyledContainerProps
 } from '../UnstyledContainer/UnstyledContainer.types';
 import type {
+  UnstyledSpinnerProps,
   UnstyledSpinnerBarProps,
   UnstyledSpinnerTrailProps,
   UnstyledSpinnerInnerBorder,
@@ -24,13 +24,7 @@ import type {
 } from '../UnstyledSpinner/UnstyledSpinner.types';
 
 export type UnstyledButtonRippleProps = ComponentRefProps<'span'>;
-
-export type UnstyledButtonSpinnerProps = {
-  value?: number;
-  thickness?: number;
-  border?: SpinnerBorder;
-} & ComponentRefProps<'svg'>;
-
+export type UnstyledButtonSpinnerProps = UnstyledSpinnerProps;
 export type UnstyledButtonBarProps = UnstyledSpinnerBarProps;
 export type UnstyledButtonTrailProps = UnstyledSpinnerTrailProps;
 export type UnstyledButtonInnerBorderProps = UnstyledSpinnerInnerBorder;
