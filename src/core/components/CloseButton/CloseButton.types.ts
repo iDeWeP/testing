@@ -1,7 +1,5 @@
 import type { ElementType } from 'react';
 import type {
-  ComponentRefProps,
-  SVGNodeProps,
   Variant,
   Size,
   Radius,
@@ -11,23 +9,25 @@ import type {
   MergeProps
 } from '../../types';
 import type {
-  UnstyledButtonRippleProps,
-  UnstyledButtonSpinnerProps,
-  UnstyledButtonBarProps,
-  UnstyledButtonTrailProps,
-  UnstyledButtonInnerBorderProps,
-  UnstyledButtonOuterBorderProps,
-  UnstyledButtonConfigProps,
-  UnstyledButtonProps
-} from '../UnstyledButton/UnstyledButton.types';
+  UnstyledCloseButtonIconProps,
+  UnstyledCloseButtonRippleProps,
+  UnstyledCloseButtonSpinnerProps,
+  UnstyledCloseButtonBarProps,
+  UnstyledCloseButtonTrailProps,
+  UnstyledCloseButtonInnerBorderProps,
+  UnstyledCloseButtonOuterBorderProps,
+  UnstyledCloseButtonOptionalProps,
+  UnstyledCloseButtonConfigProps,
+  UnstyledCloseButtonProps
+} from '../UnstyledCloseButton/UnstyledCloseButton.types';
 
-export type CloseButtonIconProps = ComponentRefProps<'svg'>;
-export type CloseButtonRippleProps = UnstyledButtonRippleProps;
-export type CloseButtonSpinnerProps = UnstyledButtonSpinnerProps;
-export type CloseButtonBarProps = UnstyledButtonBarProps;
-export type CloseButtonTrailProps = UnstyledButtonTrailProps;
-export type CloseButtonInnerBorderProps = UnstyledButtonInnerBorderProps;
-export type CloseButtonOuterBorderProps = UnstyledButtonOuterBorderProps;
+export type CloseButtonIconProps = UnstyledCloseButtonIconProps;
+export type CloseButtonRippleProps = UnstyledCloseButtonRippleProps;
+export type CloseButtonSpinnerProps = UnstyledCloseButtonSpinnerProps;
+export type CloseButtonBarProps = UnstyledCloseButtonBarProps;
+export type CloseButtonTrailProps = UnstyledCloseButtonTrailProps;
+export type CloseButtonInnerBorderProps = UnstyledCloseButtonInnerBorderProps;
+export type CloseButtonOuterBorderProps = UnstyledCloseButtonOuterBorderProps;
 
 export type CloseButtonComponentsProps = {
   icon?: CloseButtonIconProps;
@@ -39,11 +39,7 @@ export type CloseButtonComponentsProps = {
   outerBorder?: CloseButtonOuterBorderProps;
 };
 
-export type CloseButtonOptionalProps = {
-  loading?: boolean;
-  disabled?: boolean;
-  children?: SVGNodeProps;
-};
+export type CloseButtonOptionalProps = UnstyledCloseButtonOptionalProps;
 
 export type CloseButtonDefaultProps = {
   variant?: Variant;
@@ -56,11 +52,11 @@ export type CloseButtonDefaultProps = {
 };
 
 export type CloseButtonConfigProps = MergeProps<
-  UnstyledButtonConfigProps,
+  UnstyledCloseButtonConfigProps,
   CloseButtonDefaultProps
 >;
 
 export type CloseButtonProps<E extends ElementType> = MergeProps<
-  Omit<UnstyledButtonProps<E>, 'checked' | 'leftDecorator' | 'rightDecorator'>,
+  UnstyledCloseButtonProps<E>,
   CloseButtonDefaultProps & CloseButtonOptionalProps
 >;
