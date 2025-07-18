@@ -24,11 +24,14 @@ const dimensions = {
   ) => {
     const isShorter = isElShorter(anchor, el, end);
 
-    return (isShorter && overflow[orientation].anchorStart < view[start]) ||
-      (!isShorter && overflow[orientation].start > view[end])
-      ? // &&overflow[orientation].viewStart > overflow[orientation].viewEnd)
-        { [dimension]: size[orientation].end }
-      : {};
+    return (
+      (isShorter && overflow[orientation].anchorStart < view[start]) ||
+      (!isShorter &&
+        overflow[orientation].start > view[end] && {
+          // &&overflow[orientation].viewStart > overflow[orientation].viewEnd)
+          [dimension]: size[orientation].end
+        })
+    );
   },
   end: (
     orientation: Orientation,
@@ -42,11 +45,14 @@ const dimensions = {
   ) => {
     const isShorter = isElShorter(anchor, el, end);
 
-    return (isShorter && overflow[orientation].anchorEnd > view[end]) ||
-      (!isShorter && overflow[orientation].end < view[start])
-      ? // && overflow[orientation].viewStart < overflow[orientation].viewEnd)
-        { [dimension]: size[orientation].start }
-      : {};
+    return (
+      (isShorter && overflow[orientation].anchorEnd > view[end]) ||
+      (!isShorter &&
+        overflow[orientation].end < view[start] && {
+          // && overflow[orientation].viewStart < overflow[orientation].viewEnd)
+          [dimension]: size[orientation].start
+        })
+    );
   }
 };
 
@@ -62,15 +68,15 @@ export const getFlipCrossAxis = (
   size: SizeDimensions,
   overflow: OverflowDimensions
 ) =>
-  collision === 'flip' && crossAxis !== 'center'
-    ? dimensions[crossAxis](
-        orientation,
-        dimension,
-        tresholdDimensions,
-        anchor,
-        el,
-        view,
-        size,
-        overflow
-      )
-    : {};
+  collision === 'flip' &&
+  crossAxis !== 'center' &&
+  dimensions[crossAxis](
+    orientation,
+    dimension,
+    tresholdDimensions,
+    anchor,
+    el,
+    view,
+    size,
+    overflow
+  );

@@ -145,15 +145,14 @@ export const getShiftCrossAxis = (
   size: SizeDimensions,
   overflow: OverflowDimensions
 ) =>
-  collision === 'shift'
-    ? dimensions[crossAxis](
-        orientation,
-        dimension,
-        tresholdDimensions,
-        anchor,
-        el,
-        view,
-        size,
-        overflow
-      )
-    : {};
+  collision === 'shift' &&
+  dimensions[crossAxis](
+    orientation,
+    dimension,
+    tresholdDimensions,
+    anchor,
+    el,
+    view,
+    size,
+    overflow
+  );

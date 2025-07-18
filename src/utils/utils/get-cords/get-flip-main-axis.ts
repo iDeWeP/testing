@@ -10,26 +10,22 @@ const dimensions = {
     view: ViewDimensions,
     size: SizeDimensions,
     overflow: OverflowDimensions
-  ) =>
-    overflow.top < view.top ? { top: size.bottom, mainAxis: 'bottom' } : {},
+  ) => overflow.top < view.top && { top: size.bottom, mainAxis: 'bottom' },
   bottom: (
     view: ViewDimensions,
     size: SizeDimensions,
     overflow: OverflowDimensions
-  ) =>
-    overflow.bottom > view.bottom ? { top: size.top, mainAxis: 'top' } : {},
+  ) => overflow.bottom > view.bottom && { top: size.top, mainAxis: 'top' },
   left: (
     view: ViewDimensions,
     size: SizeDimensions,
     overflow: OverflowDimensions
-  ) =>
-    overflow.left < view.left ? { left: size.left, mainAxis: 'right' } : {},
+  ) => overflow.left < view.left && { left: size.left, mainAxis: 'right' },
   right: (
     view: ViewDimensions,
     size: SizeDimensions,
     overflow: OverflowDimensions
-  ) =>
-    overflow.right > view.right ? { left: size.left, mainAxis: 'left' } : {}
+  ) => overflow.right > view.right && { left: size.left, mainAxis: 'left' }
 };
 
 export const getFlipMainAxis = (
@@ -38,4 +34,4 @@ export const getFlipMainAxis = (
   view: ViewDimensions,
   size: SizeDimensions,
   overflow: OverflowDimensions
-) => (collision !== 'none' ? dimensions[mainAxis](view, size, overflow) : {});
+) => collision !== 'none' && dimensions[mainAxis](view, size, overflow);
