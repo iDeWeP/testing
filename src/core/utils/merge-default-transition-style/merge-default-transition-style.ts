@@ -23,7 +23,6 @@ export const mergeDefaultTransitionStyle = (
   const transitions = transition.split('-');
 
   return {
-    visibility: !isIn && animation.isExited ? 'hidden' : 'visible',
     ...styleAnimation(isIn, animation, duration, animationProps),
     ...getFadeStyle(animation, peak, transitions),
     ...setStyle[transitions[0] as keyof typeof setStyle](animation, peak),
