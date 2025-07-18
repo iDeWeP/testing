@@ -1,20 +1,23 @@
-import type { MergeComponentProps, Orientation } from '../../types';
+import type { Gap, MergeComponentProps, Orientation } from '../../types';
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
 
 type Props = MergeComponentProps<
   'span',
   {
     orientation: Orientation;
+    gap: Gap;
   }
 >;
 
 export const UnstyledLinearProgressLabel = ({
   orientation,
+  gap,
   className,
   ...restProps
 }: Props) => {
   const mergedClassName = mergeClassName('linearProgressLabel', className, {
-    orientation
+    orientation,
+    gap
   });
 
   return (

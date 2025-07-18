@@ -60,6 +60,8 @@ export const unstyledLinearProgressConfig: ComponentConfig<UnstyledLinearProgres
     rbl: 'unset',
     rbr: 'unset',
     color: 'unset',
+    shadow: 'unset',
+    gap: 'unset',
     componentsProps: {}
   },
   styles: {
@@ -185,6 +187,7 @@ export const unstyledLinearProgressConfig: ComponentConfig<UnstyledLinearProgres
     },
     label: {
       default: {
+        display: 'flex',
         font: 'text-xs',
         textWrap: 'text-nowrap',
         userSelect: 'select-none'

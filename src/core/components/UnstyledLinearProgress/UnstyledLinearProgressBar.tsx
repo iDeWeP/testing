@@ -2,7 +2,8 @@ import type {
   MergeComponentProps,
   Theme,
   Orientation,
-  Color
+  Color,
+  Variant
 } from '../../types';
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
 
@@ -12,6 +13,7 @@ type Props = MergeComponentProps<
     theme: Theme;
     disabled: boolean;
     value: number;
+    variant: Variant;
     orientation: Orientation;
     color: Color;
   }
@@ -21,6 +23,7 @@ export const UnstyledLinearProgressBar = ({
   theme,
   disabled,
   value,
+  variant,
   orientation,
   color,
   className,
@@ -31,9 +34,10 @@ export const UnstyledLinearProgressBar = ({
   const mergedClassName = mergeClassName('linearProgressBar', className, {
     theme,
     disabled,
+    variant,
     orientation,
     color,
-    decorated: !!children
+    decorated: children
   });
 
   const length = orientation === 'row' ? 'width' : 'height';

@@ -13,7 +13,7 @@ export const UnstyledLinearProgress = (props: UnstyledLinearProgressProps) => {
     value,
     variant,
     orientation,
-    size,
+    size: defaultSize,
     margin,
     m,
     mx,
@@ -41,6 +41,8 @@ export const UnstyledLinearProgress = (props: UnstyledLinearProgressProps) => {
     rbl,
     rbr,
     color,
+    shadow,
+    gap,
     className,
     componentsProps,
     children,
@@ -53,7 +55,8 @@ export const UnstyledLinearProgress = (props: UnstyledLinearProgressProps) => {
     theme,
     disabled,
     variant,
-    size,
+    orientation,
+    defaultSize,
     margin,
     m,
     mx,
@@ -80,25 +83,29 @@ export const UnstyledLinearProgress = (props: UnstyledLinearProgressProps) => {
     rtr,
     rbl,
     rbr,
-    color
+    color,
+    shadow,
+    decorated: children
   });
 
   return (
     <div
       className={mergedClassName}
-      {...setAria('linearProgress', { max: 100, min: 0, value })}
+      {...setAria('linearProgress', { min: 0, max: 100, value })}
       {...restProps}
     >
       <UnstyledLinearProgressBar
         theme={theme}
         disabled={disabled}
         value={value}
+        variant={variant}
         orientation={orientation}
         color={color}
       />
       {children && (
         <UnstyledLinearProgressLabel
           orientation={orientation}
+          gap={gap}
           {...componentsProps.label}
         >
           {children}

@@ -3,12 +3,14 @@ import type {
   ComponentRefProps,
   Variant,
   Orientation,
-  Size,
+  DefaultSize,
   Margin,
   Border,
   DefaultBorder,
   Radius,
   Color,
+  Shadow,
+  Gap,
   MergeProps
 } from '../../types';
 
@@ -28,7 +30,7 @@ export type UnstyledLinearProgressDefaultProps = {
   value?: number;
   variant?: Variant;
   orientation?: Orientation;
-  size?: Size;
+  size?: DefaultSize;
   margin?: Margin;
   m?: Margin;
   mx?: Margin;
@@ -56,6 +58,8 @@ export type UnstyledLinearProgressDefaultProps = {
   rbl?: Radius;
   rbr?: Radius;
   color?: Color;
+  shadow?: Shadow;
+  gap?: Gap;
   componentsProps?: UnstyledLinearProgressComponentsProps;
 };
 
