@@ -1,40 +1,90 @@
 import type { Classes } from '../../types';
-import { styleUnstyledBox } from './style-unstyled-box';
-import { styleUnstyledButton } from './style-unstyled-button';
-import { styleUnstyledCheckbox } from './style-unstyled-checkbox';
-import { styleUnstyledCheckboxContainer } from './style-unstyled-checkbox-container';
-import { styleUnstyledCheckboxIcon } from './style-unstyled-checkbox-icon';
-import { styleUnstyledCheckboxTrail } from './style-unstyled-checkbox-trail';
-import { styleUnstyledFlex } from './style-unstyled-flex';
-import { styleUnstyledGrid } from './style-unstyled-grid';
-import { styleUnstyledPaper } from './style-unstyled-paper';
+import { styleAppShell } from './style-app-shell';
+import { styleAvatar } from './style-avatar';
+import { styleBadge } from './style-badge';
+import { styleBox } from './style-box';
+import { styleButton } from './style-button';
+import { styleCard } from './style-card';
+import { styleCardBody } from './style-card-body';
+import { styleCardFooter } from './style-card-footer';
+import { styleCheckbox } from './style-checkbox';
+import { styleCheckboxContainer } from './style-checkbox-container';
+import { styleCheckboxIcon } from './style-checkbox-icon';
+import { styleCheckboxTrail } from './style-checkbox-trail';
+import { styleCircularProgressContainer } from './style-circular-progress-container';
+import { styleCircularProgressLabel } from './style-circular-progress-label';
+import { styleContainer } from './style-container';
+import { styleDivider } from './style-divider';
+import { styleDividerLine } from './style-divider-line';
+import { styleFab } from './style-fab';
+import { styleFlex } from './style-flex';
+import { styleGrid } from './style-grid';
+import { styleGroup } from './style-group';
+import { styleIcon } from './style-icon';
+import { styleImage } from './style-image';
+import { styleInput } from './style-input';
+import { styleInputClearance } from './style-input-clearance';
+import { styleInputContainer } from './style-input-container';
+import { styleInputDecorator } from './style-input-decorator';
+import { styleInputFieldset } from './style-input-fieldset';
+import { styleInputLabel } from './style-input-label';
+import { styleLabel } from './style-label';
+import { styleLayout } from './style-layout';
+import { styleLinearProgress } from './style-linear-progress';
+import { styleLinearProgressBar } from './style-linear-progress-bar';
+import { styleLinearProgressLabel } from './style-linear-progress-label';
+import { styleRipple } from './style-ripple';
+import { styleSpinner } from './style-spinner';
+import { styleSpinnerBar } from './style-spinner-bar';
+import { styleStack } from './style-stack';
+import { styleTransition } from './style-transition';
 import { styleUnstyledPopper } from './style-unstyled-popper';
 import { styleUnstyledPopperArrow } from './style-unstyled-popper-arrow';
 import { styleUnstyledPopperBackdrop } from './style-unstyled-popper-backdrop';
-import { styleUnstyledRipple } from './style-unstyled-ripple';
-import { styleUnstyledSpinner } from './style-unstyled-spinner';
-import { styleUnstyledSpinnerTrail } from './style-unstyled-spinner-trail';
-import { styleUnstyledTransition } from './style-unstyled-transition';
-import { styleUnstyledTypography } from './style-unstyled-typography';
 
 const componentsClasses = {
-  unstyledBox: styleUnstyledBox,
-  unstyledButton: styleUnstyledButton,
-  unstyledCheckboxContainer: styleUnstyledCheckboxContainer,
-  unstyledCheckboxIcon: styleUnstyledCheckboxIcon,
-  unstyledCheckboxTrail: styleUnstyledCheckboxTrail,
-  unstyledCheckbox: styleUnstyledCheckbox,
-  unstyledFlex: styleUnstyledFlex,
-  unstyledGrid: styleUnstyledGrid,
-  unstyledPaper: styleUnstyledPaper,
+  appShell: styleAppShell,
+  avatar: styleAvatar,
+  badge: styleBadge,
+  box: styleBox,
+  button: styleButton,
+  cardBody: styleCardBody,
+  cardFooter: styleCardFooter,
+  card: styleCard,
+  checkboxContainer: styleCheckboxContainer,
+  checkboxIcon: styleCheckboxIcon,
+  checkboxTrail: styleCheckboxTrail,
+  checkbox: styleCheckbox,
+  circularProgressContainer: styleCircularProgressContainer,
+  circularProgressLabel: styleCircularProgressLabel,
+  container: styleContainer,
+  dividerLine: styleDividerLine,
+  divider: styleDivider,
+  fab: styleFab,
+  flex: styleFlex,
+  grid: styleGrid,
+  group: styleGroup,
+  icon: styleIcon,
+  image: styleImage,
+  inputClearance: styleInputClearance,
+  inputContainer: styleInputContainer,
+  inputDecorator: styleInputDecorator,
+  inputFieldset: styleInputFieldset,
+  inputLabel: styleInputLabel,
+  input: styleInput,
+  label: styleLabel,
+  layout: styleLayout,
+  linearProgressBar: styleLinearProgressBar,
+  linearProgressLabel: styleLinearProgressLabel,
+  linearProgress: styleLinearProgress,
+  ripple: styleRipple,
+  spinnerBar: styleSpinnerBar,
+  spinner: styleSpinner,
+  stack: styleStack,
+  transition: styleTransition,
   unstyledPopperArrow: styleUnstyledPopperArrow,
   unstyledPopperBackdrop: styleUnstyledPopperBackdrop,
-  unstyledPopper: styleUnstyledPopper,
-  unstyledRipple: styleUnstyledRipple,
-  unstyledSpinnerTrail: styleUnstyledSpinnerTrail,
-  unstyledSpinner: styleUnstyledSpinner,
-  unstyledTransition: styleUnstyledTransition,
-  unstyledTypography: styleUnstyledTypography
+  unstyledPopper: styleUnstyledPopper
 };
 
 export const mergeClassName = (
