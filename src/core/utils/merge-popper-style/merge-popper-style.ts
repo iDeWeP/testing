@@ -1,15 +1,7 @@
 import type { CSSProperties } from 'react';
 import type { Animation } from '../../../hooks/hooks/use-animation/use-animation';
-import type { Peak, PopperTransition, AnimationProps } from '../../types';
-import { getFadeStyle } from '../get-fade-style/get-fade-style';
-import { styleAnimation } from '../style-animation/style-animation';
-import { styleFade } from '../style-fade/style-fade';
-import { styleGrow } from '../style-grow/style-grow';
-
-const setStyle = {
-  fade: styleFade,
-  grow: styleGrow
-};
+import type { Peak, DefaultTransition, AnimationProps } from '../../types';
+import { mergeDefaultTransitionStyle } from '../merge-default-transition-style/merge-default-transition-style';
 
 export const mergePopperStyle = (
   isOpen: boolean,
@@ -18,21 +10,21 @@ export const mergePopperStyle = (
   top: number,
   left: number,
   zIndex: number,
-  transition: PopperTransition,
+  transition: DefaultTransition,
   duration: number,
   style?: CSSProperties,
   animationProps?: AnimationProps
-): CSSProperties => {
-  const transitions = transition.split('-');
-
-  return {
-    top,
-    left,
-    zIndex,
-    visibility: !isOpen && animation.isExited ? 'hidden' : 'visible',
-    ...styleAnimation(isOpen, animation, duration, animationProps),
-    ...getFadeStyle(animation, peak, transitions),
-    ...setStyle[transitions[0] as keyof typeof setStyle](animation, peak),
-    ...style
-  };
-};
+): CSSProperties => ({
+  top,
+  left,
+  zIndex,
+  ...mergeDefaultTransitionStyle(
+    isOpen,
+    animation,
+    peak,
+    transition,
+    duration,
+    style,
+    animationProps
+  )
+});
