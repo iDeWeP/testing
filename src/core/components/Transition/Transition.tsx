@@ -42,14 +42,14 @@ export const Transition = <E extends ElementType>(
   });
 
   const mergedStyles = mergeTransitionStyle(
-    ref,
     isIn,
     animation,
     peak,
     transition,
     duration,
     style,
-    animationProps
+    animationProps,
+    ref
   );
 
   return (

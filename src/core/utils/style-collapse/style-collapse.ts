@@ -6,17 +6,18 @@ export const styleCollapse = (
   { isEntering, isEntered }: Animation,
   peak: Peak,
   transitions: string[],
-  ref: RefObject<HTMLElement | null>,
-  isIn: boolean
+  isIn: boolean,
+  ref?: RefObject<HTMLElement | null>
 ) => {
   const isHorizontal = transitions[1] === 'x';
   const dimension = isHorizontal ? 'width' : 'height';
 
   if ((!isIn && isEntered) || isEntering) {
-    const sizes = ref.current?.firstElementChild?.getBoundingClientRect();
-    const length = isHorizontal
-      ? sizes?.width ?? 'auto'
-      : sizes?.height ?? 'auto';
+    const sizes = ref?.current?.firstElementChild?.getBoundingClientRect() ?? {
+      width: '100%',
+      height: '100%'
+    };
+    const length = isHorizontal ? sizes.width : sizes.height;
 
     return { [dimension]: peak === 'auto' ? length : peak };
   }

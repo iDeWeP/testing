@@ -1,4 +1,4 @@
-import type { RefObject, CSSProperties } from 'react';
+import type { CSSProperties, RefObject } from 'react';
 import type { Animation } from '../../../hooks/hooks/use-animation/use-animation';
 import type { Peak, Transition, AnimationProps } from '../../types';
 import { getFadeStyle } from '../get-fade-style/get-fade-style';
@@ -16,14 +16,14 @@ const setStyle = {
 };
 
 export const mergeTransitionStyle = (
-  ref: RefObject<HTMLElement | null>,
   isIn: boolean,
   animation: Animation,
   peak: Peak,
   transition: Transition,
   duration: number,
   style?: CSSProperties,
-  animationProps?: AnimationProps
+  animationProps?: AnimationProps,
+  ref?: RefObject<HTMLElement | null>
 ): CSSProperties => {
   const transitions = transition.split('-');
 
@@ -35,8 +35,8 @@ export const mergeTransitionStyle = (
       animation,
       peak,
       transitions,
-      ref,
-      isIn
+      isIn,
+      ref
     ),
     ...style
   };
