@@ -8,6 +8,7 @@ type Props = {
 export const Example = ({ clear, ...restProps }: Props) => (
   <UnstyledCloseButton
     color={clear ? 'unset' : 'primary'}
+    ripple={clear ? 'none' : 'normal'}
     {...restProps}
   />
 );
