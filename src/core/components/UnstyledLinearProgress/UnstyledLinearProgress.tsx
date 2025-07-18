@@ -13,7 +13,7 @@ export const UnstyledLinearProgress = (props: UnstyledLinearProgressProps) => {
     value,
     variant,
     orientation,
-    size: defaultSize,
+    size,
     margin,
     m,
     mx,
@@ -56,7 +56,7 @@ export const UnstyledLinearProgress = (props: UnstyledLinearProgressProps) => {
     disabled,
     variant,
     orientation,
-    defaultSize,
+    size,
     margin,
     m,
     mx,
@@ -101,16 +101,17 @@ export const UnstyledLinearProgress = (props: UnstyledLinearProgressProps) => {
         variant={variant}
         orientation={orientation}
         color={color}
-      />
-      {children && (
-        <UnstyledLinearProgressLabel
-          orientation={orientation}
-          gap={gap}
-          {...componentsProps.label}
-        >
-          {children}
-        </UnstyledLinearProgressLabel>
-      )}
+      >
+        {children && (
+          <UnstyledLinearProgressLabel
+            orientation={orientation}
+            gap={gap}
+            {...componentsProps.label}
+          >
+            {children}
+          </UnstyledLinearProgressLabel>
+        )}
+      </UnstyledLinearProgressBar>
     </div>
   );
 };

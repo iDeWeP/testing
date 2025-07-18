@@ -6,13 +6,13 @@ import type {
 } from '../../types';
 import type { UnstyledLinearProgressConfigProps } from './UnstyledLinearProgress.types';
 
-type Padding = 'default' | 'decorated';
+type SpacingType = 'default' | 'decorated';
 
 type Styles = {
   styles: {
     root: {
       orientation: CSSStyles;
-      size: Record<Orientation, Record<Padding, CSSStyles>>;
+      size: Record<Orientation, Record<SpacingType, CSSStyles>>;
     };
     bar: {
       default: CSSProps;
@@ -81,39 +81,75 @@ export const unstyledLinearProgressConfig: ComponentConfig<UnstyledLinearProgres
               height: 'h-1'
             },
             sm: {
-              height: 'h-1.5'
-            },
-            md: {
               height: 'h-2'
             },
-            lg: {
-              height: 'h-2.5'
-            },
-            xl: {
+            md: {
               height: 'h-3'
             },
+            lg: {
+              height: 'h-4'
+            },
+            xl: {
+              height: 'h-5'
+            },
             xxl: {
+              height: 'h-6'
+            },
+            'xs-xs': {
+              height: 'h-1.5'
+            },
+            'sm-sm': {
+              height: 'h-2.5'
+            },
+            'md-md': {
               height: 'h-3.5'
+            },
+            'lg-lg': {
+              height: 'h-4.5'
+            },
+            'xl-xl': {
+              height: 'h-5.5'
+            },
+            'xxl-xxl': {
+              height: 'h-6.5'
             }
           },
           decorated: {
             xs: {
-              height: 'h-4'
+              height: 'h-3'
             },
             sm: {
-              height: 'h-4.5'
+              height: 'h-4'
             },
             md: {
               height: 'h-5'
             },
             lg: {
-              height: 'h-5.5'
-            },
-            xl: {
               height: 'h-6'
             },
+            xl: {
+              height: 'h-7'
+            },
             xxl: {
+              height: 'h-8'
+            },
+            'xs-xs': {
+              height: 'h-3.5'
+            },
+            'sm-sm': {
+              height: 'h-4.5'
+            },
+            'md-md': {
+              height: 'h-5.5'
+            },
+            'lg-lg': {
               height: 'h-6.5'
+            },
+            'xl-xl': {
+              height: 'h-7.5'
+            },
+            'xxl-xxl': {
+              height: 'h-8.5'
             }
           }
         },
@@ -123,39 +159,75 @@ export const unstyledLinearProgressConfig: ComponentConfig<UnstyledLinearProgres
               width: 'w-1'
             },
             sm: {
-              width: 'w-1.5'
-            },
-            md: {
               width: 'w-2'
             },
-            lg: {
-              width: 'w-2.5'
-            },
-            xl: {
+            md: {
               width: 'w-3'
             },
+            lg: {
+              width: 'w-4'
+            },
+            xl: {
+              width: 'w-5'
+            },
             xxl: {
+              width: 'w-6'
+            },
+            'xs-xs': {
+              width: 'w-1.5'
+            },
+            'sm-sm': {
+              width: 'w-2.5'
+            },
+            'md-md': {
               width: 'w-3.5'
+            },
+            'lg-lg': {
+              width: 'w-4.5'
+            },
+            'xl-xl': {
+              width: 'w-5.5'
+            },
+            'xxl-xxl': {
+              width: 'w-6.5'
             }
           },
           decorated: {
             xs: {
-              width: 'w-4'
+              width: 'w-3'
             },
             sm: {
-              width: 'w-4.5'
+              width: 'w-4'
             },
             md: {
               width: 'w-5'
             },
             lg: {
-              width: 'w-5.5'
-            },
-            xl: {
               width: 'w-6'
             },
+            xl: {
+              width: 'w-7'
+            },
             xxl: {
+              width: 'w-8'
+            },
+            'xs-xs': {
+              width: 'w-3.5'
+            },
+            'sm-sm': {
+              width: 'w-4.5'
+            },
+            'md-md': {
+              width: 'w-5.5'
+            },
+            'lg-lg': {
               width: 'w-6.5'
+            },
+            'xl-xl': {
+              width: 'w-7.5'
+            },
+            'xxl-xxl': {
+              width: 'w-8.5'
             }
           }
         }
@@ -163,7 +235,9 @@ export const unstyledLinearProgressConfig: ComponentConfig<UnstyledLinearProgres
     },
     bar: {
       default: {
-        borderRadius: 'rounded-inherit'
+        borderRadius: 'rounded-[inherit]',
+        transitionDuration: 'duration-150',
+        transitionTimingFunction: 'ease-in-out'
       },
       decorated: {
         display: 'flex',

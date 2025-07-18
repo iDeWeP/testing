@@ -27,8 +27,8 @@ export const UnstyledLinearProgressBar = ({
   orientation,
   color,
   className,
-  children,
   style,
+  children,
   ...restProps
 }: Props) => {
   const mergedClassName = mergeClassName('linearProgressBar', className, {

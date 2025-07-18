@@ -3,7 +3,7 @@ import type {
   ComponentRefProps,
   Variant,
   Orientation,
-  DefaultSize,
+  Size,
   Margin,
   Border,
   DefaultBorder,
@@ -30,7 +30,7 @@ export type UnstyledLinearProgressDefaultProps = {
   value?: number;
   variant?: Variant;
   orientation?: Orientation;
-  size?: DefaultSize;
+  size?: Size;
   margin?: Margin;
   m?: Margin;
   mx?: Margin;
