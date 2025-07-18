@@ -7,7 +7,6 @@ type Styles = {
       default: CSSProps;
       float: CSSStyles;
       spin: CSSProps;
-      rotate: CSSProps;
     };
   };
 };
@@ -92,9 +91,6 @@ export const unstyledSpinnerConfig: ComponentConfig<UnstyledSpinnerConfigProps> 
       },
       spin: {
         animation: 'animate-spin'
-      },
-      rotate: {
-        transform: '-rotate-90'
       }
     }
   }

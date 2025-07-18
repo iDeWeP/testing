@@ -5,7 +5,6 @@ import type { Classes } from '../../types';
 import { mergeClasses } from './merge-classes';
 import { getSpinnerScale } from './scale';
 import { getSpacing, getDefaultSize } from './spacing';
-import { getSpinnerTransition } from './transition';
 
 export const styleSpinner = (
   className: string,
@@ -41,7 +40,8 @@ export const styleSpinner = (
     systemStyles.margin.b[mb],
     systemStyles.margin.l[ml],
     systemStyles.margin.r[mr],
-    unstyledSpinnerConfig.styles.root[getSpinnerTransition(spin, disabled)],
+    spin && unstyledSpinnerConfig.styles.root.spin,
+    !spin && sharedStyles.rotate['-90'],
     disabled && sharedStyles.cursor.disabled,
     className
   );

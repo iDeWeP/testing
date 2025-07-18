@@ -21,7 +21,6 @@ type Styles = {
     };
     label: {
       default: CSSProps;
-      rotate: CSSProps;
     };
   };
 };
@@ -265,9 +264,6 @@ export const unstyledLinearProgressConfig: ComponentConfig<UnstyledLinearProgres
         font: 'text-xs',
         textWrap: 'text-nowrap',
         userSelect: 'select-none'
-      },
-      rotate: {
-        transform: 'rotate-90'
       }
     }
   }

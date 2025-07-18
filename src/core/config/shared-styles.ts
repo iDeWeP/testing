@@ -10,6 +10,7 @@ type SharedStyles = {
   direction: CSSStyles;
   effect: CSSStyles;
   transition: CSSStyles;
+  rotate: CSSStyles;
   cursor: CSSStyles;
 };
 
@@ -109,6 +110,11 @@ export const sharedStyles: SharedStyles = {
     'collapse-y-fade': {
       overflow: 'overflow-hidden',
       transition: 'transition-[height,_opacity]'
+    }
+  },
+  rotate: {
+    '-90': {
+      transform: '-rotate-90'
     }
   },
   cursor: {
