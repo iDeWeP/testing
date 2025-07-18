@@ -2,7 +2,8 @@ import type {
   ElementType,
   ComponentPropsWithRef,
   ReactElement,
-  CSSProperties
+  CSSProperties,
+  ReactNode
 } from 'react';
 
 export type ComponentRefProps<E extends ElementType> = Omit<
@@ -240,12 +241,12 @@ export type CollapseTransition =
   | 'collapse-y'
   | 'collapse-x-fade'
   | 'collapse-y-fade';
-export type PopperTransition = 'fade' | GrowTransition;
 export type Transition =
   | 'fade'
   | GrowTransition
   | SlideTransition
   | CollapseTransition;
+export type DefaultTransition = 'fade' | GrowTransition;
 export type Ripple = 'none' | 'normal';
 
 export type Cursor = {
@@ -348,7 +349,7 @@ export type Classes = {
   rippleEffect?: RippleEffect;
   hasRipple?: boolean;
   empty?: boolean;
-  decorated?: boolean;
+  decorated?: ReactNode;
 };
 
 type CSSPropKeys =
