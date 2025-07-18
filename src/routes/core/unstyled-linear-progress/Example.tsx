@@ -5,16 +5,10 @@ type Props = {
   clear?: boolean;
 } & UnstyledLinearProgressProps;
 
-export const Example = ({
-  clear,
-  children = 'UNSTYLED-LINEAR-PROGRESS',
-  ...restProps
-}: Props) => (
+export const Example = ({ clear, ...restProps }: Props) => (
   <UnstyledLinearProgress
-    value={75}
+    value={clear ? 0 : 75}
     color={clear ? 'unset' : 'primary'}
     {...restProps}
-  >
-    {children}
-  </UnstyledLinearProgress>
+  />
 );

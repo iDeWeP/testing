@@ -6,6 +6,7 @@ export const DefaultExample = () => (
   <ExampleSection title="Default">
     <ExampleCard>
       <Example clear />
+      <Example clear>LABELED</Example>
     </ExampleCard>
   </ExampleSection>
 );
