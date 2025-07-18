@@ -13,5 +13,5 @@ export const useFocusHandler = <T extends HTMLElement>(
     [ref]
   );
 
-  return setProp(!!ref, handleFocus);
+  return setProp(ref, handleFocus);
 };
