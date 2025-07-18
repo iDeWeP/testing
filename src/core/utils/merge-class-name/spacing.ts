@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react';
 import type {
   Padding,
   DefaultSize,
@@ -109,7 +110,7 @@ export const getDividerSpacing = (
 export const getInputSize = (size: InputSize, resize: boolean) =>
   resize ? 'full' : size;
 
-export const getInputSpacing = (decorated: boolean) =>
+export const getDecoratedSpacing = (decorated: ReactNode) =>
   decorated ? 'decorated' : 'default';
 
 export const setSpinnerSize = (size: Size) =>
