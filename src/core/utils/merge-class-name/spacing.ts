@@ -114,4 +114,4 @@ export const getSpacingType = (decorated: ReactNode) =>
   decorated ? 'decorated' : 'default';
 
 export const setSpinnerSize = (size: Size) =>
-  isSpacingInner(size) ? 'xs' : (`${size}-${size}` as Size);
+  isSpacingInner(size) ? 'xs-xs' : (`${size}-${size}` as Size);
