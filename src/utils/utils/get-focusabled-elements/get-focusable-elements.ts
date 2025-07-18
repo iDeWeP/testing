@@ -15,5 +15,5 @@ export const getFocusableElements = <E extends HTMLElement>(el?: E | null) => {
       !el.hasAttribute('disabled') && el.getAttribute('aria-hidden') !== 'true'
   );
 
-  return setProp(!!focusableEls.length, focusableEls);
+  return setProp(focusableEls.length, focusableEls);
 };
