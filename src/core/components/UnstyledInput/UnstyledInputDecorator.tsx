@@ -68,7 +68,7 @@ export const UnstyledInputDecorator = ({
     rbl,
     rbr,
     gap,
-    decorated: !!children
+    decorated: children
   });
 
   return (

@@ -3,7 +3,6 @@ import type {
   CSSStyles,
   Theme,
   SidePlacement,
-  InputSize,
   InputVariant,
   ComponentConfig
 } from '../../types';
@@ -30,7 +29,7 @@ type Styles = {
     };
     input: {
       default: CSSProps;
-      size: Record<InputSize, CSSProps>;
+      size: CSSStyles;
       stable: CSSProps;
     };
     clearance: {
