@@ -1,11 +1,11 @@
-import type { CSSProps, Layout, ComponentConfig } from '../../types';
+import type { CSSProps, CSSStyles, ComponentConfig } from '../../types';
 import type { LayoutConfigProps } from './Layout.types';
 
 type Styles = {
   styles: {
     root: {
       default: CSSProps;
-      layouts: Record<Layout, CSSProps>;
+      layouts: CSSStyles;
     };
   };
 };
