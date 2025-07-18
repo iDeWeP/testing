@@ -110,7 +110,7 @@ export const getDividerSpacing = (
 export const getInputSize = (size: InputSize, resize: boolean) =>
   resize ? 'full' : size;
 
-export const getDecoratedSpacing = (decorated: ReactNode) =>
+export const getSpacingType = (decorated: ReactNode) =>
   decorated ? 'decorated' : 'default';
 
 export const setSpinnerSize = (size: Size) =>

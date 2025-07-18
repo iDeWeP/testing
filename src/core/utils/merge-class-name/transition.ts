@@ -17,6 +17,3 @@ export const getTransition = (transition: Transition) => {
 
   return 'transform';
 };
-
-export const getSpinnerTransition = (spin: boolean, isDisabled: boolean) =>
-  !spin || isDisabled ? 'rotate' : 'spin';

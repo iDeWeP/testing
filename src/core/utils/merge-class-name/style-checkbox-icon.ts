@@ -1,7 +1,7 @@
 import { unstyledCheckboxConfig } from '../../components/UnstyledCheckbox/unstyledCheckboxConfig';
 import { systemStyles } from '../../config/system-styles';
 import type { Classes } from '../../types';
-import { isCheckboxBordered, getBorder } from './border';
+import { getBorder, isBordered } from './border';
 import { getColor } from './color';
 import { mergeClasses } from './merge-classes';
 
@@ -36,17 +36,6 @@ export const styleCheckboxIcon = (
     shadow = 'unset'
   }: Classes
 ) => {
-  const isBordered = isCheckboxBordered(
-    border,
-    b,
-    bx,
-    by,
-    bt,
-    bb,
-    bl,
-    br,
-    variant
-  );
   const colors = getColor(variant, color, disabled, valid, invalid, true);
 
   return mergeClasses(
@@ -72,7 +61,8 @@ export const styleCheckboxIcon = (
     systemStyles.radius.bl[rbl],
     systemStyles.radius.br[rbr],
     systemStyles.color.bg[theme][colors.bg],
-    isBordered && systemStyles.color.border[theme][colors.text],
+    isBordered(border, b, bx, by, bt, bb, bl, br) &&
+      systemStyles.color.border[theme][colors.text],
     systemStyles.color.fill[theme][colors.text],
     systemStyles.color.ring[theme][colors.text],
     systemStyles.shadow[shadow],
