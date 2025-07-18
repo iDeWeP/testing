@@ -5,7 +5,7 @@ import type { Classes } from '../../types';
 import { getInputColor } from './color';
 import { mergeClasses } from './merge-classes';
 import { getInputRadius, getRadius } from './radius';
-import { getInputSpacing } from './spacing';
+import { getDecoratedSpacing } from './spacing';
 
 export const styleInputDecorator = (
   className: string,
@@ -36,7 +36,7 @@ export const styleInputDecorator = (
   return mergeClasses(
     sharedStyles.display['inline-flex'],
     unstyledInputConfig.styles.decorator.spacing[sidePlacement][
-      getInputSpacing(decorated)
+      getDecoratedSpacing(decorated)
     ],
     isOutlined && unstyledInputConfig.styles.decorator.outlined[sidePlacement],
     unstyledInputConfig.styles.generic.variant.default[inputVariant],
