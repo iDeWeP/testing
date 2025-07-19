@@ -30,6 +30,7 @@ import { RadiusRRExample } from './RadiusRRExample';
 import { RadiusRTExample } from './RadiusRTExample';
 import { RadiusRTLExample } from './RadiusRTLExample';
 import { RadiusRTRExample } from './RadiusRTRExample';
+import { RingExample } from './RingExample';
 import { ShadowExample } from './ShadowExample';
 import { SizeExample } from './SizeExample';
 import { ValueExample } from './ValueExample';
@@ -72,6 +73,7 @@ const Page = () => (
     <RadiusRBRExample />
     <ColorExample />
     <ShadowExample />
+    <RingExample />
     <GapExample />
   </>
 );
