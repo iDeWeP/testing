@@ -4,7 +4,6 @@ import { DefaultExample } from './DefaultExample';
 import { MaxExample } from './MaxExample';
 import { OverlapExample } from './OverlapExample';
 import { PlacementExample } from './PlacementExample';
-import { RingExample } from './RingExample';
 import { ShowZeroExample } from './ShowZeroExample';
 import { SizeExample } from './SizeExample';
 import { VariantExample } from './VariantExample';
@@ -20,7 +19,6 @@ const Page = () => (
     <OverlapExample />
     <SizeExample />
     <ColorExample />
-    <RingExample />
   </>
 );
 
