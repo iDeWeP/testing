@@ -60,8 +60,8 @@ export const styleDivider = (
     systemStyles.margin.l[ml],
     systemStyles.margin.r[mr],
     decorated && systemStyles.size.font[font],
-    systemStyles.color.text[theme][textColor],
-    decorated && systemStyles.color.fill[theme][textColor],
+    systemStyles.color.normal.text[theme][textColor],
+    decorated && systemStyles.color.normal.fill[theme][textColor],
     decorated && systemStyles.gap.all[gap],
     className
   );

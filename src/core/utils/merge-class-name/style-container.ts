@@ -62,8 +62,8 @@ export const styleContainer = (
     br
   );
   const margins = getSpacing(margin);
-  const hasRing = ring !== 'unset';
   const colors = getColor(variant, color);
+  const hasRing = ring !== 'unset';
 
   return mergeClasses(
     unstyledContainerConfig.styles.root.default,

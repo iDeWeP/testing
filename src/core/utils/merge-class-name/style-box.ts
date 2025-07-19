@@ -56,8 +56,8 @@ export const styleBox = (
 ) => {
   const paddings = getSpacing(padding);
   const margins = getSpacing(margin);
-  const hasRing = ring !== 'unset';
   const colors = getColor(variant, color);
+  const hasRing = ring !== 'unset';
 
   return mergeClasses(
     systemStyles.padding.default.all[paddings.all],
