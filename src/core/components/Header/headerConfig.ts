@@ -44,6 +44,7 @@ export const headerConfig: ComponentConfig<HeaderConfigProps> = {
     font: 'unset',
     color: 'unset',
     shadow: 'unset',
+    ring: 'unset',
     gx: 'unset',
     gy: 'unset'
   }
