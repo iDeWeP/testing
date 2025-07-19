@@ -1,9 +1,10 @@
+import { sharedStyles } from '../../config/shared-styles';
 import { systemStyles } from '../../config/system-styles';
 import type { Classes } from '../../types';
-import { getBorder } from './border';
-import { getColor } from './color';
+import { getBorder } from './get-border';
+import { getColor } from './get-color';
+import { getSpacing } from './get-spacing';
 import { mergeClasses } from './merge-classes';
-import { getSpacing } from './spacing';
 
 export const styleIcon = (
   className: string,
@@ -38,11 +39,13 @@ export const styleIcon = (
     rbl = 'unset',
     rbr = 'unset',
     color = 'unset',
-    shadow = 'unset'
+    shadow = 'unset',
+    ring = 'unset'
   }: Classes
 ) => {
   const margins = getSpacing(margin);
   const colors = getColor(variant, color);
+  const hasRing = ring !== 'unset';
 
   return mergeClasses(
     systemStyles.size.text.normal[font],
@@ -74,9 +77,11 @@ export const styleIcon = (
     systemStyles.radius.tr[rtr],
     systemStyles.radius.bl[rbl],
     systemStyles.radius.br[rbr],
-    systemStyles.color.bg[theme][colors.bg],
-    systemStyles.color.fill[theme][colors.text],
+    systemStyles.color.normal.bg[theme][colors.bg],
+    systemStyles.color.normal.fill[theme][colors.text],
+    hasRing && systemStyles.color.normal.ring[theme][ring],
     systemStyles.shadow[shadow],
+    hasRing && sharedStyles.ring.normal,
     className
   );
 };
