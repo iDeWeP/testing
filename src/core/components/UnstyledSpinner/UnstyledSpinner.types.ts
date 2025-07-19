@@ -43,6 +43,7 @@ export type UnstyledSpinnerDefaultProps = {
   mr?: Margin;
   border?: SpinnerBorder;
   color?: Color;
+  ring?: Color;
   componentsProps?: UnstyledSpinnerComponentsProps;
 };
 

@@ -1,6 +1,6 @@
 import { unstyledRippleConfig } from '../../components/UnstyledRipple/unstyledRippleConfig';
 import type { Classes } from '../../types';
-import { getRippleColor, getDefaultColor } from './color';
+import { getDefaultColor, getColor } from './color';
 import { mergeClasses } from './merge-classes';
 
 export const styleRipple = (
@@ -11,25 +11,26 @@ export const styleRipple = (
     invalid = false,
     stateful = false,
     variant = 'solid',
-    rippleScale = 'normal',
+    innerScale = 'normal',
     color = 'unset'
   }: Classes
 ) => {
-  const textColor = getRippleColor(variant, color, valid, invalid);
+  const defaultColors = getDefaultColor(variant, color, false, valid, invalid);
+  const colors = getColor(variant, color, false, valid, invalid);
 
   return mergeClasses(
     unstyledRippleConfig.styles.root.default,
     !stateful &&
-      unstyledRippleConfig.styles.root.color[rippleScale].stateless[theme][
-        textColor
+      unstyledRippleConfig.styles.root.color[innerScale].stateless[theme][
+        colors.text
       ],
     stateful &&
-      unstyledRippleConfig.styles.root.color[rippleScale].stateless[theme][
-        getRippleColor('text', getDefaultColor(color), valid, invalid)
+      unstyledRippleConfig.styles.root.color[innerScale].stateless[theme][
+        defaultColors.text
       ],
     stateful &&
-      unstyledRippleConfig.styles.root.color[rippleScale].stateful[theme][
-        textColor
+      unstyledRippleConfig.styles.root.color[innerScale].stateful[theme][
+        colors.text
       ],
     className
   );
