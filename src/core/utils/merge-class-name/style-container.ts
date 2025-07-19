@@ -43,6 +43,7 @@ export const styleContainer = (
     rbr = 'unset',
     color = 'unset',
     shadow = 'unset',
+    ring = 'unset',
     gap = 'unset'
   }: Classes
 ) => {
@@ -61,6 +62,7 @@ export const styleContainer = (
     br
   );
   const margins = getSpacing(margin);
+  const hasRing = ring !== 'unset';
   const colors = getColor(variant, color);
 
   return mergeClasses(
@@ -101,10 +103,12 @@ export const styleContainer = (
     systemStyles.radius.bl[rbl],
     systemStyles.radius.br[rbr],
     systemStyles.size.font[getFontSize(size)],
-    systemStyles.color.bg[theme][colors.bg],
-    systemStyles.color.text[theme][colors.text],
-    systemStyles.color.fill[theme][colors.text],
+    systemStyles.color.normal.bg[theme][colors.bg],
+    systemStyles.color.normal.text[theme][colors.text],
+    systemStyles.color.normal.fill[theme][colors.text],
+    hasRing && systemStyles.color.normal.ring[theme][ring],
     systemStyles.shadow[shadow],
+    hasRing && sharedStyles.ring.normal,
     systemStyles.gap.all[gap],
     scales.isSquare && sharedStyles.scale.square,
     className

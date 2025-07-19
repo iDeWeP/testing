@@ -46,6 +46,7 @@ export type UnstyledContainerDefaultProps = {
   rbr?: Radius;
   color?: Color;
   shadow?: Shadow;
+  ring?: Color;
   gap?: Gap;
 };
 

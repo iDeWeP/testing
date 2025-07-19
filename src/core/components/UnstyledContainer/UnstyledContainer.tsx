@@ -41,6 +41,7 @@ export const UnstyledContainer = <E extends ElementType>(
     rbr,
     color,
     shadow,
+    ring,
     gap,
     className,
     ...restProps
@@ -81,6 +82,7 @@ export const UnstyledContainer = <E extends ElementType>(
     rbr,
     color,
     shadow,
+    ring,
     gap
   });
 
