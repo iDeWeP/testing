@@ -1,8 +1,8 @@
 import { circularProgressConfig } from '../../components/CircularProgress/circularProgressConfig';
 import { systemStyles } from '../../config/system-styles';
 import type { Classes } from '../../types';
+import { getSpacing } from './get-spacing';
 import { mergeClasses } from './merge-classes';
-import { getSpacing } from './spacing';
 
 export const styleCircularProgressContainer = (
   className: string,

@@ -2,9 +2,9 @@ import { circularProgressConfig } from '../../components/CircularProgress/circul
 import { sharedStyles } from '../../config/shared-styles';
 import { systemStyles } from '../../config/system-styles';
 import type { Classes } from '../../types';
-import { getColor } from './color';
+import { getColor } from './get-color';
+import { getFontSize } from './get-font-size';
 import { mergeClasses } from './merge-classes';
-import { getFontSize } from './spacing';
 
 export const styleCircularProgressLabel = (
   className: string,
@@ -16,13 +16,13 @@ export const styleCircularProgressLabel = (
     color = 'unset'
   }: Classes
 ) => {
-  const textColor = getColor(variant, color, disabled).text;
+  const textColor = getColor(variant, color, { disabled }).text;
 
   return mergeClasses(
     circularProgressConfig.styles.label.default,
     systemStyles.size.font[getFontSize(size)],
-    systemStyles.color.text[theme][textColor],
-    systemStyles.color.fill[theme][textColor],
+    systemStyles.color.normal.text[theme][textColor],
+    systemStyles.color.normal.fill[theme][textColor],
     disabled && sharedStyles.cursor.none,
     className
   );
