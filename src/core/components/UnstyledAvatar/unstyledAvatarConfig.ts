@@ -9,7 +9,6 @@ export const unstyledAvatarConfig: ComponentConfig<UnstyledAvatarConfigProps> =
       variant: 'solid',
       size: 'md',
       color: 'unset',
-      ring: 'unset',
       margin: 'unset',
       m: 'unset',
       mx: 'unset',
@@ -37,6 +36,7 @@ export const unstyledAvatarConfig: ComponentConfig<UnstyledAvatarConfigProps> =
       rbl: 'unset',
       rbr: 'unset',
       shadow: 'unset',
+      ring: 'unset',
       gap: 'unset'
     }
   };

@@ -10,7 +10,6 @@ export type UnstyledAvatarDefaultProps = {
   variant?: Variant;
   size?: Size;
   color?: Color;
-  ring?: Color;
 };
 
 export type UnstyledAvatarConfigProps = MergeProps<
