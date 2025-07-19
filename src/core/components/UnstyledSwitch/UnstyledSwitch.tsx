@@ -1,12 +1,10 @@
-import { useTheme } from "../../hooks/use-theme/use-theme";
-import { mergeClassName } from "../../utils/merge-class-name/merge-class-name";
-import { mergeProps } from "../../utils/merge-props/merge-props";
-import { setAria } from "../../utils/set-aria/set-aria";
-import type { UnstyledSwitchProps } from "./UnstyledSwitch.types";
-import { unstyledSwitchConfig } from "./unstyledSwitchConfig";
-
-
-
+import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
+import { mergeProps } from '../../utils/merge-props/merge-props';
+import { setAria } from '../../utils/set-aria/set-aria';
+import type { UnstyledSwitchProps } from './UnstyledSwitch.types';
+import { unstyledSwitchConfig } from './unstyledSwitchConfig';
+import type { UnstyledSwitchContainer } from './UnstyledSwitchContainer';
+import { UnstyledSwitchIcon } from './UnstyledSwitchIcon';
 
 export const UnstyledSwitch = (props: UnstyledSwitchProps) => {
   const {
@@ -47,13 +45,11 @@ export const UnstyledSwitch = (props: UnstyledSwitchProps) => {
     ...restProps
   } = mergeProps(unstyledSwitchConfig.props, props);
 
-  const theme = useTheme();
-
   const mergedClassName = mergeClassName('switch', className);
 
   return (
     <UnstyledSwitchContainer
-      theme={theme}
+      disabled={disabled}
       variant={variant}
       size={size}
       margin={margin}
@@ -92,9 +88,11 @@ export const UnstyledSwitch = (props: UnstyledSwitchProps) => {
         type="checkbox"
         {...setAria('switch')}
         {...restProps}
-      >
-        <UnstyledSwitchIcon {...componentsProps.icon}/>
-      </UnstyledSwitchBar>
+      />
+      <UnstyledSwitchIcon
+        children={children}
+        {...componentsProps.icon}
+      />
     </UnstyledSwitchContainer>
   );
 };

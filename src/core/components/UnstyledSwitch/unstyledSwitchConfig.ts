@@ -16,6 +16,9 @@ type Styles = {
     icon: {
       default: CSSProps;
     };
+    generic: {
+      default: CSSProps;
+    };
   };
 };
 
@@ -788,11 +791,7 @@ export const unstyledSwitchConfig: ComponentConfig<UnstyledSwitchConfigProps> &
     },
     input: {
       default: {
-        position: 'absolute',
-        top: 'top-0',
-        left: 'left-0',
         width: 'w-full',
-        height: 'h-full',
         borderRadius: 'rounded-[inherit]',
         appearance: 'appearance-none',
         group: 'peer'
@@ -800,14 +799,18 @@ export const unstyledSwitchConfig: ComponentConfig<UnstyledSwitchConfigProps> &
     },
     icon: {
       default: {
-        position: 'absolute',
-        top: 'top-0',
-        left: 'left-0',
-        height: 'h-full',
         padding: 'p-1',
         transition: 'transition-[left,_transform,_color]',
         pointerEvents: 'pointer-events-none',
         group: 'peer-checked:left-full peer-checked:-translate-x-full'
+      }
+    },
+    generic: {
+      default: {
+        position: 'absolute',
+        top: 'top-0',
+        left: 'left-0',
+        height: 'h-full'
       }
     }
   }
