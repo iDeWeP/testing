@@ -32,6 +32,7 @@ import { RadiusRRExample } from './RadiusRRExample';
 import { RadiusRTExample } from './RadiusRTExample';
 import { RadiusRTLExample } from './RadiusRTLExample';
 import { RadiusRTRExample } from './RadiusRTRExample';
+import { RingExample } from './RingExample';
 import { ShadowExample } from './ShadowExample';
 import { VariantExample } from './VariantExample';
 
@@ -70,6 +71,7 @@ const Page = () => (
     <FontExample />
     <ColorExample />
     <ShadowExample />
+    <RingExample />
     <GapExample />
     <GapXExample />
     <GapYExample />
