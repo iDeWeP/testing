@@ -1,6 +1,6 @@
 import { useTheme } from '../../hooks/use-theme/use-theme';
+import { hasVariantBg } from '../../utils/merge-class-name/has-variant-bg';
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
-import { hasVariantBg } from '../../utils/merge-class-name/variant';
 import { mergeProps } from '../../utils/merge-props/merge-props';
 import type { UnstyledSpinnerProps } from './UnstyledSpinner.types';
 import { UnstyledSpinnerBar } from './UnstyledSpinnerBar';
