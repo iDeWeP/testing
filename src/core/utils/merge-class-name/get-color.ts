@@ -11,17 +11,17 @@ const variants = {
   outlined: (color: string, isReversed?: boolean) => ({
     bg: 'unset',
     text: isReversed ? `${color}-on` : color,
-    ring: 'unset'
+    ring: isReversed ? `${color}-on` : color
   }),
   text: (color: string, isReversed?: boolean) => ({
     bg: 'unset',
     text: isReversed ? `${color}-on` : color,
-    ring: 'unset'
+    ring: isReversed ? `${color}-on` : color
   }),
   light: (color: string, isReversed?: boolean) => ({
     bg: isReversed ? color : `${color}-light`,
     text: isReversed ? `${color}-light` : color,
-    ring: isReversed ? color : `${color}-light`
+    ring: isReversed ? `${color}-light` : color
   }),
   solid: (color: string, isReversed?: boolean) => ({
     bg: isReversed ? `${color}-on` : color,

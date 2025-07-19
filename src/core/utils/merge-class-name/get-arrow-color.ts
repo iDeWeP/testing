@@ -5,7 +5,7 @@ import type {
   DefaultBorder,
   Color
 } from '../../types';
-import { setReversedColor } from '../set-reversed-color.ts/set-reversed-color';
+import { getReversedColor } from './get-reversed-color';
 
 export const getArrowColor = (
   variant: Variant,
@@ -31,7 +31,7 @@ export const getArrowColor = (
     (variant === 'outlined' && border === 'auto') ||
     border === 'set'
   ) {
-    return setReversedColor(color);
+    return getReversedColor(color);
   }
 
   return color;

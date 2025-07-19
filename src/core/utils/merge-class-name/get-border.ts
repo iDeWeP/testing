@@ -1,5 +1,5 @@
 import type { Variant, Border, CardPlacement } from '../../types';
-import { setClass } from '../set-class/set-class';
+import { getClass } from './get-class';
 
 export const getBorder = (
   variant: Variant,
@@ -11,9 +11,9 @@ export const getBorder = (
     variant === 'outlined' && border === 'auto' ? 'set' : border;
 
   return {
-    all: setClass(isDefaultPlacement, defaultBorder),
-    x: setClass(!isDefaultPlacement, defaultBorder),
-    t: setClass(placement === 'top', defaultBorder),
-    b: setClass(placement === 'bottom', defaultBorder)
+    all: getClass(isDefaultPlacement, defaultBorder),
+    x: getClass(!isDefaultPlacement, defaultBorder),
+    t: getClass(placement === 'top', defaultBorder),
+    b: getClass(placement === 'bottom', defaultBorder)
   };
 };

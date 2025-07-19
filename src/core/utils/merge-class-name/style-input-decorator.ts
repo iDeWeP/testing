@@ -2,10 +2,11 @@ import { unstyledInputConfig } from '../../components/UnstyledInput/unstyledInpu
 import { sharedStyles } from '../../config/shared-styles';
 import { systemStyles } from '../../config/system-styles';
 import type { Classes } from '../../types';
-import { getInputColor } from './color';
+import { getClass } from './get-class';
+import { getInputColor } from './get-input-color';
+import { getInputRadius } from './get-radius';
+import { getSpacingType } from './get-spacing-type';
 import { mergeClasses } from './merge-classes';
-import { getInputRadius, getRadius } from './radius';
-import { getSpacingType } from './spacing';
 
 export const styleInputDecorator = (
   className: string,
@@ -45,19 +46,19 @@ export const styleInputDecorator = (
     systemStyles.radius.r[radiuses.r],
     systemStyles.radius.tl[radiuses.tl],
     systemStyles.radius.tr[radiuses.tr],
-    systemStyles.radius.l[getRadius(isLeft, r)],
-    systemStyles.radius.r[getRadius(!isLeft, r)],
-    systemStyles.radius.tl[getRadius(isLeft, rt)],
-    systemStyles.radius.tr[getRadius(!isLeft, rt)],
-    systemStyles.radius.bl[getRadius(isLeft, rb)],
-    systemStyles.radius.br[getRadius(!isLeft, rb)],
-    systemStyles.radius.l[getRadius(isLeft, rl)],
-    systemStyles.radius.r[getRadius(!isLeft, rr)],
-    systemStyles.radius.tl[getRadius(isLeft, rtl)],
-    systemStyles.radius.tr[getRadius(!isLeft, rtr)],
-    systemStyles.radius.bl[getRadius(isLeft, rbl)],
-    systemStyles.radius.br[getRadius(!isLeft, rbr)],
-    systemStyles.color.bg[theme][getInputColor(inputVariant, disabled)],
+    systemStyles.radius.l[getClass(isLeft, r)],
+    systemStyles.radius.r[getClass(!isLeft, r)],
+    systemStyles.radius.tl[getClass(isLeft, rt)],
+    systemStyles.radius.tr[getClass(!isLeft, rt)],
+    systemStyles.radius.bl[getClass(isLeft, rb)],
+    systemStyles.radius.br[getClass(!isLeft, rb)],
+    systemStyles.radius.l[getClass(isLeft, rl)],
+    systemStyles.radius.r[getClass(!isLeft, rr)],
+    systemStyles.radius.tl[getClass(isLeft, rtl)],
+    systemStyles.radius.tr[getClass(!isLeft, rtr)],
+    systemStyles.radius.bl[getClass(isLeft, rbl)],
+    systemStyles.radius.br[getClass(!isLeft, rbr)],
+    systemStyles.color.normal.bg[theme][getInputColor(inputVariant, disabled)],
     systemStyles.gap.all[gap],
     className
   );

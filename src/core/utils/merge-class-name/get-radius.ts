@@ -1,5 +1,5 @@
 import type { Radius, InputVariant, SidePlacement } from '../../types';
-import { setClass } from '../set-class/set-class';
+import { getClass } from './get-class';
 
 const radiuses = {
   default: () => ({
@@ -11,12 +11,12 @@ const radiuses = {
   light: (isLeft: boolean, radius: Radius) => ({
     l: 'unset',
     r: 'unset',
-    tl: setClass(isLeft, radius),
-    tr: setClass(!isLeft, radius)
+    tl: getClass(isLeft, radius),
+    tr: getClass(!isLeft, radius)
   }),
   outlined: (isLeft: boolean, radius: Radius) => ({
-    l: setClass(isLeft, radius),
-    r: setClass(!isLeft, radius),
+    l: getClass(isLeft, radius),
+    r: getClass(!isLeft, radius),
     tl: 'unset',
     tr: 'unset'
   })

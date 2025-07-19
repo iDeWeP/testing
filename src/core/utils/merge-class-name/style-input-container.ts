@@ -2,9 +2,9 @@ import { unstyledInputConfig } from '../../components/UnstyledInput/unstyledInpu
 import { sharedStyles } from '../../config/shared-styles';
 import { systemStyles } from '../../config/system-styles';
 import type { Classes } from '../../types';
-import { getColor, getDefaultColor } from './color';
+import { getColor } from './get-color';
+import { getSpacing } from './get-spacing';
 import { mergeClasses } from './merge-classes';
-import { getInputSize, getSpacing } from './spacing';
 
 export const styleInputContainer = (
   className: string,
@@ -30,15 +30,11 @@ export const styleInputContainer = (
     color = 'unset'
   }: Classes
 ) => {
-  const size = getInputSize(inputSize, resize);
+  const states = { disabled, valid, invalid };
+  const size = resize ? 'full' : inputSize;
   const margins = getSpacing(margin);
-  const textColor = getColor(
-    'text',
-    getDefaultColor(color),
-    disabled,
-    valid,
-    invalid
-  ).text;
+  const defaultTextColor = getColor('text', color, states, true).text;
+  const textColor = getColor('text', color, states, false).text;
 
   return mergeClasses(
     focused && unstyledInputConfig.styles.container.focused,
@@ -56,11 +52,9 @@ export const styleInputContainer = (
     systemStyles.margin.b[mb],
     systemStyles.margin.l[ml],
     systemStyles.margin.r[mr],
-    systemStyles.color.text[theme][textColor],
-    systemStyles.color.fill[theme][textColor],
-    unstyledInputConfig.styles.container.color[theme][
-      getColor('text', color, disabled, valid, invalid).text
-    ],
+    systemStyles.color.normal.text[theme][defaultTextColor],
+    systemStyles.color.normal.fill[theme][defaultTextColor],
+    unstyledInputConfig.styles.container.color[theme][textColor],
     disabled && sharedStyles.focusable.disabled,
     className
   );
