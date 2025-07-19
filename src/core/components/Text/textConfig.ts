@@ -42,6 +42,7 @@ export const textConfig: ComponentConfig<TextConfigProps> = {
     rbl: 'unset',
     rbr: 'unset',
     shadow: 'unset',
+    ring: 'unset',
     gap: 'unset',
     gx: 'unset',
     gy: 'unset'
