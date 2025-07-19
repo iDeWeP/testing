@@ -44,6 +44,7 @@ export const unstyledContainerConfig: ComponentConfig<UnstyledContainerConfigPro
     rbr: 'unset',
     color: 'unset',
     shadow: 'unset',
+    ring: 'unset',
     gap: 'unset'
   },
   styles: {
