@@ -47,8 +47,8 @@ export const styleSpinner = (
     systemStyles.margin.r[mr],
     hasRing && systemStyles.color.normal.ring[theme][ring],
     hasRing && sharedStyles.ring.normal,
-    spin && unstyledSpinnerConfig.styles.root.spin,
-    !spin && sharedStyles.rotate['-90'],
+    spin && !disabled && unstyledSpinnerConfig.styles.root.spin,
+    (!spin || disabled) && sharedStyles.rotate['-90'],
     disabled && sharedStyles.cursor.disabled,
     className
   );

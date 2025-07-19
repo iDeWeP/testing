@@ -17,7 +17,7 @@ export const styleSpinnerBar = (
 
   return mergeClasses(
     systemStyles.color.normal.stroke[theme][
-      getColor(variant, color, disabled)[colorType]
+      getColor(variant, color, { disabled })[colorType]
     ],
     className
   );
