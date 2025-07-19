@@ -1,5 +1,5 @@
 import type { Size, Scale } from '../../types';
-import { isSpacingInner } from './spacing';
+import { isSpacingInner } from './is-spacing-inner';
 
 type GetScale = {
   size: 'normal' | 'square';
@@ -17,9 +17,3 @@ export const getScale = (size: Size, scale: Scale): GetScale => {
     isSquare: scale === 'square'
   };
 };
-
-export const getInputScale = (hasRipple: boolean) =>
-  hasRipple ? 'normal' : 'text';
-
-export const getSpinnerScale = (size: Size) =>
-  isSpacingInner(size) ? 'text' : 'normal';
