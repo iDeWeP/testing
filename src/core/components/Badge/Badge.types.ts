@@ -23,7 +23,6 @@ export type BadgeDefaultProps = {
   overlap?: Overlap;
   size?: DefaultSize;
   color?: Color;
-  ring?: Color;
 };
 
 export type BadgeConfigProps = MergeProps<

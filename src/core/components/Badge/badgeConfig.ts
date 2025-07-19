@@ -28,7 +28,6 @@ export const badgeConfig: ComponentConfig<BadgeConfigProps> & Styles = {
     overlap: 'rounded',
     size: 'md',
     color: 'error',
-    ring: 'unset',
     margin: 'unset',
     m: 'unset',
     mx: 'unset',
@@ -56,6 +55,7 @@ export const badgeConfig: ComponentConfig<BadgeConfigProps> & Styles = {
     rbl: 'unset',
     rbr: 'unset',
     shadow: 'unset',
+    ring: 'unset',
     gap: 'unset'
   },
   styles: {
