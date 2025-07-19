@@ -1,6 +1,6 @@
 import type {
   CSSProps,
-  RippleScale,
+  InnerScale,
   Theme,
   CSSStyles,
   ComponentConfig
@@ -13,7 +13,7 @@ type Styles = {
   styles: {
     root: {
       default: CSSProps;
-      color: Record<RippleScale, Record<ColorType, Record<Theme, CSSStyles>>>;
+      color: Record<InnerScale, Record<ColorType, Record<Theme, CSSStyles>>>;
     };
   };
 };

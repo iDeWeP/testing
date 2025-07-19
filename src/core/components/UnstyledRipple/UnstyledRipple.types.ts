@@ -1,7 +1,7 @@
 import type { ComponentPropsWithRef } from 'react';
 import type {
   Variant,
-  RippleScale,
+  InnerScale,
   Color,
   RippleEffect,
   MergeProps
@@ -15,7 +15,7 @@ export type UnstyledRippleOptionalProps = {
 export type UnstyledRippleDefaultProps = {
   stateful?: boolean;
   variant?: Variant;
-  scale?: RippleScale;
+  scale?: InnerScale;
   color?: Color;
   effect?: RippleEffect;
 };
