@@ -40,6 +40,6 @@ export type LinearProgressConfigProps = MergeProps<
 >;
 
 export type LinearProgressProps = MergeProps<
-  UnstyledLinearProgressProps<E>,
+  UnstyledLinearProgressProps,
   LinearProgressDefaultProps & LinearProgressOptionalProps
 >;
