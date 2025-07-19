@@ -42,6 +42,7 @@ export const boxConfig: ComponentConfig<BoxConfigProps> = {
     font: 'unset',
     color: 'surface-on',
     shadow: 'unset',
+    ring: 'unset',
     gap: 'unset',
     gx: 'unset',
     gy: 'unset'
