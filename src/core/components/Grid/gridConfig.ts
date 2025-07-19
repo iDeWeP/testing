@@ -44,6 +44,7 @@ export const gridConfig: ComponentConfig<GridConfigProps> = {
     rbr: 'unset',
     font: 'unset',
     color: 'unset',
-    shadow: 'unset'
+    shadow: 'unset',
+    ring: 'unset'
   }
 };
