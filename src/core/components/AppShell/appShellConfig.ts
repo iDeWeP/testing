@@ -50,6 +50,7 @@ export const appShellConfig: ComponentConfig<AppShellConfigProps> & Styles = {
     rbl: 'unset',
     rbr: 'unset',
     shadow: 'unset',
+    ring: 'unset',
     gap: 'unset',
     gx: 'unset',
     gy: 'unset'
