@@ -30,6 +30,7 @@ export const unstyledSpinnerConfig: ComponentConfig<UnstyledSpinnerConfigProps> 
     mr: 'unset',
     border: 'auto',
     color: 'unset',
+    ring: 'unset',
     componentsProps: {}
   },
   styles: {

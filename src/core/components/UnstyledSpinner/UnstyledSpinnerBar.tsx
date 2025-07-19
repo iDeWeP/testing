@@ -1,11 +1,11 @@
-import { useTheme } from '../../hooks/use-theme/use-theme';
-import type { MergeComponentProps, Variant, Color } from '../../types';
+import type { MergeComponentProps, Theme, Variant, Color } from '../../types';
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
 
 type Props = MergeComponentProps<
   'circle',
   {
     barType: 'bar' | 'trail';
+    theme: Theme;
     disabled: boolean;
     variant: Variant;
     color: Color;
@@ -14,14 +14,13 @@ type Props = MergeComponentProps<
 
 export const UnstyledSpinnerBar = ({
   barType,
+  theme,
   disabled,
   variant,
   color,
   className,
   ...restProps
 }: Props) => {
-  const theme = useTheme();
-
   const mergedClassName = mergeClassName('spinnerBar', className, {
     barType,
     theme,
