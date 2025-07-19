@@ -34,6 +34,7 @@ export type UnstyledButtonSpinnerProps = MergeProps<
     thickness?: number;
     border?: SpinnerBorder;
     color?: Color;
+    ring?: Color;
     trail?: boolean;
   }
 >;
