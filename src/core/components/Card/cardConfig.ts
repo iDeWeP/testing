@@ -44,6 +44,7 @@ export const cardConfig: ComponentConfig<CardConfigProps> = {
     rbl: 'unset',
     rbr: 'unset',
     font: 'unset',
+    ring: 'unset',
     gx: 'unset',
     gy: 'unset'
   }
