@@ -37,6 +37,7 @@ export const chipConfig: ComponentConfig<ChipConfigProps> = {
     rbl: 'unset',
     rbr: 'unset',
     shadow: 'unset',
+    ring: 'unset',
     gap: 'xs'
   }
 };
