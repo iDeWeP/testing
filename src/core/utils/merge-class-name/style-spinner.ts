@@ -9,6 +9,7 @@ import { getSpacing, getDefaultSize } from './spacing';
 export const styleSpinner = (
   className: string,
   {
+    theme = 'light',
     disabled = false,
     spin = true,
     float = false,
@@ -20,10 +21,12 @@ export const styleSpinner = (
     mt = 'unset',
     mb = 'unset',
     ml = 'unset',
-    mr = 'unset'
+    mr = 'unset',
+    ring = 'unset'
   }: Classes
 ) => {
   const margins = getSpacing(margin);
+  const hasRing = ring !== 'unset';
 
   return mergeClasses(
     unstyledSpinnerConfig.styles.root.default,
@@ -40,6 +43,8 @@ export const styleSpinner = (
     systemStyles.margin.b[mb],
     systemStyles.margin.l[ml],
     systemStyles.margin.r[mr],
+    hasRing && systemStyles.color.normal.ring[theme][ring],
+    hasRing && sharedStyles.ring.normal,
     spin && unstyledSpinnerConfig.styles.root.spin,
     !spin && sharedStyles.rotate['-90'],
     disabled && sharedStyles.cursor.disabled,
