@@ -13,6 +13,7 @@ export const Example = ({ clear, ...restProps }: Props) => {
     <UnstyledCheckbox
       checked={isChecked}
       color={clear ? 'unset' : 'primary'}
+      ripple={clear ? 'none' : 'normal'}
       onChange={() => setIsChecked((checked) => !checked)}
       {...restProps}
     />
