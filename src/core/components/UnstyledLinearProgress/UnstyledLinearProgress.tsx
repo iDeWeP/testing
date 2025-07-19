@@ -42,6 +42,7 @@ export const UnstyledLinearProgress = (props: UnstyledLinearProgressProps) => {
     rbr,
     color,
     shadow,
+    ring,
     gap,
     className,
     componentsProps,
@@ -85,6 +86,7 @@ export const UnstyledLinearProgress = (props: UnstyledLinearProgressProps) => {
     rbr,
     color,
     shadow,
+    ring,
     decorated: children
   });
 

@@ -60,6 +60,7 @@ export const unstyledLinearProgressConfig: ComponentConfig<UnstyledLinearProgres
     rbr: 'unset',
     color: 'unset',
     shadow: 'unset',
+    ring: 'unset',
     gap: 'unset',
     componentsProps: {}
   },

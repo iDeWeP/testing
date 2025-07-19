@@ -59,6 +59,7 @@ export type UnstyledLinearProgressDefaultProps = {
   rbr?: Radius;
   color?: Color;
   shadow?: Shadow;
+  ring?: Color;
   gap?: Gap;
   componentsProps?: UnstyledLinearProgressComponentsProps;
 };
