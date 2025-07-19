@@ -47,6 +47,7 @@ export type IconDefaultProps = {
   rbr?: Radius;
   color?: Color;
   shadow?: Shadow;
+  ring?: Color;
 };
 
 export type IconConfigProps = IconDefaultProps;

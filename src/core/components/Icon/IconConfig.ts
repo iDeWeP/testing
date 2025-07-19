@@ -32,6 +32,7 @@ export const iconConfig: ComponentConfig<IconConfigProps> = {
     rbl: 'unset',
     rbr: 'unset',
     color: 'neutral',
-    shadow: 'unset'
+    shadow: 'unset',
+    ring: 'unset'
   }
 };

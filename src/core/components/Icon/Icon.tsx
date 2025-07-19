@@ -38,6 +38,7 @@ export const Icon = (props: IconProps) => {
     rbr,
     color,
     shadow,
+    ring,
     className,
     children,
     ...restProps
@@ -76,7 +77,8 @@ export const Icon = (props: IconProps) => {
     rbl,
     rbr,
     color,
-    shadow
+    shadow,
+    ring
   });
 
   if (!children) {
