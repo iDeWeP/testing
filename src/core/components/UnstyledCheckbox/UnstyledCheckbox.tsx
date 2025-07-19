@@ -1,6 +1,6 @@
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
-import { setRippleVariant } from '../../utils/merge-class-name/variant';
 import { mergeProps } from '../../utils/merge-props/merge-props';
+import { setRippleVariant } from '../../utils/set-ripple-variant/set-ripple-variant';
 import { UnstyledRipple } from '../UnstyledRipple/UnstyledRipple';
 import type { UnstyledCheckboxProps } from './UnstyledCheckbox.types';
 import { unstyledCheckboxConfig } from './unstyledCheckboxConfig';
@@ -68,7 +68,7 @@ export const UnstyledCheckbox = (props: UnstyledCheckboxProps) => {
       ml={ml}
       mr={mr}
       radius="full"
-      hasRipple={ripple !== 'none'}
+      decorated={ripple !== 'none'}
       {...componentsProps.container}
     >
       <input

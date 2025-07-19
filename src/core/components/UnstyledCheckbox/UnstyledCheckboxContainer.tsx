@@ -28,7 +28,7 @@ type Props = MergeComponentProps<
     rtr?: Radius;
     rbl?: Radius;
     rbr?: Radius;
-    hasRipple: boolean;
+    decorated: boolean;
   }
 >;
 
@@ -52,7 +52,7 @@ export const UnstyledCheckboxContainer = ({
   rtr,
   rbl,
   rbr,
-  hasRipple,
+  decorated,
   className,
   ...restProps
 }: Props) => {
@@ -76,7 +76,7 @@ export const UnstyledCheckboxContainer = ({
     rtr,
     rbl,
     rbr,
-    hasRipple
+    decorated
   });
 
   return (

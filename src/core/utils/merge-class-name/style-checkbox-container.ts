@@ -1,9 +1,8 @@
 import { unstyledCheckboxConfig } from '../../components/UnstyledCheckbox/unstyledCheckboxConfig';
 import { systemStyles } from '../../config/system-styles';
 import type { Classes } from '../../types';
+import { getSpacing } from './get-spacing';
 import { mergeClasses } from './merge-classes';
-import { getInputScale } from './scale';
-import { getSpacing } from './spacing';
 
 export const styleCheckboxContainer = (
   className: string,
@@ -27,14 +26,15 @@ export const styleCheckboxContainer = (
     rtr = 'unset',
     rbl = 'unset',
     rbr = 'unset',
-    hasRipple = false
+    decorated = false
   }: Classes
 ) => {
+  const sizeType = decorated ? 'normal' : 'text';
   const margins = getSpacing(margin);
 
   return mergeClasses(
     unstyledCheckboxConfig.styles.root.default,
-    systemStyles.size[getInputScale(hasRipple)].square[defaultSize],
+    systemStyles.size[sizeType].square[defaultSize],
     systemStyles.margin.all[margins.all],
     systemStyles.margin.x[margins.x],
     systemStyles.margin.y[margins.y],
