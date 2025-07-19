@@ -10,6 +10,6 @@ export const styleAvatar = (
 ) =>
   mergeClasses(
     ring !== 'unset' && sharedStyles.ring.normal,
-    systemStyles.color.ring[theme][getColor('solid', ring).bg],
+    systemStyles.color.normal.ring[theme][getColor('solid', ring).bg],
     className
   );
