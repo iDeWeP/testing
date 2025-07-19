@@ -2,11 +2,13 @@ import { unstyledContainerConfig } from '../../components/UnstyledContainer/unst
 import { sharedStyles } from '../../config/shared-styles';
 import { systemStyles } from '../../config/system-styles';
 import type { Classes } from '../../types';
-import { getBorder } from './border';
-import { getColor } from './color';
+import { getBorder } from './get-border';
+import { getColor } from './get-color';
+import { getContainerPadding } from './get-container-padding';
+import { getFontSize } from './get-font-size';
+import { getScale } from './get-scale';
+import { getSpacing } from './get-spacing';
 import { mergeClasses } from './merge-classes';
-import { getScale } from './scale';
-import { getContainerPadding, getSpacing, getFontSize } from './spacing';
 
 export const styleContainer = (
   className: string,
