@@ -48,6 +48,7 @@ export const UnstyledBox = <E extends ElementType>(
     font,
     color,
     shadow,
+    ring,
     gap,
     gx,
     gy,
@@ -97,6 +98,7 @@ export const UnstyledBox = <E extends ElementType>(
     font,
     color,
     shadow,
+    ring,
     gap,
     gx,
     gy
