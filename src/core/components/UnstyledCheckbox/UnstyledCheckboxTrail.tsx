@@ -18,7 +18,7 @@ type Props = MergeComponentProps<
     invalid: boolean;
     disabled: boolean;
     variant: Variant;
-    size: DefaultSize;
+    defaultSize: DefaultSize;
     border?: Border;
     b?: DefaultBorder;
     bx?: DefaultBorder;
@@ -47,7 +47,7 @@ export const UnstyledCheckboxTrail = ({
   invalid,
   disabled,
   variant,
-  size: defaultSize,
+  defaultSize,
   border = 'set',
   b,
   bx,
