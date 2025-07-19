@@ -2,9 +2,9 @@ import { unstyledDividerConfig } from '../../components/UnstyledDivider/unstyled
 import { sharedStyles } from '../../config/shared-styles';
 import { systemStyles } from '../../config/system-styles';
 import type { Classes } from '../../types';
-import { getColor } from './color';
+import { getColor } from './get-color';
+import { getDividerSpacing } from './get-divider-spacing';
 import { mergeClasses } from './merge-classes';
-import { getDividerSpacing } from './spacing';
 
 export const styleDivider = (
   className: string,
