@@ -12,6 +12,7 @@ import { MarginMRExample } from './MarginMRExample';
 import { MarginMTExample } from './MarginMTExample';
 import { MarginMXExample } from './MarginMXExample';
 import { MarginMYExample } from './MarginMYExample';
+import { RingExample } from './RingExample';
 import { SizeExample } from './SizeExample';
 import { SpinExample } from './SpinExample';
 import { ThicknessExample } from './ThicknessExample';
@@ -39,6 +40,7 @@ const Page = () => (
     <MarginMRExample />
     <BorderExample />
     <ColorExample />
+    <RingExample />
   </>
 );
 
