@@ -44,6 +44,7 @@ export const navigationConfig: ComponentConfig<NavigationConfigProps> = {
     font: 'unset',
     color: 'unset',
     shadow: 'unset',
+    ring: 'unset',
     gx: 'unset',
     gy: 'unset'
   }
