@@ -1,4 +1,5 @@
 import { unstyledLinearProgressConfig } from '../../components/UnstyledLinearProgress/unstyledLinearProgressConfig';
+import { sharedStyles } from '../../config/shared-styles';
 import { systemStyles } from '../../config/system-styles';
 import type { Classes } from '../../types';
 import { getBorder } from './get-border';
@@ -44,12 +45,14 @@ export const styleLinearProgress = (
     rbr = 'unset',
     color = 'unset',
     shadow = 'unset',
+    ring = 'unset',
     decorated = false
   }: Classes
 ) => {
   const margins = getSpacing(margin);
   const isBordered = isAutoBordered(border, b, bx, by, bt, bb, bl, br, variant);
   const colors = getColor(variant, color, { disabled });
+  const hasRing = ring !== 'unset';
 
   return mergeClasses(
     unstyledLinearProgressConfig.styles.root.orientation[orientation],
@@ -86,7 +89,9 @@ export const styleLinearProgress = (
     systemStyles.radius.br[rbr],
     systemStyles.color.normal.bg[theme][colors.bg],
     isBordered && systemStyles.color.normal.border[theme][colors.text],
+    hasRing && systemStyles.color.normal.ring[theme][colors.bg],
     systemStyles.shadow[shadow],
+    hasRing && sharedStyles.ring.normal,
     className
   );
 };
