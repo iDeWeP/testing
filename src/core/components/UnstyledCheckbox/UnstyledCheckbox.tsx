@@ -78,18 +78,6 @@ export const UnstyledCheckbox = (props: UnstyledCheckboxProps) => {
         className={mergedClassName}
         {...restProps}
       />
-      {ripple !== 'none' && !disabled && (
-        <UnstyledRipple
-          valid={valid}
-          invalid={invalid}
-          stateful
-          variant={setRippleVariant(variant)}
-          scale="normal"
-          color={color}
-          effect={ripple}
-          {...componentsProps.ripple}
-        />
-      )}
       <UnstyledCheckboxTrail
         valid={valid}
         invalid={invalid}
@@ -141,6 +129,18 @@ export const UnstyledCheckbox = (props: UnstyledCheckboxProps) => {
       >
         {children}
       </UnstyledCheckboxIcon>
+      {ripple !== 'none' && !disabled && (
+        <UnstyledRipple
+          valid={valid}
+          invalid={invalid}
+          stateful
+          variant={setRippleVariant(variant)}
+          scale="normal"
+          color={color}
+          effect={ripple}
+          {...componentsProps.ripple}
+        />
+      )}
     </UnstyledCheckboxContainer>
   );
 };
