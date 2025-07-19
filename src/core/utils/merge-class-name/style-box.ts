@@ -1,3 +1,4 @@
+import { sharedStyles } from '../../config/shared-styles';
 import { systemStyles } from '../../config/system-styles';
 import type { Classes } from '../../types';
 import { getBorder } from './border';
@@ -47,6 +48,7 @@ export const styleBox = (
     font = 'unset',
     color = 'unset',
     shadow = 'unset',
+    ring = 'unset',
     gap = 'unset',
     gx = 'unset',
     gy = 'unset'
@@ -54,6 +56,7 @@ export const styleBox = (
 ) => {
   const paddings = getSpacing(padding);
   const margins = getSpacing(margin);
+  const hasRing = ring !== 'unset';
   const colors = getColor(variant, color);
 
   return mergeClasses(
@@ -96,10 +99,12 @@ export const styleBox = (
     systemStyles.radius.bl[rbl],
     systemStyles.radius.br[rbr],
     systemStyles.size.font[font],
-    systemStyles.color.bg[theme][colors.bg],
-    systemStyles.color.text[theme][colors.text],
-    systemStyles.color.fill[theme][colors.text],
+    systemStyles.color.normal.bg[theme][colors.bg],
+    systemStyles.color.normal.text[theme][colors.text],
+    systemStyles.color.normal.fill[theme][colors.text],
+    hasRing && systemStyles.color.normal.ring[theme][ring],
     systemStyles.shadow[shadow],
+    hasRing && sharedStyles.ring.normal,
     systemStyles.gap.all[gap],
     systemStyles.gap.x[gx],
     systemStyles.gap.y[gy],
