@@ -1,4 +1,4 @@
-import type { ElementType } from 'react';
+import { type ElementType, cloneElement } from 'react';
 import { mergeProps } from '../../utils/merge-props/merge-props';
 import { setAria } from '../../utils/set-aria/set-aria';
 import { UnstyledButton } from '../UnstyledButton/UnstyledButton';
@@ -15,7 +15,12 @@ export const UnstyledCloseButton = <E extends ElementType>(
 
   const { icon: iconProps, ...restComponentsProps } = componentsProps;
 
-  const node = (
+  const node = children ? (
+    cloneElement(children, {
+      ...setAria('icon'),
+      ...iconProps
+    })
+  ) : (
     <svg
       viewBox="0 0 24 24"
       {...setAria('icon')}
@@ -31,7 +36,7 @@ export const UnstyledCloseButton = <E extends ElementType>(
       componentsProps={restComponentsProps}
       {...restProps}
     >
-      {children || node}
+      {node}
     </UnstyledButton>
   );
 };
