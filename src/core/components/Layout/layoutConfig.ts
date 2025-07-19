@@ -53,7 +53,8 @@ export const layoutConfig: ComponentConfig<LayoutConfigProps> & Styles = {
     rbr: 'unset',
     font: 'unset',
     color: 'unset',
-    shadow: 'unset'
+    shadow: 'unset',
+    ring: 'unset'
   },
   styles: {
     root: {
