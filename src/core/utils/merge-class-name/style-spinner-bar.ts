@@ -1,6 +1,6 @@
 import { systemStyles } from '../../config/system-styles';
 import type { Classes } from '../../types';
-import { getColor, getSpinnerColorType } from './color';
+import { getColor } from './get-color';
 import { mergeClasses } from './merge-classes';
 
 export const styleSpinnerBar = (
@@ -12,10 +12,13 @@ export const styleSpinnerBar = (
     variant = 'text',
     color = 'unset'
   }: Classes
-) =>
-  mergeClasses(
+) => {
+  const colorType = barType === 'bar' ? 'text' : 'bg';
+
+  return mergeClasses(
     systemStyles.color.normal.stroke[theme][
-      getColor(variant, color, disabled)[getSpinnerColorType(barType)]
+      getColor(variant, color, disabled)[colorType]
     ],
     className
   );
+};

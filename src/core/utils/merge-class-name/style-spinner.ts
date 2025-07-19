@@ -2,9 +2,10 @@ import { unstyledSpinnerConfig } from '../../components/UnstyledSpinner/unstyled
 import { sharedStyles } from '../../config/shared-styles';
 import { systemStyles } from '../../config/system-styles';
 import type { Classes } from '../../types';
+import { getDefaultSize } from './get-default-size';
+import { getSpacing } from './get-spacing';
+import { isSpacingInner } from './is-spacing-inner';
 import { mergeClasses } from './merge-classes';
-import { getSpinnerScale } from './scale';
-import { getSpacing, getDefaultSize } from './spacing';
 
 export const styleSpinner = (
   className: string,
@@ -25,6 +26,7 @@ export const styleSpinner = (
     ring = 'unset'
   }: Classes
 ) => {
+  const sizeType = isSpacingInner(size) ? 'text' : 'normal';
   const margins = getSpacing(margin);
   const hasRing = ring !== 'unset';
 
@@ -32,7 +34,7 @@ export const styleSpinner = (
     unstyledSpinnerConfig.styles.root.default,
     float && sharedStyles.position.absolute,
     float && unstyledSpinnerConfig.styles.root.float[size],
-    systemStyles.size[getSpinnerScale(size)].square[getDefaultSize(size)],
+    systemStyles.size[sizeType].square[getDefaultSize(size)],
     systemStyles.margin.all[margins.all],
     systemStyles.margin.x[margins.x],
     systemStyles.margin.y[margins.y],
