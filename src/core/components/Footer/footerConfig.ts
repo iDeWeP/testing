@@ -44,6 +44,7 @@ export const footerConfig: ComponentConfig<FooterConfigProps> = {
     font: 'unset',
     color: 'unset',
     shadow: 'unset',
+    ring: 'unset',
     gx: 'unset',
     gy: 'unset'
   }
