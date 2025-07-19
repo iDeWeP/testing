@@ -90,6 +90,7 @@ export const unstyledCheckboxConfig: ComponentConfig<UnstyledCheckboxConfigProps
         top: 'top-2/4',
         left: 'left-2/4',
         translate: '-translate-x-2/4 -translate-y-2/4',
+        ring: 'ring-offset-1',
         transition: 'transition-opacity',
         transitionDuration: 'duration-150',
         transitionTimingFunction: 'ease-in-out',

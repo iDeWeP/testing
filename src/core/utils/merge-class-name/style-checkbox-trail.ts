@@ -1,10 +1,9 @@
 import { unstyledCheckboxConfig } from '../../components/UnstyledCheckbox/unstyledCheckboxConfig';
 import { systemStyles } from '../../config/system-styles';
 import type { Classes } from '../../types';
-import { isBordered } from './border';
-import { getColor, getDefaultColor } from './color';
+import { isAutoBordered } from './border';
+import { getDefaultColor } from './color';
 import { mergeClasses } from './merge-classes';
-import { getCheckableVariant } from './variant';
 
 export const styleCheckboxTrail = (
   className: string,
@@ -37,14 +36,8 @@ export const styleCheckboxTrail = (
     shadow = 'unset'
   }: Classes
 ) => {
-  const colors = getColor(
-    getCheckableVariant(variant),
-    getDefaultColor(color),
-    disabled,
-    valid,
-    invalid,
-    false
-  );
+  const isBordered = isAutoBordered(border, b, bx, by, bt, bb, bl, br);
+  const colors = getDefaultColor(variant, color, disabled, valid, invalid);
 
   return mergeClasses(
     unstyledCheckboxConfig.styles.shared.default,
@@ -68,10 +61,9 @@ export const styleCheckboxTrail = (
     systemStyles.radius.tr[rtr],
     systemStyles.radius.bl[rbl],
     systemStyles.radius.br[rbr],
-    systemStyles.color.bg[theme][colors.bg],
-    isBordered(border, b, bx, by, bt, bb, bl, br) &&
-      systemStyles.color.border[theme][colors.text],
-    systemStyles.color.ring[theme][colors.text],
+    systemStyles.color.normal.bg[theme][colors.bg],
+    isBordered && systemStyles.color.normal.border[theme][colors.text],
+    systemStyles.color.normal.ring[theme][colors.ring],
     systemStyles.shadow[shadow],
     className
   );
