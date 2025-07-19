@@ -37,7 +37,6 @@ export const iconButtonConfig: ComponentConfig<IconButtonConfigProps> = {
     rbl: 'unset',
     rbr: 'unset',
     shadow: 'unset',
-    ring: 'unset',
     gap: 'unset'
   }
 };
