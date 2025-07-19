@@ -1,8 +1,9 @@
 import { unstyledCheckboxConfig } from '../../components/UnstyledCheckbox/unstyledCheckboxConfig';
 import { systemStyles } from '../../config/system-styles';
 import type { Classes } from '../../types';
-import { isAutoBordered, getBorder } from './border';
-import { getColor } from './color';
+import { getBorder } from './get-border';
+import { getColor } from './get-color';
+import { isAutoBordered } from './is-auto-bordered';
 import { mergeClasses } from './merge-classes';
 
 export const styleCheckboxIcon = (
@@ -37,7 +38,7 @@ export const styleCheckboxIcon = (
   }: Classes
 ) => {
   const isBordered = isAutoBordered(border, b, bx, by, bt, bb, bl, br, variant);
-  const colors = getColor(variant, color, disabled, valid, invalid);
+  const colors = getColor(variant, color, { disabled, valid, invalid });
 
   return mergeClasses(
     unstyledCheckboxConfig.styles.shared.default,
