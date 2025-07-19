@@ -42,7 +42,6 @@ const Page = () => (
     <VariantExample />
     <SizeExample />
     <ColorExample />
-    <RingExample />
     <MarginExample />
     <MarginMExample />
     <MarginMXExample />
@@ -70,6 +69,7 @@ const Page = () => (
     <RadiusRBLExample />
     <RadiusRBRExample />
     <ShadowExample />
+    <RingExample />
     <GapExample />
   </>
 );
