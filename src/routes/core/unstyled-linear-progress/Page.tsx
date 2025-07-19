@@ -9,6 +9,7 @@ import { BorderBYExample } from './BorderBYExample';
 import { BorderExample } from './BorderExample';
 import { ColorExample } from './ColorExample';
 import { DefaultExample } from './DefaultExample';
+import { DisabledExample } from './DisabledExample';
 import { GapExample } from './GapExample';
 import { MarginExample } from './MarginExample';
 import { MarginMBExample } from './MarginMBExample';
@@ -18,6 +19,7 @@ import { MarginMRExample } from './MarginMRExample';
 import { MarginMTExample } from './MarginMTExample';
 import { MarginMXExample } from './MarginMXExample';
 import { MarginMYExample } from './MarginMYExample';
+import { OrientationExample } from './OrientationExample';
 import { RadiusExample } from './RadiusExample';
 import { RadiusRBExample } from './RadiusRBExample';
 import { RadiusRBLExample } from './RadiusRBLExample';
@@ -30,13 +32,17 @@ import { RadiusRTLExample } from './RadiusRTLExample';
 import { RadiusRTRExample } from './RadiusRTRExample';
 import { ShadowExample } from './ShadowExample';
 import { SizeExample } from './SizeExample';
+import { ValueExample } from './ValueExample';
 import { VariantExample } from './VariantExample';
 
 const Page = () => (
   <>
     <ExampleTitle>UnstyledLinearProgress</ExampleTitle>
     <DefaultExample />
+    <DisabledExample />
+    <ValueExample />
     <VariantExample />
+    <OrientationExample />
     <SizeExample />
     <MarginExample />
     <MarginMExample />
