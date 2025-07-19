@@ -43,6 +43,7 @@ export const unstyledCardConfig: ComponentConfig<UnstyledCardConfigProps> = {
     font: 'unset',
     color: 'unset',
     shadow: 'unset',
+    ring: 'unset',
     gap: 'unset',
     gx: 'unset',
     gy: 'unset'
