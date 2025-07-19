@@ -10,7 +10,6 @@ export type AvatarDefaultProps = {
   variant?: Variant;
   size?: Size;
   color?: Color;
-  ring?: Color;
 };
 
 export type AvatarConfigProps = MergeProps<
