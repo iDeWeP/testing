@@ -44,6 +44,7 @@ export const listItemConfig: ComponentConfig<ListItemConfigProps> = {
     rbr: 'unset',
     font: 'unset',
     shadow: 'unset',
+    ring: 'unset',
     gx: 'unset',
     gy: 'unset'
   }
