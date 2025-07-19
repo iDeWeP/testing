@@ -45,6 +45,7 @@ export const unstyledCardFooterConfig: ComponentConfig<UnstyledCardFooterConfigP
       rbr: 'unset',
       font: 'unset',
       shadow: 'unset',
+      ring: 'unset',
       gx: 'unset',
       gy: 'unset'
     }
