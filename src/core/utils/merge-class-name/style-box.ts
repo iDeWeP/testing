@@ -1,10 +1,10 @@
 import { sharedStyles } from '../../config/shared-styles';
 import { systemStyles } from '../../config/system-styles';
 import type { Classes } from '../../types';
-import { getBorder } from './border';
 import { getColor } from './color';
+import { getBorder } from './get-border';
+import { getSpacing } from './get-spacing';
 import { mergeClasses } from './merge-classes';
-import { getSpacing } from './spacing';
 
 export const styleBox = (
   className: string,
