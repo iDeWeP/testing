@@ -21,7 +21,6 @@ import { PaddingTExample } from './PaddingTExample';
 import { PaddingXExample } from './PaddingXExample';
 import { PaddingYExample } from './PaddingYExample';
 import { PlacementExample } from './PlacementExample';
-import { RingExample } from './RingExample';
 
 const Page = () => (
   <>
@@ -47,7 +46,6 @@ const Page = () => (
     <MarginRExample />
     <FontExample />
     <ColorExample />
-    <RingExample />
     <GapExample />
   </>
 );
