@@ -89,7 +89,7 @@ export const styleLinearProgress = (
     systemStyles.radius.br[rbr],
     systemStyles.color.normal.bg[theme][colors.bg],
     isBordered && systemStyles.color.normal.border[theme][colors.text],
-    hasRing && systemStyles.color.normal.ring[theme][colors.bg],
+    hasRing && systemStyles.color.normal.ring[theme][ring],
     systemStyles.shadow[shadow],
     hasRing && sharedStyles.ring.normal,
     className
