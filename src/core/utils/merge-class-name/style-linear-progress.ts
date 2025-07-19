@@ -1,10 +1,12 @@
 import { unstyledLinearProgressConfig } from '../../components/UnstyledLinearProgress/unstyledLinearProgressConfig';
 import { systemStyles } from '../../config/system-styles';
 import type { Classes } from '../../types';
-import { getBorder, isBordered } from './border';
-import { getColor } from './color';
+import { getBorder } from './get-border';
+import { getColor } from './get-color';
+import { getSpacing } from './get-spacing';
+import { getSpacingType } from './get-spacing-type';
+import { isAutoBordered } from './is-auto-bordered';
 import { mergeClasses } from './merge-classes';
-import { getSpacing, getSpacingType } from './spacing';
 
 export const styleLinearProgress = (
   className: string,
@@ -46,7 +48,8 @@ export const styleLinearProgress = (
   }: Classes
 ) => {
   const margins = getSpacing(margin);
-  const colors = getColor(variant, color, disabled);
+  const isBordered = isAutoBordered(border, b, bx, by, bt, bb, bl, br, variant);
+  const colors = getColor(variant, color, { disabled });
 
   return mergeClasses(
     unstyledLinearProgressConfig.styles.root.orientation[orientation],
@@ -81,9 +84,8 @@ export const styleLinearProgress = (
     systemStyles.radius.tr[rtr],
     systemStyles.radius.bl[rbl],
     systemStyles.radius.br[rbr],
-    systemStyles.color.bg[theme][colors.bg],
-    isBordered(border, b, bx, by, bt, bb, bl, br) &&
-      systemStyles.color.border[theme][colors.text],
+    systemStyles.color.normal.bg[theme][colors.bg],
+    isBordered && systemStyles.color.normal.border[theme][colors.text],
     systemStyles.shadow[shadow],
     className
   );

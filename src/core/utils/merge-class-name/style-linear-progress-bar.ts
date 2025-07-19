@@ -1,9 +1,10 @@
 import { unstyledLinearProgressConfig } from '../../components/UnstyledLinearProgress/unstyledLinearProgressConfig';
 import { systemStyles } from '../../config/system-styles';
 import type { Classes } from '../../types';
-import { getColor, getReversedColor } from './color';
+import { setReversedColor } from '../set-reversed-color.ts/set-reversed-color';
+import { getColor } from './get-color';
+import { hasVariantBg } from './has-variant-bg';
 import { mergeClasses } from './merge-classes';
-import { hasVariantBg } from './variant';
 
 export const styleLinearProgressBar = (
   className: string,
@@ -18,17 +19,17 @@ export const styleLinearProgressBar = (
 ) => {
   const colors = getColor(
     variant === 'light' ? 'light' : 'solid',
-    hasVariantBg(variant) ? color : getReversedColor(color),
-    disabled
+    hasVariantBg(variant) ? color : setReversedColor(color),
+    { disabled }
   );
 
   return mergeClasses(
     unstyledLinearProgressConfig.styles.bar.default,
     decorated && unstyledLinearProgressConfig.styles.bar.decorated,
     unstyledLinearProgressConfig.styles.bar.orientation[orientation],
-    systemStyles.color.bg[theme][colors.text],
-    systemStyles.color.text[theme][colors.bg],
-    systemStyles.color.fill[theme][colors.bg],
+    systemStyles.color.normal.bg[theme][colors.text],
+    systemStyles.color.normal.text[theme][colors.bg],
+    systemStyles.color.normal.fill[theme][colors.bg],
     className
   );
 };
