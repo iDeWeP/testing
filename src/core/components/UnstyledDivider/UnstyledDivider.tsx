@@ -32,7 +32,6 @@ export const UnstyledDivider = <E extends ElementType>(
     mr,
     font,
     color,
-    ring,
     gap,
     className,
     componentsProps,
@@ -63,7 +62,6 @@ export const UnstyledDivider = <E extends ElementType>(
     mr,
     font,
     color,
-    ring,
     gap,
     decorated: children
   });

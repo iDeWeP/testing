@@ -41,7 +41,6 @@ export type UnstyledDividerDefaultProps = {
   mr?: Margin;
   font?: Font;
   color?: Color;
-  ring?: Color;
   gap?: Gap;
   componentsProps?: UnstyledDividerComponentsProps;
 };
