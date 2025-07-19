@@ -19,6 +19,14 @@ export const UnstyledDropdown = <E extends ElementType>(
 
   return (
     <UnstyledBox
+      margin="unset"
+      m="unset"
+      mx="unset"
+      my="unset"
+      mt="unset"
+      mb="unset"
+      ml="unset"
+      mr="unset"
       className={mergedClassName}
       {...restProps}
     />

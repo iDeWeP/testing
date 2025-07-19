@@ -46,6 +46,7 @@ export type UnstyledDropdownDefaultProps = {
   font?: Font;
   color?: Color;
   shadow?: Shadow;
+  ring?: Color;
   gap?: Gap;
   gx?: Gap;
   gy?: Gap;
