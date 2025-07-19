@@ -47,6 +47,7 @@ export const transitionConfig: ComponentConfig<TransitionConfigProps> = {
     font: 'unset',
     color: 'unset',
     shadow: 'unset',
+    ring: 'unset',
     gap: 'unset',
     gx: 'unset',
     gy: 'unset'
