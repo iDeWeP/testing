@@ -92,6 +92,7 @@ export const UnstyledButton = <E extends ElementType>(
       size={size}
       border={styles.border}
       color={styles.color}
+      ring="unset"
       className={mergedClassName}
       {...setAria('button', {
         element: Component,

@@ -71,11 +71,11 @@ export type UnstyledButtonDefaultProps = {
 };
 
 export type UnstyledButtonConfigProps = MergeProps<
-  UnstyledContainerConfigProps,
+  Omit<UnstyledContainerConfigProps, 'ring'>,
   UnstyledButtonDefaultProps
 >;
 
 export type UnstyledButtonProps<E extends ElementType> = MergeProps<
-  UnstyledContainerProps<E>,
+  Omit<UnstyledContainerProps<E>, 'ring'>,
   UnstyledButtonDefaultProps & UnstyledButtonOptionalProps
 >;
