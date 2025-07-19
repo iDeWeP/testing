@@ -29,6 +29,7 @@ export const styleSpinner = (
   const sizeType = isSpacingInner(size) ? 'text' : 'normal';
   const margins = getSpacing(margin);
   const hasRing = ring !== 'unset';
+  const isSpinning = spin && !disabled;
 
   return mergeClasses(
     unstyledSpinnerConfig.styles.root.default,
@@ -47,8 +48,8 @@ export const styleSpinner = (
     systemStyles.margin.r[mr],
     hasRing && systemStyles.color.normal.ring[theme][ring],
     hasRing && sharedStyles.ring.normal,
-    spin && !disabled && unstyledSpinnerConfig.styles.root.spin,
-    (!spin || disabled) && sharedStyles.rotate['-90'],
+    isSpinning && unstyledSpinnerConfig.styles.root.spin,
+    !isSpinning && sharedStyles.rotate['-90'],
     disabled && sharedStyles.cursor.disabled,
     className
   );
