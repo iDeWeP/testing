@@ -1,7 +1,7 @@
 import type { ElementType } from 'react';
 import { useMergeProps } from '../../hooks/use-merge-props/use-merge-props';
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
-import { getInnerSize } from '../../utils/merge-class-name/spacing';
+import { setInnerSize } from '../../utils/set-inner-size/set-inner-size';
 import { UnstyledContainer } from '../UnstyledContainer/UnstyledContainer';
 import type { BadgeProps } from './Badge.types';
 import { badgeConfig } from './badgeConfig';
@@ -36,7 +36,7 @@ export const Badge = <E extends ElementType>(props: BadgeProps<E>) => {
 
   return (
     <UnstyledContainer
-      size={getInnerSize(defaultSize)}
+      size={setInnerSize(defaultSize)}
       scale={empty ? 'none' : 'circle'}
       className={mergedClassName}
       {...restProps}
