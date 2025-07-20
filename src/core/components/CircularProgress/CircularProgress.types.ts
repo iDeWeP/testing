@@ -7,9 +7,6 @@ import type {
 } from '../../types';
 import type {
   UnstyledSpinnerBarProps,
-  UnstyledSpinnerTrailProps,
-  UnstyledSpinnerInnerBorder,
-  UnstyledSpinnerOuterBorder,
   UnstyledSpinnerOptionalProps,
   UnstyledSpinnerConfigProps,
   UnstyledSpinnerProps
@@ -18,17 +15,14 @@ import type {
 export type CircularProgressContainerProps = ComponentRefProps<'div'>;
 export type CircularProgressLabelProps = ComponentRefProps<'span'>;
 export type CircularProgressBarProps = UnstyledSpinnerBarProps;
-export type CircularProgressTrailProps = UnstyledSpinnerTrailProps;
-export type CircularProgressInnerBorder = UnstyledSpinnerInnerBorder;
-export type CircularProgressOuterBorder = UnstyledSpinnerOuterBorder;
 
 export type CircularProgressComponentsProps = {
   container?: CircularProgressContainerProps;
   label?: CircularProgressLabelProps;
   bar?: CircularProgressBarProps;
-  trail?: CircularProgressTrailProps;
-  innerBorder?: CircularProgressInnerBorder;
-  outerBorder?: CircularProgressOuterBorder;
+  trail?: CircularProgressBarProps;
+  innerBorder?: CircularProgressBarProps;
+  outerBorder?: CircularProgressBarProps;
 };
 
 export type CircularProgressOptionalProps = UnstyledSpinnerOptionalProps;
