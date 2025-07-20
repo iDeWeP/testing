@@ -1,8 +1,9 @@
-import type { MergeComponentProps, Gap } from '../../types';
+import type { MergeProps, Gap } from '../../types';
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
+import type { UnstyledInputClearanceProps } from './UnstyledInput.types';
 
-type Props = MergeComponentProps<
-  'legend',
+type Props = MergeProps<
+  UnstyledInputClearanceProps,
   {
     gap: Gap;
   }

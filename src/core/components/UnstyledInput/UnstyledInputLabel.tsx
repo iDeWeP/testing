@@ -1,25 +1,21 @@
-import type {
-  MergeComponentProps,
-  InputVariant,
-  InputSize,
-  Gap
-} from '../../types';
+import type { MergeProps, InputVariant, InputSize, Gap } from '../../types';
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
+import type { UnstyledInputLabelProps } from './UnstyledInput.types';
 
-type Props = MergeComponentProps<
-  'label',
+type Props = MergeProps<
+  UnstyledInputLabelProps,
   {
     inputType: 'input' | 'textarea';
-    variant: InputVariant;
-    size: InputSize;
+    inputVariant: InputVariant;
+    inputSize: InputSize;
     gap: Gap;
   }
 >;
 
 export const UnstyledInputLabel = ({
   inputType,
-  variant: inputVariant,
-  size: inputSize,
+  inputVariant,
+  inputSize,
   gap,
   className,
   ...restProps

@@ -86,7 +86,7 @@ export const UnstyledInput = <E extends ElementType>(
       valid={valid}
       invalid={invalid}
       disabled={disabled}
-      size={inputSize}
+      inputSize={inputSize}
       resize={resize}
       width={width}
       margin={margin}
@@ -103,8 +103,8 @@ export const UnstyledInput = <E extends ElementType>(
       <UnstyledInputDecorator
         inputType={Component}
         disabled={disabled}
-        variant={variant}
-        placement="left"
+        inputVariant={variant}
+        sidePlacement="left"
         radius={radius}
         r={r}
         rt={rt}
@@ -123,7 +123,7 @@ export const UnstyledInput = <E extends ElementType>(
       <UnstyledInputFieldset
         inputType={Component}
         disabled={disabled}
-        variant={variant}
+        inputVariant={variant}
         {...componentsProps.fieldset}
       >
         <Component
@@ -151,8 +151,8 @@ export const UnstyledInput = <E extends ElementType>(
           <UnstyledInputLabel
             inputType={Component}
             htmlFor={id}
-            variant={variant}
-            size={inputSize}
+            inputVariant={variant}
+            inputSize={inputSize}
             gap={gap}
             {...componentsProps.label}
           >
@@ -163,8 +163,8 @@ export const UnstyledInput = <E extends ElementType>(
       <UnstyledInputDecorator
         inputType={Component}
         disabled={disabled}
-        variant={variant}
-        placement="right"
+        inputVariant={variant}
+        sidePlacement="right"
         radius={radius}
         r={r}
         rt={rt}

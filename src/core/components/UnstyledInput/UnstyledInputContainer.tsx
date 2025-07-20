@@ -3,17 +3,12 @@ import { combineHandlers } from '../../../utils/utils/combine-handlers/combine-h
 import { setProp } from '../../../utils/utils/set-prop/set-prop';
 import { useFocusHandler } from '../../hooks/use-focus-handler/use-focus-handler';
 import { useTheme } from '../../hooks/use-theme/use-theme';
-import type {
-  MergeComponentProps,
-  InputSize,
-  Width,
-  Margin,
-  Color
-} from '../../types';
+import type { MergeProps, InputSize, Width, Margin, Color } from '../../types';
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
+import type { UnstyledInputContainerProps } from './UnstyledInput.types';
 
-type Props = MergeComponentProps<
-  'div',
+type Props = MergeProps<
+  UnstyledInputContainerProps,
   {
     inputType: 'input' | 'textarea';
     inputRef?: RefObject<HTMLInputElement | HTMLTextAreaElement | null>;
@@ -22,7 +17,7 @@ type Props = MergeComponentProps<
     valid: boolean;
     invalid: boolean;
     disabled: boolean;
-    size: InputSize;
+    inputSize: InputSize;
     resize: boolean;
     width: Width;
     margin: Margin;
@@ -45,7 +40,7 @@ export const UnstyledInputContainer = ({
   valid,
   invalid,
   disabled,
-  size: inputSize,
+  inputSize,
   resize,
   width,
   margin,

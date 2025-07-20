@@ -1,20 +1,21 @@
 import { useTheme } from '../../hooks/use-theme/use-theme';
-import type { MergeComponentProps, InputVariant } from '../../types';
+import type { MergeProps, InputVariant } from '../../types';
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
+import type { UnstyledInputFieldsetProps } from './UnstyledInput.types';
 
-type Props = MergeComponentProps<
-  'fieldset',
+type Props = MergeProps<
+  UnstyledInputFieldsetProps,
   {
     inputType: 'input' | 'textarea';
     disabled: boolean;
-    variant: InputVariant;
+    inputVariant: InputVariant;
   }
 >;
 
 export const UnstyledInputFieldset = ({
   inputType,
   disabled,
-  variant: inputVariant,
+  inputVariant,
   className,
   ...restProps
 }: Props) => {
