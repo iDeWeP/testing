@@ -1,14 +1,13 @@
 import type { ElementType } from 'react';
 import { useTheme } from '../../hooks/use-theme/use-theme';
-import { getReversedColor } from '../../utils/merge-class-name/color';
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
-import { setSpinnerSize } from '../../utils/merge-class-name/spacing';
 import { mergeProps } from '../../utils/merge-props/merge-props';
 import { setAria } from '../../utils/set-aria/set-aria';
 import { setButtonStyle } from '../../utils/set-button-style/set-button-style';
+import { setLoaderSize } from '../../utils/set-loader-size/set-loader-size';
 import { UnstyledContainer } from '../UnstyledContainer/UnstyledContainer';
+import { UnstyledLoader } from '../UnstyledLoader/UnstyledLoader';
 import { UnstyledRipple } from '../UnstyledRipple/UnstyledRipple';
-import { UnstyledSpinner } from '../UnstyledSpinner/UnstyledSpinner';
 import type { UnstyledButtonProps } from './UnstyledButton.types';
 import { unstyledButtonConfig } from './unstyledButtonConfig';
 
@@ -29,7 +28,6 @@ export const UnstyledButton = <E extends ElementType>(
     children,
     variant,
     size,
-    border,
     color,
     ...restProps
   } = mergeProps(unstyledButtonConfig.props, props);
@@ -46,14 +44,17 @@ export const UnstyledButton = <E extends ElementType>(
     effect
   });
 
+  const styles = setButtonStyle(variant, color, checked);
+
   const spinnerNode = (
-    <UnstyledSpinner
+    <UnstyledLoader
+      checked={checked}
       disabled={disabled}
       spin
       value={75}
-      variant="text"
+      variant={variant}
       float={loading === true}
-      size={setSpinnerSize(size)}
+      size={setLoaderSize(size)}
       thickness={4}
       margin="unset"
       m="unset"
@@ -64,10 +65,10 @@ export const UnstyledButton = <E extends ElementType>(
       ml="unset"
       mr="unset"
       border="unset"
-      color={getReversedColor(color, checked)}
+      color={color}
+      ring="unset"
       componentsProps={{
         bar: componentsProps.bar,
-        trail: componentsProps.trail,
         outerBorder: componentsProps.outerBorder,
         innerBorder: componentsProps.innerBorder
       }}
@@ -82,7 +83,6 @@ export const UnstyledButton = <E extends ElementType>(
   const leftSpinner = loading && loading !== 'right' && spinnerNode;
   const rightSpinner = loading === 'right' && spinnerNode;
   const hasRipple = ripple !== 'none' && !loading && !disabled;
-  const styles = setButtonStyle(variant, border, color, checked);
 
   return (
     <UnstyledContainer
@@ -90,7 +90,6 @@ export const UnstyledButton = <E extends ElementType>(
       {...buttonProps}
       variant={styles.variant}
       size={size}
-      border={styles.border}
       color={styles.color}
       ring="unset"
       className={mergedClassName}

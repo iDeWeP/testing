@@ -16,15 +16,10 @@ import type {
   UnstyledContainerConfigProps,
   UnstyledContainerProps
 } from '../UnstyledContainer/UnstyledContainer.types';
-import type {
-  UnstyledSpinnerBarProps,
-  UnstyledSpinnerTrailProps,
-  UnstyledSpinnerInnerBorder,
-  UnstyledSpinnerOuterBorder
-} from '../UnstyledSpinner/UnstyledSpinner.types';
+import type { UnstyledSpinnerBarProps } from '../UnstyledSpinner/UnstyledSpinner.types';
 
 export type UnstyledButtonRippleProps = ComponentRefProps<'span'>;
-export type UnstyledButtonSpinnerProps = MergeProps<
+export type UnstyledButtonLoaderProps = MergeProps<
   ComponentPropsWithRef<'svg'>,
   {
     spin?: boolean;
@@ -39,17 +34,13 @@ export type UnstyledButtonSpinnerProps = MergeProps<
   }
 >;
 export type UnstyledButtonBarProps = UnstyledSpinnerBarProps;
-export type UnstyledButtonTrailProps = UnstyledSpinnerTrailProps;
-export type UnstyledButtonInnerBorderProps = UnstyledSpinnerInnerBorder;
-export type UnstyledButtonOuterBorderProps = UnstyledSpinnerOuterBorder;
 
 export type UnstyledButtonComponentsProps = {
   ripple?: UnstyledButtonRippleProps;
-  spinner?: UnstyledButtonSpinnerProps;
+  spinner?: UnstyledButtonLoaderProps;
   bar?: UnstyledButtonBarProps;
-  trail?: UnstyledButtonTrailProps;
-  innerBorder?: UnstyledButtonInnerBorderProps;
-  outerBorder?: UnstyledButtonOuterBorderProps;
+  innerBorder?: UnstyledButtonBarProps;
+  outerBorder?: UnstyledButtonBarProps;
 };
 
 export type UnstyledButtonOptionalProps = {
