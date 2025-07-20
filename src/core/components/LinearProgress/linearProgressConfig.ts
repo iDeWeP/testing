@@ -37,6 +37,7 @@ export const linearProgressConfig: ComponentConfig<LinearProgressConfigProps> =
       rbl: 'unset',
       rbr: 'unset',
       shadow: 'unset',
+      ring: 'unset',
       gap: 'xs'
     }
   };
