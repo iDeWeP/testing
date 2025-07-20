@@ -3,7 +3,6 @@ import { BorderExample } from './BorderExample';
 import { ColorExample } from './ColorExample';
 import { DefaultExample } from './DefaultExample';
 import { DisabledExample } from './DisabledExample';
-import { FloatExample } from './FloatExample';
 import { MarginExample } from './MarginExample';
 import { MarginMBExample } from './MarginMBExample';
 import { MarginMExample } from './MarginMExample';
@@ -27,7 +26,6 @@ const Page = () => (
     <SpinExample />
     <ValueExample />
     <VariantExample />
-    <FloatExample />
     <SizeExample />
     <ThicknessExample />
     <MarginExample />
