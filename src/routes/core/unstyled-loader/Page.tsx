@@ -1,5 +1,6 @@
 import { ExampleTitle } from '../../../components/ExampleTitle';
 import { BorderExample } from './BorderExample';
+import { CheckedExample } from './CheckedExample';
 import { ColorExample } from './ColorExample';
 import { DefaultExample } from './DefaultExample';
 import { DisabledExample } from './DisabledExample';
@@ -23,6 +24,7 @@ const Page = () => (
   <>
     <ExampleTitle>UnstyledLoader</ExampleTitle>
     <DefaultExample />
+    <CheckedExample />
     <DisabledExample />
     <SpinExample />
     <ValueExample />
