@@ -8,6 +8,7 @@ type Props = {
 export const Example = ({ clear, ...restProps }: Props) => (
   <UnstyledLoader
     value={clear ? 0 : 75}
+    variant={clear ? 'solid' : 'text'}
     color={clear ? 'unset' : 'primary'}
     {...restProps}
   />
