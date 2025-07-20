@@ -7,6 +7,7 @@ type Props = {
 
 export const Example = ({ clear, ...restProps }: Props) => (
   <UnstyledSpinner
+    value={clear ? 0 : 75}
     color={clear ? 'unset' : 'primary'}
     {...restProps}
   />
