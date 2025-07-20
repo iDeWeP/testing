@@ -30,7 +30,8 @@ const types = {
     'aria-valuemin': min,
     'aria-valuemax': max,
     'aria-valuenow': value
-  })
+  }),
+  switch: () => ({ role: 'switch' })
 };
 
 export const setAria = (type: keyof typeof types, values: Values = {}) =>

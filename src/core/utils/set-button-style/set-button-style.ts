@@ -1,13 +1,15 @@
-import type { Variant, Border, Color } from '../../types';
-import { getCheckableVariant } from '../merge-class-name/variant';
+import type { Variant, Color } from '../../types';
+import { hasVariantBg } from '../merge-class-name/has-variant-bg';
 
 export const setButtonStyle = (
   variant: Variant,
-  border: Border,
   color: Color,
   checked?: boolean
-) => ({
-  variant: checked === false ? getCheckableVariant(variant) : variant,
-  border: checked === false ? 'set' : border,
-  color: checked === false ? 'surface' : color
-});
+) => {
+  const isCheckable = checked !== undefined;
+
+  return {
+    variant: isCheckable ? (hasVariantBg(variant) ? 'light' : 'text') : variant,
+    color: isCheckable && color !== 'unset' ? 'surface' : color
+  };
+};
