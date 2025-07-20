@@ -81,8 +81,7 @@ export const UnstyledInput = <E extends ElementType>(
     <UnstyledInputContainer
       inputType={Component}
       inputRef={setProp(focused === undefined, ref)}
-      focused={isFocused}
-      shifted={shifted ?? (!!label && (isFocused || !!value))}
+      on={isFocused}
       valid={valid}
       invalid={invalid}
       disabled={disabled}
@@ -115,6 +114,7 @@ export const UnstyledInput = <E extends ElementType>(
         rtr={rtr}
         rbl={rbl}
         rbr={rbr}
+        color={color}
         gap={gap}
         {...componentsProps.leftDecorator}
       >
@@ -122,8 +122,10 @@ export const UnstyledInput = <E extends ElementType>(
       </UnstyledInputDecorator>
       <UnstyledInputFieldset
         inputType={Component}
+        on={shifted ?? (!!label && (isFocused || !!value))}
         disabled={disabled}
         inputVariant={variant}
+        color={color}
         {...componentsProps.fieldset}
       >
         <Component
@@ -175,6 +177,7 @@ export const UnstyledInput = <E extends ElementType>(
         rtr={rtr}
         rbl={rbl}
         rbr={rbr}
+        color={color}
         gap={gap}
         {...componentsProps.rightDecorator}
       >
