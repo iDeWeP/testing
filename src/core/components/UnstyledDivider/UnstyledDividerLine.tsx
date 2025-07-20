@@ -1,8 +1,9 @@
-import type { MergeComponentProps, Orientation } from '../../types';
+import type { MergeProps, Orientation } from '../../types';
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
+import type { UnstyledDividerLineProps } from './UnstyledDivider.types';
 
-type Props = MergeComponentProps<
-  'hr',
+type Props = MergeProps<
+  UnstyledDividerLineProps,
   {
     orientation: Orientation;
   }

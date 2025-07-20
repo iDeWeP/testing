@@ -11,12 +11,11 @@ import type {
   MergeProps
 } from '../../types';
 
-export type UnstyledDividerStartLineProps = ComponentRefProps<'hr'>;
-export type UnstyledDividerEndLineProps = ComponentRefProps<'hr'>;
+export type UnstyledDividerLineProps = ComponentRefProps<'hr'>;
 
 export type UnstyledDividerComponentsProps = {
-  startLine?: UnstyledDividerStartLineProps;
-  endLine?: UnstyledDividerEndLineProps;
+  startLine?: UnstyledDividerLineProps;
+  endLine?: UnstyledDividerLineProps;
 };
 
 export type UnstyledDividerDefaultProps = {
