@@ -1,6 +1,6 @@
 import { useTheme } from '../../hooks/use-theme/use-theme';
 import type {
-  MergeComponentProps,
+  MergeProps,
   Variant,
   DefaultSize,
   Border,
@@ -10,9 +10,10 @@ import type {
   Shadow
 } from '../../types';
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
+import type { UnstyledCheckboxTrailProps } from './UnstyledCheckbox.types';
 
-type Props = MergeComponentProps<
-  'span',
+type Props = MergeProps<
+  UnstyledCheckboxTrailProps,
   {
     valid: boolean;
     invalid: boolean;

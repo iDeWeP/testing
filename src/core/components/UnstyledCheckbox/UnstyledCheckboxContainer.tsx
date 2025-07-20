@@ -1,13 +1,9 @@
-import type {
-  MergeComponentProps,
-  DefaultSize,
-  Margin,
-  Radius
-} from '../../types';
+import type { MergeProps, DefaultSize, Margin, Radius } from '../../types';
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
+import type { UnstyledCheckboxContainerProps } from './UnstyledCheckbox.types';
 
-type Props = MergeComponentProps<
-  'div',
+type Props = MergeProps<
+  UnstyledCheckboxContainerProps,
   {
     defaultSize: DefaultSize;
     margin: Margin;

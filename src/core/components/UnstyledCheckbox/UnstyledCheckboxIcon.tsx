@@ -1,7 +1,7 @@
 import { type HTMLInputTypeAttribute, cloneElement } from 'react';
 import { useTheme } from '../../hooks/use-theme/use-theme';
 import type {
-  MergeComponentProps,
+  MergeProps,
   Variant,
   DefaultSize,
   Border,
@@ -14,9 +14,10 @@ import type {
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
 import { mergeClasses } from '../../utils/merge-class-name/merge-classes';
 import { setAria } from '../../utils/set-aria/set-aria';
+import type { UnstyledCheckboxIconProps } from './UnstyledCheckbox.types';
 
-type Props = MergeComponentProps<
-  'svg',
+type Props = MergeProps<
+  UnstyledCheckboxIconProps,
   {
     inputType: HTMLInputTypeAttribute;
     valid: boolean;
