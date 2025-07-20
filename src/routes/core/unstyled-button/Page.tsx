@@ -1,11 +1,4 @@
 import { ExampleTitle } from '../../../components/ExampleTitle';
-import { BorderBBExample } from './BorderBBExample';
-import { BorderBExample } from './BorderBExample';
-import { BorderBLExample } from './BorderBLExample';
-import { BorderBRExample } from './BorderBRExample';
-import { BorderBTExample } from './BorderBTExample';
-import { BorderBXExample } from './BorderBXExample';
-import { BorderBYExample } from './BorderBYExample';
 import { BorderExample } from './BorderExample';
 import { CheckedExample } from './CheckedExample';
 import { ColorExample } from './ColorExample';
@@ -59,13 +52,6 @@ const Page = () => (
     <MarginMLExample />
     <MarginMRExample />
     <BorderExample />
-    <BorderBExample />
-    <BorderBXExample />
-    <BorderBYExample />
-    <BorderBTExample />
-    <BorderBBExample />
-    <BorderBLExample />
-    <BorderBRExample />
     <RadiusRExample />
     <RadiusRTExample />
     <RadiusRBExample />

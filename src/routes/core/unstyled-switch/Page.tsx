@@ -28,6 +28,7 @@ import { RadiusRRExample } from './RadiusRRExample';
 import { RadiusRTExample } from './RadiusRTExample';
 import { RadiusRTLExample } from './RadiusRTLExample';
 import { RadiusRTRExample } from './RadiusRTRExample';
+import { ScaleExample } from './ScaleExample';
 import { ShadowExample } from './ShadowExample';
 import { SizeExample } from './SizeExample';
 import { VariantExample } from './VariantExample';
@@ -39,6 +40,7 @@ const Page = () => (
     <DisabledExample />
     <VariantExample />
     <SizeExample />
+    <ScaleExample />
     <MarginExample />
     <MarginMExample />
     <MarginMXExample />
