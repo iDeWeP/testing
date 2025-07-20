@@ -10,7 +10,6 @@ export const spinnerConfig: ComponentConfig<SpinnerConfigProps> = {
     thickness: 4,
     color: 'primary',
     componentsProps: {},
-    float: false,
     margin: 'unset',
     m: 'unset',
     mx: 'unset',
@@ -19,6 +18,7 @@ export const spinnerConfig: ComponentConfig<SpinnerConfigProps> = {
     mb: 'unset',
     ml: 'unset',
     mr: 'unset',
-    border: 'auto'
+    border: 'auto',
+    ring: 'unset'
   }
 };

@@ -23,7 +23,6 @@ export const circularProgressConfig: ComponentConfig<CircularProgressConfigProps
     color: 'primary',
     componentsProps: {},
     label: true,
-    float: false,
     margin: 'unset',
     m: 'unset',
     mx: 'unset',
@@ -32,7 +31,8 @@ export const circularProgressConfig: ComponentConfig<CircularProgressConfigProps
     mb: 'unset',
     ml: 'unset',
     mr: 'unset',
-    border: 'auto'
+    border: 'auto',
+    ring: 'unset'
   },
   styles: {
     root: {
