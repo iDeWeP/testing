@@ -9,18 +9,16 @@ import type {
   MergeProps
 } from '../../types';
 import type {
-  UnstyledDividerStartLineProps,
-  UnstyledDividerEndLineProps,
+  UnstyledDividerLineProps,
   UnstyledDividerConfigProps,
   UnstyledDividerProps
 } from '../UnstyledDivider/UnstyledDivider.types';
 
-export type DividerStartLineProps = UnstyledDividerStartLineProps;
-export type DividerEndLineProps = UnstyledDividerEndLineProps;
+export type DividerLineProps = UnstyledDividerLineProps;
 
 export type DividerComponentsProps = {
-  startLine?: DividerStartLineProps;
-  endLine?: DividerEndLineProps;
+  startLine?: DividerLineProps;
+  endLine?: DividerLineProps;
 };
 
 export type DividerDefaultProps = {
