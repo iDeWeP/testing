@@ -25,7 +25,16 @@ type SystemCSSStyles = {
   spacing: Record<Orientation, CSSStyles>;
   border: Record<BorderType, CSSStyles>;
   radius: Record<RadiusType, CSSStyles>;
-  color: Record<ColorType, Record<Theme, CSSStyles>>;
+  color: {
+    normal: Record<ColorType, Record<Theme, CSSStyles>>;
+    checked: {
+      bg: Record<Theme, CSSStyles>;
+      border: Record<Theme, CSSStyles>;
+      text: Record<Theme, CSSStyles>;
+      fill: Record<Theme, CSSStyles>;
+      ring: Record<Theme, CSSStyles>;
+    };
+  };
   shadow: CSSStyles;
   gap: Record<GapType, CSSStyles>;
 };
@@ -2323,1011 +2332,1855 @@ export const systemStyles: SystemCSSStyles = {
     }
   },
   color: {
-    bg: {
-      light: {
-        disabled: {
-          color: 'bg-disabled-500'
+    normal: {
+      bg: {
+        light: {
+          disabled: {
+            color: 'bg-disabled-500'
+          },
+          surface: {
+            color: 'bg-surface-500'
+          },
+          neutral: {
+            color: 'bg-neutral-500'
+          },
+          primary: {
+            color: 'bg-primary-500'
+          },
+          secondary: {
+            color: 'bg-secondary-500'
+          },
+          tertiary: {
+            color: 'bg-tertiary-500'
+          },
+          success: {
+            color: 'bg-success-500'
+          },
+          warning: {
+            color: 'bg-warning-500'
+          },
+          error: {
+            color: 'bg-error-500'
+          },
+          'disabled-light': {
+            color: 'bg-disabled-300'
+          },
+          'surface-light': {
+            color: 'bg-surface-300'
+          },
+          'neutral-light': {
+            color: 'bg-neutral-300'
+          },
+          'primary-light': {
+            color: 'bg-primary-300'
+          },
+          'secondary-light': {
+            color: 'bg-secondary-300'
+          },
+          'tertiary-light': {
+            color: 'bg-tertiary-300'
+          },
+          'success-light': {
+            color: 'bg-success-300'
+          },
+          'warning-light': {
+            color: 'bg-warning-300'
+          },
+          'error-light': {
+            color: 'bg-error-300'
+          },
+          'disabled-on': {
+            color: 'bg-disabled-50'
+          },
+          'surface-on': {
+            color: 'bg-surface-50'
+          },
+          'neutral-on': {
+            color: 'bg-neutral-50'
+          },
+          'primary-on': {
+            color: 'bg-primary-50'
+          },
+          'secondary-on': {
+            color: 'bg-secondary-50'
+          },
+          'tertiary-on': {
+            color: 'bg-tertiary-50'
+          },
+          'success-on': {
+            color: 'bg-success-50'
+          },
+          'warning-on': {
+            color: 'bg-warning-50'
+          },
+          'error-on': {
+            color: 'bg-error-50'
+          }
         },
-        surface: {
-          color: 'bg-surface-500'
-        },
-        neutral: {
-          color: 'bg-neutral-500'
-        },
-        primary: {
-          color: 'bg-primary-500'
-        },
-        secondary: {
-          color: 'bg-secondary-500'
-        },
-        tertiary: {
-          color: 'bg-tertiary-500'
-        },
-        success: {
-          color: 'bg-success-500'
-        },
-        warning: {
-          color: 'bg-warning-500'
-        },
-        error: {
-          color: 'bg-error-500'
-        },
-        'disabled-light': {
-          color: 'bg-disabled-300'
-        },
-        'surface-light': {
-          color: 'bg-surface-300'
-        },
-        'neutral-light': {
-          color: 'bg-neutral-300'
-        },
-        'primary-light': {
-          color: 'bg-primary-300'
-        },
-        'secondary-light': {
-          color: 'bg-secondary-300'
-        },
-        'tertiary-light': {
-          color: 'bg-tertiary-300'
-        },
-        'success-light': {
-          color: 'bg-success-300'
-        },
-        'warning-light': {
-          color: 'bg-warning-300'
-        },
-        'error-light': {
-          color: 'bg-error-300'
-        },
-        'disabled-on': {
-          color: 'bg-disabled-50'
-        },
-        'surface-on': {
-          color: 'bg-surface-50'
-        },
-        'neutral-on': {
-          color: 'bg-neutral-50'
-        },
-        'primary-on': {
-          color: 'bg-primary-50'
-        },
-        'secondary-on': {
-          color: 'bg-secondary-50'
-        },
-        'tertiary-on': {
-          color: 'bg-tertiary-50'
-        },
-        'success-on': {
-          color: 'bg-success-50'
-        },
-        'warning-on': {
-          color: 'bg-warning-50'
-        },
-        'error-on': {
-          color: 'bg-error-50'
+        dark: {
+          disabled: {
+            color: 'bg-disabled-600'
+          },
+          surface: {
+            color: 'bg-surface-600'
+          },
+          neutral: {
+            color: 'bg-neutral-600'
+          },
+          primary: {
+            color: 'bg-primary-600'
+          },
+          secondary: {
+            color: 'bg-secondary-600'
+          },
+          tertiary: {
+            color: 'bg-tertiary-600'
+          },
+          success: {
+            color: 'bg-success-600'
+          },
+          warning: {
+            color: 'bg-warning-600'
+          },
+          error: {
+            color: 'bg-error-600'
+          },
+          'disabled-light': {
+            color: 'bg-disabled-400'
+          },
+          'surface-light': {
+            color: 'bg-surface-400'
+          },
+          'neutral-light': {
+            color: 'bg-neutral-400'
+          },
+          'primary-light': {
+            color: 'bg-primary-400'
+          },
+          'secondary-light': {
+            color: 'bg-secondary-400'
+          },
+          'tertiary-light': {
+            color: 'bg-tertiary-400'
+          },
+          'success-light': {
+            color: 'bg-success-400'
+          },
+          'warning-light': {
+            color: 'bg-warning-400'
+          },
+          'error-light': {
+            color: 'bg-error-400'
+          },
+          'disabled-on': {
+            color: 'bg-disabled-100'
+          },
+          'surface-on': {
+            color: 'bg-surface-100'
+          },
+          'neutral-on': {
+            color: 'bg-neutral-100'
+          },
+          'primary-on': {
+            color: 'bg-primary-100'
+          },
+          'secondary-on': {
+            color: 'bg-secondary-100'
+          },
+          'tertiary-on': {
+            color: 'bg-tertiary-100'
+          },
+          'success-on': {
+            color: 'bg-success-100'
+          },
+          'warning-on': {
+            color: 'bg-warning-100'
+          },
+          'error-on': {
+            color: 'bg-error-100'
+          }
         }
       },
-      dark: {
-        disabled: {
-          color: 'bg-disabled-600'
+      border: {
+        light: {
+          disabled: {
+            color: 'border-disabled-500'
+          },
+          surface: {
+            color: 'border-surface-500'
+          },
+          neutral: {
+            color: 'border-neutral-500'
+          },
+          primary: {
+            color: 'border-primary-500'
+          },
+          secondary: {
+            color: 'border-secondary-500'
+          },
+          tertiary: {
+            color: 'border-tertiary-500'
+          },
+          success: {
+            color: 'border-success-500'
+          },
+          warning: {
+            color: 'border-warning-500'
+          },
+          error: {
+            color: 'border-error-500'
+          },
+          'disabled-light': {
+            color: 'border-disabled-300'
+          },
+          'surface-light': {
+            color: 'border-surface-300'
+          },
+          'neutral-light': {
+            color: 'border-neutral-300'
+          },
+          'primary-light': {
+            color: 'border-primary-300'
+          },
+          'secondary-light': {
+            color: 'border-secondary-300'
+          },
+          'tertiary-light': {
+            color: 'border-tertiary-300'
+          },
+          'success-light': {
+            color: 'border-success-300'
+          },
+          'warning-light': {
+            color: 'border-warning-300'
+          },
+          'error-light': {
+            color: 'border-error-300'
+          },
+          'disabled-on': {
+            color: 'border-disabled-50'
+          },
+          'surface-on': {
+            color: 'border-surface-50'
+          },
+          'neutral-on': {
+            color: 'border-neutral-50'
+          },
+          'primary-on': {
+            color: 'border-primary-50'
+          },
+          'secondary-on': {
+            color: 'border-secondary-50'
+          },
+          'tertiary-on': {
+            color: 'border-tertiary-50'
+          },
+          'success-on': {
+            color: 'border-success-50'
+          },
+          'warning-on': {
+            color: 'border-warning-50'
+          },
+          'error-on': {
+            color: 'border-error-50'
+          }
         },
-        surface: {
-          color: 'bg-surface-600'
+        dark: {
+          disabled: {
+            color: 'border-disabled-600'
+          },
+          surface: {
+            color: 'border-surface-600'
+          },
+          neutral: {
+            color: 'border-neutral-600'
+          },
+          primary: {
+            color: 'border-primary-600'
+          },
+          secondary: {
+            color: 'border-secondary-600'
+          },
+          tertiary: {
+            color: 'border-tertiary-600'
+          },
+          success: {
+            color: 'border-success-600'
+          },
+          warning: {
+            color: 'border-warning-600'
+          },
+          error: {
+            color: 'border-error-600'
+          },
+          'disabled-light': {
+            color: 'border-disabled-400'
+          },
+          'surface-light': {
+            color: 'border-surface-400'
+          },
+          'neutral-light': {
+            color: 'border-neutral-400'
+          },
+          'primary-light': {
+            color: 'border-primary-400'
+          },
+          'secondary-light': {
+            color: 'border-secondary-400'
+          },
+          'tertiary-light': {
+            color: 'border-tertiary-400'
+          },
+          'success-light': {
+            color: 'border-success-400'
+          },
+          'warning-light': {
+            color: 'border-warning-400'
+          },
+          'error-light': {
+            color: 'border-error-400'
+          },
+          'disabled-on': {
+            color: 'border-disabled-100'
+          },
+          'surface-on': {
+            color: 'border-surface-100'
+          },
+          'neutral-on': {
+            color: 'border-neutral-100'
+          },
+          'primary-on': {
+            color: 'border-primary-100'
+          },
+          'secondary-on': {
+            color: 'border-secondary-100'
+          },
+          'tertiary-on': {
+            color: 'border-tertiary-100'
+          },
+          'success-on': {
+            color: 'border-success-100'
+          },
+          'warning-on': {
+            color: 'border-warning-100'
+          },
+          'error-on': {
+            color: 'border-error-100'
+          }
+        }
+      },
+      text: {
+        light: {
+          disabled: {
+            color: 'text-disabled-500'
+          },
+          surface: {
+            color: 'text-surface-500'
+          },
+          neutral: {
+            color: 'text-neutral-500'
+          },
+          primary: {
+            color: 'text-primary-500'
+          },
+          secondary: {
+            color: 'text-secondary-500'
+          },
+          tertiary: {
+            color: 'text-tertiary-500'
+          },
+          success: {
+            color: 'text-success-500'
+          },
+          warning: {
+            color: 'text-warning-500'
+          },
+          error: {
+            color: 'text-error-500'
+          },
+          'disabled-light': {
+            color: 'text-disabled-300'
+          },
+          'surface-light': {
+            color: 'text-surface-300'
+          },
+          'neutral-light': {
+            color: 'text-neutral-300'
+          },
+          'primary-light': {
+            color: 'text-primary-300'
+          },
+          'secondary-light': {
+            color: 'text-secondary-300'
+          },
+          'tertiary-light': {
+            color: 'text-tertiary-300'
+          },
+          'success-light': {
+            color: 'text-success-300'
+          },
+          'warning-light': {
+            color: 'text-warning-300'
+          },
+          'error-light': {
+            color: 'text-error-300'
+          },
+          'disabled-on': {
+            color: 'text-disabled-50'
+          },
+          'surface-on': {
+            color: 'text-surface-50'
+          },
+          'neutral-on': {
+            color: 'text-neutral-50'
+          },
+          'primary-on': {
+            color: 'text-primary-50'
+          },
+          'secondary-on': {
+            color: 'text-secondary-50'
+          },
+          'tertiary-on': {
+            color: 'text-tertiary-50'
+          },
+          'success-on': {
+            color: 'text-success-50'
+          },
+          'warning-on': {
+            color: 'text-warning-50'
+          },
+          'error-on': {
+            color: 'text-error-50'
+          }
         },
-        neutral: {
-          color: 'bg-neutral-600'
+        dark: {
+          disabled: {
+            color: 'text-disabled-600'
+          },
+          surface: {
+            color: 'text-surface-600'
+          },
+          neutral: {
+            color: 'text-neutral-600'
+          },
+          primary: {
+            color: 'text-primary-600'
+          },
+          secondary: {
+            color: 'text-secondary-600'
+          },
+          tertiary: {
+            color: 'text-tertiary-600'
+          },
+          success: {
+            color: 'text-success-600'
+          },
+          warning: {
+            color: 'text-warning-600'
+          },
+          error: {
+            color: 'text-error-600'
+          },
+          'disabled-light': {
+            color: 'text-disabled-400'
+          },
+          'surface-light': {
+            color: 'text-surface-400'
+          },
+          'neutral-light': {
+            color: 'text-neutral-400'
+          },
+          'primary-light': {
+            color: 'text-primary-400'
+          },
+          'secondary-light': {
+            color: 'text-secondary-400'
+          },
+          'tertiary-light': {
+            color: 'text-tertiary-400'
+          },
+          'success-light': {
+            color: 'text-success-400'
+          },
+          'warning-light': {
+            color: 'text-warning-400'
+          },
+          'error-light': {
+            color: 'text-error-400'
+          },
+          'disabled-on': {
+            color: 'text-disabled-100'
+          },
+          'surface-on': {
+            color: 'text-surface-100'
+          },
+          'neutral-on': {
+            color: 'text-neutral-100'
+          },
+          'primary-on': {
+            color: 'text-primary-100'
+          },
+          'secondary-on': {
+            color: 'text-secondary-100'
+          },
+          'tertiary-on': {
+            color: 'text-tertiary-100'
+          },
+          'success-on': {
+            color: 'text-success-100'
+          },
+          'warning-on': {
+            color: 'text-warning-100'
+          },
+          'error-on': {
+            color: 'text-error-100'
+          }
+        }
+      },
+      fill: {
+        light: {
+          disabled: {
+            color: 'fill-disabled-500'
+          },
+          surface: {
+            color: 'fill-surface-500'
+          },
+          neutral: {
+            color: 'fill-neutral-500'
+          },
+          primary: {
+            color: 'fill-primary-500'
+          },
+          secondary: {
+            color: 'fill-secondary-500'
+          },
+          tertiary: {
+            color: 'fill-tertiary-500'
+          },
+          success: {
+            color: 'fill-success-500'
+          },
+          warning: {
+            color: 'fill-warning-500'
+          },
+          error: {
+            color: 'fill-error-500'
+          },
+          'disabled-light': {
+            color: 'fill-disabled-300'
+          },
+          'surface-light': {
+            color: 'fill-surface-300'
+          },
+          'neutral-light': {
+            color: 'fill-neutral-300'
+          },
+          'primary-light': {
+            color: 'fill-primary-300'
+          },
+          'secondary-light': {
+            color: 'fill-secondary-300'
+          },
+          'tertiary-light': {
+            color: 'fill-tertiary-300'
+          },
+          'success-light': {
+            color: 'fill-success-300'
+          },
+          'warning-light': {
+            color: 'fill-warning-300'
+          },
+          'error-light': {
+            color: 'fill-error-300'
+          },
+          'disabled-on': {
+            color: 'fill-disabled-50'
+          },
+          'surface-on': {
+            color: 'fill-surface-50'
+          },
+          'neutral-on': {
+            color: 'fill-neutral-50'
+          },
+          'primary-on': {
+            color: 'fill-primary-50'
+          },
+          'secondary-on': {
+            color: 'fill-secondary-50'
+          },
+          'tertiary-on': {
+            color: 'fill-tertiary-50'
+          },
+          'success-on': {
+            color: 'fill-success-50'
+          },
+          'warning-on': {
+            color: 'fill-warning-50'
+          },
+          'error-on': {
+            color: 'fill-error-50'
+          }
         },
-        primary: {
-          color: 'bg-primary-600'
+        dark: {
+          disabled: {
+            color: 'fill-disabled-600'
+          },
+          surface: {
+            color: 'fill-surface-600'
+          },
+          neutral: {
+            color: 'fill-neutral-600'
+          },
+          primary: {
+            color: 'fill-primary-600'
+          },
+          secondary: {
+            color: 'fill-secondary-600'
+          },
+          tertiary: {
+            color: 'fill-tertiary-600'
+          },
+          success: {
+            color: 'fill-success-600'
+          },
+          warning: {
+            color: 'fill-warning-600'
+          },
+          error: {
+            color: 'fill-error-600'
+          },
+          'disabled-light': {
+            color: 'fill-disabled-400'
+          },
+          'surface-light': {
+            color: 'fill-surface-400'
+          },
+          'neutral-light': {
+            color: 'fill-neutral-400'
+          },
+          'primary-light': {
+            color: 'fill-primary-400'
+          },
+          'secondary-light': {
+            color: 'fill-secondary-400'
+          },
+          'tertiary-light': {
+            color: 'fill-tertiary-400'
+          },
+          'success-light': {
+            color: 'fill-success-400'
+          },
+          'warning-light': {
+            color: 'fill-warning-400'
+          },
+          'error-light': {
+            color: 'fill-error-400'
+          },
+          'disabled-on': {
+            color: 'fill-disabled-100'
+          },
+          'surface-on': {
+            color: 'fill-surface-100'
+          },
+          'neutral-on': {
+            color: 'fill-neutral-100'
+          },
+          'primary-on': {
+            color: 'fill-primary-100'
+          },
+          'secondary-on': {
+            color: 'fill-secondary-100'
+          },
+          'tertiary-on': {
+            color: 'fill-tertiary-100'
+          },
+          'success-on': {
+            color: 'fill-success-100'
+          },
+          'warning-on': {
+            color: 'fill-warning-100'
+          },
+          'error-on': {
+            color: 'fill-error-100'
+          }
+        }
+      },
+      stroke: {
+        light: {
+          disabled: {
+            color: 'stroke-disabled-500'
+          },
+          surface: {
+            color: 'stroke-surface-500'
+          },
+          neutral: {
+            color: 'stroke-neutral-500'
+          },
+          primary: {
+            color: 'stroke-primary-500'
+          },
+          secondary: {
+            color: 'stroke-secondary-500'
+          },
+          tertiary: {
+            color: 'stroke-tertiary-500'
+          },
+          success: {
+            color: 'stroke-success-500'
+          },
+          warning: {
+            color: 'stroke-warning-500'
+          },
+          error: {
+            color: 'stroke-error-500'
+          },
+          'disabled-light': {
+            color: 'stroke-disabled-300'
+          },
+          'surface-light': {
+            color: 'stroke-surface-300'
+          },
+          'neutral-light': {
+            color: 'stroke-neutral-300'
+          },
+          'primary-light': {
+            color: 'stroke-primary-300'
+          },
+          'secondary-light': {
+            color: 'stroke-secondary-300'
+          },
+          'tertiary-light': {
+            color: 'stroke-tertiary-300'
+          },
+          'success-light': {
+            color: 'stroke-success-300'
+          },
+          'warning-light': {
+            color: 'stroke-warning-300'
+          },
+          'error-light': {
+            color: 'stroke-error-300'
+          },
+          'disabled-on': {
+            color: 'stroke-disabled-50'
+          },
+          'surface-on': {
+            color: 'stroke-surface-50'
+          },
+          'neutral-on': {
+            color: 'stroke-neutral-50'
+          },
+          'primary-on': {
+            color: 'stroke-primary-50'
+          },
+          'secondary-on': {
+            color: 'stroke-secondary-50'
+          },
+          'tertiary-on': {
+            color: 'stroke-tertiary-50'
+          },
+          'success-on': {
+            color: 'stroke-success-50'
+          },
+          'warning-on': {
+            color: 'stroke-warning-50'
+          },
+          'error-on': {
+            color: 'stroke-error-50'
+          }
         },
-        secondary: {
-          color: 'bg-secondary-600'
+        dark: {
+          disabled: {
+            color: 'stroke-disabled-600'
+          },
+          surface: {
+            color: 'stroke-surface-600'
+          },
+          neutral: {
+            color: 'stroke-neutral-600'
+          },
+          primary: {
+            color: 'stroke-primary-600'
+          },
+          secondary: {
+            color: 'stroke-secondary-600'
+          },
+          tertiary: {
+            color: 'stroke-tertiary-600'
+          },
+          success: {
+            color: 'stroke-success-600'
+          },
+          warning: {
+            color: 'stroke-warning-600'
+          },
+          error: {
+            color: 'stroke-error-600'
+          },
+          'disabled-light': {
+            color: 'stroke-disabled-400'
+          },
+          'surface-light': {
+            color: 'stroke-surface-400'
+          },
+          'neutral-light': {
+            color: 'stroke-neutral-400'
+          },
+          'primary-light': {
+            color: 'stroke-primary-400'
+          },
+          'secondary-light': {
+            color: 'stroke-secondary-400'
+          },
+          'tertiary-light': {
+            color: 'stroke-tertiary-400'
+          },
+          'success-light': {
+            color: 'stroke-success-400'
+          },
+          'warning-light': {
+            color: 'stroke-warning-400'
+          },
+          'error-light': {
+            color: 'stroke-error-400'
+          },
+          'disabled-on': {
+            color: 'stroke-disabled-100'
+          },
+          'surface-on': {
+            color: 'stroke-surface-100'
+          },
+          'neutral-on': {
+            color: 'stroke-neutral-100'
+          },
+          'primary-on': {
+            color: 'stroke-primary-100'
+          },
+          'secondary-on': {
+            color: 'stroke-secondary-100'
+          },
+          'tertiary-on': {
+            color: 'stroke-tertiary-100'
+          },
+          'success-on': {
+            color: 'stroke-success-100'
+          },
+          'warning-on': {
+            color: 'stroke-warning-100'
+          },
+          'error-on': {
+            color: 'stroke-error-100'
+          }
+        }
+      },
+      ring: {
+        light: {
+          disabled: {
+            color: 'ring-disabled-500'
+          },
+          surface: {
+            color: 'ring-surface-500'
+          },
+          neutral: {
+            color: 'ring-neutral-500'
+          },
+          primary: {
+            color: 'ring-primary-500'
+          },
+          secondary: {
+            color: 'ring-secondary-500'
+          },
+          tertiary: {
+            color: 'ring-tertiary-500'
+          },
+          success: {
+            color: 'ring-success-500'
+          },
+          warning: {
+            color: 'ring-warning-500'
+          },
+          error: {
+            color: 'ring-error-500'
+          },
+          'disabled-light': {
+            color: 'ring-disabled-300'
+          },
+          'surface-light': {
+            color: 'ring-surface-300'
+          },
+          'neutral-light': {
+            color: 'ring-neutral-300'
+          },
+          'primary-light': {
+            color: 'ring-primary-300'
+          },
+          'secondary-light': {
+            color: 'ring-secondary-300'
+          },
+          'tertiary-light': {
+            color: 'ring-tertiary-300'
+          },
+          'success-light': {
+            color: 'ring-success-300'
+          },
+          'warning-light': {
+            color: 'ring-warning-300'
+          },
+          'error-light': {
+            color: 'ring-error-300'
+          },
+          'disabled-on': {
+            color: 'ring-disabled-50'
+          },
+          'surface-on': {
+            color: 'ring-surface-50'
+          },
+          'neutral-on': {
+            color: 'ring-neutral-50'
+          },
+          'primary-on': {
+            color: 'ring-primary-50'
+          },
+          'secondary-on': {
+            color: 'ring-secondary-50'
+          },
+          'tertiary-on': {
+            color: 'ring-tertiary-50'
+          },
+          'success-on': {
+            color: 'ring-success-50'
+          },
+          'warning-on': {
+            color: 'ring-warning-50'
+          },
+          'error-on': {
+            color: 'ring-error-50'
+          }
         },
-        tertiary: {
-          color: 'bg-tertiary-600'
-        },
-        success: {
-          color: 'bg-success-600'
-        },
-        warning: {
-          color: 'bg-warning-600'
-        },
-        error: {
-          color: 'bg-error-600'
-        },
-        'disabled-light': {
-          color: 'bg-disabled-400'
-        },
-        'surface-light': {
-          color: 'bg-surface-400'
-        },
-        'neutral-light': {
-          color: 'bg-neutral-400'
-        },
-        'primary-light': {
-          color: 'bg-primary-400'
-        },
-        'secondary-light': {
-          color: 'bg-secondary-400'
-        },
-        'tertiary-light': {
-          color: 'bg-tertiary-400'
-        },
-        'success-light': {
-          color: 'bg-success-400'
-        },
-        'warning-light': {
-          color: 'bg-warning-400'
-        },
-        'error-light': {
-          color: 'bg-error-400'
-        },
-        'disabled-on': {
-          color: 'bg-disabled-100'
-        },
-        'surface-on': {
-          color: 'bg-surface-100'
-        },
-        'neutral-on': {
-          color: 'bg-neutral-100'
-        },
-        'primary-on': {
-          color: 'bg-primary-100'
-        },
-        'secondary-on': {
-          color: 'bg-secondary-100'
-        },
-        'tertiary-on': {
-          color: 'bg-tertiary-100'
-        },
-        'success-on': {
-          color: 'bg-success-100'
-        },
-        'warning-on': {
-          color: 'bg-warning-100'
-        },
-        'error-on': {
-          color: 'bg-error-100'
+        dark: {
+          disabled: {
+            color: 'ring-disabled-600'
+          },
+          surface: {
+            color: 'ring-surface-600'
+          },
+          neutral: {
+            color: 'ring-neutral-600'
+          },
+          primary: {
+            color: 'ring-primary-600'
+          },
+          secondary: {
+            color: 'ring-secondary-600'
+          },
+          tertiary: {
+            color: 'ring-tertiary-600'
+          },
+          success: {
+            color: 'ring-success-600'
+          },
+          warning: {
+            color: 'ring-warning-600'
+          },
+          error: {
+            color: 'ring-error-600'
+          },
+          'disabled-light': {
+            color: 'ring-disabled-400'
+          },
+          'surface-light': {
+            color: 'ring-surface-400'
+          },
+          'neutral-light': {
+            color: 'ring-neutral-400'
+          },
+          'primary-light': {
+            color: 'ring-primary-400'
+          },
+          'secondary-light': {
+            color: 'ring-secondary-400'
+          },
+          'tertiary-light': {
+            color: 'ring-tertiary-400'
+          },
+          'success-light': {
+            color: 'ring-success-400'
+          },
+          'warning-light': {
+            color: 'ring-warning-400'
+          },
+          'error-light': {
+            color: 'ring-error-400'
+          },
+          'disabled-on': {
+            color: 'ring-disabled-100'
+          },
+          'surface-on': {
+            color: 'ring-surface-100'
+          },
+          'neutral-on': {
+            color: 'ring-neutral-100'
+          },
+          'primary-on': {
+            color: 'ring-primary-100'
+          },
+          'secondary-on': {
+            color: 'ring-secondary-100'
+          },
+          'tertiary-on': {
+            color: 'ring-tertiary-100'
+          },
+          'success-on': {
+            color: 'ring-success-100'
+          },
+          'warning-on': {
+            color: 'ring-warning-100'
+          },
+          'error-on': {
+            color: 'ring-error-100'
+          }
         }
       }
     },
-    border: {
-      light: {
-        disabled: {
-          color: 'border-disabled-500'
+    checked: {
+      bg: {
+        light: {
+          disabled: {
+            color: '[.checked]:bg-disabled-500'
+          },
+          surface: {
+            color: '[.checked]:bg-surface-500'
+          },
+          neutral: {
+            color: '[.checked]:bg-neutral-500'
+          },
+          primary: {
+            color: '[.checked]:bg-primary-500'
+          },
+          secondary: {
+            color: '[.checked]:bg-secondary-500'
+          },
+          tertiary: {
+            color: '[.checked]:bg-tertiary-500'
+          },
+          success: {
+            color: '[.checked]:bg-success-500'
+          },
+          warning: {
+            color: '[.checked]:bg-warning-500'
+          },
+          error: {
+            color: '[.checked]:bg-error-500'
+          },
+          'disabled-light': {
+            color: '[.checked]:bg-disabled-300'
+          },
+          'surface-light': {
+            color: '[.checked]:bg-surface-300'
+          },
+          'neutral-light': {
+            color: '[.checked]:bg-neutral-300'
+          },
+          'primary-light': {
+            color: '[.checked]:bg-primary-300'
+          },
+          'secondary-light': {
+            color: '[.checked]:bg-secondary-300'
+          },
+          'tertiary-light': {
+            color: '[.checked]:bg-tertiary-300'
+          },
+          'success-light': {
+            color: '[.checked]:bg-success-300'
+          },
+          'warning-light': {
+            color: '[.checked]:bg-warning-300'
+          },
+          'error-light': {
+            color: '[.checked]:bg-error-300'
+          },
+          'disabled-on': {
+            color: '[.checked]:bg-disabled-50'
+          },
+          'surface-on': {
+            color: '[.checked]:bg-surface-50'
+          },
+          'neutral-on': {
+            color: '[.checked]:bg-neutral-50'
+          },
+          'primary-on': {
+            color: '[.checked]:bg-primary-50'
+          },
+          'secondary-on': {
+            color: '[.checked]:bg-secondary-50'
+          },
+          'tertiary-on': {
+            color: '[.checked]:bg-tertiary-50'
+          },
+          'success-on': {
+            color: '[.checked]:bg-success-50'
+          },
+          'warning-on': {
+            color: '[.checked]:bg-warning-50'
+          },
+          'error-on': {
+            color: '[.checked]:bg-error-50'
+          }
         },
-        surface: {
-          color: 'border-surface-500'
-        },
-        neutral: {
-          color: 'border-neutral-500'
-        },
-        primary: {
-          color: 'border-primary-500'
-        },
-        secondary: {
-          color: 'border-secondary-500'
-        },
-        tertiary: {
-          color: 'border-tertiary-500'
-        },
-        success: {
-          color: 'border-success-500'
-        },
-        warning: {
-          color: 'border-warning-500'
-        },
-        error: {
-          color: 'border-error-500'
-        },
-        'disabled-light': {
-          color: 'border-disabled-300'
-        },
-        'surface-light': {
-          color: 'border-surface-300'
-        },
-        'neutral-light': {
-          color: 'border-neutral-300'
-        },
-        'primary-light': {
-          color: 'border-primary-300'
-        },
-        'secondary-light': {
-          color: 'border-secondary-300'
-        },
-        'tertiary-light': {
-          color: 'border-tertiary-300'
-        },
-        'success-light': {
-          color: 'border-success-300'
-        },
-        'warning-light': {
-          color: 'border-warning-300'
-        },
-        'error-light': {
-          color: 'border-error-300'
-        },
-        'disabled-on': {
-          color: 'border-disabled-50'
-        },
-        'surface-on': {
-          color: 'border-surface-50'
-        },
-        'neutral-on': {
-          color: 'border-neutral-50'
-        },
-        'primary-on': {
-          color: 'border-primary-50'
-        },
-        'secondary-on': {
-          color: 'border-secondary-50'
-        },
-        'tertiary-on': {
-          color: 'border-tertiary-50'
-        },
-        'success-on': {
-          color: 'border-success-50'
-        },
-        'warning-on': {
-          color: 'border-warning-50'
-        },
-        'error-on': {
-          color: 'border-error-50'
+        dark: {
+          disabled: {
+            color: '[.checked]:bg-disabled-600'
+          },
+          surface: {
+            color: '[.checked]:bg-surface-600'
+          },
+          neutral: {
+            color: '[.checked]:bg-neutral-600'
+          },
+          primary: {
+            color: '[.checked]:bg-primary-600'
+          },
+          secondary: {
+            color: '[.checked]:bg-secondary-600'
+          },
+          tertiary: {
+            color: '[.checked]:bg-tertiary-600'
+          },
+          success: {
+            color: '[.checked]:bg-success-600'
+          },
+          warning: {
+            color: '[.checked]:bg-warning-600'
+          },
+          error: {
+            color: '[.checked]:bg-error-600'
+          },
+          'disabled-light': {
+            color: '[.checked]:bg-disabled-400'
+          },
+          'surface-light': {
+            color: '[.checked]:bg-surface-400'
+          },
+          'neutral-light': {
+            color: '[.checked]:bg-neutral-400'
+          },
+          'primary-light': {
+            color: '[.checked]:bg-primary-400'
+          },
+          'secondary-light': {
+            color: '[.checked]:bg-secondary-400'
+          },
+          'tertiary-light': {
+            color: '[.checked]:bg-tertiary-400'
+          },
+          'success-light': {
+            color: '[.checked]:bg-success-400'
+          },
+          'warning-light': {
+            color: '[.checked]:bg-warning-400'
+          },
+          'error-light': {
+            color: '[.checked]:bg-error-400'
+          },
+          'disabled-on': {
+            color: '[.checked]:bg-disabled-100'
+          },
+          'surface-on': {
+            color: '[.checked]:bg-surface-100'
+          },
+          'neutral-on': {
+            color: '[.checked]:bg-neutral-100'
+          },
+          'primary-on': {
+            color: '[.checked]:bg-primary-100'
+          },
+          'secondary-on': {
+            color: '[.checked]:bg-secondary-100'
+          },
+          'tertiary-on': {
+            color: '[.checked]:bg-tertiary-100'
+          },
+          'success-on': {
+            color: '[.checked]:bg-success-100'
+          },
+          'warning-on': {
+            color: '[.checked]:bg-warning-100'
+          },
+          'error-on': {
+            color: '[.checked]:bg-error-100'
+          }
         }
       },
-      dark: {
-        disabled: {
-          color: 'border-disabled-600'
-        },
-        surface: {
-          color: 'border-surface-600'
-        },
-        neutral: {
-          color: 'border-neutral-600'
-        },
-        primary: {
-          color: 'border-primary-600'
-        },
-        secondary: {
-          color: 'border-secondary-600'
-        },
-        tertiary: {
-          color: 'border-tertiary-600'
-        },
-        success: {
-          color: 'border-success-600'
-        },
-        warning: {
-          color: 'border-warning-600'
-        },
-        error: {
-          color: 'border-error-600'
-        },
-        'disabled-light': {
-          color: 'border-disabled-400'
-        },
-        'surface-light': {
-          color: 'border-surface-400'
-        },
-        'neutral-light': {
-          color: 'border-neutral-400'
-        },
-        'primary-light': {
-          color: 'border-primary-400'
-        },
-        'secondary-light': {
-          color: 'border-secondary-400'
-        },
-        'tertiary-light': {
-          color: 'border-tertiary-400'
-        },
-        'success-light': {
-          color: 'border-success-400'
-        },
-        'warning-light': {
-          color: 'border-warning-400'
-        },
-        'error-light': {
-          color: 'border-error-400'
-        },
-        'disabled-on': {
-          color: 'border-disabled-100'
-        },
-        'surface-on': {
-          color: 'border-surface-100'
-        },
-        'neutral-on': {
-          color: 'border-neutral-100'
-        },
-        'primary-on': {
-          color: 'border-primary-100'
-        },
-        'secondary-on': {
-          color: 'border-secondary-100'
-        },
-        'tertiary-on': {
-          color: 'border-tertiary-100'
-        },
-        'success-on': {
-          color: 'border-success-100'
-        },
-        'warning-on': {
-          color: 'border-warning-100'
-        },
-        'error-on': {
-          color: 'border-error-100'
-        }
-      }
-    },
-    text: {
-      light: {
-        disabled: {
-          color: 'text-disabled-500'
-        },
-        surface: {
-          color: 'text-surface-500'
-        },
-        neutral: {
-          color: 'text-neutral-500'
-        },
-        primary: {
-          color: 'text-primary-500'
-        },
-        secondary: {
-          color: 'text-secondary-500'
-        },
-        tertiary: {
-          color: 'text-tertiary-500'
-        },
-        success: {
-          color: 'text-success-500'
-        },
-        warning: {
-          color: 'text-warning-500'
-        },
-        error: {
-          color: 'text-error-500'
-        },
-        'disabled-light': {
-          color: 'text-disabled-300'
-        },
-        'surface-light': {
-          color: 'text-surface-300'
-        },
-        'neutral-light': {
-          color: 'text-neutral-300'
-        },
-        'primary-light': {
-          color: 'text-primary-300'
-        },
-        'secondary-light': {
-          color: 'text-secondary-300'
-        },
-        'tertiary-light': {
-          color: 'text-tertiary-300'
-        },
-        'success-light': {
-          color: 'text-success-300'
-        },
-        'warning-light': {
-          color: 'text-warning-300'
-        },
-        'error-light': {
-          color: 'text-error-300'
-        },
-        'disabled-on': {
-          color: 'text-disabled-50'
-        },
-        'surface-on': {
-          color: 'text-surface-50'
-        },
-        'neutral-on': {
-          color: 'text-neutral-50'
-        },
-        'primary-on': {
-          color: 'text-primary-50'
-        },
-        'secondary-on': {
-          color: 'text-secondary-50'
-        },
-        'tertiary-on': {
-          color: 'text-tertiary-50'
-        },
-        'success-on': {
-          color: 'text-success-50'
-        },
-        'warning-on': {
-          color: 'text-warning-50'
-        },
-        'error-on': {
-          color: 'text-error-50'
-        }
-      },
-      dark: {
-        disabled: {
-          color: 'text-disabled-600'
-        },
-        surface: {
-          color: 'text-surface-600'
-        },
-        neutral: {
-          color: 'text-neutral-600'
-        },
-        primary: {
-          color: 'text-primary-600'
-        },
-        secondary: {
-          color: 'text-secondary-600'
-        },
-        tertiary: {
-          color: 'text-tertiary-600'
-        },
-        success: {
-          color: 'text-success-600'
-        },
-        warning: {
-          color: 'text-warning-600'
-        },
-        error: {
-          color: 'text-error-600'
-        },
-        'disabled-light': {
-          color: 'text-disabled-400'
-        },
-        'surface-light': {
-          color: 'text-surface-400'
-        },
-        'neutral-light': {
-          color: 'text-neutral-400'
-        },
-        'primary-light': {
-          color: 'text-primary-400'
-        },
-        'secondary-light': {
-          color: 'text-secondary-400'
-        },
-        'tertiary-light': {
-          color: 'text-tertiary-400'
-        },
-        'success-light': {
-          color: 'text-success-400'
-        },
-        'warning-light': {
-          color: 'text-warning-400'
-        },
-        'error-light': {
-          color: 'text-error-400'
-        },
-        'disabled-on': {
-          color: 'text-disabled-100'
-        },
-        'surface-on': {
-          color: 'text-surface-100'
-        },
-        'neutral-on': {
-          color: 'text-neutral-100'
-        },
-        'primary-on': {
-          color: 'text-primary-100'
-        },
-        'secondary-on': {
-          color: 'text-secondary-100'
-        },
-        'tertiary-on': {
-          color: 'text-tertiary-100'
-        },
-        'success-on': {
-          color: 'text-success-100'
-        },
-        'warning-on': {
-          color: 'text-warning-100'
-        },
-        'error-on': {
-          color: 'text-error-100'
-        }
-      }
-    },
-    fill: {
-      light: {
-        disabled: {
-          color: 'fill-disabled-500'
-        },
-        surface: {
-          color: 'fill-surface-500'
-        },
-        neutral: {
-          color: 'fill-neutral-500'
-        },
-        primary: {
-          color: 'fill-primary-500'
-        },
-        secondary: {
-          color: 'fill-secondary-500'
-        },
-        tertiary: {
-          color: 'fill-tertiary-500'
-        },
-        success: {
-          color: 'fill-success-500'
-        },
-        warning: {
-          color: 'fill-warning-500'
-        },
-        error: {
-          color: 'fill-error-500'
-        },
-        'disabled-light': {
-          color: 'fill-disabled-300'
-        },
-        'surface-light': {
-          color: 'fill-surface-300'
-        },
-        'neutral-light': {
-          color: 'fill-neutral-300'
-        },
-        'primary-light': {
-          color: 'fill-primary-300'
-        },
-        'secondary-light': {
-          color: 'fill-secondary-300'
-        },
-        'tertiary-light': {
-          color: 'fill-tertiary-300'
-        },
-        'success-light': {
-          color: 'fill-success-300'
-        },
-        'warning-light': {
-          color: 'fill-warning-300'
-        },
-        'error-light': {
-          color: 'fill-error-300'
-        },
-        'disabled-on': {
-          color: 'fill-disabled-50'
-        },
-        'surface-on': {
-          color: 'fill-surface-50'
-        },
-        'neutral-on': {
-          color: 'fill-neutral-50'
-        },
-        'primary-on': {
-          color: 'fill-primary-50'
-        },
-        'secondary-on': {
-          color: 'fill-secondary-50'
-        },
-        'tertiary-on': {
-          color: 'fill-tertiary-50'
-        },
-        'success-on': {
-          color: 'fill-success-50'
-        },
-        'warning-on': {
-          color: 'fill-warning-50'
-        },
-        'error-on': {
-          color: 'fill-error-50'
+      border: {
+        light: {
+          disabled: {
+            color: '[.checked]:border-disabled-500'
+          },
+          surface: {
+            color: '[.checked]:border-surface-500'
+          },
+          neutral: {
+            color: '[.checked]:border-neutral-500'
+          },
+          primary: {
+            color: '[.checked]:border-primary-500'
+          },
+          secondary: {
+            color: '[.checked]:border-secondary-500'
+          },
+          tertiary: {
+            color: '[.checked]:border-tertiary-500'
+          },
+          success: {
+            color: '[.checked]:border-success-500'
+          },
+          warning: {
+            color: '[.checked]:border-warning-500'
+          },
+          error: {
+            color: '[.checked]:border-error-500'
+          },
+          'disabled-light': {
+            color: '[.checked]:border-disabled-300'
+          },
+          'surface-light': {
+            color: '[.checked]:border-surface-300'
+          },
+          'neutral-light': {
+            color: '[.checked]:border-neutral-300'
+          },
+          'primary-light': {
+            color: '[.checked]:border-primary-300'
+          },
+          'secondary-light': {
+            color: '[.checked]:border-secondary-300'
+          },
+          'tertiary-light': {
+            color: '[.checked]:border-tertiary-300'
+          },
+          'success-light': {
+            color: '[.checked]:border-success-300'
+          },
+          'warning-light': {
+            color: '[.checked]:border-warning-300'
+          },
+          'error-light': {
+            color: '[.checked]:border-error-300'
+          },
+          'disabled-on': {
+            color: '[.checked]:border-disabled-50'
+          },
+          'surface-on': {
+            color: '[.checked]:border-surface-50'
+          },
+          'neutral-on': {
+            color: '[.checked]:border-neutral-50'
+          },
+          'primary-on': {
+            color: '[.checked]:border-primary-50'
+          },
+          'secondary-on': {
+            color: '[.checked]:border-secondary-50'
+          },
+          'tertiary-on': {
+            color: '[.checked]:border-tertiary-50'
+          },
+          'success-on': {
+            color: '[.checked]:border-success-50'
+          },
+          'warning-on': {
+            color: '[.checked]:border-warning-50'
+          },
+          'error-on': {
+            color: '[.checked]:border-error-50'
+          }
+        },
+        dark: {
+          disabled: {
+            color: '[.checked]:border-disabled-600'
+          },
+          surface: {
+            color: '[.checked]:border-surface-600'
+          },
+          neutral: {
+            color: '[.checked]:border-neutral-600'
+          },
+          primary: {
+            color: '[.checked]:border-primary-600'
+          },
+          secondary: {
+            color: '[.checked]:border-secondary-600'
+          },
+          tertiary: {
+            color: '[.checked]:border-tertiary-600'
+          },
+          success: {
+            color: '[.checked]:border-success-600'
+          },
+          warning: {
+            color: '[.checked]:border-warning-600'
+          },
+          error: {
+            color: '[.checked]:border-error-600'
+          },
+          'disabled-light': {
+            color: '[.checked]:border-disabled-400'
+          },
+          'surface-light': {
+            color: '[.checked]:border-surface-400'
+          },
+          'neutral-light': {
+            color: '[.checked]:border-neutral-400'
+          },
+          'primary-light': {
+            color: '[.checked]:border-primary-400'
+          },
+          'secondary-light': {
+            color: '[.checked]:border-secondary-400'
+          },
+          'tertiary-light': {
+            color: '[.checked]:border-tertiary-400'
+          },
+          'success-light': {
+            color: '[.checked]:border-success-400'
+          },
+          'warning-light': {
+            color: '[.checked]:border-warning-400'
+          },
+          'error-light': {
+            color: '[.checked]:border-error-400'
+          },
+          'disabled-on': {
+            color: '[.checked]:border-disabled-100'
+          },
+          'surface-on': {
+            color: '[.checked]:border-surface-100'
+          },
+          'neutral-on': {
+            color: '[.checked]:border-neutral-100'
+          },
+          'primary-on': {
+            color: '[.checked]:border-primary-100'
+          },
+          'secondary-on': {
+            color: '[.checked]:border-secondary-100'
+          },
+          'tertiary-on': {
+            color: '[.checked]:border-tertiary-100'
+          },
+          'success-on': {
+            color: '[.checked]:border-success-100'
+          },
+          'warning-on': {
+            color: '[.checked]:border-warning-100'
+          },
+          'error-on': {
+            color: '[.checked]:border-error-100'
+          }
         }
       },
-      dark: {
-        disabled: {
-          color: 'fill-disabled-600'
-        },
-        surface: {
-          color: 'fill-surface-600'
-        },
-        neutral: {
-          color: 'fill-neutral-600'
-        },
-        primary: {
-          color: 'fill-primary-600'
-        },
-        secondary: {
-          color: 'fill-secondary-600'
-        },
-        tertiary: {
-          color: 'fill-tertiary-600'
-        },
-        success: {
-          color: 'fill-success-600'
-        },
-        warning: {
-          color: 'fill-warning-600'
-        },
-        error: {
-          color: 'fill-error-600'
-        },
-        'disabled-light': {
-          color: 'fill-disabled-400'
-        },
-        'surface-light': {
-          color: 'fill-surface-400'
-        },
-        'neutral-light': {
-          color: 'fill-neutral-400'
-        },
-        'primary-light': {
-          color: 'fill-primary-400'
-        },
-        'secondary-light': {
-          color: 'fill-secondary-400'
-        },
-        'tertiary-light': {
-          color: 'fill-tertiary-400'
-        },
-        'success-light': {
-          color: 'fill-success-400'
-        },
-        'warning-light': {
-          color: 'fill-warning-400'
-        },
-        'error-light': {
-          color: 'fill-error-400'
-        },
-        'disabled-on': {
-          color: 'fill-disabled-100'
-        },
-        'surface-on': {
-          color: 'fill-surface-100'
-        },
-        'neutral-on': {
-          color: 'fill-neutral-100'
-        },
-        'primary-on': {
-          color: 'fill-primary-100'
-        },
-        'secondary-on': {
-          color: 'fill-secondary-100'
-        },
-        'tertiary-on': {
-          color: 'fill-tertiary-100'
-        },
-        'success-on': {
-          color: 'fill-success-100'
-        },
-        'warning-on': {
-          color: 'fill-warning-100'
-        },
-        'error-on': {
-          color: 'fill-error-100'
-        }
-      }
-    },
-    stroke: {
-      light: {
-        disabled: {
-          color: 'stroke-disabled-500'
-        },
-        surface: {
-          color: 'stroke-surface-500'
-        },
-        neutral: {
-          color: 'stroke-neutral-500'
-        },
-        primary: {
-          color: 'stroke-primary-500'
-        },
-        secondary: {
-          color: 'stroke-secondary-500'
-        },
-        tertiary: {
-          color: 'stroke-tertiary-500'
-        },
-        success: {
-          color: 'stroke-success-500'
-        },
-        warning: {
-          color: 'stroke-warning-500'
-        },
-        error: {
-          color: 'stroke-error-500'
-        },
-        'disabled-light': {
-          color: 'stroke-disabled-300'
-        },
-        'surface-light': {
-          color: 'stroke-surface-300'
-        },
-        'neutral-light': {
-          color: 'stroke-neutral-300'
-        },
-        'primary-light': {
-          color: 'stroke-primary-300'
-        },
-        'secondary-light': {
-          color: 'stroke-secondary-300'
-        },
-        'tertiary-light': {
-          color: 'stroke-tertiary-300'
-        },
-        'success-light': {
-          color: 'stroke-success-300'
-        },
-        'warning-light': {
-          color: 'stroke-warning-300'
-        },
-        'error-light': {
-          color: 'stroke-error-300'
-        },
-        'disabled-on': {
-          color: 'stroke-disabled-50'
-        },
-        'surface-on': {
-          color: 'stroke-surface-50'
-        },
-        'neutral-on': {
-          color: 'stroke-neutral-50'
-        },
-        'primary-on': {
-          color: 'stroke-primary-50'
-        },
-        'secondary-on': {
-          color: 'stroke-secondary-50'
-        },
-        'tertiary-on': {
-          color: 'stroke-tertiary-50'
-        },
-        'success-on': {
-          color: 'stroke-success-50'
-        },
-        'warning-on': {
-          color: 'stroke-warning-50'
-        },
-        'error-on': {
-          color: 'stroke-error-50'
-        }
-      },
-      dark: {
-        disabled: {
-          color: 'stroke-disabled-600'
-        },
-        surface: {
-          color: 'stroke-surface-600'
-        },
-        neutral: {
-          color: 'stroke-neutral-600'
-        },
-        primary: {
-          color: 'stroke-primary-600'
-        },
-        secondary: {
-          color: 'stroke-secondary-600'
-        },
-        tertiary: {
-          color: 'stroke-tertiary-600'
-        },
-        success: {
-          color: 'stroke-success-600'
-        },
-        warning: {
-          color: 'stroke-warning-600'
-        },
-        error: {
-          color: 'stroke-error-600'
-        },
-        'disabled-light': {
-          color: 'stroke-disabled-400'
-        },
-        'surface-light': {
-          color: 'stroke-surface-400'
-        },
-        'neutral-light': {
-          color: 'stroke-neutral-400'
-        },
-        'primary-light': {
-          color: 'stroke-primary-400'
-        },
-        'secondary-light': {
-          color: 'stroke-secondary-400'
-        },
-        'tertiary-light': {
-          color: 'stroke-tertiary-400'
-        },
-        'success-light': {
-          color: 'stroke-success-400'
-        },
-        'warning-light': {
-          color: 'stroke-warning-400'
-        },
-        'error-light': {
-          color: 'stroke-error-400'
-        },
-        'disabled-on': {
-          color: 'stroke-disabled-100'
-        },
-        'surface-on': {
-          color: 'stroke-surface-100'
-        },
-        'neutral-on': {
-          color: 'stroke-neutral-100'
-        },
-        'primary-on': {
-          color: 'stroke-primary-100'
-        },
-        'secondary-on': {
-          color: 'stroke-secondary-100'
-        },
-        'tertiary-on': {
-          color: 'stroke-tertiary-100'
-        },
-        'success-on': {
-          color: 'stroke-success-100'
-        },
-        'warning-on': {
-          color: 'stroke-warning-100'
-        },
-        'error-on': {
-          color: 'stroke-error-100'
-        }
-      }
-    },
-    ring: {
-      light: {
-        disabled: {
-          color: 'ring-disabled-500'
-        },
-        surface: {
-          color: 'ring-surface-500'
-        },
-        neutral: {
-          color: 'ring-neutral-500'
-        },
-        primary: {
-          color: 'ring-primary-500'
-        },
-        secondary: {
-          color: 'ring-secondary-500'
-        },
-        tertiary: {
-          color: 'ring-tertiary-500'
-        },
-        success: {
-          color: 'ring-success-500'
-        },
-        warning: {
-          color: 'ring-warning-500'
-        },
-        error: {
-          color: 'ring-error-500'
-        },
-        'disabled-light': {
-          color: 'ring-disabled-300'
-        },
-        'surface-light': {
-          color: 'ring-surface-300'
-        },
-        'neutral-light': {
-          color: 'ring-neutral-300'
-        },
-        'primary-light': {
-          color: 'ring-primary-300'
-        },
-        'secondary-light': {
-          color: 'ring-secondary-300'
-        },
-        'tertiary-light': {
-          color: 'ring-tertiary-300'
-        },
-        'success-light': {
-          color: 'ring-success-300'
-        },
-        'warning-light': {
-          color: 'ring-warning-300'
-        },
-        'error-light': {
-          color: 'ring-error-300'
-        },
-        'disabled-on': {
-          color: 'ring-disabled-50'
-        },
-        'surface-on': {
-          color: 'ring-surface-50'
-        },
-        'neutral-on': {
-          color: 'ring-neutral-50'
-        },
-        'primary-on': {
-          color: 'ring-primary-50'
-        },
-        'secondary-on': {
-          color: 'ring-secondary-50'
-        },
-        'tertiary-on': {
-          color: 'ring-tertiary-50'
-        },
-        'success-on': {
-          color: 'ring-success-50'
-        },
-        'warning-on': {
-          color: 'ring-warning-50'
-        },
-        'error-on': {
-          color: 'ring-error-50'
+      text: {
+        light: {
+          disabled: {
+            color: '[.checked]:text-disabled-500'
+          },
+          surface: {
+            color: '[.checked]:text-surface-500'
+          },
+          neutral: {
+            color: '[.checked]:text-neutral-500'
+          },
+          primary: {
+            color: '[.checked]:text-primary-500'
+          },
+          secondary: {
+            color: '[.checked]:text-secondary-500'
+          },
+          tertiary: {
+            color: '[.checked]:text-tertiary-500'
+          },
+          success: {
+            color: '[.checked]:text-success-500'
+          },
+          warning: {
+            color: '[.checked]:text-warning-500'
+          },
+          error: {
+            color: '[.checked]:text-error-500'
+          },
+          'disabled-light': {
+            color: '[.checked]:text-disabled-300'
+          },
+          'surface-light': {
+            color: '[.checked]:text-surface-300'
+          },
+          'neutral-light': {
+            color: '[.checked]:text-neutral-300'
+          },
+          'primary-light': {
+            color: '[.checked]:text-primary-300'
+          },
+          'secondary-light': {
+            color: '[.checked]:text-secondary-300'
+          },
+          'tertiary-light': {
+            color: '[.checked]:text-tertiary-300'
+          },
+          'success-light': {
+            color: '[.checked]:text-success-300'
+          },
+          'warning-light': {
+            color: '[.checked]:text-warning-300'
+          },
+          'error-light': {
+            color: '[.checked]:text-error-300'
+          },
+          'disabled-on': {
+            color: '[.checked]:text-disabled-50'
+          },
+          'surface-on': {
+            color: '[.checked]:text-surface-50'
+          },
+          'neutral-on': {
+            color: '[.checked]:text-neutral-50'
+          },
+          'primary-on': {
+            color: '[.checked]:text-primary-50'
+          },
+          'secondary-on': {
+            color: '[.checked]:text-secondary-50'
+          },
+          'tertiary-on': {
+            color: '[.checked]:text-tertiary-50'
+          },
+          'success-on': {
+            color: '[.checked]:text-success-50'
+          },
+          'warning-on': {
+            color: '[.checked]:text-warning-50'
+          },
+          'error-on': {
+            color: '[.checked]:text-error-50'
+          }
+        },
+        dark: {
+          disabled: {
+            color: '[.checked]:text-disabled-600'
+          },
+          surface: {
+            color: '[.checked]:text-surface-600'
+          },
+          neutral: {
+            color: '[.checked]:text-neutral-600'
+          },
+          primary: {
+            color: '[.checked]:text-primary-600'
+          },
+          secondary: {
+            color: '[.checked]:text-secondary-600'
+          },
+          tertiary: {
+            color: '[.checked]:text-tertiary-600'
+          },
+          success: {
+            color: '[.checked]:text-success-600'
+          },
+          warning: {
+            color: '[.checked]:text-warning-600'
+          },
+          error: {
+            color: '[.checked]:text-error-600'
+          },
+          'disabled-light': {
+            color: '[.checked]:text-disabled-400'
+          },
+          'surface-light': {
+            color: '[.checked]:text-surface-400'
+          },
+          'neutral-light': {
+            color: '[.checked]:text-neutral-400'
+          },
+          'primary-light': {
+            color: '[.checked]:text-primary-400'
+          },
+          'secondary-light': {
+            color: '[.checked]:text-secondary-400'
+          },
+          'tertiary-light': {
+            color: '[.checked]:text-tertiary-400'
+          },
+          'success-light': {
+            color: '[.checked]:text-success-400'
+          },
+          'warning-light': {
+            color: '[.checked]:text-warning-400'
+          },
+          'error-light': {
+            color: '[.checked]:text-error-400'
+          },
+          'disabled-on': {
+            color: '[.checked]:text-disabled-100'
+          },
+          'surface-on': {
+            color: '[.checked]:text-surface-100'
+          },
+          'neutral-on': {
+            color: '[.checked]:text-neutral-100'
+          },
+          'primary-on': {
+            color: '[.checked]:text-primary-100'
+          },
+          'secondary-on': {
+            color: '[.checked]:text-secondary-100'
+          },
+          'tertiary-on': {
+            color: '[.checked]:text-tertiary-100'
+          },
+          'success-on': {
+            color: '[.checked]:text-success-100'
+          },
+          'warning-on': {
+            color: '[.checked]:text-warning-100'
+          },
+          'error-on': {
+            color: '[.checked]:text-error-100'
+          }
         }
       },
-      dark: {
-        disabled: {
-          color: 'ring-disabled-600'
+      fill: {
+        light: {
+          disabled: {
+            color: '[.checked]:fill-disabled-500'
+          },
+          surface: {
+            color: '[.checked]:fill-surface-500'
+          },
+          neutral: {
+            color: '[.checked]:fill-neutral-500'
+          },
+          primary: {
+            color: '[.checked]:fill-primary-500'
+          },
+          secondary: {
+            color: '[.checked]:fill-secondary-500'
+          },
+          tertiary: {
+            color: '[.checked]:fill-tertiary-500'
+          },
+          success: {
+            color: '[.checked]:fill-success-500'
+          },
+          warning: {
+            color: '[.checked]:fill-warning-500'
+          },
+          error: {
+            color: '[.checked]:fill-error-500'
+          },
+          'disabled-light': {
+            color: '[.checked]:fill-disabled-300'
+          },
+          'surface-light': {
+            color: '[.checked]:fill-surface-300'
+          },
+          'neutral-light': {
+            color: '[.checked]:fill-neutral-300'
+          },
+          'primary-light': {
+            color: '[.checked]:fill-primary-300'
+          },
+          'secondary-light': {
+            color: '[.checked]:fill-secondary-300'
+          },
+          'tertiary-light': {
+            color: '[.checked]:fill-tertiary-300'
+          },
+          'success-light': {
+            color: '[.checked]:fill-success-300'
+          },
+          'warning-light': {
+            color: '[.checked]:fill-warning-300'
+          },
+          'error-light': {
+            color: '[.checked]:fill-error-300'
+          },
+          'disabled-on': {
+            color: '[.checked]:fill-disabled-50'
+          },
+          'surface-on': {
+            color: '[.checked]:fill-surface-50'
+          },
+          'neutral-on': {
+            color: '[.checked]:fill-neutral-50'
+          },
+          'primary-on': {
+            color: '[.checked]:fill-primary-50'
+          },
+          'secondary-on': {
+            color: '[.checked]:fill-secondary-50'
+          },
+          'tertiary-on': {
+            color: '[.checked]:fill-tertiary-50'
+          },
+          'success-on': {
+            color: '[.checked]:fill-success-50'
+          },
+          'warning-on': {
+            color: '[.checked]:fill-warning-50'
+          },
+          'error-on': {
+            color: '[.checked]:fill-error-50'
+          }
         },
-        surface: {
-          color: 'ring-surface-600'
+        dark: {
+          disabled: {
+            color: '[.checked]:fill-disabled-600'
+          },
+          surface: {
+            color: '[.checked]:fill-surface-600'
+          },
+          neutral: {
+            color: '[.checked]:fill-neutral-600'
+          },
+          primary: {
+            color: '[.checked]:fill-primary-600'
+          },
+          secondary: {
+            color: '[.checked]:fill-secondary-600'
+          },
+          tertiary: {
+            color: '[.checked]:fill-tertiary-600'
+          },
+          success: {
+            color: '[.checked]:fill-success-600'
+          },
+          warning: {
+            color: '[.checked]:fill-warning-600'
+          },
+          error: {
+            color: '[.checked]:fill-error-600'
+          },
+          'disabled-light': {
+            color: '[.checked]:fill-disabled-400'
+          },
+          'surface-light': {
+            color: '[.checked]:fill-surface-400'
+          },
+          'neutral-light': {
+            color: '[.checked]:fill-neutral-400'
+          },
+          'primary-light': {
+            color: '[.checked]:fill-primary-400'
+          },
+          'secondary-light': {
+            color: '[.checked]:fill-secondary-400'
+          },
+          'tertiary-light': {
+            color: '[.checked]:fill-tertiary-400'
+          },
+          'success-light': {
+            color: '[.checked]:fill-success-400'
+          },
+          'warning-light': {
+            color: '[.checked]:fill-warning-400'
+          },
+          'error-light': {
+            color: '[.checked]:fill-error-400'
+          },
+          'disabled-on': {
+            color: '[.checked]:fill-disabled-100'
+          },
+          'surface-on': {
+            color: '[.checked]:fill-surface-100'
+          },
+          'neutral-on': {
+            color: '[.checked]:fill-neutral-100'
+          },
+          'primary-on': {
+            color: '[.checked]:fill-primary-100'
+          },
+          'secondary-on': {
+            color: '[.checked]:fill-secondary-100'
+          },
+          'tertiary-on': {
+            color: '[.checked]:fill-tertiary-100'
+          },
+          'success-on': {
+            color: '[.checked]:fill-success-100'
+          },
+          'warning-on': {
+            color: '[.checked]:fill-warning-100'
+          },
+          'error-on': {
+            color: '[.checked]:fill-error-100'
+          }
+        }
+      },
+      ring: {
+        light: {
+          disabled: {
+            color: '[.checked]:ring-disabled-500'
+          },
+          surface: {
+            color: '[.checked]:ring-surface-500'
+          },
+          neutral: {
+            color: '[.checked]:ring-neutral-500'
+          },
+          primary: {
+            color: '[.checked]:ring-primary-500'
+          },
+          secondary: {
+            color: '[.checked]:ring-secondary-500'
+          },
+          tertiary: {
+            color: '[.checked]:ring-tertiary-500'
+          },
+          success: {
+            color: '[.checked]:ring-success-500'
+          },
+          warning: {
+            color: '[.checked]:ring-warning-500'
+          },
+          error: {
+            color: '[.checked]:ring-error-500'
+          },
+          'disabled-light': {
+            color: '[.checked]:ring-disabled-300'
+          },
+          'surface-light': {
+            color: '[.checked]:ring-surface-300'
+          },
+          'neutral-light': {
+            color: '[.checked]:ring-neutral-300'
+          },
+          'primary-light': {
+            color: '[.checked]:ring-primary-300'
+          },
+          'secondary-light': {
+            color: '[.checked]:ring-secondary-300'
+          },
+          'tertiary-light': {
+            color: '[.checked]:ring-tertiary-300'
+          },
+          'success-light': {
+            color: '[.checked]:ring-success-300'
+          },
+          'warning-light': {
+            color: '[.checked]:ring-warning-300'
+          },
+          'error-light': {
+            color: '[.checked]:ring-error-300'
+          },
+          'disabled-on': {
+            color: '[.checked]:ring-disabled-50'
+          },
+          'surface-on': {
+            color: '[.checked]:ring-surface-50'
+          },
+          'neutral-on': {
+            color: '[.checked]:ring-neutral-50'
+          },
+          'primary-on': {
+            color: '[.checked]:ring-primary-50'
+          },
+          'secondary-on': {
+            color: '[.checked]:ring-secondary-50'
+          },
+          'tertiary-on': {
+            color: '[.checked]:ring-tertiary-50'
+          },
+          'success-on': {
+            color: '[.checked]:ring-success-50'
+          },
+          'warning-on': {
+            color: '[.checked]:ring-warning-50'
+          },
+          'error-on': {
+            color: '[.checked]:ring-error-50'
+          }
         },
-        neutral: {
-          color: 'ring-neutral-600'
-        },
-        primary: {
-          color: 'ring-primary-600'
-        },
-        secondary: {
-          color: 'ring-secondary-600'
-        },
-        tertiary: {
-          color: 'ring-tertiary-600'
-        },
-        success: {
-          color: 'ring-success-600'
-        },
-        warning: {
-          color: 'ring-warning-600'
-        },
-        error: {
-          color: 'ring-error-600'
-        },
-        'disabled-light': {
-          color: 'ring-disabled-400'
-        },
-        'surface-light': {
-          color: 'ring-surface-400'
-        },
-        'neutral-light': {
-          color: 'ring-neutral-400'
-        },
-        'primary-light': {
-          color: 'ring-primary-400'
-        },
-        'secondary-light': {
-          color: 'ring-secondary-400'
-        },
-        'tertiary-light': {
-          color: 'ring-tertiary-400'
-        },
-        'success-light': {
-          color: 'ring-success-400'
-        },
-        'warning-light': {
-          color: 'ring-warning-400'
-        },
-        'error-light': {
-          color: 'ring-error-400'
-        },
-        'disabled-on': {
-          color: 'ring-disabled-100'
-        },
-        'surface-on': {
-          color: 'ring-surface-100'
-        },
-        'neutral-on': {
-          color: 'ring-neutral-100'
-        },
-        'primary-on': {
-          color: 'ring-primary-100'
-        },
-        'secondary-on': {
-          color: 'ring-secondary-100'
-        },
-        'tertiary-on': {
-          color: 'ring-tertiary-100'
-        },
-        'success-on': {
-          color: 'ring-success-100'
-        },
-        'warning-on': {
-          color: 'ring-warning-100'
-        },
-        'error-on': {
-          color: 'ring-error-100'
+        dark: {
+          disabled: {
+            color: '[.checked]:ring-disabled-600'
+          },
+          surface: {
+            color: '[.checked]:ring-surface-600'
+          },
+          neutral: {
+            color: '[.checked]:ring-neutral-600'
+          },
+          primary: {
+            color: '[.checked]:ring-primary-600'
+          },
+          secondary: {
+            color: '[.checked]:ring-secondary-600'
+          },
+          tertiary: {
+            color: '[.checked]:ring-tertiary-600'
+          },
+          success: {
+            color: '[.checked]:ring-success-600'
+          },
+          warning: {
+            color: '[.checked]:ring-warning-600'
+          },
+          error: {
+            color: '[.checked]:ring-error-600'
+          },
+          'disabled-light': {
+            color: '[.checked]:ring-disabled-400'
+          },
+          'surface-light': {
+            color: '[.checked]:ring-surface-400'
+          },
+          'neutral-light': {
+            color: '[.checked]:ring-neutral-400'
+          },
+          'primary-light': {
+            color: '[.checked]:ring-primary-400'
+          },
+          'secondary-light': {
+            color: '[.checked]:ring-secondary-400'
+          },
+          'tertiary-light': {
+            color: '[.checked]:ring-tertiary-400'
+          },
+          'success-light': {
+            color: '[.checked]:ring-success-400'
+          },
+          'warning-light': {
+            color: '[.checked]:ring-warning-400'
+          },
+          'error-light': {
+            color: '[.checked]:ring-error-400'
+          },
+          'disabled-on': {
+            color: '[.checked]:ring-disabled-100'
+          },
+          'surface-on': {
+            color: '[.checked]:ring-surface-100'
+          },
+          'neutral-on': {
+            color: '[.checked]:ring-neutral-100'
+          },
+          'primary-on': {
+            color: '[.checked]:ring-primary-100'
+          },
+          'secondary-on': {
+            color: '[.checked]:ring-secondary-100'
+          },
+          'tertiary-on': {
+            color: '[.checked]:ring-tertiary-100'
+          },
+          'success-on': {
+            color: '[.checked]:ring-success-100'
+          },
+          'warning-on': {
+            color: '[.checked]:ring-warning-100'
+          },
+          'error-on': {
+            color: '[.checked]:ring-error-100'
+          }
         }
       }
     }

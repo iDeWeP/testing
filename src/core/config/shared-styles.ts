@@ -1,4 +1,4 @@
-import type { CSSStyles } from '../types';
+import type { CSSProps, CSSStyles } from '../types';
 
 type SharedStyles = {
   focusable: CSSStyles;
@@ -9,9 +9,11 @@ type SharedStyles = {
   ring: CSSStyles;
   direction: CSSStyles;
   effect: CSSStyles;
+  animation: CSSStyles;
   transition: CSSStyles;
   rotate: CSSStyles;
   cursor: CSSStyles;
+  spinner: CSSProps;
 };
 
 export const sharedStyles: SharedStyles = {
@@ -81,6 +83,11 @@ export const sharedStyles: SharedStyles = {
       focusVisible: 'focus-visible:shadow-none'
     }
   },
+  animation: {
+    spin: {
+      animation: 'animate-spin'
+    }
+  },
   transition: {
     fade: {
       transition: 'transition-opacity'
@@ -127,5 +134,10 @@ export const sharedStyles: SharedStyles = {
     disabled: {
       cursor: 'cursor-not-allowed'
     }
+  },
+  spinner: {
+    display: 'inline-flex',
+    borderRadius: 'rounded-full',
+    color: 'fill-none'
   }
 };
