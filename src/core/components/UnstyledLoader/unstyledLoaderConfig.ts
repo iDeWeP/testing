@@ -14,7 +14,7 @@ export const unstyledLoaderConfig: ComponentConfig<UnstyledLoaderConfigProps> &
   Styles = {
   props: {
     spin: true,
-    value: 75,
+    value: 0,
     variant: 'text',
     float: false,
     size: 'md',

@@ -1,3 +1,4 @@
+import { isBordered } from '../../utils/is-bordered/is-bordered';
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
 import { mergeProps } from '../../utils/merge-props/merge-props';
 import type { UnstyledLoaderProps } from './UnstyledLoader.types';
@@ -49,8 +50,7 @@ export const UnstyledLoader = (props: UnstyledLoaderProps) => {
     ring
   });
 
-  const hasBorder =
-    (variant === 'outlined' && border === 'auto') || border === 'set';
+  const hasBorder = isBordered(variant, border);
 
   return (
     <svg
@@ -74,7 +74,6 @@ export const UnstyledLoader = (props: UnstyledLoaderProps) => {
       />
       {hasBorder && (
         <UnstyledLoaderBar
-
           checked={checked}
           disabled={disabled}
           cx="20"
@@ -87,7 +86,6 @@ export const UnstyledLoader = (props: UnstyledLoaderProps) => {
       )}
       {hasBorder && (
         <UnstyledLoaderBar
-
           checked={checked}
           disabled={disabled}
           cx="20"
