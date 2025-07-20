@@ -36,52 +36,52 @@ export const unstyledLoaderConfig: ComponentConfig<UnstyledLoaderConfigProps> &
     root: {
       float: {
         xs: {
+          top: 'top-[calc(50%_-_0.375rem)]',
+          left: 'left-[calc(50%_-_0.375rem)]'
+        },
+        sm: {
+          top: 'top-[calc(50%_-_0.5rem)]',
+          left: 'left-[calc(50%_-_0.5rem)]'
+        },
+        md: {
           top: 'top-[calc(50%_-_0.625rem)]',
           left: 'left-[calc(50%_-_0.625rem)]'
         },
-        sm: {
-          top: 'top-[calc(50%_-_1rem)]',
-          left: 'left-[calc(50%_-_1rem)]'
-        },
-        md: {
-          top: 'top-[calc(50%_-_1.25rem)]',
-          left: 'left-[calc(50%_-_1.25rem)]'
-        },
         lg: {
-          top: 'top-[calc(50%_-_1.5rem)]',
-          left: 'left-[calc(50%_-_1.5rem)]'
+          top: 'top-[calc(50%_-_0.75rem)]',
+          left: 'left-[calc(50%_-_0.75rem)]'
         },
         xl: {
-          top: 'top-[calc(50%_-_2rem)]',
-          left: 'left-[calc(50%_-_2rem)]'
+          top: 'top-[calc(50%_-_0.875rem)]',
+          left: 'left-[calc(50%_-_0.875rem)]'
         },
         xxl: {
-          top: 'top-[calc(50%_-_2.5rem)]',
-          left: 'left-[calc(50%_-_2.5rem)]'
+          top: 'top-[calc(50%_-_1rem)]',
+          left: 'left-[calc(50%_-_1rem)]'
         },
         'xs-xs': {
           top: 'top-[calc(50%_-_0.375)]',
           left: 'left-[calc(50%_-_0.375)]'
         },
         'sm-sm': {
-          top: 'top-[calc(50%_-_0.5rem)]',
-          left: 'left-[calc(50%_-_0.5rem)]'
+          top: 'top-[calc(50%_-_0.375)]',
+          left: 'left-[calc(50%_-_0.375)]'
         },
         'md-md': {
-          top: 'top-[calc(50%_-_0.625rem)]',
-          left: 'left-[calc(50%_-_0.625rem)]'
+          top: 'top-[calc(50%_-_0.375)]',
+          left: 'left-[calc(50%_-_0.375)]'
         },
         'lg-lg': {
-          top: 'top-[calc(50%_-_0.75rem)]',
-          left: 'left-[calc(50%_-_0.75rem)]'
+          top: 'top-[calc(50%_-_0.375)]',
+          left: 'left-[calc(50%_-_0.375)]'
         },
         'xl-xl': {
-          top: 'top-[calc(50%_-_0.875rem)]',
-          left: 'left-[calc(50%_-_0.875rem)]'
+          top: 'top-[calc(50%_-_0.375)]',
+          left: 'left-[calc(50%_-_0.375)]'
         },
         'xxl-xxl': {
-          top: 'top-[calc(50%_-_1rem)]',
-          left: 'left-[calc(50%_-_1rem)]'
+          top: 'top-[calc(50%_-_0.375)]',
+          left: 'left-[calc(50%_-_0.375)]'
         }
       },
       color: {
