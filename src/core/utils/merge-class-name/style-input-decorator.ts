@@ -26,13 +26,14 @@ export const styleInputDecorator = (
     rtr = 'unset',
     rbl = 'unset',
     rbr = 'unset',
+    color = 'unset',
     gap = 'unset',
     decorated = false
   }: Classes
 ) => {
   const isOutlined = inputVariant === 'outlined';
-  const radiuses = getInputRadius(inputVariant, sidePlacement, radius);
   const isLeft = sidePlacement === 'left';
+  const radiuses = getInputRadius(inputVariant, sidePlacement, radius);
 
   return mergeClasses(
     sharedStyles.display['inline-flex'],
@@ -58,7 +59,9 @@ export const styleInputDecorator = (
     systemStyles.radius.tr[getClass(!isLeft, rtr)],
     systemStyles.radius.bl[getClass(isLeft, rbl)],
     systemStyles.radius.br[getClass(!isLeft, rbr)],
-    systemStyles.color.normal.bg[theme][getInputColor(inputVariant, disabled)],
+    systemStyles.color.normal.bg[theme][
+      getInputColor(inputVariant, color, disabled)
+    ],
     systemStyles.gap.all[gap],
     className
   );
