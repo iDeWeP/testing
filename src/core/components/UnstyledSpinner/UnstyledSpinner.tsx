@@ -12,7 +12,6 @@ export const UnstyledSpinner = (props: UnstyledSpinnerProps) => {
     spin,
     value,
     variant,
-    float,
     size,
     thickness,
     margin,
@@ -40,7 +39,6 @@ export const UnstyledSpinner = (props: UnstyledSpinnerProps) => {
   const mergedClassName = mergeClassName('spinner', className, {
     disabled,
     spin,
-    float,
     size,
     margin,
     m,
