@@ -1,4 +1,3 @@
-import { useTheme } from '../../hooks/use-theme/use-theme';
 import { hasVariantBg } from '../../utils/merge-class-name/has-variant-bg';
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
 import { mergeProps } from '../../utils/merge-props/merge-props';
@@ -30,8 +29,6 @@ export const UnstyledSpinner = (props: UnstyledSpinnerProps) => {
     trail,
     ...restProps
   } = mergeProps(unstyledSpinnerConfig.props, props);
-
-  const theme = useTheme();
 
   const length = 2 * Math.PI * (20 - thickness / 2);
   const offset = length - (value * length) / 100;
@@ -65,7 +62,6 @@ export const UnstyledSpinner = (props: UnstyledSpinnerProps) => {
       {hasTrail && (
         <UnstyledSpinnerBar
           barType="trail"
-          theme={theme}
           disabled={disabled}
           cx="20"
           cy="20"
@@ -78,7 +74,6 @@ export const UnstyledSpinner = (props: UnstyledSpinnerProps) => {
       )}
       <UnstyledSpinnerBar
         barType="bar"
-        theme={theme}
         disabled={disabled}
         cx="20"
         cy="20"
@@ -93,7 +88,6 @@ export const UnstyledSpinner = (props: UnstyledSpinnerProps) => {
       {hasBorder && (
         <UnstyledSpinnerBar
           barType="bar"
-          theme={theme}
           disabled={disabled}
           cx="20"
           cy="20"
@@ -106,7 +100,6 @@ export const UnstyledSpinner = (props: UnstyledSpinnerProps) => {
       {hasBorder && (
         <UnstyledSpinnerBar
           barType="bar"
-          theme={theme}
           disabled={disabled}
           cx="20"
           cy="20"
