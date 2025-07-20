@@ -1,6 +1,7 @@
 import type { CSSProps, CSSStyles } from '../types';
 
 type SharedStyles = {
+  state: CSSStyles;
   focusable: CSSStyles;
   display: CSSStyles;
   position: CSSStyles;
@@ -17,6 +18,11 @@ type SharedStyles = {
 };
 
 export const sharedStyles: SharedStyles = {
+  state: {
+    on: {
+      group: 'on'
+    }
+  },
   focusable: {
     default: {
       ring: 'ring-offset-1',
