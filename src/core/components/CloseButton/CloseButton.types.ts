@@ -11,11 +11,8 @@ import type {
 import type {
   UnstyledCloseButtonIconProps,
   UnstyledCloseButtonRippleProps,
-  UnstyledCloseButtonSpinnerProps,
+  UnstyledCloseButtonLoaderProps,
   UnstyledCloseButtonBarProps,
-  UnstyledCloseButtonTrailProps,
-  UnstyledCloseButtonInnerBorderProps,
-  UnstyledCloseButtonOuterBorderProps,
   UnstyledCloseButtonOptionalProps,
   UnstyledCloseButtonConfigProps,
   UnstyledCloseButtonProps
@@ -23,20 +20,16 @@ import type {
 
 export type CloseButtonIconProps = UnstyledCloseButtonIconProps;
 export type CloseButtonRippleProps = UnstyledCloseButtonRippleProps;
-export type CloseButtonSpinnerProps = UnstyledCloseButtonSpinnerProps;
+export type CloseButtonLoaderProps = UnstyledCloseButtonLoaderProps;
 export type CloseButtonBarProps = UnstyledCloseButtonBarProps;
-export type CloseButtonTrailProps = UnstyledCloseButtonTrailProps;
-export type CloseButtonInnerBorderProps = UnstyledCloseButtonInnerBorderProps;
-export type CloseButtonOuterBorderProps = UnstyledCloseButtonOuterBorderProps;
 
 export type CloseButtonComponentsProps = {
   icon?: CloseButtonIconProps;
   ripple?: CloseButtonRippleProps;
-  spinner?: CloseButtonSpinnerProps;
+  loader?: CloseButtonLoaderProps;
   bar?: CloseButtonBarProps;
-  trail?: CloseButtonTrailProps;
-  innerBorder?: CloseButtonInnerBorderProps;
-  outerBorder?: CloseButtonOuterBorderProps;
+  innerBorder?: CloseButtonBarProps;
+  outerBorder?: CloseButtonBarProps;
 };
 
 export type CloseButtonOptionalProps = UnstyledCloseButtonOptionalProps;
