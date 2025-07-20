@@ -11,14 +11,13 @@ type Styles = {
     };
     input: {
       default: CSSProps;
+      scale: CSSStyles;
+      size: CSSStyles;
       color: Record<ColorType, Record<Theme, CSSStyles>>;
     };
     icon: {
       default: CSSProps;
-      fill: Record<Theme, CSSStyles>;
-    };
-    generic: {
-      default: CSSProps;
+      color: Record<Theme, CSSStyles>;
     };
   };
 };
@@ -26,8 +25,9 @@ type Styles = {
 export const unstyledSwitchConfig: ComponentConfig<UnstyledSwitchConfigProps> &
   Styles = {
   props: {
-    variant: 'light',
+    variant: 'solid',
     size: 'md',
+    scale: 'normal',
     margin: 'unset',
     m: 'unset',
     mx: 'unset',
@@ -56,6 +56,7 @@ export const unstyledSwitchConfig: ComponentConfig<UnstyledSwitchConfigProps> &
     rbr: 'unset',
     color: 'unset',
     shadow: 'unset',
+    ring: 'unset',
     componentsProps: {}
   },
   styles: {
@@ -116,11 +117,63 @@ export const unstyledSwitchConfig: ComponentConfig<UnstyledSwitchConfigProps> &
     },
     input: {
       default: {
+        position: 'absolute',
         width: 'w-full',
-        borderRadius: 'rounded-[inherit]',
         transition: 'transition-color',
+        transitionDuration: 'duration-150',
+        transitionTimingFunction: 'ease-in-out',
         appearance: 'appearance-none',
         group: 'peer'
+      },
+      scale: {
+        normal: {
+          top: 'top-0',
+          left: 'left-0',
+          height: 'h-full'
+        },
+        inner: {
+          top: 'top-2/4',
+          left: 'left-2/4',
+          translate: '-translate-x-2/4 -translate-y-2/4'
+        }
+      },
+      size: {
+        xs: {
+          height: 'h-1.5'
+        },
+        sm: {
+          height: 'h-2'
+        },
+        md: {
+          height: 'h-2.5'
+        },
+        lg: {
+          height: 'h-3'
+        },
+        xl: {
+          height: 'h-3.5'
+        },
+        xxl: {
+          height: 'h-4'
+        },
+        'xs-xs': {
+          height: 'h-4'
+        },
+        'sm-sm': {
+          height: 'h-4.5'
+        },
+        'md-md': {
+          height: 'h-5'
+        },
+        'lg-lg': {
+          height: 'h-5.5'
+        },
+        'xl-xl': {
+          height: 'h-6.5'
+        },
+        'xxl-xxl': {
+          height: 'h-7.5'
+        }
       },
       color: {
         bg: {
@@ -631,12 +684,17 @@ export const unstyledSwitchConfig: ComponentConfig<UnstyledSwitchConfigProps> &
     },
     icon: {
       default: {
-        padding: 'p-1',
+        position: 'absolute',
+        top: 'top-0',
+        left: 'left-0',
+        height: 'h-full',
         transition: 'transition-all',
+        transitionDuration: 'duration-150',
+        transitionTimingFunction: 'ease-in-out',
         pointerEvents: 'pointer-events-none',
         group: 'peer-checked:left-full peer-checked:-translate-x-full'
       },
-      fill: {
+      color: {
         light: {
           disabled: {
             color: 'peer-checked:fill-disabled-500'
@@ -803,16 +861,6 @@ export const unstyledSwitchConfig: ComponentConfig<UnstyledSwitchConfigProps> &
             color: 'peer-checked:fill-error-100'
           }
         }
-      }
-    },
-    generic: {
-      default: {
-        position: 'absolute',
-        top: 'top-0',
-        left: 'left-0',
-        height: 'h-full',
-        transitionDuration: 'duration-150',
-        transitionTimingFunction: 'ease-in-out'
       }
     }
   }

@@ -1,20 +1,23 @@
 import { cloneElement } from 'react';
 import type {
-  MergeComponentProps,
+  MergeProps,
   Theme,
+  Variant,
+  InnerScale,
   Color,
-  SVGNodeProps,
-  Variant
+  SVGNodeProps
 } from '../../types';
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
 import { setAria } from '../../utils/set-aria/set-aria';
+import type { UnstyledSwitchIconProps } from './UnstyledSwitch.types';
 
-type Props = MergeComponentProps<
-  'svg',
+type Props = MergeProps<
+  UnstyledSwitchIconProps,
   {
     theme: Theme;
     disabled: boolean;
     variant: Variant;
+    innerScale: InnerScale;
     color: Color;
     children?: SVGNodeProps;
   }
@@ -24,6 +27,7 @@ export const UnstyledSwitchIcon = ({
   theme,
   disabled,
   variant,
+  innerScale,
   color,
   className,
   children,
@@ -33,6 +37,7 @@ export const UnstyledSwitchIcon = ({
     theme,
     disabled,
     variant,
+    innerScale,
     color
   });
 

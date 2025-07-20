@@ -1,8 +1,9 @@
-import type { MergeComponentProps, Size } from '../../types';
+import type { MergeProps, Size } from '../../types';
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
+import type { UnstyledSwitchContainerProps } from './UnstyledSwitch.types';
 
-type Props = MergeComponentProps<
-  'div',
+type Props = MergeProps<
+  UnstyledSwitchContainerProps,
   {
     size: Size;
   }

@@ -12,6 +12,7 @@ export const UnstyledSwitch = (props: UnstyledSwitchProps) => {
     disabled = false,
     variant,
     size,
+    scale: innerScale,
     margin,
     m,
     mx,
@@ -40,6 +41,7 @@ export const UnstyledSwitch = (props: UnstyledSwitchProps) => {
     rbr,
     color,
     shadow,
+    ring,
     className,
     componentsProps,
     children,
@@ -52,6 +54,8 @@ export const UnstyledSwitch = (props: UnstyledSwitchProps) => {
     theme,
     disabled,
     variant,
+    size,
+    innerScale,
     margin,
     m,
     mx,
@@ -79,7 +83,8 @@ export const UnstyledSwitch = (props: UnstyledSwitchProps) => {
     rbl,
     rbr,
     color,
-    shadow
+    shadow,
+    ring
   });
 
   return (
@@ -98,6 +103,7 @@ export const UnstyledSwitch = (props: UnstyledSwitchProps) => {
         theme={theme}
         disabled={disabled}
         variant={variant}
+        innerScale={innerScale}
         color={color}
         {...componentsProps.icon}
       >

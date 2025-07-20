@@ -4,6 +4,7 @@ import type {
   SVGNodeProps,
   Variant,
   Size,
+  InnerScale,
   Margin,
   Border,
   DefaultBorder,
@@ -30,6 +31,7 @@ export type UnstyledSwitchOptionalProps = {
 export type UnstyledSwitchDefaultProps = {
   variant?: Variant;
   size?: Size;
+  scale?: InnerScale;
   margin?: Margin;
   m?: Margin;
   mx?: Margin;
@@ -58,6 +60,7 @@ export type UnstyledSwitchDefaultProps = {
   rbr?: Radius;
   color?: Color;
   shadow?: Shadow;
+  ring?: Color;
   componentsProps?: UnstyledSwitchComponentsProps;
 };
 
