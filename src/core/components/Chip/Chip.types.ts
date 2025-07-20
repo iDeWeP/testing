@@ -10,30 +10,23 @@ import type {
 } from '../../types';
 import type {
   UnstyledButtonRippleProps,
-  UnstyledButtonSpinnerProps,
+  UnstyledButtonLoaderProps,
   UnstyledButtonBarProps,
-  UnstyledButtonTrailProps,
-  UnstyledButtonInnerBorderProps,
-  UnstyledButtonOuterBorderProps,
   UnstyledButtonOptionalProps,
   UnstyledButtonConfigProps,
   UnstyledButtonProps
 } from '../UnstyledButton/UnstyledButton.types';
 
 export type ChipRippleProps = UnstyledButtonRippleProps;
-export type ChipSpinnerProps = UnstyledButtonSpinnerProps;
+export type ChipLoaderProps = UnstyledButtonLoaderProps;
 export type ChipBarProps = UnstyledButtonBarProps;
-export type ChipTrailProps = UnstyledButtonTrailProps;
-export type ChipInnerBorderProps = UnstyledButtonInnerBorderProps;
-export type ChipOuterBorderProps = UnstyledButtonOuterBorderProps;
 
 export type ChipComponentsProps = {
   ripple?: ChipRippleProps;
-  spinner?: ChipSpinnerProps;
+  loader?: ChipLoaderProps;
   bar?: ChipBarProps;
-  trail?: ChipTrailProps;
-  innerBorder?: ChipInnerBorderProps;
-  outerBorder?: ChipOuterBorderProps;
+  innerBorder?: ChipBarProps;
+  outerBorder?: ChipBarProps;
 };
 
 export type ChipOptionalProps = Omit<UnstyledButtonOptionalProps, 'checked'>;
