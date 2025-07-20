@@ -1,8 +1,8 @@
+import { useTheme } from '../../hooks/use-theme/use-theme';
 import { isBordered } from '../../utils/is-bordered/is-bordered';
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
 import { mergeProps } from '../../utils/merge-props/merge-props';
 import type { UnstyledLoaderProps } from './UnstyledLoader.types';
-import { UnstyledLoaderBar } from './UnstyledLoaderBar';
 import { unstyledLoaderConfig } from './unstyledLoaderConfig';
 
 export const UnstyledLoader = (props: UnstyledLoaderProps) => {
@@ -31,12 +31,17 @@ export const UnstyledLoader = (props: UnstyledLoaderProps) => {
     ...restProps
   } = mergeProps(unstyledLoaderConfig.props, props);
 
+  const theme = useTheme();
+
   const length = 2 * Math.PI * (20 - thickness / 2);
   const offset = length - (value * length) / 100;
 
   const mergedClassName = mergeClassName('loader', className, {
+    theme,
+    checked,
     disabled,
     spin,
+    variant,
     float,
     size,
     margin,
@@ -47,6 +52,7 @@ export const UnstyledLoader = (props: UnstyledLoaderProps) => {
     mb,
     ml,
     mr,
+    color,
     ring
   });
 
@@ -59,40 +65,28 @@ export const UnstyledLoader = (props: UnstyledLoaderProps) => {
       className={mergedClassName}
       {...restProps}
     >
-      <UnstyledLoaderBar
-        checked={checked}
-        disabled={disabled}
+      <circle
         cx="20"
         cy="20"
         r="18"
         strokeWidth={thickness}
         strokeDasharray={length}
         strokeDashoffset={offset}
-        variant={variant}
-        color={color}
         {...componentsProps.bar}
       />
       {hasBorder && (
-        <UnstyledLoaderBar
-          checked={checked}
-          disabled={disabled}
+        <circle
           cx="20"
           cy="20"
           r="20"
-          variant={variant}
-          color={color}
           {...componentsProps.outerBorder}
         />
       )}
       {hasBorder && (
-        <UnstyledLoaderBar
-          checked={checked}
-          disabled={disabled}
+        <circle
           cx="20"
           cy="20"
           r={20 - thickness}
-          variant={variant}
-          color={color}
           {...componentsProps.innerBorder}
         />
       )}

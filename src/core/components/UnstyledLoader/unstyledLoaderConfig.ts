@@ -15,7 +15,7 @@ export const unstyledLoaderConfig: ComponentConfig<UnstyledLoaderConfigProps> &
   props: {
     spin: true,
     value: 0,
-    variant: 'text',
+    variant: 'solid',
     float: false,
     size: 'md',
     thickness: 4,
