@@ -10,15 +10,12 @@ import type {
 } from '../../types';
 
 export type UnstyledSpinnerBarProps = ComponentRefProps<'circle'>;
-export type UnstyledSpinnerTrailProps = ComponentRefProps<'circle'>;
-export type UnstyledSpinnerInnerBorder = ComponentRefProps<'circle'>;
-export type UnstyledSpinnerOuterBorder = ComponentRefProps<'circle'>;
 
 export type UnstyledSpinnerComponentsProps = {
   bar?: UnstyledSpinnerBarProps;
-  trail?: UnstyledSpinnerTrailProps;
-  innerBorder?: UnstyledSpinnerInnerBorder;
-  outerBorder?: UnstyledSpinnerOuterBorder;
+  trail?: UnstyledSpinnerBarProps;
+  innerBorder?: UnstyledSpinnerBarProps;
+  outerBorder?: UnstyledSpinnerBarProps;
 };
 
 export type UnstyledSpinnerOptionalProps = {

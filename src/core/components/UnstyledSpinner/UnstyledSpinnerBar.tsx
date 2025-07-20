@@ -1,8 +1,9 @@
-import type { MergeComponentProps, Theme, Variant, Color } from '../../types';
+import type { MergeProps, Theme, Variant, Color } from '../../types';
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
+import type { UnstyledSpinnerBarProps } from './UnstyledSpinner.types';
 
-type Props = MergeComponentProps<
-  'circle',
+type Props = MergeProps<
+  UnstyledSpinnerBarProps,
   {
     barType: 'bar' | 'trail';
     theme: Theme;
