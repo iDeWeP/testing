@@ -37,7 +37,7 @@ export const styleCheckboxTrail = (
   }: Classes
 ) => {
   const isBordered = isAutoBordered(border, b, bx, by, bt, bb, bl, br);
-  const colors = getColor(variant, color, { disabled, valid, invalid }, true);
+  const colors = getColor(variant, color, { disabled, valid, invalid }, false);
 
   return mergeClasses(
     unstyledCheckboxConfig.styles.shared.default,

@@ -38,7 +38,7 @@ export const styleCheckboxIcon = (
   }: Classes
 ) => {
   const isBordered = isAutoBordered(border, b, bx, by, bt, bb, bl, br, variant);
-  const colors = getColor(variant, color, { disabled, valid, invalid }, false);
+  const colors = getColor(variant, color, { disabled, valid, invalid }, true);
 
   return mergeClasses(
     unstyledCheckboxConfig.styles.shared.default,
