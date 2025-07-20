@@ -74,6 +74,6 @@ export const getColor = (
 
   return variants[isDefault ? defaultVariant : variant](
     states?.valid ? 'success' : states?.invalid ? 'error' : defaultColor,
-    isDefault && color.endsWith('-on')
+    !isDefault && color.endsWith('-on')
   );
 };

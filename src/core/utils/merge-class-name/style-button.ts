@@ -33,17 +33,17 @@ export const styleButton = (
   );
 
   return mergeClasses(
-    checked && unstyledButtonConfig.styles.root.checked,
+    checked && sharedStyles.state.on,
     sharedStyles.position.relative,
     sharedStyles.focusable[getFocusableState(disabled, loading)],
     disabled && systemStyles.color.normal.bg[theme][colors.bg],
     disabled && systemStyles.color.normal.text[theme][colors.text],
     disabled && systemStyles.color.normal.fill[theme][colors.text],
     systemStyles.color.normal.ring[theme][colors.ring],
-    isCheckable && systemStyles.color.checked.bg[theme][checkedColors.bg],
-    isCheckable && systemStyles.color.checked.text[theme][checkedColors.text],
-    isCheckable && systemStyles.color.checked.fill[theme][checkedColors.text],
-    isCheckable && systemStyles.color.checked.ring[theme][checkedColors.ring],
+    isCheckable && systemStyles.color.on.bg[theme][checkedColors.bg],
+    isCheckable && systemStyles.color.on.text[theme][checkedColors.text],
+    isCheckable && systemStyles.color.on.fill[theme][checkedColors.text],
+    isCheckable && systemStyles.color.on.ring[theme][checkedColors.ring],
     unstyledButtonConfig.styles.root.loading[state],
     sharedStyles.effect[effect],
     className

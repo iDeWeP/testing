@@ -1,8 +1,17 @@
-import type { InputVariant } from '../../types';
+import type { InputVariant, Color } from '../../types';
 
-export const getInputColor = (variant: InputVariant, isDisabled?: boolean) =>
-  isDisabled
-    ? 'disabled-light'
-    : variant === 'light'
-    ? 'surface-light'
-    : 'none';
+export const getInputColor = (
+  variant: InputVariant,
+  color: Color,
+  isDisabled?: boolean
+) => {
+  if (color === 'unset') {
+    return 'unset';
+  }
+
+  if (isDisabled) {
+    return 'disabled-light';
+  }
+
+  return variant === 'light' ? 'surface-light' : 'unset';
+};

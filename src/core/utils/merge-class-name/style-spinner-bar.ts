@@ -12,13 +12,10 @@ export const styleSpinnerBar = (
     variant = 'text',
     color = 'unset'
   }: Classes
-) => {
-  const colorType = barType === 'bar' ? 'text' : 'bg';
-
-  return mergeClasses(
+) =>
+  mergeClasses(
     systemStyles.color.normal.stroke[theme][
-      getColor(variant, color, { disabled })[colorType]
+      getColor(variant, color, { disabled })[barType === 'bar' ? 'text' : 'bg']
     ],
     className
   );
-};

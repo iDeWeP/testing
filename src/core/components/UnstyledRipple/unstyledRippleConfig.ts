@@ -930,294 +930,294 @@ export const unstyledRippleConfig: ComponentConfig<UnstyledRippleConfigProps> &
           stateful: {
             light: {
               surface: {
-                hover: '[*.checked:hover>&]:bg-surface-500/20',
-                active: '[*.checked:active:hover>&]:bg-surface-500/25',
+                hover: '[*.on:hover>&]:bg-surface-500/20',
+                active: '[*.on:active:hover>&]:bg-surface-500/25',
                 focus:
-                  '[*.checked:focus:hover>&]:bg-surface-500/25 [*.checked:focus>&]:bg-surface-500/25'
+                  '[*.on:focus:hover>&]:bg-surface-500/25 [*.on:focus>&]:bg-surface-500/25'
               },
               neutral: {
-                hover: '[*.checked:hover>&]:bg-neutral-500/20',
-                active: '[*.checked:active:hover>&]:bg-neutral-500/25',
+                hover: '[*.on:hover>&]:bg-neutral-500/20',
+                active: '[*.on:active:hover>&]:bg-neutral-500/25',
                 focus:
-                  '[*.checked:focus:hover>&]:bg-neutral-500/25 [*.checked:focus>&]:bg-neutral-500/25'
+                  '[*.on:focus:hover>&]:bg-neutral-500/25 [*.on:focus>&]:bg-neutral-500/25'
               },
               primary: {
-                hover: '[*.checked:hover>&]:bg-primary-500/20',
-                active: '[*.checked:active:hover>&]:bg-primary-500/25',
+                hover: '[*.on:hover>&]:bg-primary-500/20',
+                active: '[*.on:active:hover>&]:bg-primary-500/25',
                 focus:
-                  '[*.checked:focus:hover>&]:bg-primary-500/25 [*.checked:focus>&]:bg-primary-500/25'
+                  '[*.on:focus:hover>&]:bg-primary-500/25 [*.on:focus>&]:bg-primary-500/25'
               },
               secondary: {
-                hover: '[*.checked:hover>&]:bg-secondary-500/20',
-                active: '[*.checked:active:hover>&]:bg-secondary-500/25',
+                hover: '[*.on:hover>&]:bg-secondary-500/20',
+                active: '[*.on:active:hover>&]:bg-secondary-500/25',
                 focus:
-                  '[*.checked:focus:hover>&]:bg-secondary-500/25 [*.checked:focus>&]:bg-secondary-500/25'
+                  '[*.on:focus:hover>&]:bg-secondary-500/25 [*.on:focus>&]:bg-secondary-500/25'
               },
               tertiary: {
-                hover: '[*.checked:hover>&]:bg-tertiary-500/20',
-                active: '[*.checked:active:hover>&]:bg-tertiary-500/25',
+                hover: '[*.on:hover>&]:bg-tertiary-500/20',
+                active: '[*.on:active:hover>&]:bg-tertiary-500/25',
                 focus:
-                  '[*.checked:focus:hover>&]:bg-tertiary-500/25 [*.checked:focus>&]:bg-tertiary-500/25'
+                  '[*.on:focus:hover>&]:bg-tertiary-500/25 [*.on:focus>&]:bg-tertiary-500/25'
               },
               success: {
-                hover: '[*.checked:hover>&]:bg-success-500/20',
-                active: '[*.checked:active:hover>&]:bg-success-500/25',
+                hover: '[*.on:hover>&]:bg-success-500/20',
+                active: '[*.on:active:hover>&]:bg-success-500/25',
                 focus:
-                  '[*.checked:focus:hover>&]:bg-success-500/25 [*.checked:focus>&]:bg-success-500/25'
+                  '[*.on:focus:hover>&]:bg-success-500/25 [*.on:focus>&]:bg-success-500/25'
               },
               warning: {
-                hover: '[*.checked:hover>&]:bg-warning-500/20',
-                active: '[*.checked:active:hover>&]:bg-warning-500/25',
+                hover: '[*.on:hover>&]:bg-warning-500/20',
+                active: '[*.on:active:hover>&]:bg-warning-500/25',
                 focus:
-                  '[*.checked:focus:hover>&]:bg-warning-500/25 [*.checked:focus>&]:bg-warning-500/25'
+                  '[*.on:focus:hover>&]:bg-warning-500/25 [*.on:focus>&]:bg-warning-500/25'
               },
               error: {
-                hover: '[*.checked:hover>&]:bg-error-500/20',
-                active: '[*.checked:active:hover>&]:bg-error-500/25',
+                hover: '[*.on:hover>&]:bg-error-500/20',
+                active: '[*.on:active:hover>&]:bg-error-500/25',
                 focus:
-                  '[*.checked:focus:hover>&]:bg-error-500/25 [*.checked:focus>&]:bg-error-500/25'
+                  '[*.on:focus:hover>&]:bg-error-500/25 [*.on:focus>&]:bg-error-500/25'
               },
               'surface-light': {
-                hover: '[*.checked:hover>&]:bg-surface-250/20',
-                active: '[*.checked:active:hover>&]:bg-surface-250/25',
+                hover: '[*.on:hover>&]:bg-surface-250/20',
+                active: '[*.on:active:hover>&]:bg-surface-250/25',
                 focus:
-                  '[*.checked:focus:hover>&]:bg-surface-250/25 [*.checked:focus>&]:bg-surface-250/25'
+                  '[*.on:focus:hover>&]:bg-surface-250/25 [*.on:focus>&]:bg-surface-250/25'
               },
               'neutral-light': {
-                hover: '[*.checked:hover>&]:bg-neutral-250/20',
-                active: '[*.checked:active:hover>&]:bg-neutral-250/25',
+                hover: '[*.on:hover>&]:bg-neutral-250/20',
+                active: '[*.on:active:hover>&]:bg-neutral-250/25',
                 focus:
-                  '[*.checked:focus:hover>&]:bg-neutral-250/25 [*.checked:focus>&]:bg-neutral-250/25'
+                  '[*.on:focus:hover>&]:bg-neutral-250/25 [*.on:focus>&]:bg-neutral-250/25'
               },
               'primary-light': {
-                hover: '[*.checked:hover>&]:bg-primary-250/20',
-                active: '[*.checked:active:hover>&]:bg-primary-250/25',
+                hover: '[*.on:hover>&]:bg-primary-250/20',
+                active: '[*.on:active:hover>&]:bg-primary-250/25',
                 focus:
-                  '[*.checked:focus:hover>&]:bg-primary-250/25 [*.checked:focus>&]:bg-primary-250/25'
+                  '[*.on:focus:hover>&]:bg-primary-250/25 [*.on:focus>&]:bg-primary-250/25'
               },
               'secondary-light': {
-                hover: '[*.checked:hover>&]:bg-secondary-250/20',
-                active: '[*.checked:active:hover>&]:bg-secondary-250/25',
+                hover: '[*.on:hover>&]:bg-secondary-250/20',
+                active: '[*.on:active:hover>&]:bg-secondary-250/25',
                 focus:
-                  '[*.checked:focus:hover>&]:bg-secondary-250/25 [*.checked:focus>&]:bg-secondary-250/25'
+                  '[*.on:focus:hover>&]:bg-secondary-250/25 [*.on:focus>&]:bg-secondary-250/25'
               },
               'tertiary-light': {
-                hover: '[*.checked:hover>&]:bg-tertiary-250/20',
-                active: '[*.checked:active:hover>&]:bg-tertiary-250/25',
+                hover: '[*.on:hover>&]:bg-tertiary-250/20',
+                active: '[*.on:active:hover>&]:bg-tertiary-250/25',
                 focus:
-                  '[*.checked:focus:hover>&]:bg-tertiary-250/25 [*.checked:focus>&]:bg-tertiary-250/25'
+                  '[*.on:focus:hover>&]:bg-tertiary-250/25 [*.on:focus>&]:bg-tertiary-250/25'
               },
               'success-light': {
-                hover: '[*.checked:hover>&]:bg-success-250/20',
-                active: '[*.checked:active:hover>&]:bg-success-250/25',
+                hover: '[*.on:hover>&]:bg-success-250/20',
+                active: '[*.on:active:hover>&]:bg-success-250/25',
                 focus:
-                  '[*.checked:focus:hover>&]:bg-success-250/25 [*.checked:focus>&]:bg-success-250/25'
+                  '[*.on:focus:hover>&]:bg-success-250/25 [*.on:focus>&]:bg-success-250/25'
               },
               'warning-light': {
-                hover: '[*.checked:hover>&]:bg-warning-250/20',
-                active: '[*.checked:active:hover>&]:bg-warning-250/25',
+                hover: '[*.on:hover>&]:bg-warning-250/20',
+                active: '[*.on:active:hover>&]:bg-warning-250/25',
                 focus:
-                  '[*.checked:focus:hover>&]:bg-warning-250/25 [*.checked:focus>&]:bg-warning-250/25'
+                  '[*.on:focus:hover>&]:bg-warning-250/25 [*.on:focus>&]:bg-warning-250/25'
               },
               'error-light': {
-                hover: '[*.checked:hover>&]:bg-error-250/20',
-                active: '[*.checked:active:hover>&]:bg-error-250/25',
+                hover: '[*.on:hover>&]:bg-error-250/20',
+                active: '[*.on:active:hover>&]:bg-error-250/25',
                 focus:
-                  '[*.checked:focus:hover>&]:bg-error-250/25 [*.checked:focus>&]:bg-error-250/25'
+                  '[*.on:focus:hover>&]:bg-error-250/25 [*.on:focus>&]:bg-error-250/25'
               },
               'surface-on': {
-                hover: '[*.checked:hover>&]:bg-surface-50/20',
-                active: '[*.checked:active:hover>&]:bg-surface-50/25',
+                hover: '[*.on:hover>&]:bg-surface-50/20',
+                active: '[*.on:active:hover>&]:bg-surface-50/25',
                 focus:
-                  '[*.checked:focus:hover>&]:bg-surface-50/25 [*.checked:focus>&]:bg-surface-50/25'
+                  '[*.on:focus:hover>&]:bg-surface-50/25 [*.on:focus>&]:bg-surface-50/25'
               },
               'neutral-on': {
-                hover: '[*.checked:hover>&]:bg-neutral-50/20',
-                active: '[*.checked:active:hover>&]:bg-neutral-50/25',
+                hover: '[*.on:hover>&]:bg-neutral-50/20',
+                active: '[*.on:active:hover>&]:bg-neutral-50/25',
                 focus:
-                  '[*.checked:focus:hover>&]:bg-neutral-50/25 [*.checked:focus>&]:bg-neutral-50/25'
+                  '[*.on:focus:hover>&]:bg-neutral-50/25 [*.on:focus>&]:bg-neutral-50/25'
               },
               'primary-on': {
-                hover: '[*.checked:hover>&]:bg-primary-50/20',
-                active: '[*.checked:active:hover>&]:bg-primary-50/25',
+                hover: '[*.on:hover>&]:bg-primary-50/20',
+                active: '[*.on:active:hover>&]:bg-primary-50/25',
                 focus:
-                  '[*.checked:focus:hover>&]:bg-primary-50/25 [*.checked:focus>&]:bg-primary-50/25'
+                  '[*.on:focus:hover>&]:bg-primary-50/25 [*.on:focus>&]:bg-primary-50/25'
               },
               'secondary-on': {
-                hover: '[*.checked:hover>&]:bg-secondary-50/20',
-                active: '[*.checked:active:hover>&]:bg-secondary-50/25',
+                hover: '[*.on:hover>&]:bg-secondary-50/20',
+                active: '[*.on:active:hover>&]:bg-secondary-50/25',
                 focus:
-                  '[*.checked:focus:hover>&]:bg-secondary-50/25 [*.checked:focus>&]:bg-secondary-50/25'
+                  '[*.on:focus:hover>&]:bg-secondary-50/25 [*.on:focus>&]:bg-secondary-50/25'
               },
               'tertiary-on': {
-                hover: '[*.checked:hover>&]:bg-tertiary-50/20',
-                active: '[*.checked:active:hover>&]:bg-tertiary-50/25',
+                hover: '[*.on:hover>&]:bg-tertiary-50/20',
+                active: '[*.on:active:hover>&]:bg-tertiary-50/25',
                 focus:
-                  '[*.checked:focus:hover>&]:bg-tertiary-50/25 [*.checked:focus>&]:bg-tertiary-50/25'
+                  '[*.on:focus:hover>&]:bg-tertiary-50/25 [*.on:focus>&]:bg-tertiary-50/25'
               },
               'success-on': {
-                hover: '[*.checked:hover>&]:bg-success-50/20',
-                active: '[*.checked:active:hover>&]:bg-success-50/25',
+                hover: '[*.on:hover>&]:bg-success-50/20',
+                active: '[*.on:active:hover>&]:bg-success-50/25',
                 focus:
-                  '[*.checked:focus:hover>&]:bg-success-50/25 [*.checked:focus>&]:bg-success-50/25'
+                  '[*.on:focus:hover>&]:bg-success-50/25 [*.on:focus>&]:bg-success-50/25'
               },
               'warning-on': {
-                hover: '[*.checked:hover>&]:bg-warning-50/20',
-                active: '[*.checked:active:hover>&]:bg-warning-50/25',
+                hover: '[*.on:hover>&]:bg-warning-50/20',
+                active: '[*.on:active:hover>&]:bg-warning-50/25',
                 focus:
-                  '[*.checked:focus:hover>&]:bg-warning-50/25 [*.checked:focus>&]:bg-warning-50/25'
+                  '[*.on:focus:hover>&]:bg-warning-50/25 [*.on:focus>&]:bg-warning-50/25'
               },
               'error-on': {
-                hover: '[*.checked:hover>&]:bg-error-50/20',
-                active: '[*.checked:active:hover>&]:bg-error-50/25',
+                hover: '[*.on:hover>&]:bg-error-50/20',
+                active: '[*.on:active:hover>&]:bg-error-50/25',
                 focus:
-                  '[*.checked:focus:hover>&]:bg-error-50/25 [*.checked:focus>&]:bg-error-50/25'
+                  '[*.on:focus:hover>&]:bg-error-50/25 [*.on:focus>&]:bg-error-50/25'
               }
             },
             dark: {
               surface: {
-                hover: '[*.checked:hover>&]:bg-surface-600/20',
-                active: '[*.checked:active:hover>&]:bg-surface-600/25',
+                hover: '[*.on:hover>&]:bg-surface-600/20',
+                active: '[*.on:active:hover>&]:bg-surface-600/25',
                 focus:
-                  '[*.checked:focus:hover>&]:bg-surface-600/25 [*.checked:focus>&]:bg-surface-600/25'
+                  '[*.on:focus:hover>&]:bg-surface-600/25 [*.on:focus>&]:bg-surface-600/25'
               },
               neutral: {
-                hover: '[*.checked:hover>&]:bg-neutral-600/20',
-                active: '[*.checked:active:hover>&]:bg-neutral-600/25',
+                hover: '[*.on:hover>&]:bg-neutral-600/20',
+                active: '[*.on:active:hover>&]:bg-neutral-600/25',
                 focus:
-                  '[*.checked:focus:hover>&]:bg-neutral-600/25 [*.checked:focus>&]:bg-neutral-600/25'
+                  '[*.on:focus:hover>&]:bg-neutral-600/25 [*.on:focus>&]:bg-neutral-600/25'
               },
               primary: {
-                hover: '[*.checked:hover>&]:bg-primary-600/20',
-                active: '[*.checked:active:hover>&]:bg-primary-600/25',
+                hover: '[*.on:hover>&]:bg-primary-600/20',
+                active: '[*.on:active:hover>&]:bg-primary-600/25',
                 focus:
-                  '[*.checked:focus:hover>&]:bg-primary-600/25 [*.checked:focus>&]:bg-primary-600/25'
+                  '[*.on:focus:hover>&]:bg-primary-600/25 [*.on:focus>&]:bg-primary-600/25'
               },
               secondary: {
-                hover: '[*.checked:hover>&]:bg-secondary-600/20',
-                active: '[*.checked:active:hover>&]:bg-secondary-600/25',
+                hover: '[*.on:hover>&]:bg-secondary-600/20',
+                active: '[*.on:active:hover>&]:bg-secondary-600/25',
                 focus:
-                  '[*.checked:focus:hover>&]:bg-secondary-600/25 [*.checked:focus>&]:bg-secondary-600/25'
+                  '[*.on:focus:hover>&]:bg-secondary-600/25 [*.on:focus>&]:bg-secondary-600/25'
               },
               tertiary: {
-                hover: '[*.checked:hover>&]:bg-tertiary-600/20',
-                active: '[*.checked:active:hover>&]:bg-tertiary-600/25',
+                hover: '[*.on:hover>&]:bg-tertiary-600/20',
+                active: '[*.on:active:hover>&]:bg-tertiary-600/25',
                 focus:
-                  '[*.checked:focus:hover>&]:bg-tertiary-600/25 [*.checked:focus>&]:bg-tertiary-600/25'
+                  '[*.on:focus:hover>&]:bg-tertiary-600/25 [*.on:focus>&]:bg-tertiary-600/25'
               },
               success: {
-                hover: '[*.checked:hover>&]:bg-success-600/20',
-                active: '[*.checked:active:hover>&]:bg-success-600/25',
+                hover: '[*.on:hover>&]:bg-success-600/20',
+                active: '[*.on:active:hover>&]:bg-success-600/25',
                 focus:
-                  '[*.checked:focus:hover>&]:bg-success-600/25 [*.checked:focus>&]:bg-success-600/25'
+                  '[*.on:focus:hover>&]:bg-success-600/25 [*.on:focus>&]:bg-success-600/25'
               },
               warning: {
-                hover: '[*.checked:hover>&]:bg-warning-600/20',
-                active: '[*.checked:active:hover>&]:bg-warning-600/25',
+                hover: '[*.on:hover>&]:bg-warning-600/20',
+                active: '[*.on:active:hover>&]:bg-warning-600/25',
                 focus:
-                  '[*.checked:focus:hover>&]:bg-warning-600/25 [*.checked:focus>&]:bg-warning-600/25'
+                  '[*.on:focus:hover>&]:bg-warning-600/25 [*.on:focus>&]:bg-warning-600/25'
               },
               error: {
-                hover: '[*.checked:hover>&]:bg-error-600/20',
-                active: '[*.checked:active:hover>&]:bg-error-600/25',
+                hover: '[*.on:hover>&]:bg-error-600/20',
+                active: '[*.on:active:hover>&]:bg-error-600/25',
                 focus:
-                  '[*.checked:focus:hover>&]:bg-error-600/25 [*.checked:focus>&]:bg-error-600/25'
+                  '[*.on:focus:hover>&]:bg-error-600/25 [*.on:focus>&]:bg-error-600/25'
               },
               'surface-light': {
-                hover: '[*.checked:hover>&]:bg-surface-400/20',
-                active: '[*.checked:active:hover>&]:bg-surface-400/25',
+                hover: '[*.on:hover>&]:bg-surface-400/20',
+                active: '[*.on:active:hover>&]:bg-surface-400/25',
                 focus:
-                  '[*.checked:focus:hover>&]:bg-surface-400/25 [*.checked:focus>&]:bg-surface-400/25'
+                  '[*.on:focus:hover>&]:bg-surface-400/25 [*.on:focus>&]:bg-surface-400/25'
               },
               'neutral-light': {
-                hover: '[*.checked:hover>&]:bg-neutral-400/20',
-                active: '[*.checked:active:hover>&]:bg-neutral-400/25',
+                hover: '[*.on:hover>&]:bg-neutral-400/20',
+                active: '[*.on:active:hover>&]:bg-neutral-400/25',
                 focus:
-                  '[*.checked:focus:hover>&]:bg-neutral-400/25 [*.checked:focus>&]:bg-neutral-400/25'
+                  '[*.on:focus:hover>&]:bg-neutral-400/25 [*.on:focus>&]:bg-neutral-400/25'
               },
               'primary-light': {
-                hover: '[*.checked:hover>&]:bg-primary-400/20',
-                active: '[*.checked:active:hover>&]:bg-primary-400/25',
+                hover: '[*.on:hover>&]:bg-primary-400/20',
+                active: '[*.on:active:hover>&]:bg-primary-400/25',
                 focus:
-                  '[*.checked:focus:hover>&]:bg-primary-400/25 [*.checked:focus>&]:bg-primary-400/25'
+                  '[*.on:focus:hover>&]:bg-primary-400/25 [*.on:focus>&]:bg-primary-400/25'
               },
               'secondary-light': {
-                hover: '[*.checked:hover>&]:bg-secondary-400/20',
-                active: '[*.checked:active:hover>&]:bg-secondary-400/25',
+                hover: '[*.on:hover>&]:bg-secondary-400/20',
+                active: '[*.on:active:hover>&]:bg-secondary-400/25',
                 focus:
-                  '[*.checked:focus:hover>&]:bg-secondary-400/25 [*.checked:focus>&]:bg-secondary-400/25'
+                  '[*.on:focus:hover>&]:bg-secondary-400/25 [*.on:focus>&]:bg-secondary-400/25'
               },
               'tertiary-light': {
-                hover: '[*.checked:hover>&]:bg-tertiary-400/20',
-                active: '[*.checked:active:hover>&]:bg-tertiary-400/25',
+                hover: '[*.on:hover>&]:bg-tertiary-400/20',
+                active: '[*.on:active:hover>&]:bg-tertiary-400/25',
                 focus:
-                  '[*.checked:focus:hover>&]:bg-tertiary-400/25 [*.checked:focus>&]:bg-tertiary-400/25'
+                  '[*.on:focus:hover>&]:bg-tertiary-400/25 [*.on:focus>&]:bg-tertiary-400/25'
               },
               'success-light': {
-                hover: '[*.checked:hover>&]:bg-success-400/20',
-                active: '[*.checked:active:hover>&]:bg-success-400/25',
+                hover: '[*.on:hover>&]:bg-success-400/20',
+                active: '[*.on:active:hover>&]:bg-success-400/25',
                 focus:
-                  '[*.checked:focus:hover>&]:bg-success-400/25 [*.checked:focus>&]:bg-success-400/25'
+                  '[*.on:focus:hover>&]:bg-success-400/25 [*.on:focus>&]:bg-success-400/25'
               },
               'warning-light': {
-                hover: '[*.checked:hover>&]:bg-warning-400/20',
-                active: '[*.checked:active:hover>&]:bg-warning-400/25',
+                hover: '[*.on:hover>&]:bg-warning-400/20',
+                active: '[*.on:active:hover>&]:bg-warning-400/25',
                 focus:
-                  '[*.checked:focus:hover>&]:bg-warning-400/25 [*.checked:focus>&]:bg-warning-400/25'
+                  '[*.on:focus:hover>&]:bg-warning-400/25 [*.on:focus>&]:bg-warning-400/25'
               },
               'error-light': {
-                hover: '[*.checked:hover>&]:bg-error-400/20',
-                active: '[*.checked:active:hover>&]:bg-error-400/25',
+                hover: '[*.on:hover>&]:bg-error-400/20',
+                active: '[*.on:active:hover>&]:bg-error-400/25',
                 focus:
-                  '[*.checked:focus:hover>&]:bg-error-400/25 [*.checked:focus>&]:bg-error-400/25'
+                  '[*.on:focus:hover>&]:bg-error-400/25 [*.on:focus>&]:bg-error-400/25'
               },
               'surface-on': {
-                hover: '[*.checked:hover>&]:bg-surface-200/20',
-                active: '[*.checked:active:hover>&]:bg-surface-200/25',
+                hover: '[*.on:hover>&]:bg-surface-200/20',
+                active: '[*.on:active:hover>&]:bg-surface-200/25',
                 focus:
-                  '[*.checked:focus:hover>&]:bg-surface-200/25 [*.checked:focus>&]:bg-surface-200/25'
+                  '[*.on:focus:hover>&]:bg-surface-200/25 [*.on:focus>&]:bg-surface-200/25'
               },
               'neutral-on': {
-                hover: '[*.checked:hover>&]:bg-neutral-200/20',
-                active: '[*.checked:active:hover>&]:bg-neutral-200/25',
+                hover: '[*.on:hover>&]:bg-neutral-200/20',
+                active: '[*.on:active:hover>&]:bg-neutral-200/25',
                 focus:
-                  '[*.checked:focus:hover>&]:bg-neutral-200/25 [*.checked:focus>&]:bg-neutral-200/25'
+                  '[*.on:focus:hover>&]:bg-neutral-200/25 [*.on:focus>&]:bg-neutral-200/25'
               },
               'primary-on': {
-                hover: '[*.checked:hover>&]:bg-primary-200/20',
-                active: '[*.checked:active:hover>&]:bg-primary-200/25',
+                hover: '[*.on:hover>&]:bg-primary-200/20',
+                active: '[*.on:active:hover>&]:bg-primary-200/25',
                 focus:
-                  '[*.checked:focus:hover>&]:bg-primary-200/25 [*.checked:focus>&]:bg-primary-200/25'
+                  '[*.on:focus:hover>&]:bg-primary-200/25 [*.on:focus>&]:bg-primary-200/25'
               },
               'secondary-on': {
-                hover: '[*.checked:hover>&]:bg-secondary-200/20',
-                active: '[*.checked:active:hover>&]:bg-secondary-200/25',
+                hover: '[*.on:hover>&]:bg-secondary-200/20',
+                active: '[*.on:active:hover>&]:bg-secondary-200/25',
                 focus:
-                  '[*.checked:focus:hover>&]:bg-secondary-200/25 [*.checked:focus>&]:bg-secondary-200/25'
+                  '[*.on:focus:hover>&]:bg-secondary-200/25 [*.on:focus>&]:bg-secondary-200/25'
               },
               'tertiary-on': {
-                hover: '[*.checked:hover>&]:bg-tertiary-200/20',
-                active: '[*.checked:active:hover>&]:bg-tertiary-200/25',
+                hover: '[*.on:hover>&]:bg-tertiary-200/20',
+                active: '[*.on:active:hover>&]:bg-tertiary-200/25',
                 focus:
-                  '[*.checked:focus:hover>&]:bg-tertiary-200/25 [*.checked:focus>&]:bg-tertiary-200/25'
+                  '[*.on:focus:hover>&]:bg-tertiary-200/25 [*.on:focus>&]:bg-tertiary-200/25'
               },
               'success-on': {
-                hover: '[*.checked:hover>&]:bg-success-200/20',
-                active: '[*.checked:active:hover>&]:bg-success-200/25',
+                hover: '[*.on:hover>&]:bg-success-200/20',
+                active: '[*.on:active:hover>&]:bg-success-200/25',
                 focus:
-                  '[*.checked:focus:hover>&]:bg-success-200/25 [*.checked:focus>&]:bg-success-200/25'
+                  '[*.on:focus:hover>&]:bg-success-200/25 [*.on:focus>&]:bg-success-200/25'
               },
               'warning-on': {
-                hover: '[*.checked:hover>&]:bg-warning-200/20',
-                active: '[*.checked:active:hover>&]:bg-warning-200/25',
+                hover: '[*.on:hover>&]:bg-warning-200/20',
+                active: '[*.on:active:hover>&]:bg-warning-200/25',
                 focus:
-                  '[*.checked:focus:hover>&]:bg-warning-200/25 [*.checked:focus>&]:bg-warning-200/25'
+                  '[*.on:focus:hover>&]:bg-warning-200/25 [*.on:focus>&]:bg-warning-200/25'
               },
               'error-on': {
-                hover: '[*.checked:hover>&]:bg-error-200/20',
-                active: '[*.checked:active:hover>&]:bg-error-200/25',
+                hover: '[*.on:hover>&]:bg-error-200/20',
+                active: '[*.on:active:hover>&]:bg-error-200/25',
                 focus:
-                  '[*.checked:focus:hover>&]:bg-error-200/25 [*.checked:focus>&]:bg-error-200/25'
+                  '[*.on:focus:hover>&]:bg-error-200/25 [*.on:focus>&]:bg-error-200/25'
               }
             }
           }

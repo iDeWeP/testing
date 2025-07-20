@@ -45,6 +45,6 @@ export const getLoaderColor = (
 
   return variants[isDefault ? statefulVariant : variant](
     isDefault ? 'surface' : color.replace('-on', ''),
-    isDefault && color.endsWith('-on')
+    !isDefault && color.endsWith('-on')
   );
 };
