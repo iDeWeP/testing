@@ -4,7 +4,6 @@ import type {
   Orientation,
   Padding,
   Border,
-  DefaultBorder,
   Radius,
   Font,
   Color,
@@ -26,13 +25,6 @@ export type UnstyledDropdownDefaultProps = {
   pl?: Padding;
   pr?: Padding;
   border?: Border;
-  b?: DefaultBorder;
-  bx?: DefaultBorder;
-  by?: DefaultBorder;
-  bt?: DefaultBorder;
-  bb?: DefaultBorder;
-  bl?: DefaultBorder;
-  br?: DefaultBorder;
   radius?: Radius;
   r?: Radius;
   rt?: Radius;
