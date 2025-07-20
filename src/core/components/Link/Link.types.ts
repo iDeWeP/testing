@@ -11,30 +11,23 @@ import type {
 } from '../../types';
 import type {
   UnstyledButtonRippleProps,
-  UnstyledButtonSpinnerProps,
+  UnstyledButtonLoaderProps,
   UnstyledButtonBarProps,
-  UnstyledButtonTrailProps,
-  UnstyledButtonInnerBorderProps,
-  UnstyledButtonOuterBorderProps,
   UnstyledButtonOptionalProps,
   UnstyledButtonConfigProps,
   UnstyledButtonProps
 } from '../UnstyledButton/UnstyledButton.types';
 
 export type LinkRippleProps = UnstyledButtonRippleProps;
-export type LinkSpinnerProps = UnstyledButtonSpinnerProps;
+export type LinkLoaderProps = UnstyledButtonLoaderProps;
 export type LinkBarProps = UnstyledButtonBarProps;
-export type LinkTrailProps = UnstyledButtonTrailProps;
-export type LinkInnerBorderProps = UnstyledButtonInnerBorderProps;
-export type LinkOuterBorderProps = UnstyledButtonOuterBorderProps;
 
 export type LinkComponentsProps = {
   ripple?: LinkRippleProps;
-  spinner?: LinkSpinnerProps;
+  loader?: LinkLoaderProps;
   bar?: LinkBarProps;
-  trail?: LinkTrailProps;
-  innerBorder?: LinkInnerBorderProps;
-  outerBorder?: LinkOuterBorderProps;
+  innerBorder?: LinkBarProps;
+  outerBorder?: LinkBarProps;
 };
 
 export type LinkOptionalProps = Omit<UnstyledButtonOptionalProps, 'checked'>;

@@ -36,7 +36,7 @@ export type UnstyledButtonBarProps = UnstyledSpinnerBarProps;
 
 export type UnstyledButtonComponentsProps = {
   ripple?: UnstyledButtonRippleProps;
-  spinner?: UnstyledButtonLoaderProps;
+  loader?: UnstyledButtonLoaderProps;
   bar?: UnstyledButtonBarProps;
   innerBorder?: UnstyledButtonBarProps;
   outerBorder?: UnstyledButtonBarProps;

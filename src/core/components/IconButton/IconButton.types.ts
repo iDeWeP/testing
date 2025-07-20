@@ -10,29 +10,22 @@ import type {
 } from '../../types';
 import type {
   UnstyledButtonRippleProps,
-  UnstyledButtonSpinnerProps,
+  UnstyledButtonLoaderProps,
   UnstyledButtonBarProps,
-  UnstyledButtonTrailProps,
-  UnstyledButtonInnerBorderProps,
-  UnstyledButtonOuterBorderProps,
   UnstyledButtonConfigProps,
   UnstyledButtonProps
 } from '../UnstyledButton/UnstyledButton.types';
 
 export type IconButtonRippleProps = UnstyledButtonRippleProps;
-export type IconButtonSpinnerProps = UnstyledButtonSpinnerProps;
+export type IconButtonLoaderProps = UnstyledButtonLoaderProps;
 export type IconButtonBarProps = UnstyledButtonBarProps;
-export type IconButtonTrailProps = UnstyledButtonTrailProps;
-export type IconButtonInnerBorderProps = UnstyledButtonInnerBorderProps;
-export type IconButtonOuterBorderProps = UnstyledButtonOuterBorderProps;
 
 export type IconButtonComponentsProps = {
   ripple?: IconButtonRippleProps;
-  spinner?: IconButtonSpinnerProps;
+  loader?: IconButtonLoaderProps;
   bar?: IconButtonBarProps;
-  trail?: IconButtonTrailProps;
-  innerBorder?: IconButtonInnerBorderProps;
-  outerBorder?: IconButtonOuterBorderProps;
+  innerBorder?: IconButtonBarProps;
+  outerBorder?: IconButtonBarProps;
 };
 
 export type IconButtonOptionalProps = {

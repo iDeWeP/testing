@@ -13,30 +13,23 @@ import type {
 } from '../../types';
 import type {
   UnstyledButtonRippleProps,
-  UnstyledButtonSpinnerProps,
+  UnstyledButtonLoaderProps,
   UnstyledButtonBarProps,
-  UnstyledButtonTrailProps,
-  UnstyledButtonInnerBorderProps,
-  UnstyledButtonOuterBorderProps,
   UnstyledButtonOptionalProps,
   UnstyledButtonConfigProps,
   UnstyledButtonProps
 } from '../UnstyledButton/UnstyledButton.types';
 
 export type FabRippleProps = UnstyledButtonRippleProps;
-export type FabSpinnerProps = UnstyledButtonSpinnerProps;
+export type FabLoaderProps = UnstyledButtonLoaderProps;
 export type FabBarProps = UnstyledButtonBarProps;
-export type FabTrailProps = UnstyledButtonTrailProps;
-export type FabInnerBorderProps = UnstyledButtonInnerBorderProps;
-export type FabOuterBorderProps = UnstyledButtonOuterBorderProps;
 
 export type FabComponentsProps = {
   ripple?: FabRippleProps;
-  spinner?: FabSpinnerProps;
+  loader?: FabLoaderProps;
   bar?: FabBarProps;
-  trail?: FabTrailProps;
-  innerBorder?: FabInnerBorderProps;
-  outerBorder?: FabOuterBorderProps;
+  innerBorder?: FabBarProps;
+  outerBorder?: FabBarProps;
 };
 
 export type FabOptionalProps = Omit<UnstyledButtonOptionalProps, 'checked'>;

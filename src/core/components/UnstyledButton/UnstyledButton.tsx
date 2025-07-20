@@ -72,7 +72,7 @@ export const UnstyledButton = <E extends ElementType>(
         outerBorder: componentsProps.outerBorder,
         innerBorder: componentsProps.innerBorder
       }}
-      {...componentsProps.spinner}
+      {...componentsProps.loader}
     />
   );
 

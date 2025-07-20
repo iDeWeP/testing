@@ -11,30 +11,23 @@ import type {
 } from '../../types';
 import type {
   UnstyledButtonRippleProps,
-  UnstyledButtonSpinnerProps,
+  UnstyledButtonLoaderProps,
   UnstyledButtonBarProps,
-  UnstyledButtonTrailProps,
-  UnstyledButtonInnerBorderProps,
-  UnstyledButtonOuterBorderProps,
   UnstyledButtonOptionalProps,
   UnstyledButtonConfigProps,
   UnstyledButtonProps
 } from '../UnstyledButton/UnstyledButton.types';
 
 export type ToggleButtonRippleProps = UnstyledButtonRippleProps;
-export type ToggleButtonSpinnerProps = UnstyledButtonSpinnerProps;
+export type ToggleButtonLoaderProps = UnstyledButtonLoaderProps;
 export type ToggleButtonBarProps = UnstyledButtonBarProps;
-export type ToggleButtonTrailProps = UnstyledButtonTrailProps;
-export type ToggleButtonInnerBorderProps = UnstyledButtonInnerBorderProps;
-export type ToggleButtonOuterBorderProps = UnstyledButtonOuterBorderProps;
 
 export type ToggleButtonComponentsProps = {
   ripple?: ToggleButtonRippleProps;
-  spinner?: ToggleButtonSpinnerProps;
+  loader?: ToggleButtonLoaderProps;
   bar?: ToggleButtonBarProps;
-  trail?: ToggleButtonTrailProps;
-  innerBorder?: ToggleButtonInnerBorderProps;
-  outerBorder?: ToggleButtonOuterBorderProps;
+  innerBorder?: ToggleButtonBarProps;
+  outerBorder?: ToggleButtonBarProps;
 };
 
 export type ToggleButtonOptionalProps = UnstyledButtonOptionalProps;

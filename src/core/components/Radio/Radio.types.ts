@@ -16,11 +16,8 @@ import type {
 } from '../UnstyledCheckbox/UnstyledCheckbox.types';
 
 export type RadioContainerProps = UnstyledCheckboxContainerProps;
-
 export type RadioIconProps = UnstyledCheckboxIconProps;
-
 export type RadioTrailProps = UnstyledCheckboxTrailProps;
-
 export type RadioRippleProps = UnstyledCheckboxRippleProps;
 
 export type RadioComponentsProps = {

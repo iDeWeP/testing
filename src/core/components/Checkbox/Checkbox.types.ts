@@ -16,11 +16,8 @@ import type {
 } from '../UnstyledCheckbox/UnstyledCheckbox.types';
 
 export type CheckboxContainerProps = UnstyledCheckboxContainerProps;
-
 export type CheckboxIconProps = UnstyledCheckboxIconProps;
-
 export type CheckboxTrailProps = UnstyledCheckboxTrailProps;
-
 export type CheckboxRippleProps = UnstyledCheckboxRippleProps;
 
 export type CheckboxComponentsProps = {
