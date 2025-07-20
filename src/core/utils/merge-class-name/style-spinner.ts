@@ -1,10 +1,7 @@
-import { unstyledSpinnerConfig } from '../../components/UnstyledSpinner/unstyledSpinnerConfig';
 import { sharedStyles } from '../../config/shared-styles';
 import { systemStyles } from '../../config/system-styles';
 import type { Classes } from '../../types';
-import { getDefaultSize } from './get-default-size';
 import { getSpacing } from './get-spacing';
-import { isSpacingInner } from './is-spacing-inner';
 import { mergeClasses } from './merge-classes';
 
 export const styleSpinner = (
@@ -13,7 +10,6 @@ export const styleSpinner = (
     theme = 'light',
     disabled = false,
     spin = true,
-    float = false,
     size = 'md',
     margin = 'unset',
     m = 'unset',
@@ -26,16 +22,13 @@ export const styleSpinner = (
     ring = 'unset'
   }: Classes
 ) => {
-  const sizeType = isSpacingInner(size) ? 'text' : 'normal';
   const margins = getSpacing(margin);
   const hasRing = ring !== 'unset';
   const isSpinning = spin && !disabled;
 
   return mergeClasses(
-    unstyledSpinnerConfig.styles.root.default,
-    float && sharedStyles.position.absolute,
-    float && unstyledSpinnerConfig.styles.root.float[size],
-    systemStyles.size[sizeType].square[getDefaultSize(size)],
+    sharedStyles.spinner,
+    systemStyles.size.normal.square[size],
     systemStyles.margin.all[margins.all],
     systemStyles.margin.x[margins.x],
     systemStyles.margin.y[margins.y],
@@ -48,7 +41,7 @@ export const styleSpinner = (
     systemStyles.margin.r[mr],
     hasRing && systemStyles.color.normal.ring[theme][ring],
     hasRing && sharedStyles.ring.normal,
-    isSpinning && unstyledSpinnerConfig.styles.root.spin,
+    isSpinning && sharedStyles.animation.spin,
     !isSpinning && sharedStyles.rotate['-90'],
     disabled && sharedStyles.cursor.disabled,
     className
