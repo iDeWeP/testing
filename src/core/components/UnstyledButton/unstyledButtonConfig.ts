@@ -1,10 +1,9 @@
-import type { CSSProps, CSSStyles, ComponentConfig } from '../../types';
+import type { CSSStyles, ComponentConfig } from '../../types';
 import type { UnstyledButtonConfigProps } from './UnstyledButton.types';
 
 type Styles = {
   styles: {
     root: {
-      checked: CSSProps;
       loading: CSSStyles;
     };
   };
@@ -52,9 +51,6 @@ export const unstyledButtonConfig: ComponentConfig<UnstyledButtonConfigProps> &
   },
   styles: {
     root: {
-      checked: {
-        group: 'checked'
-      },
       loading: {
         normal: {
           opacity: 'opacity-50'
