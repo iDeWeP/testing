@@ -34,7 +34,7 @@ export const getColor = (
   variant: Variant,
   color: Color,
   states?: States,
-  isDefault?: boolean
+  isChecked?: boolean
 ) => {
   if (color === 'unset') {
     return {
@@ -44,10 +44,18 @@ export const getColor = (
     };
   }
 
-  if (isDefault === false && states?.disabled) {
+  if (isChecked === false && states?.disabled) {
+    return {
+      bg: hasVariantBg(variant) ? 'disabled-light' : 'none',
+      text: hasVariantBg(variant) ? 'disabled' : 'disabled-light',
+      ring: 'unset'
+    };
+  }
+
+  if (isChecked && states?.disabled) {
     return {
       bg: hasVariantBg(variant) ? 'disabled' : 'none',
-      text: hasVariantBg(variant) ? 'disabled-on' : 'disabled',
+      text: hasVariantBg(variant) ? 'disabled-light' : 'disabled',
       ring: 'unset'
     };
   }
@@ -60,11 +68,12 @@ export const getColor = (
     };
   }
 
-  const statefulVariant = hasVariantBg(variant) ? 'light' : 'text';
-  const statefulColor = isDefault ? 'surface' : color.replace('-on', '');
+  const isDefault = isChecked === false;
+  const defaultVariant = hasVariantBg(variant) ? 'light' : 'text';
+  const defaultColor = isDefault ? 'surface' : color.replace('-on', '');
 
-  return variants[isDefault ? statefulVariant : variant](
-    states?.valid ? 'success' : states?.invalid ? 'error' : statefulColor,
-    !isDefault && color.endsWith('-on')
+  return variants[isDefault ? defaultVariant : variant](
+    states?.valid ? 'success' : states?.invalid ? 'error' : defaultColor,
+    isDefault && color.endsWith('-on')
   );
 };
