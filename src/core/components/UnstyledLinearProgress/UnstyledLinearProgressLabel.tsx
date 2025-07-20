@@ -1,8 +1,9 @@
-import type { MergeComponentProps, Orientation, Gap } from '../../types';
+import type { MergeProps, Orientation, Gap } from '../../types';
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
+import type { UnstyledLinearProgressLabelProps } from './UnstyledLinearProgress.types';
 
-type Props = MergeComponentProps<
-  'span',
+type Props = MergeProps<
+  UnstyledLinearProgressLabelProps,
   {
     orientation: Orientation;
     gap: Gap;

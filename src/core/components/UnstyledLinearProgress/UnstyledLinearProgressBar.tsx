@@ -1,14 +1,15 @@
 import type {
-  MergeComponentProps,
+  MergeProps,
   Theme,
+  Variant,
   Orientation,
-  Color,
-  Variant
+  Color
 } from '../../types';
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
+import type { UnstyledLinearProgressBarProps } from './UnstyledLinearProgress.types';
 
-type Props = MergeComponentProps<
-  'div',
+type Props = MergeProps<
+  UnstyledLinearProgressBarProps,
   {
     theme: Theme;
     disabled: boolean;
