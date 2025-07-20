@@ -5,7 +5,6 @@ import type {
   Scale,
   Margin,
   Border,
-  DefaultBorder,
   Radius,
   Color,
   Shadow,
@@ -27,13 +26,6 @@ export type UnstyledContainerDefaultProps = {
   ml?: Margin;
   mr?: Margin;
   border?: Border;
-  b?: DefaultBorder;
-  bx?: DefaultBorder;
-  by?: DefaultBorder;
-  bt?: DefaultBorder;
-  bb?: DefaultBorder;
-  bl?: DefaultBorder;
-  br?: DefaultBorder;
   radius?: Radius;
   r?: Radius;
   rt?: Radius;
