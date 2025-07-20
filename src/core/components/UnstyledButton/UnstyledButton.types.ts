@@ -30,7 +30,6 @@ export type UnstyledButtonLoaderProps = MergeProps<
     border?: SpinnerBorder;
     color?: Color;
     ring?: Color;
-    trail?: boolean;
   }
 >;
 export type UnstyledButtonBarProps = UnstyledSpinnerBarProps;
