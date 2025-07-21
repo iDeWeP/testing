@@ -1,8 +1,10 @@
 import { unstyledCheckboxConfig } from '../../components/UnstyledCheckbox/unstyledCheckboxConfig';
+import { sharedStyles } from '../../config/shared-styles';
 import { systemStyles } from '../../config/system-styles';
 import type { Classes } from '../../types';
 import { isAutoBordered } from '../is-auto-bordered/is-auto-bordered';
 import { getColor } from './get-color';
+import { getFocusableState } from './get-focusable-state';
 import { mergeClasses } from './merge-classes';
 
 export const styleCheckboxTrail = (
@@ -14,7 +16,7 @@ export const styleCheckboxTrail = (
     disabled = false,
     variant = 'solid',
     defaultSize = 'md',
-    border = 'unset',
+    defaultBorder = 'unset',
     radius = 'unset',
     r = 'unset',
     rt = 'unset',
@@ -29,14 +31,16 @@ export const styleCheckboxTrail = (
     shadow = 'unset'
   }: Classes
 ) => {
-  const isBordered = isAutoBordered(variant, border);
+  const focusable = getFocusableState({ disabled }, true);
+  const isBordered = isAutoBordered(variant, defaultBorder);
   const colors = getColor(variant, color, { disabled, valid, invalid }, false);
 
   return mergeClasses(
     unstyledCheckboxConfig.styles.shared.default,
     unstyledCheckboxConfig.styles.trail.default,
+    sharedStyles.focusable[focusable],
     systemStyles.size.text.square[defaultSize],
-    systemStyles.border.all[border],
+    systemStyles.border.all[defaultBorder],
     systemStyles.radius.all[radius],
     systemStyles.radius.all[r],
     systemStyles.radius.t[rt],

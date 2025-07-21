@@ -1,9 +1,11 @@
 import { unstyledCheckboxConfig } from '../../components/UnstyledCheckbox/unstyledCheckboxConfig';
+import { sharedStyles } from '../../config/shared-styles';
 import { systemStyles } from '../../config/system-styles';
 import type { Classes } from '../../types';
 import { isAutoBordered } from '../is-auto-bordered/is-auto-bordered';
 import { getBorder } from './get-border';
 import { getColor } from './get-color';
+import { getFocusableState } from './get-focusable-state';
 import { mergeClasses } from './merge-classes';
 
 export const styleCheckboxIcon = (
@@ -30,6 +32,7 @@ export const styleCheckboxIcon = (
     shadow = 'unset'
   }: Classes
 ) => {
+  const focusable = getFocusableState({ disabled }, true);
   const defaultBorder = getBorder(variant, border).all;
   const isBordered = isAutoBordered(variant, border);
   const colors = getColor(variant, color, { disabled, valid, invalid }, true);
@@ -37,6 +40,7 @@ export const styleCheckboxIcon = (
   return mergeClasses(
     unstyledCheckboxConfig.styles.shared.default,
     unstyledCheckboxConfig.styles.icon.default,
+    sharedStyles.focusable[focusable],
     systemStyles.size.text.square[defaultSize],
     systemStyles.border.all[defaultBorder],
     systemStyles.radius.all[radius],
