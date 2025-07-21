@@ -3,7 +3,7 @@ import type {
   MergeProps,
   Variant,
   DefaultSize,
-  InnerScale,
+  SwitchScale,
   Border,
   Radius,
   Color,
@@ -20,7 +20,7 @@ type Props = MergeProps<
     disabled: boolean;
     variant: Variant;
     defaultSize: DefaultSize;
-    innerScale: InnerScale;
+    switchScale: SwitchScale;
     border: Border;
     radius: Radius;
     r: Radius;
@@ -43,7 +43,7 @@ export const UnstyledSwitchBar = ({
   disabled,
   variant,
   defaultSize,
-  innerScale,
+  switchScale,
   border,
   radius,
   r,
@@ -69,7 +69,7 @@ export const UnstyledSwitchBar = ({
     disabled,
     variant,
     defaultSize,
-    innerScale,
+    switchScale,
     border,
     radius,
     r,

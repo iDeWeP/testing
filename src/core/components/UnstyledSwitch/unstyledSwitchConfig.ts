@@ -1,13 +1,18 @@
-import type { CSSProps, CSSStyles, Theme, ComponentConfig } from '../../types';
+import type {
+  SwitchScale,
+  CSSStyles,
+  CSSProps,
+  Theme,
+  ComponentConfig
+} from '../../types';
 import type { UnstyledSwitchConfigProps } from './UnstyledSwitch.types';
 
-type SizeType = 'normal' | 'inner';
-type PlacementType = 'normal' | 'decorated';
+type PlacementType = 'default' | 'decorated';
 
 type Styles = {
   styles: {
     root: {
-      size: Record<SizeType, Record<PlacementType, CSSStyles>>;
+      size: Record<SwitchScale, Record<PlacementType, CSSStyles>>;
     };
     icon: {
       default: CSSProps;
@@ -19,7 +24,7 @@ type Styles = {
       placement: CSSStyles;
     };
     shared: {
-      size: Record<SizeType, CSSStyles>;
+      size: Record<SwitchScale, CSSStyles>;
     };
   };
 };
@@ -29,7 +34,7 @@ export const unstyledSwitchConfig: ComponentConfig<UnstyledSwitchConfigProps> &
   props: {
     variant: 'solid',
     size: 'md',
-    scale: 'normal',
+    scale: 'default',
     margin: 'unset',
     m: 'unset',
     mx: 'unset',
@@ -39,7 +44,7 @@ export const unstyledSwitchConfig: ComponentConfig<UnstyledSwitchConfigProps> &
     ml: 'unset',
     mr: 'unset',
     border: 'auto',
-    radius: 'full',
+    radius: 'unset',
     r: 'unset',
     rt: 'unset',
     rb: 'unset',
@@ -57,7 +62,27 @@ export const unstyledSwitchConfig: ComponentConfig<UnstyledSwitchConfigProps> &
   styles: {
     root: {
       size: {
-        normal: {
+        default: {
+          default: {
+            xs: {
+              width: 'w-6'
+            },
+            sm: {
+              width: 'w-8'
+            },
+            md: {
+              width: 'w-10'
+            },
+            lg: {
+              width: 'w-12'
+            },
+            xl: {
+              width: 'w-14'
+            },
+            xxl: {
+              width: 'w-16'
+            }
+          },
           decorated: {
             xs: {
               width: 'w-10'
@@ -77,8 +102,10 @@ export const unstyledSwitchConfig: ComponentConfig<UnstyledSwitchConfigProps> &
             xxl: {
               width: 'w-40'
             }
-          },
-          normal: {
+          }
+        },
+        slider: {
+          default: {
             xs: {
               width: 'w-6'
             },
@@ -97,9 +124,7 @@ export const unstyledSwitchConfig: ComponentConfig<UnstyledSwitchConfigProps> &
             xxl: {
               width: 'w-16'
             }
-          }
-        },
-        inner: {
+          },
           decorated: {
             xs: {
               width: 'w-8'
@@ -119,26 +144,6 @@ export const unstyledSwitchConfig: ComponentConfig<UnstyledSwitchConfigProps> &
             xxl: {
               width: 'w-28'
             }
-          },
-          normal: {
-            xs: {
-              width: 'w-6'
-            },
-            sm: {
-              width: 'w-8'
-            },
-            md: {
-              width: 'w-10'
-            },
-            lg: {
-              width: 'w-12'
-            },
-            xl: {
-              width: 'w-14'
-            },
-            xxl: {
-              width: 'w-16'
-            }
           }
         }
       }
@@ -154,7 +159,7 @@ export const unstyledSwitchConfig: ComponentConfig<UnstyledSwitchConfigProps> &
         pointerEvents: 'pointer-events-none'
       },
       placement: {
-        normal: {
+        default: {
           xs: {
             group: 'peer-checked:left-3'
           },
@@ -408,7 +413,7 @@ export const unstyledSwitchConfig: ComponentConfig<UnstyledSwitchConfigProps> &
     },
     shared: {
       size: {
-        normal: {
+        default: {
           xs: {
             height: 'h-3',
             width: 'w-6'
@@ -434,7 +439,7 @@ export const unstyledSwitchConfig: ComponentConfig<UnstyledSwitchConfigProps> &
             width: 'w-16'
           }
         },
-        inner: {
+        slider: {
           xs: {
             height: 'h-2',
             width: 'w-5'

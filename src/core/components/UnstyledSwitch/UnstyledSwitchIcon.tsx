@@ -4,7 +4,7 @@ import type {
   MergeProps,
   Variant,
   DefaultSize,
-  InnerScale,
+  SwitchScale,
   Color,
   SVGNodeProps
 } from '../../types';
@@ -18,7 +18,7 @@ type Props = MergeProps<
     disabled: boolean;
     variant: Variant;
     defaultSize: DefaultSize;
-    innerScale: InnerScale;
+    switchScale: SwitchScale;
     color: Color;
     decorated: boolean;
     children?: SVGNodeProps;
@@ -29,7 +29,7 @@ export const UnstyledSwitchIcon = ({
   disabled,
   variant,
   defaultSize,
-  innerScale,
+  switchScale,
   color,
   decorated,
   className,
@@ -43,7 +43,7 @@ export const UnstyledSwitchIcon = ({
     disabled,
     variant,
     defaultSize,
-    innerScale,
+    switchScale,
     color,
     decorated
   });

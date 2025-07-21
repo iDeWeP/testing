@@ -1,10 +1,10 @@
 import type {
   MergeProps,
   Variant,
-  InnerScale,
+  DefaultSize,
+  SwitchScale,
   Color,
-  RippleEffect,
-  DefaultSize
+  RippleEffect
 } from '../../types';
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
 import { UnstyledRipple } from '../UnstyledRipple/UnstyledRipple';
@@ -17,7 +17,7 @@ type Props = MergeProps<
     invalid: boolean;
     variant: Variant;
     defaultSize: DefaultSize;
-    innerScale: InnerScale;
+    switchScale: SwitchScale;
     color: Color;
     effect: RippleEffect;
   }
@@ -25,19 +25,19 @@ type Props = MergeProps<
 
 export const UnstyledSwitchRipple = ({
   defaultSize,
-  innerScale,
+  switchScale,
   className,
   ...restProps
 }: Props) => {
   const mergedClassName = mergeClassName('switchRipple', className, {
     defaultSize,
-    innerScale
+    switchScale
   });
 
   return (
     <UnstyledRipple
       stateful
-      scale="normal"
+      scale="peer"
       className={mergedClassName}
       {...restProps}
     />

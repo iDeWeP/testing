@@ -1,6 +1,7 @@
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
 import { mergeProps } from '../../utils/merge-props/merge-props';
 import { setAria } from '../../utils/set-aria/set-aria';
+import { setProps } from '../../utils/set-props/set-props';
 import { setRippleVariant } from '../../utils/set-ripple-variant/set-ripple-variant';
 import type { UnstyledSwitchProps } from './UnstyledSwitch.types';
 import { UnstyledSwitchBar } from './UnstyledSwitchBar';
@@ -17,7 +18,7 @@ export const UnstyledSwitch = (props: UnstyledSwitchProps) => {
     disabled = false,
     variant,
     size: defaultSize,
-    scale: innerScale,
+    scale: switchScale,
     margin,
     m,
     mx,
@@ -57,7 +58,7 @@ export const UnstyledSwitch = (props: UnstyledSwitchProps) => {
   return (
     <UnstyledSwitchContainer
       defaultSize={defaultSize}
-      innerScale={innerScale}
+      switchScale={switchScale}
       margin={margin}
       m={m}
       mx={mx}
@@ -72,7 +73,7 @@ export const UnstyledSwitch = (props: UnstyledSwitchProps) => {
       <input
         disabled={disabled}
         className={mergedClassName}
-        type="checkbox"
+        {...setProps('switch')}
         {...setAria('switch')}
         {...restProps}
       />
@@ -82,7 +83,7 @@ export const UnstyledSwitch = (props: UnstyledSwitchProps) => {
         disabled={disabled}
         variant={variant}
         defaultSize={defaultSize}
-        innerScale={innerScale}
+        switchScale={switchScale}
         radius={radius}
         r={r}
         rt={rt}
@@ -102,7 +103,7 @@ export const UnstyledSwitch = (props: UnstyledSwitchProps) => {
         disabled={disabled}
         variant={variant}
         defaultSize={defaultSize}
-        innerScale={innerScale}
+        switchScale={switchScale}
         border={border}
         radius={radius}
         r={r}
@@ -121,7 +122,7 @@ export const UnstyledSwitch = (props: UnstyledSwitchProps) => {
         disabled={disabled}
         variant={variant}
         defaultSize={defaultSize}
-        innerScale={innerScale}
+        switchScale={switchScale}
         color={color}
         decorated={hasRipple}
         {...componentsProps.icon}
@@ -134,7 +135,7 @@ export const UnstyledSwitch = (props: UnstyledSwitchProps) => {
           invalid={invalid}
           variant={setRippleVariant(variant)}
           defaultSize={defaultSize}
-          innerScale={innerScale}
+          switchScale={switchScale}
           color={color}
           effect={ripple}
           {...componentsProps.ripple}
