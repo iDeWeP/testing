@@ -10,7 +10,7 @@ const types = {
     element === 'button' && {
       disabled,
       type: 'button'
-    },
+    }
 };
 
 export const setProps = (type: keyof typeof types, values: Values = {}) =>
