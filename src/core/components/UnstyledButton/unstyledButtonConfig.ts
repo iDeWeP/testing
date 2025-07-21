@@ -1,10 +1,9 @@
-import type { CSSProps, CSSStyles, ComponentConfig } from '../../types';
+import type { CSSStyles, ComponentConfig } from '../../types';
 import type { UnstyledButtonConfigProps } from './UnstyledButton.types';
 
 type Styles = {
   styles: {
     root: {
-      checkable: CSSProps;
       loading: CSSStyles;
     };
   };
@@ -45,11 +44,6 @@ export const unstyledButtonConfig: ComponentConfig<UnstyledButtonConfigProps> &
   },
   styles: {
     root: {
-      checkable: {
-        transition: 'transition-colors',
-        transitionDuration: 'duration-150',
-        transitionTimingFunction: 'ease-in-out'
-      },
       loading: {
         normal: {
           color: 'text-transparent',
