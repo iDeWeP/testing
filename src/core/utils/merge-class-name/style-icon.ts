@@ -21,13 +21,6 @@ export const styleIcon = (
     ml = 'unset',
     mr = 'unset',
     border = 'auto',
-    b = 'unset',
-    bx = 'unset',
-    by = 'unset',
-    bt = 'unset',
-    bb = 'unset',
-    bl = 'unset',
-    br = 'unset',
     radius = 'unset',
     r = 'unset',
     rt = 'unset',
@@ -44,6 +37,7 @@ export const styleIcon = (
   }: Classes
 ) => {
   const margins = getSpacing(margin);
+  const defaultBorder = getBorder(variant, border).all;
   const colors = getColor(variant, color);
   const hasRing = ring !== 'unset';
 
@@ -59,14 +53,7 @@ export const styleIcon = (
     systemStyles.margin.b[mb],
     systemStyles.margin.l[ml],
     systemStyles.margin.r[mr],
-    systemStyles.border.all[getBorder(variant, border).all],
-    systemStyles.border.all[b],
-    systemStyles.border.x[bx],
-    systemStyles.border.y[by],
-    systemStyles.border.t[bt],
-    systemStyles.border.b[bb],
-    systemStyles.border.l[bl],
-    systemStyles.border.r[br],
+    systemStyles.border.all[defaultBorder],
     systemStyles.radius.all[radius],
     systemStyles.radius.all[r],
     systemStyles.radius.t[rt],

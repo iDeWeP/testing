@@ -16,11 +16,12 @@ export const styleCircularProgressLabel = (
     color = 'unset'
   }: Classes
 ) => {
+  const fontSize = getFontSize(size);
   const textColor = getColor(variant, color, { disabled }).text;
 
   return mergeClasses(
     circularProgressConfig.styles.label.default,
-    systemStyles.size.font[getFontSize(size)],
+    systemStyles.size.font[fontSize],
     systemStyles.color.normal.text[theme][textColor],
     systemStyles.color.normal.fill[theme][textColor],
     disabled && sharedStyles.cursor.none,
