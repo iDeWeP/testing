@@ -6,13 +6,13 @@ import type {
 } from '../../types';
 import type { UnstyledLinearProgressConfigProps } from './UnstyledLinearProgress.types';
 
-type SpacingType = 'default' | 'decorated';
+type SizeType = 'default' | 'decorated';
 
 type Styles = {
   styles: {
     root: {
       orientation: CSSStyles;
-      size: Record<Orientation, Record<SpacingType, CSSStyles>>;
+      size: Record<Orientation, Record<SizeType, CSSStyles>>;
     };
     bar: {
       default: CSSProps;
