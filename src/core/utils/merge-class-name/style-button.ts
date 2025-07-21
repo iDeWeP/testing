@@ -52,6 +52,7 @@ export const styleButton = (
       isCheckable &&
       unstyledButtonConfig.styles.root.loading.checkable,
     sharedStyles.effect[effect],
+    isCheckable && unstyledButtonConfig.styles.root.checkable,
     className
   );
 };
