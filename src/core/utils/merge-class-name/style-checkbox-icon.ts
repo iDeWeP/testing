@@ -1,9 +1,9 @@
 import { unstyledCheckboxConfig } from '../../components/UnstyledCheckbox/unstyledCheckboxConfig';
 import { systemStyles } from '../../config/system-styles';
 import type { Classes } from '../../types';
+import { isAutoBordered } from '../is-auto-bordered/is-auto-bordered';
 import { getBorder } from './get-border';
 import { getColor } from './get-color';
-import { isAutoBordered } from './is-auto-bordered';
 import { mergeClasses } from './merge-classes';
 
 export const styleCheckboxIcon = (
@@ -16,13 +16,6 @@ export const styleCheckboxIcon = (
     variant = 'solid',
     defaultSize = 'md',
     border = 'unset',
-    b = 'unset',
-    bx = 'unset',
-    by = 'unset',
-    bt = 'unset',
-    bb = 'unset',
-    bl = 'unset',
-    br = 'unset',
     radius = 'unset',
     r = 'unset',
     rt = 'unset',
@@ -37,21 +30,15 @@ export const styleCheckboxIcon = (
     shadow = 'unset'
   }: Classes
 ) => {
-  const isBordered = isAutoBordered(border, b, bx, by, bt, bb, bl, br, variant);
+  const defaultBorder = getBorder(variant, border).all;
+  const isBordered = isAutoBordered(variant, border);
   const colors = getColor(variant, color, { disabled, valid, invalid }, true);
 
   return mergeClasses(
     unstyledCheckboxConfig.styles.shared.default,
     unstyledCheckboxConfig.styles.icon.default,
     systemStyles.size.text.square[defaultSize],
-    systemStyles.border.all[getBorder(variant, border).all],
-    systemStyles.border.all[b],
-    systemStyles.border.x[bx],
-    systemStyles.border.y[by],
-    systemStyles.border.t[bt],
-    systemStyles.border.b[bb],
-    systemStyles.border.l[bl],
-    systemStyles.border.r[br],
+    systemStyles.border.all[defaultBorder],
     systemStyles.radius.all[radius],
     systemStyles.radius.all[r],
     systemStyles.radius.t[rt],
