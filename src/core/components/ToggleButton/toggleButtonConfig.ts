@@ -4,7 +4,7 @@ import type { ToggleButtonConfigProps } from './ToggleButton.types';
 export const toggleButtonConfig: ComponentConfig<ToggleButtonConfigProps> = {
   props: {
     as: 'button',
-    variant: 'solid',
+    variant: 'light',
     size: 'md',
     scale: 'normal',
     radius: 'md',
@@ -21,13 +21,6 @@ export const toggleButtonConfig: ComponentConfig<ToggleButtonConfigProps> = {
     ml: 'unset',
     mr: 'unset',
     border: 'auto',
-    b: 'unset',
-    bx: 'unset',
-    by: 'unset',
-    bt: 'unset',
-    bb: 'unset',
-    bl: 'unset',
-    br: 'unset',
     r: 'unset',
     rt: 'unset',
     rb: 'unset',
