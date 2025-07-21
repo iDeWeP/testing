@@ -14,6 +14,8 @@ type Props = MergeProps<
   UnstyledInputDecoratorProps,
   {
     inputType: 'input' | 'textarea';
+    valid: boolean;
+    invalid: boolean;
     disabled: boolean;
     inputVariant: InputVariant;
     sidePlacement: SidePlacement;
@@ -34,6 +36,8 @@ type Props = MergeProps<
 
 export const UnstyledInputDecorator = ({
   inputType,
+  valid,
+  invalid,
   disabled,
   inputVariant,
   sidePlacement,
@@ -58,6 +62,8 @@ export const UnstyledInputDecorator = ({
   const mergedClassName = mergeClassName('inputDecorator', className, {
     inputType,
     theme,
+    valid,
+    invalid,
     disabled,
     inputVariant,
     sidePlacement,

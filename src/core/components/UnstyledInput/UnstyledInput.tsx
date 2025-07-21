@@ -101,6 +101,8 @@ export const UnstyledInput = <E extends ElementType>(
     >
       <UnstyledInputDecorator
         inputType={Component}
+        valid={valid}
+        invalid={invalid}
         disabled={disabled}
         inputVariant={variant}
         sidePlacement="left"
@@ -123,6 +125,8 @@ export const UnstyledInput = <E extends ElementType>(
       <UnstyledInputFieldset
         inputType={Component}
         on={shifted ?? (!!label && (isFocused || !!value))}
+        valid={valid}
+        invalid={invalid}
         disabled={disabled}
         inputVariant={variant}
         color={color}
@@ -136,7 +140,7 @@ export const UnstyledInput = <E extends ElementType>(
           placeholder={setProp(isFocused, placeholder)}
           type="text"
           className={mergedClassName}
-          {...setAria('input', { isInvalid: invalid })}
+          {...setAria('input', { invalid })}
           onFocus={combineHandlers(onFocus, handleFocus)}
           onBlur={combineHandlers(onBlur, handleBlur)}
           {...restProps}
@@ -164,6 +168,8 @@ export const UnstyledInput = <E extends ElementType>(
       </UnstyledInputFieldset>
       <UnstyledInputDecorator
         inputType={Component}
+        valid={valid}
+        invalid={invalid}
         disabled={disabled}
         inputVariant={variant}
         sidePlacement="right"

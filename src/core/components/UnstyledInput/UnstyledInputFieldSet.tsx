@@ -8,6 +8,8 @@ type Props = MergeProps<
   {
     inputType: 'input' | 'textarea';
     on: boolean;
+    valid: boolean;
+    invalid: boolean;
     disabled: boolean;
     inputVariant: InputVariant;
     color: Color;
@@ -17,6 +19,8 @@ type Props = MergeProps<
 export const UnstyledInputFieldset = ({
   inputType,
   on,
+  valid,
+  invalid,
   disabled,
   inputVariant,
   color,
@@ -29,6 +33,8 @@ export const UnstyledInputFieldset = ({
     inputType,
     theme,
     on,
+    valid,
+    invalid,
     disabled,
     inputVariant,
     color
