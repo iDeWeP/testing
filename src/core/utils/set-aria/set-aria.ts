@@ -3,8 +3,8 @@ import type { Orientation } from '../../types';
 
 type Values = {
   element?: ElementType;
-  isInvalid?: boolean;
-  isDisabled?: boolean;
+  invalid?: boolean;
+  disabled?: boolean;
   min?: number;
   max?: number;
   value?: number;
@@ -12,10 +12,10 @@ type Values = {
 };
 
 const types = {
-  button: ({ element, isDisabled }: Values) =>
+  button: ({ element, disabled }: Values) =>
     element !== 'button' && {
       role: 'button',
-      ...(isDisabled ? { 'aria-disabled': true } : { tabIndex: 0 })
+      ...(disabled ? { 'aria-disabled': true } : { tabIndex: 0 })
     },
   divider: ({ orientation }: Values) => ({
     role: 'separator',
@@ -24,7 +24,7 @@ const types = {
       | 'vertical'
   }),
   icon: () => ({ 'aria-hidden': true }),
-  input: ({ isInvalid }: Values) => ({ 'aria-invalid': !!isInvalid }),
+  input: ({ invalid }: Values) => ({ 'aria-invalid': !!invalid }),
   linearProgress: ({ min, max, value }: Values) => ({
     role: 'progressbar',
     'aria-valuemin': min,
