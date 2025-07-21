@@ -35,13 +35,6 @@ export const unstyledCheckboxConfig: ComponentConfig<UnstyledCheckboxConfigProps
     ml: 'unset',
     mr: 'unset',
     border: 'auto',
-    b: 'unset',
-    bx: 'unset',
-    by: 'unset',
-    bt: 'unset',
-    bb: 'unset',
-    bl: 'unset',
-    br: 'unset',
     radius: 'unset',
     r: 'unset',
     rt: 'unset',
@@ -90,12 +83,10 @@ export const unstyledCheckboxConfig: ComponentConfig<UnstyledCheckboxConfigProps
         top: 'top-2/4',
         left: 'left-2/4',
         translate: '-translate-x-2/4 -translate-y-2/4',
-        ring: 'ring-offset-1',
         transition: 'transition-opacity',
         transitionDuration: 'duration-150',
         transitionTimingFunction: 'ease-in-out',
-        pointerEvents: 'pointer-events-none',
-        group: 'peer-focus-visible:ring-4'
+        pointerEvents: 'pointer-events-none'
       }
     }
   }

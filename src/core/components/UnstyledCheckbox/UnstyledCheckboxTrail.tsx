@@ -3,7 +3,6 @@ import type {
   MergeProps,
   Variant,
   DefaultSize,
-  Border,
   DefaultBorder,
   Radius,
   Color,
@@ -20,14 +19,7 @@ type Props = MergeProps<
     disabled: boolean;
     variant: Variant;
     defaultSize: DefaultSize;
-    border?: Border;
-    b?: DefaultBorder;
-    bx?: DefaultBorder;
-    by?: DefaultBorder;
-    bt?: DefaultBorder;
-    bb?: DefaultBorder;
-    bl?: DefaultBorder;
-    br?: DefaultBorder;
+    border?: DefaultBorder;
     radius: Radius;
     r: Radius;
     rt: Radius;
@@ -49,14 +41,7 @@ export const UnstyledCheckboxTrail = ({
   disabled,
   variant,
   defaultSize,
-  border = 'set',
-  b,
-  bx,
-  by,
-  bt,
-  bb,
-  bl,
-  br,
+  border: defaultBorder = 'set',
   radius,
   r,
   rt,
@@ -81,14 +66,7 @@ export const UnstyledCheckboxTrail = ({
     disabled,
     variant,
     defaultSize,
-    border,
-    b,
-    bx,
-    by,
-    bt,
-    bb,
-    bl,
-    br,
+    defaultBorder,
     radius,
     r,
     rt,

@@ -30,18 +30,11 @@ export type UnstyledCheckboxContainerProps = {
 
 export type UnstyledCheckboxIconProps = Omit<
   ComponentRefProps<'svg'>,
-  'by' | 'radius' | 'r'
+  'radius' | 'r'
 >;
 
 export type UnstyledCheckboxTrailProps = {
   border?: DefaultBorder;
-  b?: DefaultBorder;
-  bx?: DefaultBorder;
-  by?: DefaultBorder;
-  bt?: DefaultBorder;
-  bb?: DefaultBorder;
-  bl?: DefaultBorder;
-  br?: DefaultBorder;
 } & ComponentRefProps<'span'>;
 
 export type UnstyledCheckboxRippleProps = {
@@ -75,13 +68,6 @@ export type UnstyledCheckboxDefaultProps = {
   ml?: Margin;
   mr?: Margin;
   border?: Border;
-  b?: DefaultBorder;
-  bx?: DefaultBorder;
-  by?: DefaultBorder;
-  bt?: DefaultBorder;
-  bb?: DefaultBorder;
-  bl?: DefaultBorder;
-  br?: DefaultBorder;
   radius?: Radius;
   r?: Radius;
   rt?: Radius;

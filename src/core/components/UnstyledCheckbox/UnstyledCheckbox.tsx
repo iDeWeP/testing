@@ -26,13 +26,6 @@ export const UnstyledCheckbox = (props: UnstyledCheckboxProps) => {
     ml,
     mr,
     border,
-    b,
-    bx,
-    by,
-    bt,
-    bb,
-    bl,
-    br,
     radius,
     r,
     rt,
@@ -106,13 +99,6 @@ export const UnstyledCheckbox = (props: UnstyledCheckboxProps) => {
         variant={variant}
         defaultSize={size}
         border={border}
-        b={b}
-        bx={bx}
-        by={by}
-        bt={bt}
-        bb={bb}
-        bl={bl}
-        br={br}
         radius={radius}
         r={r}
         rt={rt}

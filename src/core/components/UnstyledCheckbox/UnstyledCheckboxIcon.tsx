@@ -5,7 +5,6 @@ import type {
   Variant,
   DefaultSize,
   Border,
-  DefaultBorder,
   Radius,
   Color,
   Shadow,
@@ -26,13 +25,6 @@ type Props = MergeProps<
     variant: Variant;
     defaultSize: DefaultSize;
     border: Border;
-    b: DefaultBorder;
-    bx: DefaultBorder;
-    by: DefaultBorder;
-    bt: DefaultBorder;
-    bb: DefaultBorder;
-    bl: DefaultBorder;
-    br: DefaultBorder;
     radius: Radius;
     r: Radius;
     rt: Radius;
@@ -57,13 +49,6 @@ export const UnstyledCheckboxIcon = ({
   variant,
   defaultSize,
   border,
-  b,
-  bx,
-  by,
-  bt,
-  bb,
-  bl,
-  br,
   radius,
   r,
   rt,
@@ -93,13 +78,6 @@ export const UnstyledCheckboxIcon = ({
       variant,
       defaultSize,
       border,
-      b,
-      bx,
-      by,
-      bt,
-      bb,
-      bl,
-      br,
       radius,
       r,
       rt,
