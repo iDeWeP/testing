@@ -7,7 +7,7 @@ export const getInputColor = (
   isValid: boolean,
   isInvalid: boolean
 ) => {
-  if (color === 'unset' || variant !== 'light') {
+  if (color === 'unset' || (variant !== 'light' && !isDisabled)) {
     return 'unset';
   }
 
