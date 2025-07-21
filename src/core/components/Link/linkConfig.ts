@@ -6,7 +6,7 @@ export const linkConfig: ComponentConfig<LinkConfigProps> = {
     as: 'a',
     variant: 'solid',
     size: 'md',
-    scale: 'normal',
+    scale: 'default',
     radius: 'full',
     color: 'primary',
     effect: 'unset',

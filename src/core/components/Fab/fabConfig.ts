@@ -8,7 +8,7 @@ export const fabConfig: ComponentConfig<FabConfigProps> = {
     placement: 'bottom-right',
     variant: 'solid',
     size: 'md',
-    scale: 'normal',
+    scale: 'default',
     radius: 'full',
     color: 'primary',
     effect: 'unset',

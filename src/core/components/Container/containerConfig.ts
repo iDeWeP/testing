@@ -6,7 +6,7 @@ export const containerConfig: ComponentConfig<ContainerConfigProps> = {
     as: 'div',
     variant: 'solid',
     size: 'md',
-    scale: 'normal',
+    scale: 'default',
     radius: 'full',
     color: 'primary',
     margin: 'unset',

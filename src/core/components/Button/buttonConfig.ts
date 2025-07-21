@@ -6,7 +6,7 @@ export const buttonConfig: ComponentConfig<ButtonConfigProps> = {
     as: 'button',
     variant: 'solid',
     size: 'md',
-    scale: 'normal',
+    scale: 'default',
     radius: 'full',
     color: 'primary',
     effect: 'unset',

@@ -10,7 +10,7 @@ export const inputConfig: ComponentConfig<InputConfigProps> = {
     color: 'primary',
     componentsProps: {},
     resize: false,
-    width: 'normal',
+    width: 'default',
     margin: 'unset',
     m: 'unset',
     mx: 'unset',
