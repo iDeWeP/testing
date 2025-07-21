@@ -6,7 +6,6 @@ import { isAutoBordered } from '../is-auto-bordered/is-auto-bordered';
 import { getBorder } from './get-border';
 import { getColor } from './get-color';
 import { getSpacing } from './get-spacing';
-import { getSpacingType } from './get-spacing-type';
 import { mergeClasses } from './merge-classes';
 
 export const styleLinearProgress = (
@@ -42,7 +41,7 @@ export const styleLinearProgress = (
     decorated = false
   }: Classes
 ) => {
-  const spacingType = getSpacingType(decorated);
+  const sizeType = decorated ? 'decorated' : 'default';
   const margins = getSpacing(margin);
   const defaultBorder = getBorder(variant, border).all;
   const isBordered = isAutoBordered(variant, border);
@@ -51,9 +50,7 @@ export const styleLinearProgress = (
 
   return mergeClasses(
     unstyledLinearProgressConfig.styles.root.orientation[orientation],
-    unstyledLinearProgressConfig.styles.root.size[orientation][spacingType][
-      size
-    ],
+    unstyledLinearProgressConfig.styles.root.size[orientation][sizeType][size],
     systemStyles.margin.all[margins.all],
     systemStyles.margin.x[margins.x],
     systemStyles.margin.y[margins.y],
