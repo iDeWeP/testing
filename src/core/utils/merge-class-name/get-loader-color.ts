@@ -1,5 +1,6 @@
 import type { Variant, Color } from '../../types';
 import { hasVariantBg } from './has-variant-bg';
+import { isColorReversed } from './is-color-reverser';
 
 type States = {
   disabled?: boolean;
@@ -45,6 +46,6 @@ export const getLoaderColor = (
 
   return variants[isDefault ? statefulVariant : variant](
     isDefault ? 'surface' : color.replace('-on', ''),
-    !isDefault && color.endsWith('-on')
+    !isDefault && isColorReversed(color)
   );
 };

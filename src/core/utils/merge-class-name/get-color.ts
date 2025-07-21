@@ -1,5 +1,6 @@
 import type { Variant, Color } from '../../types';
 import { hasVariantBg } from './has-variant-bg';
+import { isColorReversed } from './is-color-reverser';
 
 type States = {
   disabled?: boolean;
@@ -74,6 +75,6 @@ export const getColor = (
 
   return variants[isDefault ? defaultVariant : variant](
     states?.valid ? 'success' : states?.invalid ? 'error' : defaultColor,
-    !isDefault && color.endsWith('-on')
+    !isDefault && isColorReversed(color)
   );
 };
