@@ -12,7 +12,7 @@ type InputGenericType = 'default' | 'input' | 'textarea';
 
 type Styles = {
   styles: {
-    container: {
+    root: {
       default: CSSProps;
       size: Record<InputType, CSSStyles>;
     };
@@ -38,8 +38,8 @@ type Styles = {
         textarea: CSSStyles;
       };
     };
-    generic: {
-      default: CSSProps;
+    shared: {
+      label: CSSProps;
       variant: Record<InputGenericType, CSSStyles>;
     };
   };
@@ -76,7 +76,7 @@ export const unstyledInputConfig: ComponentConfig<UnstyledInputConfigProps> &
     componentsProps: {}
   },
   styles: {
-    container: {
+    root: {
       default: {
         display: 'inline-flex',
         font: 'text-md',
@@ -257,8 +257,8 @@ export const unstyledInputConfig: ComponentConfig<UnstyledInputConfigProps> &
         }
       }
     },
-    generic: {
-      default: {
+    shared: {
+      label: {
         textWrap: 'text-nowrap',
         alignItems: 'align-center',
         pointerEvents: 'pointer-events-none',
