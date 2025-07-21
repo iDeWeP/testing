@@ -5,7 +5,6 @@ import type {
   Size,
   Scale,
   Border,
-  DefaultBorder,
   Radius,
   Color,
   Shadow,
@@ -26,13 +25,6 @@ export type AvatarGroupSurplusProps = MergeProps<
     size?: Size;
     scale?: Scale;
     border?: Border;
-    b?: DefaultBorder;
-    bx?: DefaultBorder;
-    by?: DefaultBorder;
-    bt?: DefaultBorder;
-    bb?: DefaultBorder;
-    bl?: DefaultBorder;
-    br?: DefaultBorder;
     radius?: Radius;
     r?: Radius;
     rt?: Radius;
