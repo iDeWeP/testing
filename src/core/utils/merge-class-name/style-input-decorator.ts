@@ -54,8 +54,8 @@ export const styleInputDecorator = (
     unstyledInputConfig.styles.decorator.spacing[sidePlacement][spacingType],
     inputVariant === 'outlined' &&
       unstyledInputConfig.styles.decorator.outlined[sidePlacement],
-    unstyledInputConfig.styles.generic.variant.default[inputVariant],
-    unstyledInputConfig.styles.generic.variant[inputType][inputVariant],
+    unstyledInputConfig.styles.shared.variant.default[inputVariant],
+    unstyledInputConfig.styles.shared.variant[inputType][inputVariant],
     systemStyles.radius.l[radiuses.autoL],
     systemStyles.radius.r[radiuses.autoR],
     systemStyles.radius.tl[radiuses.autoTl],

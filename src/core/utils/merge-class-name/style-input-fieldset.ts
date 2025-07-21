@@ -21,8 +21,8 @@ export const styleInputFieldset = (
   mergeClasses(
     on && sharedStyles.state.on,
     unstyledInputConfig.styles.fieldset.default,
-    unstyledInputConfig.styles.generic.variant.default[inputVariant],
-    unstyledInputConfig.styles.generic.variant[inputType][inputVariant],
+    unstyledInputConfig.styles.shared.variant.default[inputVariant],
+    unstyledInputConfig.styles.shared.variant[inputType][inputVariant],
     systemStyles.color.normal.bg[theme][
       getInputColor(inputVariant, color, disabled, valid, invalid)
     ],

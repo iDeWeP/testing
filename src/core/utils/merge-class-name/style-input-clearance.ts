@@ -9,7 +9,7 @@ export const styleInputClearance = (
 ) =>
   mergeClasses(
     unstyledInputConfig.styles.clearance.default,
-    unstyledInputConfig.styles.generic.default,
+    unstyledInputConfig.styles.shared.label,
     systemStyles.gap.all[gap],
     className
   );

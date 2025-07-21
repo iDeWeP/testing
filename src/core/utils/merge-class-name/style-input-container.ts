@@ -47,8 +47,8 @@ export const styleInputContainer = (
 
   return mergeClasses(
     on && sharedStyles.state.on,
-    unstyledInputConfig.styles.container.default,
-    unstyledInputConfig.styles.container.size[inputType][size],
+    unstyledInputConfig.styles.root.default,
+    unstyledInputConfig.styles.root.size[inputType][size],
     sharedStyles.width[width],
     systemStyles.margin.all[margins.all],
     systemStyles.margin.x[margins.x],
