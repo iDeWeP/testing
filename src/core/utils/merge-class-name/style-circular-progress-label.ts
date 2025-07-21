@@ -21,6 +21,7 @@ export const styleCircularProgressLabel = (
 
   return mergeClasses(
     circularProgressConfig.styles.label.default,
+    sharedStyles.placement.center,
     systemStyles.size.font[fontSize],
     systemStyles.color.normal.text[theme][textColor],
     systemStyles.color.normal.fill[theme][textColor],

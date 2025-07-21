@@ -46,9 +46,6 @@ export const circularProgressConfig: ComponentConfig<CircularProgressConfigProps
     label: {
       default: {
         position: 'absolute',
-        top: 'top-2/4',
-        left: 'left-2/4',
-        translate: '-translate-x-2/4 -translate-y-2/4',
         textWrap: 'text-nowrap',
         userSelect: 'select-none'
       }
