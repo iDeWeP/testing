@@ -19,9 +19,9 @@ export const styleButton = (
     effect = 'unset'
   }: Classes
 ) => {
-  const state = !loading ? 'none' : loading === true ? 'hide' : 'normal';
   const isCheckable = checked !== undefined && !disabled;
-  const focusable = getFocusableState(disabled, loading);
+  const isLoading = loading === true;
+  const focusable = getFocusableState({ disabled, loading });
   const defaultColors = getColor(variant, color, { disabled });
   const uncheckedColors = getColor(variant, color, { disabled }, false);
   const checkedColors = getColor(variant, color, { disabled }, true);
@@ -32,6 +32,7 @@ export const styleButton = (
     disabled,
     checked
   );
+  const hasRing = !disabled && !loading;
 
   return mergeClasses(
     checked && sharedStyles.state.on,
@@ -40,12 +41,17 @@ export const styleButton = (
     disabled && systemStyles.color.normal.bg[theme][colors.bg],
     disabled && systemStyles.color.normal.text[theme][colors.text],
     disabled && systemStyles.color.normal.fill[theme][colors.text],
-    systemStyles.color.normal.ring[theme][colors.ring],
+    hasRing && systemStyles.color.normal.ring[theme][colors.ring],
     isCheckable && systemStyles.color.on.bg[theme][checkedColors.bg],
     isCheckable && systemStyles.color.on.text[theme][checkedColors.text],
     isCheckable && systemStyles.color.on.fill[theme][checkedColors.text],
-    isCheckable && systemStyles.color.on.ring[theme][checkedColors.ring],
-    unstyledButtonConfig.styles.root.loading[state],
+    hasRing &&
+      isCheckable &&
+      systemStyles.color.on.ring[theme][checkedColors.ring],
+    isLoading && unstyledButtonConfig.styles.root.loading.normal,
+    isLoading &&
+      isCheckable &&
+      unstyledButtonConfig.styles.root.loading.checkable,
     sharedStyles.effect[effect],
     className
   );
