@@ -46,12 +46,12 @@ export const unstyledButtonConfig: ComponentConfig<UnstyledButtonConfigProps> &
     root: {
       loading: {
         normal: {
-          opacity: 'opacity-50'
-        },
-        hide: {
           color: 'text-transparent',
-          fill: 'fill-transparent',
-          opacity: 'opacity-50'
+          fill: 'fill-transparent'
+        },
+        checkable: {
+          color: '[.on]:text-transparent',
+          fill: '[.on]:fill-transparent'
         }
       }
     }

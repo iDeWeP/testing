@@ -32,7 +32,6 @@ export const styleButton = (
     disabled,
     checked
   );
-  const hasRing = !disabled && !loading;
 
   return mergeClasses(
     checked && sharedStyles.state.on,
@@ -41,11 +40,11 @@ export const styleButton = (
     disabled && systemStyles.color.normal.bg[theme][colors.bg],
     disabled && systemStyles.color.normal.text[theme][colors.text],
     disabled && systemStyles.color.normal.fill[theme][colors.text],
-    hasRing && systemStyles.color.normal.ring[theme][colors.ring],
+    !loading && systemStyles.color.normal.ring[theme][colors.ring],
     isCheckable && systemStyles.color.on.bg[theme][checkedColors.bg],
     isCheckable && systemStyles.color.on.text[theme][checkedColors.text],
     isCheckable && systemStyles.color.on.fill[theme][checkedColors.text],
-    hasRing &&
+    !loading &&
       isCheckable &&
       systemStyles.color.on.ring[theme][checkedColors.ring],
     isLoading && unstyledButtonConfig.styles.root.loading.normal,
