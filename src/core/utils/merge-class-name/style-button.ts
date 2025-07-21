@@ -21,6 +21,7 @@ export const styleButton = (
 ) => {
   const state = !loading ? 'none' : loading === true ? 'hide' : 'normal';
   const isCheckable = checked !== undefined && !disabled;
+  const focusable = getFocusableState(disabled, loading);
   const defaultColors = getColor(variant, color, { disabled });
   const uncheckedColors = getColor(variant, color, { disabled }, false);
   const checkedColors = getColor(variant, color, { disabled }, true);
@@ -35,7 +36,7 @@ export const styleButton = (
   return mergeClasses(
     checked && sharedStyles.state.on,
     sharedStyles.position.relative,
-    sharedStyles.focusable[getFocusableState(disabled, loading)],
+    sharedStyles.focusable[focusable],
     disabled && systemStyles.color.normal.bg[theme][colors.bg],
     disabled && systemStyles.color.normal.text[theme][colors.text],
     disabled && systemStyles.color.normal.fill[theme][colors.text],
