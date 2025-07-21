@@ -1,4 +1,4 @@
-import { isBordered } from '../../utils/is-bordered/is-bordered';
+import { isAutoBordered } from '../../utils/is-auto-bordered/is-auto-bordered';
 import { hasVariantBg } from '../../utils/merge-class-name/has-variant-bg';
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
 import { mergeProps } from '../../utils/merge-props/merge-props';
@@ -50,7 +50,7 @@ export const UnstyledSpinner = (props: UnstyledSpinnerProps) => {
   });
 
   const hasTrail = trail === undefined ? hasVariantBg(variant) : trail;
-  const hasBorder = isBordered(variant, border);
+  const hasBorder = isAutoBordered(variant, border);
 
   return (
     <svg
