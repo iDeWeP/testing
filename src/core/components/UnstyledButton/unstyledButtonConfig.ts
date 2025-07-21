@@ -15,7 +15,7 @@ export const unstyledButtonConfig: ComponentConfig<UnstyledButtonConfigProps> &
     as: 'button',
     variant: 'solid',
     size: 'md',
-    scale: 'normal',
+    scale: 'default',
     radius: 'unset',
     color: 'unset',
     effect: 'unset',

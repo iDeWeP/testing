@@ -15,7 +15,7 @@ export const unstyledContainerConfig: ComponentConfig<UnstyledContainerConfigPro
     as: 'div',
     variant: 'solid',
     size: 'md',
-    scale: 'normal',
+    scale: 'default',
     margin: 'unset',
     m: 'unset',
     mx: 'unset',
