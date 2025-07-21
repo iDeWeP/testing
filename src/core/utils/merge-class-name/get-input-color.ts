@@ -3,9 +3,11 @@ import type { InputVariant, Color } from '../../types';
 export const getInputColor = (
   variant: InputVariant,
   color: Color,
-  isDisabled?: boolean
+  isDisabled: boolean,
+  isValid: boolean,
+  isInvalid: boolean
 ) => {
-  if (color === 'unset') {
+  if (color === 'unset' || variant !== 'light') {
     return 'unset';
   }
 
@@ -13,5 +15,13 @@ export const getInputColor = (
     return 'disabled-light';
   }
 
-  return variant === 'light' ? 'surface-light' : 'unset';
+  if (isValid) {
+    return 'success-light';
+  }
+
+  if (isInvalid) {
+    return 'error-light';
+  }
+
+  return 'surface-light';
 };
