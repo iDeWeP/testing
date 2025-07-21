@@ -47,7 +47,7 @@ export const UnstyledButton = <E extends ElementType>(
 
   const styles = setButtonStyle(variant, color, checked);
 
-  const spinnerNode = (
+  const loaderNode = (
     <UnstyledLoader
       checked={checked}
       disabled={disabled}
@@ -81,8 +81,8 @@ export const UnstyledButton = <E extends ElementType>(
     element: Component,
     disabled: disabled || !!loading
   };
-  const leftSpinner = loading && loading !== 'right' && spinnerNode;
-  const rightSpinner = loading === 'right' && spinnerNode;
+  const leftLoader = loading && loading !== 'right' && loaderNode;
+  const rightLoader = loading === 'right' && loaderNode;
   const hasRipple = ripple !== 'none' && !loading && !disabled;
 
   return (
@@ -97,11 +97,11 @@ export const UnstyledButton = <E extends ElementType>(
       {...setAria('button', buttonProps)}
       {...restProps}
     >
-      {leftSpinner}
+      {leftLoader}
       {leftDecorator}
       {children}
       {rightDecorator}
-      {rightSpinner}
+      {rightLoader}
       {hasRipple && (
         <UnstyledRipple
           stateful={checked !== undefined}

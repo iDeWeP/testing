@@ -16,7 +16,7 @@ import type {
   UnstyledContainerConfigProps,
   UnstyledContainerProps
 } from '../UnstyledContainer/UnstyledContainer.types';
-import type { UnstyledSpinnerBarProps } from '../UnstyledSpinner/UnstyledSpinner.types';
+import type { UnstyledLoaderBarProps } from '../UnstyledLoader/UnstyledLoader.types';
 
 export type UnstyledButtonRippleProps = ComponentRefProps<'span'>;
 export type UnstyledButtonLoaderProps = MergeProps<
@@ -32,7 +32,7 @@ export type UnstyledButtonLoaderProps = MergeProps<
     ring?: Color;
   }
 >;
-export type UnstyledButtonBarProps = UnstyledSpinnerBarProps;
+export type UnstyledButtonBarProps = UnstyledLoaderBarProps;
 
 export type UnstyledButtonComponentsProps = {
   ripple?: UnstyledButtonRippleProps;
