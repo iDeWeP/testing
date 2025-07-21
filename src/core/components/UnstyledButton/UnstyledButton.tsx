@@ -106,7 +106,7 @@ export const UnstyledButton = <E extends ElementType>(
         <UnstyledRipple
           stateful={checked !== undefined}
           variant={variant}
-          scale="inner"
+          scale="default"
           color={color}
           effect={ripple}
           {...componentsProps.ripple}
