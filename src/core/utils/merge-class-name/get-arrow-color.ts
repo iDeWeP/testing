@@ -5,6 +5,7 @@ import type {
   DefaultBorder,
   Color
 } from '../../types';
+import { isAutoBordered } from '../is-auto-bordered/is-auto-bordered';
 import { getReversedColor } from './get-reversed-color';
 
 export const getArrowColor = (
@@ -28,8 +29,7 @@ export const getArrowColor = (
       (bl === 'set' || (bl !== 'none' && bx === 'set'))) ||
     (placement === 'right' &&
       (br === 'set' || (br !== 'none' && bx === 'set'))) ||
-    (variant === 'outlined' && border === 'auto') ||
-    border === 'set'
+    isAutoBordered(variant, border)
   ) {
     return getReversedColor(color);
   }
