@@ -5,6 +5,7 @@ import { mergeProps } from '../../utils/merge-props/merge-props';
 import { setAria } from '../../utils/set-aria/set-aria';
 import { setButtonStyle } from '../../utils/set-button-style/set-button-style';
 import { setLoaderSize } from '../../utils/set-loader-size/set-loader-size';
+import { setProps } from '../../utils/set-props/set-props';
 import { UnstyledContainer } from '../UnstyledContainer/UnstyledContainer';
 import { UnstyledLoader } from '../UnstyledLoader/UnstyledLoader';
 import { UnstyledRipple } from '../UnstyledRipple/UnstyledRipple';
@@ -76,9 +77,9 @@ export const UnstyledButton = <E extends ElementType>(
     />
   );
 
-  const buttonProps = Component === 'button' && {
-    disabled: disabled || !!loading,
-    type: 'button'
+  const buttonProps = {
+    element: Component,
+    disabled: disabled || !!loading
   };
   const leftSpinner = loading && loading !== 'right' && spinnerNode;
   const rightSpinner = loading === 'right' && spinnerNode;
@@ -87,16 +88,13 @@ export const UnstyledButton = <E extends ElementType>(
   return (
     <UnstyledContainer
       as={Component}
-      {...buttonProps}
+      {...setProps('button', buttonProps)}
       variant={styles.variant}
       size={size}
       color={styles.color}
       ring="unset"
       className={mergedClassName}
-      {...setAria('button', {
-        element: Component,
-        isDisabled: disabled || !!loading
-      })}
+      {...setAria('button', buttonProps)}
       {...restProps}
     >
       {leftSpinner}
