@@ -2,11 +2,11 @@ import { unstyledLinearProgressConfig } from '../../components/UnstyledLinearPro
 import { sharedStyles } from '../../config/shared-styles';
 import { systemStyles } from '../../config/system-styles';
 import type { Classes } from '../../types';
+import { isAutoBordered } from '../is-auto-bordered/is-auto-bordered';
 import { getBorder } from './get-border';
 import { getColor } from './get-color';
 import { getSpacing } from './get-spacing';
 import { getSpacingType } from './get-spacing-type';
-import { isAutoBordered } from './is-auto-bordered';
 import { mergeClasses } from './merge-classes';
 
 export const styleLinearProgress = (
@@ -26,13 +26,6 @@ export const styleLinearProgress = (
     ml = 'unset',
     mr = 'unset',
     border = 'auto',
-    b = 'unset',
-    bx = 'unset',
-    by = 'unset',
-    bt = 'unset',
-    bb = 'unset',
-    bl = 'unset',
-    br = 'unset',
     radius = 'unset',
     r = 'unset',
     rt = 'unset',
@@ -49,16 +42,18 @@ export const styleLinearProgress = (
     decorated = false
   }: Classes
 ) => {
+  const spacingType = getSpacingType(decorated);
   const margins = getSpacing(margin);
-  const isBordered = isAutoBordered(border, b, bx, by, bt, bb, bl, br, variant);
+  const defaultBorder = getBorder(variant, border).all;
+  const isBordered = isAutoBordered(variant, border);
   const colors = getColor(variant, color, { disabled });
   const hasRing = ring !== 'unset';
 
   return mergeClasses(
     unstyledLinearProgressConfig.styles.root.orientation[orientation],
-    unstyledLinearProgressConfig.styles.root.size[orientation][
-      getSpacingType(decorated)
-    ][size],
+    unstyledLinearProgressConfig.styles.root.size[orientation][spacingType][
+      size
+    ],
     systemStyles.margin.all[margins.all],
     systemStyles.margin.x[margins.x],
     systemStyles.margin.y[margins.y],
@@ -69,14 +64,7 @@ export const styleLinearProgress = (
     systemStyles.margin.b[mb],
     systemStyles.margin.l[ml],
     systemStyles.margin.r[mr],
-    systemStyles.border.all[getBorder(variant, border).all],
-    systemStyles.border.all[b],
-    systemStyles.border.x[bx],
-    systemStyles.border.y[by],
-    systemStyles.border.t[bt],
-    systemStyles.border.b[bb],
-    systemStyles.border.l[bl],
-    systemStyles.border.r[br],
+    systemStyles.border.all[defaultBorder],
     systemStyles.radius.all[radius],
     systemStyles.radius.all[r],
     systemStyles.radius.t[rt],
