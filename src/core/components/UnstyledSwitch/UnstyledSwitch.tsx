@@ -1,17 +1,22 @@
-import { useTheme } from '../../hooks/use-theme/use-theme';
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
 import { mergeProps } from '../../utils/merge-props/merge-props';
 import { setAria } from '../../utils/set-aria/set-aria';
+import { setRippleVariant } from '../../utils/set-ripple-variant/set-ripple-variant';
 import type { UnstyledSwitchProps } from './UnstyledSwitch.types';
+import { UnstyledSwitchBar } from './UnstyledSwitchBar';
 import { unstyledSwitchConfig } from './unstyledSwitchConfig';
 import { UnstyledSwitchContainer } from './UnstyledSwitchContainer';
 import { UnstyledSwitchIcon } from './UnstyledSwitchIcon';
+import { UnstyledSwitchRipple } from './UnstyledSwitchRipple';
+import { UnstyledSwitchTrail } from './UnstyledSwitchTrail';
 
 export const UnstyledSwitch = (props: UnstyledSwitchProps) => {
   const {
+    valid = false,
+    invalid = false,
     disabled = false,
     variant,
-    size,
+    size: defaultSize,
     scale: innerScale,
     margin,
     m,
@@ -22,13 +27,6 @@ export const UnstyledSwitch = (props: UnstyledSwitchProps) => {
     ml,
     mr,
     border,
-    b,
-    bx,
-    by,
-    bt,
-    bb,
-    bl,
-    br,
     radius,
     r,
     rt,
@@ -41,55 +39,34 @@ export const UnstyledSwitch = (props: UnstyledSwitchProps) => {
     rbr,
     color,
     shadow,
-    ring,
     className,
     componentsProps,
+    ripple,
     children,
     ...restProps
   } = mergeProps(unstyledSwitchConfig.props, props);
 
-  const theme = useTheme();
+  const hasRipple = ripple !== 'none';
 
   const mergedClassName = mergeClassName('switch', className, {
-    theme,
     disabled,
-    variant,
-    size,
-    innerScale,
-    margin,
-    m,
-    mx,
-    my,
-    mt,
-    mb,
-    ml,
-    mr,
-    border,
-    b,
-    bx,
-    by,
-    bt,
-    bb,
-    bl,
-    br,
-    radius,
-    r,
-    rt,
-    rb,
-    rl,
-    rr,
-    rtl,
-    rtr,
-    rbl,
-    rbr,
-    color,
-    shadow,
-    ring
+    defaultSize,
+    decorated: hasRipple
   });
 
   return (
     <UnstyledSwitchContainer
-      size={size}
+      defaultSize={defaultSize}
+      innerScale={innerScale}
+      margin={margin}
+      m={m}
+      mx={mx}
+      my={my}
+      mt={mt}
+      mb={mb}
+      ml={ml}
+      mr={mr}
+      decorated={hasRipple}
       {...componentsProps.container}
     >
       <input
@@ -99,16 +76,70 @@ export const UnstyledSwitch = (props: UnstyledSwitchProps) => {
         {...setAria('switch')}
         {...restProps}
       />
-      <UnstyledSwitchIcon
-        theme={theme}
+      <UnstyledSwitchTrail
+        valid={valid}
+        invalid={invalid}
         disabled={disabled}
         variant={variant}
+        defaultSize={defaultSize}
+        innerScale={innerScale}
+        radius={radius}
+        r={r}
+        rt={rt}
+        rb={rb}
+        rl={rl}
+        rr={rr}
+        rtl={rtl}
+        rtr={rtr}
+        rbl={rbl}
+        rbr={rbr}
+        color={color}
+        shadow={shadow}
+      />
+      <UnstyledSwitchBar
+        valid={valid}
+        invalid={invalid}
+        disabled={disabled}
+        variant={variant}
+        defaultSize={defaultSize}
+        innerScale={innerScale}
+        border={border}
+        radius={radius}
+        r={r}
+        rt={rt}
+        rb={rb}
+        rl={rl}
+        rr={rr}
+        rtl={rtl}
+        rtr={rtr}
+        rbl={rbl}
+        rbr={rbr}
+        color={color}
+        shadow={shadow}
+      />
+      <UnstyledSwitchIcon
+        disabled={disabled}
+        variant={variant}
+        defaultSize={defaultSize}
         innerScale={innerScale}
         color={color}
+        decorated={hasRipple}
         {...componentsProps.icon}
       >
         {children}
       </UnstyledSwitchIcon>
+      {hasRipple && !disabled && (
+        <UnstyledSwitchRipple
+          valid={valid}
+          invalid={invalid}
+          variant={setRippleVariant(variant)}
+          defaultSize={defaultSize}
+          innerScale={innerScale}
+          color={color}
+          effect={ripple}
+          {...componentsProps.ripple}
+        />
+      )}
     </UnstyledSwitchContainer>
   );
 };

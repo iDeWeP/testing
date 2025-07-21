@@ -1,8 +1,9 @@
 import { cloneElement } from 'react';
+import { useTheme } from '../../hooks/use-theme/use-theme';
 import type {
   MergeProps,
-  Theme,
   Variant,
+  DefaultSize,
   InnerScale,
   Color,
   SVGNodeProps
@@ -14,31 +15,37 @@ import type { UnstyledSwitchIconProps } from './UnstyledSwitch.types';
 type Props = MergeProps<
   UnstyledSwitchIconProps,
   {
-    theme: Theme;
     disabled: boolean;
     variant: Variant;
+    defaultSize: DefaultSize;
     innerScale: InnerScale;
     color: Color;
+    decorated: boolean;
     children?: SVGNodeProps;
   }
 >;
 
 export const UnstyledSwitchIcon = ({
-  theme,
   disabled,
   variant,
+  defaultSize,
   innerScale,
   color,
+  decorated,
   className,
   children,
   ...restProps
 }: Props) => {
+  const theme = useTheme();
+
   const mergedClassName = mergeClassName('switchIcon', className, {
     theme,
     disabled,
     variant,
+    defaultSize,
     innerScale,
-    color
+    color,
+    decorated
   });
 
   if (children) {

@@ -1,36 +1,62 @@
 import type { ComponentPropsWithRef } from 'react';
 import type {
+  Radius,
   ComponentRefProps,
+  DefaultBorder,
   SVGNodeProps,
   Variant,
-  Size,
+  DefaultSize,
   InnerScale,
   Margin,
   Border,
-  DefaultBorder,
-  Radius,
   Color,
   Shadow,
+  Ripple,
   MergeProps
 } from '../../types';
 
-export type UnstyledSwitchContainerProps = ComponentRefProps<'div'>;
+export type UnstyledSwitchContainerProps = {
+  radius?: Radius;
+  r?: Radius;
+  rt?: Radius;
+  rb?: Radius;
+  rl?: Radius;
+  rr?: Radius;
+  rtl?: Radius;
+  rtr?: Radius;
+  rbl?: Radius;
+  rbr?: Radius;
+} & ComponentRefProps<'div'>;
+
+export type UnstyledSwitchBarProps = ComponentRefProps<'span'>;
+
+export type UnstyledSwitchTrailProps = {
+  border?: DefaultBorder;
+} & ComponentRefProps<'span'>;
+
 export type UnstyledSwitchIconProps = ComponentRefProps<'svg'>;
+
+export type UnstyledSwitchRippleProps = ComponentRefProps<'span'>;
 
 export type UnstyledSwitchComponentsProps = {
   container?: UnstyledSwitchContainerProps;
+  bar?: UnstyledSwitchBarProps;
+  trail?: UnstyledSwitchTrailProps;
   icon?: UnstyledSwitchIconProps;
+  ripple?: UnstyledSwitchRippleProps;
 };
 
 export type UnstyledSwitchOptionalProps = {
   checked?: boolean;
+  valid?: boolean;
+  invalid?: boolean;
   disabled?: boolean;
   children?: SVGNodeProps;
 };
 
 export type UnstyledSwitchDefaultProps = {
   variant?: Variant;
-  size?: Size;
+  size?: DefaultSize;
   scale?: InnerScale;
   margin?: Margin;
   m?: Margin;
@@ -41,13 +67,6 @@ export type UnstyledSwitchDefaultProps = {
   ml?: Margin;
   mr?: Margin;
   border?: Border;
-  b?: DefaultBorder;
-  bx?: DefaultBorder;
-  by?: DefaultBorder;
-  bt?: DefaultBorder;
-  bb?: DefaultBorder;
-  bl?: DefaultBorder;
-  br?: DefaultBorder;
   radius?: Radius;
   r?: Radius;
   rt?: Radius;
@@ -60,8 +79,8 @@ export type UnstyledSwitchDefaultProps = {
   rbr?: Radius;
   color?: Color;
   shadow?: Shadow;
-  ring?: Color;
   componentsProps?: UnstyledSwitchComponentsProps;
+  ripple?: Ripple;
 };
 
 export type UnstyledSwitchConfigProps = UnstyledSwitchDefaultProps;
