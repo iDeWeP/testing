@@ -8,7 +8,7 @@ import type {
 import type { UnstyledInputConfigProps } from './UnstyledInput.types';
 
 type InputType = 'input' | 'textarea';
-type InputGenericType = 'default' | 'input' | 'textarea';
+type VariantType = 'default' | 'input' | 'textarea';
 
 type Styles = {
   styles: {
@@ -40,7 +40,7 @@ type Styles = {
     };
     shared: {
       label: CSSProps;
-      variant: Record<InputGenericType, CSSStyles>;
+      variant: Record<VariantType, CSSStyles>;
     };
   };
 };
