@@ -1,5 +1,5 @@
 import { useTheme } from '../../hooks/use-theme/use-theme';
-import { isBordered } from '../../utils/is-bordered/is-bordered';
+import { isAutoBordered } from '../../utils/is-auto-bordered/is-auto-bordered';
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
 import { mergeProps } from '../../utils/merge-props/merge-props';
 import type { UnstyledLoaderProps } from './UnstyledLoader.types';
@@ -56,7 +56,7 @@ export const UnstyledLoader = (props: UnstyledLoaderProps) => {
     ring
   });
 
-  const hasBorder = isBordered(variant, border);
+  const isBordered = isAutoBordered(variant, border);
 
   return (
     <svg
@@ -74,7 +74,7 @@ export const UnstyledLoader = (props: UnstyledLoaderProps) => {
         strokeDashoffset={offset}
         {...componentsProps.bar}
       />
-      {hasBorder && (
+      {isBordered && (
         <circle
           cx="20"
           cy="20"
@@ -82,7 +82,7 @@ export const UnstyledLoader = (props: UnstyledLoaderProps) => {
           {...componentsProps.outerBorder}
         />
       )}
-      {hasBorder && (
+      {isBordered && (
         <circle
           cx="20"
           cy="20"
