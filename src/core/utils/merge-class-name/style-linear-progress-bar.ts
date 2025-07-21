@@ -27,9 +27,9 @@ export const styleLinearProgressBar = (
     unstyledLinearProgressConfig.styles.bar.default,
     decorated && unstyledLinearProgressConfig.styles.bar.decorated,
     unstyledLinearProgressConfig.styles.bar.orientation[orientation],
-    systemStyles.color.normal.bg[theme][colors.text],
-    systemStyles.color.normal.text[theme][colors.bg],
-    systemStyles.color.normal.fill[theme][colors.bg],
+    systemStyles.color.default.bg[theme][colors.text],
+    systemStyles.color.default.text[theme][colors.bg],
+    systemStyles.color.default.fill[theme][colors.bg],
     className
   );
 };

@@ -65,7 +65,7 @@ export const styleInputDecorator = (
     systemStyles.radius.tr[radiuses.tr],
     systemStyles.radius.bl[radiuses.bl],
     systemStyles.radius.br[radiuses.br],
-    systemStyles.color.normal.bg[theme][bgColor],
+    systemStyles.color.default.bg[theme][bgColor],
     systemStyles.gap.all[gap],
     className
   );

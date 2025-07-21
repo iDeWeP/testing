@@ -23,7 +23,7 @@ export const styleInputFieldset = (
     unstyledInputConfig.styles.fieldset.default,
     unstyledInputConfig.styles.shared.variant.default[inputVariant],
     unstyledInputConfig.styles.shared.variant[inputType][inputVariant],
-    systemStyles.color.normal.bg[theme][
+    systemStyles.color.default.bg[theme][
       getInputColor(inputVariant, color, disabled, valid, invalid)
     ],
     className

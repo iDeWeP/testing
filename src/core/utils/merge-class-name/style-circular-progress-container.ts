@@ -22,7 +22,7 @@ export const styleCircularProgressContainer = (
 
   return mergeClasses(
     circularProgressConfig.styles.root.default,
-    systemStyles.size.normal.square[size],
+    systemStyles.size.default.square[size],
     systemStyles.margin.all[margins.all],
     systemStyles.margin.x[margins.x],
     systemStyles.margin.y[margins.y],

@@ -23,8 +23,8 @@ export const styleCircularProgressLabel = (
     circularProgressConfig.styles.label.default,
     sharedStyles.placement.center,
     systemStyles.size.font[fontSize],
-    systemStyles.color.normal.text[theme][textColor],
-    systemStyles.color.normal.fill[theme][textColor],
+    systemStyles.color.default.text[theme][textColor],
+    systemStyles.color.default.fill[theme][textColor],
     disabled && sharedStyles.cursor.none,
     className
   );

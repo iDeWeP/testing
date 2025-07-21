@@ -29,7 +29,7 @@ export const styleCheckboxContainer = (
     decorated = false
   }: Classes
 ) => {
-  const sizeType = decorated ? 'normal' : 'text';
+  const sizeType = decorated ? 'default' : 'text';
   const margins = getSpacing(margin);
 
   return mergeClasses(

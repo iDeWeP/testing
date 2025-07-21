@@ -42,7 +42,7 @@ export const styleIcon = (
   const hasRing = ring !== 'unset';
 
   return mergeClasses(
-    systemStyles.size.text.normal[font],
+    systemStyles.size.text.default[font],
     systemStyles.margin.all[margins.all],
     systemStyles.margin.x[margins.x],
     systemStyles.margin.y[margins.y],
@@ -64,11 +64,11 @@ export const styleIcon = (
     systemStyles.radius.tr[rtr],
     systemStyles.radius.bl[rbl],
     systemStyles.radius.br[rbr],
-    systemStyles.color.normal.bg[theme][colors.bg],
-    systemStyles.color.normal.fill[theme][colors.text],
-    hasRing && systemStyles.color.normal.ring[theme][ring],
+    systemStyles.color.default.bg[theme][colors.bg],
+    systemStyles.color.default.fill[theme][colors.text],
+    hasRing && systemStyles.color.default.ring[theme][ring],
     systemStyles.shadow[shadow],
-    hasRing && sharedStyles.ring.normal,
+    hasRing && sharedStyles.ring.default,
     className
   );
 };

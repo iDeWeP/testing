@@ -28,7 +28,7 @@ export const styleSpinner = (
 
   return mergeClasses(
     sharedStyles.spinner,
-    systemStyles.size.normal.square[size],
+    systemStyles.size.default.square[size],
     systemStyles.margin.all[margins.all],
     systemStyles.margin.x[margins.x],
     systemStyles.margin.y[margins.y],
@@ -39,8 +39,8 @@ export const styleSpinner = (
     systemStyles.margin.b[mb],
     systemStyles.margin.l[ml],
     systemStyles.margin.r[mr],
-    hasRing && systemStyles.color.normal.ring[theme][ring],
-    hasRing && sharedStyles.ring.normal,
+    hasRing && systemStyles.color.default.ring[theme][ring],
+    hasRing && sharedStyles.ring.default,
     isSpinning && sharedStyles.animation.spin,
     !isSpinning && sharedStyles.rotate['-90'],
     disabled && sharedStyles.cursor.disabled,

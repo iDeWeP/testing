@@ -51,9 +51,9 @@ export const styleCheckboxTrail = (
     systemStyles.radius.tr[rtr],
     systemStyles.radius.bl[rbl],
     systemStyles.radius.br[rbr],
-    systemStyles.color.normal.bg[theme][colors.bg],
-    isBordered && systemStyles.color.normal.border[theme][colors.text],
-    systemStyles.color.normal.ring[theme][colors.ring],
+    systemStyles.color.default.bg[theme][colors.bg],
+    isBordered && systemStyles.color.default.border[theme][colors.text],
+    systemStyles.color.default.ring[theme][colors.ring],
     systemStyles.shadow[shadow],
     className
   );

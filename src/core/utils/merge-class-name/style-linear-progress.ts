@@ -72,11 +72,11 @@ export const styleLinearProgress = (
     systemStyles.radius.tr[rtr],
     systemStyles.radius.bl[rbl],
     systemStyles.radius.br[rbr],
-    systemStyles.color.normal.bg[theme][colors.bg],
-    isBordered && systemStyles.color.normal.border[theme][colors.text],
-    hasRing && systemStyles.color.normal.ring[theme][ring],
+    systemStyles.color.default.bg[theme][colors.bg],
+    isBordered && systemStyles.color.default.border[theme][colors.text],
+    hasRing && systemStyles.color.default.ring[theme][ring],
     systemStyles.shadow[shadow],
-    hasRing && sharedStyles.ring.normal,
+    hasRing && sharedStyles.ring.default,
     className
   );
 };

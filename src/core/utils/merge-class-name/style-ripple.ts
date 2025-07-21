@@ -15,22 +15,22 @@ export const styleRipple = (
     color = 'unset'
   }: Classes
 ) => {
-  const normalColors = getColor(variant, color, { valid, invalid }, false);
-  const defaultColors = getColor(variant, color, { valid, invalid });
+  const defaultColors = getColor(variant, color, { valid, invalid }, false);
+  const colors = getColor(variant, color, { valid, invalid });
 
   return mergeClasses(
     unstyledRippleConfig.styles.root.default,
     !stateful &&
       unstyledRippleConfig.styles.root.color[rippleScale].stateless[theme][
-        defaultColors.text
+        colors.text
       ],
     stateful &&
       unstyledRippleConfig.styles.root.color[rippleScale].stateless[theme][
-        normalColors.text
+        defaultColors.text
       ],
     stateful &&
       unstyledRippleConfig.styles.root.color[rippleScale].stateful[theme][
-        defaultColors.text
+        colors.text
       ],
     className
   );
