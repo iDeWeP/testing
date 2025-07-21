@@ -2,9 +2,8 @@ import { unstyledInputConfig } from '../../components/UnstyledInput/unstyledInpu
 import { sharedStyles } from '../../config/shared-styles';
 import { systemStyles } from '../../config/system-styles';
 import type { Classes } from '../../types';
-import { getClass } from './get-class';
 import { getInputColor } from './get-input-color';
-import { getInputRadius } from './get-radius';
+import { getInputRadius } from './get-input-radius';
 import { getSpacingType } from './get-spacing-type';
 import { mergeClasses } from './merge-classes';
 
@@ -13,6 +12,8 @@ export const styleInputDecorator = (
   {
     inputType = 'input',
     theme = 'light',
+    valid = false,
+    invalid = false,
     disabled = false,
     inputVariant = 'default',
     sidePlacement = 'left',
@@ -31,37 +32,41 @@ export const styleInputDecorator = (
     decorated = false
   }: Classes
 ) => {
-  const isOutlined = inputVariant === 'outlined';
-  const isLeft = sidePlacement === 'left';
-  const radiuses = getInputRadius(inputVariant, sidePlacement, radius);
+  const spacingType = getSpacingType(decorated);
+  const radiuses = getInputRadius(
+    inputVariant,
+    sidePlacement,
+    radius,
+    r,
+    rt,
+    rb,
+    rl,
+    rr,
+    rtl,
+    rtr,
+    rbl,
+    rbr
+  );
+  const bgColor = getInputColor(inputVariant, color, disabled, valid, invalid);
 
   return mergeClasses(
     sharedStyles.display['inline-flex'],
-    unstyledInputConfig.styles.decorator.spacing[sidePlacement][
-      getSpacingType(decorated)
-    ],
-    isOutlined && unstyledInputConfig.styles.decorator.outlined[sidePlacement],
+    unstyledInputConfig.styles.decorator.spacing[sidePlacement][spacingType],
+    inputVariant === 'outlined' &&
+      unstyledInputConfig.styles.decorator.outlined[sidePlacement],
     unstyledInputConfig.styles.generic.variant.default[inputVariant],
     unstyledInputConfig.styles.generic.variant[inputType][inputVariant],
+    systemStyles.radius.l[radiuses.autoL],
+    systemStyles.radius.r[radiuses.autoR],
+    systemStyles.radius.tl[radiuses.autoTl],
+    systemStyles.radius.tr[radiuses.autoTr],
     systemStyles.radius.l[radiuses.l],
     systemStyles.radius.r[radiuses.r],
     systemStyles.radius.tl[radiuses.tl],
     systemStyles.radius.tr[radiuses.tr],
-    systemStyles.radius.l[getClass(isLeft, r)],
-    systemStyles.radius.r[getClass(!isLeft, r)],
-    systemStyles.radius.tl[getClass(isLeft, rt)],
-    systemStyles.radius.tr[getClass(!isLeft, rt)],
-    systemStyles.radius.bl[getClass(isLeft, rb)],
-    systemStyles.radius.br[getClass(!isLeft, rb)],
-    systemStyles.radius.l[getClass(isLeft, rl)],
-    systemStyles.radius.r[getClass(!isLeft, rr)],
-    systemStyles.radius.tl[getClass(isLeft, rtl)],
-    systemStyles.radius.tr[getClass(!isLeft, rtr)],
-    systemStyles.radius.bl[getClass(isLeft, rbl)],
-    systemStyles.radius.br[getClass(!isLeft, rbr)],
-    systemStyles.color.normal.bg[theme][
-      getInputColor(inputVariant, color, disabled)
-    ],
+    systemStyles.radius.bl[radiuses.bl],
+    systemStyles.radius.br[radiuses.br],
+    systemStyles.color.normal.bg[theme][bgColor],
     systemStyles.gap.all[gap],
     className
   );

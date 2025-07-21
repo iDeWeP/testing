@@ -11,6 +11,8 @@ export const styleInputFieldset = (
     inputType = 'input',
     theme = 'light',
     on = false,
+    valid = false,
+    invalid = false,
     disabled = false,
     inputVariant = 'default',
     color = 'unset'
@@ -22,7 +24,7 @@ export const styleInputFieldset = (
     unstyledInputConfig.styles.generic.variant.default[inputVariant],
     unstyledInputConfig.styles.generic.variant[inputType][inputVariant],
     systemStyles.color.normal.bg[theme][
-      getInputColor(inputVariant, color, disabled)
+      getInputColor(inputVariant, color, disabled, valid, invalid)
     ],
     className
   );
