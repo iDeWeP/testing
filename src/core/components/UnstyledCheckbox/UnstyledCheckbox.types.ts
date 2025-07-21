@@ -3,7 +3,6 @@ import type {
   Radius,
   ComponentRefProps,
   DefaultBorder,
-  RippleEffect,
   SVGNodeProps,
   Variant,
   DefaultSize,
@@ -37,9 +36,7 @@ export type UnstyledCheckboxTrailProps = {
   border?: DefaultBorder;
 } & ComponentRefProps<'span'>;
 
-export type UnstyledCheckboxRippleProps = {
-  effect?: RippleEffect;
-} & ComponentRefProps<'span'>;
+export type UnstyledCheckboxRippleProps = ComponentRefProps<'span'>;
 
 export type UnstyledCheckboxComponentsProps = {
   container?: UnstyledCheckboxContainerProps;

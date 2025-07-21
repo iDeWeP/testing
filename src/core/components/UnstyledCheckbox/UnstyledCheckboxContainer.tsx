@@ -38,7 +38,7 @@ export const UnstyledCheckboxContainer = ({
   mb,
   ml,
   mr,
-  radius,
+  radius = 'full',
   r,
   rt,
   rb,

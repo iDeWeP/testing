@@ -1,93 +1,33 @@
-import type { CSSProps, ComponentConfig } from '../../types';
+import type { ComponentConfig } from '../../types';
 import type { UnstyledCheckboxConfigProps } from './UnstyledCheckbox.types';
 
-type Styles = {
-  styles: {
-    root: {
-      default: CSSProps;
-    };
-    input: {
-      default: CSSProps;
-    };
-    trail: {
-      default: CSSProps;
-    };
-    icon: {
-      default: CSSProps;
-    };
-    shared: {
-      default: CSSProps;
-    };
-  };
-};
-
-export const unstyledCheckboxConfig: ComponentConfig<UnstyledCheckboxConfigProps> &
-  Styles = {
-  props: {
-    variant: 'solid',
-    size: 'md',
-    margin: 'unset',
-    m: 'unset',
-    mx: 'unset',
-    my: 'unset',
-    mt: 'unset',
-    mb: 'unset',
-    ml: 'unset',
-    mr: 'unset',
-    border: 'auto',
-    radius: 'unset',
-    r: 'unset',
-    rt: 'unset',
-    rb: 'unset',
-    rl: 'unset',
-    rr: 'unset',
-    rtl: 'unset',
-    rtr: 'unset',
-    rbl: 'unset',
-    rbr: 'unset',
-    color: 'unset',
-    shadow: 'unset',
-    componentsProps: {},
-    ripple: 'none'
-  },
-  styles: {
-    root: {
-      default: {
-        display: 'inline-block',
-        position: 'relative'
-      }
-    },
-    input: {
-      default: {
-        width: 'w-full',
-        height: 'h-full',
-        appearance: 'appearance-none',
-        focus: 'focus:outline-none',
-        group: 'peer'
-      }
-    },
-    trail: {
-      default: {
-        group: 'peer-checked:opacity-0'
-      }
-    },
-    icon: {
-      default: {
-        opacity: 'opacity-0',
-        group: 'peer-checked:opacity-100'
-      }
-    },
-    shared: {
-      default: {
-        position: 'absolute',
-        top: 'top-2/4',
-        left: 'left-2/4',
-        translate: '-translate-x-2/4 -translate-y-2/4',
-        transition: 'transition-opacity',
-        transitionDuration: 'duration-150',
-        transitionTimingFunction: 'ease-in-out',
-        pointerEvents: 'pointer-events-none'
-      }
+export const unstyledCheckboxConfig: ComponentConfig<UnstyledCheckboxConfigProps> =
+  {
+    props: {
+      variant: 'solid',
+      size: 'md',
+      margin: 'unset',
+      m: 'unset',
+      mx: 'unset',
+      my: 'unset',
+      mt: 'unset',
+      mb: 'unset',
+      ml: 'unset',
+      mr: 'unset',
+      border: 'auto',
+      radius: 'unset',
+      r: 'unset',
+      rt: 'unset',
+      rb: 'unset',
+      rl: 'unset',
+      rr: 'unset',
+      rtl: 'unset',
+      rtr: 'unset',
+      rbl: 'unset',
+      rbr: 'unset',
+      color: 'unset',
+      shadow: 'unset',
+      componentsProps: {},
+      ripple: 'none'
     }
-  }
-};
+  };

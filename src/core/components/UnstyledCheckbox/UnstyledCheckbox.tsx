@@ -49,6 +49,8 @@ export const UnstyledCheckbox = (props: UnstyledCheckboxProps) => {
     disabled
   });
 
+  const hasRipple = ripple !== 'none';
+
   return (
     <UnstyledCheckboxContainer
       defaultSize={size}
@@ -60,8 +62,7 @@ export const UnstyledCheckbox = (props: UnstyledCheckboxProps) => {
       mb={mb}
       ml={ml}
       mr={mr}
-      radius="full"
-      decorated={ripple !== 'none'}
+      decorated={hasRipple}
       {...componentsProps.container}
     >
       <input
@@ -115,7 +116,7 @@ export const UnstyledCheckbox = (props: UnstyledCheckboxProps) => {
       >
         {children}
       </UnstyledCheckboxIcon>
-      {ripple !== 'none' && !disabled && (
+      {hasRipple && !disabled && (
         <UnstyledRipple
           valid={valid}
           invalid={invalid}
