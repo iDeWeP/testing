@@ -1,4 +1,4 @@
-import { unstyledCheckboxConfig } from '../../components/UnstyledCheckbox/unstyledCheckboxConfig';
+import { sharedStyles } from '../../config/shared-styles';
 import { systemStyles } from '../../config/system-styles';
 import type { Classes } from '../../types';
 import { getSpacing } from './get-spacing';
@@ -33,7 +33,7 @@ export const styleCheckboxContainer = (
   const margins = getSpacing(margin);
 
   return mergeClasses(
-    unstyledCheckboxConfig.styles.root.default,
+    sharedStyles.container,
     systemStyles.size[sizeType].square[defaultSize],
     systemStyles.margin.all[margins.all],
     systemStyles.margin.x[margins.x],

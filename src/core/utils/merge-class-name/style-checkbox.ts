@@ -1,4 +1,3 @@
-import { unstyledCheckboxConfig } from '../../components/UnstyledCheckbox/unstyledCheckboxConfig';
 import { sharedStyles } from '../../config/shared-styles';
 import type { Classes } from '../../types';
 import { mergeClasses } from './merge-classes';
@@ -8,7 +7,7 @@ export const styleCheckbox = (
   { disabled = false }: Classes
 ) =>
   mergeClasses(
-    unstyledCheckboxConfig.styles.input.default,
+    sharedStyles.input,
     disabled && sharedStyles.cursor.disabled,
     className
   );

@@ -1,4 +1,3 @@
-import { unstyledCheckboxConfig } from '../../components/UnstyledCheckbox/unstyledCheckboxConfig';
 import { sharedStyles } from '../../config/shared-styles';
 import { systemStyles } from '../../config/system-styles';
 import type { Classes } from '../../types';
@@ -38,8 +37,9 @@ export const styleCheckboxIcon = (
   const colors = getColor(variant, color, { disabled, valid, invalid }, true);
 
   return mergeClasses(
-    unstyledCheckboxConfig.styles.shared.default,
-    unstyledCheckboxConfig.styles.icon.default,
+    sharedStyles.decoration,
+    sharedStyles.bar,
+    sharedStyles.placement.center,
     sharedStyles.focusable[focusable],
     systemStyles.size.text.square[defaultSize],
     systemStyles.border.all[defaultBorder],
