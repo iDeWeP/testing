@@ -4,7 +4,6 @@ import { systemStyles } from '../../config/system-styles';
 import type { Classes } from '../../types';
 import { getInputColor } from './get-input-color';
 import { getInputRadius } from './get-input-radius';
-import { getSpacingType } from './get-spacing-type';
 import { mergeClasses } from './merge-classes';
 
 export const styleInputDecorator = (
@@ -32,7 +31,7 @@ export const styleInputDecorator = (
     decorated = false
   }: Classes
 ) => {
-  const spacingType = getSpacingType(decorated);
+  const paddingType = decorated ? 'decorated' : 'default';
   const radiuses = getInputRadius(
     inputVariant,
     sidePlacement,
@@ -51,7 +50,7 @@ export const styleInputDecorator = (
 
   return mergeClasses(
     sharedStyles.display['inline-flex'],
-    unstyledInputConfig.styles.decorator.spacing[sidePlacement][spacingType],
+    unstyledInputConfig.styles.decorator.padding[sidePlacement][paddingType],
     inputVariant === 'outlined' &&
       unstyledInputConfig.styles.decorator.outlined[sidePlacement],
     unstyledInputConfig.styles.shared.variant.default[inputVariant],

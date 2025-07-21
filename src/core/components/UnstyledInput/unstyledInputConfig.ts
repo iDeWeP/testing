@@ -17,7 +17,7 @@ type Styles = {
       size: Record<InputType, CSSStyles>;
     };
     decorator: {
-      spacing: Record<SidePlacement, CSSStyles>;
+      padding: Record<SidePlacement, CSSStyles>;
       outlined: CSSStyles;
     };
     fieldset: {
@@ -113,7 +113,7 @@ export const unstyledInputConfig: ComponentConfig<UnstyledInputConfigProps> &
       }
     },
     decorator: {
-      spacing: {
+      padding: {
         left: {
           default: {
             padding: 'pl-3'
