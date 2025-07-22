@@ -1,4 +1,4 @@
-import type { ElementType } from 'react';
+import type { ElementType, ReactNode } from 'react';
 import { useTheme } from '../../hooks/use-theme/use-theme';
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
 import { mergeProps } from '../../utils/merge-props/merge-props';
@@ -7,7 +7,7 @@ import { unstyledBoxConfig } from './unstyledBoxConfig';
 
 export const UnstyledBox = <E extends ElementType>(
   props: UnstyledBoxProps<E>
-) => {
+): ReactNode => {
   const {
     as: Component,
     variant,
@@ -28,6 +28,13 @@ export const UnstyledBox = <E extends ElementType>(
     ml,
     mr,
     border,
+    b,
+    bx,
+    by,
+    bt,
+    bb,
+    bl,
+    br,
     radius,
     r,
     rt,
@@ -71,6 +78,13 @@ export const UnstyledBox = <E extends ElementType>(
     ml,
     mr,
     border,
+    b,
+    bx,
+    by,
+    bt,
+    bb,
+    bl,
+    br,
     radius,
     r,
     rt,

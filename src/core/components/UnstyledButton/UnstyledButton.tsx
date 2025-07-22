@@ -1,4 +1,4 @@
-import type { ElementType } from 'react';
+import type { ElementType, ReactNode } from 'react';
 import { useTheme } from '../../hooks/use-theme/use-theme';
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
 import { mergeProps } from '../../utils/merge-props/merge-props';
@@ -14,7 +14,7 @@ import { unstyledButtonConfig } from './unstyledButtonConfig';
 
 export const UnstyledButton = <E extends ElementType>(
   props: UnstyledButtonProps<E>
-) => {
+): ReactNode => {
   const {
     as: Component,
     checked,
@@ -24,8 +24,8 @@ export const UnstyledButton = <E extends ElementType>(
     className,
     componentsProps,
     ripple,
-    leftDecorator,
-    rightDecorator,
+    startDecorator,
+    endDecorator,
     children,
     variant,
     size,
@@ -98,9 +98,9 @@ export const UnstyledButton = <E extends ElementType>(
       {...restProps}
     >
       {leftLoader}
-      {leftDecorator}
+      {startDecorator}
       {children}
-      {rightDecorator}
+      {endDecorator}
       {rightLoader}
       {hasRipple && (
         <UnstyledRipple

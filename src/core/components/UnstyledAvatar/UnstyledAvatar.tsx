@@ -1,4 +1,4 @@
-import type { ElementType } from 'react';
+import type { ElementType, ReactNode } from 'react';
 import { getInitials } from '../../../utils/utils/get-initials/get-initials';
 import { mergeProps } from '../../utils/merge-props/merge-props';
 import { UnstyledContainer } from '../UnstyledContainer/UnstyledContainer';
@@ -7,7 +7,7 @@ import { unstyledAvatarConfig } from './unstyledAvatarConfig';
 
 export const UnstyledAvatar = <E extends ElementType>(
   props: UnstyledAvatarProps<E>
-) => {
+): ReactNode => {
   const { initials, children, ...restProps } = mergeProps(
     unstyledAvatarConfig.props,
     props

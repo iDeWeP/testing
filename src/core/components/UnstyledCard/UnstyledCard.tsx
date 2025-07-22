@@ -1,4 +1,4 @@
-import type { ElementType } from 'react';
+import type { ElementType, ReactNode } from 'react';
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
 import { mergeProps } from '../../utils/merge-props/merge-props';
 import { UnstyledBox } from '../UnstyledBox/UnstyledBox';
@@ -7,7 +7,7 @@ import { unstyledCardConfig } from './unstyledCardConfig';
 
 export const UnstyledCard = <E extends ElementType>(
   props: UnstyledCardProps<E>
-) => {
+): ReactNode => {
   const { orientation, className, ...restProps } = mergeProps(
     unstyledCardConfig.props,
     props

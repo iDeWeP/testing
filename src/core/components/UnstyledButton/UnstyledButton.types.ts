@@ -46,8 +46,8 @@ export type UnstyledButtonOptionalProps = {
   checked?: boolean;
   loading?: Loading;
   disabled?: boolean;
-  leftDecorator?: ReactNode;
-  rightDecorator?: ReactNode;
+  startDecorator?: ReactNode;
+  endDecorator?: ReactNode;
 };
 
 export type UnstyledButtonDefaultProps = {
