@@ -54,7 +54,7 @@ export const getFlipMainAxis = (
   size: SizeDimension,
   overflow: OverflowDimension
 ): AxisDimension | undefined => {
-  if (collision !== 'none') {
+  if (collision !== 'unset') {
     return dimensionMap[mainAxis](view, size, overflow);
   }
 };

@@ -20,7 +20,7 @@ import { getShiftCrossAxis } from './get-shift-cross-axis';
 import { getSizeDimension } from './get-size-dimension';
 import { getViewDimension } from './get-view-dimension';
 
-type Cord = {
+export type Cord = {
   top: number;
   left: number;
   mainAxis: MainAxis;
