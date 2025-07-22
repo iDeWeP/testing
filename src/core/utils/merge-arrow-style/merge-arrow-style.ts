@@ -14,7 +14,7 @@ export const mergeArrowStyle = (
   offset: ArrowOffset,
   defaultStyle?: CSSProperties,
   style?: CSSProperties
-) => {
+): CSSProperties => {
   const placementStyle: CSSProperties = {};
 
   if (placement === 'top') {
