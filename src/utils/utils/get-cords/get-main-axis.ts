@@ -7,10 +7,10 @@ type DimensionMap = Record<
 >;
 
 const dimensionMap: DimensionMap = {
-  top: (size) => ({ top: size.top }),
-  bottom: (size) => ({ top: size.bottom }),
-  left: (size) => ({ left: size.left }),
-  right: (size) => ({ left: size.right })
+  top: (size): AxisDimension => ({ top: size.top }),
+  bottom: (size): AxisDimension => ({ top: size.bottom }),
+  left: (size): AxisDimension => ({ left: size.left }),
+  right: (size): AxisDimension => ({ left: size.right })
 };
 
 export const getMainAxis = (

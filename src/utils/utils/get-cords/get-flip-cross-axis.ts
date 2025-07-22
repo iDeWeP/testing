@@ -36,7 +36,7 @@ const dimensionMap: DimensionMap = {
     view,
     size,
     overflow
-  ) => {
+  ): AxisDimension | undefined => {
     const isShorter = isElShorter(anchor, el, end);
 
     // &&overflow[orientation].viewStart > overflow[orientation].viewEnd)
@@ -58,7 +58,7 @@ const dimensionMap: DimensionMap = {
     view,
     size,
     overflow
-  ) => {
+  ): AxisDimension | undefined => {
     const isShorter = isElShorter(anchor, el, end);
 
     // && overflow[orientation].viewStart < overflow[orientation].viewEnd)

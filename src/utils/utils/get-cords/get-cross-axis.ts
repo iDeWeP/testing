@@ -16,13 +16,13 @@ type DimensionMap = Record<
 >;
 
 const dimensionMap: DimensionMap = {
-  start: (orientation, dimension, size) => ({
+  start: (orientation, dimension, size): AxisDimension => ({
     [dimension]: size[orientation].start
   }),
-  end: (orientation, dimension, size) => ({
+  end: (orientation, dimension, size): AxisDimension => ({
     [dimension]: size[orientation].end
   }),
-  center: (orientation, dimension, size) => ({
+  center: (orientation, dimension, size): AxisDimension => ({
     [dimension]: size[orientation].center
   })
 };

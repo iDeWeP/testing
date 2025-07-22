@@ -25,22 +25,22 @@ type DimensionMap = Record<
 >;
 
 const dimensionMap: DimensionMap = {
-  top: (view, size, overflow) => {
+  top: (view, size, overflow): AxisDimension | undefined => {
     if (overflow.top < view.top) {
       return { top: size.bottom, mainAxis: 'bottom' };
     }
   },
-  bottom: (view, size, overflow) => {
+  bottom: (view, size, overflow): AxisDimension | undefined => {
     if (overflow.bottom > view.bottom) {
       return { top: size.top, mainAxis: 'top' };
     }
   },
-  left: (view, size, overflow) => {
+  left: (view, size, overflow): AxisDimension | undefined => {
     if (overflow.left < view.left) {
       return { left: size.left, mainAxis: 'right' };
     }
   },
-  right: (view, size, overflow) => {
+  right: (view, size, overflow): AxisDimension | undefined => {
     if (overflow.right > view.right) {
       return { left: size.left, mainAxis: 'left' };
     }
