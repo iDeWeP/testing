@@ -54,7 +54,7 @@ export const getCords = (
   const isHorizontal = isPlacementHorizontal(mainAxis);
   const orientation = isHorizontal ? 'horizontal' : 'vertical';
   const dimension = isHorizontal ? 'left' : 'top';
-  const thresholdDimension: TresholdDimension = isHorizontal
+  const thresholds: TresholdDimension = isHorizontal
     ? ['left', 'right']
     : ['top', 'bottom'];
 
@@ -68,7 +68,7 @@ export const getCords = (
       crossAxis,
       orientation,
       dimension,
-      thresholdDimension,
+      thresholds,
       anchor,
       el,
       view,
@@ -80,7 +80,7 @@ export const getCords = (
       crossAxis,
       orientation,
       dimension,
-      thresholdDimension,
+      thresholds,
       anchor,
       el,
       view,
