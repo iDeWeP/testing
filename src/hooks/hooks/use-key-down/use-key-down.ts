@@ -1,5 +1,4 @@
 import { useCallback, type KeyboardEvent } from 'react';
-import { setProp } from '../../../utils/utils/set-prop/set-prop';
 
 export const useKeyDown = (key: string, handler?: VoidFunction | false) => {
   const handleKeyDown = useCallback(
@@ -11,5 +10,7 @@ export const useKeyDown = (key: string, handler?: VoidFunction | false) => {
     [key, handler]
   );
 
-  return setProp(handler, handleKeyDown);
+  if (handler) {
+    return handleKeyDown;
+  }
 };
