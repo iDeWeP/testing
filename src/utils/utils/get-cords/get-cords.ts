@@ -59,8 +59,7 @@ export const getCords = (
     : ['top', 'bottom'];
 
   return {
-    mainAxis,
-    crossAxis,
+    ...cord,
     ...getMainAxis(mainAxis, size),
     ...getFlipMainAxis(collision, mainAxis, view, size, overflow),
     ...getCrossAxis(crossAxis, orientation, dimension, size),
