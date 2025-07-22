@@ -1,26 +1,32 @@
-import { type SyntheticEvent, useState, useCallback } from 'react';
+import { useCallback, useState, type SyntheticEvent } from 'react';
 import { combineHandlers } from '../../../utils/utils/combine-handlers/combine-handlers';
 
+type ControlledState<I extends SyntheticEvent, O extends SyntheticEvent> = {
+  isOn: boolean;
+  handleOn?: (event: I) => void;
+  handleOff?: (event: O) => void;
+};
+
 export const useControlledState = <
-  O extends SyntheticEvent,
-  C extends SyntheticEvent
+  I extends SyntheticEvent,
+  O extends SyntheticEvent
 >(
-  defaultOpen: boolean,
-  open?: boolean,
-  onOpen?: ((event: O) => void | undefined) | VoidFunction,
-  onClose?: ((event: C) => void | undefined) | VoidFunction
-) => {
-  const [isOpen, setIsOpen] = useState(defaultOpen);
+  defaultOn: boolean,
+  on?: boolean,
+  onOn?: ((event: I) => void | undefined) | VoidFunction,
+  onOff?: ((event: O) => void | undefined) | VoidFunction
+): ControlledState<I, O> => {
+  const [isOn, setIsOn] = useState(defaultOn);
 
-  const handleOpen = useCallback(() => setIsOpen(true), []);
+  const handleOn = useCallback(() => setIsOn(true), []);
 
-  const handleClose = useCallback(() => setIsOpen(false), []);
+  const handleOff = useCallback(() => setIsOn(false), []);
 
-  const isControlled = open !== undefined;
+  const isControlled = on !== undefined;
 
   return {
-    isOpen: open ?? isOpen,
-    handleOpen: isControlled ? onOpen : combineHandlers(onOpen, handleOpen),
-    handleClose: isControlled ? onClose : combineHandlers(onClose, handleClose)
+    isOn: on ?? isOn,
+    handleOn: isControlled ? onOn : combineHandlers(onOn, handleOn),
+    handleOff: isControlled ? onOff : combineHandlers(onOff, handleOff)
   };
 };
