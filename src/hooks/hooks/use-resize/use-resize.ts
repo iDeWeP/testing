@@ -1,6 +1,14 @@
 import { useState, useCallback, useMemo } from 'react';
 
-export const useResize = () => {
+export type UseResizeResult = {
+  windowSize: {
+    width: number;
+    height: number;
+  };
+  handleResize: VoidFunction;
+};
+
+export const useResize = (): UseResizeResult => {
   const [windowSize, setWindowSize] = useState({
     width: window.innerWidth,
     height: window.innerHeight

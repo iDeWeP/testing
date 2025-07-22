@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 
-export const useTimer = (handler?: TimerHandler | false, delay = 1000) =>
+export const useTimer = (handler?: TimerHandler | false, delay = 1000): void =>
   useEffect(() => {
     if (!handler || delay < 0) {
       return;

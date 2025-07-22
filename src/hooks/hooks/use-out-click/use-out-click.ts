@@ -5,7 +5,7 @@ export const useOutClick = <E extends HTMLElement, T extends HTMLElement>(
   elRef?: RefObject<E | null>,
   triggerRef?: RefObject<T | null>,
   options?: boolean | AddEventListenerOptions
-) =>
+): void =>
   useEffect(() => {
     if (!handler || !elRef?.current) {
       return;

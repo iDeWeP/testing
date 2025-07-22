@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-export const useOverflow = (observe?: boolean) => {
+export const useOverflow = (observe?: boolean): void => {
   const setOverflow = useState(getComputedStyle(document.body).overflow)[1];
 
   useEffect(() => {

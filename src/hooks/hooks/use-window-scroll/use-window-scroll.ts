@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 export const useWindowScroll = (
   handler?: ((this: Document, ev: Event) => void) | false,
   options?: boolean | AddEventListenerOptions
-) =>
+): void =>
   useEffect(() => {
     if (!handler) {
       return;

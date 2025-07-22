@@ -4,7 +4,7 @@ import { getFocusableElements } from '../../../utils/utils/get-focusabled-elemen
 export const useFocusTrap = <E extends HTMLElement>(
   ref?: RefObject<E | null> | false,
   options?: boolean | AddEventListenerOptions
-) =>
+): void =>
   useEffect(() => {
     if (!ref || !ref.current) {
       return;

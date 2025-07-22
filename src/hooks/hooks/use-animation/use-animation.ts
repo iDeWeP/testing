@@ -10,6 +10,14 @@ export type Animation = {
   isIdle: boolean;
 };
 
+export type StartAnimationFunction = (isOpen: boolean) => void;
+
+export type UseAnimationResult = {
+  animation: Animation;
+  startAnimation: StartAnimationFunction;
+  stopAnimation: VoidFunction;
+};
+
 const ENTERED = 0;
 const EXITED = 1;
 const EXITING = 2;
@@ -18,8 +26,8 @@ const ENTERING = 3;
 export const useAnimation = (isEntered?: boolean) => {
   const [animation, setAnimation] = useState(isEntered ? ENTERED : EXITED);
 
-  const startAnimation = useCallback(
-    (isOpen: boolean) =>
+  const startAnimation = useCallback<StartAnimationFunction>(
+    (isOpen) =>
       setAnimation((prevState) => {
         if (isOpen) {
           return prevState === EXITED || prevState === EXITING
