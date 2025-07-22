@@ -1,9 +1,10 @@
+import type { ReactNode } from 'react';
 import { ExampleCard } from '../../../components/ExampleCard';
 import { ExampleSection } from '../../../components/ExampleSection';
 import { Example } from './Example';
 import imagePath from '../../../assets/images/photo.png';
 
-export const RadiusExample = () => (
+export const RadiusExample = (): ReactNode => (
   <ExampleSection title="Radius">
     <ExampleCard>
       <Example

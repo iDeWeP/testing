@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react';
 import { ExampleTitle } from '../../../components/ExampleTitle';
 import { ColorExample } from './ColorExample';
 import { DefaultExample } from './DefaultExample';
@@ -8,7 +9,7 @@ import { SizeExample } from './SizeExample';
 import { ValueExample } from './ValueExample';
 import { VariantExample } from './VariantExample';
 
-const Page = () => (
+const Page = (): ReactNode => (
   <>
     <ExampleTitle>LinearProgress</ExampleTitle>
     <DefaultExample />
