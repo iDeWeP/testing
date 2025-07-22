@@ -227,10 +227,15 @@ export type Transition =
   | CollapseTransition;
 export type DefaultTransition = 'fade' | GrowTransition;
 export type Ripple = 'none' | 'default';
+export type Cursor = {
+  x: number;
+  y: number;
+};
 
 /*
  *  CLASSNAME TYPES
  */
+export type ClassName = string | undefined;
 
 export type Classes = {
   inputType?: 'input' | 'textarea';
