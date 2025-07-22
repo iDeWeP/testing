@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react';
 import type { MergeProps, DefaultSize, Margin, Radius } from '../../types';
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
 import type { UnstyledCheckboxContainerProps } from './UnstyledCheckbox.types';
@@ -51,7 +52,7 @@ export const UnstyledCheckboxContainer = ({
   className,
   decorated,
   ...restProps
-}: Props) => {
+}: Props): ReactNode => {
   const mergedClassName = mergeClassName('checkboxContainer', className, {
     defaultSize,
     margin,

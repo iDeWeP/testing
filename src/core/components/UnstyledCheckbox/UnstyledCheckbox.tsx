@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react';
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
 import { mergeProps } from '../../utils/merge-props/merge-props';
 import { setRippleVariant } from '../../utils/set-ripple-variant/set-ripple-variant';
@@ -8,7 +9,7 @@ import { UnstyledCheckboxContainer } from './UnstyledCheckboxContainer';
 import { UnstyledCheckboxIcon } from './UnstyledCheckboxIcon';
 import { UnstyledCheckboxTrail } from './UnstyledCheckboxTrail';
 
-export const UnstyledCheckbox = (props: UnstyledCheckboxProps) => {
+export const UnstyledCheckbox = (props: UnstyledCheckboxProps): ReactNode => {
   const {
     checked = false,
     valid = false,

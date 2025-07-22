@@ -1,4 +1,8 @@
-import { type HTMLInputTypeAttribute, cloneElement } from 'react';
+import {
+  type HTMLInputTypeAttribute,
+  type ReactNode,
+  cloneElement
+} from 'react';
 import { useTheme } from '../../hooks/use-theme/use-theme';
 import type {
   MergeProps,
@@ -64,7 +68,7 @@ export const UnstyledCheckboxIcon = ({
   className,
   children,
   ...restProps
-}: Props) => {
+}: Props): ReactNode => {
   const theme = useTheme();
 
   const mergedClassName = mergeClassName(
