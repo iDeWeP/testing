@@ -6,7 +6,7 @@ export const getAnchorDimension = (
   isPorted: boolean,
   cursor?: Cursor
 ): AnchorDimension => {
-  const dimensions = {
+  const dimension = {
     top: anchor.offsetTop,
     left: anchor.offsetLeft,
     x: anchor.getBoundingClientRect().x,
@@ -18,35 +18,34 @@ export const getAnchorDimension = (
   };
 
   const portedX =
-    (cursor ? dimensions.cursorX : dimensions.x) +
+    (cursor ? dimension.cursorX : dimension.x) +
     document.documentElement.scrollLeft;
 
   const portedY =
-    (cursor ? dimensions.cursorY : dimensions.y) +
+    (cursor ? dimension.cursorY : dimension.y) +
     document.documentElement.scrollTop;
 
   const top = cursor
-    ? dimensions.top + dimensions.cursorY - dimensions.y
-    : dimensions.top;
+    ? dimension.top + dimension.cursorY - dimension.y
+    : dimension.top;
 
   const left = cursor
-    ? dimensions.left + dimensions.cursorX - dimensions.x
-    : dimensions.left;
+    ? dimension.left + dimension.cursorX - dimension.x
+    : dimension.left;
 
-  const anchorDimensions = {
+  const anchorDimension = {
     top: isPorted ? portedY : top,
     left: isPorted ? portedX : left,
-    x: cursor ? dimensions.cursorX : dimensions.x,
-    y: cursor ? dimensions.cursorY : dimensions.y,
-    width: cursor ? 0 : dimensions.width,
-    height: cursor ? 0 : dimensions.height,
+    x: cursor ? dimension.cursorX : dimension.x,
+    y: cursor ? dimension.cursorY : dimension.y,
+    width: cursor ? 0 : dimension.width,
+    height: cursor ? 0 : dimension.height,
     offsetWidth: 0,
     offsetHeight: 0
   };
 
-  anchorDimensions.offsetWidth = anchorDimensions.left + anchorDimensions.width;
-  anchorDimensions.offsetHeight =
-    anchorDimensions.top + anchorDimensions.height;
+  anchorDimension.offsetWidth = anchorDimension.left + anchorDimension.width;
+  anchorDimension.offsetHeight = anchorDimension.top + anchorDimension.height;
 
-  return anchorDimensions;
+  return anchorDimension;
 };
