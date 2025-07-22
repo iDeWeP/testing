@@ -48,8 +48,8 @@ export const UnstyledCheckboxContainer = ({
   rtr,
   rbl,
   rbr,
-  decorated,
   className,
+  decorated,
   ...restProps
 }: Props) => {
   const mergedClassName = mergeClassName('checkboxContainer', className, {
