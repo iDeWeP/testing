@@ -1,6 +1,6 @@
 import { sharedStyles } from '../../config/shared-styles';
 import { systemStyles } from '../../config/system-styles';
-import type { Classes } from '../../types';
+import type { Classes, ClassName } from '../../types';
 import { getSpacing } from './get-spacing';
 import { mergeClasses } from './merge-classes';
 
@@ -21,7 +21,7 @@ export const styleSpinner = (
     mr = 'unset',
     ring = 'unset'
   }: Classes
-) => {
+): ClassName => {
   const margins = getSpacing(margin);
   const hasRing = ring !== 'unset';
   const isSpinning = spin && !disabled;

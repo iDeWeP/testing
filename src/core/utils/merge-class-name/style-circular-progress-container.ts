@@ -1,6 +1,6 @@
 import { circularProgressConfig } from '../../components/CircularProgress/circularProgressConfig';
 import { systemStyles } from '../../config/system-styles';
-import type { Classes } from '../../types';
+import type { Classes, ClassName } from '../../types';
 import { getSpacing } from './get-spacing';
 import { mergeClasses } from './merge-classes';
 
@@ -17,7 +17,7 @@ export const styleCircularProgressContainer = (
     ml = 'unset',
     mr = 'unset'
   }: Classes
-) => {
+): ClassName => {
   const margins = getSpacing(margin);
 
   return mergeClasses(

@@ -1,4 +1,4 @@
-import type { Classes } from '../../types';
+import type { Classes, ClassName } from '../../types';
 import { styleAppShell } from './style-app-shell';
 import { styleBadge } from './style-badge';
 import { styleBox } from './style-box';
@@ -100,4 +100,4 @@ export const mergeClassName = (
   component: keyof typeof componentsClasses,
   className?: string,
   classes?: Classes
-) => componentsClasses[component](className ?? '', classes ?? {});
+): ClassName => componentsClasses[component](className ?? '', classes ?? {});

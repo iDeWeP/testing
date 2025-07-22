@@ -1,7 +1,7 @@
 import { unstyledSwitchConfig } from '../../components/UnstyledSwitch/unstyledSwitchConfig';
 import { sharedStyles } from '../../config/shared-styles';
 import { systemStyles } from '../../config/system-styles';
-import type { Classes } from '../../types';
+import type { Classes, ClassName } from '../../types';
 import { getSpacing } from './get-spacing';
 import { mergeClasses } from './merge-classes';
 
@@ -29,7 +29,7 @@ export const styleSwitchContainer = (
     rbr = 'unset',
     decorated = false
   }: Classes
-) => {
+): ClassName => {
   const placementType = decorated ? 'decorated' : 'default';
   const sizeScale = decorated ? 'default' : 'text';
   const margins = getSpacing(margin);

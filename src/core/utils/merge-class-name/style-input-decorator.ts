@@ -1,7 +1,7 @@
 import { unstyledInputConfig } from '../../components/UnstyledInput/unstyledInputConfig';
 import { sharedStyles } from '../../config/shared-styles';
 import { systemStyles } from '../../config/system-styles';
-import type { Classes } from '../../types';
+import type { Classes, ClassName } from '../../types';
 import { getInputColor } from './get-input-color';
 import { getInputRadius } from './get-input-radius';
 import { mergeClasses } from './merge-classes';
@@ -15,7 +15,7 @@ export const styleInputDecorator = (
     invalid = false,
     disabled = false,
     inputVariant = 'default',
-    sidePlacement = 'left',
+    sidePlacement = 'start',
     radius = 'unset',
     r = 'unset',
     rt = 'unset',
@@ -30,7 +30,7 @@ export const styleInputDecorator = (
     gap = 'unset',
     decorated = false
   }: Classes
-) => {
+): ClassName => {
   const isOutlined = inputVariant === 'outlined';
   const paddingType = decorated ? 'decorated' : 'default';
   const radiuses = getInputRadius(

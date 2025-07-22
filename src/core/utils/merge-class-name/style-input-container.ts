@@ -1,7 +1,7 @@
 import { unstyledInputConfig } from '../../components/UnstyledInput/unstyledInputConfig';
 import { sharedStyles } from '../../config/shared-styles';
 import { systemStyles } from '../../config/system-styles';
-import type { Classes } from '../../types';
+import type { Classes, ClassName } from '../../types';
 import { getColor } from './get-color';
 import { getSpacing } from './get-spacing';
 import { mergeClasses } from './merge-classes';
@@ -29,7 +29,7 @@ export const styleInputContainer = (
     mr = 'unset',
     color = 'unset'
   }: Classes
-) => {
+): ClassName => {
   const size = resize ? 'full' : inputSize;
   const margins = getSpacing(margin);
   const normalColor = getColor(

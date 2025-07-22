@@ -1,7 +1,7 @@
 import { unstyledLinearProgressConfig } from '../../components/UnstyledLinearProgress/unstyledLinearProgressConfig';
 import { sharedStyles } from '../../config/shared-styles';
 import { systemStyles } from '../../config/system-styles';
-import type { Classes } from '../../types';
+import type { Classes, ClassName } from '../../types';
 import { isAutoBordered } from '../is-auto-bordered/is-auto-bordered';
 import { getBorder } from './get-border';
 import { getColor } from './get-color';
@@ -40,7 +40,7 @@ export const styleLinearProgress = (
     ring = 'unset',
     decorated = false
   }: Classes
-) => {
+): ClassName => {
   const sizeType = decorated ? 'decorated' : 'default';
   const margins = getSpacing(margin);
   const defaultBorder = getBorder(variant, border).all;

@@ -1,7 +1,7 @@
 import { unstyledSwitchConfig } from '../../components/UnstyledSwitch/unstyledSwitchConfig';
 import { sharedStyles } from '../../config/shared-styles';
 import { systemStyles } from '../../config/system-styles';
-import type { Classes } from '../../types';
+import type { Classes, ClassName } from '../../types';
 import { isAutoBordered } from '../is-auto-bordered/is-auto-bordered';
 import { getBorder } from './get-border';
 import { getColor } from './get-color';
@@ -33,7 +33,7 @@ export const styleSwitchBar = (
     shadow = 'unset',
     decorated = false
   }: Classes
-) => {
+): ClassName => {
   const isFloating = switchScale === 'slider' || decorated;
   const focusable = getFocusableState({ disabled }, true);
   const defaultBorder = getBorder(variant, border).all;

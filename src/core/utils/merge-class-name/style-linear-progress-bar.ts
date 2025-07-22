@@ -1,6 +1,6 @@
 import { unstyledLinearProgressConfig } from '../../components/UnstyledLinearProgress/unstyledLinearProgressConfig';
 import { systemStyles } from '../../config/system-styles';
-import type { Classes } from '../../types';
+import type { Classes, ClassName } from '../../types';
 import { getColor } from './get-color';
 import { getReversedColor } from './get-reversed-color';
 import { hasVariantBg } from './has-variant-bg';
@@ -16,7 +16,7 @@ export const styleLinearProgressBar = (
     color = 'unset',
     decorated = false
   }: Classes
-) => {
+): ClassName => {
   const colors = getColor(
     variant === 'light' ? 'light' : 'solid',
     hasVariantBg(variant) ? color : getReversedColor(color),

@@ -1,7 +1,7 @@
 import { unstyledDividerConfig } from '../../components/UnstyledDivider/unstyledDividerConfig';
 import { sharedStyles } from '../../config/shared-styles';
 import { systemStyles } from '../../config/system-styles';
-import type { Classes } from '../../types';
+import type { Classes, ClassName } from '../../types';
 import { getColor } from './get-color';
 import { getDividerSpacing } from './get-divider-spacing';
 import { mergeClasses } from './merge-classes';
@@ -32,7 +32,7 @@ export const styleDivider = (
     gap = 'unset',
     decorated = false
   }: Classes
-) => {
+): ClassName => {
   const paddings = getDividerSpacing(orientation, padding);
   const margins = getDividerSpacing(orientation, margin);
   const textColor = getColor('text', color).text;

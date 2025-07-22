@@ -1,5 +1,5 @@
 import { unstyledRippleConfig } from '../../components/UnstyledRipple/unstyledRippleConfig';
-import type { Classes } from '../../types';
+import type { Classes, ClassName } from '../../types';
 import { getColor } from './get-color';
 import { mergeClasses } from './merge-classes';
 
@@ -14,7 +14,7 @@ export const styleRipple = (
     rippleScale = 'default',
     color = 'unset'
   }: Classes
-) => {
+): ClassName => {
   const defaultColors = getColor(variant, color, { valid, invalid }, false);
   const colors = getColor(variant, color, { valid, invalid });
 

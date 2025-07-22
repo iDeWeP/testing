@@ -1,6 +1,6 @@
 import { sharedStyles } from '../../config/shared-styles';
 import { systemStyles } from '../../config/system-styles';
-import type { Classes } from '../../types';
+import type { Classes, ClassName } from '../../types';
 import { getBorder } from './get-border';
 import { getColor } from './get-color';
 import { getSpacing } from './get-spacing';
@@ -35,7 +35,7 @@ export const styleIcon = (
     shadow = 'unset',
     ring = 'unset'
   }: Classes
-) => {
+): ClassName => {
   const margins = getSpacing(margin);
   const defaultBorder = getBorder(variant, border).all;
   const colors = getColor(variant, color);

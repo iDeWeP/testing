@@ -1,7 +1,7 @@
 import { unstyledButtonConfig } from '../../components/UnstyledButton/unstyledButtonConfig';
 import { sharedStyles } from '../../config/shared-styles';
 import { systemStyles } from '../../config/system-styles';
-import type { Classes } from '../../types';
+import type { Classes, ClassName } from '../../types';
 import { getColor } from './get-color';
 import { getFocusableState } from './get-focusable-state';
 import { getStateColor } from './get-state-color';
@@ -18,17 +18,17 @@ export const styleButton = (
     color = 'unset',
     effect = 'unset'
   }: Classes
-) => {
+): ClassName => {
   const isCheckable = checked !== undefined && !disabled;
   const isLoading = loading === true;
   const focusable = getFocusableState({ disabled, loading });
-  const defaultColors = getColor(variant, color, { disabled });
-  const uncheckedColors = getColor(variant, color, { disabled }, false);
-  const checkedColors = getColor(variant, color, { disabled }, true);
-  const colors = getStateColor(
-    defaultColors,
-    uncheckedColors,
-    checkedColors,
+  const defaultColorType = getColor(variant, color, { disabled });
+  const uncheckedColorType = getColor(variant, color, { disabled }, false);
+  const checkedColorType = getColor(variant, color, { disabled }, true);
+  const colorType = getStateColor(
+    defaultColorType,
+    uncheckedColorType,
+    checkedColorType,
     disabled,
     checked
   );
@@ -37,16 +37,16 @@ export const styleButton = (
     checked && sharedStyles.state.on,
     sharedStyles.position.relative,
     sharedStyles.focusable[focusable],
-    disabled && systemStyles.color.default.bg[theme][colors.bg],
-    disabled && systemStyles.color.default.text[theme][colors.text],
-    disabled && systemStyles.color.default.fill[theme][colors.text],
-    !loading && systemStyles.color.default.ring[theme][colors.ring],
-    isCheckable && systemStyles.color.on.bg[theme][checkedColors.bg],
-    isCheckable && systemStyles.color.on.text[theme][checkedColors.text],
-    isCheckable && systemStyles.color.on.fill[theme][checkedColors.text],
+    disabled && systemStyles.color.default.bg[theme][colorType.bg],
+    disabled && systemStyles.color.default.text[theme][colorType.text],
+    disabled && systemStyles.color.default.fill[theme][colorType.text],
+    !loading && systemStyles.color.default.ring[theme][colorType.ring],
+    isCheckable && systemStyles.color.on.bg[theme][checkedColorType.bg],
+    isCheckable && systemStyles.color.on.text[theme][checkedColorType.text],
+    isCheckable && systemStyles.color.on.fill[theme][checkedColorType.text],
     !loading &&
       isCheckable &&
-      systemStyles.color.on.ring[theme][checkedColors.ring],
+      systemStyles.color.on.ring[theme][checkedColorType.ring],
     isLoading && unstyledButtonConfig.styles.root.loading.normal,
     isLoading &&
       isCheckable &&

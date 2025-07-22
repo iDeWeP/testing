@@ -1,7 +1,7 @@
 import { circularProgressConfig } from '../../components/CircularProgress/circularProgressConfig';
 import { sharedStyles } from '../../config/shared-styles';
 import { systemStyles } from '../../config/system-styles';
-import type { Classes } from '../../types';
+import type { Classes, ClassName } from '../../types';
 import { getColor } from './get-color';
 import { getFontSize } from './get-font-size';
 import { mergeClasses } from './merge-classes';
@@ -15,7 +15,7 @@ export const styleCircularProgressLabel = (
     size = 'md',
     color = 'unset'
   }: Classes
-) => {
+): ClassName => {
   const fontSize = getFontSize(size);
   const textColor = getColor(variant, color, { disabled }).text;
 

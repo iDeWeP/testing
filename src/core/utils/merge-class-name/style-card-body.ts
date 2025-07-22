@@ -1,6 +1,6 @@
 import { sharedStyles } from '../../config/shared-styles';
 import { systemStyles } from '../../config/system-styles';
-import type { Classes } from '../../types';
+import type { Classes, ClassName } from '../../types';
 import { getBorder } from './get-border';
 import { getSpacing } from './get-spacing';
 import { mergeClasses } from './merge-classes';
@@ -10,13 +10,13 @@ export const styleCardBody = (
   {
     variant = 'solid',
     orientation = 'row',
-    cardPlacement = 'none',
+    cardPlacement = 'default',
     padding = 'unset',
     margin = 'unset',
     border = 'unset',
     radius = 'unset'
   }: Classes
-) => {
+): ClassName => {
   const paddings = getSpacing(padding, cardPlacement);
   const margins = getSpacing(margin, cardPlacement);
   const borders = getBorder(variant, border, cardPlacement);

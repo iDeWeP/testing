@@ -1,6 +1,6 @@
 import { sharedStyles } from '../../config/shared-styles';
 import { systemStyles } from '../../config/system-styles';
-import type { Classes } from '../../types';
+import type { Classes, ClassName } from '../../types';
 import { getSpacing } from './get-spacing';
 import { mergeClasses } from './merge-classes';
 
@@ -28,7 +28,7 @@ export const styleCheckboxContainer = (
     rbr = 'unset',
     decorated = false
   }: Classes
-) => {
+): ClassName => {
   const sizeType = decorated ? 'default' : 'text';
   const margins = getSpacing(margin);
 

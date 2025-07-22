@@ -1,5 +1,5 @@
 import { twMerge } from 'tailwind-merge';
-import type { CSSProps } from '../../types';
+import type { CSSProps, ClassName } from '../../types';
 
 export const mergeClasses = (
   ...classNames: (
@@ -11,9 +11,9 @@ export const mergeClasses = (
     | number
     | bigint
   )[]
-): string | undefined => {
+): ClassName => {
   const className = classNames
-    .map((className): string | undefined => {
+    .map((className): ClassName => {
       if (className && typeof className === 'object') {
         return Object.values(className).join(' ');
       }

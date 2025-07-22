@@ -1,6 +1,6 @@
 import { unstyledInputConfig } from '../../components/UnstyledInput/unstyledInputConfig';
 import { systemStyles } from '../../config/system-styles';
-import type { Classes } from '../../types';
+import type { Classes, ClassName } from '../../types';
 import { mergeClasses } from './merge-classes';
 
 export const styleInputLabel = (
@@ -11,7 +11,7 @@ export const styleInputLabel = (
     inputSize = 'md',
     gap = 'unset'
   }: Classes
-) =>
+): ClassName =>
   mergeClasses(
     unstyledInputConfig.styles.label.default,
     unstyledInputConfig.styles.shared.label,

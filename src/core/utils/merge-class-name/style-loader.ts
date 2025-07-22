@@ -1,7 +1,7 @@
 import { unstyledLoaderConfig } from '../../components/UnstyledLoader/unstyledLoaderConfig';
 import { sharedStyles } from '../../config/shared-styles';
 import { systemStyles } from '../../config/system-styles';
-import type { Classes } from '../../types';
+import type { Classes, ClassName } from '../../types';
 import { getLoaderColor } from './get-loader-color';
 import { getSpacing } from './get-spacing';
 import { getStateColor } from './get-state-color';
@@ -28,7 +28,7 @@ export const styleLoader = (
     color = 'unset',
     ring = 'unset'
   }: Classes
-) => {
+): ClassName => {
   const isCheckable = checked !== undefined && !disabled;
   const margins = getSpacing(margin);
   const defaultColor = getLoaderColor(variant, color, { disabled });

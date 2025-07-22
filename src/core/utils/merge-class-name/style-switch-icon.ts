@@ -1,6 +1,6 @@
 import { unstyledSwitchConfig } from '../../components/UnstyledSwitch/unstyledSwitchConfig';
 import { systemStyles } from '../../config/system-styles';
-import type { Classes } from '../../types';
+import type { Classes, ClassName } from '../../types';
 import { getColor } from './get-color';
 import { mergeClasses } from './merge-classes';
 
@@ -15,7 +15,7 @@ export const styleSwitchIcon = (
     color = 'unset',
     decorated = false
   }: Classes
-) => {
+): ClassName => {
   const isNormal = switchScale === 'default';
   const placementType = decorated ? 'decorated' : 'default';
   const uncheckedColor = getColor(variant, color, { disabled }, false).text;

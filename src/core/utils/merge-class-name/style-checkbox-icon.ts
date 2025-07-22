@@ -1,6 +1,6 @@
 import { sharedStyles } from '../../config/shared-styles';
 import { systemStyles } from '../../config/system-styles';
-import type { Classes } from '../../types';
+import type { Classes, ClassName } from '../../types';
 import { isAutoBordered } from '../is-auto-bordered/is-auto-bordered';
 import { getBorder } from './get-border';
 import { getColor } from './get-color';
@@ -30,7 +30,7 @@ export const styleCheckboxIcon = (
     color = 'unset',
     shadow = 'unset'
   }: Classes
-) => {
+): ClassName => {
   const focusable = getFocusableState({ disabled }, true);
   const defaultBorder = getBorder(variant, border).all;
   const isBordered = isAutoBordered(variant, border);

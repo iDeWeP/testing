@@ -1,7 +1,7 @@
 import { unstyledInputConfig } from '../../components/UnstyledInput/unstyledInputConfig';
 import { sharedStyles } from '../../config/shared-styles';
 import { systemStyles } from '../../config/system-styles';
-import type { Classes } from '../../types';
+import type { Classes, ClassName } from '../../types';
 import { getInputColor } from './get-input-color';
 import { mergeClasses } from './merge-classes';
 
@@ -17,7 +17,7 @@ export const styleInputFieldset = (
     inputVariant = 'default',
     color = 'unset'
   }: Classes
-) =>
+): ClassName =>
   mergeClasses(
     on && sharedStyles.state.on,
     unstyledInputConfig.styles.fieldset.default,

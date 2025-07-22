@@ -1,7 +1,7 @@
 import { unstyledContainerConfig } from '../../components/UnstyledContainer/unstyledContainerConfig';
 import { sharedStyles } from '../../config/shared-styles';
 import { systemStyles } from '../../config/system-styles';
-import type { Classes } from '../../types';
+import type { Classes, ClassName } from '../../types';
 import { getBorder } from './get-border';
 import { getColor } from './get-color';
 import { getContainerSpacing } from './get-container-spacing';
@@ -40,7 +40,7 @@ export const styleContainer = (
     ring = 'unset',
     gap = 'unset'
   }: Classes
-) => {
+): ClassName => {
   const spacing = getContainerSpacing(variant, size, scale, border);
   const margins = getSpacing(margin);
   const defaultBorder = getBorder(variant, border).all;
