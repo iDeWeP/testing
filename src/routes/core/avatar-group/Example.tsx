@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react';
 import { ExampleAvatar } from '../../../components/ExampleAvatar';
 import { AvatarGroup } from '../../../core/components/AvatarGroup/AvatarGroup';
 import type { AvatarGroupProps } from '../../../core/components/AvatarGroup/AvatarGroup.types';
@@ -5,7 +6,7 @@ import type { AvatarGroupProps } from '../../../core/components/AvatarGroup/Avat
 export const Example = ({
   children = 'AVATAR-GROUP',
   ...restProps
-}: AvatarGroupProps<'div'>) => (
+}: AvatarGroupProps<'div'>): ReactNode => (
   <AvatarGroup {...restProps}>
     <ExampleAvatar>{children} #1</ExampleAvatar>
     <ExampleAvatar>{children} #2</ExampleAvatar>

@@ -7,8 +7,8 @@ export const DefaultExample = () => (
     <ExampleCard>
       <Example />
       <Example
-        leftDecorator="left"
-        rightDecorator="right"
+        startDecorator="left"
+        endDecorator="right"
         label="label"
       />
     </ExampleCard>

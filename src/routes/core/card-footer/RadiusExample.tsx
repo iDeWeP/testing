@@ -1,8 +1,9 @@
+import type { ReactNode } from 'react';
 import { ExampleCard } from '../../../components/ExampleCard';
 import { ExampleSection } from '../../../components/ExampleSection';
 import { Example } from './Example';
 
-export const RadiusExample = () => (
+export const RadiusExample = (): ReactNode => (
   <ExampleSection title="Radius">
     <ExampleCard>
       <Example radius="unset">UNSET</Example>

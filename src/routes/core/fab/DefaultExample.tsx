@@ -6,11 +6,11 @@ export const DefaultExample = () => (
   <ExampleSection title="Default">
     <ExampleCard>
       <Example />
-      <Example leftDecorator="LEFT-DECORATOR" />
-      <Example rightDecorator="RIGHT-DECORATOR" />
+      <Example startDecorator="START-DECORATOR" />
+      <Example endDecorator="END-DECORATOR" />
       <Example
-        leftDecorator="LEFT-DECORATOR"
-        rightDecorator="RIGHT-DECORATOR"
+        startDecorator="START-DECORATOR"
+        endDecorator="END-DECORATOR"
       />
       <Example ripple="none">RIPPLE-NONE</Example>
     </ExampleCard>

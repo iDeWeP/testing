@@ -1,9 +1,10 @@
+import type { ReactNode } from 'react';
 import { ExampleBox } from '../../../components/ExampleBox';
 import { ExampleCard } from '../../../components/ExampleCard';
 import { ExampleSection } from '../../../components/ExampleSection';
 import { Example } from './Example';
 
-export const GapExample = () => (
+export const GapExample = (): ReactNode => (
   <ExampleSection title="Gap">
     <ExampleCard>
       <Example gap="unset">
