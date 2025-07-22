@@ -7,6 +7,6 @@ type Props = {
   children?: ReactNode;
 };
 
-export const ConfigProvider = ({ config, children }: Props) => (
+export const ConfigProvider = ({ config, children }: Props): ReactNode => (
   <ConfigContext value={config}>{children}</ConfigContext>
 );
