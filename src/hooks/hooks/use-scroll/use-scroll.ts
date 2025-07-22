@@ -6,10 +6,7 @@ export type Scroll = {
 };
 
 export type UseScrollResult = {
-  scroll: {
-    top: number;
-    left: number;
-  };
+  scroll: Scroll;
   handleScroll: VoidFunction;
 };
 
