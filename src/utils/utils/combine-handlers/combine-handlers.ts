@@ -8,7 +8,7 @@ export const combineHandlers =
       | undefined
       | false
     )[]
-  ) =>
+  ): ((event: T) => void) =>
   (event: T) => {
     for (const handler of handlers) {
       if (handler && handler(event) === false) {
