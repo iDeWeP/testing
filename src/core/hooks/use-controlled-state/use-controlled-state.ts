@@ -3,8 +3,8 @@ import { combineHandlers } from '../../../utils/utils/combine-handlers/combine-h
 
 type ControlledState<I extends SyntheticEvent, O extends SyntheticEvent> = {
   isOn: boolean;
-  handleOn?: (event: I) => void;
-  handleOff?: (event: O) => void;
+  handleOn?: (event: I) => void | false;
+  handleOff?: (event: O) => void | false;
 };
 
 export const useControlledState = <
@@ -13,8 +13,8 @@ export const useControlledState = <
 >(
   defaultOn: boolean,
   on?: boolean,
-  onOn?: ((event: I) => void | undefined) | VoidFunction,
-  onOff?: ((event: O) => void | undefined) | VoidFunction
+  onOn?: ((event: I) => void | false) | VoidFunction,
+  onOff?: ((event: O) => void | false) | VoidFunction
 ): ControlledState<I, O> => {
   const [isOn, setIsOn] = useState(defaultOn);
 
