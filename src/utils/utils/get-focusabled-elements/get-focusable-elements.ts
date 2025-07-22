@@ -1,5 +1,3 @@
-import { setValue } from '../set-value/set-value';
-
 export const getFocusableElements = <E extends HTMLElement>(
   el?: E | null
 ): HTMLElement[] | undefined => {
@@ -17,5 +15,7 @@ export const getFocusableElements = <E extends HTMLElement>(
       !el.hasAttribute('disabled') && el.getAttribute('aria-hidden') !== 'true'
   );
 
-  return setValue(focusableEls.length, focusableEls);
+  if (focusableEls.length) {
+    return focusableEls;
+  }
 };
