@@ -1,37 +1,37 @@
 import type { Collision, MainAxis } from '../../../core/types';
 import type {
-  SizeDimensions,
-  OverflowDimensions,
-  ViewDimensions
+  ViewDimension,
+  SizeDimension,
+  OverflowDimension
 } from './cords.types';
 
-const dimensions = {
+const dimension = {
   top: (
-    view: ViewDimensions,
-    size: SizeDimensions,
-    overflow: OverflowDimensions
+    view: ViewDimension,
+    size: SizeDimension,
+    overflow: OverflowDimension
   ) => overflow.top < view.top && { top: size.bottom, mainAxis: 'bottom' },
   bottom: (
-    view: ViewDimensions,
-    size: SizeDimensions,
-    overflow: OverflowDimensions
+    view: ViewDimension,
+    size: SizeDimension,
+    overflow: OverflowDimension
   ) => overflow.bottom > view.bottom && { top: size.top, mainAxis: 'top' },
   left: (
-    view: ViewDimensions,
-    size: SizeDimensions,
-    overflow: OverflowDimensions
+    view: ViewDimension,
+    size: SizeDimension,
+    overflow: OverflowDimension
   ) => overflow.left < view.left && { left: size.left, mainAxis: 'right' },
   right: (
-    view: ViewDimensions,
-    size: SizeDimensions,
-    overflow: OverflowDimensions
+    view: ViewDimension,
+    size: SizeDimension,
+    overflow: OverflowDimension
   ) => overflow.right > view.right && { left: size.left, mainAxis: 'left' }
 };
 
 export const getFlipMainAxis = (
   collision: Collision,
   mainAxis: MainAxis,
-  view: ViewDimensions,
-  size: SizeDimensions,
-  overflow: OverflowDimensions
-) => collision !== 'none' && dimensions[mainAxis](view, size, overflow);
+  view: ViewDimension,
+  size: SizeDimension,
+  overflow: OverflowDimension
+) => collision !== 'none' && dimension[mainAxis](view, size, overflow);

@@ -1,4 +1,4 @@
-export type AnchorDimensions = {
+export type AnchorDimension = {
   top: number;
   left: number;
   x: number;
@@ -9,21 +9,21 @@ export type AnchorDimensions = {
   offsetHeight: number;
 };
 
-export type ElDimensions = {
+export type ElDimension = {
   width: number;
   height: number;
   offsetWidth: number;
   offsetHeight: number;
 };
 
-export type ViewDimensions = {
+export type ViewDimension = {
   top: number;
   bottom: number;
   left: number;
   right: number;
 };
 
-export type OverflowDimensions = {
+export type OverflowDimension = {
   horizontal: {
     start: number;
     end: number;
@@ -50,7 +50,7 @@ export type OverflowDimensions = {
   right: number;
 };
 
-export type SizeDimensions = {
+export type SizeDimension = {
   horizontal: {
     start: number;
     end: number;
@@ -71,6 +71,6 @@ export type SizeDimensions = {
   right: number;
 };
 
-export type TresholdDimensions = ['top' | 'left', 'bottom' | 'right'];
+export type TresholdDimension = ['top' | 'left', 'bottom' | 'right'];
 export type Dimension = 'top' | 'left';
 export type Orientation = 'vertical' | 'horizontal';

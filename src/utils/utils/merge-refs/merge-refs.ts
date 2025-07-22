@@ -3,7 +3,7 @@ import type { ComponentRef, ElementType, ForwardedRef } from 'react';
 export const mergeRefs =
   <E extends ComponentRef<ElementType>>(
     ...refs: (ForwardedRef<E> | undefined)[]
-  ) =>
+  ): ((element: E) => void) =>
   (element: E) =>
     refs.forEach((ref) => {
       if (typeof ref === 'function') {

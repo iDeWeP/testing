@@ -1,15 +1,16 @@
 import type {
-  AnchorDimensions,
-  ElDimensions,
-  ViewDimensions
+  AnchorDimension,
+  ElDimension,
+  ViewDimension,
+  SizeDimension
 } from './cords.types';
 
-export const calculateSizeDimensions = (
-  anchor: AnchorDimensions,
-  el: ElDimensions,
-  view: ViewDimensions,
+export const calculateSizeDimension = (
+  anchor: AnchorDimension,
+  el: ElDimension,
+  view: ViewDimension,
   offset: number
-) => ({
+): SizeDimension => ({
   horizontal: {
     start: anchor.left,
     end: anchor.offsetWidth - el.width,

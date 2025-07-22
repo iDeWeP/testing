@@ -5,4 +5,4 @@ export const portNode = (
   el: ReactNode,
   destinationEl?: Element | DocumentFragment | null,
   key?: Key | null
-) => (destinationEl ? createPortal(el, destinationEl, key) : el);
+): ReactNode => (destinationEl ? createPortal(el, destinationEl, key) : el);

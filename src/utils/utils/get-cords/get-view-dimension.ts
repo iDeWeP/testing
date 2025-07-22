@@ -1,4 +1,6 @@
-export const getViewDimensions = (threshold: number) => ({
+import type { ViewDimension } from './cords.types';
+
+export const getViewDimension = (threshold: number): ViewDimension => ({
   top: threshold,
   bottom: document.documentElement.clientHeight - threshold,
   left: threshold,

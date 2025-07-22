@@ -1,14 +1,15 @@
 import type {
-  AnchorDimensions,
-  ElDimensions,
-  ViewDimensions
+  AnchorDimension,
+  ElDimension,
+  ViewDimension,
+  OverflowDimension
 } from './cords.types';
 
-export const calculateOverflowDimensions = (
-  anchor: AnchorDimensions,
-  el: ElDimensions,
-  view: ViewDimensions
-) => ({
+export const calculateOverflowDimension = (
+  anchor: AnchorDimension,
+  el: ElDimension,
+  view: ViewDimension
+): OverflowDimension => ({
   horizontal: {
     start: anchor.x + el.width,
     end: anchor.x + anchor.width - el.width,

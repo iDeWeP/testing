@@ -2,25 +2,25 @@ import type { Collision, CrossAxis } from '../../../core/types';
 import type {
   Orientation,
   Dimension,
-  TresholdDimensions,
-  AnchorDimensions,
-  ElDimensions,
-  ViewDimensions,
-  SizeDimensions,
-  OverflowDimensions
+  TresholdDimension,
+  AnchorDimension,
+  ElDimension,
+  ViewDimension,
+  SizeDimension,
+  OverflowDimension
 } from './cords.types';
 import { isElShorter } from './is-el-shorter';
 
-const dimensions = {
+const dimensionMap = {
   start: (
     orientation: Orientation,
     dimension: Dimension,
-    [start, end]: TresholdDimensions,
-    anchor: AnchorDimensions,
-    el: ElDimensions,
-    view: ViewDimensions,
-    size: SizeDimensions,
-    overflow: OverflowDimensions
+    [start, end]: TresholdDimension,
+    anchor: AnchorDimension,
+    el: ElDimension,
+    view: ViewDimension,
+    size: SizeDimension,
+    overflow: OverflowDimension
   ) => {
     const isShorter = isElShorter(anchor, el, end);
 
@@ -36,12 +36,12 @@ const dimensions = {
   end: (
     orientation: Orientation,
     dimension: Dimension,
-    [start, end]: TresholdDimensions,
-    anchor: AnchorDimensions,
-    el: ElDimensions,
-    view: ViewDimensions,
-    size: SizeDimensions,
-    overflow: OverflowDimensions
+    [start, end]: TresholdDimension,
+    anchor: AnchorDimension,
+    el: ElDimension,
+    view: ViewDimension,
+    size: SizeDimension,
+    overflow: OverflowDimension
   ) => {
     const isShorter = isElShorter(anchor, el, end);
 
@@ -61,16 +61,16 @@ export const getFlipCrossAxis = (
   crossAxis: CrossAxis,
   orientation: Orientation,
   dimension: Dimension,
-  tresholdDimensions: TresholdDimensions,
-  anchor: AnchorDimensions,
-  el: ElDimensions,
-  view: ViewDimensions,
-  size: SizeDimensions,
-  overflow: OverflowDimensions
+  tresholdDimensions: TresholdDimension,
+  anchor: AnchorDimension,
+  el: ElDimension,
+  view: ViewDimension,
+  size: SizeDimension,
+  overflow: OverflowDimension
 ) =>
   collision === 'flip' &&
   crossAxis !== 'center' &&
-  dimensions[crossAxis](
+  dimensionMap[crossAxis](
     orientation,
     dimension,
     tresholdDimensions,
