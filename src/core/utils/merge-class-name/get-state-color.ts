@@ -1,8 +1,4 @@
-type ColorType = {
-  bg: string;
-  text: string;
-  ring: string;
-};
+type ColorType = Record<'bg' | 'text' | 'ring', string>;
 
 export const getStateColor = <T extends ColorType | string>(
   defaultColor: T,

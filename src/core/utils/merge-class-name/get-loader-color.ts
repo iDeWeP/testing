@@ -23,22 +23,22 @@ export const variantMap: VariantMap = {
 export const getLoaderColor = (
   variant: Variant,
   color: Color,
-  states?: State,
+  state?: State,
   isChecked?: boolean
 ): string => {
   if (color === 'unset') {
     return 'unset';
   }
 
-  if (isChecked === false && states?.disabled) {
+  if (isChecked === false && state?.disabled) {
     return hasVariantBg(variant) ? 'disabled' : 'disabled-light';
   }
 
-  if (isChecked && states?.disabled) {
+  if (isChecked && state?.disabled) {
     return hasVariantBg(variant) ? 'disabled-light' : 'disabled';
   }
 
-  if (states?.disabled) {
+  if (state?.disabled) {
     return 'disabled';
   }
 

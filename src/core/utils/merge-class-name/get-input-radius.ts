@@ -1,4 +1,4 @@
-import type { Radius, InputVariant, SidePlacement } from '../../types';
+import type { InputVariant, Radius, SidePlacement } from '../../types';
 import { getClass } from './get-class';
 
 type RadiusType = Record<
@@ -76,17 +76,17 @@ export const getInputRadius = (
   rbl: Radius,
   rbr: Radius
 ): RadiusType => {
-  const radiuses = radiusMap[variant](placement === 'start', radius);
+  const radiusType = radiusMap[variant](placement === 'start', radius);
 
   if (placement === 'start') {
-    radiuses.l = setRadius(r, rl);
-    radiuses.tl = setRadius(rt, rtl);
-    radiuses.bl = setRadius(rb, rbl);
+    radiusType.l = setRadius(r, rl);
+    radiusType.tl = setRadius(rt, rtl);
+    radiusType.bl = setRadius(rb, rbl);
   } else {
-    radiuses.r = setRadius(r, rr);
-    radiuses.tr = setRadius(rt, rtr);
-    radiuses.br = setRadius(rb, rbr);
+    radiusType.r = setRadius(r, rr);
+    radiusType.tr = setRadius(rt, rtr);
+    radiusType.br = setRadius(rb, rbr);
   }
 
-  return radiuses;
+  return radiusType;
 };

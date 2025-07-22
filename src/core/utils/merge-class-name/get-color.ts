@@ -2,13 +2,13 @@ import type { Variant, Color } from '../../types';
 import { hasVariantBg } from './has-variant-bg';
 import { isColorReversed } from './is-color-reverser';
 
-type States = {
+type State = {
   disabled?: boolean;
   valid?: boolean;
   invalid?: boolean;
 };
 
-type ColorType = { bg: string; text: string; ring: string };
+type ColorType = Record<'bg' | 'text' | 'ring', string>;
 
 type VariantMap = Record<
   Variant,
@@ -41,7 +41,7 @@ const variantMap: VariantMap = {
 export const getColor = (
   variant: Variant,
   color: Color,
-  states?: States,
+  state?: State,
   isChecked?: boolean
 ): ColorType => {
   if (color === 'unset') {
@@ -52,7 +52,7 @@ export const getColor = (
     };
   }
 
-  if (isChecked === false && states?.disabled) {
+  if (isChecked === false && state?.disabled) {
     return {
       bg: hasVariantBg(variant) ? 'disabled-light' : 'none',
       text: hasVariantBg(variant) ? 'disabled' : 'disabled-light',
@@ -60,7 +60,7 @@ export const getColor = (
     };
   }
 
-  if (isChecked && states?.disabled) {
+  if (isChecked && state?.disabled) {
     return {
       bg: hasVariantBg(variant) ? 'disabled' : 'none',
       text: hasVariantBg(variant) ? 'disabled-light' : 'disabled',
@@ -68,7 +68,7 @@ export const getColor = (
     };
   }
 
-  if (states?.disabled) {
+  if (state?.disabled) {
     return {
       bg: hasVariantBg(variant) ? 'disabled-light' : 'none',
       text: 'disabled',
@@ -81,7 +81,7 @@ export const getColor = (
   const defaultColor = isDefault ? 'surface' : color.replace('-on', '');
 
   return variantMap[isDefault ? defaultVariant : variant](
-    states?.valid ? 'success' : states?.invalid ? 'error' : defaultColor,
+    state?.valid ? 'success' : state?.invalid ? 'error' : defaultColor,
     !isDefault && isColorReversed(color)
   );
 };

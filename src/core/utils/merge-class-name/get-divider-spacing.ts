@@ -1,10 +1,7 @@
 import type { Orientation, Spacing } from '../../types';
 import { getClass } from './get-class';
 
-type SpacingType = {
-  x: string | 'unset';
-  y: string | 'unset';
-};
+type SpacingType = Record<'x' | 'y', string>;
 
 export const getDividerSpacing = (
   orientation: Orientation,

@@ -13,11 +13,11 @@ export const styleCollapse = (
   const dimension = isHorizontal ? 'width' : 'height';
 
   if ((!isIn && isEntered) || isEntering) {
-    const sizes = ref?.current?.firstElementChild?.getBoundingClientRect() ?? {
+    const size = ref?.current?.firstElementChild?.getBoundingClientRect() ?? {
       width: '100%',
       height: '100%'
     };
-    const length = isHorizontal ? sizes.width : sizes.height;
+    const length = isHorizontal ? size.width : size.height;
 
     return { [dimension]: peak === 'auto' ? length : peak };
   }

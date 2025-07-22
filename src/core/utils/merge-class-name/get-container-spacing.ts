@@ -1,5 +1,6 @@
 import type { Variant, Size, Scale, Border } from '../../types';
 import { isAutoBordered } from '../is-auto-bordered/is-auto-bordered';
+import { getDefaultSize } from './get-default-size';
 import { isSpacingInner } from './is-spacing-inner';
 
 type Spacing = {
@@ -9,9 +10,6 @@ type Spacing = {
   all: string;
 };
 
-const setSize = (condition: boolean, size: string): string =>
-  condition ? `${size}-${size}` : size;
-
 export const getContainerSpacing = (
   variant: Variant,
   size: Size,
@@ -19,11 +17,14 @@ export const getContainerSpacing = (
   border: Border
 ): Spacing => {
   const padding = scale === 'circle' || scale === 'square' ? 'square' : 'rect';
+  const defaultSize = getDefaultSize(size);
 
   return {
     size: scale === 'square' ? 'square' : 'default',
     scale: isSpacingInner(size) ? `inner-${padding}` : padding,
     isSquare: scale === 'square',
-    all: setSize(isAutoBordered(variant, border), size.split('-')[0])
+    all: isAutoBordered(variant, border)
+      ? `${defaultSize}-${defaultSize}`
+      : defaultSize
   };
 };
