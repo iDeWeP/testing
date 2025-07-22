@@ -227,10 +227,6 @@ export type Transition =
   | CollapseTransition;
 export type DefaultTransition = 'fade' | GrowTransition;
 export type Ripple = 'none' | 'default';
-export type Cursor = {
-  x: number;
-  y: number;
-};
 
 /*
  *  CLASSNAME TYPES
