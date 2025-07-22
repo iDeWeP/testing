@@ -5,7 +5,10 @@ export type HandleFunction<E extends SyntheticEvent> = (
   event: E
 ) => void | false;
 
-type ControlledState<I extends SyntheticEvent, O extends SyntheticEvent> = {
+export type UseControlledStateResult<
+  I extends SyntheticEvent,
+  O extends SyntheticEvent
+> = {
   isOn: boolean;
   handleOn?: HandleFunction<I>;
   handleOff?: HandleFunction<O>;
@@ -19,7 +22,7 @@ export const useControlledState = <
   on?: boolean,
   onOn?: HandleFunction<I> | VoidFunction,
   onOff?: HandleFunction<O> | VoidFunction
-): ControlledState<I, O> => {
+): UseControlledStateResult<I, O> => {
   const [isOn, setIsOn] = useState(defaultOn);
 
   const handleOn = useCallback(() => setIsOn(true), []);
