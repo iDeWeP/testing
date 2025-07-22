@@ -84,18 +84,16 @@ export const getFlipCrossAxis = (
   size: SizeDimension,
   overflow: OverflowDimension
 ): AxisDimension | undefined => {
-  if (collision !== 'flip' || crossAxis === 'center') {
-    return undefined;
+  if (collision === 'flip' && crossAxis !== 'center') {
+    return dimensionMap[crossAxis](
+      orientation,
+      dimension,
+      tresholdDimensions,
+      anchor,
+      el,
+      view,
+      size,
+      overflow
+    );
   }
-
-  return dimensionMap[crossAxis](
-    orientation,
-    dimension,
-    tresholdDimensions,
-    anchor,
-    el,
-    view,
-    size,
-    overflow
-  );
 };

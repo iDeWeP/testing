@@ -160,18 +160,16 @@ export const getShiftCrossAxis = (
   size: SizeDimension,
   overflow: OverflowDimension
 ): AxisDimension | undefined => {
-  if (collision !== 'shift') {
-    return undefined;
+  if (collision === 'shift') {
+    return dimensionMap[crossAxis](
+      orientation,
+      dimension,
+      TresholdDimension,
+      anchor,
+      el,
+      view,
+      size,
+      overflow
+    );
   }
-
-  return dimensionMap[crossAxis](
-    orientation,
-    dimension,
-    TresholdDimension,
-    anchor,
-    el,
-    view,
-    size,
-    overflow
-  );
 };

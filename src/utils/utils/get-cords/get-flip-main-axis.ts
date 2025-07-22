@@ -3,7 +3,6 @@ import type {
   Collision,
   MainAxis
 } from '../../../core/types';
-import { setValue } from '../set-value/set-value';
 import type {
   ViewDimension,
   SizeDimension,
@@ -26,14 +25,26 @@ type DimensionMap = Record<
 >;
 
 const dimensionMap: DimensionMap = {
-  top: (view, size, overflow) =>
-    setValue(overflow.top < view.top, { top: size.bottom, mainAxis: 'bottom' }),
-  bottom: (view, size, overflow) =>
-    setValue(overflow.bottom > view.bottom, { top: size.top, mainAxis: 'top' }),
-  left: (view, size, overflow) =>
-    setValue(overflow.left < view.left, { left: size.left, mainAxis: 'right' }),
-  right: (view, size, overflow) =>
-    setValue(overflow.right > view.right, { left: size.left, mainAxis: 'left' })
+  top: (view, size, overflow) => {
+    if (overflow.top < view.top) {
+      return { top: size.bottom, mainAxis: 'bottom' };
+    }
+  },
+  bottom: (view, size, overflow) => {
+    if (overflow.bottom > view.bottom) {
+      return { top: size.top, mainAxis: 'top' };
+    }
+  },
+  left: (view, size, overflow) => {
+    if (overflow.left < view.left) {
+      return { left: size.left, mainAxis: 'right' };
+    }
+  },
+  right: (view, size, overflow) => {
+    if (overflow.right > view.right) {
+      return { left: size.left, mainAxis: 'left' };
+    }
+  }
 };
 
 export const getFlipMainAxis = (
@@ -43,9 +54,7 @@ export const getFlipMainAxis = (
   size: SizeDimension,
   overflow: OverflowDimension
 ): AxisDimension | undefined => {
-  if (collision === 'none') {
-    return undefined;
+  if (collision !== 'none') {
+    return dimensionMap[mainAxis](view, size, overflow);
   }
-
-  return dimensionMap[mainAxis](view, size, overflow);
 };
