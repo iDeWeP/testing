@@ -5,23 +5,16 @@ import { Example } from './Example';
 export const ScaleExample = () => (
   <ExampleSection title="Scale">
     <ExampleCard>
-      <Example scale="none">NONE</Example>
-      <Example scale="normal">NORMAL</Example>
+      <Example scale="default">DEFAULT</Example>
       <Example scale="square">SQUARE</Example>
       <Example scale="circle">CIRCLE</Example>
     </ExampleCard>
     <ExampleCard>
       <Example
         size="md-md"
-        scale="none"
+        scale="default"
       >
-        NONE
-      </Example>
-      <Example
-        size="md-md"
-        scale="normal"
-      >
-        NORMAL
+        DEFAULT
       </Example>
       <Example
         size="md-md"
