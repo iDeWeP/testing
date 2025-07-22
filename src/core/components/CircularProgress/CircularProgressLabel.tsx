@@ -1,9 +1,11 @@
+import type { ReactNode } from 'react';
 import { useTheme } from '../../hooks/use-theme/use-theme';
-import type { MergeComponentProps, Variant, Size, Color } from '../../types';
+import type { MergeProps, Variant, Size, Color } from '../../types';
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
+import type { CircularProgressLabelProps } from './CircularProgress.types';
 
-type Props = MergeComponentProps<
-  'span',
+type Props = MergeProps<
+  CircularProgressLabelProps,
   {
     disabled: boolean;
     variant: Variant;
@@ -19,7 +21,7 @@ export const CircularProgressLabel = ({
   color,
   className,
   ...restProps
-}: Props) => {
+}: Props): ReactNode => {
   const theme = useTheme();
 
   const mergedClassName = mergeClassName('circularProgressLabel', className, {

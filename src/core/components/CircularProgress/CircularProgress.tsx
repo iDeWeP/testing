@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react';
 import { useMergeProps } from '../../hooks/use-merge-props/use-merge-props';
 import { UnstyledSpinner } from '../UnstyledSpinner/UnstyledSpinner';
 import type { CircularProgressProps } from './CircularProgress.types';
@@ -5,7 +6,7 @@ import { circularProgressConfig } from './circularProgressConfig';
 import { CircularProgressContainer } from './CircularProgressContainer';
 import { CircularProgressLabel } from './CircularProgressLabel';
 
-export const CircularProgress = (props: CircularProgressProps) => {
+export const CircularProgress = (props: CircularProgressProps): ReactNode => {
   const {
     label,
     children,

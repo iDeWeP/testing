@@ -1,8 +1,10 @@
-import type { MergeComponentProps, Size, Margin } from '../../types';
+import type { ReactNode } from 'react';
+import type { MergeProps, Size, Margin } from '../../types';
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
+import type { CircularProgressContainerProps } from './CircularProgress.types';
 
-type Props = MergeComponentProps<
-  'div',
+type Props = MergeProps<
+  CircularProgressContainerProps,
   {
     size: Size;
     margin: Margin;
@@ -28,7 +30,7 @@ export const CircularProgressContainer = ({
   mr,
   className,
   ...restProps
-}: Props) => {
+}: Props): ReactNode => {
   const mergedClassName = mergeClassName(
     'circularProgressContainer',
     className,

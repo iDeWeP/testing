@@ -10,7 +10,7 @@ export const closeButtonConfig: ComponentConfig<CloseButtonConfigProps> = {
     color: 'primary',
     effect: 'unset',
     componentsProps: {},
-    ripple: 'normal',
+    ripple: 'default',
     margin: 'unset',
     m: 'unset',
     mx: 'unset',

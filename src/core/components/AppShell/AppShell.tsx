@@ -1,11 +1,13 @@
-import type { ElementType } from 'react';
+import type { ElementType, ReactNode } from 'react';
 import { useMergeProps } from '../../hooks/use-merge-props/use-merge-props';
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
 import { UnstyledBox } from '../UnstyledBox/UnstyledBox';
 import type { AppShellProps } from './AppShell.types';
 import { appShellConfig } from './appShellConfig';
 
-export const AppShell = <E extends ElementType>(props: AppShellProps<E>) => {
+export const AppShell = <E extends ElementType>(
+  props: AppShellProps<E>
+): ReactNode => {
   const { className, ...restProps } = useMergeProps(
     'appShell',
     appShellConfig.props,

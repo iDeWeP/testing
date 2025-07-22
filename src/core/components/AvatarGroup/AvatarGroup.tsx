@@ -1,4 +1,4 @@
-import type { ElementType } from 'react';
+import type { ElementType, ReactNode } from 'react';
 import { useMergeProps } from '../../hooks/use-merge-props/use-merge-props';
 import { getMaxTotal } from '../../utils/get-max-total/get-max-total';
 import { UnstyledAvatar } from '../UnstyledAvatar/UnstyledAvatar';
@@ -8,7 +8,7 @@ import { avatarGroupConfig } from './avatarGroupConfig';
 
 export const AvatarGroup = <E extends ElementType>(
   props: AvatarGroupProps<E>
-) => {
+): ReactNode => {
   const { max, total, componentsProps, surplus, children, ...restProps } =
     useMergeProps('avatarGroup', avatarGroupConfig.props, props);
 
@@ -24,7 +24,6 @@ export const AvatarGroup = <E extends ElementType>(
           variant="solid"
           size="md"
           color="surface"
-          ring="unset"
           margin="unset"
           m="unset"
           mx="unset"
@@ -34,13 +33,6 @@ export const AvatarGroup = <E extends ElementType>(
           ml="unset"
           mr="unset"
           border="auto"
-          b="unset"
-          bx="unset"
-          by="unset"
-          bt="unset"
-          bb="unset"
-          bl="unset"
-          br="unset"
           radius="full"
           r="unset"
           rt="unset"
@@ -52,6 +44,7 @@ export const AvatarGroup = <E extends ElementType>(
           rbl="unset"
           rbr="unset"
           shadow="unset"
+          ring="unset"
           gap="unset"
           {...componentsProps.surplus}
         >
