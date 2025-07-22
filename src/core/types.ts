@@ -6,41 +6,25 @@ import type {
   ReactNode
 } from 'react';
 
-export type ComponentRefProps<E extends ElementType> = Omit<
-  ComponentPropsWithRef<E>,
-  'color' | 'scale'
->;
-
-export type ComponentConfig<P> = {
-  props: Required<P>;
-};
-
-export type SVGNodeProps = ReactElement<ComponentPropsWithRef<'svg'>>;
-
-export type MergeProps<D extends object, T extends object> = Omit<
-  D,
-  keyof T | 'scale'
-> &
-  T;
-
+// LIBRARY TYPES
 export type Theme = 'light' | 'dark';
 export type Loading = boolean | 'left' | 'right';
-export type Collision = 'none' | 'shift' | 'flip';
+export type Collision = 'unset' | 'shift' | 'flip';
 export type Trigger =
-  | 'none'
+  | 'unset'
   | 'hover'
   | 'click'
   | 'focus'
-  | 'none-hover'
-  | 'none-click'
-  | 'none-focus'
-  | 'hover-none'
+  | 'unset-hover'
+  | 'unset-click'
+  | 'unset-focus'
+  | 'hover-unset'
   | 'hover-click'
   | 'hover-focus'
-  | 'click-none'
+  | 'click-unset'
   | 'click-hover'
   | 'click-focus'
-  | 'focus-none'
+  | 'focus-unset'
   | 'focus-hover'
   | 'focus-click';
 export type Peak = 'auto' | number;
@@ -79,8 +63,8 @@ export type CornerPlacement =
   | 'bottom-left'
   | 'bottom-right';
 export type CrossPlacement = 'start' | 'center' | 'end';
-export type CardPlacement = 'none' | 'top' | 'center' | 'bottom';
-export type SidePlacement = 'left' | 'right';
+export type SidePlacement = 'start' | 'end';
+export type CardPlacement = 'default' | 'top' | 'center' | 'bottom';
 export type MainAxis = DefaultPlacement;
 export type CrossAxis = CrossPlacement;
 export type ArrowOffset = [number | string, number | string];
@@ -243,24 +227,14 @@ export type Transition =
   | CollapseTransition;
 export type DefaultTransition = 'fade' | GrowTransition;
 export type Ripple = 'none' | 'default';
-
 export type Cursor = {
   x: number;
   y: number;
 };
 
-export type AnimationProps = {
-  enterDuration?: number;
-  exitDuration?: number;
-  enterDelay?: number;
-  exitDelay?: number;
-  enteredStyle?: CSSProperties;
-  exitedStyle?: CSSProperties;
-  enteringStyle?: CSSProperties;
-  exitingStyle?: CSSProperties;
-};
-
-export type CollisionFunction = (placement: Placement) => void;
+/*
+ *  CLASSNAME TYPES
+ */
 
 export type Classes = {
   inputType?: 'input' | 'textarea';
@@ -333,17 +307,16 @@ export type Classes = {
   rbr?: Radius;
   font?: Font;
   color?: Color;
-  ring?: Color;
   shadow?: Shadow;
+  ring?: Color;
   invisible?: boolean;
   blur?: boolean;
   gap?: Gap;
   gx?: Gap;
   gy?: Gap;
-  transition?: Transition;
   effect?: Effect;
   rippleEffect?: RippleEffect;
-  empty?: boolean;
+  transition?: Transition;
   decorated?: ReactNode;
 };
 
@@ -420,3 +393,37 @@ export type CSSProps = {
 };
 
 export type CSSStyles = Record<string, CSSProps>;
+
+/*
+ *  STYLE PROPS
+ */
+export type AnimationProps = {
+  enterDuration?: number;
+  exitDuration?: number;
+  enterDelay?: number;
+  exitDelay?: number;
+  enteredStyle?: CSSProperties;
+  exitedStyle?: CSSProperties;
+  enteringStyle?: CSSProperties;
+  exitingStyle?: CSSProperties;
+};
+
+/*
+ *  COMPONENTS PROPS TYPES
+ */
+export type ComponentRefProps<E extends ElementType> = Omit<
+  ComponentPropsWithRef<E>,
+  'color' | 'scale'
+>;
+
+export type ComponentConfig<P> = {
+  props: Required<P>;
+};
+
+export type SVGNodeProps = ReactElement<ComponentPropsWithRef<'svg'>>;
+
+export type MergeProps<D extends object, T extends object> = Omit<
+  D,
+  keyof T | 'scale'
+> &
+  T;
