@@ -1,11 +1,13 @@
-import type { ElementType } from 'react';
+import type { ElementType, ReactNode } from 'react';
 import { useMergeProps } from '../../hooks/use-merge-props/use-merge-props';
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
 import { UnstyledBox } from '../UnstyledBox/UnstyledBox';
 import type { StackProps } from './Stack.types';
 import { stackConfig } from './stackConfig';
 
-export const Stack = <E extends ElementType>(props: StackProps<E>) => {
+export const Stack = <E extends ElementType>(
+  props: StackProps<E>
+): ReactNode => {
   const { className, ...restProps } = useMergeProps(
     'stack',
     stackConfig.props,

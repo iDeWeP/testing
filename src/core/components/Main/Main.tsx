@@ -1,10 +1,10 @@
-import type { ElementType } from 'react';
+import type { ElementType, ReactNode } from 'react';
 import { useMergeProps } from '../../hooks/use-merge-props/use-merge-props';
 import { UnstyledCard } from '../UnstyledCard/UnstyledCard';
 import type { MainProps } from './Main.types';
 import { mainConfig } from './mainConfig';
 
-export const Main = <E extends ElementType>(props: MainProps<E>) => {
+export const Main = <E extends ElementType>(props: MainProps<E>): ReactNode => {
   const mergedProps = useMergeProps('main', mainConfig.props, props);
 
   return <UnstyledCard {...mergedProps} />;
