@@ -23,12 +23,12 @@ const EXITED = 1;
 const EXITING = 2;
 const ENTERING = 3;
 
-export const useAnimation = (isEntered?: boolean) => {
+export const useAnimation = (isEntered?: boolean): UseAnimationResult => {
   const [animation, setAnimation] = useState(isEntered ? ENTERED : EXITED);
 
   const startAnimation = useCallback<StartAnimationFunction>(
-    (isOpen) =>
-      setAnimation((prevState) => {
+    (isOpen): void =>
+      setAnimation((prevState): number => {
         if (isOpen) {
           return prevState === EXITED || prevState === EXITING
             ? ENTERING
@@ -43,8 +43,8 @@ export const useAnimation = (isEntered?: boolean) => {
   );
 
   const stopAnimation = useCallback(
-    () =>
-      setAnimation((prevState) => {
+    (): void =>
+      setAnimation((prevState): number => {
         if (prevState === ENTERING) {
           return ENTERED;
         }
@@ -59,7 +59,7 @@ export const useAnimation = (isEntered?: boolean) => {
   );
 
   return useMemo(
-    () => ({
+    (): UseAnimationResult => ({
       animation: {
         state: animation,
         isEntered: animation === ENTERED,

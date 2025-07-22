@@ -1,10 +1,10 @@
 import { useEffect } from 'react';
 
 export const useLockScroll = (isLocked: boolean): void =>
-  useEffect(() => {
+  useEffect((): VoidFunction => {
     document.body.style.overflow = isLocked ? 'hidden' : 'auto';
 
-    return () => {
+    return (): void => {
       document.body.style.overflow = 'auto';
     };
   }, [isLocked]);

@@ -5,7 +5,7 @@ export const useKeyDown = (
   handler?: VoidFunction | false
 ): KeyboardEventHandler | undefined => {
   const handleKeyDown = useCallback<KeyboardEventHandler>(
-    (event) => {
+    (event): void => {
       if (event.key === key && handler) {
         handler();
       }

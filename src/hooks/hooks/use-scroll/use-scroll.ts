@@ -17,9 +17,12 @@ export const useScroll = (): UseScrollResult => {
   });
 
   const handleScroll = useCallback(
-    () => setScroll({ top: window.scrollY, left: window.scrollX }),
+    (): void => setScroll({ top: window.scrollY, left: window.scrollX }),
     []
   );
 
-  return useMemo(() => ({ scroll, handleScroll }), [scroll, handleScroll]);
+  return useMemo(
+    (): UseScrollResult => ({ scroll, handleScroll }),
+    [scroll, handleScroll]
+  );
 };

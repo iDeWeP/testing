@@ -1,12 +1,12 @@
 import { useEffect } from 'react';
 
 export const useTimer = (handler?: TimerHandler | false, delay = 1000): void =>
-  useEffect(() => {
+  useEffect((): VoidFunction | void => {
     if (!handler || delay < 0) {
       return;
     }
 
     const timerId = setTimeout(handler, delay);
 
-    return () => clearTimeout(timerId);
+    return (): void => clearTimeout(timerId);
   }, [handler, delay]);

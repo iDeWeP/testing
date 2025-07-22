@@ -6,12 +6,12 @@ export const useOutClick = <E extends HTMLElement, T extends HTMLElement>(
   triggerRef?: RefObject<T | null>,
   options?: boolean | AddEventListenerOptions
 ): void =>
-  useEffect(() => {
+  useEffect((): VoidFunction | void => {
     if (!handler || !elRef?.current) {
       return;
     }
 
-    const handleClick = ({ target }: MouseEvent) => {
+    const handleClick = ({ target }: MouseEvent): void => {
       if (!elRef.current || !(target instanceof Node)) {
         return;
       }
@@ -30,5 +30,6 @@ export const useOutClick = <E extends HTMLElement, T extends HTMLElement>(
 
     document.addEventListener('click', handleClick, options);
 
-    return () => document.removeEventListener('click', handleClick, options);
+    return (): void =>
+      document.removeEventListener('click', handleClick, options);
   }, [handler, elRef, triggerRef, options]);

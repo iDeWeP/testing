@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 export const useOverflow = (observe?: boolean): void => {
   const setOverflow = useState(getComputedStyle(document.body).overflow)[1];
 
-  useEffect(() => {
+  useEffect((): VoidFunction | void => {
     if (!observe) {
       return;
     }
@@ -11,7 +11,7 @@ export const useOverflow = (observe?: boolean): void => {
     const el = document.body;
     let prev = getComputedStyle(el).overflow;
 
-    const observer = new MutationObserver(() => {
+    const observer = new MutationObserver((): void => {
       const current = getComputedStyle(el).overflow;
 
       if (current !== prev) {
@@ -22,6 +22,6 @@ export const useOverflow = (observe?: boolean): void => {
 
     observer.observe(el, { attributes: true, attributeFilter: ['style'] });
 
-    return () => observer.disconnect();
+    return (): void => observer.disconnect();
   }, [observe, setOverflow]);
 };

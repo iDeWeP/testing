@@ -17,13 +17,13 @@ export const useResize = (): UseResizeResult => {
   });
 
   const handleResize = useCallback(
-    () =>
+    (): void =>
       setWindowSize({ width: window.innerWidth, height: window.innerHeight }),
     []
   );
 
   return useMemo(
-    () => ({ windowSize, handleResize }),
+    (): UseResizeResult => ({ windowSize, handleResize }),
     [windowSize, handleResize]
   );
 };

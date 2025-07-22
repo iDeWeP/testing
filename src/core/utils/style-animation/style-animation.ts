@@ -1,6 +1,6 @@
 import type { CSSProperties } from 'react';
 import type { Animation } from '../../../hooks/hooks/use-animation/use-animation';
-import { setProp } from '../../../utils/utils/set-prop/set-prop';
+import { setValue } from '../../../utils/utils/set-value/set-value';
 import type { AnimationProps } from '../../types';
 
 export const styleAnimation = (
@@ -34,10 +34,10 @@ export const styleAnimation = (
 
   return {
     visibility: !isIn && isExited ? 'hidden' : 'visible',
-    ...setProp(isEntered, animationProps?.enteredStyle),
-    ...setProp(isEntering, animationProps?.enteringStyle),
-    ...setProp(isExited, animationProps?.exitedStyle),
-    ...setProp(isExiting, animationProps?.exitingStyle),
+    ...setValue(isEntered, animationProps?.enteredStyle),
+    ...setValue(isEntering, animationProps?.enteringStyle),
+    ...setValue(isExited, animationProps?.exitedStyle),
+    ...setValue(isExiting, animationProps?.exitingStyle),
     ...style
   };
 };

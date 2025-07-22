@@ -5,12 +5,12 @@ export const useFocusTrap = <E extends HTMLElement>(
   ref?: RefObject<E | null> | false,
   options?: boolean | AddEventListenerOptions
 ): void =>
-  useEffect(() => {
+  useEffect((): VoidFunction | undefined => {
     if (!ref || !ref.current) {
       return;
     }
 
-    const handleKeydown = (event: KeyboardEvent) => {
+    const handleKeydown = (event: KeyboardEvent): void => {
       if (event.key !== 'Tab') {
         return;
       }
@@ -39,6 +39,6 @@ export const useFocusTrap = <E extends HTMLElement>(
 
     document.addEventListener('keydown', handleKeydown, options);
 
-    return () =>
+    return (): void =>
       document.removeEventListener('keydown', handleKeydown, options);
   }, [ref, options]);
