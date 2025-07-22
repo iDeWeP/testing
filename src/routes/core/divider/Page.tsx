@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react';
 import { ExampleTitle } from '../../../components/ExampleTitle';
 import { ColorExample } from './ColorExample';
 import { DefaultExample } from './DefaultExample';
@@ -7,7 +8,7 @@ import { OrientationExample } from './OrientationExample';
 import { PaddingExample } from './PaddingExample';
 import { PlacementExample } from './PlacementExample';
 
-const Page = () => (
+const Page = (): ReactNode => (
   <>
     <ExampleTitle>Divider</ExampleTitle>
     <DefaultExample />
