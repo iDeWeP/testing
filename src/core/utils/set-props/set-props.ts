@@ -5,14 +5,21 @@ type Props = {
   disabled?: boolean;
 };
 
-const types = {
-  button: ({ element, disabled }: Props) =>
-    element === 'button' && {
-      disabled,
-      type: 'button'
-    },
-  switch: () => ({ type: 'checkbox' })
+type SetProps = Record<string, string | boolean | undefined> | undefined;
+
+type Elements = 'button' | 'switch';
+type TypeMap = Record<Elements, (props: Props) => SetProps>;
+
+const typeMap: TypeMap = {
+  button: ({ element, disabled }: Props): SetProps => {
+    if (element === 'button') {
+      return { disabled, type: 'button' };
+    }
+  },
+  switch: (): SetProps => ({ type: 'checkbox' })
 };
 
-export const setProps = (type: keyof typeof types, values: Props = {}) =>
-  types[type](values);
+export const setProps = (
+  type: keyof typeof typeMap,
+  values: Props = {}
+): SetProps => typeMap[type](values);

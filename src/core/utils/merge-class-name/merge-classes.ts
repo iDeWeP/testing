@@ -1,5 +1,5 @@
 import { twMerge } from 'tailwind-merge';
-import { setProp } from '../../../utils/utils/set-prop/set-prop';
+import { setValue } from '../../../utils/utils/set-value/set-value';
 import type { CSSProps } from '../../types';
 
 export const mergeClasses = (
@@ -29,5 +29,5 @@ export const mergeClasses = (
     .trim()
     .replace(/\s{2,}/, ' ');
 
-  return setProp(className, twMerge(className));
+  return setValue(className, twMerge(className));
 };

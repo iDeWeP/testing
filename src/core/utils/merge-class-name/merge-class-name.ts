@@ -1,6 +1,5 @@
 import type { Classes } from '../../types';
 import { styleAppShell } from './style-app-shell';
-import { styleAvatar } from './style-avatar';
 import { styleBadge } from './style-badge';
 import { styleBox } from './style-box';
 import { styleButton } from './style-button';
@@ -33,18 +32,21 @@ import { styleLayout } from './style-layout';
 import { styleLinearProgress } from './style-linear-progress';
 import { styleLinearProgressBar } from './style-linear-progress-bar';
 import { styleLinearProgressLabel } from './style-linear-progress-label';
+import { styleLoader } from './style-loader';
 import { styleRipple } from './style-ripple';
 import { styleSpinner } from './style-spinner';
 import { styleSpinnerBar } from './style-spinner-bar';
 import { styleStack } from './style-stack';
+import { styleSwitch } from './style-switch';
+import { styleSwitchBar } from './style-switch-bar';
+import { styleSwitchContainer } from './style-switch-container';
+import { styleSwitchIcon } from './style-switch-icon';
+import { styleSwitchRipple } from './style-switch-ripple';
+import { styleSwitchTrail } from './style-switch-trail';
 import { styleTransition } from './style-transition';
-import { styleUnstyledPopper } from './style-unstyled-popper';
-import { styleUnstyledPopperArrow } from './style-unstyled-popper-arrow';
-import { styleUnstyledPopperBackdrop } from './style-unstyled-popper-backdrop';
 
 const componentsClasses = {
   appShell: styleAppShell,
-  avatar: styleAvatar,
   badge: styleBadge,
   box: styleBox,
   button: styleButton,
@@ -77,14 +79,21 @@ const componentsClasses = {
   linearProgressBar: styleLinearProgressBar,
   linearProgressLabel: styleLinearProgressLabel,
   linearProgress: styleLinearProgress,
+  loader: styleLoader,
   ripple: styleRipple,
   spinnerBar: styleSpinnerBar,
   spinner: styleSpinner,
   stack: styleStack,
-  transition: styleTransition,
-  unstyledPopperArrow: styleUnstyledPopperArrow,
+  switchBar: styleSwitchBar,
+  switchContainer: styleSwitchContainer,
+  switchIcon: styleSwitchIcon,
+  switchRipple: styleSwitchRipple,
+  switchTrail: styleSwitchTrail,
+  switch: styleSwitch,
+  transition: styleTransition
+  /* unstyledPopperArrow: styleUnstyledPopperArrow,
   unstyledPopperBackdrop: styleUnstyledPopperBackdrop,
-  unstyledPopper: styleUnstyledPopper
+  unstyledPopper: styleUnstyledPopper */
 };
 
 export const mergeClassName = (

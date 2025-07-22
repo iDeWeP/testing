@@ -1,4 +1,4 @@
-import type { RefObject } from 'react';
+import type { CSSProperties, RefObject } from 'react';
 import type { Animation } from '../../../hooks/hooks/use-animation/use-animation';
 import type { Peak } from '../../types';
 
@@ -8,7 +8,7 @@ export const styleCollapse = (
   transitions: string[],
   isIn: boolean,
   ref?: RefObject<HTMLElement | null>
-) => {
+): CSSProperties => {
   const isHorizontal = transitions[1] === 'x';
   const dimension = isHorizontal ? 'width' : 'height';
 

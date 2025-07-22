@@ -1,7 +1,7 @@
 import { sharedStyles } from '../../config/shared-styles';
 import { systemStyles } from '../../config/system-styles';
 import type { Classes } from '../../types';
-import { getArrowColor } from './color';
+import { getArrowColor } from './get-arrow-color';
 import { mergeClasses } from './merge-classes';
 
 export const styleUnstyledPopperArrow = (
@@ -22,7 +22,7 @@ export const styleUnstyledPopperArrow = (
 ) =>
   mergeClasses(
     sharedStyles.position.absolute,
-    systemStyles.color.fill[theme][
+    systemStyles.color.normal.fill[theme][
       getArrowColor(
         variant,
         defaultPlacement,

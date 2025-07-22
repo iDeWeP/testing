@@ -11,28 +11,46 @@ type Props = {
   orientation?: Orientation;
 };
 
-const types = {
-  button: ({ element, disabled }: Props) =>
-    element !== 'button' && {
-      role: 'button',
-      ...(disabled ? { 'aria-disabled': true } : { tabIndex: 0 })
-    },
-  divider: ({ orientation }: Props) => ({
+type SetAria =
+  | Record<string, string | number | boolean | undefined>
+  | undefined;
+
+type Elements =
+  | 'button'
+  | 'divider'
+  | 'icon'
+  | 'input'
+  | 'linearProgress'
+  | 'switch';
+type TypeMap = Record<Elements, (props: Props) => SetAria>;
+
+const typeMap: TypeMap = {
+  button: ({ element, disabled }: Props): SetAria => {
+    if (element !== 'button') {
+      return {
+        role: 'button',
+        ...(disabled ? { 'aria-disabled': true } : { tabIndex: 0 })
+      };
+    }
+  },
+  divider: ({ orientation }: Props): SetAria => ({
     role: 'separator',
     'aria-orientation': (orientation === 'row' ? 'horizontal' : 'vertical') as
       | 'horizontal'
       | 'vertical'
   }),
-  icon: () => ({ 'aria-hidden': true }),
-  input: ({ invalid }: Props) => ({ 'aria-invalid': !!invalid }),
-  linearProgress: ({ min, max, value }: Props) => ({
+  icon: (): SetAria => ({ 'aria-hidden': true }),
+  input: ({ invalid }: Props): SetAria => ({ 'aria-invalid': !!invalid }),
+  linearProgress: ({ min, max, value }: Props): SetAria => ({
     role: 'progressbar',
     'aria-valuemin': min,
     'aria-valuemax': max,
     'aria-valuenow': value
   }),
-  switch: () => ({ role: 'switch' })
+  switch: (): SetAria => ({ role: 'switch' })
 };
 
-export const setAria = (type: keyof typeof types, values: Props = {}) =>
-  types[type](values);
+export const setAria = (
+  type: keyof typeof typeMap,
+  values: Props = {}
+): SetAria => typeMap[type](values);

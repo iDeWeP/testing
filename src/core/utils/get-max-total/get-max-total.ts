@@ -1,11 +1,16 @@
 import type { ReactNode } from 'react';
 
+type MaxTotal = {
+  nodes: ReactNode;
+  count: number;
+};
+
 export const getMaxTotal = (
   surplus: boolean,
   children?: ReactNode,
   max?: number,
   total?: number
-) => {
+): MaxTotal => {
   if (!children || !Array.isArray(children)) {
     return { nodes: children, count: 0 };
   }
