@@ -1,16 +1,18 @@
 import { useState, useCallback, useMemo } from 'react';
 
+export type Request<T> = {
+  data: T | null;
+  isLoading: boolean;
+  error: unknown;
+};
+
 export type SendFunction = (
   url: RequestInfo | URL,
   requestInit?: RequestInit
 ) => Promise<void>;
 
 export type UseRequestResult<T> = {
-  request: {
-    data: T | null;
-    isLoading: boolean;
-    error: unknown;
-  };
+  request: Request<T>;
   send: SendFunction;
 };
 

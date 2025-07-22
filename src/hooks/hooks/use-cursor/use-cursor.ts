@@ -1,19 +1,19 @@
-import { useCallback, useMemo, useState, type MouseEvent } from 'react';
+import { type MouseEventHandler, useState, useCallback, useMemo } from 'react';
 
-export type HandleCursorMove = (event: MouseEvent<HTMLElement>) => void;
+export type Cursor = {
+  x: number;
+  y: number;
+};
 
 export type UseCursorResult = {
-  cursor: {
-    x: number;
-    y: number;
-  };
-  handleCursorMove: HandleCursorMove;
+  cursor: Cursor;
+  handleCursorMove: MouseEventHandler;
 };
 
 export const useCursor = (): UseCursorResult => {
   const [cursor, setCursor] = useState({ x: 0, y: 0 });
 
-  const handleCursorMove = useCallback<HandleCursorMove>(
+  const handleCursorMove = useCallback<MouseEventHandler>(
     (event) => setCursor({ x: event.clientX, y: event.clientY }),
     []
   );

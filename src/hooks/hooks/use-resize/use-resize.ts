@@ -1,10 +1,12 @@
 import { useState, useCallback, useMemo } from 'react';
 
+export type WindowSize = {
+  width: number;
+  height: number;
+};
+
 export type UseResizeResult = {
-  windowSize: {
-    width: number;
-    height: number;
-  };
+  windowSize: WindowSize;
   handleResize: VoidFunction;
 };
 

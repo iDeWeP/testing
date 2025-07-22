@@ -1,5 +1,10 @@
 import { useState, useCallback, useMemo } from 'react';
 
+export type Scroll = {
+  top: number;
+  left: number;
+};
+
 export type UseScrollResult = {
   scroll: {
     top: number;
