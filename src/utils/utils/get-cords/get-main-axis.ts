@@ -1,7 +1,7 @@
 import type { MainAxis } from '../../../core/types';
 import type { SizeDimension } from './cords.types';
 
-type Axis = { left: number } | { top: number };
+type MainAxisDimension = { left: number } | { top: number };
 
 const dimensionMap = {
   top: (size: SizeDimension) => ({ top: size.top }),
@@ -10,5 +10,7 @@ const dimensionMap = {
   right: (size: SizeDimension) => ({ left: size.right })
 };
 
-export const getMainAxis = (mainAxis: MainAxis, size: SizeDimension): Axis =>
-  dimensionMap[mainAxis](size);
+export const getMainAxis = (
+  mainAxis: MainAxis,
+  size: SizeDimension
+): MainAxisDimension => dimensionMap[mainAxis](size);

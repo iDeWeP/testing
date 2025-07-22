@@ -1,12 +1,12 @@
 import type { MainAxis, CrossAxis, Placement } from '../../../core/types';
 
 type Axis = {
-  main: MainAxis;
-  cross: CrossAxis;
+  mainAxis: MainAxis;
+  crossAxis: CrossAxis;
 };
 
 export const getAxis = (placement: Placement): Axis => {
   const placements = placement.split('-') as [MainAxis, CrossAxis];
 
-  return { main: placements[0], cross: placements[1] ?? 'center' };
+  return { mainAxis: placements[0], crossAxis: placements[1] ?? 'center' };
 };
