@@ -114,7 +114,7 @@ export const unstyledInputConfig: ComponentConfig<UnstyledInputConfigProps> &
     },
     decorator: {
       padding: {
-        left: {
+        start: {
           default: {
             padding: 'pl-3'
           },
@@ -122,7 +122,7 @@ export const unstyledInputConfig: ComponentConfig<UnstyledInputConfigProps> &
             padding: 'pl-4 pr-3'
           }
         },
-        right: {
+        end: {
           default: {
             padding: 'pr-3'
           },
@@ -132,12 +132,12 @@ export const unstyledInputConfig: ComponentConfig<UnstyledInputConfigProps> &
         }
       },
       outlined: {
-        left: {
+        start: {
           margin: 'ml-px',
           borderWidth: 'border-l',
           group: '[*.on>&]:ml-0 [*.on>&]:border-l-2'
         },
-        right: {
+        end: {
           margin: 'mr-px',
           borderWidth: 'border-r',
           group: '[*.on>&]:mr-0 [*.on>&]:border-r-2'

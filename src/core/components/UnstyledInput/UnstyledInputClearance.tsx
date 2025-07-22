@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react';
 import type { MergeProps, Gap } from '../../types';
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
 import type { UnstyledInputClearanceProps } from './UnstyledInput.types';
@@ -13,7 +14,7 @@ export const UnstyledInputClearance = ({
   gap,
   className,
   ...restProps
-}: Props) => {
+}: Props): ReactNode => {
   const mergedClassName = mergeClassName('inputClearance', className, {
     gap
   });

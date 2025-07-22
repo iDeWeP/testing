@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react';
 import { useTheme } from '../../hooks/use-theme/use-theme';
 import type {
   MergeProps,
@@ -56,7 +57,7 @@ export const UnstyledInputDecorator = ({
   className,
   children,
   ...restProps
-}: Props) => {
+}: Props): ReactNode => {
   const theme = useTheme();
 
   const mergedClassName = mergeClassName('inputDecorator', className, {

@@ -1,4 +1,4 @@
-import { type ElementType, useRef } from 'react';
+import { type ElementType, type ReactNode, useRef } from 'react';
 import { combineHandlers } from '../../../utils/utils/combine-handlers/combine-handlers';
 import { mergeRefs } from '../../../utils/utils/merge-refs/merge-refs';
 import { setValue } from '../../../utils/utils/set-value/set-value';
@@ -16,7 +16,7 @@ import { UnstyledInputLabel } from './UnstyledInputLabel';
 
 export const UnstyledInput = <E extends ElementType>(
   props: UnstyledInputProps<E>
-) => {
+): ReactNode => {
   const {
     as: Component,
     ref: forwardedRef,
@@ -57,8 +57,8 @@ export const UnstyledInput = <E extends ElementType>(
     onBlur,
     componentsProps,
     label,
-    leftDecorator,
-    rightDecorator,
+    startDecorator,
+    endDecorator,
     ...restProps
   } = mergeProps(unstyledInputConfig.props, props);
 
@@ -118,9 +118,9 @@ export const UnstyledInput = <E extends ElementType>(
         rbr={rbr}
         color={color}
         gap={gap}
-        {...componentsProps.leftDecorator}
+        {...componentsProps.startDecorator}
       >
-        {leftDecorator}
+        {startDecorator}
       </UnstyledInputDecorator>
       <UnstyledInputFieldset
         inputType={Component}
@@ -185,9 +185,9 @@ export const UnstyledInput = <E extends ElementType>(
         rbr={rbr}
         color={color}
         gap={gap}
-        {...componentsProps.rightDecorator}
+        {...componentsProps.endDecorator}
       >
-        {rightDecorator}
+        {endDecorator}
       </UnstyledInputDecorator>
     </UnstyledInputContainer>
   );

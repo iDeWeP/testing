@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react';
 import { useTheme } from '../../hooks/use-theme/use-theme';
 import type { MergeProps, InputVariant, Color } from '../../types';
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
@@ -26,7 +27,7 @@ export const UnstyledInputFieldset = ({
   color,
   className,
   ...restProps
-}: Props) => {
+}: Props): ReactNode => {
   const theme = useTheme();
 
   const mergedClassName = mergeClassName('inputFieldset', className, {

@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react';
 import type { MergeProps, InputVariant, InputSize, Gap } from '../../types';
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
 import type { UnstyledInputLabelProps } from './UnstyledInput.types';
@@ -19,7 +20,7 @@ export const UnstyledInputLabel = ({
   gap,
   className,
   ...restProps
-}: Props) => {
+}: Props): ReactNode => {
   const mergedClassName = mergeClassName('inputLabel', className, {
     inputType,
     inputVariant,

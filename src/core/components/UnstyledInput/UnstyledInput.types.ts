@@ -20,8 +20,8 @@ export type UnstyledInputClearanceProps = ComponentRefProps<'legend'>;
 export type UnstyledInputComponentsProps = {
   container?: UnstyledInputContainerProps;
   label?: UnstyledInputLabelProps;
-  leftDecorator?: UnstyledInputDecoratorProps;
-  rightDecorator?: UnstyledInputDecoratorProps;
+  startDecorator?: UnstyledInputDecoratorProps;
+  endDecorator?: UnstyledInputDecoratorProps;
   fieldset?: UnstyledInputFieldsetProps;
   clearance?: UnstyledInputClearanceProps;
 };
@@ -33,8 +33,8 @@ export type UnstyledInputOptionalProps = {
   invalid?: boolean;
   disabled?: boolean;
   label?: ReactNode;
-  leftDecorator?: ReactNode;
-  rightDecorator?: ReactNode;
+  startDecorator?: ReactNode;
+  endDecorator?: ReactNode;
 };
 
 export type UnstyledInputDefaultProps = {

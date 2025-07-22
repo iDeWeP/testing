@@ -1,4 +1,4 @@
-import type { RefObject } from 'react';
+import type { RefObject, ReactNode } from 'react';
 import { combineHandlers } from '../../../utils/utils/combine-handlers/combine-handlers';
 import { setValue } from '../../../utils/utils/set-value/set-value';
 import { useFocusHandler } from '../../hooks/use-focus-handler/use-focus-handler';
@@ -53,7 +53,7 @@ export const UnstyledInputContainer = ({
   className,
   onFocus,
   ...restProps
-}: Props) => {
+}: Props): ReactNode => {
   const theme = useTheme();
 
   const mergedClassName = mergeClassName('inputContainer', className, {
