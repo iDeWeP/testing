@@ -58,7 +58,6 @@ export const UnstyledSwitch = (props: UnstyledSwitchProps) => {
   return (
     <UnstyledSwitchContainer
       defaultSize={defaultSize}
-      switchScale={switchScale}
       margin={margin}
       m={m}
       mx={mx}
