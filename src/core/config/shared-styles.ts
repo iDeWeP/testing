@@ -5,6 +5,7 @@ type SharedStyles = {
   focusable: CSSStyles;
   display: CSSStyles;
   position: CSSStyles;
+  placement: CSSStyles;
   scale: CSSStyles;
   width: CSSStyles;
   ring: CSSStyles;
@@ -15,6 +16,11 @@ type SharedStyles = {
   rotate: CSSStyles;
   cursor: CSSStyles;
   spinner: CSSProps;
+  container: CSSProps;
+  trail: CSSProps;
+  bar: CSSProps;
+  decoration: CSSProps;
+  input: CSSProps;
 };
 
 export const sharedStyles: SharedStyles = {
@@ -25,13 +31,20 @@ export const sharedStyles: SharedStyles = {
   },
   focusable: {
     default: {
-      ring: 'ring-offset-1',
+      ring: 'ring-offset-2',
       focus: 'focus:outline-none',
-      focusVisible: 'focus-visible:ring-4'
+      focusVisible: 'focus-visible:ring-2'
     },
     disabled: {
       cursor: 'cursor-not-allowed',
       userSelect: 'select-none'
+    },
+    loading: {
+      opacity: 'opacity-50'
+    },
+    peer: {
+      ring: 'ring-offset-2',
+      group: 'peer-focus-visible:ring-2'
     }
   },
   display: {
@@ -56,6 +69,13 @@ export const sharedStyles: SharedStyles = {
       position: 'fixed'
     }
   },
+  placement: {
+    center: {
+      top: 'top-2/4',
+      left: 'left-2/4',
+      translate: '-translate-x-2/4 -translate-y-2/4'
+    }
+  },
   scale: {
     square: {
       overflow: 'overflow-hidden'
@@ -70,7 +90,7 @@ export const sharedStyles: SharedStyles = {
     }
   },
   ring: {
-    normal: {
+    default: {
       ring: 'ring-2'
     }
   },
@@ -95,6 +115,16 @@ export const sharedStyles: SharedStyles = {
     }
   },
   transition: {
+    color: {
+      transition: 'transition-colors',
+      transitionDuration: 'duration-150',
+      transitionTimingFunction: 'ease-in-out'
+    },
+    'bg-left': {
+      transition: 'transition-[background,_left]',
+      transitionDuration: 'duration-150',
+      transitionTimingFunction: 'ease-in-out'
+    },
     fade: {
       transition: 'transition-opacity'
     },
@@ -145,5 +175,30 @@ export const sharedStyles: SharedStyles = {
     display: 'inline-flex',
     borderRadius: 'rounded-full',
     color: 'fill-none'
-  }
+  },
+  container: {
+    display: 'inline-flex',
+    position: 'relative'
+  },
+  trail: {
+    group: 'peer-checked:opacity-0'
+  },
+  bar: {
+    opacity: 'opacity-0',
+    group: 'peer-checked:opacity-100'
+  },
+  decoration: {
+    position: 'absolute',
+    transition: 'transition-opacity',
+    transitionDuration: 'duration-150',
+    transitionTimingFunction: 'ease-in-out',
+    pointerEvents: 'pointer-events-none'
+  },
+  input: {
+    width: 'w-full',
+    height: 'h-full',
+    appearance: 'appearance-none',
+    focus: 'focus:outline-none',
+    group: 'peer'
+  },
 };

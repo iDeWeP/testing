@@ -1,32 +1,33 @@
 import type { CSSStyles, Orientation, Theme } from '../types';
 
-type SizeType = 'normal' | 'square';
-type SpacingScale =
+type SizeType = 'default' | 'square';
+type PaddingScale =
   | 'default'
-  | 'normal'
+  | 'rect'
   | 'square'
-  | 'inner-normal'
+  | 'inner-rect'
   | 'inner-square';
-type SpacingType = 'all' | 'x' | 'y' | 't' | 'b' | 'l' | 'r';
+type PaddingType = 'all' | 'x' | 'y' | 't' | 'b' | 'l' | 'r';
+type MarginType = 'all' | 'x' | 'y' | 't' | 'b' | 'l' | 'r';
 type BorderType = 'all' | 'x' | 'y' | 't' | 'b' | 'l' | 'r';
 type RadiusType = 'all' | 't' | 'b' | 'l' | 'r' | 'tl' | 'tr' | 'bl' | 'br';
-type StateType = 'normal' | 'on';
+type ColorState = 'default' | 'on';
 type ColorType = 'bg' | 'border' | 'text' | 'fill' | 'stroke' | 'ring';
 type GapType = 'all' | 'x' | 'y';
 
 type SystemCSSStyles = {
   placement: CSSStyles;
   size: {
-    normal: Record<SizeType, CSSStyles>;
+    default: Record<SizeType, CSSStyles>;
     text: Record<SizeType, CSSStyles>;
     font: CSSStyles;
   };
-  padding: Record<SpacingScale, Record<SpacingType, CSSStyles>>;
-  margin: Record<SpacingType, CSSStyles>;
+  padding: Record<PaddingScale, Record<PaddingType, CSSStyles>>;
+  margin: Record<MarginType, CSSStyles>;
   spacing: Record<Orientation, CSSStyles>;
   border: Record<BorderType, CSSStyles>;
   radius: Record<RadiusType, CSSStyles>;
-  color: Record<StateType, Record<ColorType, Record<Theme, CSSStyles>>>;
+  color: Record<ColorState, Record<ColorType, Record<Theme, CSSStyles>>>;
   shadow: CSSStyles;
   gap: Record<GapType, CSSStyles>;
 };
@@ -51,8 +52,8 @@ export const systemStyles: SystemCSSStyles = {
     }
   },
   size: {
-    normal: {
-      normal: {
+    default: {
+      default: {
         xs: {
           height: 'h-5'
         },
@@ -142,7 +143,7 @@ export const systemStyles: SystemCSSStyles = {
       }
     },
     text: {
-      normal: {
+      default: {
         xs: {
           height: 'h-3'
         },
@@ -560,7 +561,7 @@ export const systemStyles: SystemCSSStyles = {
         }
       }
     },
-    normal: {
+    rect: {
       all: {
         xs: {
           padding: 'px-2 py-1'
@@ -1096,7 +1097,7 @@ export const systemStyles: SystemCSSStyles = {
         }
       }
     },
-    'inner-normal': {
+    'inner-rect': {
       all: {
         xs: {
           padding: 'px-1 py-0.5'
@@ -2324,7 +2325,7 @@ export const systemStyles: SystemCSSStyles = {
     }
   },
   color: {
-    normal: {
+    default: {
       bg: {
         light: {
           disabled: {
