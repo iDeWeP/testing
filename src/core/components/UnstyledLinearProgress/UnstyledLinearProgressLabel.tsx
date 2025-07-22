@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react';
 import type { MergeProps, Orientation, Gap } from '../../types';
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
 import type { UnstyledLinearProgressLabelProps } from './UnstyledLinearProgress.types';
@@ -15,7 +16,7 @@ export const UnstyledLinearProgressLabel = ({
   gap,
   className,
   ...restProps
-}: Props) => {
+}: Props): ReactNode => {
   const mergedClassName = mergeClassName('linearProgressLabel', className, {
     orientation,
     gap

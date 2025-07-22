@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react';
 import type {
   MergeProps,
   Theme,
@@ -31,7 +32,7 @@ export const UnstyledLinearProgressBar = ({
   style,
   children,
   ...restProps
-}: Props) => {
+}: Props): ReactNode => {
   const mergedClassName = mergeClassName('linearProgressBar', className, {
     theme,
     disabled,

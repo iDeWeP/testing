@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react';
 import { isAutoBordered } from '../../utils/is-auto-bordered/is-auto-bordered';
 import { hasVariantBg } from '../../utils/merge-class-name/has-variant-bg';
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
@@ -6,7 +7,7 @@ import type { UnstyledSpinnerProps } from './UnstyledSpinner.types';
 import { UnstyledSpinnerBar } from './UnstyledSpinnerBar';
 import { unstyledSpinnerConfig } from './unstyledSpinnerConfig';
 
-export const UnstyledSpinner = (props: UnstyledSpinnerProps) => {
+export const UnstyledSpinner = (props: UnstyledSpinnerProps): ReactNode => {
   const {
     disabled = false,
     spin,

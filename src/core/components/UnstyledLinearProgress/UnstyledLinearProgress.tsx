@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react';
 import { useTheme } from '../../hooks/use-theme/use-theme';
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
 import { mergeProps } from '../../utils/merge-props/merge-props';
@@ -7,7 +8,9 @@ import { UnstyledLinearProgressBar } from './UnstyledLinearProgressBar';
 import { unstyledLinearProgressConfig } from './unstyledLinearProgressConfig';
 import { UnstyledLinearProgressLabel } from './UnstyledLinearProgressLabel';
 
-export const UnstyledLinearProgress = (props: UnstyledLinearProgressProps) => {
+export const UnstyledLinearProgress = (
+  props: UnstyledLinearProgressProps
+): ReactNode => {
   const {
     disabled = false,
     value,

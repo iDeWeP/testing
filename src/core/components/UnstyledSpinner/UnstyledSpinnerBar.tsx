@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react';
 import { useTheme } from '../../hooks/use-theme/use-theme';
 import type { MergeProps, Variant, Color } from '../../types';
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
@@ -20,7 +21,7 @@ export const UnstyledSpinnerBar = ({
   color,
   className,
   ...restProps
-}: Props) => {
+}: Props): ReactNode => {
   const theme = useTheme();
 
   const mergedClassName = mergeClassName('spinnerBar', className, {

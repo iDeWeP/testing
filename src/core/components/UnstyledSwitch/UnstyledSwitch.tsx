@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react';
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
 import { mergeProps } from '../../utils/merge-props/merge-props';
 import { setAria } from '../../utils/set-aria/set-aria';
@@ -11,7 +12,7 @@ import { UnstyledSwitchIcon } from './UnstyledSwitchIcon';
 import { UnstyledSwitchRipple } from './UnstyledSwitchRipple';
 import { UnstyledSwitchTrail } from './UnstyledSwitchTrail';
 
-export const UnstyledSwitch = (props: UnstyledSwitchProps) => {
+export const UnstyledSwitch = (props: UnstyledSwitchProps): ReactNode => {
   const {
     valid = false,
     invalid = false,

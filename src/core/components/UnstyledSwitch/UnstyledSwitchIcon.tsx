@@ -1,4 +1,4 @@
-import { cloneElement } from 'react';
+import { type ReactNode, cloneElement } from 'react';
 import { useTheme } from '../../hooks/use-theme/use-theme';
 import type {
   MergeProps,
@@ -35,7 +35,7 @@ export const UnstyledSwitchIcon = ({
   decorated,
   children,
   ...restProps
-}: Props) => {
+}: Props): ReactNode => {
   const theme = useTheme();
 
   const mergedClassName = mergeClassName('switchIcon', className, {

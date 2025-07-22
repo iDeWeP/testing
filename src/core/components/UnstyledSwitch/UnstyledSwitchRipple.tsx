@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react';
 import type {
   MergeProps,
   Variant,
@@ -28,7 +29,7 @@ export const UnstyledSwitchRipple = ({
   switchScale,
   className,
   ...restProps
-}: Props) => {
+}: Props): ReactNode => {
   const mergedClassName = mergeClassName('switchRipple', className, {
     defaultSize,
     switchScale

@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react';
 import { useTheme } from '../../hooks/use-theme/use-theme';
 import { isAutoBordered } from '../../utils/is-auto-bordered/is-auto-bordered';
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
@@ -5,7 +6,7 @@ import { mergeProps } from '../../utils/merge-props/merge-props';
 import type { UnstyledLoaderProps } from './UnstyledLoader.types';
 import { unstyledLoaderConfig } from './unstyledLoaderConfig';
 
-export const UnstyledLoader = (props: UnstyledLoaderProps) => {
+export const UnstyledLoader = (props: UnstyledLoaderProps): ReactNode => {
   const {
     checked,
     disabled = false,
