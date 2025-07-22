@@ -74,3 +74,4 @@ export type SizeDimension = {
 export type TresholdDimension = ['top' | 'left', 'bottom' | 'right'];
 export type Dimension = 'top' | 'left';
 export type Orientation = 'vertical' | 'horizontal';
+export type AxisDimension = Record<string, number>;

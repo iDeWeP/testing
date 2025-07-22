@@ -1,26 +1,28 @@
-import type { CrossAxis } from '../../../core/types';
-import type { Orientation, Dimension, SizeDimension } from './cords.types';
+import type { CrossAxis, CrossPlacement } from '../../../core/types';
+import type {
+  Orientation,
+  Dimension,
+  SizeDimension,
+  AxisDimension
+} from './cords.types';
 
-const dimensionMap = {
-  start: (
+type DimensionMap = Record<
+  CrossPlacement,
+  (
     orientation: Orientation,
     dimension: Dimension,
     size: SizeDimension
-  ) => ({
+  ) => AxisDimension
+>;
+
+const dimensionMap: DimensionMap = {
+  start: (orientation, dimension, size) => ({
     [dimension]: size[orientation].start
   }),
-  end: (
-    orientation: Orientation,
-    dimension: Dimension,
-    size: SizeDimension
-  ) => ({
+  end: (orientation, dimension, size) => ({
     [dimension]: size[orientation].end
   }),
-  center: (
-    orientation: Orientation,
-    dimension: Dimension,
-    size: SizeDimension
-  ) => ({
+  center: (orientation, dimension, size) => ({
     [dimension]: size[orientation].center
   })
 };
@@ -30,4 +32,4 @@ export const getCrossAxis = (
   orientation: Orientation,
   dimension: Dimension,
   size: SizeDimension
-) => dimensionMap[crossAxis](orientation, dimension, size);
+): AxisDimension => dimensionMap[crossAxis](orientation, dimension, size);

@@ -1,4 +1,5 @@
-import type { Collision, CrossAxis } from '../../../core/types';
+import type { Collision, CrossAxis, SidePlacement } from '../../../core/types';
+import { setValue } from '../set-value/set-value';
 import type {
   Orientation,
   Dimension,
@@ -7,51 +8,66 @@ import type {
   ElDimension,
   ViewDimension,
   SizeDimension,
-  OverflowDimension
+  OverflowDimension,
+  AxisDimension
 } from './cords.types';
 import { isElShorter } from './is-el-shorter';
 
-const dimensionMap = {
-  start: (
+type DimensionMap = Record<
+  SidePlacement,
+  (
     orientation: Orientation,
     dimension: Dimension,
-    [start, end]: TresholdDimension,
+    treshold: TresholdDimension,
     anchor: AnchorDimension,
     el: ElDimension,
     view: ViewDimension,
     size: SizeDimension,
     overflow: OverflowDimension
+  ) => AxisDimension | undefined
+>;
+
+const dimensionMap: DimensionMap = {
+  start: (
+    orientation,
+    dimension,
+    [start, end],
+    anchor,
+    el,
+    view,
+    size,
+    overflow
   ) => {
     const isShorter = isElShorter(anchor, el, end);
 
-    return (
+    // &&overflow[orientation].viewStart > overflow[orientation].viewEnd)
+    return setValue(
       (isShorter && overflow[orientation].anchorStart < view[start]) ||
-      (!isShorter &&
-        overflow[orientation].start > view[end] && {
-          // &&overflow[orientation].viewStart > overflow[orientation].viewEnd)
-          [dimension]: size[orientation].end
-        })
+        (!isShorter && overflow[orientation].start > view[end]),
+      {
+        [dimension]: size[orientation].end
+      }
     );
   },
   end: (
-    orientation: Orientation,
-    dimension: Dimension,
-    [start, end]: TresholdDimension,
-    anchor: AnchorDimension,
-    el: ElDimension,
-    view: ViewDimension,
-    size: SizeDimension,
-    overflow: OverflowDimension
+    orientation,
+    dimension,
+    [start, end],
+    anchor,
+    el,
+    view,
+    size,
+    overflow
   ) => {
     const isShorter = isElShorter(anchor, el, end);
 
-    return (
+    // && overflow[orientation].viewStart < overflow[orientation].viewEnd)
+    return setValue(
       (isShorter && overflow[orientation].anchorEnd > view[end]) ||
-      (!isShorter &&
-        overflow[orientation].end < view[start] && {
-          // && overflow[orientation].viewStart < overflow[orientation].viewEnd)
-          [dimension]: size[orientation].start
-        })
+        (!isShorter && overflow[orientation].end < view[start]),
+      {
+        [dimension]: size[orientation].start
+      }
     );
   }
 };
@@ -67,10 +83,12 @@ export const getFlipCrossAxis = (
   view: ViewDimension,
   size: SizeDimension,
   overflow: OverflowDimension
-) =>
-  collision === 'flip' &&
-  crossAxis !== 'center' &&
-  dimensionMap[crossAxis](
+): AxisDimension | undefined => {
+  if (collision !== 'flip' || crossAxis === 'center') {
+    return undefined;
+  }
+
+  return dimensionMap[crossAxis](
     orientation,
     dimension,
     tresholdDimensions,
@@ -80,3 +98,4 @@ export const getFlipCrossAxis = (
     size,
     overflow
   );
+};

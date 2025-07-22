@@ -1,16 +1,19 @@
-import type { MainAxis } from '../../../core/types';
-import type { SizeDimension } from './cords.types';
+import type { DefaultPlacement, MainAxis } from '../../../core/types';
+import type { AxisDimension, SizeDimension } from './cords.types';
 
-type MainAxisDimension = { left: number } | { top: number };
+type DimensionMap = Record<
+  DefaultPlacement,
+  (size: SizeDimension) => AxisDimension
+>;
 
-const dimensionMap = {
-  top: (size: SizeDimension) => ({ top: size.top }),
-  bottom: (size: SizeDimension) => ({ top: size.bottom }),
-  left: (size: SizeDimension) => ({ left: size.left }),
-  right: (size: SizeDimension) => ({ left: size.right })
+const dimensionMap: DimensionMap = {
+  top: (size) => ({ top: size.top }),
+  bottom: (size) => ({ top: size.bottom }),
+  left: (size) => ({ left: size.left }),
+  right: (size) => ({ left: size.right })
 };
 
 export const getMainAxis = (
   mainAxis: MainAxis,
   size: SizeDimension
-): MainAxisDimension => dimensionMap[mainAxis](size);
+): AxisDimension => dimensionMap[mainAxis](size);
