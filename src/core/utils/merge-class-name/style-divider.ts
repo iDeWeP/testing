@@ -34,7 +34,7 @@ export const styleDivider = (
   }: Classes
 ): ClassName => {
   const paddingType = getDividerSpacing(orientation, padding);
-  const margins = getDividerSpacing(orientation, margin);
+  const marginType = getDividerSpacing(orientation, margin);
   const textColor = getColor('text', color).text;
 
   return mergeClasses(
@@ -50,8 +50,8 @@ export const styleDivider = (
     systemStyles.padding.default.b[pb],
     systemStyles.padding.default.l[pl],
     systemStyles.padding.default.r[pr],
-    systemStyles.margin.x[margins.x],
-    systemStyles.margin.y[margins.y],
+    systemStyles.margin.x[marginType.x],
+    systemStyles.margin.y[marginType.y],
     systemStyles.margin.all[m],
     systemStyles.margin.x[mx],
     systemStyles.margin.y[my],

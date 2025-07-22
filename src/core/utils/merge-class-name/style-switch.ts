@@ -1,6 +1,6 @@
 import { unstyledSwitchConfig } from '../../components/UnstyledSwitch/unstyledSwitchConfig';
 import { sharedStyles } from '../../config/shared-styles';
-import type { Classes } from '../../types';
+import type { Classes, ClassName } from '../../types';
 import { mergeClasses } from './merge-classes';
 
 export const styleSwitch = (
@@ -11,7 +11,7 @@ export const styleSwitch = (
     switchScale = 'default',
     decorated = false
   }: Classes
-) => {
+): ClassName => {
   const isFloating = decorated && switchScale === 'slider';
 
   return mergeClasses(

@@ -17,7 +17,7 @@ export const styleLinearProgressBar = (
     decorated = false
   }: Classes
 ): ClassName => {
-  const colors = getColor(
+  const colorType = getColor(
     variant === 'light' ? 'light' : 'solid',
     hasVariantBg(variant) ? color : getReversedColor(color),
     { disabled }
@@ -27,9 +27,9 @@ export const styleLinearProgressBar = (
     unstyledLinearProgressConfig.styles.bar.default,
     decorated && unstyledLinearProgressConfig.styles.bar.decorated,
     unstyledLinearProgressConfig.styles.bar.orientation[orientation],
-    systemStyles.color.default.bg[theme][colors.text],
-    systemStyles.color.default.text[theme][colors.bg],
-    systemStyles.color.default.fill[theme][colors.bg],
+    systemStyles.color.default.bg[theme][colorType.text],
+    systemStyles.color.default.text[theme][colorType.bg],
+    systemStyles.color.default.fill[theme][colorType.bg],
     className
   );
 };
