@@ -3,8 +3,8 @@ import { isAutoBordered } from '../is-auto-bordered/is-auto-bordered';
 import { isSpacingInner } from './is-spacing-inner';
 
 type GetContainerSpacing = {
-  size: 'normal' | 'square';
-  scale: 'normal' | 'square' | 'inner-normal' | 'inner-square';
+  size: 'default' | 'square';
+  scale: 'rect' | 'square' | 'inner-rect' | 'inner-square';
   isSquare: boolean;
   all: string;
 };
@@ -19,10 +19,10 @@ export const getContainerSpacing = (
   border: Border
 ): GetContainerSpacing => {
   const padding =
-    scale === 'circle' || scale === 'square' ? 'square' : 'normal';
+    scale === 'circle' || scale === 'square' ? 'square' : 'rect';
 
   return {
-    size: scale === 'square' ? 'square' : 'normal',
+    size: scale === 'square' ? 'square' : 'default',
     scale: isSpacingInner(size) ? `inner-${padding}` : padding,
     isSquare: scale === 'square',
     all: setSize(isAutoBordered(variant, border), size.split('-')[0])
