@@ -34,6 +34,7 @@ type Props = MergeProps<
     rbr: Radius;
     color: Color;
     shadow: Shadow;
+    decorated: boolean;
   }
 >;
 
@@ -58,6 +59,7 @@ export const UnstyledSwitchBar = ({
   color,
   shadow,
   className,
+  decorated,
   ...restProps
 }: Props) => {
   const theme = useTheme();
@@ -82,7 +84,8 @@ export const UnstyledSwitchBar = ({
     rbl,
     rbr,
     color,
-    shadow
+    shadow,
+    decorated
   });
 
   return (

@@ -1,10 +1,4 @@
-import type {
-  CSSStyles,
-  CSSProps,
-  Theme,
-  SwitchScale,
-  ComponentConfig
-} from '../../types';
+import type { CSSStyles, CSSProps, Theme, ComponentConfig } from '../../types';
 import type { UnstyledSwitchConfigProps } from './UnstyledSwitch.types';
 
 type PlacementType = 'default' | 'decorated';
@@ -23,7 +17,11 @@ type Styles = {
       placement: CSSStyles;
     };
     shared: {
-      size: Record<SwitchScale, CSSStyles>;
+      size: {
+        full: CSSProps;
+        default: CSSStyles;
+        slider: CSSStyles;
+      };
     };
   };
 };
@@ -360,6 +358,10 @@ export const unstyledSwitchConfig: ComponentConfig<UnstyledSwitchConfigProps> &
     },
     shared: {
       size: {
+        full: {
+          width: 'w-full',
+          height: 'h-full'
+        },
         default: {
           xs: {
             height: 'h-3',

@@ -31,8 +31,8 @@ export const UnstyledSwitchIcon = ({
   defaultSize,
   switchScale,
   color,
-  decorated,
   className,
+  decorated,
   children,
   ...restProps
 }: Props) => {

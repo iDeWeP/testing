@@ -52,6 +52,7 @@ export const UnstyledSwitch = (props: UnstyledSwitchProps) => {
   const mergedClassName = mergeClassName('switch', className, {
     disabled,
     defaultSize,
+    switchScale,
     decorated: hasRipple
   });
 
@@ -95,6 +96,7 @@ export const UnstyledSwitch = (props: UnstyledSwitchProps) => {
         rbr={rbr}
         color={color}
         shadow={shadow}
+        decorated={hasRipple}
       />
       <UnstyledSwitchBar
         valid={valid}
@@ -116,6 +118,7 @@ export const UnstyledSwitch = (props: UnstyledSwitchProps) => {
         rbr={rbr}
         color={color}
         shadow={shadow}
+        decorated={hasRipple}
       />
       <UnstyledSwitchIcon
         disabled={disabled}

@@ -48,8 +48,8 @@ export const UnstyledSwitchContainer = ({
   rtr,
   rbl,
   rbr,
-  decorated,
   className,
+  decorated,
   ...restProps
 }: Props) => {
   const mergedClassName = mergeClassName('switchContainer', className, {
