@@ -78,7 +78,7 @@ export const getFlipCrossAxis = (
   crossAxis: CrossAxis,
   orientation: Orientation,
   dimension: Dimension,
-  tresholdDimensions: TresholdDimension,
+  treshold: TresholdDimension,
   anchor: AnchorDimension,
   el: ElDimension,
   view: ViewDimension,
@@ -89,7 +89,7 @@ export const getFlipCrossAxis = (
     return dimensionMap[crossAxis](
       orientation,
       dimension,
-      tresholdDimensions,
+      treshold,
       anchor,
       el,
       view,

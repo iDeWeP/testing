@@ -1,11 +1,11 @@
 import type { ElDimension } from './cords.types';
 
 export const getElDimension = (
-  elDimensions: DOMRect,
+  elDimension: DOMRect,
   offset: number
 ): ElDimension => {
-  const width = elDimensions.width;
-  const height = elDimensions.height;
+  const width = elDimension.width;
+  const height = elDimension.height;
 
   return {
     width,

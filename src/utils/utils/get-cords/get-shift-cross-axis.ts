@@ -155,7 +155,7 @@ export const getShiftCrossAxis = (
   crossAxis: CrossAxis,
   orientation: Orientation,
   dimension: Dimension,
-  TresholdDimension: TresholdDimension,
+  treshold: TresholdDimension,
   anchor: AnchorDimension,
   el: ElDimension,
   view: ViewDimension,
@@ -166,7 +166,7 @@ export const getShiftCrossAxis = (
     return dimensionMap[crossAxis](
       orientation,
       dimension,
-      TresholdDimension,
+      treshold,
       anchor,
       el,
       view,
