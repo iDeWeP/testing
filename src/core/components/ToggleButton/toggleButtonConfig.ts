@@ -11,7 +11,7 @@ export const toggleButtonConfig: ComponentConfig<ToggleButtonConfigProps> = {
     color: 'primary',
     effect: 'unset',
     componentsProps: {},
-    ripple: 'normal',
+    ripple: 'default',
     margin: 'unset',
     m: 'unset',
     mx: 'unset',

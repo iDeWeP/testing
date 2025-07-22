@@ -25,8 +25,8 @@ export type TextareaClearanceProps = UnstyledInputClearanceProps;
 export type TextareaComponentsProps = {
   container?: TextareaContainerProps;
   label?: TextareaLabelProps;
-  leftDecorator?: TextareaDecoratorProps;
-  rightDecorator?: TextareaDecoratorProps;
+  startDecorator?: TextareaDecoratorProps;
+  endDecorator?: TextareaDecoratorProps;
   fieldset?: TextareaFieldsetProps;
   clearance?: TextareaClearanceProps;
 };

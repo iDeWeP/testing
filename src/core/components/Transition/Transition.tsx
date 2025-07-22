@@ -1,4 +1,4 @@
-import { type ElementType, useRef } from 'react';
+import { type ElementType, type ReactNode, useRef } from 'react';
 import { useAnimation } from '../../../hooks/hooks/use-animation/use-animation';
 import { combineHandlers } from '../../../utils/utils/combine-handlers/combine-handlers';
 import { mergeRefs } from '../../../utils/utils/merge-refs/merge-refs';
@@ -12,7 +12,7 @@ import { transitionConfig } from './transitionConfig';
 
 export const Transition = <E extends ElementType>(
   props: TransitionProps<E>
-) => {
+): ReactNode => {
   const {
     ref: forwardedRef,
     in: isIn = false,
