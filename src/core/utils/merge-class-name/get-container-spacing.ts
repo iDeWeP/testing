@@ -18,8 +18,7 @@ export const getContainerSpacing = (
   scale: Scale,
   border: Border
 ): GetContainerSpacing => {
-  const padding =
-    scale === 'circle' || scale === 'square' ? 'square' : 'rect';
+  const padding = scale === 'circle' || scale === 'square' ? 'square' : 'rect';
 
   return {
     size: scale === 'square' ? 'square' : 'default',
