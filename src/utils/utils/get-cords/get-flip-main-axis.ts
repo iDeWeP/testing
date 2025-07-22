@@ -9,11 +9,15 @@ import type {
   OverflowDimension
 } from './cords.types';
 
-type AxisDimension = {
-  top?: number;
-  left?: number;
-  mainAxis: DefaultPlacement;
-};
+type AxisDimension =
+  | {
+      top: number;
+      mainAxis: DefaultPlacement;
+    }
+  | {
+      left: number;
+      mainAxis: DefaultPlacement;
+    };
 
 type DimensionMap = Record<
   DefaultPlacement,

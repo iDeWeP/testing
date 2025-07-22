@@ -27,10 +27,12 @@ type DimensionMap = Record<
   ) => AxisDimension | undefined
 >;
 
-const getOffsetSize = (orientation: Orientation) =>
+const getOffsetSize = (
+  orientation: Orientation
+): 'offsetWidth' | 'offsetHeight' =>
   orientation === 'horizontal' ? 'offsetWidth' : 'offsetHeight';
 
-const getPosition = (orientation: Orientation) =>
+const getPosition = (orientation: Orientation): 'left' | 'top' =>
   orientation === 'horizontal' ? 'left' : 'top';
 
 const dimensionMap: DimensionMap = {

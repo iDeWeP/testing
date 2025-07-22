@@ -1,5 +1,4 @@
 import type { SidePlacement, Collision, CrossAxis } from '../../../core/types';
-import { setValue } from '../set-value/set-value';
 import type {
   Orientation,
   Dimension,
@@ -41,13 +40,14 @@ const dimensionMap: DimensionMap = {
     const isShorter = isElShorter(anchor, el, end);
 
     // &&overflow[orientation].viewStart > overflow[orientation].viewEnd)
-    return setValue(
+    if (
       (isShorter && overflow[orientation].anchorStart < view[start]) ||
-        (!isShorter && overflow[orientation].start > view[end]),
-      {
+      (!isShorter && overflow[orientation].start > view[end])
+    ) {
+      return {
         [dimension]: size[orientation].end
-      }
-    );
+      };
+    }
   },
   end: (
     orientation,
@@ -62,13 +62,14 @@ const dimensionMap: DimensionMap = {
     const isShorter = isElShorter(anchor, el, end);
 
     // && overflow[orientation].viewStart < overflow[orientation].viewEnd)
-    return setValue(
+    if (
       (isShorter && overflow[orientation].anchorEnd > view[end]) ||
-        (!isShorter && overflow[orientation].end < view[start]),
-      {
+      (!isShorter && overflow[orientation].end < view[start])
+    ) {
+      return {
         [dimension]: size[orientation].start
-      }
-    );
+      };
+    }
   }
 };
 
