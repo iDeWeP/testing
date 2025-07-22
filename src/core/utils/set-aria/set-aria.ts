@@ -1,7 +1,7 @@
 import type { ElementType } from 'react';
 import type { Orientation } from '../../types';
 
-type Values = {
+type Props = {
   element?: ElementType;
   invalid?: boolean;
   disabled?: boolean;
@@ -12,20 +12,20 @@ type Values = {
 };
 
 const types = {
-  button: ({ element, disabled }: Values) =>
+  button: ({ element, disabled }: Props) =>
     element !== 'button' && {
       role: 'button',
       ...(disabled ? { 'aria-disabled': true } : { tabIndex: 0 })
     },
-  divider: ({ orientation }: Values) => ({
+  divider: ({ orientation }: Props) => ({
     role: 'separator',
     'aria-orientation': (orientation === 'row' ? 'horizontal' : 'vertical') as
       | 'horizontal'
       | 'vertical'
   }),
   icon: () => ({ 'aria-hidden': true }),
-  input: ({ invalid }: Values) => ({ 'aria-invalid': !!invalid }),
-  linearProgress: ({ min, max, value }: Values) => ({
+  input: ({ invalid }: Props) => ({ 'aria-invalid': !!invalid }),
+  linearProgress: ({ min, max, value }: Props) => ({
     role: 'progressbar',
     'aria-valuemin': min,
     'aria-valuemax': max,
@@ -34,5 +34,5 @@ const types = {
   switch: () => ({ role: 'switch' })
 };
 
-export const setAria = (type: keyof typeof types, values: Values = {}) =>
+export const setAria = (type: keyof typeof types, values: Props = {}) =>
   types[type](values);

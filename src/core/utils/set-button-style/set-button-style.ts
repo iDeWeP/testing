@@ -7,9 +7,10 @@ export const setButtonStyle = (
   checked?: boolean
 ) => {
   const isCheckable = checked !== undefined;
+  const checkableVariant = hasVariantBg(variant) ? 'light' : variant;
 
   return {
-    variant: isCheckable ? (hasVariantBg(variant) ? 'light' : 'text') : variant,
+    variant: isCheckable ? checkableVariant : variant,
     color: isCheckable && color !== 'unset' ? 'surface' : color
   };
 };
