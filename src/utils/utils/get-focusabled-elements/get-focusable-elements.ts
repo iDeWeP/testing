@@ -11,7 +11,7 @@ export const getFocusableElements = <E extends HTMLElement>(
   const focusableEls = [
     ...el.querySelectorAll<HTMLElement>(focusableSelector)
   ].filter(
-    (el) =>
+    (el): boolean =>
       !el.hasAttribute('disabled') && el.getAttribute('aria-hidden') !== 'true'
   );
 

@@ -9,5 +9,5 @@ export const getInitials = (
     : children
         .trim()
         .split(/\s+/)
-        .map((word) => word[0].toUpperCase())
+        .map((word): string => word[0].toUpperCase())
         .join('');
