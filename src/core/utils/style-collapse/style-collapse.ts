@@ -1,4 +1,4 @@
-import type { CSSProperties, RefObject } from 'react';
+import type { RefObject, CSSProperties } from 'react';
 import type { Animation } from '../../../hooks/hooks/use-animation/use-animation';
 import type { Peak } from '../../types';
 

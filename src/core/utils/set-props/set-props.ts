@@ -7,8 +7,8 @@ type Props = {
 
 type SetProps = Record<string, string | boolean | undefined> | undefined;
 
-type Elements = 'button' | 'switch';
-type TypeMap = Record<Elements, (props: Props) => SetProps>;
+type Element = 'button' | 'switch';
+type TypeMap = Record<Element, (props: Props) => SetProps>;
 
 const typeMap: TypeMap = {
   button: ({ element, disabled }: Props): SetProps => {

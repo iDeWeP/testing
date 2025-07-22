@@ -15,14 +15,14 @@ type SetAria =
   | Record<string, string | number | boolean | undefined>
   | undefined;
 
-type Elements =
+type Element =
   | 'button'
   | 'divider'
   | 'icon'
   | 'input'
   | 'linearProgress'
   | 'switch';
-type TypeMap = Record<Elements, (props: Props) => SetAria>;
+type TypeMap = Record<Element, (props: Props) => SetAria>;
 
 const typeMap: TypeMap = {
   button: ({ element, disabled }: Props): SetAria => {
