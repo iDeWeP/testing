@@ -25,8 +25,8 @@ export type InputClearanceProps = UnstyledInputClearanceProps;
 export type InputComponentsProps = {
   container?: InputContainerProps;
   label?: InputLabelProps;
-  leftDecorator?: InputDecoratorProps;
-  rightDecorator?: InputDecoratorProps;
+  startDecorator?: InputDecoratorProps;
+  endDecorator?: InputDecoratorProps;
   fieldset?: InputFieldsetProps;
   clearance?: InputClearanceProps;
 };

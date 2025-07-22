@@ -1,11 +1,13 @@
-import type { ElementType } from 'react';
+import type { ElementType, ReactNode } from 'react';
 import { useMergeProps } from '../../hooks/use-merge-props/use-merge-props';
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
 import { UnstyledBox } from '../UnstyledBox/UnstyledBox';
 import type { LabelProps } from './Label.types';
 import { labelConfig } from './labelConfig';
 
-export const Label = <E extends ElementType>(props: LabelProps<E>) => {
+export const Label = <E extends ElementType>(
+  props: LabelProps<E>
+): ReactNode => {
   const { placement, className, label, children, ...restProps } = useMergeProps(
     'label',
     labelConfig.props,

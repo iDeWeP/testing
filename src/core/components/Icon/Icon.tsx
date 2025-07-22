@@ -1,4 +1,4 @@
-import { cloneElement } from 'react';
+import { type ReactNode, cloneElement } from 'react';
 import { useMergeProps } from '../../hooks/use-merge-props/use-merge-props';
 import { useTheme } from '../../hooks/use-theme/use-theme';
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
@@ -6,7 +6,7 @@ import { setAria } from '../../utils/set-aria/set-aria';
 import type { IconProps } from './Icon.types';
 import { iconConfig } from './IconConfig';
 
-export const Icon = (props: IconProps) => {
+export const Icon = (props: IconProps): ReactNode => {
   const {
     variant,
     size: font,

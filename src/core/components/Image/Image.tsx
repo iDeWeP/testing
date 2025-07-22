@@ -1,11 +1,13 @@
-import type { ElementType } from 'react';
+import type { ElementType, ReactNode } from 'react';
 import { useMergeProps } from '../../hooks/use-merge-props/use-merge-props';
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
 import { UnstyledBox } from '../UnstyledBox/UnstyledBox';
 import type { ImageProps } from './Image.types';
 import { imageConfig } from './imageConfig';
 
-export const Image = <E extends ElementType>(props: ImageProps<E>) => {
+export const Image = <E extends ElementType>(
+  props: ImageProps<E>
+): ReactNode => {
   const { className, ...restProps } = useMergeProps(
     'image',
     imageConfig.props,

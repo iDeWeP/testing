@@ -1,4 +1,4 @@
-import type { ElementType } from 'react';
+import type { ElementType, ReactNode } from 'react';
 import { useMergeProps } from '../../hooks/use-merge-props/use-merge-props';
 import { UnstyledButton } from '../UnstyledButton/UnstyledButton';
 import type { IconButtonProps } from './IconButton.types';
@@ -6,7 +6,7 @@ import { iconButtonConfig } from './iconButtonConfig';
 
 export const IconButton = <E extends ElementType>(
   props: IconButtonProps<E>
-) => {
+): ReactNode => {
   const mergedProps = useMergeProps(
     'iconButton',
     iconButtonConfig.props,

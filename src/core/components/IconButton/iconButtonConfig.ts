@@ -10,7 +10,7 @@ export const iconButtonConfig: ComponentConfig<IconButtonConfigProps> = {
     color: 'primary',
     effect: 'unset',
     componentsProps: {},
-    ripple: 'normal',
+    ripple: 'default',
     margin: 'unset',
     m: 'unset',
     mx: 'unset',
