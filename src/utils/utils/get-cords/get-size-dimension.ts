@@ -5,7 +5,7 @@ import type {
   SizeDimension
 } from './cords.types';
 
-export const calculateSizeDimension = (
+export const getSizeDimension = (
   anchor: AnchorDimension,
   el: ElDimension,
   view: ViewDimension,

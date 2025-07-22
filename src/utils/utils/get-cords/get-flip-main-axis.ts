@@ -5,7 +5,7 @@ import type {
   OverflowDimension
 } from './cords.types';
 
-const dimension = {
+const dimensionMap = {
   top: (
     view: ViewDimension,
     size: SizeDimension,
@@ -34,4 +34,4 @@ export const getFlipMainAxis = (
   view: ViewDimension,
   size: SizeDimension,
   overflow: OverflowDimension
-) => collision !== 'none' && dimension[mainAxis](view, size, overflow);
+) => collision !== 'none' && dimensionMap[mainAxis](view, size, overflow);

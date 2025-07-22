@@ -1,10 +1,11 @@
 import type { Cursor } from '../../../core/types';
+import type { AnchorDimension } from './cords.types';
 
-export const getAnchorDimensions = (
+export const getAnchorDimension = (
   anchor: HTMLElement,
   isPorted: boolean,
   cursor?: Cursor
-) => {
+): AnchorDimension => {
   const dimensions = {
     top: anchor.offsetTop,
     left: anchor.offsetLeft,

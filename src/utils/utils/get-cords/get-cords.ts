@@ -7,18 +7,18 @@ import type {
   Cursor
 } from '../../../core/types';
 import { isPlacementHorizontal } from '../is-placement-horizontal/is-placement-horizontal';
-import { calculateOverflowDimensions } from './calculate-overflow-dimensions';
-import { calculateSizeDimensions } from './calculate-size-dimensions';
+import { calculateOverflowDimensions } from './get-overflow-dimension';
+import { calculateSizeDimensions } from './get-size-dimension';
 import type { TresholdDimensions } from './cords.types';
-import { getAnchorDimensions } from './get-anchor-dimensions';
-import { getAxises } from './get-axises';
+import { getAnchorDimensions } from './get-anchor-dimension';
+import { getAxises } from './get-axis';
 import { getCrossAxis } from './get-cross-axis';
-import { getElDimensions } from './get-el-dimensions';
+import { getElDimension } from './get-el-dimensions';
 import { getFlipCrossAxis } from './get-flip-cross-axis';
 import { getFlipMainAxis } from './get-flip-main-axis';
 import { getMainAxis } from './get-main-axis';
 import { getShiftCrossAxis } from './get-shift-cross-axis';
-import { getViewDimensions } from './get-view-dimensions';
+import { getViewDimension } from './get-view-dimension';
 
 type Cord = {
   top: number;
@@ -45,8 +45,8 @@ export const getCords = (
   }
 
   const anchor = getAnchorDimensions(anchorRef.current, isPorted, cursor);
-  const el = getElDimensions(ref.current.getBoundingClientRect(), offset);
-  const view = getViewDimensions(threshold);
+  const el = getElDimension(ref.current.getBoundingClientRect(), offset);
+  const view = getViewDimension(threshold);
 
   const size = calculateSizeDimensions(anchor, el, view, offset);
   const overflow = calculateOverflowDimensions(anchor, el, view);

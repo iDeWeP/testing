@@ -5,7 +5,7 @@ import type {
   OverflowDimension
 } from './cords.types';
 
-export const calculateOverflowDimension = (
+export const getOverflowDimension = (
   anchor: AnchorDimension,
   el: ElDimension,
   view: ViewDimension

@@ -1,2 +1,3 @@
-export const getElDimension = (dimension: 'right' | 'bottom') =>
-  dimension === 'right' ? 'width' : 'height';
+export const getElDimension = (
+  dimension: 'right' | 'bottom'
+): 'height' | 'width' => (dimension === 'right' ? 'width' : 'height');
