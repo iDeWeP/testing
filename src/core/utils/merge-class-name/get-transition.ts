@@ -1,6 +1,6 @@
 import type { Transition } from '../../types';
 
-export const getTransition = (transition: Transition) => {
+export const getTransition = (transition: Transition): string => {
   const transitions = transition.split('-');
 
   if (transitions[0] === 'fade') {

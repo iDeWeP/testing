@@ -1,10 +1,10 @@
-type Color = {
+type ColorType = {
   bg: string;
   text: string;
   ring: string;
 };
 
-export const getStateColor = <T extends Color | string>(
+export const getStateColor = <T extends ColorType | string>(
   defaultColor: T,
   uncheckedColor: T,
   checkedColor: T,

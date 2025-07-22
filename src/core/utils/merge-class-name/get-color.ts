@@ -8,23 +8,30 @@ type States = {
   invalid?: boolean;
 };
 
-const variants = {
-  outlined: (color: string, isReversed?: boolean) => ({
+type ColorType = { bg: string; text: string; ring: string };
+
+type VariantMap = Record<
+  Variant,
+  (color: string, isReversed: boolean) => ColorType
+>;
+
+const variantMap: VariantMap = {
+  outlined: (color, isReversed): ColorType => ({
     bg: 'unset',
     text: isReversed ? `${color}-on` : color,
     ring: isReversed ? `${color}-on` : color
   }),
-  text: (color: string, isReversed?: boolean) => ({
+  text: (color, isReversed): ColorType => ({
     bg: 'unset',
     text: isReversed ? `${color}-on` : color,
     ring: isReversed ? `${color}-on` : color
   }),
-  light: (color: string, isReversed?: boolean) => ({
+  light: (color, isReversed): ColorType => ({
     bg: isReversed ? color : `${color}-light`,
     text: isReversed ? `${color}-light` : color,
     ring: isReversed ? `${color}-light` : color
   }),
-  solid: (color: string, isReversed?: boolean) => ({
+  solid: (color, isReversed): ColorType => ({
     bg: isReversed ? `${color}-on` : color,
     text: isReversed ? color : `${color}-on`,
     ring: isReversed ? `${color}-on` : color
@@ -36,7 +43,7 @@ export const getColor = (
   color: Color,
   states?: States,
   isChecked?: boolean
-) => {
+): ColorType => {
   if (color === 'unset') {
     return {
       bg: 'unset',
@@ -73,7 +80,7 @@ export const getColor = (
   const defaultVariant = hasVariantBg(variant) ? 'light' : 'text';
   const defaultColor = isDefault ? 'surface' : color.replace('-on', '');
 
-  return variants[isDefault ? defaultVariant : variant](
+  return variantMap[isDefault ? defaultVariant : variant](
     states?.valid ? 'success' : states?.invalid ? 'error' : defaultColor,
     !isDefault && isColorReversed(color)
   );

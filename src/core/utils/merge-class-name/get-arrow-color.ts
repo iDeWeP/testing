@@ -19,7 +19,7 @@ export const getArrowColor = (
   bl: DefaultBorder,
   br: DefaultBorder,
   color: Color
-) => {
+): string => {
   if (
     (placement === 'top' &&
       (bt === 'set' || (bt !== 'none' && by === 'set'))) ||

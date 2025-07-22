@@ -1,14 +1,14 @@
 import type { Loading } from '../../types';
 
-type States = {
+type State = {
   disabled?: boolean;
   loading?: Loading;
 };
 
 export const getFocusableState = (
-  { disabled, loading }: States,
+  { disabled, loading }: State,
   isPeer?: boolean
-) => {
+): string => {
   if (disabled) {
     return isPeer ? 'unset' : 'disabled';
   }
