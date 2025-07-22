@@ -30,14 +30,19 @@ export const styleLoader = (
   }: Classes
 ): ClassName => {
   const isCheckable = checked !== undefined && !disabled;
-  const margins = getSpacing(margin);
-  const defaultColor = getLoaderColor(variant, color, { disabled });
-  const uncheckedColor = getLoaderColor(variant, color, { disabled }, false);
-  const checkedColor = getLoaderColor(variant, color, { disabled }, true);
+  const marginType = getSpacing(margin);
+  const defaultColorType = getLoaderColor(variant, color, { disabled });
+  const uncheckedColorType = getLoaderColor(
+    variant,
+    color,
+    { disabled },
+    false
+  );
+  const checkedColorType = getLoaderColor(variant, color, { disabled }, true);
   const strokeColor = getStateColor(
-    defaultColor,
-    uncheckedColor,
-    checkedColor,
+    defaultColorType,
+    uncheckedColorType,
+    checkedColorType,
     disabled,
     checked
   );
@@ -49,9 +54,9 @@ export const styleLoader = (
     float && sharedStyles.position.absolute,
     float && unstyledLoaderConfig.styles.root.float[size],
     systemStyles.size.text.square[size],
-    systemStyles.margin.all[margins.all],
-    systemStyles.margin.x[margins.x],
-    systemStyles.margin.y[margins.y],
+    systemStyles.margin.all[marginType.all],
+    systemStyles.margin.x[marginType.x],
+    systemStyles.margin.y[marginType.y],
     systemStyles.margin.all[m],
     systemStyles.margin.x[mx],
     systemStyles.margin.y[my],
@@ -60,7 +65,8 @@ export const styleLoader = (
     systemStyles.margin.l[ml],
     systemStyles.margin.r[mr],
     systemStyles.color.default.stroke[theme][strokeColor],
-    isCheckable && unstyledLoaderConfig.styles.root.color[theme][checkedColor],
+    isCheckable &&
+      unstyledLoaderConfig.styles.root.color[theme][checkedColorType],
     hasRing && systemStyles.color.default.ring[theme][ring],
     hasRing && sharedStyles.ring.default,
     isSpinning && sharedStyles.animation.spin,

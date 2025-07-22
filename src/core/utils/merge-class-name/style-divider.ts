@@ -33,7 +33,7 @@ export const styleDivider = (
     decorated = false
   }: Classes
 ): ClassName => {
-  const paddings = getDividerSpacing(orientation, padding);
+  const paddingType = getDividerSpacing(orientation, padding);
   const margins = getDividerSpacing(orientation, margin);
   const textColor = getColor('text', color).text;
 
@@ -41,8 +41,8 @@ export const styleDivider = (
     sharedStyles.display.flex,
     decorated && unstyledDividerConfig.styles.root.decorated,
     unstyledDividerConfig.styles.root.orientation[orientation],
-    systemStyles.padding.default.x[paddings.x],
-    systemStyles.padding.default.y[paddings.y],
+    systemStyles.padding.default.x[paddingType.x],
+    systemStyles.padding.default.y[paddingType.y],
     systemStyles.padding.default.all[p],
     systemStyles.padding.default.x[px],
     systemStyles.padding.default.y[py],

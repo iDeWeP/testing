@@ -38,7 +38,12 @@ export const styleSwitchBar = (
   const focusable = getFocusableState({ disabled }, true);
   const defaultBorder = getBorder(variant, border).all;
   const isBordered = isAutoBordered(variant, border);
-  const colors = getColor(variant, color, { disabled, valid, invalid }, true);
+  const colorType = getColor(
+    variant,
+    color,
+    { disabled, valid, invalid },
+    true
+  );
 
   return mergeClasses(
     sharedStyles.decoration,
@@ -59,9 +64,9 @@ export const styleSwitchBar = (
     systemStyles.radius.tr[rtr],
     systemStyles.radius.bl[rbl],
     systemStyles.radius.br[rbr],
-    systemStyles.color.default.bg[theme][colors.bg],
-    isBordered && systemStyles.color.default.border[theme][colors.text],
-    systemStyles.color.default.ring[theme][colors.ring],
+    systemStyles.color.default.bg[theme][colorType.bg],
+    isBordered && systemStyles.color.default.border[theme][colorType.text],
+    systemStyles.color.default.ring[theme][colorType.ring],
     systemStyles.shadow[shadow],
     className
   );

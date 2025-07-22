@@ -33,7 +33,7 @@ export const styleInputDecorator = (
 ): ClassName => {
   const isOutlined = inputVariant === 'outlined';
   const paddingType = decorated ? 'decorated' : 'default';
-  const radiuses = getInputRadius(
+  const radiusType = getInputRadius(
     inputVariant,
     sidePlacement,
     radius,
@@ -55,16 +55,16 @@ export const styleInputDecorator = (
     isOutlined && unstyledInputConfig.styles.decorator.outlined[sidePlacement],
     unstyledInputConfig.styles.shared.variant.default[inputVariant],
     unstyledInputConfig.styles.shared.variant[inputType][inputVariant],
-    systemStyles.radius.l[radiuses.autoL],
-    systemStyles.radius.r[radiuses.autoR],
-    systemStyles.radius.tl[radiuses.autoTl],
-    systemStyles.radius.tr[radiuses.autoTr],
-    systemStyles.radius.l[radiuses.l],
-    systemStyles.radius.r[radiuses.r],
-    systemStyles.radius.tl[radiuses.tl],
-    systemStyles.radius.tr[radiuses.tr],
-    systemStyles.radius.bl[radiuses.bl],
-    systemStyles.radius.br[radiuses.br],
+    systemStyles.radius.l[radiusType.autoL],
+    systemStyles.radius.r[radiusType.autoR],
+    systemStyles.radius.tl[radiusType.autoTl],
+    systemStyles.radius.tr[radiusType.autoTr],
+    systemStyles.radius.l[radiusType.l],
+    systemStyles.radius.r[radiusType.r],
+    systemStyles.radius.tl[radiusType.tl],
+    systemStyles.radius.tr[radiusType.tr],
+    systemStyles.radius.bl[radiusType.bl],
+    systemStyles.radius.br[radiusType.br],
     systemStyles.color.default.bg[theme][bgColor],
     systemStyles.gap.all[gap],
     className

@@ -42,18 +42,18 @@ export const styleLinearProgress = (
   }: Classes
 ): ClassName => {
   const sizeType = decorated ? 'decorated' : 'default';
-  const margins = getSpacing(margin);
+  const marginType = getSpacing(margin);
   const defaultBorder = getBorder(variant, border).all;
   const isBordered = isAutoBordered(variant, border);
-  const colors = getColor(variant, color, { disabled });
+  const colorType = getColor(variant, color, { disabled });
   const hasRing = ring !== 'unset';
 
   return mergeClasses(
     unstyledLinearProgressConfig.styles.root.orientation[orientation],
     unstyledLinearProgressConfig.styles.root.size[orientation][sizeType][size],
-    systemStyles.margin.all[margins.all],
-    systemStyles.margin.x[margins.x],
-    systemStyles.margin.y[margins.y],
+    systemStyles.margin.all[marginType.all],
+    systemStyles.margin.x[marginType.x],
+    systemStyles.margin.y[marginType.y],
     systemStyles.margin.all[m],
     systemStyles.margin.x[mx],
     systemStyles.margin.y[my],
@@ -72,8 +72,8 @@ export const styleLinearProgress = (
     systemStyles.radius.tr[rtr],
     systemStyles.radius.bl[rbl],
     systemStyles.radius.br[rbr],
-    systemStyles.color.default.bg[theme][colors.bg],
-    isBordered && systemStyles.color.default.border[theme][colors.text],
+    systemStyles.color.default.bg[theme][colorType.bg],
+    isBordered && systemStyles.color.default.border[theme][colorType.text],
     hasRing && systemStyles.color.default.ring[theme][ring],
     systemStyles.shadow[shadow],
     hasRing && sharedStyles.ring.default,

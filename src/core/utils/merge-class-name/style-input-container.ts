@@ -31,14 +31,14 @@ export const styleInputContainer = (
   }: Classes
 ): ClassName => {
   const size = resize ? 'full' : inputSize;
-  const margins = getSpacing(margin);
-  const normalColor = getColor(
+  const marginType = getSpacing(margin);
+  const textColor = getColor(
     inputVariant === 'light' ? 'light' : 'text',
     color,
     { disabled, valid, invalid },
     false
   ).text;
-  const onColor = getColor(
+  const onTextColor = getColor(
     inputVariant === 'light' ? 'light' : 'text',
     color,
     { disabled, valid, invalid },
@@ -50,9 +50,9 @@ export const styleInputContainer = (
     unstyledInputConfig.styles.root.default,
     unstyledInputConfig.styles.root.size[inputType][size],
     sharedStyles.width[width],
-    systemStyles.margin.all[margins.all],
-    systemStyles.margin.x[margins.x],
-    systemStyles.margin.y[margins.y],
+    systemStyles.margin.all[marginType.all],
+    systemStyles.margin.x[marginType.x],
+    systemStyles.margin.y[marginType.y],
     systemStyles.margin.all[m],
     systemStyles.margin.x[mx],
     systemStyles.margin.y[my],
@@ -60,10 +60,10 @@ export const styleInputContainer = (
     systemStyles.margin.b[mb],
     systemStyles.margin.l[ml],
     systemStyles.margin.r[mr],
-    systemStyles.color.default.text[theme][normalColor],
-    systemStyles.color.default.fill[theme][normalColor],
-    systemStyles.color.on.text[theme][onColor],
-    systemStyles.color.on.fill[theme][onColor],
+    systemStyles.color.default.text[theme][textColor],
+    systemStyles.color.default.fill[theme][textColor],
+    systemStyles.color.on.text[theme][onTextColor],
+    systemStyles.color.on.fill[theme][onTextColor],
     disabled && sharedStyles.focusable.disabled,
     className
   );

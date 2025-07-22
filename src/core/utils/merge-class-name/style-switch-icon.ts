@@ -18,16 +18,16 @@ export const styleSwitchIcon = (
 ): ClassName => {
   const isNormal = switchScale === 'default';
   const placementType = decorated ? 'decorated' : 'default';
-  const uncheckedColor = getColor(variant, color, { disabled }, false).text;
-  const checkedColor = getColor(variant, color, { disabled }, true).text;
+  const uncheckedTextColor = getColor(variant, color, { disabled }, false).text;
+  const checkedTextColor = getColor(variant, color, { disabled }, true).text;
 
   return mergeClasses(
     unstyledSwitchConfig.styles.icon.default,
     unstyledSwitchConfig.styles.icon.placement[placementType][defaultSize],
     systemStyles.size.text.square[defaultSize],
     isNormal && systemStyles.padding.default.all['xs-xs'],
-    systemStyles.color.default.fill[theme][uncheckedColor],
-    unstyledSwitchConfig.styles.icon.color[theme][checkedColor],
+    systemStyles.color.default.fill[theme][uncheckedTextColor],
+    unstyledSwitchConfig.styles.icon.color[theme][checkedTextColor],
     className
   );
 };

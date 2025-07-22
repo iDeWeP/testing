@@ -36,7 +36,12 @@ export const styleSwitchTrail = (
   const isFloating = switchScale === 'slider' || decorated;
   const focusable = getFocusableState({ disabled }, true);
   const isBordered = isAutoBordered(variant, defaultBorder);
-  const colors = getColor(variant, color, { disabled, valid, invalid }, false);
+  const colorType = getColor(
+    variant,
+    color,
+    { disabled, valid, invalid },
+    false
+  );
 
   return mergeClasses(
     sharedStyles.decoration,
@@ -57,9 +62,9 @@ export const styleSwitchTrail = (
     systemStyles.radius.tr[rtr],
     systemStyles.radius.bl[rbl],
     systemStyles.radius.br[rbr],
-    systemStyles.color.default.bg[theme][colors.bg],
-    isBordered && systemStyles.color.default.border[theme][colors.text],
-    systemStyles.color.default.ring[theme][colors.ring],
+    systemStyles.color.default.bg[theme][colorType.bg],
+    isBordered && systemStyles.color.default.border[theme][colorType.text],
+    systemStyles.color.default.ring[theme][colorType.ring],
     systemStyles.shadow[shadow],
     className
   );

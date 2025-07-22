@@ -17,26 +17,26 @@ export const styleCardBody = (
     radius = 'unset'
   }: Classes
 ): ClassName => {
-  const paddings = getSpacing(padding, cardPlacement);
-  const margins = getSpacing(margin, cardPlacement);
-  const borders = getBorder(variant, border, cardPlacement);
+  const paddingType = getSpacing(padding, cardPlacement);
+  const marginType = getSpacing(margin, cardPlacement);
+  const borderType = getBorder(variant, border, cardPlacement);
 
   return mergeClasses(
     sharedStyles.display.flex,
-    systemStyles.padding.default.all[paddings.all],
-    systemStyles.padding.default.x[paddings.x],
-    systemStyles.padding.default.y[paddings.y],
-    systemStyles.padding.default.t[paddings.t],
-    systemStyles.padding.default.b[paddings.b],
-    systemStyles.margin.all[margins.all],
-    systemStyles.margin.x[margins.x],
-    systemStyles.margin.y[margins.y],
-    systemStyles.margin.t[margins.t],
-    systemStyles.margin.b[margins.b],
-    systemStyles.border.all[borders.all],
-    systemStyles.border.x[borders.x],
-    systemStyles.border.t[borders.t],
-    systemStyles.border.b[borders.b],
+    systemStyles.padding.default.all[paddingType.all],
+    systemStyles.padding.default.x[paddingType.x],
+    systemStyles.padding.default.y[paddingType.y],
+    systemStyles.padding.default.t[paddingType.t],
+    systemStyles.padding.default.b[paddingType.b],
+    systemStyles.margin.all[marginType.all],
+    systemStyles.margin.x[marginType.x],
+    systemStyles.margin.y[marginType.y],
+    systemStyles.margin.t[marginType.t],
+    systemStyles.margin.b[marginType.b],
+    systemStyles.border.all[borderType.all],
+    systemStyles.border.x[borderType.x],
+    systemStyles.border.t[borderType.t],
+    systemStyles.border.b[borderType.b],
     systemStyles.radius.b[radius],
     sharedStyles.direction[orientation],
     className

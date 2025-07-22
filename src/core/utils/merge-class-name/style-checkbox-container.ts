@@ -30,14 +30,14 @@ export const styleCheckboxContainer = (
   }: Classes
 ): ClassName => {
   const sizeType = decorated ? 'default' : 'text';
-  const margins = getSpacing(margin);
+  const marginType = getSpacing(margin);
 
   return mergeClasses(
     sharedStyles.container,
     systemStyles.size[sizeType].square[defaultSize],
-    systemStyles.margin.all[margins.all],
-    systemStyles.margin.x[margins.x],
-    systemStyles.margin.y[margins.y],
+    systemStyles.margin.all[marginType.all],
+    systemStyles.margin.x[marginType.x],
+    systemStyles.margin.y[marginType.y],
     systemStyles.margin.all[m],
     systemStyles.margin.x[mx],
     systemStyles.margin.y[my],
