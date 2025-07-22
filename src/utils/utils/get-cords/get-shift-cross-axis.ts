@@ -1,4 +1,4 @@
-import type { Collision, CrossAxis, CrossPlacement } from '../../../core/types';
+import type { CrossPlacement, Collision, CrossAxis } from '../../../core/types';
 import type {
   Orientation,
   Dimension,
@@ -18,7 +18,7 @@ type DimensionMap = Record<
   (
     orientation: Orientation,
     dimension: Dimension,
-    [start, end]: TresholdDimension,
+    treshold: TresholdDimension,
     anchor: AnchorDimension,
     el: ElDimension,
     view: ViewDimension,

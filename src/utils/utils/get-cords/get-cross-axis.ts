@@ -1,4 +1,4 @@
-import type { CrossAxis, CrossPlacement } from '../../../core/types';
+import type { CrossPlacement, CrossAxis } from '../../../core/types';
 import type {
   Orientation,
   Dimension,

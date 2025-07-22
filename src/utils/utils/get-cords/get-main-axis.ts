@@ -1,5 +1,5 @@
 import type { DefaultPlacement, MainAxis } from '../../../core/types';
-import type { AxisDimension, SizeDimension } from './cords.types';
+import type { SizeDimension, AxisDimension } from './cords.types';
 
 type DimensionMap = Record<
   DefaultPlacement,

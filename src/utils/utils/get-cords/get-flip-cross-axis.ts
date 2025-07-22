@@ -1,4 +1,4 @@
-import type { Collision, CrossAxis, SidePlacement } from '../../../core/types';
+import type { SidePlacement, Collision, CrossAxis } from '../../../core/types';
 import { setValue } from '../set-value/set-value';
 import type {
   Orientation,
