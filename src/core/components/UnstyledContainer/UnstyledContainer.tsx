@@ -1,4 +1,4 @@
-import type { ElementType } from 'react';
+import type { ElementType, ReactNode } from 'react';
 import { useTheme } from '../../hooks/use-theme/use-theme';
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
 import { mergeProps } from '../../utils/merge-props/merge-props';
@@ -7,7 +7,7 @@ import { unstyledContainerConfig } from './unstyledContainerConfig';
 
 export const UnstyledContainer = <E extends ElementType>(
   props: UnstyledContainerProps<E>
-) => {
+): ReactNode => {
   const {
     as: Component,
     variant,

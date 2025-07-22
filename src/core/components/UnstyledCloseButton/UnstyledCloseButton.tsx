@@ -1,4 +1,4 @@
-import { type ElementType, cloneElement } from 'react';
+import { type ElementType, type ReactNode, cloneElement } from 'react';
 import { mergeProps } from '../../utils/merge-props/merge-props';
 import { setAria } from '../../utils/set-aria/set-aria';
 import { UnstyledButton } from '../UnstyledButton/UnstyledButton';
@@ -7,7 +7,7 @@ import { unstyledCloseButtonConfig } from './unstyledCloseButtonConfig';
 
 export const UnstyledCloseButton = <E extends ElementType>(
   props: UnstyledCloseButtonProps<E>
-) => {
+): ReactNode => {
   const { componentsProps, children, ...restProps } = mergeProps(
     unstyledCloseButtonConfig.props,
     props

@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react';
 import type { MergeProps, Orientation } from '../../types';
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
 import type { UnstyledDividerLineProps } from './UnstyledDivider.types';
@@ -13,7 +14,7 @@ export const UnstyledDividerLine = ({
   orientation,
   className,
   ...restProps
-}: Props) => {
+}: Props): ReactNode => {
   const mergedClassName = mergeClassName('dividerLine', className, {
     orientation
   });

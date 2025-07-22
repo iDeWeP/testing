@@ -1,4 +1,4 @@
-import type { ElementType } from 'react';
+import type { ElementType, ReactNode } from 'react';
 import { useTheme } from '../../hooks/use-theme/use-theme';
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
 import { mergeProps } from '../../utils/merge-props/merge-props';
@@ -9,7 +9,7 @@ import { UnstyledDividerLine } from './UnstyledDividerLine';
 
 export const UnstyledDivider = <E extends ElementType>(
   props: UnstyledDividerProps<E>
-) => {
+): ReactNode => {
   const {
     as: Component,
     orientation,
