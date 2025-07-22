@@ -1,6 +1,6 @@
 import type { RefObject } from 'react';
 import { combineHandlers } from '../../../utils/utils/combine-handlers/combine-handlers';
-import { setProp } from '../../../utils/utils/set-prop/set-prop';
+import { setValue } from '../../../utils/utils/set-value/set-value';
 import { useFocusHandler } from '../../hooks/use-focus-handler/use-focus-handler';
 import { useTheme } from '../../hooks/use-theme/use-theme';
 import type { MergeProps, InputSize, Width, Margin, Color } from '../../types';
@@ -81,7 +81,7 @@ export const UnstyledInputContainer = ({
 
   return (
     <div
-      tabIndex={setProp(!disabled, -1)}
+      tabIndex={setValue(!disabled, -1)}
       className={mergedClassName}
       onFocus={combineHandlers(onFocus, handleFocus)}
       {...restProps}

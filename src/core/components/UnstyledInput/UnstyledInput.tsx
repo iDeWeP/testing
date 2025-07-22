@@ -1,7 +1,7 @@
 import { type ElementType, useRef } from 'react';
 import { combineHandlers } from '../../../utils/utils/combine-handlers/combine-handlers';
 import { mergeRefs } from '../../../utils/utils/merge-refs/merge-refs';
-import { setProp } from '../../../utils/utils/set-prop/set-prop';
+import { setValue } from '../../../utils/utils/set-value/set-value';
 import { useControlledState } from '../../hooks/use-controlled-state/use-controlled-state';
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
 import { mergeProps } from '../../utils/merge-props/merge-props';
@@ -65,9 +65,9 @@ export const UnstyledInput = <E extends ElementType>(
   const ref = useRef(null);
 
   const {
-    isOpen: isFocused,
-    handleOpen: handleFocus,
-    handleClose: handleBlur
+    isOn: isFocused,
+    handleOn: handleFocus,
+    handleOff: handleBlur
   } = useControlledState(false, focused, onFocus, onBlur);
 
   const mergedClassName = mergeClassName('input', className, {
@@ -80,7 +80,7 @@ export const UnstyledInput = <E extends ElementType>(
   return (
     <UnstyledInputContainer
       inputType={Component}
-      inputRef={setProp(focused === undefined, ref)}
+      inputRef={setValue(focused === undefined, ref)}
       on={isFocused}
       valid={valid}
       invalid={invalid}
@@ -105,7 +105,7 @@ export const UnstyledInput = <E extends ElementType>(
         invalid={invalid}
         disabled={disabled}
         inputVariant={variant}
-        sidePlacement="left"
+        sidePlacement="start"
         radius={radius}
         r={r}
         rt={rt}
@@ -137,7 +137,7 @@ export const UnstyledInput = <E extends ElementType>(
           disabled={disabled}
           id={id}
           value={value}
-          placeholder={setProp(isFocused, placeholder)}
+          placeholder={setValue(isFocused, placeholder)}
           type="text"
           className={mergedClassName}
           {...setAria('input', { invalid })}
@@ -172,7 +172,7 @@ export const UnstyledInput = <E extends ElementType>(
         invalid={invalid}
         disabled={disabled}
         inputVariant={variant}
-        sidePlacement="right"
+        sidePlacement="end"
         radius={radius}
         r={r}
         rt={rt}
