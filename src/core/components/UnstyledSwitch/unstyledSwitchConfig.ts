@@ -1,8 +1,8 @@
 import type {
-  SwitchScale,
   CSSStyles,
   CSSProps,
   Theme,
+  SwitchScale,
   ComponentConfig
 } from '../../types';
 import type { UnstyledSwitchConfigProps } from './UnstyledSwitch.types';
@@ -12,7 +12,7 @@ type PlacementType = 'default' | 'decorated';
 type Styles = {
   styles: {
     root: {
-      size: Record<SwitchScale, Record<PlacementType, CSSStyles>>;
+      size: Record<PlacementType, CSSStyles>;
     };
     icon: {
       default: CSSProps;
@@ -20,7 +20,6 @@ type Styles = {
       color: Record<Theme, CSSStyles>;
     };
     ripple: {
-      default: CSSProps;
       placement: CSSStyles;
     };
     shared: {
@@ -63,87 +62,43 @@ export const unstyledSwitchConfig: ComponentConfig<UnstyledSwitchConfigProps> &
     root: {
       size: {
         default: {
-          default: {
-            xs: {
-              width: 'w-6'
-            },
-            sm: {
-              width: 'w-8'
-            },
-            md: {
-              width: 'w-10'
-            },
-            lg: {
-              width: 'w-12'
-            },
-            xl: {
-              width: 'w-14'
-            },
-            xxl: {
-              width: 'w-16'
-            }
+          xs: {
+            width: 'w-6'
           },
-          decorated: {
-            xs: {
-              width: 'w-10'
-            },
-            sm: {
-              width: 'w-16'
-            },
-            md: {
-              width: 'w-20'
-            },
-            lg: {
-              width: 'w-24'
-            },
-            xl: {
-              width: 'w-32'
-            },
-            xxl: {
-              width: 'w-40'
-            }
+          sm: {
+            width: 'w-8'
+          },
+          md: {
+            width: 'w-10'
+          },
+          lg: {
+            width: 'w-12'
+          },
+          xl: {
+            width: 'w-14'
+          },
+          xxl: {
+            width: 'w-16'
           }
         },
-        slider: {
-          default: {
-            xs: {
-              width: 'w-6'
-            },
-            sm: {
-              width: 'w-8'
-            },
-            md: {
-              width: 'w-10'
-            },
-            lg: {
-              width: 'w-12'
-            },
-            xl: {
-              width: 'w-14'
-            },
-            xxl: {
-              width: 'w-16'
-            }
+        decorated: {
+          xs: {
+            width: 'w-8'
           },
-          decorated: {
-            xs: {
-              width: 'w-8'
-            },
-            sm: {
-              width: 'w-12'
-            },
-            md: {
-              width: 'w-15'
-            },
-            lg: {
-              width: 'w-18'
-            },
-            xl: {
-              width: 'w-23'
-            },
-            xxl: {
-              width: 'w-28'
-            }
+          sm: {
+            width: 'w-12'
+          },
+          md: {
+            width: 'w-15'
+          },
+          lg: {
+            width: 'w-18'
+          },
+          xl: {
+            width: 'w-23'
+          },
+          xxl: {
+            width: 'w-28'
           }
         }
       }
@@ -382,14 +337,6 @@ export const unstyledSwitchConfig: ComponentConfig<UnstyledSwitchConfigProps> &
       }
     },
     ripple: {
-      default: {
-        top: 'top-0',
-        left: 'left-0',
-        transition: 'transition-all',
-        transitionDuration: 'duration-150',
-        transitionTimingFunction: 'ease-in-out',
-        pointerEvents: 'pointer-events-none'
-      },
       placement: {
         xs: {
           group: 'peer-checked:left-3'

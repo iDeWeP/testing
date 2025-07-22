@@ -9,7 +9,6 @@ export const styleSwitchContainer = (
   className: string,
   {
     defaultSize = 'md',
-    switchScale = 'default',
     margin = 'unset',
     m = 'unset',
     mx = 'unset',
@@ -37,9 +36,7 @@ export const styleSwitchContainer = (
 
   return mergeClasses(
     sharedStyles.container,
-    unstyledSwitchConfig.styles.root.size[switchScale][placementType][
-      defaultSize
-    ],
+    unstyledSwitchConfig.styles.root.size[placementType][defaultSize],
     systemStyles.size[sizeScale].default[defaultSize],
     systemStyles.margin.all[margins.all],
     systemStyles.margin.x[margins.x],

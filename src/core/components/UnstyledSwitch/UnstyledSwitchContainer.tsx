@@ -1,10 +1,4 @@
-import type {
-  MergeProps,
-  DefaultSize,
-  SwitchScale,
-  Margin,
-  Radius
-} from '../../types';
+import type { MergeProps, DefaultSize, Margin, Radius } from '../../types';
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
 import type { UnstyledSwitchContainerProps } from './UnstyledSwitch.types';
 
@@ -12,7 +6,6 @@ type Props = MergeProps<
   UnstyledSwitchContainerProps,
   {
     defaultSize: DefaultSize;
-    switchScale: SwitchScale;
     margin: Margin;
     m: Margin;
     mx: Margin;
@@ -37,7 +30,6 @@ type Props = MergeProps<
 
 export const UnstyledSwitchContainer = ({
   defaultSize,
-  switchScale,
   margin,
   m,
   mx,
@@ -62,7 +54,6 @@ export const UnstyledSwitchContainer = ({
 }: Props) => {
   const mergedClassName = mergeClassName('switchContainer', className, {
     defaultSize,
-    switchScale,
     margin,
     m,
     mx,

@@ -25,7 +25,7 @@ export const unstyledRippleConfig: ComponentConfig<UnstyledRippleConfigProps> &
     variant: 'solid',
     scale: 'default',
     color: 'unset',
-    effect: 'normal'
+    effect: 'default'
   },
   styles: {
     root: {
