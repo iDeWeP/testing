@@ -23,12 +23,6 @@ export type MergeProps<D extends object, T extends object> = Omit<
 > &
   T;
 
-export type MergeComponentProps<E extends ElementType, T> = Omit<
-  ComponentPropsWithRef<E>,
-  keyof T
-> &
-  T;
-
 export type Theme = 'light' | 'dark';
 export type Loading = boolean | 'left' | 'right';
 export type Collision = 'none' | 'shift' | 'flip';
@@ -106,10 +100,11 @@ export type Size =
   | 'xxl-xxl';
 export type DefaultSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl';
 export type InputSize = 'sm' | 'md' | 'lg';
-export type Scale = 'none' | 'normal' | 'square' | 'circle';
-export type DefaultScale = 'normal' | 'square';
-export type RippleScale = 'normal' | 'inner';
-export type Width = 'normal' | 'fit' | 'full';
+export type Scale = 'default' | 'square' | 'circle';
+export type DefaultScale = 'default' | 'square';
+export type SwitchScale = 'default' | 'slider';
+export type RippleScale = 'default' | 'peer';
+export type Width = 'default' | 'fit' | 'full';
 export type Padding =
   | 'unset'
   | 'none'
@@ -225,7 +220,7 @@ export type Gap =
   | 'xl-xl'
   | 'xxl-xxl';
 export type Effect = 'unset' | 'shadow';
-export type RippleEffect = 'normal';
+export type RippleEffect = 'default';
 export type GrowTransition = 'grow' | 'grow-fade';
 export type SlideTransition =
   | 'slide-top'
@@ -247,7 +242,7 @@ export type Transition =
   | SlideTransition
   | CollapseTransition;
 export type DefaultTransition = 'fade' | GrowTransition;
-export type Ripple = 'none' | 'normal';
+export type Ripple = 'none' | 'default';
 
 export type Cursor = {
   x: number;
@@ -271,10 +266,9 @@ export type Classes = {
   inputType?: 'input' | 'textarea';
   barType?: 'bar' | 'trail';
   theme?: Theme;
+  on?: boolean;
   checked?: boolean;
   loading?: Loading;
-  focused?: boolean;
-  shifted?: boolean;
   spin?: boolean;
   valid?: boolean;
   invalid?: boolean;
@@ -298,6 +292,7 @@ export type Classes = {
   resize?: boolean;
   scale?: Scale;
   defaultScale?: DefaultScale;
+  switchScale?: SwitchScale;
   rippleScale?: RippleScale;
   width?: Width;
   padding?: Padding;
@@ -318,6 +313,7 @@ export type Classes = {
   mr?: Margin;
   spacing?: Spacing;
   border?: Border;
+  defaultBorder?: DefaultBorder;
   b?: DefaultBorder;
   bx?: DefaultBorder;
   by?: DefaultBorder;
@@ -347,7 +343,6 @@ export type Classes = {
   transition?: Transition;
   effect?: Effect;
   rippleEffect?: RippleEffect;
-  hasRipple?: boolean;
   empty?: boolean;
   decorated?: ReactNode;
 };
