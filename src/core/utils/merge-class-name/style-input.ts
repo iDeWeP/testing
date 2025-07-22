@@ -11,14 +11,14 @@ export const styleInput = (
     inputSize = 'md',
     resize = false
   }: Classes
-) =>
-  mergeClasses(
+) => {
+  const isTextarea = inputType === 'textarea';
+
+  return mergeClasses(
     unstyledInputConfig.styles.input.default,
-    inputType === 'textarea' &&
-      unstyledInputConfig.styles.input.size[inputSize],
-    inputType === 'textarea' &&
-      !resize &&
-      unstyledInputConfig.styles.input.stable,
+    isTextarea && unstyledInputConfig.styles.input.size[inputSize],
+    isTextarea && !resize && unstyledInputConfig.styles.input.stable,
     disabled && sharedStyles.cursor.disabled,
     className
   );
+};

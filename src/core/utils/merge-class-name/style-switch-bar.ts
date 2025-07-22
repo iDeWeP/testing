@@ -30,9 +30,11 @@ export const styleSwitchBar = (
     rbl = 'unset',
     rbr = 'unset',
     color = 'unset',
-    shadow = 'unset'
+    shadow = 'unset',
+    decorated = false
   }: Classes
 ) => {
+  const isFloating = switchScale === 'slider' || decorated;
   const focusable = getFocusableState({ disabled }, true);
   const defaultBorder = getBorder(variant, border).all;
   const isBordered = isAutoBordered(variant, border);
@@ -41,9 +43,11 @@ export const styleSwitchBar = (
   return mergeClasses(
     sharedStyles.decoration,
     sharedStyles.bar,
-    sharedStyles.placement.center,
+    isFloating && sharedStyles.placement.center,
     sharedStyles.focusable[focusable],
-    unstyledSwitchConfig.styles.shared.size[switchScale][defaultSize],
+    !isFloating && unstyledSwitchConfig.styles.shared.size.full,
+    isFloating &&
+      unstyledSwitchConfig.styles.shared.size[switchScale][defaultSize],
     systemStyles.border.all[defaultBorder],
     systemStyles.radius.all[radius],
     systemStyles.radius.all[r],

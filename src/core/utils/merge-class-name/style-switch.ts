@@ -5,13 +5,21 @@ import { mergeClasses } from './merge-classes';
 
 export const styleSwitch = (
   className: string,
-  { disabled = false, defaultSize = 'md', decorated = false }: Classes
-) =>
-  mergeClasses(
+  {
+    disabled = false,
+    defaultSize = 'md',
+    switchScale = 'default',
+    decorated = false
+  }: Classes
+) => {
+  const isFloating = decorated && switchScale === 'slider';
+
+  return mergeClasses(
     sharedStyles.input,
-    decorated && sharedStyles.position.absolute,
-    decorated && sharedStyles.placement.center,
-    decorated && unstyledSwitchConfig.styles.shared.size.default[defaultSize],
+    isFloating && sharedStyles.position.absolute,
+    isFloating && sharedStyles.placement.center,
+    isFloating && unstyledSwitchConfig.styles.shared.size.default[defaultSize],
     disabled && sharedStyles.cursor.disabled,
     className
   );
+};

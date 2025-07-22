@@ -7,11 +7,13 @@ import { mergeClasses } from './merge-classes';
 export const styleSwitchRipple = (
   className: string,
   { defaultSize = 'md', switchScale = 'default' }: Classes
-) =>
+) => {
+  const isSlider = switchScale === 'slider';
+
   mergeClasses(
-    switchScale === 'slider' && sharedStyles.transition['bg-left'],
-    switchScale === 'slider' &&
-      unstyledSwitchConfig.styles.ripple.placement[defaultSize],
-    switchScale === 'slider' && systemStyles.size.default.square[defaultSize],
+    isSlider && sharedStyles.transition['bg-left'],
+    isSlider && unstyledSwitchConfig.styles.ripple.placement[defaultSize],
+    isSlider && systemStyles.size.default.square[defaultSize],
     className
   );
+};
