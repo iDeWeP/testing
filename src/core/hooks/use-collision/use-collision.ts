@@ -7,7 +7,7 @@ export const useCollision = (
   placement: Placement,
   onCollision?: CollisionFunction
 ): void =>
-  useEffect(() => {
+  useEffect((): void => {
     if (onCollision) {
       onCollision(placement);
     }

@@ -4,7 +4,7 @@ export const useFocusHandler = <T extends HTMLElement>(
   ref?: RefObject<HTMLInputElement | HTMLTextAreaElement | null>
 ): FocusEventHandler<T> | undefined => {
   const handleFocus = useCallback<FocusEventHandler<T>>(
-    (event) => {
+    (event): void => {
       if (event.currentTarget === event.target) {
         ref?.current?.focus();
       }

@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 export const useDefaultRerender = (isOpen: boolean): void => {
   const [isRerendered, setRerendered] = useState(isOpen);
 
-  useEffect(() => {
+  useEffect((): void => {
     if (isRerendered) {
       setRerendered(false);
     }

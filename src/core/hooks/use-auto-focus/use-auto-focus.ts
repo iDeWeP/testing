@@ -5,7 +5,7 @@ export const useAutoFocus = <E extends HTMLElement>(
   focus: RefObject<HTMLElement | null> | boolean,
   autoRef: RefObject<E | null>
 ): void =>
-  useEffect(() => {
+  useEffect((): void => {
     if (focus === true) {
       const focusableEls = getFocusableElements(autoRef.current);
 

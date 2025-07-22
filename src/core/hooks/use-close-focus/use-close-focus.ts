@@ -6,7 +6,7 @@ export const useCloseFocus = <E extends HTMLElement>(
 ): void => {
   const isRendered = useRef(false);
 
-  useEffect(() => {
+  useEffect((): void => {
     if (!isRendered.current) {
       isRendered.current = true;
 

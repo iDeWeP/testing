@@ -25,9 +25,9 @@ export const useControlledState = <
 ): UseControlledStateResult<I, O> => {
   const [isOn, setIsOn] = useState(defaultOn);
 
-  const handleOn = useCallback(() => setIsOn(true), []);
+  const handleOn = useCallback((): void => setIsOn(true), []);
 
-  const handleOff = useCallback(() => setIsOn(false), []);
+  const handleOff = useCallback((): void => setIsOn(false), []);
 
   const isControlled = on !== undefined;
 
