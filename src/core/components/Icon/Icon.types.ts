@@ -5,6 +5,7 @@ import type {
   Font,
   Margin,
   Border,
+  DefaultBorder,
   Radius,
   Color,
   Shadow,
@@ -27,6 +28,13 @@ export type IconDefaultProps = {
   ml?: Margin;
   mr?: Margin;
   border?: Border;
+  b?: DefaultBorder;
+  bx?: DefaultBorder;
+  by?: DefaultBorder;
+  bt?: DefaultBorder;
+  bb?: DefaultBorder;
+  bl?: DefaultBorder;
+  br?: DefaultBorder;
   radius?: Radius;
   r?: Radius;
   rt?: Radius;
