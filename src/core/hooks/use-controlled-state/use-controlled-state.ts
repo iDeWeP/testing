@@ -1,10 +1,14 @@
 import { useCallback, useState, type SyntheticEvent } from 'react';
 import { combineHandlers } from '../../../utils/utils/combine-handlers/combine-handlers';
 
+export type HandleFunction<E extends SyntheticEvent> = (
+  event: E
+) => void | false;
+
 type ControlledState<I extends SyntheticEvent, O extends SyntheticEvent> = {
   isOn: boolean;
-  handleOn?: (event: I) => void | false;
-  handleOff?: (event: O) => void | false;
+  handleOn?: HandleFunction<I>;
+  handleOff?: HandleFunction<O>;
 };
 
 export const useControlledState = <
@@ -13,8 +17,8 @@ export const useControlledState = <
 >(
   defaultOn: boolean,
   on?: boolean,
-  onOn?: ((event: I) => void | false) | VoidFunction,
-  onOff?: ((event: O) => void | false) | VoidFunction
+  onOn?: HandleFunction<I> | VoidFunction,
+  onOff?: HandleFunction<O> | VoidFunction
 ): ControlledState<I, O> => {
   const [isOn, setIsOn] = useState(defaultOn);
 

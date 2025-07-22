@@ -1,10 +1,10 @@
-import { useCallback, type FocusEvent, type RefObject } from 'react';
+import { type RefObject, type FocusEventHandler, useCallback } from 'react';
 
 export const useFocusHandler = <T extends HTMLElement>(
   ref?: RefObject<HTMLInputElement | HTMLTextAreaElement | null>
-) => {
-  const handleFocus = useCallback(
-    (event: FocusEvent<T>) => {
+): FocusEventHandler<T> | undefined => {
+  const handleFocus = useCallback<FocusEventHandler<T>>(
+    (event) => {
       if (event.currentTarget === event.target) {
         ref?.current?.focus();
       }
