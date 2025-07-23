@@ -5,6 +5,7 @@ type Props = {
   element?: ElementType;
   invalid?: boolean;
   disabled?: boolean;
+  clickable?: boolean;
   min?: number;
   max?: number;
   value?: number;
@@ -25,8 +26,8 @@ type Element =
 type TypeMap = Record<Element, (props: Props) => SetAria>;
 
 const typeMap: TypeMap = {
-  button: ({ element, disabled }: Props): SetAria => {
-    if (element !== 'button') {
+  button: ({ element, disabled, clickable = true }: Props): SetAria => {
+    if (element !== 'button' && clickable) {
       return {
         role: 'button',
         ...(disabled ? { 'aria-disabled': true } : { tabIndex: 0 })
