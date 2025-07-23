@@ -8,6 +8,8 @@ export const styleSwitchIcon = (
   className: string,
   {
     theme = 'light',
+    valid = false,
+    invalid = false,
     disabled = false,
     variant = 'solid',
     defaultSize = 'md',
@@ -18,8 +20,18 @@ export const styleSwitchIcon = (
 ): ClassName => {
   const isNormal = switchScale === 'default';
   const placementType = decorated ? 'decorated' : 'default';
-  const uncheckedTextColor = getColor(variant, color, { disabled }, false).text;
-  const checkedTextColor = getColor(variant, color, { disabled }, true).text;
+  const uncheckedTextColor = getColor(
+    variant,
+    color,
+    { valid, invalid, disabled },
+    false
+  ).text;
+  const checkedTextColor = getColor(
+    variant,
+    color,
+    { valid, invalid, disabled },
+    true
+  ).text;
 
   return mergeClasses(
     unstyledSwitchConfig.styles.icon.default,

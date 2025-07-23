@@ -18,7 +18,7 @@ export const styleCardFooter = (
 ): ClassName => {
   const paddingType = getSpacing(padding, 'bottom');
   const marginType = getSpacing(margin, 'bottom');
-  const borderType = getBorder(variant, border, 'bottom');
+  const borderType = getBorder(variant, border, { placement: 'bottom' });
 
   return mergeClasses(
     sharedStyles.display.flex,

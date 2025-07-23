@@ -37,7 +37,7 @@ export const styleCheckboxIcon = (
   const colorType = getColor(
     variant,
     color,
-    { disabled, valid, invalid },
+    { valid, invalid, disabled },
     true
   );
 

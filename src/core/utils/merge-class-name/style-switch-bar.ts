@@ -41,7 +41,7 @@ export const styleSwitchBar = (
   const colorType = getColor(
     variant,
     color,
-    { disabled, valid, invalid },
+    { valid, invalid, disabled },
     true
   );
 

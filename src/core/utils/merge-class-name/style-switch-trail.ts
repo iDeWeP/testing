@@ -3,6 +3,7 @@ import { sharedStyles } from '../../config/shared-styles';
 import { systemStyles } from '../../config/system-styles';
 import type { Classes, ClassName } from '../../types';
 import { isAutoBordered } from '../is-auto-bordered/is-auto-bordered';
+import { getBorder } from './get-border';
 import { getColor } from './get-color';
 import { getFocusableState } from './get-focusable-state';
 import { mergeClasses } from './merge-classes';
@@ -17,7 +18,7 @@ export const styleSwitchTrail = (
     variant = 'solid',
     defaultSize = 'md',
     switchScale = 'default',
-    defaultBorder = 'unset',
+    border = 'unset',
     radius = 'unset',
     r = 'unset',
     rt = 'unset',
@@ -35,11 +36,12 @@ export const styleSwitchTrail = (
 ): ClassName => {
   const isFloating = switchScale === 'slider' || decorated;
   const focusable = getFocusableState({ disabled }, true);
-  const isBordered = isAutoBordered(variant, defaultBorder);
+  const defaultBorder = getBorder(variant, border, { isChecked: false }).all;
+  const isBordered = isAutoBordered(variant, border, false);
   const colorType = getColor(
     variant,
     color,
-    { disabled, valid, invalid },
+    { valid, invalid, disabled },
     false
   );
 

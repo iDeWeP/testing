@@ -35,13 +35,13 @@ export const styleInputContainer = (
   const textColor = getColor(
     inputVariant === 'light' ? 'light' : 'text',
     color,
-    { disabled, valid, invalid },
+    { valid, invalid, disabled },
     false
   ).text;
   const onTextColor = getColor(
     inputVariant === 'light' ? 'light' : 'text',
     color,
-    { disabled, valid, invalid },
+    { valid, invalid, disabled },
     true
   ).text;
 

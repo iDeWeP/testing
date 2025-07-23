@@ -19,7 +19,7 @@ export const styleCardBody = (
 ): ClassName => {
   const paddingType = getSpacing(padding, cardPlacement);
   const marginType = getSpacing(margin, cardPlacement);
-  const borderType = getBorder(variant, border, cardPlacement);
+  const borderType = getBorder(variant, border, { placement: cardPlacement });
 
   return mergeClasses(
     sharedStyles.display.flex,
