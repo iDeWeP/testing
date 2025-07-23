@@ -82,7 +82,7 @@ export const styleBox = (
     systemStyles.margin.l[ml],
     systemStyles.margin.r[mr],
     systemStyles.border.all[defaultBorder],
-    systemStyles.border.b[b],
+    systemStyles.border.all[b],
     systemStyles.border.x[bx],
     systemStyles.border.y[by],
     systemStyles.border.t[bt],
