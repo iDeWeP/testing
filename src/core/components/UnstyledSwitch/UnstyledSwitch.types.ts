@@ -1,7 +1,8 @@
 import type { ComponentPropsWithRef } from 'react';
 import type {
-  Radius,
   ComponentRefProps,
+  MergeProps,
+  Radius,
   Border,
   SVGNodeProps,
   CheckableVariant,
@@ -10,31 +11,35 @@ import type {
   Margin,
   Color,
   Shadow,
-  Ripple,
-  MergeProps
+  Ripple
 } from '../../types';
-
-export type UnstyledSwitchContainerProps = {
-  radius?: Radius;
-  r?: Radius;
-  rt?: Radius;
-  rb?: Radius;
-  rl?: Radius;
-  rr?: Radius;
-  rtl?: Radius;
-  rtr?: Radius;
-  rbl?: Radius;
-  rbr?: Radius;
-} & ComponentRefProps<'div'>;
-
-export type UnstyledSwitchBarProps = ComponentRefProps<'span'>;
-
-export type UnstyledSwitchTrailProps = {
-  border?: Border;
-} & ComponentRefProps<'span'>;
 
 export type UnstyledSwitchIconProps = ComponentRefProps<'svg'>;
 export type UnstyledSwitchRippleProps = ComponentRefProps<'span'>;
+export type UnstyledSwitchBarProps = ComponentRefProps<'span'>;
+
+export type UnstyledSwitchContainerProps = MergeProps<
+  ComponentRefProps<'div'>,
+  {
+    radius?: Radius;
+    r?: Radius;
+    rt?: Radius;
+    rb?: Radius;
+    rl?: Radius;
+    rr?: Radius;
+    rtl?: Radius;
+    rtr?: Radius;
+    rbl?: Radius;
+    rbr?: Radius;
+  }
+>;
+
+export type UnstyledSwitchTrailProps = MergeProps<
+  ComponentRefProps<'span'>,
+  {
+    border?: Border;
+  }
+>;
 
 export type UnstyledSwitchComponentsProps = {
   container?: UnstyledSwitchContainerProps;

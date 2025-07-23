@@ -1,7 +1,8 @@
 import type { ComponentPropsWithRef } from 'react';
 import type {
-  Radius,
   ComponentRefProps,
+  MergeProps,
+  Radius,
   Border,
   SVGNodeProps,
   CheckableVariant,
@@ -9,33 +10,38 @@ import type {
   Margin,
   Color,
   Shadow,
-  Ripple,
-  MergeProps
+  Ripple
 } from '../../types';
 
-export type UnstyledCheckboxContainerProps = {
-  radius?: Radius;
-  r?: Radius;
-  rt?: Radius;
-  rb?: Radius;
-  rl?: Radius;
-  rr?: Radius;
-  rtl?: Radius;
-  rtr?: Radius;
-  rbl?: Radius;
-  rbr?: Radius;
-} & ComponentRefProps<'div'>;
+export type UnstyledCheckboxRippleProps = ComponentRefProps<'span'>;
+
+export type UnstyledCheckboxContainerProps = MergeProps<
+  ComponentRefProps<'div'>,
+  {
+    radius?: Radius;
+    r?: Radius;
+    rt?: Radius;
+    rb?: Radius;
+    rl?: Radius;
+    rr?: Radius;
+    rtl?: Radius;
+    rtr?: Radius;
+    rbl?: Radius;
+    rbr?: Radius;
+  }
+>;
 
 export type UnstyledCheckboxIconProps = Omit<
   ComponentRefProps<'svg'>,
   'radius' | 'r'
 >;
 
-export type UnstyledCheckboxTrailProps = {
-  border?: Border;
-} & ComponentRefProps<'span'>;
-
-export type UnstyledCheckboxRippleProps = ComponentRefProps<'span'>;
+export type UnstyledCheckboxTrailProps = MergeProps<
+  ComponentRefProps<'span'>,
+  {
+    border?: Border;
+  }
+>;
 
 export type UnstyledCheckboxComponentsProps = {
   container?: UnstyledCheckboxContainerProps;

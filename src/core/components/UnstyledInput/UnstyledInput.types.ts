@@ -1,26 +1,28 @@
 import type { ReactNode, ElementType, ComponentPropsWithRef } from 'react';
 import type {
   ComponentRefProps,
+  MergeProps,
   Gap,
   InputVariant,
   InputSize,
   Width,
   Margin,
   Radius,
-  Color,
-  MergeProps
+  Color
 } from '../../types';
 
 export type UnstyledInputContainerProps = ComponentRefProps<'div'>;
 export type UnstyledInputLabelProps = ComponentRefProps<'label'>;
-
-export type UnstyledInputDecoratorProps = {
-  gap?: Gap;
-} & ComponentRefProps<'span'>;
-
 export type UnstyledInputBodyProps = ComponentRefProps<'span'>;
 export type UnstyledInputFieldsetProps = ComponentRefProps<'fieldset'>;
 export type UnstyledInputClearanceProps = ComponentRefProps<'legend'>;
+
+export type UnstyledInputDecoratorProps = MergeProps<
+  ComponentRefProps<'span'>,
+  {
+    gap?: Gap;
+  }
+>;
 
 export type UnstyledInputComponentsProps = {
   container?: UnstyledInputContainerProps;
