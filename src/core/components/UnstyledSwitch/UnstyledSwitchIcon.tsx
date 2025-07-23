@@ -15,6 +15,8 @@ import type { UnstyledSwitchIconProps } from './UnstyledSwitch.types';
 type Props = MergeProps<
   UnstyledSwitchIconProps,
   {
+    valid: boolean;
+    invalid: boolean;
     disabled: boolean;
     variant: Variant;
     defaultSize: DefaultSize;
@@ -26,6 +28,8 @@ type Props = MergeProps<
 >;
 
 export const UnstyledSwitchIcon = ({
+  valid,
+  invalid,
   disabled,
   variant,
   defaultSize,
@@ -40,6 +44,8 @@ export const UnstyledSwitchIcon = ({
 
   const mergedClassName = mergeClassName('switchIcon', className, {
     theme,
+    valid,
+    invalid,
     disabled,
     variant,
     defaultSize,

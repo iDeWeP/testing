@@ -125,6 +125,8 @@ export const UnstyledSwitch = (props: UnstyledSwitchProps): ReactNode => {
         decorated={hasRipple}
       />
       <UnstyledSwitchIcon
+        valid={valid}
+        invalid={invalid}
         disabled={disabled}
         variant={checkedVariant}
         defaultSize={defaultSize}
