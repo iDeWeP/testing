@@ -29,7 +29,7 @@ export type ChipComponentsProps = {
   outerBorder?: ChipBarProps;
 };
 
-export type ChipOptionalProps = Omit<UnstyledButtonOptionalProps, 'checked'>;
+export type ChipOptionalProps = UnstyledButtonOptionalProps;
 
 export type ChipDefaultProps = {
   variant?: Variant;
@@ -47,6 +47,6 @@ export type ChipConfigProps = MergeProps<
 >;
 
 export type ChipProps<E extends ElementType> = MergeProps<
-  Omit<UnstyledButtonProps<E>, 'checked'>,
+  UnstyledButtonProps<E>,
   ChipDefaultProps & ChipOptionalProps
 >;

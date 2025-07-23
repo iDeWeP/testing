@@ -49,6 +49,6 @@ export type IconButtonConfigProps = MergeProps<
 >;
 
 export type IconButtonProps<E extends ElementType> = MergeProps<
-  Omit<UnstyledButtonProps<E>, 'checked' | 'startDecorator' | 'endDecorator'>,
+  Omit<UnstyledButtonProps<E>, 'startDecorator' | 'endDecorator'>,
   IconButtonDefaultProps & IconButtonOptionalProps
 >;

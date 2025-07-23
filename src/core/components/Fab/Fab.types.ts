@@ -32,7 +32,7 @@ export type FabComponentsProps = {
   outerBorder?: FabBarProps;
 };
 
-export type FabOptionalProps = Omit<UnstyledButtonOptionalProps, 'checked'>;
+export type FabOptionalProps = UnstyledButtonOptionalProps;
 
 export type FabDefaultProps = {
   position?: DefaultPosition;
@@ -53,6 +53,6 @@ export type FabConfigProps = MergeProps<
 >;
 
 export type FabProps<E extends ElementType> = MergeProps<
-  Omit<UnstyledButtonProps<E>, 'checked'>,
+  UnstyledButtonProps<E>,
   FabDefaultProps & FabOptionalProps
 >;

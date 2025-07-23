@@ -30,7 +30,7 @@ export type LinkComponentsProps = {
   outerBorder?: LinkBarProps;
 };
 
-export type LinkOptionalProps = Omit<UnstyledButtonOptionalProps, 'checked'>;
+export type LinkOptionalProps = UnstyledButtonOptionalProps;
 
 export type LinkDefaultProps = {
   variant?: Variant;
@@ -49,6 +49,6 @@ export type LinkConfigProps = MergeProps<
 >;
 
 export type LinkProps<E extends ElementType> = MergeProps<
-  Omit<UnstyledButtonProps<E>, 'checked'>,
+  UnstyledButtonProps<E>,
   LinkDefaultProps & LinkOptionalProps
 >;

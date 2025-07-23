@@ -29,7 +29,6 @@ export const closeButtonConfig: ComponentConfig<CloseButtonConfigProps> = {
     rtr: 'unset',
     rbl: 'unset',
     rbr: 'unset',
-    shadow: 'unset',
-    gap: 'unset'
+    shadow: 'unset'
   }
 };
