@@ -4,6 +4,7 @@ import type {
   MergeProps,
   Variant,
   Size,
+  Margin,
   SpinnerBorder,
   Color,
   Loading,
@@ -19,6 +20,8 @@ import type {
 import type { UnstyledLoaderBarProps } from '../UnstyledLoader/UnstyledLoader.types';
 
 export type UnstyledButtonRippleProps = ComponentRefProps<'span'>;
+export type UnstyledButtonBarProps = UnstyledLoaderBarProps;
+
 export type UnstyledButtonLoaderProps = MergeProps<
   ComponentPropsWithRef<'svg'>,
   {
@@ -27,12 +30,19 @@ export type UnstyledButtonLoaderProps = MergeProps<
     variant?: Variant;
     size?: Size;
     thickness?: number;
+    margin?: Margin;
+    m?: Margin;
+    mx?: Margin;
+    my?: Margin;
+    mt?: Margin;
+    mb?: Margin;
+    ml?: Margin;
+    mr?: Margin;
     border?: SpinnerBorder;
     color?: Color;
     ring?: Color;
   }
 >;
-export type UnstyledButtonBarProps = UnstyledLoaderBarProps;
 
 export type UnstyledButtonComponentsProps = {
   ripple?: UnstyledButtonRippleProps;
@@ -43,7 +53,6 @@ export type UnstyledButtonComponentsProps = {
 };
 
 export type UnstyledButtonOptionalProps = {
-  checked?: boolean;
   loading?: Loading;
   disabled?: boolean;
   startDecorator?: ReactNode;

@@ -3,7 +3,6 @@ import { useTheme } from '../../hooks/use-theme/use-theme';
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
 import { mergeProps } from '../../utils/merge-props/merge-props';
 import { setAria } from '../../utils/set-aria/set-aria';
-import { setButtonStyle } from '../../utils/set-button-style/set-button-style';
 import { setLoaderSize } from '../../utils/set-loader-size/set-loader-size';
 import { setProps } from '../../utils/set-props/set-props';
 import { UnstyledContainer } from '../UnstyledContainer/UnstyledContainer';
@@ -17,7 +16,6 @@ export const UnstyledButton = <E extends ElementType>(
 ): ReactNode => {
   const {
     as: Component,
-    checked,
     loading = false,
     disabled = false,
     effect,
@@ -37,7 +35,6 @@ export const UnstyledButton = <E extends ElementType>(
 
   const mergedClassName = mergeClassName('button', className, {
     theme,
-    checked,
     loading,
     disabled,
     variant,
@@ -45,7 +42,6 @@ export const UnstyledButton = <E extends ElementType>(
     effect
   });
 
-  const styles = setButtonStyle(variant, color, checked);
   const {
     loader: loaderProps,
     ripple: rippleProps,
@@ -54,7 +50,6 @@ export const UnstyledButton = <E extends ElementType>(
 
   const loaderNode = (
     <UnstyledLoader
-      checked={checked}
       disabled={disabled}
       spin
       value={75}
@@ -90,9 +85,9 @@ export const UnstyledButton = <E extends ElementType>(
     <UnstyledContainer
       as={Component}
       {...setProps('button', buttonProps)}
-      variant={styles.variant}
+      variant={variant}
       size={size}
-      color={styles.color}
+      color={color}
       ring="unset"
       className={mergedClassName}
       {...setAria('button', buttonProps)}
@@ -105,7 +100,7 @@ export const UnstyledButton = <E extends ElementType>(
       {rightLoader}
       {hasRipple && (
         <UnstyledRipple
-          stateful={checked !== undefined}
+          stateful={false}
           variant={variant}
           scale="default"
           color={color}
