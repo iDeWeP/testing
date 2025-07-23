@@ -6,24 +6,24 @@ import { Example } from './Example';
 export const MarginMXExample = (): ReactNode => (
   <ExampleSection title="Margin MX">
     <ExampleCard>
-      <Example mx="unset">UNSET</Example>
-      <Example mx="none">NONE</Example>
-      <Example mx="xs">XS</Example>
-      <Example mx="sm">SM</Example>
-      <Example mx="md">MD</Example>
-      <Example mx="lg">LG</Example>
-      <Example mx="xl">XL</Example>
-      <Example mx="xxl">XXL</Example>
+      <Example mx="unset" />
+      <Example mx="none" />
+      <Example mx="xs" />
+      <Example mx="sm" />
+      <Example mx="md" />
+      <Example mx="lg" />
+      <Example mx="xl" />
+      <Example mx="xxl" />
     </ExampleCard>
     <ExampleCard>
-      <Example mx="unset">UNSET</Example>
-      <Example mx="none">NONE</Example>
-      <Example mx="xs-xs">XS-XS</Example>
-      <Example mx="sm-sm">SM-SM</Example>
-      <Example mx="md-md">MD-MD</Example>
-      <Example mx="lg-lg">LG-LG</Example>
-      <Example mx="xl-xl">XL-XL</Example>
-      <Example mx="xxl-xxl">XXL-XXL</Example>
+      <Example mx="unset" />
+      <Example mx="none" />
+      <Example mx="xs-xs" />
+      <Example mx="sm-sm" />
+      <Example mx="md-md" />
+      <Example mx="lg-lg" />
+      <Example mx="xl-xl" />
+      <Example mx="xxl-xxl" />
     </ExampleCard>
   </ExampleSection>
 );
