@@ -32,7 +32,8 @@ export const circularProgressConfig: ComponentConfig<CircularProgressConfigProps
     ml: 'unset',
     mr: 'unset',
     border: 'auto',
-    ring: 'unset'
+    ring: 'unset',
+    gap: 'unset'
   },
   styles: {
     root: {
@@ -45,6 +46,7 @@ export const circularProgressConfig: ComponentConfig<CircularProgressConfigProps
     },
     label: {
       default: {
+        display: 'flex',
         position: 'absolute',
         textWrap: 'text-nowrap',
         userSelect: 'select-none'

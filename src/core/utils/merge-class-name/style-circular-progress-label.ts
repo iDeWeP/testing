@@ -13,7 +13,8 @@ export const styleCircularProgressLabel = (
     disabled = false,
     variant = 'text',
     size = 'md',
-    color = 'unset'
+    color = 'unset',
+    gap = 'unset'
   }: Classes
 ): ClassName => {
   const fontSize = getFontSize(size);
@@ -25,6 +26,7 @@ export const styleCircularProgressLabel = (
     systemStyles.size.font[fontSize],
     systemStyles.color.default.text[theme][textColor],
     systemStyles.color.default.fill[theme][textColor],
+    systemStyles.gap.all[gap],
     disabled && sharedStyles.cursor.none,
     className
   );

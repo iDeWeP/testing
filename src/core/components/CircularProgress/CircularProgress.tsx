@@ -22,6 +22,7 @@ export const CircularProgress = (props: CircularProgressProps): ReactNode => {
     ml,
     mr,
     color,
+    gap,
     ...restProps
   } = useMergeProps('circularProgress', circularProgressConfig.props, props);
 
@@ -58,6 +59,7 @@ export const CircularProgress = (props: CircularProgressProps): ReactNode => {
           variant={variant}
           size={size}
           color={color}
+          gap={gap}
         >
           {children}
         </CircularProgressLabel>

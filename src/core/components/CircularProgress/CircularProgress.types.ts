@@ -3,6 +3,7 @@ import type {
   Variant,
   Size,
   Color,
+  Gap,
   MergeProps
 } from '../../types';
 import type {
@@ -34,6 +35,7 @@ export type CircularProgressDefaultProps = {
   size?: Size;
   thickness?: number;
   color?: Color;
+  gap?: Gap;
   componentsProps?: CircularProgressComponentsProps;
   label?: boolean;
 };
