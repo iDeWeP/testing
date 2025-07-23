@@ -77,10 +77,10 @@ export const getColor = (
   }
 
   const isDefault = isChecked === false;
-  const defaultVariant = hasVariantBg(variant) ? 'light' : 'text';
+  const defaultVariant = isDefault && variant === 'solid' ? 'light' : variant;
   const defaultColor = isDefault ? 'surface' : color.replace('-on', '');
 
-  return variantMap[isDefault ? defaultVariant : variant](
+  return variantMap[defaultVariant](
     state?.valid ? 'success' : state?.invalid ? 'error' : defaultColor,
     !isDefault && isColorReversed(color)
   );
