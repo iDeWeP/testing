@@ -2,7 +2,7 @@ import { sharedStyles } from '../../config/shared-styles';
 import type { Classes, ClassName } from '../../types';
 import { mergeClasses } from './merge-classes';
 
-export const styleCard = (
+export const stylePaper = (
   className: string,
   { orientation = 'row' }: Classes
 ): ClassName =>
