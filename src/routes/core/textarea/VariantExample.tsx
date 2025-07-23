@@ -1,8 +1,9 @@
+import type { ReactNode } from 'react';
 import { ExampleCard } from '../../../components/ExampleCard';
 import { ExampleSection } from '../../../components/ExampleSection';
 import { Example } from './Example';
 
-export const VariantExample = () => (
+export const VariantExample = (): ReactNode => (
   <ExampleSection title="Variant">
     <ExampleCard>
       <Example variant="default" />

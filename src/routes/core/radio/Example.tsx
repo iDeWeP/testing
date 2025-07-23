@@ -1,14 +1,14 @@
-import { useState } from 'react';
+import { type ReactNode, useState } from 'react';
 import { Radio } from '../../../core/components/Radio/Radio';
 import type { RadioProps } from '../../../core/components/Radio/Radio.types';
 
-export const Example = (props: RadioProps) => {
+export const Example = (props: RadioProps): ReactNode => {
   const [isChecked, setIsChecked] = useState(false);
 
   return (
     <Radio
       checked={isChecked}
-      onChange={() => setIsChecked((checked) => !checked)}
+      onChange={(): void => setIsChecked((checked): boolean => !checked)}
       {...props}
     />
   );

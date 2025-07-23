@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react';
-import { Link } from 'react-router';
+import { Link } from '../../../core/components/Link/Link';
 import type { LinkProps } from '../../../core/components/Link/Link.types';
 
 export const Example = ({
