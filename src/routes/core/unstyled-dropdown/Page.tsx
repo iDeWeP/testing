@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react';
 import { ExampleTitle } from '../../../components/ExampleTitle';
 import { BorderExample } from './BorderExample';
 import { ColorExample } from './ColorExample';
@@ -29,7 +30,7 @@ import { RingExample } from './RingExample';
 import { ShadowExample } from './ShadowExample';
 import { VariantExample } from './VariantExample';
 
-const Page = () => (
+const Page = (): ReactNode => (
   <>
     <ExampleTitle>UnstyledDropdown</ExampleTitle>
     <DefaultExample />

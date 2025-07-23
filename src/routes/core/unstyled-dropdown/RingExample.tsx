@@ -1,8 +1,9 @@
+import type { ReactNode } from 'react';
 import { ExampleCard } from '../../../components/ExampleCard';
 import { ExampleSection } from '../../../components/ExampleSection';
 import { Example } from './Example';
 
-export const RingExample = () => (
+export const RingExample = (): ReactNode => (
   <ExampleSection title="Ring">
     <ExampleCard>
       <Example ring="unset">UNSET</Example>

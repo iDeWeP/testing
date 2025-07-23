@@ -3,10 +3,12 @@ import { ExampleCard } from '../../../components/ExampleCard';
 import { ExampleSection } from '../../../components/ExampleSection';
 import { Example } from './Example';
 
-export const DefaultExample = (): ReactNode => (
-  <ExampleSection title="Default">
+export const BorderBRExample = (): ReactNode => (
+  <ExampleSection title="Border BR">
     <ExampleCard>
-      <Example />
+      <Example br="unset" />
+      <Example br="none" />
+      <Example br="set" />
     </ExampleCard>
   </ExampleSection>
 );

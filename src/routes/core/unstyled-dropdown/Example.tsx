@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react';
 import { UnstyledDropdown } from '../../../core/components/UnstyledDropdown/UnstyledDropdown';
 import type { UnstyledDropdownProps } from '../../../core/components/UnstyledDropdown/UnstyledDropdown.types';
 
@@ -9,7 +10,7 @@ export const Example = ({
   clear,
   children = 'UNSTYLED-DROPDOWN',
   ...restProps
-}: Props) => (
+}: Props): ReactNode => (
   <UnstyledDropdown
     color={clear ? 'unset' : 'primary'}
     {...restProps}
