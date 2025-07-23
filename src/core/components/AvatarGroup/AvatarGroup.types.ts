@@ -1,46 +1,12 @@
-import type { ComponentPropsWithRef, ElementType } from 'react';
-import type {
-  MergeProps,
-  Variant,
-  Size,
-  Scale,
-  Border,
-  Radius,
-  Color,
-  Shadow,
-  Gap,
-  Orientation,
-  Spacing
-} from '../../types';
+import type { ElementType } from 'react';
+import type { Orientation, Spacing, Gap, MergeProps } from '../../types';
+import type { UnstyledAvatarProps } from '../UnstyledAvatar/UnstyledAvatar.types';
 import type {
   UnstyledGroupConfigProps,
   UnstyledGroupProps
 } from '../UnstyledGroup/UnstyledGroup.types';
 
-export type AvatarGroupSurplusProps = MergeProps<
-  ComponentPropsWithRef<'div'>,
-  {
-    initials?: boolean;
-    variant?: Variant;
-    size?: Size;
-    scale?: Scale;
-    border?: Border;
-    radius?: Radius;
-    r?: Radius;
-    rt?: Radius;
-    rb?: Radius;
-    rl?: Radius;
-    rr?: Radius;
-    rtl?: Radius;
-    rtr?: Radius;
-    rbl?: Radius;
-    rbr?: Radius;
-    color?: Color;
-    shadow?: Shadow;
-    ring?: Color;
-    gap?: Gap;
-  }
->;
+export type AvatarGroupSurplusProps = UnstyledAvatarProps<'div'>;
 
 export type AvatarGroupComponentsProps = {
   surplus?: AvatarGroupSurplusProps;
