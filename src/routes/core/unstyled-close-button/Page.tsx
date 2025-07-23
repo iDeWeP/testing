@@ -1,10 +1,10 @@
+import type { ReactNode } from 'react';
 import { ExampleTitle } from '../../../components/ExampleTitle';
 import { BorderExample } from './BorderExample';
 import { ColorExample } from './ColorExample';
 import { DefaultExample } from './DefaultExample';
 import { DisabledExample } from './DisabledExample';
 import { EffectExample } from './EffectExample';
-import { GapExample } from './GapExample';
 import { LoadingExample } from './LoadingExample';
 import { MarginExample } from './MarginExample';
 import { MarginMBExample } from './MarginMBExample';
@@ -28,7 +28,7 @@ import { ShadowExample } from './ShadowExample';
 import { SizeExample } from './SizeExample';
 import { VariantExample } from './VariantExample';
 
-const Page = () => (
+const Page = (): ReactNode => (
   <>
     <ExampleTitle>UnstyledCloseButton</ExampleTitle>
     <DefaultExample />
@@ -58,7 +58,6 @@ const Page = () => (
     <RadiusRBLExample />
     <RadiusRBRExample />
     <ShadowExample />
-    <GapExample />
   </>
 );
 
