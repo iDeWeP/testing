@@ -1,5 +1,5 @@
 import type { ElementType } from 'react';
-import type { Orientation, Spacing, Gap, MergeProps } from '../../types';
+import type { Orientation, GroupGap, MergeProps } from '../../types';
 import type {
   UnstyledGroupConfigProps,
   UnstyledGroupProps
@@ -7,8 +7,7 @@ import type {
 
 export type GroupDefaultProps = {
   orientation?: Orientation;
-  spacing?: Spacing;
-  gap?: Gap;
+  gap?: GroupGap;
 };
 
 export type GroupConfigProps = MergeProps<

@@ -36,7 +36,6 @@ import { RadiusRTLExample } from './RadiusRTLExample';
 import { RadiusRTRExample } from './RadiusRTRExample';
 import { RingExample } from './RingExample';
 import { ShadowExample } from './ShadowExample';
-import { SpacingExample } from './SpacingExample';
 import { VariantExample } from './VariantExample';
 
 const Page = (): ReactNode => (
@@ -44,7 +43,6 @@ const Page = (): ReactNode => (
     <ExampleTitle>UnstyledGroup</ExampleTitle>
     <DefaultExample />
     <OrientationExample />
-    <SpacingExample />
     <GapExample />
     <VariantExample />
     <PaddingExample />

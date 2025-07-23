@@ -8,14 +8,16 @@ import { unstyledGroupConfig } from './unstyledGroupConfig';
 export const UnstyledGroup = <E extends ElementType>(
   props: UnstyledGroupProps<E>
 ): ReactNode => {
-  const { orientation, spacing, className, ...restProps } = mergeProps(
-    unstyledGroupConfig.props,
-    props
-  );
+  const {
+    orientation,
+    className,
+    gap: groupGap,
+    ...restProps
+  } = mergeProps(unstyledGroupConfig.props, props);
 
   const mergedClassName = mergeClassName('group', className, {
     orientation,
-    spacing
+    groupGap
   });
 
   return (

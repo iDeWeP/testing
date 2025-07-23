@@ -5,7 +5,6 @@ export const groupConfig: ComponentConfig<GroupConfigProps> = {
   props: {
     as: 'div',
     orientation: 'row',
-    spacing: 'unset',
     gap: 'unset',
     variant: 'solid',
     padding: 'unset',
