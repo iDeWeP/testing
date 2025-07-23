@@ -30,7 +30,6 @@ export const unstyledCloseButtonConfig: ComponentConfig<UnstyledCloseButtonConfi
       rtr: 'unset',
       rbl: 'unset',
       rbr: 'unset',
-      shadow: 'unset',
-      gap: 'unset'
+      shadow: 'unset'
     }
   };
