@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react';
 import { UnstyledLinearProgress } from '../../../core/components/UnstyledLinearProgress/UnstyledLinearProgress';
 import type { UnstyledLinearProgressProps } from '../../../core/components/UnstyledLinearProgress/UnstyledLinearProgress.types';
 
@@ -5,7 +6,7 @@ type Props = {
   clear?: boolean;
 } & UnstyledLinearProgressProps;
 
-export const Example = ({ clear, ...restProps }: Props) => (
+export const Example = ({ clear, ...restProps }: Props): ReactNode => (
   <UnstyledLinearProgress
     value={clear ? 0 : 75}
     color={clear ? 'unset' : 'primary'}
