@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react';
 import { UnstyledButton } from '../../../core/components/UnstyledButton/UnstyledButton';
 import type { UnstyledButtonProps } from '../../../core/components/UnstyledButton/UnstyledButton.types';
 
@@ -9,10 +10,10 @@ export const Example = ({
   clear,
   children = 'UNSTYLED-BUTTON',
   ...restProps
-}: Props) => (
+}: Props): ReactNode => (
   <UnstyledButton
     color={clear ? 'unset' : 'primary'}
-    ripple={clear ? 'none' : 'normal'}
+    ripple={clear ? 'none' : 'default'}
     {...restProps}
   >
     {children}

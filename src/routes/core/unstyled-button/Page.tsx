@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react';
 import { ExampleTitle } from '../../../components/ExampleTitle';
 import { BorderExample } from './BorderExample';
 import { CheckedExample } from './CheckedExample';
@@ -30,7 +31,7 @@ import { ShadowExample } from './ShadowExample';
 import { SizeExample } from './SizeExample';
 import { VariantExample } from './VariantExample';
 
-const Page = () => (
+const Page = (): ReactNode => (
   <>
     <ExampleTitle>UnstyledButton</ExampleTitle>
     <DefaultExample />

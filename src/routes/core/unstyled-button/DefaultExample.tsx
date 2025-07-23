@@ -1,16 +1,17 @@
+import type { ReactNode } from 'react';
 import { ExampleCard } from '../../../components/ExampleCard';
 import { ExampleSection } from '../../../components/ExampleSection';
 import { Example } from './Example';
 
-export const DefaultExample = () => (
+export const DefaultExample = (): ReactNode => (
   <ExampleSection title="Default">
     <ExampleCard>
       <Example clear />
-      <Example leftDecorator="LEFT-DECORATOR" />
-      <Example rightDecorator="RIGHT-DECORATOR" />
+      <Example startDecorator="START-DECORATOR" />
+      <Example endDecorator="END-DECORATOR" />
       <Example
-        leftDecorator="LEFT-DECORATOR"
-        rightDecorator="RIGHT-DECORATOR"
+        startDecorator="START-DECORATOR"
+        endDecorator="END-DECORATOR"
       />
       <Example ripple="none">RIPPLE-NONE</Example>
     </ExampleCard>
