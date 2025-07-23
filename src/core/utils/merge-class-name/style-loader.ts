@@ -4,14 +4,12 @@ import { systemStyles } from '../../config/system-styles';
 import type { Classes, ClassName } from '../../types';
 import { getLoaderColor } from './get-loader-color';
 import { getSpacing } from './get-spacing';
-import { getStateColor } from './get-state-color';
 import { mergeClasses } from './merge-classes';
 
 export const styleLoader = (
   className: string,
   {
     theme = 'light',
-    checked,
     disabled = false,
     spin = true,
     variant = 'solid',
@@ -29,23 +27,8 @@ export const styleLoader = (
     ring = 'unset'
   }: Classes
 ): ClassName => {
-  const isCheckable = checked !== undefined && !disabled;
   const marginType = getSpacing(margin);
-  const defaultColorType = getLoaderColor(variant, color, { disabled });
-  const uncheckedColorType = getLoaderColor(
-    variant,
-    color,
-    { disabled },
-    false
-  );
-  const checkedColorType = getLoaderColor(variant, color, { disabled }, true);
-  const strokeColor = getStateColor(
-    defaultColorType,
-    uncheckedColorType,
-    checkedColorType,
-    disabled,
-    checked
-  );
+  const strokeColor = getLoaderColor(variant, color, { disabled });
   const hasRing = ring !== 'unset';
   const isSpinning = spin && !disabled;
 
@@ -65,8 +48,6 @@ export const styleLoader = (
     systemStyles.margin.l[ml],
     systemStyles.margin.r[mr],
     systemStyles.color.default.stroke[theme][strokeColor],
-    isCheckable &&
-      unstyledLoaderConfig.styles.root.color[theme][checkedColorType],
     hasRing && systemStyles.color.default.ring[theme][ring],
     hasRing && sharedStyles.ring.default,
     isSpinning && sharedStyles.animation.spin,
