@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react';
+import type { MergeProps } from '../../types';
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
 import type { UnstyledInputBodyProps } from './UnstyledInput.types';
-import type { MergeProps } from '../../types';
 
 type Props = MergeProps<UnstyledInputBodyProps, { on: boolean }>;
 
