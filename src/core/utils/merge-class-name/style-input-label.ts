@@ -11,14 +11,17 @@ export const styleInputLabel = (
     inputSize = 'md',
     gap = 'unset'
   }: Classes
-): ClassName =>
-  mergeClasses(
+): ClassName => {
+  const isInput = inputType === 'input';
+  const variantType = inputVariant === 'outlined' ? 'outlined' : 'default';
+
+  return mergeClasses(
     unstyledInputConfig.styles.label.default,
     unstyledInputConfig.styles.shared.label,
-    inputType === 'input' &&
-      unstyledInputConfig.styles.label.variant.input[inputVariant][inputSize],
-    inputType === 'textarea' &&
-      unstyledInputConfig.styles.label.variant.textarea[inputVariant],
+    isInput &&
+      unstyledInputConfig.styles.label.variant.input[variantType][inputSize],
+    !isInput && unstyledInputConfig.styles.label.variant.textarea[variantType],
     systemStyles.gap.all[gap],
     className
   );
+};
