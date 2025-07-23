@@ -1,7 +1,8 @@
+import type { ReactNode } from 'react';
 import { ExampleSection } from '../../../components/ExampleSection';
 import { Example } from './Example';
 
-export const TransitionExample = () => (
+export const TransitionExample = (): ReactNode => (
   <ExampleSection title="Transition">
     <Example transition="fade">FADE</Example>
     <Example transition="grow">GROW</Example>
