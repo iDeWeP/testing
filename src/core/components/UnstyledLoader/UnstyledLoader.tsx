@@ -8,7 +8,6 @@ import { unstyledLoaderConfig } from './unstyledLoaderConfig';
 
 export const UnstyledLoader = (props: UnstyledLoaderProps): ReactNode => {
   const {
-    checked,
     disabled = false,
     spin,
     value,
@@ -39,7 +38,6 @@ export const UnstyledLoader = (props: UnstyledLoaderProps): ReactNode => {
 
   const mergedClassName = mergeClassName('loader', className, {
     theme,
-    checked,
     disabled,
     spin,
     variant,

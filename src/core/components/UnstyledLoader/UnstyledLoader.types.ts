@@ -18,7 +18,6 @@ export type UnstyledLoaderComponentsProps = {
 };
 
 export type UnstyledLoaderOptionalProps = {
-  checked?: boolean;
   disabled?: boolean;
 };
 
