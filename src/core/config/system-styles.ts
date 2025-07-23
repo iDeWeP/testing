@@ -1,4 +1,4 @@
-import type { CSSStyles, Orientation, Theme } from '../types';
+import type { CSSStyles, Theme } from '../types';
 
 type SizeType = 'default' | 'square';
 type PaddingScale =
@@ -7,13 +7,11 @@ type PaddingScale =
   | 'square'
   | 'inner-rect'
   | 'inner-square';
-type PaddingType = 'all' | 'x' | 'y' | 't' | 'b' | 'l' | 'r';
-type MarginType = 'all' | 'x' | 'y' | 't' | 'b' | 'l' | 'r';
-type BorderType = 'all' | 'x' | 'y' | 't' | 'b' | 'l' | 'r';
+type SpacingType = 'all' | 'x' | 'y' | 't' | 'b' | 'l' | 'r';
 type RadiusType = 'all' | 't' | 'b' | 'l' | 'r' | 'tl' | 'tr' | 'bl' | 'br';
 type ColorState = 'default' | 'on';
 type ColorType = 'bg' | 'border' | 'text' | 'fill' | 'stroke' | 'ring';
-type GapType = 'all' | 'x' | 'y';
+type GapType = 'all' | 'x' | 'y' | 'row' | 'col';
 
 type SystemCSSStyles = {
   placement: CSSStyles;
@@ -22,10 +20,9 @@ type SystemCSSStyles = {
     text: Record<SizeType, CSSStyles>;
     font: CSSStyles;
   };
-  padding: Record<PaddingScale, Record<PaddingType, CSSStyles>>;
-  margin: Record<MarginType, CSSStyles>;
-  spacing: Record<Orientation, CSSStyles>;
-  border: Record<BorderType, CSSStyles>;
+  padding: Record<PaddingScale, Record<SpacingType, CSSStyles>>;
+  margin: Record<SpacingType, CSSStyles>;
+  border: Record<SpacingType, CSSStyles>;
   radius: Record<RadiusType, CSSStyles>;
   color: Record<ColorState, Record<ColorType, Record<Theme, CSSStyles>>>;
   shadow: CSSStyles;
@@ -1920,90 +1917,6 @@ export const systemStyles: SystemCSSStyles = {
       },
       'xxl-xxl': {
         margin: 'mr-8'
-      }
-    }
-  },
-  spacing: {
-    row: {
-      none: {
-        margin: '-space-x-0'
-      },
-      xs: {
-        margin: '-space-x-2'
-      },
-      sm: {
-        margin: '-space-x-4'
-      },
-      md: {
-        margin: '-space-x-6'
-      },
-      lg: {
-        margin: '-space-x-8'
-      },
-      xl: {
-        margin: '-space-x-12'
-      },
-      xxl: {
-        margin: '-space-x-16'
-      },
-      'xs-xs': {
-        margin: '-space-x-1'
-      },
-      'sm-sm': {
-        margin: '-space-x-2'
-      },
-      'md-md': {
-        margin: '-space-x-3'
-      },
-      'lg-lg': {
-        margin: '-space-x-4'
-      },
-      'xl-xl': {
-        margin: '-space-x-6'
-      },
-      'xxl-xxl': {
-        margin: '-space-x-8'
-      }
-    },
-    col: {
-      none: {
-        margin: '-space-y-0'
-      },
-      xs: {
-        margin: '-space-y-2'
-      },
-      sm: {
-        margin: '-space-y-4'
-      },
-      md: {
-        margin: '-space-y-6'
-      },
-      lg: {
-        margin: '-space-y-8'
-      },
-      xl: {
-        margin: '-space-y-12'
-      },
-      xxl: {
-        margin: '-space-y-16'
-      },
-      'xs-xs': {
-        margin: '-space-y-1'
-      },
-      'sm-sm': {
-        margin: '-space-y-2'
-      },
-      'md-md': {
-        margin: '-space-y-3'
-      },
-      'lg-lg': {
-        margin: '-space-y-4'
-      },
-      'xl-xl': {
-        margin: '-space-y-6'
-      },
-      'xxl-xxl': {
-        margin: '-space-y-8'
       }
     }
   },
@@ -4468,6 +4381,88 @@ export const systemStyles: SystemCSSStyles = {
       },
       'xxl-xxl': {
         gap: 'gap-y-8'
+      }
+    },
+    row: {
+      none: {
+        margin: '-space-x-0'
+      },
+      xs: {
+        margin: '-space-x-2'
+      },
+      sm: {
+        margin: '-space-x-4'
+      },
+      md: {
+        margin: '-space-x-6'
+      },
+      lg: {
+        margin: '-space-x-8'
+      },
+      xl: {
+        margin: '-space-x-12'
+      },
+      xxl: {
+        margin: '-space-x-16'
+      },
+      'xs-xs': {
+        margin: '-space-x-1'
+      },
+      'sm-sm': {
+        margin: '-space-x-2'
+      },
+      'md-md': {
+        margin: '-space-x-3'
+      },
+      'lg-lg': {
+        margin: '-space-x-4'
+      },
+      'xl-xl': {
+        margin: '-space-x-6'
+      },
+      'xxl-xxl': {
+        margin: '-space-x-8'
+      }
+    },
+    col: {
+      none: {
+        margin: '-space-y-0'
+      },
+      xs: {
+        margin: '-space-y-2'
+      },
+      sm: {
+        margin: '-space-y-4'
+      },
+      md: {
+        margin: '-space-y-6'
+      },
+      lg: {
+        margin: '-space-y-8'
+      },
+      xl: {
+        margin: '-space-y-12'
+      },
+      xxl: {
+        margin: '-space-y-16'
+      },
+      'xs-xs': {
+        margin: '-space-y-1'
+      },
+      'sm-sm': {
+        margin: '-space-y-2'
+      },
+      'md-md': {
+        margin: '-space-y-3'
+      },
+      'lg-lg': {
+        margin: '-space-y-4'
+      },
+      'xl-xl': {
+        margin: '-space-y-6'
+      },
+      'xxl-xxl': {
+        margin: '-space-y-8'
       }
     }
   }

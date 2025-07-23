@@ -1,9 +1,9 @@
 import type {
+  ReactNode,
+  CSSProperties,
   ElementType,
   ComponentPropsWithRef,
-  ReactElement,
-  CSSProperties,
-  ReactNode
+  ReactElement
 } from 'react';
 
 // LIBRARY TYPES
@@ -30,6 +30,27 @@ export type Trigger =
 export type Peak = 'auto' | number;
 export type Variant = 'outlined' | 'text' | 'light' | 'solid';
 export type InputVariant = 'default' | 'light' | 'outlined';
+export type CheckableVariant =
+  | 'text'
+  | 'light'
+  | 'outlined'
+  | 'solid'
+  | 'text-text'
+  | 'text-outlined'
+  | 'text-light'
+  | 'text-solid'
+  | 'outlined-text'
+  | 'outlined-outlined'
+  | 'outlined-light'
+  | 'outlined-solid'
+  | 'light-text'
+  | 'light-outlined'
+  | 'light-light'
+  | 'light-solid'
+  | 'solid-text'
+  | 'solid-outlined'
+  | 'solid-light'
+  | 'solid-solid';
 export type Layout =
   | 'default'
   | 'row'
@@ -69,6 +90,30 @@ export type MainAxis = DefaultPlacement;
 export type CrossAxis = CrossPlacement;
 export type ArrowOffset = [number | string, number | string];
 export type Overlap = 'square' | 'rounded' | 'circular';
+export type Spacing =
+  | 'unset'
+  | 'none'
+  | 'xs'
+  | 'sm'
+  | 'md'
+  | 'lg'
+  | 'xl'
+  | 'xxl'
+  | 'xs-xs'
+  | 'sm-sm'
+  | 'md-md'
+  | 'lg-lg'
+  | 'xl-xl'
+  | 'xxl-xxl';
+export type DefaultSpacing =
+  | 'unset'
+  | 'none'
+  | 'xs'
+  | 'sm'
+  | 'md'
+  | 'lg'
+  | 'xl'
+  | 'xxl';
 export type Size =
   | 'xs'
   | 'sm'
@@ -89,51 +134,8 @@ export type DefaultScale = 'default' | 'square';
 export type SwitchScale = 'default' | 'slider';
 export type RippleScale = 'default' | 'peer';
 export type Width = 'default' | 'fit' | 'full';
-export type Padding =
-  | 'unset'
-  | 'none'
-  | 'xs'
-  | 'sm'
-  | 'md'
-  | 'lg'
-  | 'xl'
-  | 'xxl'
-  | 'xs-xs'
-  | 'sm-sm'
-  | 'md-md'
-  | 'lg-lg'
-  | 'xl-xl'
-  | 'xxl-xxl';
-export type Margin =
-  | 'unset'
-  | 'none'
-  | 'xs'
-  | 'sm'
-  | 'md'
-  | 'lg'
-  | 'xl'
-  | 'xxl'
-  | 'xs-xs'
-  | 'sm-sm'
-  | 'md-md'
-  | 'lg-lg'
-  | 'xl-xl'
-  | 'xxl-xxl';
-export type Spacing =
-  | 'unset'
-  | 'none'
-  | 'xs'
-  | 'sm'
-  | 'md'
-  | 'lg'
-  | 'xl'
-  | 'xxl'
-  | 'xs-xs'
-  | 'sm-sm'
-  | 'md-md'
-  | 'lg-lg'
-  | 'xl-xl'
-  | 'xxl-xxl';
+export type Padding = Spacing;
+export type Margin = Spacing;
 export type Border = 'unset' | 'none' | 'set' | 'auto';
 export type DefaultBorder = 'unset' | 'none' | 'set';
 export type SpinnerBorder = 'unset' | 'auto' | 'set';
@@ -165,44 +167,24 @@ export type Color =
   | 'success-on'
   | 'warning-on'
   | 'error-on';
-export type Shadow =
-  | 'unset'
-  | 'none'
-  | 'xs'
-  | 'sm'
-  | 'md'
-  | 'lg'
-  | 'xl'
-  | 'xxl';
-export type Font =
-  | 'unset'
-  | 'xs'
-  | 'sm'
-  | 'md'
-  | 'lg'
-  | 'xl'
-  | 'xxl'
-  | 'xs-xs'
-  | 'sm-sm'
-  | 'md-md'
-  | 'lg-lg'
-  | 'xl-xl'
-  | 'xxl-xxl';
-export type Gap =
-  | 'unset'
-  | 'none'
-  | 'xs'
-  | 'sm'
-  | 'md'
-  | 'lg'
-  | 'xl'
-  | 'xxl'
-  | 'xs-xs'
-  | 'sm-sm'
-  | 'md-md'
-  | 'lg-lg'
-  | 'xl-xl'
-  | 'xxl-xxl';
+export type Shadow = DefaultSpacing;
+export type Font = Spacing;
+export type Gap = Spacing;
+export type GroupGap =
+  | Spacing
+  | '-none'
+  | '-xs'
+  | '-sm'
+  | '-md'
+  | '-lg'
+  | '-xl'
+  | '-xxl'
+  | '-xs-xs'
+  | '-sm-sm'
+  | '-md-md'
+  | '-lg-lg'
+  | '-xl-xl'
+  | '-xxl-xxl';
 export type Effect = 'unset' | 'shadow';
 export type RippleEffect = 'default';
 export type GrowTransition = 'grow' | 'grow-fade';
@@ -286,7 +268,6 @@ export type Classes = {
   mb?: Margin;
   ml?: Margin;
   mr?: Margin;
-  spacing?: Spacing;
   border?: Border;
   defaultBorder?: DefaultBorder;
   b?: DefaultBorder;
@@ -315,6 +296,7 @@ export type Classes = {
   gap?: Gap;
   gx?: Gap;
   gy?: Gap;
+  groupGap?: GroupGap;
   effect?: Effect;
   rippleEffect?: RippleEffect;
   transition?: Transition;

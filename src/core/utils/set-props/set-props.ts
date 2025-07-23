@@ -21,5 +21,5 @@ const typeMap: TypeMap = {
 
 export const setProps = (
   type: keyof typeof typeMap,
-  values: Props = {}
-): SetProps => typeMap[type](values);
+  prop: Props = {}
+): SetProps => typeMap[type](prop);
