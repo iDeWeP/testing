@@ -1,5 +1,5 @@
 import type {
-  Variant,
+  CheckableVariant,
   DefaultSize,
   Color,
   Ripple,
@@ -30,7 +30,7 @@ export type CheckboxComponentsProps = {
 export type CheckboxOptionalProps = UnstyledCheckboxOptionalProps;
 
 export type CheckboxDefaultProps = {
-  variant?: Variant;
+  variant?: CheckableVariant;
   size?: DefaultSize;
   color?: Color;
   componentsProps?: CheckboxComponentsProps;

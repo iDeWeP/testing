@@ -1,5 +1,5 @@
 import type {
-  Variant,
+  CheckableVariant,
   DefaultSize,
   Color,
   Ripple,
@@ -30,7 +30,7 @@ export type RadioComponentsProps = {
 export type RadioOptionalProps = UnstyledCheckboxOptionalProps;
 
 export type RadioDefaultProps = {
-  variant?: Variant;
+  variant?: CheckableVariant;
   size?: DefaultSize;
   color?: Color;
   componentsProps?: RadioComponentsProps;

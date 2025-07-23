@@ -1,5 +1,5 @@
 import type {
-  Variant,
+  CheckableVariant,
   DefaultSize,
   SwitchScale,
   Color,
@@ -34,7 +34,7 @@ export type SwitchComponentsProps = {
 export type SwitchOptionalProps = UnstyledSwitchOptionalProps;
 
 export type SwitchDefaultProps = {
-  variant?: Variant;
+  variant?: CheckableVariant;
   size?: DefaultSize;
   scale?: SwitchScale;
   color?: Color;
