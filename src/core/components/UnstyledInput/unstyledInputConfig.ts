@@ -2,23 +2,25 @@ import type {
   CSSProps,
   CSSStyles,
   SidePlacement,
-  InputVariant,
   ComponentConfig
 } from '../../types';
 import type { UnstyledInputConfigProps } from './UnstyledInput.types';
 
-type InputType = 'input' | 'textarea';
-type VariantType = 'default' | 'input' | 'textarea';
+type DefaultInputType = 'input' | 'textarea';
+type InputType = 'default' | 'input' | 'textarea';
+type VariantType = 'default' | 'outlined';
 
 type Styles = {
   styles: {
     root: {
       default: CSSProps;
-      size: Record<InputType, CSSStyles>;
+      size: Record<DefaultInputType, CSSStyles>;
     };
     decorator: {
-      padding: Record<SidePlacement, CSSStyles>;
-      outlined: CSSStyles;
+      padding: Record<SidePlacement, Record<VariantType, CSSStyles>>;
+    };
+    body: {
+      default: CSSProps;
     };
     fieldset: {
       default: CSSProps;
@@ -34,13 +36,13 @@ type Styles = {
     label: {
       default: CSSProps;
       variant: {
-        input: Record<InputVariant, CSSStyles>;
+        input: Record<VariantType, CSSStyles>;
         textarea: CSSStyles;
       };
     };
     shared: {
       label: CSSProps;
-      variant: Record<VariantType, CSSStyles>;
+      variant: Record<InputType, CSSStyles>;
     };
   };
 };
@@ -116,45 +118,67 @@ export const unstyledInputConfig: ComponentConfig<UnstyledInputConfigProps> &
       padding: {
         start: {
           default: {
-            padding: 'pl-3'
+            default: {
+              padding: 'pl-2.75'
+            },
+            decorated: {
+              padding: 'pl-3.75 pr-3'
+            }
           },
-          decorated: {
-            padding: 'pl-4 pr-3'
+          outlined: {
+            default: {
+              padding: 'pl-2.75',
+              borderWidth: 'border-l',
+              group: '[*.on>&]:pl-2.5 [*.on>&]:border-l-2'
+            },
+            decorated: {
+              padding: 'pl-3.75 pr-3',
+              borderWidth: 'border-l',
+              group: '[*.on>&]:pl-3.5 [*.on>&]:border-l-2'
+            }
           }
         },
         end: {
           default: {
-            padding: 'pr-3'
+            default: {
+              padding: 'pr-2.75'
+            },
+            decorated: {
+              padding: 'pl-3 pr-3.75'
+            }
           },
-          decorated: {
-            padding: 'pl-3 pr-4'
+          outlined: {
+            default: {
+              padding: 'pr-2.75',
+              borderWidth: 'border-r',
+              group: '[*.on>&]:pr-2.5 [*.on>&]:border-r-2'
+            },
+            decorated: {
+              padding: 'pl-3 pr-3.75',
+              borderWidth: 'border-r',
+              group: '[*.on>&]:pr-3.5 [*.on>&]:border-r-2'
+            }
           }
-        }
-      },
-      outlined: {
-        start: {
-          margin: 'ml-px',
-          borderWidth: 'border-l',
-          group: '[*.on>&]:ml-0 [*.on>&]:border-l-2'
-        },
-        end: {
-          margin: 'mr-px',
-          borderWidth: 'border-r',
-          group: '[*.on>&]:mr-0 [*.on>&]:border-r-2'
         }
       }
     },
-    fieldset: {
+    body: {
       default: {
         display: 'flex',
         position: 'relative',
         flexGrow: 'grow'
       }
     },
+    fieldset: {
+      default: {
+        display: 'flex',
+        flexGrow: 'grow'
+      }
+    },
     input: {
       default: {
         width: 'w-full',
-        margin: 'mx-1',
+        padding: 'px-1',
         focus: 'focus:outline-none'
       },
       size: {
@@ -209,35 +233,21 @@ export const unstyledInputConfig: ComponentConfig<UnstyledInputConfigProps> &
               group: '[*.on>&]:top-3'
             }
           },
-          light: {
-            sm: {
-              top: 'top-4',
-              group: '[*.on>&]:top-0'
-            },
-            md: {
-              top: 'top-6',
-              group: '[*.on>&]:top-1'
-            },
-            lg: {
-              top: 'top-10',
-              group: '[*.on>&]:top-3'
-            }
-          },
           outlined: {
             sm: {
               top: 'top-2/4',
               translate: '-translate-y-2/4',
-              group: '[*.on>&]:-top-px'
+              group: '[*.on>&]:top-0'
             },
             md: {
               top: 'top-2/4',
               translate: '-translate-y-2/4',
-              group: '[*.on>&]:-top-px'
+              group: '[*.on>&]:top-0'
             },
             lg: {
               top: 'top-2/4',
               translate: '-translate-y-2/4',
-              group: '[*.on>&]:-top-px'
+              group: '[*.on>&]:top-0'
             }
           }
         },
@@ -246,13 +256,9 @@ export const unstyledInputConfig: ComponentConfig<UnstyledInputConfigProps> &
             top: 'top-5',
             group: '[*.on>&]:top-0.5'
           },
-          light: {
-            top: 'top-5',
-            group: '[*.on>&]:top-0.5'
-          },
           outlined: {
             top: 'top-2',
-            group: '[*.on>&]:-top-px [*.on>&]:-translate-y-2/4'
+            group: '[*.on>&]:top-0 [*.on>&]:-translate-y-2/4'
           }
         }
       }
@@ -268,27 +274,16 @@ export const unstyledInputConfig: ComponentConfig<UnstyledInputConfigProps> &
         default: {
           default: {
             padding: 'pb-0.5',
-            margin: 'mb-px',
             borderWidth: 'border-b',
-            group: '[*.on>&]:mb-0 [*.on>&]:border-b-2'
-          },
-          light: {
-            padding: 'pb-0.5',
-            margin: 'mb-px',
-            borderWidth: 'border-b',
-            group: '[*.on>&]:mb-0 [*.on>&]:border-b-2'
+            group: '[*.on>&]:pb-px [*.on>&]:border-b-2'
           },
           outlined: {
-            margin: 'my-px',
             borderWidth: 'border-y',
-            group: '[*.on>&]:m-0 [*.on>&]:border-y-2'
+            group: '[*.on>&]:border-y-2'
           }
         },
         input: {
           default: {
-            alignItems: 'items-end'
-          },
-          light: {
             alignItems: 'items-end'
           },
           outlined: {
@@ -299,11 +294,9 @@ export const unstyledInputConfig: ComponentConfig<UnstyledInputConfigProps> &
           default: {
             padding: 'pt-5'
           },
-          light: {
-            padding: 'pt-5'
-          },
           outlined: {
-            padding: 'py-2'
+            padding: 'py-2',
+            group: '[*.on>&]:py-1.75'
           }
         }
       }

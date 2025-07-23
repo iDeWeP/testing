@@ -7,6 +7,7 @@ import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
 import { mergeProps } from '../../utils/merge-props/merge-props';
 import { setAria } from '../../utils/set-aria/set-aria';
 import type { UnstyledInputProps } from './UnstyledInput.types';
+import { UnstyledInputBody } from './UnstyledInputBody';
 import { UnstyledInputClearance } from './UnstyledInputClearance';
 import { unstyledInputConfig } from './unstyledInputConfig';
 import { UnstyledInputContainer } from './UnstyledInputContainer';
@@ -122,50 +123,55 @@ export const UnstyledInput = <E extends ElementType>(
       >
         {startDecorator}
       </UnstyledInputDecorator>
-      <UnstyledInputFieldset
-        inputType={Component}
-        on={shifted ?? (!!label && (isFocused || !!value))}
-        valid={valid}
-        invalid={invalid}
-        disabled={disabled}
-        inputVariant={variant}
-        color={color}
-        {...componentsProps.fieldset}
+      <UnstyledInputBody
+        on={isFocused}
+        {...componentsProps.body}
       >
-        <Component
-          ref={mergeRefs(forwardedRef, ref)}
+        <UnstyledInputFieldset
+          inputType={Component}
+          on={shifted ?? (!!label && (isFocused || !!value))}
+          valid={valid}
+          invalid={invalid}
           disabled={disabled}
-          id={id}
-          value={value}
-          placeholder={setValue(isFocused, placeholder)}
-          type="text"
-          className={mergedClassName}
-          {...setAria('input', { invalid })}
-          onFocus={combineHandlers(onFocus, handleFocus)}
-          onBlur={combineHandlers(onBlur, handleBlur)}
-          {...restProps}
-        />
-        {label && variant === 'outlined' && (
-          <UnstyledInputClearance
-            gap={gap}
-            {...componentsProps.clearance}
-          >
-            {label}
-          </UnstyledInputClearance>
-        )}
-        {label && (
-          <UnstyledInputLabel
-            inputType={Component}
-            htmlFor={id}
-            inputVariant={variant}
-            inputSize={inputSize}
-            gap={gap}
-            {...componentsProps.label}
-          >
-            {label}
-          </UnstyledInputLabel>
-        )}
-      </UnstyledInputFieldset>
+          inputVariant={variant}
+          color={color}
+          {...componentsProps.fieldset}
+        >
+          <Component
+            ref={mergeRefs(forwardedRef, ref)}
+            disabled={disabled}
+            id={id}
+            value={value}
+            placeholder={setValue(isFocused, placeholder)}
+            type="text"
+            className={mergedClassName}
+            {...setAria('input', { invalid })}
+            onFocus={combineHandlers(onFocus, handleFocus)}
+            onBlur={combineHandlers(onBlur, handleBlur)}
+            {...restProps}
+          />
+          {label && variant === 'outlined' && (
+            <UnstyledInputClearance
+              gap={gap}
+              {...componentsProps.clearance}
+            >
+              {label}
+            </UnstyledInputClearance>
+          )}
+          {label && (
+            <UnstyledInputLabel
+              inputType={Component}
+              htmlFor={id}
+              inputVariant={variant}
+              inputSize={inputSize}
+              gap={gap}
+              {...componentsProps.label}
+            >
+              {label}
+            </UnstyledInputLabel>
+          )}
+        </UnstyledInputFieldset>
+      </UnstyledInputBody>
       <UnstyledInputDecorator
         inputType={Component}
         valid={valid}
