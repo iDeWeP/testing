@@ -1,28 +1,29 @@
+import type { ReactNode } from 'react';
 import { ExampleTitle } from '../../../components/ExampleTitle';
 import { ColorExample } from './ColorExample';
 import { DefaultExample } from './DefaultExample';
 import { FontExample } from './FontExample';
 import { GapExample } from './GapExample';
-import { MarginBExample } from './MarginBExample';
 import { MarginExample } from './MarginExample';
-import { MarginLExample } from './MarginLExample';
+import { MarginMBExample } from './MarginMBExample';
 import { MarginMExample } from './MarginMExample';
-import { MarginRExample } from './MarginRExample';
-import { MarginTExample } from './MarginTExample';
-import { MarginXExample } from './MarginXExample';
-import { MarginYExample } from './MarginYExample';
+import { MarginMLExample } from './MarginMLExample';
+import { MarginMRExample } from './MarginMRExample';
+import { MarginMTExample } from './MarginMTExample';
+import { MarginMXExample } from './MarginMXExample';
+import { MarginMYExample } from './MarginMYExample';
 import { OrientationExample } from './OrientationExample';
-import { PaddingBExample } from './PaddingBExample';
 import { PaddingExample } from './PaddingExample';
-import { PaddingLExample } from './PaddingLExample';
+import { PaddingPBExample } from './PaddingPBExample';
 import { PaddingPExample } from './PaddingPExample';
-import { PaddingRExample } from './PaddingRExample';
-import { PaddingTExample } from './PaddingTExample';
-import { PaddingXExample } from './PaddingXExample';
-import { PaddingYExample } from './PaddingYExample';
+import { PaddingPLExample } from './PaddingPLExample';
+import { PaddingPRExample } from './PaddingPRExample';
+import { PaddingPTExample } from './PaddingPTExample';
+import { PaddingPXExample } from './PaddingPXExample';
+import { PaddingPYExample } from './PaddingPYExample';
 import { PlacementExample } from './PlacementExample';
 
-const Page = () => (
+const Page = (): ReactNode => (
   <>
     <ExampleTitle>UnstyledDivider</ExampleTitle>
     <DefaultExample />
@@ -30,20 +31,20 @@ const Page = () => (
     <PlacementExample />
     <PaddingExample />
     <PaddingPExample />
-    <PaddingXExample />
-    <PaddingYExample />
-    <PaddingTExample />
-    <PaddingBExample />
-    <PaddingLExample />
-    <PaddingRExample />
+    <PaddingPXExample />
+    <PaddingPYExample />
+    <PaddingPTExample />
+    <PaddingPBExample />
+    <PaddingPLExample />
+    <PaddingPRExample />
     <MarginExample />
     <MarginMExample />
-    <MarginXExample />
-    <MarginYExample />
-    <MarginTExample />
-    <MarginBExample />
-    <MarginLExample />
-    <MarginRExample />
+    <MarginMXExample />
+    <MarginMYExample />
+    <MarginMTExample />
+    <MarginMBExample />
+    <MarginMLExample />
+    <MarginMRExample />
     <FontExample />
     <ColorExample />
     <GapExample />

@@ -1,9 +1,10 @@
+import type { ReactNode } from 'react';
 import { ExampleCard } from '../../../components/ExampleCard';
 import { ExampleSection } from '../../../components/ExampleSection';
 import { Example } from './Example';
 
-export const MarginXExample = () => (
-  <ExampleSection title="Margin X">
+export const MarginMXExample = (): ReactNode => (
+  <ExampleSection title="Margin MX">
     <ExampleCard>
       <Example mx="unset">UNSET</Example>
       <Example mx="none">NONE</Example>
