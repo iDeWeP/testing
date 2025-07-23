@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react';
+import { getCheckableVariants } from '../../utils/get-checkable-variants/get-checkable-variants';
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
 import { mergeProps } from '../../utils/merge-props/merge-props';
 import { setAria } from '../../utils/set-aria/set-aria';
@@ -57,6 +58,8 @@ export const UnstyledSwitch = (props: UnstyledSwitchProps): ReactNode => {
     decorated: hasRipple
   });
 
+  const [uncheckedVariant, checkedVariant] = getCheckableVariants(variant);
+
   return (
     <UnstyledSwitchContainer
       defaultSize={defaultSize}
@@ -82,7 +85,7 @@ export const UnstyledSwitch = (props: UnstyledSwitchProps): ReactNode => {
         valid={valid}
         invalid={invalid}
         disabled={disabled}
-        variant={variant}
+        variant={uncheckedVariant}
         defaultSize={defaultSize}
         switchScale={switchScale}
         radius={radius}
@@ -103,7 +106,7 @@ export const UnstyledSwitch = (props: UnstyledSwitchProps): ReactNode => {
         valid={valid}
         invalid={invalid}
         disabled={disabled}
-        variant={variant}
+        variant={checkedVariant}
         defaultSize={defaultSize}
         switchScale={switchScale}
         border={border}
@@ -123,7 +126,7 @@ export const UnstyledSwitch = (props: UnstyledSwitchProps): ReactNode => {
       />
       <UnstyledSwitchIcon
         disabled={disabled}
-        variant={variant}
+        variant={checkedVariant}
         defaultSize={defaultSize}
         switchScale={switchScale}
         color={color}
@@ -136,7 +139,7 @@ export const UnstyledSwitch = (props: UnstyledSwitchProps): ReactNode => {
         <UnstyledSwitchRipple
           valid={valid}
           invalid={invalid}
-          variant={setRippleVariant(variant)}
+          variant={setRippleVariant(checkedVariant)}
           defaultSize={defaultSize}
           switchScale={switchScale}
           color={color}

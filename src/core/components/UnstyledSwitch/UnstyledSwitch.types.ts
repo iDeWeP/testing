@@ -2,13 +2,12 @@ import type { ComponentPropsWithRef } from 'react';
 import type {
   Radius,
   ComponentRefProps,
-  DefaultBorder,
+  Border,
   SVGNodeProps,
-  Variant,
+  CheckableVariant,
   DefaultSize,
   SwitchScale,
   Margin,
-  Border,
   Color,
   Shadow,
   Ripple,
@@ -31,11 +30,10 @@ export type UnstyledSwitchContainerProps = {
 export type UnstyledSwitchBarProps = ComponentRefProps<'span'>;
 
 export type UnstyledSwitchTrailProps = {
-  border?: DefaultBorder;
+  border?: Border;
 } & ComponentRefProps<'span'>;
 
 export type UnstyledSwitchIconProps = ComponentRefProps<'svg'>;
-
 export type UnstyledSwitchRippleProps = ComponentRefProps<'span'>;
 
 export type UnstyledSwitchComponentsProps = {
@@ -55,7 +53,7 @@ export type UnstyledSwitchOptionalProps = {
 };
 
 export type UnstyledSwitchDefaultProps = {
-  variant?: Variant;
+  variant?: CheckableVariant;
   size?: DefaultSize;
   scale?: SwitchScale;
   margin?: Margin;

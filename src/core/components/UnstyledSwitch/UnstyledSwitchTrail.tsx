@@ -5,7 +5,7 @@ import type {
   Variant,
   DefaultSize,
   SwitchScale,
-  DefaultBorder,
+  Border,
   Radius,
   Color,
   Shadow
@@ -22,7 +22,7 @@ type Props = MergeProps<
     variant: Variant;
     defaultSize: DefaultSize;
     switchScale: SwitchScale;
-    border?: DefaultBorder;
+    border?: Border;
     radius: Radius;
     r: Radius;
     rt: Radius;
@@ -46,7 +46,7 @@ export const UnstyledSwitchTrail = ({
   variant,
   defaultSize,
   switchScale,
-  border: defaultBorder = 'set',
+  border = 'auto',
   radius,
   r,
   rt,
@@ -73,7 +73,7 @@ export const UnstyledSwitchTrail = ({
     variant,
     defaultSize,
     switchScale,
-    defaultBorder,
+    border,
     radius,
     r,
     rt,
