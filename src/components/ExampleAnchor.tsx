@@ -1,11 +1,12 @@
-import { Card } from '../core/components/Card/Card';
-import type { CardProps } from '../core/components/Card/Card.types';
+import type { ReactNode } from 'react';
+import { Paper } from '../core/components/Paper/Paper';
+import type { PaperProps } from '../core/components/Paper/Paper.types';
 
 export const ExampleAnchor = ({
   className,
   ...restProps
-}: CardProps<'div'>) => (
-  <Card
+}: PaperProps<'div'>): ReactNode => (
+  <Paper
     variant="solid"
     padding="xs-xs"
     color="primary-on"

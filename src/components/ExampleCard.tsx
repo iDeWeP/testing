@@ -1,21 +1,27 @@
-import { Card } from '../core/components/Card/Card';
-import type { CardProps } from '../core/components/Card/Card.types';
+import type { ReactNode } from 'react';
+import { Paper } from '../core/components/Paper/Paper';
+import type { PaperProps } from '../core/components/Paper/Paper.types';
 
 type Props = {
   col?: boolean;
   height?: boolean;
-} & CardProps<'div'>;
+} & PaperProps<'div'>;
 
-export const ExampleCard = ({ col, height, ...restProps }: Props) => {
+export const ExampleCard = ({
+  col,
+  height,
+  ...restProps
+}: Props): ReactNode => {
   const className = `relative ${
     height ? 'h-[100px]' : ''
   } bg-disabled-100 flex-wrap justify-evenly items-center
   }`;
 
   return (
-    <Card
+    <Paper
       orientation={col ? 'col' : 'row'}
       color="unset"
+      gap="xs"
       className={className}
       {...restProps}
     />
