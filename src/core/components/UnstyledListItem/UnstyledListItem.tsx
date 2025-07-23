@@ -31,6 +31,8 @@ export const UnstyledListItem = <E extends ElementType>(
 
   const theme = useTheme();
 
+  const isClickable = checked !== undefined;
+  const defaultRing = isClickable ? 'unset' : ring;
   const { currentVariant, currentColor, defaultVariant, defaultColor } =
     setCheckableStyle(variant, color, checked);
 
@@ -41,10 +43,10 @@ export const UnstyledListItem = <E extends ElementType>(
     variant: currentVariant,
     orientation,
     color: currentColor,
+    ring: defaultRing,
     effect
   });
 
-  const isClickable = checked !== undefined;
   const hasRipple = ripple !== 'none' && !disabled;
 
   return (
@@ -56,7 +58,7 @@ export const UnstyledListItem = <E extends ElementType>(
       })}
       variant={currentVariant}
       color={currentColor}
-      ring={isClickable ? 'unset' : ring}
+      ring={defaultRing}
       className={mergedClassName}
       {...setAria('button', {
         element: Component,
