@@ -1,7 +1,6 @@
 import type { ReactNode } from 'react';
 import { ExampleTitle } from '../../../components/ExampleTitle';
 import { BorderExample } from './BorderExample';
-import { CheckedExample } from './CheckedExample';
 import { ColorExample } from './ColorExample';
 import { DefaultExample } from './DefaultExample';
 import { DisabledExample } from './DisabledExample';
@@ -35,7 +34,6 @@ const Page = (): ReactNode => (
   <>
     <ExampleTitle>UnstyledButton</ExampleTitle>
     <DefaultExample />
-    <CheckedExample />
     <LoadingExample />
     <DisabledExample />
     <VariantExample />
