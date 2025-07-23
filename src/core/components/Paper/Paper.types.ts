@@ -10,11 +10,11 @@ import type {
   MergeProps
 } from '../../types';
 import type {
-  UnstyledCardConfigProps,
-  UnstyledCardProps
-} from '../UnstyledCard/UnstyledCard.types';
+  UnstyledPaperConfigProps,
+  UnstyledPaperProps
+} from '../UnstyledPaper/UnstyledPaper.types';
 
-export type CardDefaultProps = {
+export type PaperDefaultProps = {
   variant?: Variant;
   orientation?: Orientation;
   padding?: Padding;
@@ -24,12 +24,12 @@ export type CardDefaultProps = {
   gap?: Gap;
 };
 
-export type CardConfigProps = MergeProps<
-  UnstyledCardConfigProps,
-  CardDefaultProps
+export type PaperConfigProps = MergeProps<
+  UnstyledPaperConfigProps,
+  PaperDefaultProps
 >;
 
-export type CardProps<E extends ElementType> = MergeProps<
-  UnstyledCardProps<E>,
-  CardDefaultProps
+export type PaperProps<E extends ElementType> = MergeProps<
+  UnstyledPaperProps<E>,
+  PaperDefaultProps
 >;

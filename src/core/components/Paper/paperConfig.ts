@@ -1,11 +1,11 @@
 import type { ComponentConfig } from '../../types';
-import type { CardConfigProps } from './Card.types';
+import type { PaperConfigProps } from './Paper.types';
 
-export const cardConfig: ComponentConfig<CardConfigProps> = {
+export const paperConfig: ComponentConfig<PaperConfigProps> = {
   props: {
     as: 'div',
     variant: 'solid',
-    orientation: 'col',
+    orientation: 'row',
     padding: 'unset',
     radius: 'lg',
     color: 'surface-on',
