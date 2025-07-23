@@ -49,11 +49,14 @@ export type UnstyledCloseButtonDefaultProps = {
 };
 
 export type UnstyledCloseButtonConfigProps = MergeProps<
-  UnstyledButtonConfigProps,
+  Omit<UnstyledButtonConfigProps, 'gap'>,
   UnstyledCloseButtonDefaultProps
 >;
 
 export type UnstyledCloseButtonProps<E extends ElementType> = MergeProps<
-  Omit<UnstyledButtonProps<E>, 'checked' | 'startDecorator' | 'endDecorator'>,
+  Omit<
+    UnstyledButtonProps<E>,
+    'checked' | 'startDecorator' | 'endDecorator' | 'gap'
+  >,
   UnstyledCloseButtonDefaultProps & UnstyledCloseButtonOptionalProps
 >;
