@@ -1,8 +1,9 @@
+import type { ReactNode } from 'react';
 import { ExampleCard } from '../../../components/ExampleCard';
 import { ExampleSection } from '../../../components/ExampleSection';
 import { Example } from './Example';
 
-export const FontExample = () => (
+export const FontExample = (): ReactNode => (
   <ExampleSection title="Font">
     <ExampleCard>
       <Example font="unset">UNSET</Example>

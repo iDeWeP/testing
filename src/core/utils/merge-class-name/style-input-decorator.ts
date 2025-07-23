@@ -31,8 +31,8 @@ export const styleInputDecorator = (
     decorated = false
   }: Classes
 ): ClassName => {
-  const isOutlined = inputVariant === 'outlined';
-  const paddingType = decorated ? 'decorated' : 'default';
+  const variantType = inputVariant === 'outlined' ? 'outlined' : 'default';
+  const sizeType = decorated ? 'decorated' : 'default';
   const radiusType = getInputRadius(
     inputVariant,
     sidePlacement,
@@ -51,10 +51,11 @@ export const styleInputDecorator = (
 
   return mergeClasses(
     sharedStyles.display['inline-flex'],
-    unstyledInputConfig.styles.decorator.padding[sidePlacement][paddingType],
-    isOutlined && unstyledInputConfig.styles.decorator.outlined[sidePlacement],
-    unstyledInputConfig.styles.shared.variant.default[inputVariant],
-    unstyledInputConfig.styles.shared.variant[inputType][inputVariant],
+    unstyledInputConfig.styles.decorator.padding[sidePlacement][variantType][
+      sizeType
+    ],
+    unstyledInputConfig.styles.shared.variant.default[variantType],
+    unstyledInputConfig.styles.shared.variant[inputType][variantType],
     systemStyles.radius.l[radiusType.autoL],
     systemStyles.radius.r[radiusType.autoR],
     systemStyles.radius.tl[radiusType.autoTl],

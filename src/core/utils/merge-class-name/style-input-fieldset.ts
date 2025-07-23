@@ -17,14 +17,17 @@ export const styleInputFieldset = (
     inputVariant = 'default',
     color = 'unset'
   }: Classes
-): ClassName =>
-  mergeClasses(
+): ClassName => {
+  const variantType = inputVariant === 'outlined' ? 'outlined' : 'default';
+
+  return mergeClasses(
     on && sharedStyles.state.on,
     unstyledInputConfig.styles.fieldset.default,
-    unstyledInputConfig.styles.shared.variant.default[inputVariant],
-    unstyledInputConfig.styles.shared.variant[inputType][inputVariant],
+    unstyledInputConfig.styles.shared.variant.default[variantType],
+    unstyledInputConfig.styles.shared.variant[inputType][variantType],
     systemStyles.color.default.bg[theme][
       getInputColor(inputVariant, color, disabled, valid, invalid)
     ],
     className
   );
+};
