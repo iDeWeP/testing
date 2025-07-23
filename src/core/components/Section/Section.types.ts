@@ -1,9 +1,9 @@
 import type { ElementType } from 'react';
 import type { Orientation, Gap, MergeProps } from '../../types';
 import type {
-  UnstyledCardConfigProps,
-  UnstyledCardProps
-} from '../UnstyledCard/UnstyledCard.types';
+  UnstyledPaperConfigProps,
+  UnstyledPaperProps
+} from '../UnstyledPaper/UnstyledPaper.types';
 
 export type SectionDefaultProps = {
   orientation?: Orientation;
@@ -11,11 +11,11 @@ export type SectionDefaultProps = {
 };
 
 export type SectionConfigProps = MergeProps<
-  UnstyledCardConfigProps,
+  UnstyledPaperConfigProps,
   SectionDefaultProps
 >;
 
 export type SectionProps<E extends ElementType> = MergeProps<
-  UnstyledCardProps<E>,
+  UnstyledPaperProps<E>,
   SectionDefaultProps
 >;

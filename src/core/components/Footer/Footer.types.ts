@@ -1,9 +1,9 @@
 import type { ElementType } from 'react';
 import type { Orientation, Gap, MergeProps } from '../../types';
 import type {
-  UnstyledCardConfigProps,
-  UnstyledCardProps
-} from '../UnstyledCard/UnstyledCard.types';
+  UnstyledPaperConfigProps,
+  UnstyledPaperProps
+} from '../UnstyledPaper/UnstyledPaper.types';
 
 export type FooterDefaultProps = {
   orientation?: Orientation;
@@ -11,11 +11,11 @@ export type FooterDefaultProps = {
 };
 
 export type FooterConfigProps = MergeProps<
-  UnstyledCardConfigProps,
+  UnstyledPaperConfigProps,
   FooterDefaultProps
 >;
 
 export type FooterProps<E extends ElementType> = MergeProps<
-  UnstyledCardProps<E>,
+  UnstyledPaperProps<E>,
   FooterDefaultProps
 >;

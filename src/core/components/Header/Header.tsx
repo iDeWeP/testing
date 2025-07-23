@@ -1,6 +1,6 @@
 import type { ElementType, ReactNode } from 'react';
 import { useMergeProps } from '../../hooks/use-merge-props/use-merge-props';
-import { UnstyledCard } from '../UnstyledCard/UnstyledCard';
+import { UnstyledPaper } from '../UnstyledPaper/UnstyledPaper';
 import type { HeaderProps } from './Header.types';
 import { headerConfig } from './headerConfig';
 
@@ -9,5 +9,5 @@ export const Header = <E extends ElementType>(
 ): ReactNode => {
   const mergedProps = useMergeProps('header', headerConfig.props, props);
 
-  return <UnstyledCard {...mergedProps} />;
+  return <UnstyledPaper {...mergedProps} />;
 };
