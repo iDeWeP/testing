@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react';
+import { getCheckableVariants } from '../../utils/get-checkable-variants/get-checkable-variants';
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
 import { mergeProps } from '../../utils/merge-props/merge-props';
 import { setRippleVariant } from '../../utils/set-ripple-variant/set-ripple-variant';
@@ -50,6 +51,7 @@ export const UnstyledCheckbox = (props: UnstyledCheckboxProps): ReactNode => {
     disabled
   });
 
+  const [uncheckedVariant, checkedVariant] = getCheckableVariants(variant);
   const hasRipple = ripple !== 'none';
 
   return (
@@ -77,7 +79,7 @@ export const UnstyledCheckbox = (props: UnstyledCheckboxProps): ReactNode => {
         valid={valid}
         invalid={invalid}
         disabled={disabled}
-        variant={variant}
+        variant={uncheckedVariant}
         defaultSize={size}
         radius={radius}
         r={r}
@@ -98,7 +100,7 @@ export const UnstyledCheckbox = (props: UnstyledCheckboxProps): ReactNode => {
         valid={valid}
         invalid={invalid}
         disabled={disabled}
-        variant={variant}
+        variant={checkedVariant}
         defaultSize={size}
         border={border}
         radius={radius}
@@ -122,7 +124,7 @@ export const UnstyledCheckbox = (props: UnstyledCheckboxProps): ReactNode => {
           valid={valid}
           invalid={invalid}
           stateful
-          variant={setRippleVariant(variant)}
+          variant={setRippleVariant(checkedVariant)}
           scale="peer"
           color={color}
           effect={ripple}

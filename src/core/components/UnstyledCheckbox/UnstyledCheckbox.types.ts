@@ -2,12 +2,11 @@ import type { ComponentPropsWithRef } from 'react';
 import type {
   Radius,
   ComponentRefProps,
-  DefaultBorder,
+  Border,
   SVGNodeProps,
-  Variant,
+  CheckableVariant,
   DefaultSize,
   Margin,
-  Border,
   Color,
   Shadow,
   Ripple,
@@ -33,7 +32,7 @@ export type UnstyledCheckboxIconProps = Omit<
 >;
 
 export type UnstyledCheckboxTrailProps = {
-  border?: DefaultBorder;
+  border?: Border;
 } & ComponentRefProps<'span'>;
 
 export type UnstyledCheckboxRippleProps = ComponentRefProps<'span'>;
@@ -54,7 +53,7 @@ export type UnstyledCheckboxOptionalProps = {
 };
 
 export type UnstyledCheckboxDefaultProps = {
-  variant?: Variant;
+  variant?: CheckableVariant;
   size?: DefaultSize;
   margin?: Margin;
   m?: Margin;
