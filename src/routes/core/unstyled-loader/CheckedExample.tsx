@@ -1,8 +1,9 @@
+import type { ReactNode } from 'react';
 import { ExampleCard } from '../../../components/ExampleCard';
 import { ExampleSection } from '../../../components/ExampleSection';
 import { Example } from './Example';
 
-export const CheckedExample = () => (
+export const CheckedExample = (): ReactNode => (
   <ExampleSection title="Checked">
     <ExampleCard>
       <Example checked={false}>FALSE</Example>
