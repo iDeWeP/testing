@@ -3,6 +3,7 @@ import { ExampleTitle } from '../../../components/ExampleTitle';
 import { ColorExample } from './ColorExample';
 import { DefaultExample } from './DefaultExample';
 import { DisabledExample } from './DisabledExample';
+import { GapExample } from './GapExample';
 import { SizeExample } from './SizeExample';
 import { SpinExample } from './SpinExample';
 import { ThicknessExample } from './ThicknessExample';
@@ -20,6 +21,7 @@ const Page = (): ReactNode => (
     <SizeExample />
     <ThicknessExample />
     <ColorExample />
+    <GapExample />
   </>
 );
 
