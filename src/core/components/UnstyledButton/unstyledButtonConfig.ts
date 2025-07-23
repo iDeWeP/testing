@@ -1,10 +1,10 @@
-import type { CSSStyles, ComponentConfig } from '../../types';
+import type { CSSProps, ComponentConfig } from '../../types';
 import type { UnstyledButtonConfigProps } from './UnstyledButton.types';
 
 type Styles = {
   styles: {
     root: {
-      loading: CSSStyles;
+      loading: CSSProps;
     };
   };
 };
@@ -45,14 +45,8 @@ export const unstyledButtonConfig: ComponentConfig<UnstyledButtonConfigProps> &
   styles: {
     root: {
       loading: {
-        normal: {
-          color: 'text-transparent',
-          fill: 'fill-transparent'
-        },
-        checkable: {
-          color: '[.on]:text-transparent',
-          fill: '[.on]:fill-transparent'
-        }
+        color: 'text-transparent',
+        fill: 'fill-transparent'
       }
     }
   }
