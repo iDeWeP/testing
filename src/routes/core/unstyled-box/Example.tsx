@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react';
 import { UnstyledBox } from '../../../core/components/UnstyledBox/UnstyledBox';
 import type { UnstyledBoxProps } from '../../../core/components/UnstyledBox/UnstyledBox.types';
 
@@ -9,7 +10,7 @@ export const Example = ({
   clear,
   children = 'UNSTYLED-BOX',
   ...restProps
-}: Props) => (
+}: Props): ReactNode => (
   <UnstyledBox
     color={clear ? 'unset' : 'primary'}
     {...restProps}

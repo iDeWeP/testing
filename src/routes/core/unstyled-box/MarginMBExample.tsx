@@ -1,8 +1,9 @@
+import type { ReactNode } from 'react';
 import { ExampleCard } from '../../../components/ExampleCard';
 import { ExampleSection } from '../../../components/ExampleSection';
 import { Example } from './Example';
 
-export const MarginMBExample = () => (
+export const MarginMBExample = (): ReactNode => (
   <ExampleSection title="Margin MB">
     <ExampleCard>
       <Example mb="unset">UNSET</Example>

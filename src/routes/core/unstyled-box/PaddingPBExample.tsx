@@ -1,8 +1,9 @@
+import type { ReactNode } from 'react';
 import { ExampleCard } from '../../../components/ExampleCard';
 import { ExampleSection } from '../../../components/ExampleSection';
 import { Example } from './Example';
 
-export const PaddingPBExample = () => (
+export const PaddingPBExample = (): ReactNode => (
   <ExampleSection title="Padding PB">
     <ExampleCard>
       <Example pb="unset">UNSET</Example>
