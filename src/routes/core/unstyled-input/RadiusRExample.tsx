@@ -1,19 +1,20 @@
+import type { ReactNode } from 'react';
 import { ExampleCard } from '../../../components/ExampleCard';
 import { ExampleSection } from '../../../components/ExampleSection';
 import { Example } from './Example';
 
-export const RadiusRExample = () => (
+export const RadiusRExample = (): ReactNode => (
   <ExampleSection title="Radius R">
     <ExampleCard>
-      <Example r="unset" />
-      <Example r="none" />
-      <Example r="xs" />
-      <Example r="sm" />
-      <Example r="md" />
-      <Example r="lg" />
-      <Example r="xl" />
-      <Example r="xxl" />
-      <Example r="full" />
+      <Example r="unset">UNSET</Example>
+      <Example r="none">NONE</Example>
+      <Example r="xs">XS</Example>
+      <Example r="sm">SM</Example>
+      <Example r="md">MD</Example>
+      <Example r="lg">LG</Example>
+      <Example r="xl">XL</Example>
+      <Example r="xxl">XXL</Example>
+      <Example r="full">FULL</Example>
     </ExampleCard>
   </ExampleSection>
 );

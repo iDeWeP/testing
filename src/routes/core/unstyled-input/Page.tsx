@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react';
 import { ExampleTitle } from '../../../components/ExampleTitle';
 import { ColorExample } from './ColorExample';
 import { DefaultExample } from './DefaultExample';
@@ -28,7 +29,7 @@ import { ValidExample } from './ValidExample';
 import { VariantExample } from './VariantExample';
 import { WidthExample } from './WidthExample';
 
-const Page = () => (
+const Page = (): ReactNode => (
   <>
     <ExampleTitle>UnstyledInput</ExampleTitle>
     <DefaultExample />
