@@ -1,4 +1,12 @@
+import type { ReactNode } from 'react';
 import { ExampleTitle } from '../../../components/ExampleTitle';
+import { BorderBBExample } from './BorderBBExample';
+import { BorderBExample } from './BorderBExample';
+import { BorderBLExample } from './BorderBLExample';
+import { BorderBRExample } from './BorderBRExample';
+import { BorderBTExample } from './BorderBTExample';
+import { BorderBXExample } from './BorderBXExample';
+import { BorderBYExample } from './BorderBYExample';
 import { BorderExample } from './BorderExample';
 import { ColorExample } from './ColorExample';
 import { DefaultExample } from './DefaultExample';
@@ -38,7 +46,7 @@ import { RingExample } from './RingExample';
 import { ShadowExample } from './ShadowExample';
 import { VariantExample } from './VariantExample';
 
-const Page = () => (
+const Page = (): ReactNode => (
   <>
     <ExampleTitle>UnstyledCardBody</ExampleTitle>
     <DefaultExample />
@@ -65,6 +73,13 @@ const Page = () => (
     <MarginMLExample />
     <MarginMRExample />
     <BorderExample />
+    <BorderBExample />
+    <BorderBXExample />
+    <BorderBYExample />
+    <BorderBTExample />
+    <BorderBBExample />
+    <BorderBLExample />
+    <BorderBRExample />
     <RadiusRExample />
     <RadiusRTExample />
     <RadiusRBExample />
