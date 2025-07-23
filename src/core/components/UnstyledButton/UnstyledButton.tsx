@@ -100,7 +100,6 @@ export const UnstyledButton = <E extends ElementType>(
       {rightLoader}
       {hasRipple && (
         <UnstyledRipple
-          stateful={false}
           variant={variant}
           scale="default"
           color={color}

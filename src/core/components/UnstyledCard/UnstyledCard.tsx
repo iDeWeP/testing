@@ -62,7 +62,6 @@ export const UnstyledCard = <E extends ElementType>(
       {children}
       {hasRipple && (
         <UnstyledRipple
-          stateful={false}
           variant={variant}
           scale="default"
           color={color}
