@@ -10,10 +10,10 @@ import type {
 export type UnstyledRippleOptionalProps = {
   valid?: boolean;
   invalid?: boolean;
+  stateful?: boolean;
 };
 
 export type UnstyledRippleDefaultProps = {
-  stateful?: boolean;
   variant?: Variant;
   scale?: RippleScale;
   color?: Color;

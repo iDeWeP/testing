@@ -9,7 +9,7 @@ export const UnstyledRipple = (props: UnstyledRippleProps): ReactNode => {
   const {
     valid = false,
     invalid = false,
-    stateful,
+    stateful = false,
     variant,
     scale: rippleScale,
     color,
