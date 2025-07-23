@@ -46,6 +46,11 @@ export const UnstyledButton = <E extends ElementType>(
   });
 
   const styles = setButtonStyle(variant, color, checked);
+  const {
+    loader: loaderProps,
+    ripple: rippleProps,
+    ...restComponentsProps
+  } = componentsProps;
 
   const loaderNode = (
     <UnstyledLoader
@@ -68,12 +73,8 @@ export const UnstyledButton = <E extends ElementType>(
       border="unset"
       color={color}
       ring="unset"
-      componentsProps={{
-        bar: componentsProps.bar,
-        outerBorder: componentsProps.outerBorder,
-        innerBorder: componentsProps.innerBorder
-      }}
-      {...componentsProps.loader}
+      componentsProps={restComponentsProps}
+      {...loaderProps}
     />
   );
 
@@ -109,7 +110,7 @@ export const UnstyledButton = <E extends ElementType>(
           scale="default"
           color={color}
           effect={ripple}
-          {...componentsProps.ripple}
+          {...rippleProps}
         />
       )}
     </UnstyledContainer>
