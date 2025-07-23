@@ -1,6 +1,7 @@
 import { unstyledInputConfig } from '../../components/UnstyledInput/unstyledInputConfig';
 import { systemStyles } from '../../config/system-styles';
 import type { Classes, ClassName } from '../../types';
+import { getInputVariant } from './get-input-variant';
 import { mergeClasses } from './merge-classes';
 
 export const styleInputLabel = (
@@ -13,7 +14,7 @@ export const styleInputLabel = (
   }: Classes
 ): ClassName => {
   const isInput = inputType === 'input';
-  const variantType = inputVariant === 'outlined' ? 'outlined' : 'default';
+  const variantType = getInputVariant(inputVariant);
 
   return mergeClasses(
     unstyledInputConfig.styles.label.default,

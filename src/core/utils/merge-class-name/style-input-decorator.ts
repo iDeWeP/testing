@@ -4,6 +4,7 @@ import { systemStyles } from '../../config/system-styles';
 import type { Classes, ClassName } from '../../types';
 import { getInputColor } from './get-input-color';
 import { getInputRadius } from './get-input-radius';
+import { getInputVariant } from './get-input-variant';
 import { mergeClasses } from './merge-classes';
 
 export const styleInputDecorator = (
@@ -31,7 +32,7 @@ export const styleInputDecorator = (
     decorated = false
   }: Classes
 ): ClassName => {
-  const variantType = inputVariant === 'outlined' ? 'outlined' : 'default';
+  const variantType = getInputVariant(inputVariant);
   const sizeType = decorated ? 'decorated' : 'default';
   const radiusType = getInputRadius(
     inputVariant,

@@ -3,6 +3,7 @@ import { sharedStyles } from '../../config/shared-styles';
 import { systemStyles } from '../../config/system-styles';
 import type { Classes, ClassName } from '../../types';
 import { getInputColor } from './get-input-color';
+import { getInputVariant } from './get-input-variant';
 import { mergeClasses } from './merge-classes';
 
 export const styleInputFieldset = (
@@ -18,7 +19,7 @@ export const styleInputFieldset = (
     color = 'unset'
   }: Classes
 ): ClassName => {
-  const variantType = inputVariant === 'outlined' ? 'outlined' : 'default';
+  const variantType = getInputVariant(inputVariant);
 
   return mergeClasses(
     on && sharedStyles.state.on,
