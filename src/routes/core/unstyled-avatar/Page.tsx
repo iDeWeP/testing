@@ -35,7 +35,6 @@ const Page = (): ReactNode => (
     <InitialsExample />
     <VariantExample />
     <SizeExample />
-    <ColorExample />
     <MarginExample />
     <MarginMExample />
     <MarginMXExample />
@@ -55,6 +54,7 @@ const Page = (): ReactNode => (
     <RadiusRTRExample />
     <RadiusRBLExample />
     <RadiusRBRExample />
+    <ColorExample />
     <ShadowExample />
     <RingExample />
     <GapExample />

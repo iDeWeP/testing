@@ -3,5 +3,9 @@ import type { RouteObject } from 'react-router';
 
 export const UnstyledAvatarRoute: RouteObject = {
   path: '/core/unstyled-avatar',
-  Component: lazy(() => import('./Page'))
+  Component: lazy(
+    (): Promise<
+      typeof import('/Users/ritchiw/vscode/testing/src/routes/core/unstyled-avatar/Page')
+    > => import('./Page')
+  )
 };
