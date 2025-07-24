@@ -1,5 +1,5 @@
-import { sharedStyles } from '../../config/shared-styles';
-import { systemStyles } from '../../config/system-styles';
+import { sharedStyle } from '../../config/shared-style';
+import { systemStyle } from '../../config/system-style';
 import type { Classes, ClassName } from '../../types';
 import { mergeClasses } from './merge-classes';
 
@@ -9,12 +9,12 @@ export const styleGroup = (
 ): ClassName => {
   const isInner = groupGap.startsWith('-');
   const gapType = isInner ? orientation : 'all';
-  const spacing = isInner ? groupGap.slice(1) : groupGap;
+  const gap = isInner ? groupGap.slice(1) : groupGap;
 
   return mergeClasses(
-    sharedStyles.display.flex,
-    sharedStyles.direction[orientation],
-    systemStyles.gap[gapType][spacing],
+    sharedStyle.display.flex,
+    sharedStyle.direction[orientation],
+    systemStyle.gap[gapType][gap],
     className
   );
 };
