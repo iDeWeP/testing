@@ -13,14 +13,12 @@ export const unstyledButtonConfig: ComponentConfig<UnstyledButtonConfigProps> &
   Styles = {
   props: {
     as: 'button',
-    variant: 'solid',
-    size: 'md',
     scale: 'default',
-    radius: 'unset',
-    color: 'unset',
     effect: 'unset',
     componentsProps: {},
     ripple: 'none',
+    variant: 'solid',
+    size: 'md',
     margin: 'unset',
     m: 'unset',
     mx: 'unset',
@@ -30,6 +28,7 @@ export const unstyledButtonConfig: ComponentConfig<UnstyledButtonConfigProps> &
     ml: 'unset',
     mr: 'unset',
     border: 'auto',
+    radius: 'unset',
     r: 'unset',
     rt: 'unset',
     rb: 'unset',
@@ -39,6 +38,7 @@ export const unstyledButtonConfig: ComponentConfig<UnstyledButtonConfigProps> &
     rtr: 'unset',
     rbl: 'unset',
     rbr: 'unset',
+    color: 'unset',
     shadow: 'unset',
     gap: 'unset'
   },

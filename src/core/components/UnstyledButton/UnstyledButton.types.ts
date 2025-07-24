@@ -9,7 +9,6 @@ import type {
   Color,
   Loading,
   DefaultScale,
-  Radius,
   Effect,
   Ripple
 } from '../../types';
@@ -60,11 +59,7 @@ export type UnstyledButtonOptionalProps = {
 };
 
 export type UnstyledButtonDefaultProps = {
-  variant?: Variant;
-  size?: Size;
   scale?: DefaultScale;
-  radius?: Radius;
-  color?: Color;
   effect?: Effect;
   componentsProps?: UnstyledButtonComponentsProps;
   ripple?: Ripple;
