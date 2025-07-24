@@ -5,12 +5,9 @@ export const unstyledCardFooterConfig: ComponentConfig<UnstyledCardFooterConfigP
   {
     props: {
       as: 'div',
-      variant: 'solid',
       orientation: 'row',
+      variant: 'solid',
       padding: 'unset',
-      radius: 'unset',
-      color: 'unset',
-      gap: 'unset',
       p: 'unset',
       px: 'unset',
       py: 'unset',
@@ -34,6 +31,7 @@ export const unstyledCardFooterConfig: ComponentConfig<UnstyledCardFooterConfigP
       bb: 'unset',
       bl: 'unset',
       br: 'unset',
+      radius: 'unset',
       r: 'unset',
       rt: 'unset',
       rb: 'unset',
@@ -44,8 +42,10 @@ export const unstyledCardFooterConfig: ComponentConfig<UnstyledCardFooterConfigP
       rbl: 'unset',
       rbr: 'unset',
       font: 'unset',
+      color: 'unset',
       shadow: 'unset',
       ring: 'unset',
+      gap: 'unset',
       gx: 'unset',
       gy: 'unset'
     }
