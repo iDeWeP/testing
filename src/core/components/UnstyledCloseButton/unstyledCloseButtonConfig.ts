@@ -5,12 +5,12 @@ export const unstyledCloseButtonConfig: ComponentConfig<UnstyledCloseButtonConfi
   {
     props: {
       as: 'button',
+      componentsProps: {},
       variant: 'solid',
       size: 'md',
       radius: 'unset',
       color: 'unset',
       effect: 'unset',
-      componentsProps: {},
       ripple: 'none',
       margin: 'unset',
       m: 'unset',

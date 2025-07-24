@@ -1,15 +1,5 @@
 import type { ElementType } from 'react';
-import type {
-  ComponentRefProps,
-  SVGNodeProps,
-  Variant,
-  Size,
-  Radius,
-  Color,
-  Effect,
-  Ripple,
-  MergeProps
-} from '../../types';
+import type { ComponentRefProps, SVGNodeProps, MergeProps } from '../../types';
 import type {
   UnstyledButtonRippleProps,
   UnstyledButtonLoaderProps,
@@ -39,13 +29,7 @@ export type UnstyledCloseButtonOptionalProps = {
 };
 
 export type UnstyledCloseButtonDefaultProps = {
-  variant?: Variant;
-  size?: Size;
-  radius?: Radius;
-  color?: Color;
-  effect?: Effect;
   componentsProps?: UnstyledCloseButtonComponentsProps;
-  ripple?: Ripple;
 };
 
 export type UnstyledCloseButtonConfigProps = MergeProps<
