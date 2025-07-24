@@ -55,6 +55,8 @@ export type UnstyledBoxDefaultProps = {
   shadow?: Shadow;
   ring?: Color;
   gap?: Gap;
+  gx?: Gap;
+  gy?: Gap;
 };
 
 export type UnstyledBoxConfigProps = UnstyledBoxDefaultProps;
