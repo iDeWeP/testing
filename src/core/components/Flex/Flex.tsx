@@ -16,6 +16,8 @@ export const Flex = <E extends ElementType>(props: FlexProps<E>): ReactNode => {
 
   return (
     <UnstyledBox
+      gx="unset"
+      gy="unset"
       className={mergedClassName}
       {...restProps}
     />

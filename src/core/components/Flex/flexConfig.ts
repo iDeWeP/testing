@@ -43,8 +43,6 @@ export const flexConfig: ComponentConfig<FlexConfigProps> = {
     font: 'unset',
     color: 'unset',
     shadow: 'unset',
-    ring: 'unset',
-    gx: 'unset',
-    gy: 'unset'
+    ring: 'unset'
   }
 };

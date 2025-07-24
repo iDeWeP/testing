@@ -10,11 +10,11 @@ export type FlexDefaultProps = {
 };
 
 export type FlexConfigProps = MergeProps<
-  UnstyledBoxConfigProps,
+  Omit<UnstyledBoxConfigProps, 'gx' | 'gy'>,
   FlexDefaultProps
 >;
 
 export type FlexProps<E extends ElementType> = MergeProps<
-  UnstyledBoxProps<E>,
+  Omit<UnstyledBoxProps<E>, 'gx' | 'gy'>,
   FlexDefaultProps
 >;
