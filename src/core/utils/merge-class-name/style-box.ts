@@ -49,9 +49,7 @@ export const styleBox = (
     color = 'unset',
     shadow = 'unset',
     ring = 'unset',
-    gap = 'unset',
-    gx = 'unset',
-    gy = 'unset'
+    gap = 'unset'
   }: Classes
 ): ClassName => {
   const paddingType = getSpacing(padding);
@@ -107,8 +105,6 @@ export const styleBox = (
     systemStyles.shadow[shadow],
     hasRing && sharedStyles.ring.default,
     systemStyles.gap.all[gap],
-    systemStyles.gap.x[gx],
-    systemStyles.gap.y[gy],
     className
   );
 };
