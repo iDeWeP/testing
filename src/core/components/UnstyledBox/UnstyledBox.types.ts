@@ -4,13 +4,14 @@ import type {
   Padding,
   Margin,
   Border,
+  DefaultBorder,
   Radius,
   Font,
   Color,
   Shadow,
+  Ring,
   Gap,
-  MergeProps,
-  DefaultBorder
+  MergeProps
 } from '../../types';
 
 export type UnstyledBoxDefaultProps = {
@@ -53,7 +54,7 @@ export type UnstyledBoxDefaultProps = {
   font?: Font;
   color?: Color;
   shadow?: Shadow;
-  ring?: Color;
+  ring?: Ring;
   gap?: Gap;
   gx?: Gap;
   gy?: Gap;
