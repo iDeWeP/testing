@@ -36,7 +36,8 @@ export const UnstyledCard = <E extends ElementType>(
     variant,
     orientation,
     color,
-    effect
+    effect,
+    decorated: clickable
   });
 
   const hasRipple = ripple !== 'none' && !disabled;
