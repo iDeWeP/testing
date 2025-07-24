@@ -33,9 +33,6 @@ export const UnstyledLoader = (props: UnstyledLoaderProps): ReactNode => {
 
   const theme = useTheme();
 
-  const length = 2 * Math.PI * (20 - thickness / 2);
-  const offset = length - (value * length) / 100;
-
   const mergedClassName = mergeClassName('loader', className, {
     theme,
     disabled,
@@ -55,6 +52,8 @@ export const UnstyledLoader = (props: UnstyledLoaderProps): ReactNode => {
     ring
   });
 
+  const length = 2 * Math.PI * (20 - thickness / 2);
+  const offset = length - (value * length) / 100;
   const isBordered = isAutoBordered(variant, border);
 
   return (

@@ -6,6 +6,7 @@ import type {
   Margin,
   SpinnerBorder,
   Color,
+  Ring,
   MergeProps
 } from '../../types';
 
@@ -38,7 +39,7 @@ export type UnstyledLoaderDefaultProps = {
   mr?: Margin;
   border?: SpinnerBorder;
   color?: Color;
-  ring?: Color;
+  ring?: Ring;
   componentsProps?: UnstyledLoaderComponentsProps;
 };
 

@@ -12,7 +12,7 @@ type Styles = {
 export const unstyledLoaderConfig: ComponentConfig<UnstyledLoaderConfigProps> &
   Styles = {
   props: {
-    spin: true,
+    spin: false,
     value: 0,
     variant: 'solid',
     float: false,
