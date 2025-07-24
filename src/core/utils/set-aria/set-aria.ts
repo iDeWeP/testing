@@ -53,5 +53,5 @@ const typeMap: TypeMap = {
 
 export const setAria = (
   type: keyof typeof typeMap,
-  prop: Props = {}
-): SetAria => typeMap[type](prop);
+  props: Props = {}
+): SetAria => typeMap[type](props);
