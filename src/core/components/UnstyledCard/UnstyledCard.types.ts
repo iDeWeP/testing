@@ -1,7 +1,6 @@
 import type { ElementType } from 'react';
 import type {
   ComponentRefProps,
-  Variant,
   Orientation,
   Effect,
   Ripple,
@@ -24,7 +23,6 @@ export type UnstyledCardOptionalProps = {
 };
 
 export type UnstyledCardDefaultProps = {
-  variant?: Variant;
   orientation?: Orientation;
   effect?: Effect;
   componentsProps?: UnstyledCardComponentsProps;
