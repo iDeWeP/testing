@@ -5,13 +5,10 @@ export const unstyledCardBodyConfig: ComponentConfig<UnstyledCardBodyConfigProps
   {
     props: {
       as: 'div',
-      variant: 'solid',
       orientation: 'row',
       placement: 'center',
+      variant: 'solid',
       padding: 'unset',
-      radius: 'unset',
-      color: 'unset',
-      gap: 'unset',
       p: 'unset',
       px: 'unset',
       py: 'unset',
@@ -35,6 +32,7 @@ export const unstyledCardBodyConfig: ComponentConfig<UnstyledCardBodyConfigProps
       bb: 'unset',
       bl: 'unset',
       br: 'unset',
+      radius: 'unset',
       r: 'unset',
       rt: 'unset',
       rb: 'unset',
@@ -45,8 +43,10 @@ export const unstyledCardBodyConfig: ComponentConfig<UnstyledCardBodyConfigProps
       rbl: 'unset',
       rbr: 'unset',
       font: 'unset',
+      color: 'unset',
       shadow: 'unset',
       ring: 'unset',
+      gap: 'unset',
       gx: 'unset',
       gy: 'unset'
     }
