@@ -2,7 +2,7 @@ import type { ReactNode } from 'react';
 
 export const getInitials = (
   children?: ReactNode,
-  isEnabled?: boolean
+  isEnabled: boolean = true
 ): ReactNode =>
   !isEnabled || typeof children !== 'string'
     ? children
