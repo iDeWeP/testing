@@ -12,6 +12,7 @@ import type {
   UnstyledButtonRippleProps,
   UnstyledButtonLoaderProps,
   UnstyledButtonBarProps,
+  UnstyledButtonOptionalProps,
   UnstyledButtonConfigProps,
   UnstyledButtonProps
 } from '../UnstyledButton/UnstyledButton.types';
@@ -28,10 +29,10 @@ export type IconButtonComponentsProps = {
   outerBorder?: IconButtonBarProps;
 };
 
-export type IconButtonOptionalProps = {
-  loading?: boolean;
-  disabled?: boolean;
-};
+export type IconButtonOptionalProps = Omit<
+  UnstyledButtonOptionalProps,
+  'startDecorator' | 'endDecorator'
+>;
 
 export type IconButtonDefaultProps = {
   variant?: Variant;
