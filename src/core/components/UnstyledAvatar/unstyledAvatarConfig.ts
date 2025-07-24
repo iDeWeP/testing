@@ -8,7 +8,6 @@ export const unstyledAvatarConfig: ComponentConfig<UnstyledAvatarConfigProps> =
       initials: false,
       variant: 'solid',
       size: 'md',
-      color: 'unset',
       margin: 'unset',
       m: 'unset',
       mx: 'unset',
@@ -28,6 +27,7 @@ export const unstyledAvatarConfig: ComponentConfig<UnstyledAvatarConfigProps> =
       rtr: 'unset',
       rbl: 'unset',
       rbr: 'unset',
+      color: 'unset',
       shadow: 'unset',
       ring: 'unset',
       gap: 'unset'
