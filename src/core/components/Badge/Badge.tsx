@@ -39,7 +39,7 @@ export const Badge = <E extends ElementType>(
   return (
     <UnstyledContainer
       size={setInnerSize(defaultSize)}
-      scale={decorated ? 'circle' : 'default'}
+      scale={decorated ? 'circle' : 'none'}
       className={mergedClassName}
       {...restProps}
     >
