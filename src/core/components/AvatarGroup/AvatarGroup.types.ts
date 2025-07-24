@@ -1,5 +1,5 @@
 import type { ElementType } from 'react';
-import type { Orientation, Spacing, Gap, MergeProps } from '../../types';
+import type { Orientation, GroupGap, MergeProps } from '../../types';
 import type { UnstyledAvatarProps } from '../UnstyledAvatar/UnstyledAvatar.types';
 import type {
   UnstyledGroupConfigProps,
@@ -19,8 +19,7 @@ export type AvatarGroupOptionalProps = {
 
 export type AvatarGroupDefaultProps = {
   orientation?: Orientation;
-  spacing?: Spacing;
-  gap?: Gap;
+  gap?: GroupGap;
   componentsProps?: AvatarGroupComponentsProps;
   surplus?: boolean;
 };

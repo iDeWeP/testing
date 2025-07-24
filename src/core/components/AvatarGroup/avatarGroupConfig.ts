@@ -5,8 +5,7 @@ export const avatarGroupConfig: ComponentConfig<AvatarGroupConfigProps> = {
   props: {
     as: 'div',
     orientation: 'row',
-    spacing: 'xs',
-    gap: 'unset',
+    gap: '-xs',
     componentsProps: {},
     surplus: true,
     variant: 'solid',

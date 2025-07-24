@@ -12,7 +12,7 @@ export const AvatarGroup = <E extends ElementType>(
   const { max, total, componentsProps, surplus, children, ...restProps } =
     useMergeProps('avatarGroup', avatarGroupConfig.props, props);
 
-  const { nodes, count } = getMaxTotal(surplus, children, max, total);
+  const { nodes, count } = getMaxTotal(max, total, surplus, children);
 
   return (
     <UnstyledGroup {...restProps}>
@@ -23,7 +23,6 @@ export const AvatarGroup = <E extends ElementType>(
           initials={false}
           variant="solid"
           size="md"
-          color="surface"
           margin="unset"
           m="unset"
           mx="unset"
@@ -43,6 +42,7 @@ export const AvatarGroup = <E extends ElementType>(
           rtr="unset"
           rbl="unset"
           rbr="unset"
+          color="surface"
           shadow="unset"
           ring="unset"
           gap="unset"
