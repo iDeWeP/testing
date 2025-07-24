@@ -2,10 +2,7 @@ import type { ElementType } from 'react';
 import type {
   ComponentRefProps,
   CheckableVariant,
-  Size,
   DefaultScale,
-  Radius,
-  Color,
   Effect,
   Ripple,
   MergeProps
@@ -28,10 +25,7 @@ export type UnstyledToggleButtonOptionalProps = {
 
 export type UnstyledToggleButtonDefaultProps = {
   variant?: CheckableVariant;
-  size?: Size;
   scale?: DefaultScale;
-  radius?: Radius;
-  color?: Color;
   effect?: Effect;
   componentsProps?: UnstyledToggleButtonComponentsProps;
   ripple?: Ripple;

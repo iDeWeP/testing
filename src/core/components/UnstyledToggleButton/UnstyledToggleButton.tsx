@@ -17,12 +17,12 @@ export const UnstyledToggleButton = <E extends ElementType>(
     as: Component,
     checked = false,
     disabled = false,
+    variant,
     effect,
     className,
     componentsProps,
     ripple,
     children,
-    variant,
     color,
     ...restProps
   } = mergeProps(unstyledToggleButtonConfig.props, props);
@@ -41,23 +41,21 @@ export const UnstyledToggleButton = <E extends ElementType>(
     effect
   });
 
+  const buttonProps = {
+    element: Component,
+    disabled
+  };
   const hasRipple = ripple !== 'none' && !disabled;
 
   return (
     <UnstyledContainer
       as={Component}
-      {...setProps('button', {
-        element: Component,
-        disabled
-      })}
+      {...setProps('button', buttonProps)}
       variant={currentVariant}
       color={currentColor}
       ring="unset"
       className={mergedClassName}
-      {...setAria('button', {
-        element: Component,
-        disabled
-      })}
+      {...setAria('button', buttonProps)}
       {...restProps}
     >
       {children}

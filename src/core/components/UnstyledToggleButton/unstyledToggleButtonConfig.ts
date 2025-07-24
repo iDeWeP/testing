@@ -6,13 +6,11 @@ export const unstyledToggleButtonConfig: ComponentConfig<UnstyledToggleButtonCon
     props: {
       as: 'button',
       variant: 'solid',
-      size: 'md',
       scale: 'default',
-      radius: 'unset',
-      color: 'unset',
       effect: 'unset',
       componentsProps: {},
       ripple: 'none',
+      size: 'md',
       margin: 'unset',
       m: 'unset',
       mx: 'unset',
@@ -22,6 +20,7 @@ export const unstyledToggleButtonConfig: ComponentConfig<UnstyledToggleButtonCon
       ml: 'unset',
       mr: 'unset',
       border: 'auto',
+      radius: 'unset',
       r: 'unset',
       rt: 'unset',
       rb: 'unset',
@@ -31,6 +30,7 @@ export const unstyledToggleButtonConfig: ComponentConfig<UnstyledToggleButtonCon
       rtr: 'unset',
       rbl: 'unset',
       rbr: 'unset',
+      color: 'unset',
       shadow: 'unset',
       gap: 'unset'
     }
