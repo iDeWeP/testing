@@ -1,6 +1,6 @@
 import type { CSSStyles, CSSProps } from '../types';
 
-type SharedStyles = {
+type SharedStyle = {
   state: CSSStyles;
   focusable: CSSStyles;
   display: CSSStyles;
@@ -23,7 +23,7 @@ type SharedStyles = {
   input: CSSProps;
 };
 
-export const sharedStyles: SharedStyles = {
+export const sharedStyle: SharedStyle = {
   state: {
     on: {
       group: 'on'

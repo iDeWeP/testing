@@ -13,7 +13,7 @@ type ColorState = 'default' | 'on';
 type ColorType = 'bg' | 'border' | 'text' | 'fill' | 'stroke' | 'ring';
 type GapType = 'all' | 'x' | 'y' | 'row' | 'col';
 
-type SystemCSSStyles = {
+type SystemCSSStyle = {
   placement: CSSStyles;
   size: {
     default: Record<SizeType, CSSStyles>;
@@ -29,7 +29,7 @@ type SystemCSSStyles = {
   gap: Record<GapType, CSSStyles>;
 };
 
-export const systemStyles: SystemCSSStyles = {
+export const systemStyle: SystemCSSStyle = {
   placement: {
     'top-left': {
       top: 'top-0',
