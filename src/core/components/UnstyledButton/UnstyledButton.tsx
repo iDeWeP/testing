@@ -1,9 +1,9 @@
 import type { ElementType, ReactNode } from 'react';
 import { useTheme } from '../../hooks/use-theme/use-theme';
+import { getFontSize } from '../../utils/merge-class-name/get-font-size';
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
 import { mergeProps } from '../../utils/merge-props/merge-props';
 import { setAria } from '../../utils/set-aria/set-aria';
-import { setLoaderSize } from '../../utils/set-loader-size/set-loader-size';
 import { setProps } from '../../utils/set-props/set-props';
 import { UnstyledContainer } from '../UnstyledContainer/UnstyledContainer';
 import { UnstyledLoader } from '../UnstyledLoader/UnstyledLoader';
@@ -55,7 +55,7 @@ export const UnstyledButton = <E extends ElementType>(
       value={75}
       variant={variant}
       float={loading === true}
-      size={setLoaderSize(size)}
+      size={getFontSize(size)}
       thickness={4}
       margin="unset"
       m="unset"

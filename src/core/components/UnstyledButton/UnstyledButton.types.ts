@@ -7,6 +7,7 @@ import type {
   Margin,
   SpinnerBorder,
   Color,
+  Ring,
   Loading,
   DefaultScale,
   Effect,
@@ -39,7 +40,7 @@ export type UnstyledButtonLoaderProps = MergeProps<
     mr?: Margin;
     border?: SpinnerBorder;
     color?: Color;
-    ring?: Color;
+    ring?: Ring;
   }
 >;
 
