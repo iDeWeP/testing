@@ -9,6 +9,10 @@ import type {
 // LIBRARY TYPES
 export type Theme = 'light' | 'dark';
 export type Loading = boolean | 'left' | 'right';
+export type Cursor = {
+  x: number;
+  y: number;
+};
 export type Collision = 'unset' | 'shift' | 'flip';
 export type Trigger =
   | 'unset'
@@ -168,6 +172,7 @@ export type Color =
   | 'warning-on'
   | 'error-on';
 export type Shadow = DefaultSpacing;
+export type Ring = Color;
 export type Font = Spacing;
 export type Gap = Spacing;
 export type GroupGap =
@@ -209,10 +214,6 @@ export type Transition =
   | CollapseTransition;
 export type DefaultTransition = 'fade' | GrowTransition;
 export type Ripple = 'none' | 'default';
-export type Cursor = {
-  x: number;
-  y: number;
-};
 
 /*
  *  CLASSNAME TYPES
