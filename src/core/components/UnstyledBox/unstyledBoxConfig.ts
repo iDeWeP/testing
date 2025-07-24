@@ -43,8 +43,6 @@ export const unstyledBoxConfig: ComponentConfig<UnstyledBoxConfigProps> = {
     color: 'unset',
     shadow: 'unset',
     ring: 'unset',
-    gap: 'unset',
-    gx: 'unset',
-    gy: 'unset'
+    gap: 'unset'
   }
 };

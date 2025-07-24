@@ -50,8 +50,6 @@ export const UnstyledBox = <E extends ElementType>(
     shadow,
     ring,
     gap,
-    gx,
-    gy,
     className,
     ...restProps
   } = mergeProps(unstyledBoxConfig.props, props);
@@ -99,9 +97,7 @@ export const UnstyledBox = <E extends ElementType>(
     color,
     shadow,
     ring,
-    gap,
-    gx,
-    gy
+    gap
   });
 
   return (
