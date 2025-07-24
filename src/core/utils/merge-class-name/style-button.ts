@@ -1,6 +1,6 @@
 import { unstyledButtonConfig } from '../../components/UnstyledButton/unstyledButtonConfig';
-import { sharedStyles } from '../../config/shared-styles';
-import { systemStyles } from '../../config/system-styles';
+import { sharedStyle } from '../../config/shared-style';
+import { systemStyle } from '../../config/system-style';
 import type { Classes, ClassName } from '../../types';
 import { getColor } from './get-color';
 import { getFocusableState } from './get-focusable-state';
@@ -18,18 +18,18 @@ export const styleButton = (
   }: Classes
 ): ClassName => {
   const isLoading = loading === true;
-  const focusable = getFocusableState({ disabled, loading });
+  const focusable = getFocusableState({ loading, disabled });
   const colorType = getColor(variant, color, { disabled });
 
   return mergeClasses(
-    sharedStyles.position.relative,
-    sharedStyles.focusable[focusable],
-    disabled && systemStyles.color.default.bg[theme][colorType.bg],
-    disabled && systemStyles.color.default.text[theme][colorType.text],
-    disabled && systemStyles.color.default.fill[theme][colorType.text],
-    !loading && systemStyles.color.default.ring[theme][colorType.ring],
+    sharedStyle.position.relative,
+    sharedStyle.focusable[focusable],
+    disabled && systemStyle.color.default.bg[theme][colorType.bg],
+    disabled && systemStyle.color.default.text[theme][colorType.text],
+    disabled && systemStyle.color.default.fill[theme][colorType.text],
+    !loading && systemStyle.color.default.ring[theme][colorType.ring],
     isLoading && unstyledButtonConfig.styles.root.loading,
-    sharedStyles.effect[effect],
+    sharedStyle.effect[effect],
     className
   );
 };
