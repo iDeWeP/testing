@@ -22,6 +22,8 @@ export const UnstyledGroup = <E extends ElementType>(
 
   return (
     <UnstyledBox
+      gx="unset"
+      gy="unset"
       className={mergedClassName}
       {...restProps}
     />

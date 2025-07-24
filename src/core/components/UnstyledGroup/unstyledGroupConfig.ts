@@ -44,8 +44,6 @@ export const unstyledGroupConfig: ComponentConfig<UnstyledGroupConfigProps> = {
     font: 'unset',
     color: 'unset',
     shadow: 'unset',
-    ring: 'unset',
-    gx: 'unset',
-    gy: 'unset'
+    ring: 'unset'
   }
 };

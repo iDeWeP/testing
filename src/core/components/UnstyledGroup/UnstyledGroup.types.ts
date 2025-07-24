@@ -11,11 +11,11 @@ export type UnstyledGroupDefaultProps = {
 };
 
 export type UnstyledGroupConfigProps = MergeProps<
-  UnstyledBoxConfigProps,
+  Omit<UnstyledBoxConfigProps, 'gx' | 'gy'>,
   UnstyledGroupDefaultProps
 >;
 
 export type UnstyledGroupProps<E extends ElementType> = MergeProps<
-  UnstyledBoxProps<E>,
+  Omit<UnstyledBoxProps<E>, 'gx' | 'gy'>,
   UnstyledGroupDefaultProps
 >;
