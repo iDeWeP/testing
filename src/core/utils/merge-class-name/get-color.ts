@@ -2,10 +2,10 @@ import type { Variant, Color } from '../../types';
 import { hasVariantBg } from './has-variant-bg';
 import { isColorReversed } from './is-color-reverser';
 
-type State = {
-  disabled?: boolean;
+type States = {
   valid?: boolean;
   invalid?: boolean;
+  disabled?: boolean;
 };
 
 type ColorType = Record<'bg' | 'text' | 'ring', string>;
@@ -41,7 +41,7 @@ const variantMap: VariantMap = {
 export const getColor = (
   variant: Variant,
   color: Color,
-  state?: State,
+  states: States = {},
   isChecked?: boolean
 ): ColorType => {
   if (color === 'unset') {
@@ -52,7 +52,9 @@ export const getColor = (
     };
   }
 
-  if (isChecked === false && state?.disabled) {
+  const { valid, invalid, disabled } = states;
+
+  if (isChecked === false && disabled) {
     return {
       bg: hasVariantBg(variant) ? 'disabled-light' : 'none',
       text: hasVariantBg(variant) ? 'disabled' : 'disabled-light',
@@ -60,7 +62,7 @@ export const getColor = (
     };
   }
 
-  if (isChecked && state?.disabled) {
+  if (isChecked && disabled) {
     return {
       bg: hasVariantBg(variant) ? 'disabled' : 'none',
       text: hasVariantBg(variant) ? 'disabled-light' : 'disabled',
@@ -68,7 +70,7 @@ export const getColor = (
     };
   }
 
-  if (state?.disabled) {
+  if (disabled) {
     return {
       bg: hasVariantBg(variant) ? 'disabled-light' : 'none',
       text: 'disabled',
@@ -76,12 +78,12 @@ export const getColor = (
     };
   }
 
-  const isDefault = isChecked === false;
-  const defaultVariant = isDefault && variant === 'solid' ? 'light' : variant;
-  const defaultColor = isDefault ? 'surface' : color.replace('-on', '');
+  const isUnchecked = isChecked === false;
+  const defaultVariant = isUnchecked && variant === 'solid' ? 'light' : variant;
+  const defaultColor = isUnchecked ? 'surface' : color.replace('-on', '');
 
   return variantMap[defaultVariant](
-    state?.valid ? 'success' : state?.invalid ? 'error' : defaultColor,
-    !isDefault && isColorReversed(color)
+    valid ? 'success' : invalid ? 'error' : defaultColor,
+    !isUnchecked && isColorReversed(color)
   );
 };

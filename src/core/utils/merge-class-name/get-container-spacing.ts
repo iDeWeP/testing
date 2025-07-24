@@ -16,12 +16,12 @@ export const getContainerSpacing = (
   scale: Scale,
   border: Border
 ): Spacing => {
-  const padding = scale === 'circle' || scale === 'square' ? 'square' : 'rect';
+  const paddingScale = scale === 'default' ? 'rect' : 'square';
   const defaultSize = getDefaultSize(size);
 
   return {
     size: scale === 'square' ? 'square' : 'default',
-    scale: isSpacingInner(size) ? `inner-${padding}` : padding,
+    scale: isSpacingInner(size) ? `inner-${paddingScale}` : paddingScale,
     isSquare: scale === 'square',
     all: isAutoBordered(variant, border)
       ? `${defaultSize}-${defaultSize}`

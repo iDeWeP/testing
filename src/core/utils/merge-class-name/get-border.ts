@@ -10,9 +10,9 @@ type Props = {
 export const getBorder = (
   variant: Variant,
   border: Border,
-  prop: Props = {}
+  props: Props = {}
 ): Record<'all' | 'x' | 't' | 'b', Border> => {
-  const { isChecked, placement } = prop;
+  const { isChecked, placement } = props;
   const isDefaultPlacement = !placement || placement === 'default';
   const defaultBorder = isAutoBordered(variant, border, isChecked)
     ? 'set'
