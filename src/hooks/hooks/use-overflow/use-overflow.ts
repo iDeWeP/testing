@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react';
 
-export const useOverflow = (observe: boolean = true): void => {
+export const useOverflow = (isEnabled: boolean = true): void => {
   const setOverflow = useState(getComputedStyle(document.body).overflow)[1];
 
   useEffect((): VoidFunction | void => {
-    if (!observe) {
+    if (!isEnabled) {
       return;
     }
 
@@ -23,5 +23,5 @@ export const useOverflow = (observe: boolean = true): void => {
     observer.observe(el, { attributes: true, attributeFilter: ['style'] });
 
     return (): void => observer.disconnect();
-  }, [observe, setOverflow]);
+  }, [isEnabled, setOverflow]);
 };
