@@ -30,12 +30,12 @@ export const useAnimation = (isEntered?: boolean): UseAnimationResult => {
     (isOpen): void =>
       setAnimation((prevState): number => {
         if (isOpen) {
-          return prevState === EXITED || prevState === EXITING
+          return prevState === EXITING || prevState === EXITED
             ? ENTERING
             : prevState;
         }
 
-        return prevState === ENTERED || prevState === ENTERING
+        return prevState === ENTERING || prevState === ENTERED
           ? EXITING
           : prevState;
       }),
