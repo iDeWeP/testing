@@ -1,4 +1,4 @@
-import type { CSSProps, CSSStyles } from '../types';
+import type { CSSStyles, CSSProps } from '../types';
 
 type SharedStyles = {
   state: CSSStyles;
@@ -200,5 +200,5 @@ export const sharedStyles: SharedStyles = {
     appearance: 'appearance-none',
     focus: 'focus:outline-none',
     group: 'peer'
-  },
+  }
 };

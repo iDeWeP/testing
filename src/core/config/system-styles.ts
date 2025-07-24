@@ -2214,29 +2214,6 @@ export const systemStyles: SystemCSSStyles = {
       }
     }
   },
-  shadow: {
-    none: {
-      boxShadow: 'shadow-none'
-    },
-    xs: {
-      boxShadow: 'shadow-xs'
-    },
-    sm: {
-      boxShadow: 'shadow-sm'
-    },
-    md: {
-      boxShadow: 'shadow-md'
-    },
-    lg: {
-      boxShadow: 'shadow-lg'
-    },
-    xl: {
-      boxShadow: 'shadow-xl'
-    },
-    xxl: {
-      boxShadow: 'shadow-2xl'
-    }
-  },
   color: {
     default: {
       bg: {
@@ -4257,6 +4234,29 @@ export const systemStyles: SystemCSSStyles = {
           }
         }
       }
+    }
+  },
+  shadow: {
+    none: {
+      boxShadow: 'shadow-none'
+    },
+    xs: {
+      boxShadow: 'shadow-xs'
+    },
+    sm: {
+      boxShadow: 'shadow-sm'
+    },
+    md: {
+      boxShadow: 'shadow-md'
+    },
+    lg: {
+      boxShadow: 'shadow-lg'
+    },
+    xl: {
+      boxShadow: 'shadow-xl'
+    },
+    xxl: {
+      boxShadow: 'shadow-2xl'
     }
   },
   gap: {
