@@ -1,4 +1,4 @@
-import { useCallback, useState, type SyntheticEvent } from 'react';
+import { type SyntheticEvent, useState, useCallback } from 'react';
 import { combineHandlers } from '../../../utils/utils/combine-handlers/combine-handlers';
 
 export type HandleFunction<E extends SyntheticEvent> = (
