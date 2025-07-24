@@ -3,5 +3,9 @@ import type { RouteObject } from 'react-router';
 
 export const BoxRoute: RouteObject = {
   path: '/core/box',
-  Component: lazy(() => import('./Page'))
+  Component: lazy(
+    (): Promise<
+      typeof import('/Users/ritchiw/vscode/testing/src/routes/core/box/Page')
+    > => import('./Page')
+  )
 };
