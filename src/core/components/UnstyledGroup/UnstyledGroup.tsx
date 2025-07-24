@@ -10,8 +10,8 @@ export const UnstyledGroup = <E extends ElementType>(
 ): ReactNode => {
   const {
     orientation,
-    className,
     gap: groupGap,
+    className,
     ...restProps
   } = mergeProps(unstyledGroupConfig.props, props);
 
