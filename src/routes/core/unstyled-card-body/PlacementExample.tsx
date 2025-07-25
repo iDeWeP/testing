@@ -6,10 +6,34 @@ import { Example } from './Example';
 export const PlacementExample = (): ReactNode => (
   <ExampleSection title="Placement">
     <ExampleCard>
-      <Example placement="default">DEFAULT</Example>
-      <Example placement="center">CENTER</Example>
-      <Example placement="top">TOP</Example>
-      <Example placement="bottom">BOTTOM</Example>
+      <Example
+        variant="outlined"
+        placement="default"
+        padding="md"
+      >
+        DEFAULT
+      </Example>
+      <Example
+        variant="outlined"
+        placement="center"
+        padding="md"
+      >
+        CENTER
+      </Example>
+      <Example
+        variant="outlined"
+        placement="top"
+        padding="md"
+      >
+        TOP
+      </Example>
+      <Example
+        variant="outlined"
+        placement="bottom"
+        padding="md"
+      >
+        BOTTOM
+      </Example>
     </ExampleCard>
   </ExampleSection>
 );
