@@ -54,16 +54,16 @@ export const styleBox = (
     gy = 'unset'
   }: Classes
 ): ClassName => {
-  const paddingType = getSpacing(padding);
-  const marginType = getSpacing(margin);
-  const defaultBorder = getBorder(variant, border).all;
-  const colorType = getColor(variant, color);
+  const autoPadding = getSpacing(padding);
+  const autoMargin = getSpacing(margin);
+  const autoBorder = getBorder(variant, border).all;
+  const autoColor = getColor(variant, color);
   const hasRing = ring !== 'unset';
 
   return mergeClasses(
-    systemStyle.padding.default.all[paddingType.all],
-    systemStyle.padding.default.x[paddingType.x],
-    systemStyle.padding.default.y[paddingType.y],
+    systemStyle.padding.default.all[autoPadding.all],
+    systemStyle.padding.default.x[autoPadding.x],
+    systemStyle.padding.default.y[autoPadding.y],
     systemStyle.padding.default.all[p],
     systemStyle.padding.default.x[px],
     systemStyle.padding.default.y[py],
@@ -71,9 +71,9 @@ export const styleBox = (
     systemStyle.padding.default.b[pb],
     systemStyle.padding.default.l[pl],
     systemStyle.padding.default.r[pr],
-    systemStyle.margin.all[marginType.all],
-    systemStyle.margin.x[marginType.x],
-    systemStyle.margin.y[marginType.y],
+    systemStyle.margin.all[autoMargin.all],
+    systemStyle.margin.x[autoMargin.x],
+    systemStyle.margin.y[autoMargin.y],
     systemStyle.margin.all[m],
     systemStyle.margin.x[mx],
     systemStyle.margin.y[my],
@@ -81,7 +81,7 @@ export const styleBox = (
     systemStyle.margin.b[mb],
     systemStyle.margin.l[ml],
     systemStyle.margin.r[mr],
-    systemStyle.border.all[defaultBorder],
+    systemStyle.border.all[autoBorder],
     systemStyle.border.all[b],
     systemStyle.border.x[bx],
     systemStyle.border.y[by],
@@ -100,9 +100,9 @@ export const styleBox = (
     systemStyle.radius.bl[rbl],
     systemStyle.radius.br[rbr],
     systemStyle.size.font[font],
-    systemStyle.color.default.bg[theme][colorType.bg],
-    systemStyle.color.default.text[theme][colorType.text],
-    systemStyle.color.default.fill[theme][colorType.text],
+    systemStyle.color.default.bg[theme][autoColor.bg],
+    systemStyle.color.default.text[theme][autoColor.text],
+    systemStyle.color.default.fill[theme][autoColor.text],
     hasRing && systemStyle.color.default.ring[theme][ring],
     systemStyle.shadow[shadow],
     hasRing && sharedStyle.ring.default,

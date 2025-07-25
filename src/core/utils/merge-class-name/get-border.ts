@@ -14,14 +14,14 @@ export const getBorder = (
 ): Record<'all' | 'x' | 't' | 'b', Border> => {
   const { isChecked, placement } = props;
   const isDefaultPlacement = !placement || placement === 'default';
-  const defaultBorder = isAutoBordered(variant, border, isChecked)
+  const autoBorder = isAutoBordered(variant, border, isChecked)
     ? 'set'
     : border;
 
   return {
-    all: getClass(isDefaultPlacement, defaultBorder),
-    x: getClass(!isDefaultPlacement, defaultBorder),
-    t: getClass(placement === 'top', defaultBorder),
-    b: getClass(placement === 'bottom', defaultBorder)
+    all: getClass(isDefaultPlacement, autoBorder),
+    x: getClass(!isDefaultPlacement, autoBorder),
+    t: getClass(placement === 'top', autoBorder),
+    b: getClass(placement === 'bottom', autoBorder)
   };
 };

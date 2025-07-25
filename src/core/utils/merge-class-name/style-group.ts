@@ -9,12 +9,12 @@ export const styleGroup = (
 ): ClassName => {
   const isInner = groupGap.startsWith('-');
   const gapType = isInner ? orientation : 'all';
-  const gap = isInner ? groupGap.slice(1) : groupGap;
+  const autoGap = isInner ? groupGap.slice(1) : groupGap;
 
   return mergeClasses(
     sharedStyle.display.flex,
     sharedStyle.direction[orientation],
-    systemStyle.gap[gapType][gap],
+    systemStyle.gap[gapType][autoGap],
     className
   );
 };

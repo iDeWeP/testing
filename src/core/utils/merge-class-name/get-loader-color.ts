@@ -45,11 +45,11 @@ export const getLoaderColor = (
   }
 
   const isUnchecked = isChecked === false;
-  const statefulVariant = hasVariantBg(variant) ? 'light' : 'text';
-  const defaultColor = isUnchecked ? 'surface' : color.replace('-on', '');
+  const autoVariant = hasVariantBg(variant) ? 'light' : 'text';
+  const autoColor = isUnchecked ? 'surface' : color.replace('-on', '');
 
-  return variantMap[isUnchecked ? statefulVariant : variant](
-    valid ? 'success' : invalid ? 'error' : defaultColor,
+  return variantMap[isUnchecked ? autoVariant : variant](
+    valid ? 'success' : invalid ? 'error' : autoColor,
     !isUnchecked && isColorReversed(color)
   );
 };

@@ -79,11 +79,11 @@ export const getColor = (
   }
 
   const isUnchecked = isChecked === false;
-  const defaultVariant = isUnchecked && variant === 'solid' ? 'light' : variant;
-  const defaultColor = isUnchecked ? 'surface' : color.replace('-on', '');
+  const autoVariant = isUnchecked && variant === 'solid' ? 'light' : variant;
+  const autoColor = isUnchecked ? 'surface' : color.replace('-on', '');
 
-  return variantMap[defaultVariant](
-    valid ? 'success' : invalid ? 'error' : defaultColor,
+  return variantMap[autoVariant](
+    valid ? 'success' : invalid ? 'error' : autoColor,
     !isUnchecked && isColorReversed(color)
   );
 };

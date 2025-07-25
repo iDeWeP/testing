@@ -15,27 +15,23 @@ export const styleRipple = (
     color = 'unset'
   }: Classes
 ): ClassName => {
-  const uncheckedTextColor = getColor(
+  const uncheckedColor = getColor(
     variant,
     color,
     { valid, invalid },
     false
   ).text;
-  const textColor = getColor(variant, color, { valid, invalid }).text;
+  const defaultColor = getColor(variant, color, { valid, invalid }).text;
+  const autoColor = stateful ? uncheckedColor : defaultColor;
 
   return mergeClasses(
     unstyledRippleConfig.styles.root.default,
-    !stateful &&
-      unstyledRippleConfig.styles.root.color[rippleScale].stateless[theme][
-        textColor
-      ],
-    stateful &&
-      unstyledRippleConfig.styles.root.color[rippleScale].stateless[theme][
-        uncheckedTextColor
-      ],
+    unstyledRippleConfig.styles.root.color[rippleScale].stateless[theme][
+      autoColor
+    ],
     stateful &&
       unstyledRippleConfig.styles.root.color[rippleScale].stateful[theme][
-        textColor
+        defaultColor
       ],
     className
   );

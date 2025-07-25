@@ -42,19 +42,19 @@ export const styleContainer = (
   }: Classes
 ): ClassName => {
   const spacing = getContainerSpacing(variant, size, scale, border);
-  const marginType = getSpacing(margin);
-  const defaultBorder = getBorder(variant, border).all;
-  const fontSize = getFontSize(size);
-  const colorType = getColor(variant, color);
+  const autoMargin = getSpacing(margin);
+  const autoBorder = getBorder(variant, border).all;
+  const autoFont = getFontSize(size);
+  const autoColor = getColor(variant, color);
   const hasRing = ring !== 'unset';
 
   return mergeClasses(
     unstyledContainerConfig.styles.root.default,
-    systemStyle.size.default[spacing.size][size],
-    systemStyle.padding[spacing.scale].all[spacing.all],
-    systemStyle.margin.all[marginType.all],
-    systemStyle.margin.x[marginType.x],
-    systemStyle.margin.y[marginType.y],
+    systemStyle.size.default[spacing.sizeScale][spacing.size],
+    systemStyle.padding[spacing.paddingScale].all[spacing.padding],
+    systemStyle.margin.all[autoMargin.all],
+    systemStyle.margin.x[autoMargin.x],
+    systemStyle.margin.y[autoMargin.y],
     systemStyle.margin.all[m],
     systemStyle.margin.x[mx],
     systemStyle.margin.y[my],
@@ -62,7 +62,7 @@ export const styleContainer = (
     systemStyle.margin.b[mb],
     systemStyle.margin.l[ml],
     systemStyle.margin.r[mr],
-    systemStyle.border.all[defaultBorder],
+    systemStyle.border.all[autoBorder],
     systemStyle.radius.all[radius],
     systemStyle.radius.all[r],
     systemStyle.radius.t[rt],
@@ -73,10 +73,10 @@ export const styleContainer = (
     systemStyle.radius.tr[rtr],
     systemStyle.radius.bl[rbl],
     systemStyle.radius.br[rbr],
-    systemStyle.size.font[fontSize],
-    systemStyle.color.default.bg[theme][colorType.bg],
-    systemStyle.color.default.text[theme][colorType.text],
-    systemStyle.color.default.fill[theme][colorType.text],
+    systemStyle.size.font[autoFont],
+    systemStyle.color.default.bg[theme][autoColor.bg],
+    systemStyle.color.default.text[theme][autoColor.text],
+    systemStyle.color.default.fill[theme][autoColor.text],
     hasRing && systemStyle.color.default.ring[theme][ring],
     systemStyle.shadow[shadow],
     hasRing && sharedStyle.ring.default,

@@ -4,10 +4,11 @@ import { getDefaultSize } from './get-default-size';
 import { isSpacingInner } from './is-spacing-inner';
 
 type Spacing = {
-  size: 'default' | 'square';
-  scale: 'rect' | 'square' | 'inner-rect' | 'inner-square';
+  sizeScale: 'default' | 'square';
+  paddingScale: 'rect' | 'square' | 'inner-rect' | 'inner-square';
   isSquare: boolean;
-  all: string;
+  size: string;
+  padding: string;
 };
 
 export const getContainerSpacing = (
@@ -18,13 +19,15 @@ export const getContainerSpacing = (
 ): Spacing => {
   const paddingScale = scale === 'default' ? 'rect' : 'square';
   const defaultSize = getDefaultSize(size);
+  const autoPadding = isAutoBordered(variant, border)
+    ? `${defaultSize}-${defaultSize}`
+    : defaultSize;
 
   return {
-    size: scale === 'square' ? 'square' : 'default',
-    scale: isSpacingInner(size) ? `inner-${paddingScale}` : paddingScale,
+    sizeScale: scale === 'square' ? 'square' : 'default',
+    paddingScale: isSpacingInner(size) ? `inner-${paddingScale}` : paddingScale,
     isSquare: scale === 'square',
-    all: isAutoBordered(variant, border)
-      ? `${defaultSize}-${defaultSize}`
-      : defaultSize
+    size: scale === 'none' ? 'unset' : size,
+    padding: scale === 'none' ? 'unset' : autoPadding
   };
 };

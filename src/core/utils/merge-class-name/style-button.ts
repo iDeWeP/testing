@@ -19,15 +19,15 @@ export const styleButton = (
 ): ClassName => {
   const isLoading = loading === true;
   const focusable = getFocusableState({ loading, disabled });
-  const colorType = getColor(variant, color, { disabled });
+  const autoColor = getColor(variant, color, { disabled });
 
   return mergeClasses(
     sharedStyle.position.relative,
     sharedStyle.focusable[focusable],
-    disabled && systemStyle.color.default.bg[theme][colorType.bg],
-    disabled && systemStyle.color.default.text[theme][colorType.text],
-    disabled && systemStyle.color.default.fill[theme][colorType.text],
-    !loading && systemStyle.color.default.ring[theme][colorType.ring],
+    disabled && systemStyle.color.default.bg[theme][autoColor.bg],
+    disabled && systemStyle.color.default.text[theme][autoColor.text],
+    disabled && systemStyle.color.default.fill[theme][autoColor.text],
+    !loading && systemStyle.color.default.ring[theme][autoColor.ring],
     isLoading && unstyledButtonConfig.styles.root.loading,
     sharedStyle.effect[effect],
     className
