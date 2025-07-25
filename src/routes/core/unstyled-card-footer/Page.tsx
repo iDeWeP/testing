@@ -12,8 +12,6 @@ import { ColorExample } from './ColorExample';
 import { DefaultExample } from './DefaultExample';
 import { FontExample } from './FontExample';
 import { GapExample } from './GapExample';
-import { GapXExample } from './GapXExample';
-import { GapYExample } from './GapYExample';
 import { MarginExample } from './MarginExample';
 import { MarginMBExample } from './MarginMBExample';
 import { MarginMExample } from './MarginMExample';
@@ -49,12 +47,9 @@ const Page = (): ReactNode => (
   <>
     <ExampleTitle>UnstyledCardFooter</ExampleTitle>
     <DefaultExample />
-    <VariantExample />
     <OrientationExample />
+    <VariantExample />
     <PaddingExample />
-    <RadiusExample />
-    <ColorExample />
-    <GapExample />
     <PaddingPExample />
     <PaddingPXExample />
     <PaddingPYExample />
@@ -78,6 +73,7 @@ const Page = (): ReactNode => (
     <BorderBBExample />
     <BorderBLExample />
     <BorderBRExample />
+    <RadiusExample />
     <RadiusRExample />
     <RadiusRTExample />
     <RadiusRBExample />
@@ -88,10 +84,10 @@ const Page = (): ReactNode => (
     <RadiusRBLExample />
     <RadiusRBRExample />
     <FontExample />
+    <ColorExample />
     <ShadowExample />
     <RingExample />
-    <GapXExample />
-    <GapYExample />
+    <GapExample />
   </>
 );
 
