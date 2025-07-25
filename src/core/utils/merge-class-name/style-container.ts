@@ -2,9 +2,9 @@ import { unstyledContainerConfig } from '../../components/UnstyledContainer/unst
 import { sharedStyle } from '../../config/shared-style';
 import { systemStyle } from '../../config/system-style';
 import type { Classes, ClassName } from '../../types';
+import { getAutoSpacing } from './get-auto-spacing';
 import { getBorder } from './get-border';
 import { getColor } from './get-color';
-import { getContainerSpacing } from './get-container-spacing';
 import { getFontSize } from './get-font-size';
 import { getSpacing } from './get-spacing';
 import { mergeClasses } from './merge-classes';
@@ -41,7 +41,7 @@ export const styleContainer = (
     gap = 'unset'
   }: Classes
 ): ClassName => {
-  const spacing = getContainerSpacing(variant, size, scale, border);
+  const autoSpacing = getAutoSpacing(variant, size, scale, border);
   const autoMargin = getSpacing(margin);
   const autoBorder = getBorder(variant, border).all;
   const autoFont = getFontSize(size);
@@ -50,8 +50,8 @@ export const styleContainer = (
 
   return mergeClasses(
     unstyledContainerConfig.styles.root.default,
-    systemStyle.size.default[spacing.sizeType][spacing.size],
-    systemStyle.padding[spacing.paddingType].all[spacing.padding],
+    systemStyle.size.default[autoSpacing.sizeScale][autoSpacing.size],
+    systemStyle.padding[autoSpacing.paddingScale].all[autoSpacing.padding],
     systemStyle.margin.all[autoMargin.all],
     systemStyle.margin.x[autoMargin.x],
     systemStyle.margin.y[autoMargin.y],
@@ -81,7 +81,7 @@ export const styleContainer = (
     systemStyle.shadow[shadow],
     hasRing && sharedStyle.ring.default,
     systemStyle.gap.all[gap],
-    spacing.isSquare && sharedStyle.scale.square,
+    autoSpacing.isSquare && sharedStyle.scale.square,
     className
   );
 };
