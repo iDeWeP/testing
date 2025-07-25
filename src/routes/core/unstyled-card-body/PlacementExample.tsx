@@ -10,6 +10,7 @@ export const PlacementExample = (): ReactNode => (
         variant="outlined"
         placement="default"
         padding="md"
+        radius="md"
       >
         DEFAULT
       </Example>
@@ -17,6 +18,7 @@ export const PlacementExample = (): ReactNode => (
         variant="outlined"
         placement="center"
         padding="md"
+        radius="md"
       >
         CENTER
       </Example>
@@ -24,6 +26,7 @@ export const PlacementExample = (): ReactNode => (
         variant="outlined"
         placement="top"
         padding="md"
+        radius="md"
       >
         TOP
       </Example>
@@ -31,6 +34,7 @@ export const PlacementExample = (): ReactNode => (
         variant="outlined"
         placement="bottom"
         padding="md"
+        radius="md"
       >
         BOTTOM
       </Example>
