@@ -6,10 +6,10 @@ type MaxTotal = {
 };
 
 export const getMaxTotal = (
-  surplus: boolean,
-  children?: ReactNode,
   max?: number,
-  total?: number
+  total?: number,
+  surplus?: boolean,
+  children?: ReactNode
 ): MaxTotal => {
   if (!children || !Array.isArray(children)) {
     return { nodes: children, count: 0 };
