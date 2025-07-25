@@ -37,6 +37,8 @@ export const UnstyledCardBody = <E extends ElementType>(
       margin="unset"
       border="unset"
       radius="unset"
+      gx="unset"
+      gy="unset"
       className={mergedClassName}
       {...restProps}
     />
