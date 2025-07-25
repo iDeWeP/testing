@@ -11,7 +11,8 @@ import type {
   Loading,
   DefaultScale,
   Effect,
-  Ripple
+  Ripple,
+  OmitRing
 } from '../../types';
 import type {
   UnstyledContainerConfigProps,
@@ -67,11 +68,11 @@ export type UnstyledButtonDefaultProps = {
 };
 
 export type UnstyledButtonConfigProps = MergeProps<
-  Omit<UnstyledContainerConfigProps, 'ring'>,
+  OmitRing<UnstyledContainerConfigProps>,
   UnstyledButtonDefaultProps
 >;
 
 export type UnstyledButtonProps<E extends ElementType> = MergeProps<
-  Omit<UnstyledContainerProps<E>, 'ring'>,
+  OmitRing<UnstyledContainerProps<E>>,
   UnstyledButtonDefaultProps & UnstyledButtonOptionalProps
 >;
