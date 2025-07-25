@@ -1,6 +1,7 @@
-import { sharedStyles } from '../../config/shared-styles';
-import { systemStyles } from '../../config/system-styles';
+import { sharedStyle } from '../../config/shared-style';
+import { systemStyle } from '../../config/system-style';
 import type { Classes, ClassName } from '../../types';
+import { getAutoRadius } from './get-auto-radius';
 import { getBorder } from './get-border';
 import { getSpacing } from './get-spacing';
 import { mergeClasses } from './merge-classes';
@@ -17,28 +18,29 @@ export const styleCardBody = (
     radius = 'unset'
   }: Classes
 ): ClassName => {
-  const paddingType = getSpacing(padding, cardPlacement);
-  const marginType = getSpacing(margin, cardPlacement);
-  const borderType = getBorder(variant, border, { placement: cardPlacement });
+  const autoPadding = getSpacing(padding, cardPlacement);
+  const autoMargin = getSpacing(margin, cardPlacement);
+  const autoBorder = getBorder(variant, border, { placement: cardPlacement });
+  const autoRadius = getAutoRadius(cardPlacement, radius);
 
   return mergeClasses(
-    sharedStyles.display.flex,
-    systemStyles.padding.default.all[paddingType.all],
-    systemStyles.padding.default.x[paddingType.x],
-    systemStyles.padding.default.y[paddingType.y],
-    systemStyles.padding.default.t[paddingType.t],
-    systemStyles.padding.default.b[paddingType.b],
-    systemStyles.margin.all[marginType.all],
-    systemStyles.margin.x[marginType.x],
-    systemStyles.margin.y[marginType.y],
-    systemStyles.margin.t[marginType.t],
-    systemStyles.margin.b[marginType.b],
-    systemStyles.border.all[borderType.all],
-    systemStyles.border.x[borderType.x],
-    systemStyles.border.t[borderType.t],
-    systemStyles.border.b[borderType.b],
-    systemStyles.radius.b[radius],
-    sharedStyles.direction[orientation],
+    sharedStyle.display.flex,
+    systemStyle.padding.default.all[autoPadding.all],
+    systemStyle.padding.default.x[autoPadding.x],
+    systemStyle.padding.default.y[autoPadding.y],
+    systemStyle.padding.default.t[autoPadding.t],
+    systemStyle.padding.default.b[autoPadding.b],
+    systemStyle.margin.all[autoMargin.all],
+    systemStyle.margin.x[autoMargin.x],
+    systemStyle.margin.y[autoMargin.y],
+    systemStyle.margin.t[autoMargin.t],
+    systemStyle.margin.b[autoMargin.b],
+    systemStyle.border.all[autoBorder.all],
+    systemStyle.border.x[autoBorder.x],
+    systemStyle.border.t[autoBorder.t],
+    systemStyle.border.b[autoBorder.b],
+    systemStyle.radius[autoRadius.type][autoRadius.radius],
+    sharedStyle.direction[orientation],
     className
   );
 };
