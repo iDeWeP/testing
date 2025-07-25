@@ -21,6 +21,6 @@ export type UnstyledCardBodyConfigProps = MergeProps<
 >;
 
 export type UnstyledCardBodyProps<E extends ElementType> = MergeProps<
-  UnstyledBoxProps<E>,
+  OmitGap<UnstyledBoxProps<E>>,
   UnstyledCardBodyDefaultProps
 >;
