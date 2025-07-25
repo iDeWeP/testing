@@ -31,9 +31,8 @@ export const sharedStyle: SharedStyle = {
   },
   focusable: {
     default: {
-      ring: 'ring-offset-2',
       focus: 'focus:outline-none',
-      focusVisible: 'focus-visible:ring-2'
+      focusVisible: 'focus-visible:ring-offset-2 focus-visible:ring-2'
     },
     disabled: {
       cursor: 'cursor-not-allowed',
