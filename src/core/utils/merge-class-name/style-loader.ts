@@ -11,7 +11,7 @@ export const styleLoader = (
   {
     theme = 'light',
     disabled = false,
-    spin = true,
+    spin = false,
     variant = 'solid',
     float = false,
     size = 'md',
