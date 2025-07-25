@@ -6,11 +6,18 @@ import { Example } from './Example';
 export const ScaleExample = (): ReactNode => (
   <ExampleSection title="Scale">
     <ExampleCard>
+      <Example scale="none">NONE</Example>
       <Example scale="default">DEFAULT</Example>
       <Example scale="square">SQUARE</Example>
       <Example scale="circle">CIRCLE</Example>
     </ExampleCard>
     <ExampleCard>
+      <Example
+        size="md-md"
+        scale="none"
+      >
+        NONE
+      </Example>
       <Example
         size="md-md"
         scale="default"
