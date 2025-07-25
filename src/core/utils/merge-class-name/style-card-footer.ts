@@ -1,7 +1,6 @@
 import { sharedStyle } from '../../config/shared-style';
 import { systemStyle } from '../../config/system-style';
 import type { Classes, ClassName } from '../../types';
-import { getAutoRadius } from './get-auto-radius';
 import { getBorder } from './get-border';
 import { getSpacing } from './get-spacing';
 import { mergeClasses } from './merge-classes';
@@ -20,7 +19,6 @@ export const styleCardFooter = (
   const autoPadding = getSpacing(padding, 'bottom');
   const autoMargin = getSpacing(margin, 'bottom');
   const autoBorder = getBorder(variant, border, { placement: 'bottom' });
-  const autoRadius = getAutoRadius('bottom', radius);
 
   return mergeClasses(
     sharedStyle.display.flex,
@@ -30,7 +28,7 @@ export const styleCardFooter = (
     systemStyle.margin.b[autoMargin.b],
     systemStyle.border.x[autoBorder.x],
     systemStyle.border.b[autoBorder.b],
-    systemStyle.radius[autoRadius.type][autoRadius.radius],
+    systemStyle.radius.b[radius],
     sharedStyle.direction[orientation],
     className
   );
