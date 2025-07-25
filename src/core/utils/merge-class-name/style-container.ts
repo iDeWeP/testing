@@ -50,8 +50,8 @@ export const styleContainer = (
 
   return mergeClasses(
     unstyledContainerConfig.styles.root.default,
-    systemStyle.size.default[spacing.sizeScale][spacing.size],
-    systemStyle.padding[spacing.paddingScale].all[spacing.padding],
+    systemStyle.size.default[spacing.sizeType][spacing.size],
+    systemStyle.padding[spacing.paddingType].all[spacing.padding],
     systemStyle.margin.all[autoMargin.all],
     systemStyle.margin.x[autoMargin.x],
     systemStyle.margin.y[autoMargin.y],
