@@ -24,6 +24,7 @@ import { RadiusRRExample } from './RadiusRRExample';
 import { RadiusRTExample } from './RadiusRTExample';
 import { RadiusRTLExample } from './RadiusRTLExample';
 import { RadiusRTRExample } from './RadiusRTRExample';
+import { RippleExample } from './RippleExample';
 import { ShadowExample } from './ShadowExample';
 import { SizeExample } from './SizeExample';
 import { VariantExample } from './VariantExample';
@@ -34,11 +35,10 @@ const Page = (): ReactNode => (
     <DefaultExample />
     <LoadingExample />
     <DisabledExample />
+    <EffectExample />
+    <RippleExample />
     <VariantExample />
     <SizeExample />
-    <RadiusExample />
-    <ColorExample />
-    <EffectExample />
     <MarginExample />
     <MarginMExample />
     <MarginMXExample />
@@ -48,6 +48,7 @@ const Page = (): ReactNode => (
     <MarginMLExample />
     <MarginMRExample />
     <BorderExample />
+    <RadiusExample />
     <RadiusRExample />
     <RadiusRTExample />
     <RadiusRBExample />
@@ -57,6 +58,7 @@ const Page = (): ReactNode => (
     <RadiusRTRExample />
     <RadiusRBLExample />
     <RadiusRBRExample />
+    <ColorExample />
     <ShadowExample />
   </>
 );
