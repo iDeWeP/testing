@@ -13,7 +13,7 @@ export const UnstyledDropdown = <E extends ElementType>(
     props
   );
 
-  const mergedClassName = mergeClassName('card', className, {
+  const mergedClassName = mergeClassName('paper', className, {
     orientation
   });
 
@@ -27,6 +27,8 @@ export const UnstyledDropdown = <E extends ElementType>(
       mb="unset"
       ml="unset"
       mr="unset"
+      gx="unset"
+      gy="unset"
       className={mergedClassName}
       {...restProps}
     />

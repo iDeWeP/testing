@@ -9,6 +9,7 @@ import type {
   Font,
   Color,
   Shadow,
+  Ring,
   Gap,
   MergeProps
 } from '../../types';
@@ -46,10 +47,8 @@ export type UnstyledDropdownDefaultProps = {
   font?: Font;
   color?: Color;
   shadow?: Shadow;
-  ring?: Color;
+  ring?: Ring;
   gap?: Gap;
-  gx?: Gap;
-  gy?: Gap;
 };
 
 export type UnstyledDropdownConfigProps = UnstyledDropdownDefaultProps;
