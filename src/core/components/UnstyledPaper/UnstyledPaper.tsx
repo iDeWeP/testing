@@ -19,6 +19,8 @@ export const UnstyledPaper = <E extends ElementType>(
 
   return (
     <UnstyledBox
+      gx="unset"
+      gy="unset"
       className={mergedClassName}
       {...restProps}
     />

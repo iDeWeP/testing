@@ -1,5 +1,5 @@
 import type { ElementType } from 'react';
-import type { Orientation, MergeProps } from '../../types';
+import type { Orientation, MergeProps, OmitGaps } from '../../types';
 import type {
   UnstyledBoxConfigProps,
   UnstyledBoxProps
@@ -10,11 +10,11 @@ export type UnstyledPaperDefaultProps = {
 };
 
 export type UnstyledPaperConfigProps = MergeProps<
-  UnstyledBoxConfigProps,
+  OmitGaps<UnstyledBoxConfigProps>,
   UnstyledPaperDefaultProps
 >;
 
 export type UnstyledPaperProps<E extends ElementType> = MergeProps<
-  UnstyledBoxProps<E>,
+  OmitGaps<UnstyledBoxProps<E>>,
   UnstyledPaperDefaultProps
 >;
