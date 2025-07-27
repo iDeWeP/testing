@@ -1,10 +1,8 @@
 import type { ElementType } from 'react';
 import type {
-  Variant,
   CornerPlacement,
   Overlap,
   DefaultSize,
-  Color,
   MergeProps
 } from '../../types';
 import type {
@@ -18,11 +16,9 @@ export type UnstyledBadgeOptionalProps = {
 
 export type UnstyledBadgeDefaultProps = {
   showZero?: boolean;
-  variant?: Variant;
   placement?: CornerPlacement;
   overlap?: Overlap;
   size?: DefaultSize;
-  color?: Color;
 };
 
 export type UnstyledBadgeConfigProps = MergeProps<
