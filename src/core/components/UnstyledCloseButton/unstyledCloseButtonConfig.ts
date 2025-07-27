@@ -6,12 +6,10 @@ export const unstyledCloseButtonConfig: ComponentConfig<UnstyledCloseButtonConfi
     props: {
       as: 'button',
       componentsProps: {},
-      variant: 'solid',
-      size: 'md',
-      radius: 'unset',
-      color: 'unset',
       effect: 'unset',
       ripple: 'none',
+      variant: 'solid',
+      size: 'md',
       margin: 'unset',
       m: 'unset',
       mx: 'unset',
@@ -21,6 +19,7 @@ export const unstyledCloseButtonConfig: ComponentConfig<UnstyledCloseButtonConfi
       ml: 'unset',
       mr: 'unset',
       border: 'auto',
+      radius: 'unset',
       r: 'unset',
       rt: 'unset',
       rb: 'unset',
@@ -30,6 +29,7 @@ export const unstyledCloseButtonConfig: ComponentConfig<UnstyledCloseButtonConfi
       rtr: 'unset',
       rbl: 'unset',
       rbr: 'unset',
+      color: 'unset',
       shadow: 'unset'
     }
   };

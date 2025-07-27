@@ -1,5 +1,11 @@
 import type { ElementType } from 'react';
-import type { ComponentRefProps, SVGNodeProps, MergeProps } from '../../types';
+import type {
+  ComponentRefProps,
+  SVGNodeProps,
+  MergeProps,
+  OmitGap,
+  OmitDecorators
+} from '../../types';
 import type {
   UnstyledButtonRippleProps,
   UnstyledButtonLoaderProps,
@@ -33,11 +39,11 @@ export type UnstyledCloseButtonDefaultProps = {
 };
 
 export type UnstyledCloseButtonConfigProps = MergeProps<
-  Omit<UnstyledButtonConfigProps, 'gap'>,
+  OmitGap<UnstyledButtonConfigProps>,
   UnstyledCloseButtonDefaultProps
 >;
 
 export type UnstyledCloseButtonProps<E extends ElementType> = MergeProps<
-  Omit<UnstyledButtonProps<E>, 'startDecorator' | 'endDecorator' | 'gap'>,
+  OmitDecorators<UnstyledButtonProps<E>>,
   UnstyledCloseButtonDefaultProps & UnstyledCloseButtonOptionalProps
 >;
