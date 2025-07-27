@@ -12,6 +12,9 @@ import { MarginMRExample } from './MarginMRExample';
 import { MarginMTExample } from './MarginMTExample';
 import { MarginMXExample } from './MarginMXExample';
 import { MarginMYExample } from './MarginMYExample';
+import { MaxExample } from './MaxExample';
+import { OverlapExample } from './OverlapExample';
+import { PlacementExample } from './PlacementExample';
 import { RadiusExample } from './RadiusExample';
 import { RadiusRBExample } from './RadiusRBExample';
 import { RadiusRBLExample } from './RadiusRBLExample';
@@ -25,15 +28,20 @@ import { RadiusRTRExample } from './RadiusRTRExample';
 import { RingExample } from './RingExample';
 import { ScaleExample } from './ScaleExample';
 import { ShadowExample } from './ShadowExample';
+import { ShowZeroExample } from './ShowZeroExample';
 import { SizeExample } from './SizeExample';
 import { VariantExample } from './VariantExample';
 
 const Page = (): ReactNode => (
   <>
-    <ExampleTitle>UnstyledContainer</ExampleTitle>
+    <ExampleTitle>UnstyledBadge</ExampleTitle>
     <DefaultExample />
-    <VariantExample />
+    <MaxExample />
+    <ShowZeroExample />
+    <PlacementExample />
+    <OverlapExample />
     <SizeExample />
+    <VariantExample />
     <ScaleExample />
     <MarginExample />
     <MarginMExample />
