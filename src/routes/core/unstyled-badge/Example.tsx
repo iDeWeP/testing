@@ -9,18 +9,22 @@ type Props = {
 
 export const Example = ({
   clear,
-  overlap,
+  overlap = 'rounded',
   children = 'UNSTYLED-BADGE',
   ...restProps
 }: Props): ReactNode => (
   <ExampleAnchor
     radius={
-      overlap === 'square' ? 'unset' : overlap === 'rounded' ? 'lg' : 'full'
+      overlap === 'square' || clear
+        ? 'unset'
+        : overlap === 'rounded'
+        ? 'lg'
+        : 'full'
     }
   >
     <UnstyledBadge
       color={clear ? 'unset' : 'primary'}
-      overlap={overlap}
+      overlap={clear ? 'square' : overlap}
       {...restProps}
     >
       {children}

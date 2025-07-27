@@ -26,7 +26,6 @@ import { RadiusRTExample } from './RadiusRTExample';
 import { RadiusRTLExample } from './RadiusRTLExample';
 import { RadiusRTRExample } from './RadiusRTRExample';
 import { RingExample } from './RingExample';
-import { ScaleExample } from './ScaleExample';
 import { ShadowExample } from './ShadowExample';
 import { ShowZeroExample } from './ShowZeroExample';
 import { SizeExample } from './SizeExample';
@@ -42,7 +41,6 @@ const Page = (): ReactNode => (
     <OverlapExample />
     <SizeExample />
     <VariantExample />
-    <ScaleExample />
     <MarginExample />
     <MarginMExample />
     <MarginMXExample />
