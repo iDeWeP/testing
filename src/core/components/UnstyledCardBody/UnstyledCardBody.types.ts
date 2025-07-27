@@ -3,7 +3,7 @@ import type {
   Orientation,
   CardPlacement,
   MergeProps,
-  OmitGap
+  OmitGaps
 } from '../../types';
 import type {
   UnstyledBoxConfigProps,
@@ -16,11 +16,11 @@ export type UnstyledCardBodyDefaultProps = {
 };
 
 export type UnstyledCardBodyConfigProps = MergeProps<
-  OmitGap<UnstyledBoxConfigProps>,
+  OmitGaps<UnstyledBoxConfigProps>,
   UnstyledCardBodyDefaultProps
 >;
 
 export type UnstyledCardBodyProps<E extends ElementType> = MergeProps<
-  OmitGap<UnstyledBoxProps<E>>,
+  OmitGaps<UnstyledBoxProps<E>>,
   UnstyledCardBodyDefaultProps
 >;

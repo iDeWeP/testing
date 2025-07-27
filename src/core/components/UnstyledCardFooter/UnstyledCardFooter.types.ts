@@ -1,5 +1,5 @@
 import type { ElementType } from 'react';
-import type { Orientation, MergeProps, OmitGap } from '../../types';
+import type { Orientation, MergeProps, OmitGaps } from '../../types';
 import type {
   UnstyledBoxConfigProps,
   UnstyledBoxProps
@@ -10,11 +10,11 @@ export type UnstyledCardFooterDefaultProps = {
 };
 
 export type UnstyledCardFooterConfigProps = MergeProps<
-  OmitGap<UnstyledBoxConfigProps>,
+  OmitGaps<UnstyledBoxConfigProps>,
   UnstyledCardFooterDefaultProps
 >;
 
 export type UnstyledCardFooterProps<E extends ElementType> = MergeProps<
-  OmitGap<UnstyledBoxProps<E>>,
+  OmitGaps<UnstyledBoxProps<E>>,
   UnstyledCardFooterDefaultProps
 >;
