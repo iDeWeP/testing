@@ -6,9 +6,9 @@ import { Example } from './Example';
 export const BorderBYExample = (): ReactNode => (
   <ExampleSection title="Border BY">
     <ExampleCard>
-      <Example by="unset" />
-      <Example by="none" />
-      <Example by="set" />
+      <Example by="unset">UNSET</Example>
+      <Example by="none">NONE</Example>
+      <Example by="set">SET</Example>
     </ExampleCard>
   </ExampleSection>
 );
