@@ -1,5 +1,5 @@
 import type { ElementType } from 'react';
-import type { Orientation, GroupGap, MergeProps, OmitGap } from '../../types';
+import type { Orientation, GroupGap, MergeProps, OmitGaps } from '../../types';
 import type {
   UnstyledBoxConfigProps,
   UnstyledBoxProps
@@ -11,11 +11,11 @@ export type UnstyledGroupDefaultProps = {
 };
 
 export type UnstyledGroupConfigProps = MergeProps<
-  OmitGap<UnstyledBoxConfigProps>,
+  OmitGaps<UnstyledBoxConfigProps>,
   UnstyledGroupDefaultProps
 >;
 
 export type UnstyledGroupProps<E extends ElementType> = MergeProps<
-  OmitGap<UnstyledBoxProps<E>>,
+  OmitGaps<UnstyledBoxProps<E>>,
   UnstyledGroupDefaultProps
 >;

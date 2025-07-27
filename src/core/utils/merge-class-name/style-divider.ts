@@ -1,6 +1,6 @@
 import { unstyledDividerConfig } from '../../components/UnstyledDivider/unstyledDividerConfig';
-import { sharedStyles } from '../../config/shared-styles';
-import { systemStyles } from '../../config/system-styles';
+import { sharedStyle } from '../../config/shared-style';
+import { systemStyle } from '../../config/system-style';
 import type { Classes, ClassName } from '../../types';
 import { getColor } from './get-color';
 import { getDividerSpacing } from './get-divider-spacing';
@@ -33,36 +33,36 @@ export const styleDivider = (
     decorated = false
   }: Classes
 ): ClassName => {
-  const paddingType = getDividerSpacing(orientation, padding);
-  const marginType = getDividerSpacing(orientation, margin);
-  const textColor = getColor('text', color).text;
+  const autoPadding = getDividerSpacing(orientation, padding);
+  const autoMargin = getDividerSpacing(orientation, margin);
+  const autoColor = getColor('text', color).text;
 
   return mergeClasses(
-    sharedStyles.display.flex,
+    sharedStyle.display.flex,
     decorated && unstyledDividerConfig.styles.root.decorated,
     unstyledDividerConfig.styles.root.orientation[orientation],
-    systemStyles.padding.default.x[paddingType.x],
-    systemStyles.padding.default.y[paddingType.y],
-    systemStyles.padding.default.all[p],
-    systemStyles.padding.default.x[px],
-    systemStyles.padding.default.y[py],
-    systemStyles.padding.default.t[pt],
-    systemStyles.padding.default.b[pb],
-    systemStyles.padding.default.l[pl],
-    systemStyles.padding.default.r[pr],
-    systemStyles.margin.x[marginType.x],
-    systemStyles.margin.y[marginType.y],
-    systemStyles.margin.all[m],
-    systemStyles.margin.x[mx],
-    systemStyles.margin.y[my],
-    systemStyles.margin.t[mt],
-    systemStyles.margin.b[mb],
-    systemStyles.margin.l[ml],
-    systemStyles.margin.r[mr],
-    decorated && systemStyles.size.font[font],
-    systemStyles.color.default.text[theme][textColor],
-    decorated && systemStyles.color.default.fill[theme][textColor],
-    decorated && systemStyles.gap.all[gap],
+    systemStyle.padding.default.x[autoPadding.x],
+    systemStyle.padding.default.y[autoPadding.y],
+    systemStyle.padding.default.all[p],
+    systemStyle.padding.default.x[px],
+    systemStyle.padding.default.y[py],
+    systemStyle.padding.default.t[pt],
+    systemStyle.padding.default.b[pb],
+    systemStyle.padding.default.l[pl],
+    systemStyle.padding.default.r[pr],
+    systemStyle.margin.x[autoMargin.x],
+    systemStyle.margin.y[autoMargin.y],
+    systemStyle.margin.all[m],
+    systemStyle.margin.x[mx],
+    systemStyle.margin.y[my],
+    systemStyle.margin.t[mt],
+    systemStyle.margin.b[mb],
+    systemStyle.margin.l[ml],
+    systemStyle.margin.r[mr],
+    decorated && systemStyle.size.font[font],
+    systemStyle.color.default.text[theme][autoColor],
+    decorated && systemStyle.color.default.fill[theme][autoColor],
+    decorated && systemStyle.gap.all[gap],
     className
   );
 };
