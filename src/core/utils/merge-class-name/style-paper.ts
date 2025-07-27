@@ -1,4 +1,4 @@
-import { sharedStyles } from '../../config/shared-styles';
+import { sharedStyle } from '../../config/shared-style';
 import type { Classes, ClassName } from '../../types';
 import { mergeClasses } from './merge-classes';
 
@@ -7,7 +7,7 @@ export const stylePaper = (
   { orientation = 'row' }: Classes
 ): ClassName =>
   mergeClasses(
-    sharedStyles.display.flex,
-    sharedStyles.direction[orientation],
+    sharedStyle.display.flex,
+    sharedStyle.direction[orientation],
     className
   );
