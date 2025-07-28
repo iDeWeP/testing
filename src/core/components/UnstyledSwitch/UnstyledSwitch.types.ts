@@ -49,7 +49,7 @@ export type UnstyledSwitchComponentsProps = {
   ripple?: UnstyledSwitchRippleProps;
 };
 
-export type UnstyledSwitchOptionalProps = {
+type OptionalProps = {
   checked?: boolean;
   valid?: boolean;
   invalid?: boolean;
@@ -57,7 +57,7 @@ export type UnstyledSwitchOptionalProps = {
   children?: SVGNodeProps;
 };
 
-export type UnstyledSwitchDefaultProps = {
+type DefaultProps = {
   variant?: CheckableVariant;
   size?: DefaultSize;
   scale?: SwitchScale;
@@ -86,9 +86,9 @@ export type UnstyledSwitchDefaultProps = {
   ripple?: Ripple;
 };
 
-export type UnstyledSwitchConfigProps = UnstyledSwitchDefaultProps;
+export type UnstyledSwitchConfigProps = DefaultProps;
 
 export type UnstyledSwitchProps = MergeProps<
   ComponentPropsWithRef<'input'>,
-  UnstyledSwitchDefaultProps & UnstyledSwitchOptionalProps
+  DefaultProps & OptionalProps
 >;

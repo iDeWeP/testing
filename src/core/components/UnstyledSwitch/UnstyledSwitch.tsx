@@ -76,8 +76,8 @@ export const UnstyledSwitch = (props: UnstyledSwitchProps): ReactNode => {
     >
       <input
         disabled={disabled}
-        className={mergedClassName}
         {...setProps('switch')}
+        className={mergedClassName}
         {...setAria('switch')}
         {...restProps}
       />
@@ -101,6 +101,7 @@ export const UnstyledSwitch = (props: UnstyledSwitchProps): ReactNode => {
         color={color}
         shadow={shadow}
         decorated={hasRipple}
+        {...componentsProps.trail}
       />
       <UnstyledSwitchBar
         valid={valid}
@@ -123,6 +124,7 @@ export const UnstyledSwitch = (props: UnstyledSwitchProps): ReactNode => {
         color={color}
         shadow={shadow}
         decorated={hasRipple}
+        {...componentsProps.bar}
       />
       <UnstyledSwitchIcon
         valid={valid}
