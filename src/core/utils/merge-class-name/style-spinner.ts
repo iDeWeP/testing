@@ -1,5 +1,5 @@
-import { sharedStyles } from '../../config/shared-styles';
-import { systemStyles } from '../../config/system-styles';
+import { sharedStyle } from '../../config/shared-style';
+import { systemStyle } from '../../config/system-style';
 import type { Classes, ClassName } from '../../types';
 import { getSpacing } from './get-spacing';
 import { mergeClasses } from './merge-classes';
@@ -22,28 +22,28 @@ export const styleSpinner = (
     ring = 'unset'
   }: Classes
 ): ClassName => {
-  const marginType = getSpacing(margin);
+  const autoMargin = getSpacing(margin);
   const hasRing = ring !== 'unset';
   const isSpinning = spin && !disabled;
 
   return mergeClasses(
-    sharedStyles.spinner,
-    systemStyles.size.default.square[size],
-    systemStyles.margin.all[marginType.all],
-    systemStyles.margin.x[marginType.x],
-    systemStyles.margin.y[marginType.y],
-    systemStyles.margin.all[m],
-    systemStyles.margin.x[mx],
-    systemStyles.margin.y[my],
-    systemStyles.margin.t[mt],
-    systemStyles.margin.b[mb],
-    systemStyles.margin.l[ml],
-    systemStyles.margin.r[mr],
-    hasRing && systemStyles.color.default.ring[theme][ring],
-    hasRing && sharedStyles.ring.default,
-    isSpinning && sharedStyles.animation.spin,
-    !isSpinning && sharedStyles.rotate['-90'],
-    disabled && sharedStyles.cursor.disabled,
+    sharedStyle.spinner,
+    systemStyle.size.default.square[size],
+    systemStyle.margin.all[autoMargin.all],
+    systemStyle.margin.x[autoMargin.x],
+    systemStyle.margin.y[autoMargin.y],
+    systemStyle.margin.all[m],
+    systemStyle.margin.x[mx],
+    systemStyle.margin.y[my],
+    systemStyle.margin.t[mt],
+    systemStyle.margin.b[mb],
+    systemStyle.margin.l[ml],
+    systemStyle.margin.r[mr],
+    hasRing && systemStyle.color.default.ring[theme][ring],
+    hasRing && sharedStyle.ring.default,
+    isSpinning && sharedStyle.animation.spin,
+    !isSpinning && sharedStyle.rotate['-90'],
+    disabled && sharedStyle.cursor.disabled,
     className
   );
 };
