@@ -6,24 +6,24 @@ import { Example } from './Example';
 export const MarginMRExample = (): ReactNode => (
   <ExampleSection title="Margin MR">
     <ExampleCard>
-      <Example mr="unset" />
-      <Example mr="none" />
-      <Example mr="xs" />
-      <Example mr="sm" />
-      <Example mr="md" />
-      <Example mr="lg" />
-      <Example mr="xl" />
-      <Example mr="xxl" />
+      <Example mr="unset">UNSET</Example>
+      <Example mr="none">NONE</Example>
+      <Example mr="xs">XS</Example>
+      <Example mr="sm">SM</Example>
+      <Example mr="md">MD</Example>
+      <Example mr="lg">LG</Example>
+      <Example mr="xl">XL</Example>
+      <Example mr="xxl">XXL</Example>
     </ExampleCard>
     <ExampleCard>
-      <Example mr="unset" />
-      <Example mr="none" />
-      <Example mr="xs-xs" />
-      <Example mr="sm-sm" />
-      <Example mr="md-md" />
-      <Example mr="lg-lg" />
-      <Example mr="xl-xl" />
-      <Example mr="xxl-xxl" />
+      <Example mr="unset">UNSET</Example>
+      <Example mr="none">NONE</Example>
+      <Example mr="xs-xs">XS-XS</Example>
+      <Example mr="sm-sm">SM-SM</Example>
+      <Example mr="md-md">MD-MD</Example>
+      <Example mr="lg-lg">LG-LG</Example>
+      <Example mr="xl-xl">XL-XL</Example>
+      <Example mr="xxl-xxl">XXL-XXL</Example>
     </ExampleCard>
   </ExampleSection>
 );

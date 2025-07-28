@@ -4,9 +4,14 @@ import type { UnstyledInputProps } from '../../../core/components/UnstyledInput/
 
 type Props = {
   clear?: boolean;
+  children?: ReactNode;
 } & UnstyledInputProps<'input'>;
 
-export const Example = ({ clear, ...restProps }: Props): ReactNode => {
+export const Example = ({
+  clear,
+  children,
+  ...restProps
+}: Props): ReactNode => {
   const [value, setValue] = useState('');
 
   return (
@@ -16,6 +21,7 @@ export const Example = ({ clear, ...restProps }: Props): ReactNode => {
       onChange={(event: ChangeEvent<HTMLTextAreaElement>): void =>
         setValue(event.target.value)
       }
+      label={children}
       {...restProps}
     />
   );

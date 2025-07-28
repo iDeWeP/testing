@@ -6,26 +6,26 @@ import { Example } from './Example';
 export const ColorExample = (): ReactNode => (
   <ExampleSection title="Color">
     <ExampleCard>
-      <Example color="unset" />
-      <Example color="surface" />
-      <Example color="neutral" />
-      <Example color="primary" />
-      <Example color="secondary" />
-      <Example color="tertiary" />
-      <Example color="success" />
-      <Example color="warning" />
-      <Example color="error" />
+      <Example color="unset">UNSET</Example>
+      <Example color="surface">SURFACE</Example>
+      <Example color="neutral">NEUTRAL</Example>
+      <Example color="primary">PRIMARY</Example>
+      <Example color="secondary">SECONDARY</Example>
+      <Example color="tertiary">TERTIARY</Example>
+      <Example color="success">SUCCESS</Example>
+      <Example color="warning">WARNING</Example>
+      <Example color="error">ERROR</Example>
     </ExampleCard>
     <ExampleCard>
-      <Example color="unset" />
-      <Example color="surface-on" />
-      <Example color="neutral-on" />
-      <Example color="primary-on" />
-      <Example color="secondary-on" />
-      <Example color="tertiary-on" />
-      <Example color="success-on" />
-      <Example color="warning-on" />
-      <Example color="error-on" />
+      <Example color="unset">UNSET</Example>
+      <Example color="surface-on">SURFACE-ON</Example>
+      <Example color="neutral-on">NEUTRAL-ON</Example>
+      <Example color="primary-on">PRIMARY-ON</Example>
+      <Example color="secondary-on">SECONDARY-ON</Example>
+      <Example color="tertiary-on">TERTIARY-ON</Example>
+      <Example color="success-on">SUCCESS-ON</Example>
+      <Example color="warning-on">WARNING-ON</Example>
+      <Example color="error-on">ERROR-ON</Example>
     </ExampleCard>
   </ExampleSection>
 );

@@ -6,8 +6,8 @@ import { Example } from './Example';
 export const ResizeExample = (): ReactNode => (
   <ExampleSection title="Resize">
     <ExampleCard>
-      <Example resize={false} />
-      <Example resize />
+      <Example resize={false}>FALSE</Example>
+      <Example resize>TRUE</Example>
     </ExampleCard>
   </ExampleSection>
 );

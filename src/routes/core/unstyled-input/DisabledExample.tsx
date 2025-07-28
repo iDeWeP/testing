@@ -6,8 +6,8 @@ import { Example } from './Example';
 export const DisabledExample = (): ReactNode => (
   <ExampleSection title="Disabled">
     <ExampleCard>
-      <Example disabled={false} />
-      <Example disabled />
+      <Example disabled={false}>FALSE</Example>
+      <Example disabled>TRUE</Example>
     </ExampleCard>
   </ExampleSection>
 );

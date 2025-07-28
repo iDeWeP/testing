@@ -24,6 +24,7 @@ import { RadiusRTExample } from './RadiusRTExample';
 import { RadiusRTLExample } from './RadiusRTLExample';
 import { RadiusRTRExample } from './RadiusRTRExample';
 import { ResizeExample } from './ResizeExampe';
+import { RingExample } from './RingExample';
 import { SizeExample } from './SizeExample';
 import { ValidExample } from './ValidExample';
 import { VariantExample } from './VariantExample';
@@ -59,6 +60,7 @@ const Page = (): ReactNode => (
     <RadiusRBLExample />
     <RadiusRBRExample />
     <ColorExample />
+    <RingExample />
     <GapExample />
   </>
 );

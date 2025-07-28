@@ -6,9 +6,9 @@ import { Example } from './Example';
 export const WidthExample = (): ReactNode => (
   <ExampleSection title="Width">
     <ExampleCard>
-      <Example width="default" />
-      <Example width="fit" />
-      <Example width="full" />
+      <Example width="default">DEFAULT</Example>
+      <Example width="fit">FIT</Example>
+      <Example width="full">FULL</Example>
     </ExampleCard>
   </ExampleSection>
 );

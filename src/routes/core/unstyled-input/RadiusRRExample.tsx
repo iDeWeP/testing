@@ -6,15 +6,15 @@ import { Example } from './Example';
 export const RadiusRRExample = (): ReactNode => (
   <ExampleSection title="Radius RR">
     <ExampleCard>
-      <Example rr="unset" />
-      <Example rr="none" />
-      <Example rr="xs" />
-      <Example rr="sm" />
-      <Example rr="md" />
-      <Example rr="lg" />
-      <Example rr="xl" />
-      <Example rr="xxl" />
-      <Example rr="full" />
+      <Example rr="unset">UNSET</Example>
+      <Example rr="none">NONE</Example>
+      <Example rr="xs">XS</Example>
+      <Example rr="sm">SM</Example>
+      <Example rr="md">MD</Example>
+      <Example rr="lg">LG</Example>
+      <Example rr="xl">XL</Example>
+      <Example rr="xxl">XXL</Example>
+      <Example rr="full">FULL</Example>
     </ExampleCard>
   </ExampleSection>
 );
