@@ -10,6 +10,7 @@ export const UnstyledCircularProgress = (
   props: UnstyledCircularProgressProps
 ): ReactNode => {
   const {
+    gap,
     componentsProps,
     label,
     children,
@@ -25,7 +26,6 @@ export const UnstyledCircularProgress = (
     ml,
     mr,
     color,
-    gap,
     ...restProps
   } = mergeProps(unstyledCircularProgressConfig.props, props);
 
