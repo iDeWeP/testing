@@ -5,6 +5,7 @@ type Styles = {
   styles: {
     root: {
       default: CSSProps;
+      decorated: CSSProps;
     };
     label: {
       default: CSSProps;
@@ -38,8 +39,10 @@ export const unstyledCircularProgressConfig: ComponentConfig<UnstyledCircularPro
     root: {
       default: {
         display: 'inline-flex',
+        borderRadius: 'rounded-full'
+      },
+      decorated: {
         position: 'relative',
-        borderRadius: 'rounded-full',
         overflow: 'overflow-hidden'
       }
     },

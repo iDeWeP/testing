@@ -14,6 +14,7 @@ export const UnstyledCircularProgress = (
     componentsProps,
     children,
     disabled = false,
+    value,
     variant,
     size,
     margin,
@@ -36,6 +37,7 @@ export const UnstyledCircularProgress = (
 
   return (
     <UnstyledCircularProgressContainer
+      value={value}
       size={size}
       margin={margin}
       m={m}
@@ -45,10 +47,12 @@ export const UnstyledCircularProgress = (
       mb={mb}
       ml={ml}
       mr={mr}
+      decorated={!!children}
       {...containerProps}
     >
       <UnstyledSpinner
         disabled={disabled}
+        value={value}
         variant={variant}
         size={size}
         margin="unset"

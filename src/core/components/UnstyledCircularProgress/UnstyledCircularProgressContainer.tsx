@@ -1,11 +1,13 @@
 import type { ReactNode } from 'react';
 import type { MergeProps, Size, Margin } from '../../types';
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
+import { setAria } from '../../utils/set-aria/set-aria';
 import type { UnstyledCircularProgressContainerProps } from './UnstyledCircularProgress.types';
 
 type Props = MergeProps<
   UnstyledCircularProgressContainerProps,
   {
+    value: number;
     size: Size;
     margin: Margin;
     m: Margin;
@@ -15,10 +17,12 @@ type Props = MergeProps<
     mb: Margin;
     ml: Margin;
     mr: Margin;
+    decorated: boolean;
   }
 >;
 
 export const UnstyledCircularProgressContainer = ({
+  value,
   size,
   margin,
   m,
@@ -29,6 +33,7 @@ export const UnstyledCircularProgressContainer = ({
   ml,
   mr,
   className,
+  decorated,
   ...restProps
 }: Props): ReactNode => {
   const mergedClassName = mergeClassName(
@@ -43,13 +48,15 @@ export const UnstyledCircularProgressContainer = ({
       mt,
       mb,
       ml,
-      mr
+      mr,
+      decorated
     }
   );
 
   return (
     <div
       className={mergedClassName}
+      {...setAria('progress', { min: 0, max: 100, value })}
       {...restProps}
     />
   );
