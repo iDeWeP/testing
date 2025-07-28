@@ -13,7 +13,7 @@ import type {
   MergeProps
 } from '../../types';
 
-export type UnstyledContainerDefaultProps = {
+type DefaultProps = {
   as?: ElementType;
   variant?: Variant;
   size?: Size;
@@ -43,9 +43,9 @@ export type UnstyledContainerDefaultProps = {
   gap?: Gap;
 };
 
-export type UnstyledContainerConfigProps = UnstyledContainerDefaultProps;
+export type UnstyledContainerConfigProps = DefaultProps;
 
 export type UnstyledContainerProps<E extends ElementType> = MergeProps<
   ComponentPropsWithRef<E>,
-  UnstyledContainerDefaultProps
+  DefaultProps
 >;
