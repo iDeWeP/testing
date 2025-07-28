@@ -32,7 +32,7 @@ export const UnstyledToggleButton = <E extends ElementType>(
   const { autoVariant, autoColor, defaultVariant, defaultColor } =
     setCheckableStyle(variant, color, checked);
 
-  const mergedClassName = mergeClassName('button', className, {
+  const mergedClassName = mergeClassName('toggleButton', className, {
     theme,
     checked,
     disabled,
