@@ -39,7 +39,6 @@ export const UnstyledToggleButton = <E extends ElementType>(
     checked,
     disabled,
     variant: autoVariant,
-    border,
     color: autoColor,
     effect
   });
