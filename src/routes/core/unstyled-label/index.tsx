@@ -1,8 +1,8 @@
 import { lazy } from 'react';
 import type { RouteObject } from 'react-router';
 
-export const UnstyledBoxRoute: RouteObject = {
-  path: '/core/unstyled-box',
+export const UnstyledLabelRoute: RouteObject = {
+  path: '/core/unstyled-label',
   Component: lazy(
     (): Promise<
       typeof import('/Users/ritchiw/vscode/testing/src/routes/core/unstyled-label/Page')
