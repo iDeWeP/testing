@@ -32,14 +32,14 @@ export const styleCheckboxTrail = (
   }: Classes
 ): ClassName => {
   const focusable = getFocusableState({ disabled }, true);
-  const defaultBorder = getBorder(variant, border, { isChecked: false }).all;
+  const autoBorder = getBorder(variant, border, { isChecked: false }).all;
   const isBordered = isAutoBordered(variant, border, false);
-  const colorType = getColor(
-    variant,
-    color,
-    { valid, invalid, disabled },
-    false
-  );
+  const autoColor = getColor(variant, color, {
+    checked: false,
+    valid,
+    invalid,
+    disabled
+  });
 
   return mergeClasses(
     sharedStyle.decoration,
@@ -47,7 +47,7 @@ export const styleCheckboxTrail = (
     sharedStyle.placement.center,
     sharedStyle.focusable[focusable],
     systemStyle.size.text.square[defaultSize],
-    systemStyle.border.all[defaultBorder],
+    systemStyle.border.all[autoBorder],
     systemStyle.radius.all[radius],
     systemStyle.radius.all[r],
     systemStyle.radius.t[rt],
@@ -58,9 +58,9 @@ export const styleCheckboxTrail = (
     systemStyle.radius.tr[rtr],
     systemStyle.radius.bl[rbl],
     systemStyle.radius.br[rbr],
-    systemStyle.color.default.bg[theme][colorType.bg],
-    isBordered && systemStyle.color.default.border[theme][colorType.text],
-    systemStyle.color.default.ring[theme][colorType.ring],
+    systemStyle.color.default.bg[theme][autoColor.bg],
+    isBordered && systemStyle.color.default.border[theme][autoColor.text],
+    systemStyle.color.default.ring[theme][autoColor.ring],
     systemStyle.shadow[shadow],
     className
   );
