@@ -1,6 +1,6 @@
 import { unstyledLinearProgressConfig } from '../../components/UnstyledLinearProgress/unstyledLinearProgressConfig';
-import { sharedStyles } from '../../config/shared-styles';
-import { systemStyles } from '../../config/system-styles';
+import { sharedStyle } from '../../config/shared-style';
+import { systemStyle } from '../../config/system-style';
 import type { Classes, ClassName } from '../../types';
 import { mergeClasses } from './merge-classes';
 
@@ -10,7 +10,7 @@ export const styleLinearProgressLabel = (
 ): ClassName =>
   mergeClasses(
     unstyledLinearProgressConfig.styles.label.default,
-    orientation === 'col' && sharedStyles.rotate['-90'],
-    systemStyles.gap.all[gap],
+    orientation === 'col' && sharedStyle.rotate['-90'],
+    systemStyle.gap.all[gap],
     className
   );

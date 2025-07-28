@@ -1,5 +1,5 @@
 import { unstyledLinearProgressConfig } from '../../components/UnstyledLinearProgress/unstyledLinearProgressConfig';
-import { systemStyles } from '../../config/system-styles';
+import { systemStyle } from '../../config/system-style';
 import type { Classes, ClassName } from '../../types';
 import { getColor } from './get-color';
 import { getReversedColor } from './get-reversed-color';
@@ -17,7 +17,7 @@ export const styleLinearProgressBar = (
     decorated = false
   }: Classes
 ): ClassName => {
-  const colorType = getColor(
+  const autoColor = getColor(
     variant === 'light' ? 'light' : 'solid',
     hasVariantBg(variant) ? color : getReversedColor(color),
     { disabled }
@@ -27,9 +27,9 @@ export const styleLinearProgressBar = (
     unstyledLinearProgressConfig.styles.bar.default,
     decorated && unstyledLinearProgressConfig.styles.bar.decorated,
     unstyledLinearProgressConfig.styles.bar.orientation[orientation],
-    systemStyles.color.default.bg[theme][colorType.text],
-    systemStyles.color.default.text[theme][colorType.bg],
-    systemStyles.color.default.fill[theme][colorType.bg],
+    systemStyle.color.default.bg[theme][autoColor.text],
+    systemStyle.color.default.text[theme][autoColor.bg],
+    systemStyle.color.default.fill[theme][autoColor.bg],
     className
   );
 };
