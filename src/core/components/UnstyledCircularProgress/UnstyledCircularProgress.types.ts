@@ -1,4 +1,3 @@
-import type { ReactNode } from 'react';
 import type { ComponentRefProps, Gap, MergeProps } from '../../types';
 import type {
   UnstyledSpinnerBarProps,
@@ -19,10 +18,6 @@ export type UnstyledCircularProgressComponentsProps = {
   outerBorder?: UnstyledCircularProgressBarProps;
 };
 
-type OptionalProps = {
-  label?: ReactNode;
-};
-
 type DefaultProps = {
   gap?: Gap;
   componentsProps?: UnstyledCircularProgressComponentsProps;
@@ -35,5 +30,5 @@ export type UnstyledCircularProgressConfigProps = MergeProps<
 
 export type UnstyledCircularProgressProps = MergeProps<
   UnstyledSpinnerProps,
-  DefaultProps & OptionalProps
+  DefaultProps
 >;

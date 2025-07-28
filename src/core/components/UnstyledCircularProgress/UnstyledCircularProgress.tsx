@@ -12,7 +12,6 @@ export const UnstyledCircularProgress = (
   const {
     gap,
     componentsProps,
-    label,
     children,
     disabled = false,
     variant,
@@ -64,7 +63,7 @@ export const UnstyledCircularProgress = (
         componentsProps={restComponentsProps}
         {...restProps}
       />
-      {label && children && (
+      {children && (
         <UnstyledCircularProgressLabel
           disabled={disabled}
           variant={variant}
