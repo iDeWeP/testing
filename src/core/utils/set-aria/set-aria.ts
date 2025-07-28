@@ -16,13 +16,7 @@ type SetAria =
   | Record<string, string | number | boolean | undefined>
   | undefined;
 
-type Element =
-  | 'button'
-  | 'divider'
-  | 'icon'
-  | 'input'
-  | 'linearProgress'
-  | 'switch';
+type Element = 'button' | 'divider' | 'icon' | 'input' | 'progress' | 'switch';
 type TypeMap = Record<Element, (props: Props) => SetAria>;
 
 const typeMap: TypeMap = {
@@ -42,7 +36,7 @@ const typeMap: TypeMap = {
   }),
   icon: (): SetAria => ({ 'aria-hidden': true }),
   input: ({ invalid }: Props): SetAria => ({ 'aria-invalid': !!invalid }),
-  linearProgress: ({ min, max, value }: Props): SetAria => ({
+  progress: ({ min, max, value }: Props): SetAria => ({
     role: 'progressbar',
     'aria-valuemin': min,
     'aria-valuemax': max,
