@@ -23,9 +23,9 @@ export const styleToggleButton = (
     checked && sharedStyle.state.on,
     sharedStyle.button,
     sharedStyle.focusable[focusable],
-    disabled && systemStyle.color.default.bg[theme][autoColor.bg],
-    disabled && systemStyle.color.default.text[theme][autoColor.text],
-    disabled && systemStyle.color.default.fill[theme][autoColor.text],
+    systemStyle.color.default.bg[theme][autoColor.bg],
+    systemStyle.color.default.text[theme][autoColor.text],
+    systemStyle.color.default.fill[theme][autoColor.text],
     systemStyle.color.default.ring[theme][autoColor.ring],
     sharedStyle.effect[effect],
     className
