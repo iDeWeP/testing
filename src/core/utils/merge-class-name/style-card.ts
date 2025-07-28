@@ -22,6 +22,7 @@ export const styleCard = (
   const autoColor = getColor(variant, color, { disabled });
 
   return mergeClasses(
+    sharedStyle.display.flex,
     sharedStyle.position.relative,
     isFocusable && sharedStyle.focusable[focusable],
     disabled && systemStyle.color.default.bg[theme][autoColor.bg],
