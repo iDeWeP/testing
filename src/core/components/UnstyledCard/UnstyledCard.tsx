@@ -33,11 +33,11 @@ export const UnstyledCard = <E extends ElementType>(
   const mergedClassName = mergeClassName('card', className, {
     theme,
     disabled,
+    clickable,
     variant,
     orientation,
     color,
-    effect,
-    decorated: clickable
+    effect
   });
 
   const hasRipple = ripple !== 'none' && !disabled;
