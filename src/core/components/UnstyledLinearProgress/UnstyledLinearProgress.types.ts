@@ -9,6 +9,7 @@ import type {
   Radius,
   Color,
   Shadow,
+  Ring,
   Gap,
   MergeProps
 } from '../../types';
@@ -51,7 +52,7 @@ export type UnstyledLinearProgressDefaultProps = {
   rbr?: Radius;
   color?: Color;
   shadow?: Shadow;
-  ring?: Color;
+  ring?: Ring;
   gap?: Gap;
   componentsProps?: UnstyledLinearProgressComponentsProps;
 };
