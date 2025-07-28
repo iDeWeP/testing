@@ -6,10 +6,30 @@ import { Example } from './Example';
 export const PlacementExample = (): ReactNode => (
   <ExampleSection title="Placement">
     <ExampleCard>
-      <Example placement="top">TOP</Example>
-      <Example placement="bottom">BOTTOM</Example>
-      <Example placement="left">LEFT</Example>
-      <Example placement="right">RIGHT</Example>
+      <Example
+        placement="top"
+        label="LABEL"
+      >
+        TOP
+      </Example>
+      <Example
+        placement="bottom"
+        label="LABEL"
+      >
+        BOTTOM
+      </Example>
+      <Example
+        placement="left"
+        label="LABEL"
+      >
+        LEFT
+      </Example>
+      <Example
+        placement="right"
+        label="LABEL"
+      >
+        RIGHT
+      </Example>
     </ExampleCard>
   </ExampleSection>
 );
