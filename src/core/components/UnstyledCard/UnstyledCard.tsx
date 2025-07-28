@@ -52,6 +52,8 @@ export const UnstyledCard = <E extends ElementType>(
       variant={variant}
       color={color}
       ring={clickable ? 'unset' : ring}
+      gx="unset"
+      gy="unset"
       className={mergedClassName}
       {...setAria('button', {
         element: Component,
