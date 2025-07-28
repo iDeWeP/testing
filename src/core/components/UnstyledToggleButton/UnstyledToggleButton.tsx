@@ -29,15 +29,15 @@ export const UnstyledToggleButton = <E extends ElementType>(
 
   const theme = useTheme();
 
-  const { currentVariant, currentColor, defaultVariant, defaultColor } =
+  const { autoVariant, autoColor, defaultVariant, defaultColor } =
     setCheckableStyle(variant, color, checked);
 
   const mergedClassName = mergeClassName('button', className, {
     theme,
     checked,
     disabled,
-    variant: currentVariant,
-    color: currentColor,
+    variant: autoVariant,
+    color: autoColor,
     effect
   });
 
@@ -51,8 +51,8 @@ export const UnstyledToggleButton = <E extends ElementType>(
     <UnstyledContainer
       as={Component}
       {...setProps('button', buttonProps)}
-      variant={currentVariant}
-      color={currentColor}
+      variant={autoVariant}
+      color={autoColor}
       ring="unset"
       className={mergedClassName}
       {...setAria('button', buttonProps)}

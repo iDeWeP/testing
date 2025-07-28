@@ -18,12 +18,12 @@ export type UnstyledToggleButtonComponentsProps = {
   ripple?: UnstyledToggleButtonRippleProps;
 };
 
-export type UnstyledToggleButtonOptionalProps = {
+type OptionalProps = {
   checked?: boolean;
   disabled?: boolean;
 };
 
-export type UnstyledToggleButtonDefaultProps = {
+type DefaultProps = {
   variant?: CheckableVariant;
   scale?: DefaultScale;
   effect?: Effect;
@@ -33,10 +33,10 @@ export type UnstyledToggleButtonDefaultProps = {
 
 export type UnstyledToggleButtonConfigProps = MergeProps<
   Omit<UnstyledContainerConfigProps, 'ring'>,
-  UnstyledToggleButtonDefaultProps
+  DefaultProps
 >;
 
 export type UnstyledToggleButtonProps<E extends ElementType> = MergeProps<
   Omit<UnstyledContainerProps<E>, 'ring'>,
-  UnstyledToggleButtonDefaultProps & UnstyledToggleButtonOptionalProps
+  DefaultProps & OptionalProps
 >;
