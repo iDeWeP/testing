@@ -4,7 +4,7 @@ import type { UnstyledSpinnerConfigProps } from './UnstyledSpinner.types';
 export const unstyledSpinnerConfig: ComponentConfig<UnstyledSpinnerConfigProps> =
   {
     props: {
-      spin: true,
+      spin: false,
       value: 0,
       variant: 'text',
       size: 'md',

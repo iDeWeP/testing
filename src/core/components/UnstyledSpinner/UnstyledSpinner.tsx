@@ -32,9 +32,6 @@ export const UnstyledSpinner = (props: UnstyledSpinnerProps): ReactNode => {
     ...restProps
   } = mergeProps(unstyledSpinnerConfig.props, props);
 
-  const length = 2 * Math.PI * (20 - thickness / 2);
-  const offset = length - (value * length) / 100;
-
   const mergedClassName = mergeClassName('spinner', className, {
     disabled,
     spin,
@@ -50,6 +47,8 @@ export const UnstyledSpinner = (props: UnstyledSpinnerProps): ReactNode => {
     ring
   });
 
+  const length = 2 * Math.PI * (20 - thickness / 2);
+  const offset = length - (value * length) / 100;
   const hasTrail = trail === undefined ? hasVariantBg(variant) : trail;
   const hasBorder = isAutoBordered(variant, border);
 
