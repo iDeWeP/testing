@@ -17,7 +17,6 @@ type Props = MergeProps<
     mb: Margin;
     ml: Margin;
     mr: Margin;
-    decorated: boolean;
   }
 >;
 
@@ -33,7 +32,6 @@ export const UnstyledCircularProgressContainer = ({
   ml,
   mr,
   className,
-  decorated,
   ...restProps
 }: Props): ReactNode => {
   const mergedClassName = mergeClassName(
@@ -48,8 +46,7 @@ export const UnstyledCircularProgressContainer = ({
       mt,
       mb,
       ml,
-      mr,
-      decorated
+      mr
     }
   );
 
