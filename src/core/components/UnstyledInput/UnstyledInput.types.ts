@@ -8,7 +8,8 @@ import type {
   Width,
   Margin,
   Radius,
-  Color
+  Color,
+  Ring
 } from '../../types';
 
 export type UnstyledInputContainerProps = ComponentRefProps<'div'>;
@@ -70,6 +71,7 @@ export type UnstyledInputDefaultProps = {
   rbl?: Radius;
   rbr?: Radius;
   color?: Color;
+  ring?: Ring;
   gap?: Gap;
   componentsProps?: UnstyledInputComponentsProps;
 };

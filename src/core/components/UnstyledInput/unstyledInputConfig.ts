@@ -6,8 +6,8 @@ import type {
 } from '../../types';
 import type { UnstyledInputConfigProps } from './UnstyledInput.types';
 
-type DefaultInputType = 'input' | 'textarea';
 type InputType = 'default' | 'input' | 'textarea';
+type DefaultInputType = 'input' | 'textarea';
 type VariantType = 'default' | 'outlined';
 
 type Styles = {
@@ -18,12 +18,6 @@ type Styles = {
     };
     decorator: {
       padding: Record<SidePlacement, Record<VariantType, CSSStyles>>;
-    };
-    body: {
-      default: CSSProps;
-    };
-    fieldset: {
-      default: CSSProps;
     };
     input: {
       default: CSSProps;
@@ -41,6 +35,7 @@ type Styles = {
       };
     };
     shared: {
+      body: CSSProps;
       label: CSSProps;
       variant: Record<InputType, CSSStyles>;
     };
@@ -74,6 +69,7 @@ export const unstyledInputConfig: ComponentConfig<UnstyledInputConfigProps> &
     rbl: 'unset',
     rbr: 'unset',
     color: 'unset',
+    ring: 'unset',
     gap: 'unset',
     componentsProps: {}
   },
@@ -119,10 +115,10 @@ export const unstyledInputConfig: ComponentConfig<UnstyledInputConfigProps> &
         start: {
           default: {
             default: {
-              padding: 'pl-2.75'
+              padding: 'pl-3'
             },
             decorated: {
-              padding: 'pl-3.75 pr-3'
+              padding: 'pl-4 pr-3'
             }
           },
           outlined: {
@@ -141,10 +137,10 @@ export const unstyledInputConfig: ComponentConfig<UnstyledInputConfigProps> &
         end: {
           default: {
             default: {
-              padding: 'pr-2.75'
+              padding: 'pr-3'
             },
             decorated: {
-              padding: 'pl-3 pr-3.75'
+              padding: 'pl-3 pr-4'
             }
           },
           outlined: {
@@ -160,19 +156,6 @@ export const unstyledInputConfig: ComponentConfig<UnstyledInputConfigProps> &
             }
           }
         }
-      }
-    },
-    body: {
-      default: {
-        display: 'flex',
-        position: 'relative',
-        flexGrow: 'grow'
-      }
-    },
-    fieldset: {
-      default: {
-        display: 'flex',
-        flexGrow: 'grow'
       }
     },
     input: {
@@ -264,6 +247,10 @@ export const unstyledInputConfig: ComponentConfig<UnstyledInputConfigProps> &
       }
     },
     shared: {
+      body: {
+        display: 'flex',
+        flexGrow: 'grow'
+      },
       label: {
         textWrap: 'text-nowrap',
         alignItems: 'align-center',

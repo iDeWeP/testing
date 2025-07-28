@@ -3,7 +3,14 @@ import { combineHandlers } from '../../../utils/utils/combine-handlers/combine-h
 import { setValue } from '../../../utils/utils/set-value/set-value';
 import { useFocusHandler } from '../../hooks/use-focus-handler/use-focus-handler';
 import { useTheme } from '../../hooks/use-theme/use-theme';
-import type { MergeProps, InputSize, Width, Margin, Color } from '../../types';
+import type {
+  MergeProps,
+  InputSize,
+  Width,
+  Margin,
+  Color,
+  Ring
+} from '../../types';
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
 import type { UnstyledInputContainerProps } from './UnstyledInput.types';
 
@@ -28,6 +35,7 @@ type Props = MergeProps<
     ml: Margin;
     mr: Margin;
     color: Color;
+    ring: Ring;
   }
 >;
 
@@ -50,6 +58,7 @@ export const UnstyledInputContainer = ({
   ml,
   mr,
   color,
+  ring,
   className,
   onFocus,
   ...restProps
@@ -74,7 +83,8 @@ export const UnstyledInputContainer = ({
     mb,
     ml,
     mr,
-    color
+    color,
+    ring
   });
 
   const handleFocus = useFocusHandler(inputRef);

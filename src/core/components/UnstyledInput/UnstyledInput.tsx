@@ -1,5 +1,4 @@
 import { type ElementType, type ReactNode, useRef } from 'react';
-import { combineHandlers } from '../../../utils/utils/combine-handlers/combine-handlers';
 import { mergeRefs } from '../../../utils/utils/merge-refs/merge-refs';
 import { setValue } from '../../../utils/utils/set-value/set-value';
 import { useControlledState } from '../../hooks/use-controlled-state/use-controlled-state';
@@ -52,6 +51,7 @@ export const UnstyledInput = <E extends ElementType>(
     rbl,
     rbr,
     color,
+    ring,
     gap,
     className,
     onFocus,
@@ -98,6 +98,7 @@ export const UnstyledInput = <E extends ElementType>(
       ml={ml}
       mr={mr}
       color={color}
+      ring={ring}
       {...componentsProps.container}
     >
       <UnstyledInputDecorator
@@ -146,8 +147,8 @@ export const UnstyledInput = <E extends ElementType>(
             type="text"
             className={mergedClassName}
             {...setAria('input', { invalid })}
-            onFocus={combineHandlers(onFocus, handleFocus)}
-            onBlur={combineHandlers(onBlur, handleBlur)}
+            onFocus={handleFocus}
+            onBlur={handleBlur}
             {...restProps}
           />
           {label && variant === 'outlined' && (
