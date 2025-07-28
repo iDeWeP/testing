@@ -19,12 +19,12 @@ export type UnstyledSpinnerComponentsProps = {
   outerBorder?: UnstyledSpinnerBarProps;
 };
 
-export type UnstyledSpinnerOptionalProps = {
+type OptionalProps = {
   disabled?: boolean;
   trail?: boolean;
 };
 
-export type UnstyledSpinnerDefaultProps = {
+type DefaultProps = {
   spin?: boolean;
   value?: number;
   variant?: Variant;
@@ -44,9 +44,9 @@ export type UnstyledSpinnerDefaultProps = {
   componentsProps?: UnstyledSpinnerComponentsProps;
 };
 
-export type UnstyledSpinnerConfigProps = UnstyledSpinnerDefaultProps;
+export type UnstyledSpinnerConfigProps = DefaultProps;
 
 export type UnstyledSpinnerProps = MergeProps<
   ComponentPropsWithRef<'svg'>,
-  UnstyledSpinnerDefaultProps & UnstyledSpinnerOptionalProps
+  DefaultProps & OptionalProps
 >;

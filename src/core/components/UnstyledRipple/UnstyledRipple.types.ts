@@ -7,22 +7,22 @@ import type {
   MergeProps
 } from '../../types';
 
-export type UnstyledRippleOptionalProps = {
+type OptionalProps = {
   valid?: boolean;
   invalid?: boolean;
   stateful?: boolean;
 };
 
-export type UnstyledRippleDefaultProps = {
+type DefaultProps = {
   variant?: Variant;
   scale?: RippleScale;
   color?: Color;
   effect?: RippleEffect;
 };
 
-export type UnstyledRippleConfigProps = UnstyledRippleDefaultProps;
+export type UnstyledRippleConfigProps = DefaultProps;
 
 export type UnstyledRippleProps = MergeProps<
   ComponentPropsWithRef<'span'>,
-  UnstyledRippleDefaultProps & UnstyledRippleOptionalProps
+  DefaultProps & OptionalProps
 >;
