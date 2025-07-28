@@ -7,7 +7,6 @@ export const DefaultExample = (): ReactNode => (
   <ExampleSection title="Default">
     <ExampleCard>
       <Example clear />
-      <Example ripple="none">RIPPLE-NONE</Example>
     </ExampleCard>
   </ExampleSection>
 );
