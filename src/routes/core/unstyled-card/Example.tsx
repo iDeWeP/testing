@@ -12,7 +12,9 @@ export const Example = ({
   ...restProps
 }: Props): ReactNode => (
   <UnstyledCard
+    clickable={!clear}
     color={clear ? 'unset' : 'primary'}
+    ripple={clear ? 'none' : 'default'}
     {...restProps}
   >
     {children}
