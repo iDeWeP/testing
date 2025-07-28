@@ -1,6 +1,6 @@
 import { unstyledInputConfig } from '../../components/UnstyledInput/unstyledInputConfig';
-import { sharedStyles } from '../../config/shared-styles';
-import { systemStyles } from '../../config/system-styles';
+import { sharedStyle } from '../../config/shared-style';
+import { systemStyle } from '../../config/system-style';
 import type { Classes, ClassName } from '../../types';
 import { getInputColor } from './get-input-color';
 import { getInputRadius } from './get-input-radius';
@@ -32,9 +32,9 @@ export const styleInputDecorator = (
     decorated = false
   }: Classes
 ): ClassName => {
-  const variantType = getInputVariant(inputVariant);
-  const sizeType = decorated ? 'decorated' : 'default';
-  const radiusType = getInputRadius(
+  const autoVariant = getInputVariant(inputVariant);
+  const autoSize = decorated ? 'decorated' : 'default';
+  const autoRadius = getInputRadius(
     inputVariant,
     sidePlacement,
     radius,
@@ -48,27 +48,33 @@ export const styleInputDecorator = (
     rbl,
     rbr
   );
-  const bgColor = getInputColor(inputVariant, color, disabled, valid, invalid);
+  const autoColor = getInputColor(
+    valid,
+    invalid,
+    disabled,
+    inputVariant,
+    color
+  );
 
   return mergeClasses(
-    sharedStyles.display['inline-flex'],
-    unstyledInputConfig.styles.decorator.padding[sidePlacement][variantType][
-      sizeType
+    sharedStyle.display['inline-flex'],
+    unstyledInputConfig.styles.decorator.padding[sidePlacement][autoVariant][
+      autoSize
     ],
-    unstyledInputConfig.styles.shared.variant.default[variantType],
-    unstyledInputConfig.styles.shared.variant[inputType][variantType],
-    systemStyles.radius.l[radiusType.autoL],
-    systemStyles.radius.r[radiusType.autoR],
-    systemStyles.radius.tl[radiusType.autoTl],
-    systemStyles.radius.tr[radiusType.autoTr],
-    systemStyles.radius.l[radiusType.l],
-    systemStyles.radius.r[radiusType.r],
-    systemStyles.radius.tl[radiusType.tl],
-    systemStyles.radius.tr[radiusType.tr],
-    systemStyles.radius.bl[radiusType.bl],
-    systemStyles.radius.br[radiusType.br],
-    systemStyles.color.default.bg[theme][bgColor],
-    systemStyles.gap.all[gap],
+    unstyledInputConfig.styles.shared.variant.default[autoVariant],
+    unstyledInputConfig.styles.shared.variant[inputType][autoVariant],
+    systemStyle.radius.l[autoRadius.autoL],
+    systemStyle.radius.r[autoRadius.autoR],
+    systemStyle.radius.tl[autoRadius.autoTl],
+    systemStyle.radius.tr[autoRadius.autoTr],
+    systemStyle.radius.l[autoRadius.l],
+    systemStyle.radius.r[autoRadius.r],
+    systemStyle.radius.tl[autoRadius.tl],
+    systemStyle.radius.tr[autoRadius.tr],
+    systemStyle.radius.bl[autoRadius.bl],
+    systemStyle.radius.br[autoRadius.br],
+    systemStyle.color.default.bg[theme][autoColor],
+    systemStyle.gap.all[gap],
     className
   );
 };

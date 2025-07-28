@@ -1,5 +1,5 @@
 import { unstyledInputConfig } from '../../components/UnstyledInput/unstyledInputConfig';
-import { systemStyles } from '../../config/system-styles';
+import { systemStyle } from '../../config/system-style';
 import type { Classes, ClassName } from '../../types';
 import { mergeClasses } from './merge-classes';
 
@@ -10,6 +10,6 @@ export const styleInputClearance = (
   mergeClasses(
     unstyledInputConfig.styles.clearance.default,
     unstyledInputConfig.styles.shared.label,
-    systemStyles.gap.all[gap],
+    systemStyle.gap.all[gap],
     className
   );

@@ -1,5 +1,5 @@
 import { unstyledInputConfig } from '../../components/UnstyledInput/unstyledInputConfig';
-import { sharedStyles } from '../../config/shared-styles';
+import { sharedStyle } from '../../config/shared-style';
 import type { Classes, ClassName } from '../../types';
 import { mergeClasses } from './merge-classes';
 
@@ -18,7 +18,7 @@ export const styleInput = (
     unstyledInputConfig.styles.input.default,
     isTextarea && unstyledInputConfig.styles.input.size[inputSize],
     isTextarea && !resize && unstyledInputConfig.styles.input.stable,
-    disabled && sharedStyles.cursor.disabled,
+    disabled && sharedStyle.cursor.disabled,
     className
   );
 };

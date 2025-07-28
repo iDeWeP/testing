@@ -1,6 +1,6 @@
 import { unstyledInputConfig } from '../../components/UnstyledInput/unstyledInputConfig';
-import { sharedStyles } from '../../config/shared-styles';
-import { systemStyles } from '../../config/system-styles';
+import { sharedStyle } from '../../config/shared-style';
+import { systemStyle } from '../../config/system-style';
 import type { Classes, ClassName } from '../../types';
 import { getColor } from './get-color';
 import { getSpacing } from './get-spacing';
@@ -15,7 +15,6 @@ export const styleInputContainer = (
     valid = false,
     invalid = false,
     disabled = false,
-    inputVariant = 'default',
     inputSize = 'md',
     resize = false,
     width = 'default',
@@ -27,44 +26,48 @@ export const styleInputContainer = (
     mb = 'unset',
     ml = 'unset',
     mr = 'unset',
-    color = 'unset'
+    color = 'unset',
+    ring = 'unset'
   }: Classes
 ): ClassName => {
-  const size = resize ? 'full' : inputSize;
-  const marginType = getSpacing(margin);
-  const textColor = getColor(
-    inputVariant === 'light' ? 'light' : 'text',
-    color,
-    { valid, invalid, disabled },
-    false
-  ).text;
-  const onTextColor = getColor(
-    inputVariant === 'light' ? 'light' : 'text',
-    color,
-    { valid, invalid, disabled },
-    true
-  ).text;
+  const autoSize = resize ? 'full' : inputSize;
+  const autoMargin = getSpacing(margin);
+  const autoColor = getColor('text', color, {
+    checked: false,
+    valid,
+    invalid,
+    disabled
+  }).text;
+  const onAutoColor = getColor('text', color, {
+    checked: true,
+    valid,
+    invalid,
+    disabled
+  }).text;
+  const hasRing = ring !== 'unset';
 
   return mergeClasses(
-    on && sharedStyles.state.on,
+    on && sharedStyle.state.on,
     unstyledInputConfig.styles.root.default,
-    unstyledInputConfig.styles.root.size[inputType][size],
-    sharedStyles.width[width],
-    systemStyles.margin.all[marginType.all],
-    systemStyles.margin.x[marginType.x],
-    systemStyles.margin.y[marginType.y],
-    systemStyles.margin.all[m],
-    systemStyles.margin.x[mx],
-    systemStyles.margin.y[my],
-    systemStyles.margin.t[mt],
-    systemStyles.margin.b[mb],
-    systemStyles.margin.l[ml],
-    systemStyles.margin.r[mr],
-    systemStyles.color.default.text[theme][textColor],
-    systemStyles.color.default.fill[theme][textColor],
-    systemStyles.color.on.text[theme][onTextColor],
-    systemStyles.color.on.fill[theme][onTextColor],
-    disabled && sharedStyles.focusable.disabled,
+    unstyledInputConfig.styles.root.size[inputType][autoSize],
+    sharedStyle.width[width],
+    systemStyle.margin.all[autoMargin.all],
+    systemStyle.margin.x[autoMargin.x],
+    systemStyle.margin.y[autoMargin.y],
+    systemStyle.margin.all[m],
+    systemStyle.margin.x[mx],
+    systemStyle.margin.y[my],
+    systemStyle.margin.t[mt],
+    systemStyle.margin.b[mb],
+    systemStyle.margin.l[ml],
+    systemStyle.margin.r[mr],
+    systemStyle.color.default.text[theme][autoColor],
+    systemStyle.color.default.fill[theme][autoColor],
+    systemStyle.color.on.text[theme][onAutoColor],
+    systemStyle.color.on.fill[theme][onAutoColor],
+    hasRing && systemStyle.color.default.ring[theme][ring],
+    hasRing && sharedStyle.ring.default,
+    disabled && sharedStyle.focusable.disabled,
     className
   );
 };

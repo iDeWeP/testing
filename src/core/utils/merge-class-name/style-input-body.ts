@@ -1,11 +1,12 @@
 import { unstyledInputConfig } from '../../components/UnstyledInput/unstyledInputConfig';
-import { sharedStyles } from '../../config/shared-styles';
+import { sharedStyle } from '../../config/shared-style';
 import type { ClassName } from '../../types';
 import { mergeClasses } from './merge-classes';
 
 export const styleInputBody = (className: string, { on = false }): ClassName =>
   mergeClasses(
-    on && sharedStyles.state.on,
-    unstyledInputConfig.styles.body.default,
+    on && sharedStyle.state.on,
+    unstyledInputConfig.styles.shared.body,
+    sharedStyle.position.relative,
     className
   );
