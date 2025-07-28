@@ -62,7 +62,8 @@ export const styleInputDecorator = (
       autoSize
     ],
     unstyledInputConfig.styles.shared.variant.default[autoVariant],
-    unstyledInputConfig.styles.shared.variant[inputType][autoVariant],
+    decorated &&
+      unstyledInputConfig.styles.shared.variant[inputType][autoVariant],
     systemStyle.radius.l[autoRadius.autoL],
     systemStyle.radius.r[autoRadius.autoR],
     systemStyle.radius.tl[autoRadius.autoTl],
