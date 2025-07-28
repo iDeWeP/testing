@@ -5,7 +5,7 @@ import { getColor } from './get-color';
 import { getFocusableState } from './get-focusable-state';
 import { mergeClasses } from './merge-classes';
 
-export const styleButton = (
+export const styleCard = (
   className: string,
   {
     theme = 'light',
