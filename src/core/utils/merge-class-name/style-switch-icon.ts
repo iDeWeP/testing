@@ -1,5 +1,5 @@
 import { unstyledSwitchConfig } from '../../components/UnstyledSwitch/unstyledSwitchConfig';
-import { systemStyles } from '../../config/system-styles';
+import { systemStyle } from '../../config/system-style';
 import type { Classes, ClassName } from '../../types';
 import { getColor } from './get-color';
 import { mergeClasses } from './merge-classes';
@@ -18,28 +18,28 @@ export const styleSwitchIcon = (
     decorated = false
   }: Classes
 ): ClassName => {
-  const isNormal = switchScale === 'default';
-  const placementType = decorated ? 'decorated' : 'default';
-  const uncheckedTextColor = getColor(
-    variant,
-    color,
-    { valid, invalid, disabled },
-    false
-  ).text;
-  const checkedTextColor = getColor(
-    variant,
-    color,
-    { valid, invalid, disabled },
-    true
-  ).text;
+  const isDefault = switchScale === 'default';
+  const autoPlacement = decorated ? 'decorated' : 'default';
+  const uncheckedColor = getColor(variant, color, {
+    checked: false,
+    valid,
+    invalid,
+    disabled
+  }).text;
+  const checkedColor = getColor(variant, color, {
+    checked: true,
+    valid,
+    invalid,
+    disabled
+  }).text;
 
   return mergeClasses(
     unstyledSwitchConfig.styles.icon.default,
-    unstyledSwitchConfig.styles.icon.placement[placementType][defaultSize],
-    systemStyles.size.text.square[defaultSize],
-    isNormal && systemStyles.padding.default.all['xs-xs'],
-    systemStyles.color.default.fill[theme][uncheckedTextColor],
-    unstyledSwitchConfig.styles.icon.color[theme][checkedTextColor],
+    unstyledSwitchConfig.styles.icon.placement[autoPlacement][defaultSize],
+    systemStyle.size.text.square[defaultSize],
+    isDefault && systemStyle.padding.default.all['xs-xs'],
+    systemStyle.color.default.fill[theme][uncheckedColor],
+    unstyledSwitchConfig.styles.icon.color[theme][checkedColor],
     className
   );
 };

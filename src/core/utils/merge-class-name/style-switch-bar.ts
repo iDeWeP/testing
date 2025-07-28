@@ -1,6 +1,6 @@
 import { unstyledSwitchConfig } from '../../components/UnstyledSwitch/unstyledSwitchConfig';
-import { sharedStyles } from '../../config/shared-styles';
-import { systemStyles } from '../../config/system-styles';
+import { sharedStyle } from '../../config/shared-style';
+import { systemStyle } from '../../config/system-style';
 import type { Classes, ClassName } from '../../types';
 import { isAutoBordered } from '../is-auto-bordered/is-auto-bordered';
 import { getBorder } from './get-border';
@@ -36,38 +36,38 @@ export const styleSwitchBar = (
 ): ClassName => {
   const isFloating = switchScale === 'slider' || decorated;
   const focusable = getFocusableState({ disabled }, true);
-  const defaultBorder = getBorder(variant, border).all;
+  const autoBorder = getBorder(variant, border).all;
   const isBordered = isAutoBordered(variant, border);
-  const colorType = getColor(
-    variant,
-    color,
-    { valid, invalid, disabled },
-    true
-  );
+  const autoColor = getColor(variant, color, {
+    checked: true,
+    valid,
+    invalid,
+    disabled
+  });
 
   return mergeClasses(
-    sharedStyles.decoration,
-    sharedStyles.bar,
-    isFloating && sharedStyles.placement.center,
-    sharedStyles.focusable[focusable],
+    sharedStyle.decoration,
+    sharedStyle.bar,
+    isFloating && sharedStyle.placement.center,
+    sharedStyle.focusable[focusable],
     !isFloating && unstyledSwitchConfig.styles.shared.size.full,
     isFloating &&
       unstyledSwitchConfig.styles.shared.size[switchScale][defaultSize],
-    systemStyles.border.all[defaultBorder],
-    systemStyles.radius.all[radius],
-    systemStyles.radius.all[r],
-    systemStyles.radius.t[rt],
-    systemStyles.radius.b[rb],
-    systemStyles.radius.l[rl],
-    systemStyles.radius.r[rr],
-    systemStyles.radius.tl[rtl],
-    systemStyles.radius.tr[rtr],
-    systemStyles.radius.bl[rbl],
-    systemStyles.radius.br[rbr],
-    systemStyles.color.default.bg[theme][colorType.bg],
-    isBordered && systemStyles.color.default.border[theme][colorType.text],
-    systemStyles.color.default.ring[theme][colorType.ring],
-    systemStyles.shadow[shadow],
+    systemStyle.border.all[autoBorder],
+    systemStyle.radius.all[radius],
+    systemStyle.radius.all[r],
+    systemStyle.radius.t[rt],
+    systemStyle.radius.b[rb],
+    systemStyle.radius.l[rl],
+    systemStyle.radius.r[rr],
+    systemStyle.radius.tl[rtl],
+    systemStyle.radius.tr[rtr],
+    systemStyle.radius.bl[rbl],
+    systemStyle.radius.br[rbr],
+    systemStyle.color.default.bg[theme][autoColor.bg],
+    isBordered && systemStyle.color.default.border[theme][autoColor.text],
+    systemStyle.color.default.ring[theme][autoColor.ring],
+    systemStyle.shadow[shadow],
     className
   );
 };

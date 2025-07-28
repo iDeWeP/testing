@@ -1,5 +1,5 @@
 import { unstyledSwitchConfig } from '../../components/UnstyledSwitch/unstyledSwitchConfig';
-import { sharedStyles } from '../../config/shared-styles';
+import { sharedStyle } from '../../config/shared-style';
 import type { Classes, ClassName } from '../../types';
 import { mergeClasses } from './merge-classes';
 
@@ -15,11 +15,11 @@ export const styleSwitch = (
   const isFloating = decorated && switchScale === 'slider';
 
   return mergeClasses(
-    sharedStyles.input,
-    isFloating && sharedStyles.position.absolute,
-    isFloating && sharedStyles.placement.center,
+    sharedStyle.input,
+    isFloating && sharedStyle.position.absolute,
+    isFloating && sharedStyle.placement.center,
     isFloating && unstyledSwitchConfig.styles.shared.size.default[defaultSize],
-    disabled && sharedStyles.cursor.disabled,
+    disabled && sharedStyle.cursor.disabled,
     className
   );
 };

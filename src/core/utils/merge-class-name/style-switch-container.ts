@@ -1,6 +1,6 @@
 import { unstyledSwitchConfig } from '../../components/UnstyledSwitch/unstyledSwitchConfig';
-import { sharedStyles } from '../../config/shared-styles';
-import { systemStyles } from '../../config/system-styles';
+import { sharedStyle } from '../../config/shared-style';
+import { systemStyle } from '../../config/system-style';
 import type { Classes, ClassName } from '../../types';
 import { getSpacing } from './get-spacing';
 import { mergeClasses } from './merge-classes';
@@ -30,34 +30,34 @@ export const styleSwitchContainer = (
     decorated = false
   }: Classes
 ): ClassName => {
-  const placementType = decorated ? 'decorated' : 'default';
-  const sizeScale = decorated ? 'default' : 'text';
-  const marginType = getSpacing(margin);
+  const autoPlacement = decorated ? 'decorated' : 'default';
+  const autoScale = decorated ? 'default' : 'text';
+  const autoMargin = getSpacing(margin);
 
   return mergeClasses(
-    sharedStyles.container,
-    unstyledSwitchConfig.styles.root.size[placementType][defaultSize],
-    systemStyles.size[sizeScale].default[defaultSize],
-    systemStyles.margin.all[marginType.all],
-    systemStyles.margin.x[marginType.x],
-    systemStyles.margin.y[marginType.y],
-    systemStyles.margin.all[m],
-    systemStyles.margin.x[mx],
-    systemStyles.margin.y[my],
-    systemStyles.margin.t[mt],
-    systemStyles.margin.b[mb],
-    systemStyles.margin.l[ml],
-    systemStyles.margin.r[mr],
-    systemStyles.radius.all[radius],
-    systemStyles.radius.all[r],
-    systemStyles.radius.t[rt],
-    systemStyles.radius.b[rb],
-    systemStyles.radius.l[rl],
-    systemStyles.radius.r[rr],
-    systemStyles.radius.tl[rtl],
-    systemStyles.radius.tr[rtr],
-    systemStyles.radius.bl[rbl],
-    systemStyles.radius.br[rbr],
+    sharedStyle.container,
+    unstyledSwitchConfig.styles.root.size[autoPlacement][defaultSize],
+    systemStyle.size[autoScale].default[defaultSize],
+    systemStyle.margin.all[autoMargin.all],
+    systemStyle.margin.x[autoMargin.x],
+    systemStyle.margin.y[autoMargin.y],
+    systemStyle.margin.all[m],
+    systemStyle.margin.x[mx],
+    systemStyle.margin.y[my],
+    systemStyle.margin.t[mt],
+    systemStyle.margin.b[mb],
+    systemStyle.margin.l[ml],
+    systemStyle.margin.r[mr],
+    systemStyle.radius.all[radius],
+    systemStyle.radius.all[r],
+    systemStyle.radius.t[rt],
+    systemStyle.radius.b[rb],
+    systemStyle.radius.l[rl],
+    systemStyle.radius.r[rr],
+    systemStyle.radius.tl[rtl],
+    systemStyle.radius.tr[rtr],
+    systemStyle.radius.bl[rbl],
+    systemStyle.radius.br[rbr],
     className
   );
 };
