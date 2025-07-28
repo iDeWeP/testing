@@ -1,4 +1,4 @@
-import { circularProgressConfig } from '../../components/CircularProgress/circularProgressConfig';
+import { unstyledCircularProgressConfig } from '../../components/UnstyledCircularProgress/unstyledCircularProgressConfig';
 import { systemStyle } from '../../config/system-style';
 import type { Classes, ClassName } from '../../types';
 import { getSpacing } from './get-spacing';
@@ -15,13 +15,15 @@ export const styleCircularProgressContainer = (
     mt = 'unset',
     mb = 'unset',
     ml = 'unset',
-    mr = 'unset'
+    mr = 'unset',
+    decorated = false
   }: Classes
 ): ClassName => {
   const autoMargin = getSpacing(margin);
 
   return mergeClasses(
-    circularProgressConfig.styles.root.default,
+    unstyledCircularProgressConfig.styles.root.default,
+    decorated && unstyledCircularProgressConfig.styles.root.decorated,
     systemStyle.size.default.square[size],
     systemStyle.margin.all[autoMargin.all],
     systemStyle.margin.x[autoMargin.x],

@@ -1,4 +1,4 @@
-import { circularProgressConfig } from '../../components/CircularProgress/circularProgressConfig';
+import { unstyledCircularProgressConfig } from '../../components/UnstyledCircularProgress/unstyledCircularProgressConfig';
 import { sharedStyle } from '../../config/shared-style';
 import { systemStyle } from '../../config/system-style';
 import type { Classes, ClassName } from '../../types';
@@ -21,7 +21,7 @@ export const styleCircularProgressLabel = (
   const autoColor = getColor(variant, color, { disabled }).text;
 
   return mergeClasses(
-    circularProgressConfig.styles.label.default,
+    unstyledCircularProgressConfig.styles.label.default,
     sharedStyle.placement.center,
     systemStyle.size.font[autoFont],
     systemStyle.color.default.text[theme][autoColor],
