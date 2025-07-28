@@ -5,7 +5,7 @@ import type {
   UnstyledBoxProps
 } from '../UnstyledBox/UnstyledBox.types';
 
-export type DefaultProps = {
+type DefaultProps = {
   orientation?: Orientation;
 };
 

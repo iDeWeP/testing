@@ -42,6 +42,11 @@ export const UnstyledButton = <E extends ElementType>(
     effect
   });
 
+  const buttonProps = {
+    element: Component,
+    disabled: disabled || !!loading
+  };
+
   const {
     loader: loaderProps,
     ripple: rippleProps,
@@ -73,10 +78,6 @@ export const UnstyledButton = <E extends ElementType>(
     />
   );
 
-  const buttonProps = {
-    element: Component,
-    disabled: disabled || !!loading
-  };
   const leftLoader = loading && loading !== 'right' && loaderNode;
   const rightLoader = loading === 'right' && loaderNode;
   const hasRipple = ripple !== 'none' && !loading && !disabled;
