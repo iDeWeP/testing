@@ -9,6 +9,7 @@ import { UnstyledBox } from '../UnstyledBox/UnstyledBox';
 import { UnstyledRipple } from '../UnstyledRipple/UnstyledRipple';
 import type { UnstyledListItemProps } from './UnstyledListItem.types';
 import { unstyledListItemConfig } from './unstyledListItemConfig';
+import { isAutoBordered } from '../../utils/is-auto-bordered/is-auto-bordered';
 
 export const UnstyledListItem = <E extends ElementType>(
   props: UnstyledListItemProps<E>
@@ -24,6 +25,7 @@ export const UnstyledListItem = <E extends ElementType>(
     componentsProps,
     ripple,
     children,
+    border,
     color,
     ring,
     ...restProps
@@ -32,20 +34,23 @@ export const UnstyledListItem = <E extends ElementType>(
   const theme = useTheme();
 
   const isClickable = checked !== undefined;
-  const { currentVariant, currentColor, defaultVariant, defaultColor } =
+  const { autoVariant, autoColor, defaultVariant, defaultColor } =
     setCheckableStyle(variant, color, checked);
 
   const mergedClassName = mergeClassName('listItem', className, {
     theme,
     checked,
     disabled,
-    variant: currentVariant,
+    clickable: isClickable,
+    variant: autoVariant,
     orientation,
-    color: currentColor,
-    effect,
-    decorated: isClickable
+    color: autoColor,
+    effect
   });
 
+  const autoBorder = isAutoBordered(autoVariant, border, checked)
+    ? 'set'
+    : border;
   const hasRipple = ripple !== 'none' && !disabled;
 
   return (
@@ -55,9 +60,12 @@ export const UnstyledListItem = <E extends ElementType>(
         element: Component,
         disabled
       })}
-      variant={currentVariant}
-      color={currentColor}
+      variant="solid"
+      border={autoBorder}
+      color="unset"
       ring={isClickable ? 'unset' : ring}
+      gx="unset"
+      gy="unset"
       className={mergedClassName}
       {...setAria('button', {
         element: Component,

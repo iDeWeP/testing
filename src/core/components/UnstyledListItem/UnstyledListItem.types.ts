@@ -5,7 +5,8 @@ import type {
   Orientation,
   Effect,
   Ripple,
-  MergeProps
+  MergeProps,
+  OmitGaps
 } from '../../types';
 import type {
   UnstyledBoxConfigProps,
@@ -18,12 +19,12 @@ export type UnstyledListItemComponentsProps = {
   ripple?: UnstyledListItemRippleProps;
 };
 
-export type UnstyledListItemOptionalProps = {
+type OptionalProps = {
   selected?: boolean;
   disabled?: boolean;
 };
 
-export type UnstyledListItemDefaultProps = {
+type DefaultProps = {
   variant?: CheckableVariant;
   orientation?: Orientation;
   effect?: Effect;
@@ -32,11 +33,11 @@ export type UnstyledListItemDefaultProps = {
 };
 
 export type UnstyledListItemConfigProps = MergeProps<
-  UnstyledBoxConfigProps,
-  UnstyledListItemDefaultProps
+  OmitGaps<UnstyledBoxConfigProps>,
+  DefaultProps
 >;
 
 export type UnstyledListItemProps<E extends ElementType> = MergeProps<
-  UnstyledBoxProps<E>,
-  UnstyledListItemDefaultProps & UnstyledListItemOptionalProps
+  OmitGaps<UnstyledBoxProps<E>>,
+  DefaultProps & OptionalProps
 >;
