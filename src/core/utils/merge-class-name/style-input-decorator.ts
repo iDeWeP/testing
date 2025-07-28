@@ -74,7 +74,7 @@ export const styleInputDecorator = (
     systemStyle.radius.bl[autoRadius.bl],
     systemStyle.radius.br[autoRadius.br],
     systemStyle.color.default.bg[theme][autoColor],
-    systemStyle.gap.all[gap],
+    decorated && systemStyle.gap.all[gap],
     className
   );
 };
