@@ -17,14 +17,13 @@ export const styleCard = (
     effect = 'unset'
   }: Classes
 ): ClassName => {
-  const isFocusable = clickable || disabled;
-  const focusable = getFocusableState({ disabled });
+  const focusable = getFocusableState({ disabled, clickable });
   const autoColor = getColor(variant, color, { disabled });
 
   return mergeClasses(
     sharedStyle.display.flex,
     sharedStyle.position.relative,
-    isFocusable && sharedStyle.focusable[focusable],
+    sharedStyle.focusable[focusable],
     disabled && systemStyle.color.default.bg[theme][autoColor.bg],
     disabled && systemStyle.color.default.text[theme][autoColor.text],
     disabled && systemStyle.color.default.fill[theme][autoColor.text],
