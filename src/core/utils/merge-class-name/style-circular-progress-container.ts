@@ -15,15 +15,13 @@ export const styleCircularProgressContainer = (
     mt = 'unset',
     mb = 'unset',
     ml = 'unset',
-    mr = 'unset',
-    decorated = false
+    mr = 'unset'
   }: Classes
 ): ClassName => {
   const autoMargin = getSpacing(margin);
 
   return mergeClasses(
     unstyledCircularProgressConfig.styles.root.default,
-    decorated && unstyledCircularProgressConfig.styles.root.decorated,
     systemStyle.size.default.square[size],
     systemStyle.margin.all[autoMargin.all],
     systemStyle.margin.x[autoMargin.x],
