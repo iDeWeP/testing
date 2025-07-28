@@ -1,4 +1,4 @@
-import { sharedStyles } from '../../config/shared-styles';
+import { sharedStyle } from '../../config/shared-style';
 import type { Classes, ClassName } from '../../types';
 import { mergeClasses } from './merge-classes';
 
@@ -7,7 +7,7 @@ export const styleCheckbox = (
   { disabled = false }: Classes
 ): ClassName =>
   mergeClasses(
-    sharedStyles.input,
-    disabled && sharedStyles.cursor.disabled,
+    sharedStyle.input,
+    disabled && sharedStyle.cursor.disabled,
     className
   );
