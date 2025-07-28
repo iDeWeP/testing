@@ -1,11 +1,11 @@
 import type { InputVariant, Color } from '../../types';
 
 export const getInputColor = (
-  variant: InputVariant,
-  color: Color,
   isValid: boolean,
   isInvalid: boolean,
-  isDisabled: boolean
+  isDisabled: boolean,
+  variant: InputVariant,
+  color: Color
 ): string => {
   if (color === 'unset' || (variant !== 'light' && !isDisabled)) {
     return 'unset';
