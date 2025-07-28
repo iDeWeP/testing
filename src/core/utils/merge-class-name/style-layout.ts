@@ -1,4 +1,4 @@
-import { layoutConfig } from '../../components/Layout/layoutConfig';
+import { unstyledLayoutConfig } from '../../components/UnstyledLayout/unstyledLayoutConfig';
 import type { Classes, ClassName } from '../../types';
 import { mergeClasses } from './merge-classes';
 
@@ -7,7 +7,7 @@ export const styleLayout = (
   { layout = 'row' }: Classes
 ): ClassName =>
   mergeClasses(
-    layoutConfig.styles.root.default,
-    layoutConfig.styles.root.layouts[layout],
+    unstyledLayoutConfig.styles.root.default,
+    unstyledLayoutConfig.styles.root.layout[layout],
     className
   );

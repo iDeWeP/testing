@@ -1,4 +1,4 @@
-import { badgeConfig } from '../../components/Badge/badgeConfig';
+import { unstyledBadgeConfig } from '../../components/UnstyledBadge/unstyledBadgeConfig';
 import type { Classes, ClassName } from '../../types';
 import { mergeClasses } from './merge-classes';
 
@@ -12,9 +12,11 @@ export const styleBadge = (
   }: Classes
 ): ClassName =>
   mergeClasses(
-    badgeConfig.styles.root.default,
-    badgeConfig.styles.root.placement[cornerPlacement][overlap],
-    badgeConfig.styles.root.transform[cornerPlacement],
-    badgeConfig.styles.root.size[decorated ? 'normal' : 'empty'][defaultSize],
+    unstyledBadgeConfig.styles.root.default,
+    unstyledBadgeConfig.styles.root.placement[cornerPlacement][overlap],
+    unstyledBadgeConfig.styles.root.transform[cornerPlacement],
+    unstyledBadgeConfig.styles.root.size[decorated ? 'normal' : 'empty'][
+      defaultSize
+    ],
     className
   );

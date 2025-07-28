@@ -1,6 +1,6 @@
-import { appShellConfig } from '../../components/AppShell/appShellConfig';
+import { unstyledAppShellConfig } from '../../components/UnstyledAppShell/unstyledAppShellConfig';
 import type { ClassName } from '../../types';
 import { mergeClasses } from './merge-classes';
 
 export const styleAppShell = (className: string): ClassName =>
-  mergeClasses(appShellConfig.styles.root.default, className);
+  mergeClasses(unstyledAppShellConfig.styles.root.default, className);
