@@ -14,6 +14,7 @@ export const unstyledLayoutConfig: ComponentConfig<UnstyledLayoutConfigProps> &
   Styles = {
   props: {
     as: 'div',
+    layout: 'row',
     variant: 'solid',
     padding: 'unset',
     p: 'unset',

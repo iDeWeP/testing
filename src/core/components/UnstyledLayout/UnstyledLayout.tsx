@@ -8,12 +8,12 @@ import { unstyledLayoutConfig } from './unstyledLayoutConfig';
 export const UnstyledLayout = <E extends ElementType>(
   props: UnstyledLayoutProps<E>
 ): ReactNode => {
-  const { className, ...restProps } = mergeProps(
+  const { layout, className, ...restProps } = mergeProps(
     unstyledLayoutConfig.props,
     props
   );
 
-  const mergedClassName = mergeClassName('layout', className);
+  const mergedClassName = mergeClassName('layout', className, { layout });
 
   return (
     <UnstyledBox
