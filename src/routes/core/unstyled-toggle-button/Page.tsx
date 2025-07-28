@@ -35,10 +35,10 @@ const Page = (): ReactNode => (
     <ExampleTitle>UnstyledToggleButton</ExampleTitle>
     <DefaultExample />
     <DisabledExample />
+    <VariantExample />
     <ScaleExample />
     <EffectExample />
     <RippleExample />
-    <VariantExample />
     <SizeExample />
     <MarginExample />
     <MarginMExample />
