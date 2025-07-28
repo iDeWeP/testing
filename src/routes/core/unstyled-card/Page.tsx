@@ -8,12 +8,13 @@ import { BorderBTExample } from './BorderBTExample';
 import { BorderBXExample } from './BorderBXExample';
 import { BorderBYExample } from './BorderBYExample';
 import { BorderExample } from './BorderExample';
+import { ClickableExample } from './ClickableExample';
 import { ColorExample } from './ColorExample';
 import { DefaultExample } from './DefaultExample';
+import { DisabledExample } from './DisabledExample';
+import { EffectExample } from './EffectExample';
 import { FontExample } from './FontExample';
 import { GapExample } from './GapExample';
-import { GapXExample } from './GapXExample';
-import { GapYExample } from './GapYExample';
 import { MarginExample } from './MarginExample';
 import { MarginMBExample } from './MarginMBExample';
 import { MarginMExample } from './MarginMExample';
@@ -22,6 +23,7 @@ import { MarginMRExample } from './MarginMRExample';
 import { MarginMTExample } from './MarginMTExample';
 import { MarginMXExample } from './MarginMXExample';
 import { MarginMYExample } from './MarginMYExample';
+import { OrientationExample } from './OrientationExample';
 import { PaddingExample } from './PaddingExample';
 import { PaddingPBExample } from './PaddingPBExample';
 import { PaddingPExample } from './PaddingPExample';
@@ -41,13 +43,19 @@ import { RadiusRTExample } from './RadiusRTExample';
 import { RadiusRTLExample } from './RadiusRTLExample';
 import { RadiusRTRExample } from './RadiusRTRExample';
 import { RingExample } from './RingExample';
+import { RippleExample } from './RippleExample';
 import { ShadowExample } from './ShadowExample';
 import { VariantExample } from './VariantExample';
 
 const Page = (): ReactNode => (
   <>
-    <ExampleTitle>UnstyledBox</ExampleTitle>
+    <ExampleTitle>UnstyledCard</ExampleTitle>
     <DefaultExample />
+    <DisabledExample />
+    <ClickableExample />
+    <OrientationExample />
+    <EffectExample />
+    <RippleExample />
     <VariantExample />
     <PaddingExample />
     <PaddingPExample />
@@ -88,8 +96,6 @@ const Page = (): ReactNode => (
     <ShadowExample />
     <RingExample />
     <GapExample />
-    <GapXExample />
-    <GapYExample />
   </>
 );
 
