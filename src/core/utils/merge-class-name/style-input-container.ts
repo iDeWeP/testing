@@ -32,13 +32,13 @@ export const styleInputContainer = (
 ): ClassName => {
   const autoSize = resize ? 'full' : inputSize;
   const autoMargin = getSpacing(margin);
-  const autoColor = getColor('text', color, {
+  const autoColor = getColor('light', color, {
     checked: false,
     valid,
     invalid,
     disabled
   }).text;
-  const onAutoColor = getColor('text', color, {
+  const onAutoColor = getColor('light', color, {
     checked: true,
     valid,
     invalid,
@@ -63,8 +63,8 @@ export const styleInputContainer = (
     systemStyle.margin.r[mr],
     systemStyle.color.default.text[theme][autoColor],
     systemStyle.color.default.fill[theme][autoColor],
-    systemStyle.color.on.text[theme][onAutoColor],
-    systemStyle.color.on.fill[theme][onAutoColor],
+    !disabled && systemStyle.color.on.text[theme][onAutoColor],
+    !disabled && systemStyle.color.on.fill[theme][onAutoColor],
     hasRing && systemStyle.color.default.ring[theme][ring],
     hasRing && sharedStyle.ring.default,
     disabled && sharedStyle.focusable.disabled,
