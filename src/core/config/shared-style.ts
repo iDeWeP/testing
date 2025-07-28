@@ -32,7 +32,7 @@ export const sharedStyle: SharedStyle = {
   focusable: {
     default: {
       focus: 'focus:outline-none',
-      focusVisible: 'focus-visible:ring-offset-2 focus-visible:ring-2'
+      focusVisible: 'focus-visible:ring-2 focus-visible:ring-offset-2'
     },
     disabled: {
       cursor: 'cursor-not-allowed',
@@ -42,8 +42,7 @@ export const sharedStyle: SharedStyle = {
       opacity: 'opacity-50'
     },
     peer: {
-      ring: 'ring-offset-2',
-      group: 'peer-focus-visible:ring-2'
+      group: 'peer-focus-visible:ring-2 peer-focus-visible:ring-offset-2'
     }
   },
   display: {
