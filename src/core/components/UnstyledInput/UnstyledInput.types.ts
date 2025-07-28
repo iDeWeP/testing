@@ -35,7 +35,7 @@ export type UnstyledInputComponentsProps = {
   clearance?: UnstyledInputClearanceProps;
 };
 
-export type UnstyledInputOptionalProps = {
+type OptionalProps = {
   focused?: boolean;
   shifted?: boolean;
   valid?: boolean;
@@ -46,7 +46,7 @@ export type UnstyledInputOptionalProps = {
   endDecorator?: ReactNode;
 };
 
-export type UnstyledInputDefaultProps = {
+type DefaultProps = {
   as?: 'input' | 'textarea';
   variant?: InputVariant;
   size?: InputSize;
@@ -76,9 +76,9 @@ export type UnstyledInputDefaultProps = {
   componentsProps?: UnstyledInputComponentsProps;
 };
 
-export type UnstyledInputConfigProps = UnstyledInputDefaultProps;
+export type UnstyledInputConfigProps = DefaultProps;
 
 export type UnstyledInputProps<E extends ElementType> = MergeProps<
   ComponentPropsWithRef<E>,
-  UnstyledInputDefaultProps & UnstyledInputOptionalProps
+  DefaultProps & OptionalProps
 >;

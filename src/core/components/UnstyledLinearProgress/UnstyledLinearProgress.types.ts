@@ -22,11 +22,11 @@ export type UnstyledLinearProgressComponentsProps = {
   bar?: UnstyledLinearProgressBarProps;
 };
 
-export type UnstyledLinearProgressOptionalProps = {
+type OptionalProps = {
   disabled?: boolean;
 };
 
-export type UnstyledLinearProgressDefaultProps = {
+type DefaultProps = {
   value?: number;
   variant?: Variant;
   orientation?: Orientation;
@@ -57,10 +57,9 @@ export type UnstyledLinearProgressDefaultProps = {
   componentsProps?: UnstyledLinearProgressComponentsProps;
 };
 
-export type UnstyledLinearProgressConfigProps =
-  UnstyledLinearProgressDefaultProps;
+export type UnstyledLinearProgressConfigProps = DefaultProps;
 
 export type UnstyledLinearProgressProps = MergeProps<
   ComponentPropsWithRef<'div'>,
-  UnstyledLinearProgressDefaultProps & UnstyledLinearProgressOptionalProps
+  DefaultProps & OptionalProps
 >;

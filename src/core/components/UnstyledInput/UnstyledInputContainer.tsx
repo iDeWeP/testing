@@ -65,6 +65,8 @@ export const UnstyledInputContainer = ({
 }: Props): ReactNode => {
   const theme = useTheme();
 
+  const handleFocus = useFocusHandler(inputRef);
+
   const mergedClassName = mergeClassName('inputContainer', className, {
     inputType,
     theme,
@@ -86,8 +88,6 @@ export const UnstyledInputContainer = ({
     color,
     ring
   });
-
-  const handleFocus = useFocusHandler(inputRef);
 
   return (
     <div

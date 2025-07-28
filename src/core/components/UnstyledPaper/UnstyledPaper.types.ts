@@ -5,16 +5,16 @@ import type {
   UnstyledBoxProps
 } from '../UnstyledBox/UnstyledBox.types';
 
-export type UnstyledPaperDefaultProps = {
+export type DefaultProps = {
   orientation?: Orientation;
 };
 
 export type UnstyledPaperConfigProps = MergeProps<
   OmitGaps<UnstyledBoxConfigProps>,
-  UnstyledPaperDefaultProps
+  DefaultProps
 >;
 
 export type UnstyledPaperProps<E extends ElementType> = MergeProps<
   OmitGaps<UnstyledBoxProps<E>>,
-  UnstyledPaperDefaultProps
+  DefaultProps
 >;

@@ -18,12 +18,12 @@ export type UnstyledCardComponentsProps = {
   ripple?: UnstyledCardRippleProps;
 };
 
-export type UnstyledCardOptionalProps = {
+type OptionalProps = {
   disabled?: boolean;
   clickable?: boolean;
 };
 
-export type UnstyledCardDefaultProps = {
+type DefaultProps = {
   orientation?: Orientation;
   effect?: Effect;
   componentsProps?: UnstyledCardComponentsProps;
@@ -32,10 +32,10 @@ export type UnstyledCardDefaultProps = {
 
 export type UnstyledCardConfigProps = MergeProps<
   OmitGaps<UnstyledBoxConfigProps>,
-  UnstyledCardDefaultProps
+  DefaultProps
 >;
 
 export type UnstyledCardProps<E extends ElementType> = MergeProps<
   OmitGaps<UnstyledBoxProps<E>>,
-  UnstyledCardDefaultProps & UnstyledCardOptionalProps
+  DefaultProps & OptionalProps
 >;

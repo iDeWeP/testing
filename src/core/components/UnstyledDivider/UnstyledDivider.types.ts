@@ -18,7 +18,7 @@ export type UnstyledDividerComponentsProps = {
   endLine?: UnstyledDividerLineProps;
 };
 
-export type UnstyledDividerDefaultProps = {
+type DefaultProps = {
   as?: ElementType;
   orientation?: Orientation;
   placement?: CrossPlacement;
@@ -44,9 +44,9 @@ export type UnstyledDividerDefaultProps = {
   componentsProps?: UnstyledDividerComponentsProps;
 };
 
-export type UnstyledDividerConfigProps = UnstyledDividerDefaultProps;
+export type UnstyledDividerConfigProps = DefaultProps;
 
 export type UnstyledDividerProps<E extends ElementType> = MergeProps<
   ComponentPropsWithRef<E>,
-  UnstyledDividerDefaultProps
+  DefaultProps
 >;

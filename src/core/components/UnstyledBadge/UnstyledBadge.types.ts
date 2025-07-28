@@ -10,11 +10,11 @@ import type {
   UnstyledContainerProps
 } from '../UnstyledContainer/UnstyledContainer.types';
 
-export type UnstyledBadgeOptionalProps = {
+type OptionalProps = {
   max?: number;
 };
 
-export type UnstyledBadgeDefaultProps = {
+type DefaultProps = {
   showZero?: boolean;
   placement?: CornerPlacement;
   overlap?: Overlap;
@@ -23,10 +23,10 @@ export type UnstyledBadgeDefaultProps = {
 
 export type UnstyledBadgeConfigProps = MergeProps<
   UnstyledContainerConfigProps,
-  UnstyledBadgeDefaultProps
+  DefaultProps
 >;
 
 export type UnstyledBadgeProps<E extends ElementType> = MergeProps<
   UnstyledContainerProps<E>,
-  UnstyledBadgeDefaultProps & UnstyledBadgeOptionalProps
+  DefaultProps & OptionalProps
 >;

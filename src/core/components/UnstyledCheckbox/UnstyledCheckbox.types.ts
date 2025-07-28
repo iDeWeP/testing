@@ -50,7 +50,7 @@ export type UnstyledCheckboxComponentsProps = {
   ripple?: UnstyledCheckboxRippleProps;
 };
 
-export type UnstyledCheckboxOptionalProps = {
+type OptionalProps = {
   checked?: boolean;
   valid?: boolean;
   invalid?: boolean;
@@ -58,7 +58,7 @@ export type UnstyledCheckboxOptionalProps = {
   children?: SVGNodeProps;
 };
 
-export type UnstyledCheckboxDefaultProps = {
+type DefaultProps = {
   variant?: CheckableVariant;
   size?: DefaultSize;
   margin?: Margin;
@@ -86,9 +86,9 @@ export type UnstyledCheckboxDefaultProps = {
   ripple?: Ripple;
 };
 
-export type UnstyledCheckboxConfigProps = UnstyledCheckboxDefaultProps;
+export type UnstyledCheckboxConfigProps = DefaultProps;
 
 export type UnstyledCheckboxProps = MergeProps<
   ComponentPropsWithRef<'input'>,
-  UnstyledCheckboxDefaultProps & UnstyledCheckboxOptionalProps
+  DefaultProps & OptionalProps
 >;

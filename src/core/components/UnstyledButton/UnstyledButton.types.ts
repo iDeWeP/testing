@@ -53,14 +53,14 @@ export type UnstyledButtonComponentsProps = {
   outerBorder?: UnstyledButtonBarProps;
 };
 
-export type UnstyledButtonOptionalProps = {
+type OptionalProps = {
   loading?: Loading;
   disabled?: boolean;
   startDecorator?: ReactNode;
   endDecorator?: ReactNode;
 };
 
-export type UnstyledButtonDefaultProps = {
+type DefaultProps = {
   scale?: DefaultScale;
   effect?: Effect;
   componentsProps?: UnstyledButtonComponentsProps;
@@ -69,10 +69,10 @@ export type UnstyledButtonDefaultProps = {
 
 export type UnstyledButtonConfigProps = MergeProps<
   OmitRing<UnstyledContainerConfigProps>,
-  UnstyledButtonDefaultProps
+  DefaultProps
 >;
 
 export type UnstyledButtonProps<E extends ElementType> = MergeProps<
   OmitRing<UnstyledContainerProps<E>>,
-  UnstyledButtonDefaultProps & UnstyledButtonOptionalProps
+  DefaultProps & OptionalProps
 >;

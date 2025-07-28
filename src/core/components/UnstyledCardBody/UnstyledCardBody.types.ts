@@ -10,17 +10,17 @@ import type {
   UnstyledBoxProps
 } from '../UnstyledBox/UnstyledBox.types';
 
-export type UnstyledCardBodyDefaultProps = {
+type DefaultProps = {
   orientation?: Orientation;
   placement?: CardPlacement;
 };
 
 export type UnstyledCardBodyConfigProps = MergeProps<
   OmitGaps<UnstyledBoxConfigProps>,
-  UnstyledCardBodyDefaultProps
+  DefaultProps
 >;
 
 export type UnstyledCardBodyProps<E extends ElementType> = MergeProps<
   OmitGaps<UnstyledBoxProps<E>>,
-  UnstyledCardBodyDefaultProps
+  DefaultProps
 >;

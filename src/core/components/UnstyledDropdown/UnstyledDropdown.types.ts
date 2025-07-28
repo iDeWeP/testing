@@ -14,7 +14,7 @@ import type {
   MergeProps
 } from '../../types';
 
-export type UnstyledDropdownDefaultProps = {
+type DefaultProps = {
   as?: ElementType;
   variant?: Variant;
   orientation?: Orientation;
@@ -51,9 +51,9 @@ export type UnstyledDropdownDefaultProps = {
   gap?: Gap;
 };
 
-export type UnstyledDropdownConfigProps = UnstyledDropdownDefaultProps;
+export type UnstyledDropdownConfigProps = DefaultProps;
 
 export type UnstyledDropdownProps<E extends ElementType> = MergeProps<
   ComponentPropsWithRef<E>,
-  UnstyledDropdownDefaultProps
+  DefaultProps
 >;

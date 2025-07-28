@@ -14,7 +14,7 @@ import type {
   MergeProps
 } from '../../types';
 
-export type UnstyledBoxDefaultProps = {
+type DefaultProps = {
   as?: ElementType;
   variant?: Variant;
   padding?: Padding;
@@ -60,9 +60,9 @@ export type UnstyledBoxDefaultProps = {
   gy?: Gap;
 };
 
-export type UnstyledBoxConfigProps = UnstyledBoxDefaultProps;
+export type UnstyledBoxConfigProps = DefaultProps;
 
 export type UnstyledBoxProps<E extends ElementType> = MergeProps<
   ComponentPropsWithRef<E>,
-  UnstyledBoxDefaultProps
+  DefaultProps
 >;

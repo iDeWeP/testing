@@ -5,16 +5,16 @@ import type {
   UnstyledContainerProps
 } from '../UnstyledContainer/UnstyledContainer.types';
 
-export type UnstyledAvatarDefaultProps = {
+type DefaultProps = {
   initials?: boolean;
 };
 
 export type UnstyledAvatarConfigProps = MergeProps<
   UnstyledContainerConfigProps,
-  UnstyledAvatarDefaultProps
+  DefaultProps
 >;
 
 export type UnstyledAvatarProps<E extends ElementType> = MergeProps<
   UnstyledContainerProps<E>,
-  UnstyledAvatarDefaultProps
+  DefaultProps
 >;

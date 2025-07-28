@@ -28,22 +28,22 @@ export type UnstyledCloseButtonComponentsProps = {
   outerBorder?: UnstyledCloseButtonBarProps;
 };
 
-export type UnstyledCloseButtonOptionalProps = {
+type OptionalProps = {
   loading?: boolean;
   disabled?: boolean;
   children?: SVGNodeProps;
 };
 
-export type UnstyledCloseButtonDefaultProps = {
+type DefaultProps = {
   componentsProps?: UnstyledCloseButtonComponentsProps;
 };
 
 export type UnstyledCloseButtonConfigProps = MergeProps<
   OmitGap<UnstyledButtonConfigProps>,
-  UnstyledCloseButtonDefaultProps
+  DefaultProps
 >;
 
 export type UnstyledCloseButtonProps<E extends ElementType> = MergeProps<
   OmitDecorators<UnstyledButtonProps<E>>,
-  UnstyledCloseButtonDefaultProps & UnstyledCloseButtonOptionalProps
+  DefaultProps & OptionalProps
 >;

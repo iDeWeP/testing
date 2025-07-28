@@ -18,11 +18,11 @@ export type UnstyledLoaderComponentsProps = {
   outerBorder?: UnstyledLoaderBarProps;
 };
 
-export type UnstyledLoaderOptionalProps = {
+type OptionalProps = {
   disabled?: boolean;
 };
 
-export type UnstyledLoaderDefaultProps = {
+type DefaultProps = {
   spin?: boolean;
   value?: number;
   variant?: Variant;
@@ -43,9 +43,9 @@ export type UnstyledLoaderDefaultProps = {
   componentsProps?: UnstyledLoaderComponentsProps;
 };
 
-export type UnstyledLoaderConfigProps = UnstyledLoaderDefaultProps;
+export type UnstyledLoaderConfigProps = DefaultProps;
 
 export type UnstyledLoaderProps = MergeProps<
   ComponentPropsWithRef<'svg'>,
-  UnstyledLoaderDefaultProps & UnstyledLoaderOptionalProps
+  DefaultProps & OptionalProps
 >;
