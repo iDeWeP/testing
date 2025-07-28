@@ -1,4 +1,4 @@
-import { sharedStyles } from '../../config/shared-styles';
+import { sharedStyle } from '../../config/shared-style';
 import type { Classes, ClassName } from '../../types';
 import { mergeClasses } from './merge-classes';
 
@@ -7,7 +7,7 @@ export const styleLabel = (
   { orientation = 'row' }: Classes
 ): ClassName =>
   mergeClasses(
-    sharedStyles.display['inline-flex'],
-    sharedStyles.direction[orientation],
+    sharedStyle.display['inline-flex'],
+    sharedStyle.direction[orientation],
     className
   );
