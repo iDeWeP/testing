@@ -5,7 +5,8 @@ import type {
   DefaultScale,
   Effect,
   Ripple,
-  MergeProps
+  MergeProps,
+  OmitRing
 } from '../../types';
 import type {
   UnstyledContainerConfigProps,
@@ -32,11 +33,11 @@ type DefaultProps = {
 };
 
 export type UnstyledToggleButtonConfigProps = MergeProps<
-  Omit<UnstyledContainerConfigProps, 'ring'>,
+  OmitRing<UnstyledContainerConfigProps>,
   DefaultProps
 >;
 
 export type UnstyledToggleButtonProps<E extends ElementType> = MergeProps<
-  Omit<UnstyledContainerProps<E>, 'ring'>,
+  OmitRing<UnstyledContainerProps<E>>,
   DefaultProps & OptionalProps
 >;
