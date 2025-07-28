@@ -3,6 +3,7 @@ import { hasVariantBg } from './has-variant-bg';
 import { isColorReversed } from './is-color-reverser';
 
 type States = {
+  checked?: boolean;
   valid?: boolean;
   invalid?: boolean;
   disabled?: boolean;
@@ -41,8 +42,7 @@ const variantMap: VariantMap = {
 export const getColor = (
   variant: Variant,
   color: Color,
-  states: States = {},
-  isChecked?: boolean
+  states: States = {}
 ): ColorType => {
   if (color === 'unset') {
     return {
@@ -52,9 +52,9 @@ export const getColor = (
     };
   }
 
-  const { valid, invalid, disabled } = states;
+  const { checked, valid, invalid, disabled } = states;
 
-  if (isChecked === false && disabled) {
+  if (checked === false && disabled) {
     return {
       bg: hasVariantBg(variant) ? 'disabled-light' : 'none',
       text: hasVariantBg(variant) ? 'disabled' : 'disabled-light',
@@ -62,7 +62,7 @@ export const getColor = (
     };
   }
 
-  if (isChecked && disabled) {
+  if (checked && disabled) {
     return {
       bg: hasVariantBg(variant) ? 'disabled' : 'none',
       text: hasVariantBg(variant) ? 'disabled-light' : 'disabled',
@@ -78,7 +78,7 @@ export const getColor = (
     };
   }
 
-  const isUnchecked = isChecked === false;
+  const isUnchecked = checked === false;
   const autoVariant = isUnchecked && variant === 'solid' ? 'light' : variant;
   const autoColor = isUnchecked ? 'surface' : color.replace('-on', '');
 
