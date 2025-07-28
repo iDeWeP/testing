@@ -30,7 +30,7 @@ export const UnstyledCard = <E extends ElementType>(
 
   const theme = useTheme();
 
-  const mergedClassName = mergeClassName('button', className, {
+  const mergedClassName = mergeClassName('card', className, {
     theme,
     disabled,
     variant,
