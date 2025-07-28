@@ -16,6 +16,7 @@ import { RingExample } from './RingExample';
 import { SizeExample } from './SizeExample';
 import { SpinExample } from './SpinExample';
 import { ThicknessExample } from './ThicknessExample';
+import { TrailExample } from './TrailExample';
 import { ValueExample } from './ValueExample';
 import { VariantExample } from './VariantExample';
 
@@ -24,6 +25,7 @@ const Page = (): ReactNode => (
     <ExampleTitle>UnstyledSpinner</ExampleTitle>
     <DefaultExample />
     <DisabledExample />
+    <TrailExample />
     <SpinExample />
     <ValueExample />
     <VariantExample />
