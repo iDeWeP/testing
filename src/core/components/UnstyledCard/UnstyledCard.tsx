@@ -40,7 +40,7 @@ export const UnstyledCard = <E extends ElementType>(
     effect
   });
 
-  const hasRipple = ripple !== 'none' && !disabled;
+  const hasRipple = ripple !== 'none' && clickable && !disabled;
 
   return (
     <UnstyledBox
