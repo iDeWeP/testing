@@ -7,7 +7,7 @@ type States = {
 };
 
 export const getFocusableState = (
-  { loading, disabled, clickable }: States,
+  { loading, disabled, clickable = true }: States,
   isPeer?: boolean
 ): string => {
   if (disabled) {
