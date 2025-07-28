@@ -14,8 +14,6 @@ export const unstyledAppShellConfig: ComponentConfig<UnstyledAppShellConfigProps
   props: {
     as: 'div',
     variant: 'text',
-    font: 'unset',
-    color: 'unset',
     padding: 'unset',
     p: 'unset',
     px: 'unset',
@@ -50,6 +48,8 @@ export const unstyledAppShellConfig: ComponentConfig<UnstyledAppShellConfigProps
     rtr: 'unset',
     rbl: 'unset',
     rbr: 'unset',
+    font: 'unset',
+    color: 'unset',
     shadow: 'unset',
     ring: 'unset',
     gap: 'unset',
