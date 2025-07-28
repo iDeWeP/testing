@@ -6,7 +6,6 @@ import { DefaultExample } from './DefaultExample';
 import { DisabledExample } from './DisabledExample';
 import { EffectExample } from './EffectExample';
 import { GapExample } from './GapExample';
-import { LoadingExample } from './LoadingExample';
 import { MarginExample } from './MarginExample';
 import { MarginMBExample } from './MarginMBExample';
 import { MarginMExample } from './MarginMExample';
@@ -33,9 +32,8 @@ import { VariantExample } from './VariantExample';
 
 const Page = (): ReactNode => (
   <>
-    <ExampleTitle>UnstyledButton</ExampleTitle>
+    <ExampleTitle>UnstyledToggleButton</ExampleTitle>
     <DefaultExample />
-    <LoadingExample />
     <DisabledExample />
     <ScaleExample />
     <EffectExample />

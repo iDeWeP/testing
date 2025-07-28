@@ -1,11 +1,11 @@
 import { lazy } from 'react';
 import type { RouteObject } from 'react-router';
 
-export const UnstyledButtonRoute: RouteObject = {
-  path: '/core/unstyled-button',
+export const UnstyledToggleButtonRoute: RouteObject = {
+  path: '/core/unstyled-toggle-button',
   Component: lazy(
     (): Promise<
-      typeof import('/Users/ritchiw/vscode/testing/src/routes/core/unstyled-button/Page')
+      typeof import('/Users/ritchiw/vscode/testing/src/routes/core/unstyled-toggle-button/Page')
     > => import('./Page')
   )
 };
