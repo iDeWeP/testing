@@ -1,5 +1,6 @@
 import type { ElementType, ReactNode } from 'react';
 import { useTheme } from '../../hooks/use-theme/use-theme';
+import { isAutoBordered } from '../../utils/is-auto-bordered/is-auto-bordered';
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
 import { mergeProps } from '../../utils/merge-props/merge-props';
 import { setAria } from '../../utils/set-aria/set-aria';
@@ -23,6 +24,7 @@ export const UnstyledToggleButton = <E extends ElementType>(
     componentsProps,
     ripple,
     children,
+    border,
     color,
     ...restProps
   } = mergeProps(unstyledToggleButtonConfig.props, props);
@@ -37,6 +39,7 @@ export const UnstyledToggleButton = <E extends ElementType>(
     checked,
     disabled,
     variant: autoVariant,
+    border,
     color: autoColor,
     effect
   });
@@ -45,14 +48,18 @@ export const UnstyledToggleButton = <E extends ElementType>(
     element: Component,
     disabled
   };
+  const autoBorder = isAutoBordered(autoVariant, border, checked)
+    ? 'set'
+    : border;
   const hasRipple = ripple !== 'none' && !disabled;
 
   return (
     <UnstyledContainer
       as={Component}
       {...setProps('button', buttonProps)}
-      variant={autoVariant}
-      color={autoColor}
+      variant="solid"
+      border={autoBorder}
+      color="unset"
       ring="unset"
       className={mergedClassName}
       {...setAria('button', buttonProps)}
