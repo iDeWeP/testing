@@ -12,8 +12,6 @@ import { ColorExample } from './ColorExample';
 import { DefaultExample } from './DefaultExample';
 import { FontExample } from './FontExample';
 import { GapExample } from './GapExample';
-import { GapXExample } from './GapXExample';
-import { GapYExample } from './GapYExample';
 import { MarginExample } from './MarginExample';
 import { MarginMBExample } from './MarginMBExample';
 import { MarginMExample } from './MarginMExample';
@@ -30,6 +28,7 @@ import { PaddingPRExample } from './PaddingPRExample';
 import { PaddingPTExample } from './PaddingPTExample';
 import { PaddingPXExample } from './PaddingPXExample';
 import { PaddingPYExample } from './PaddingPYExample';
+import { PlacementExample } from './PlacementExample';
 import { RadiusExample } from './RadiusExample';
 import { RadiusRBExample } from './RadiusRBExample';
 import { RadiusRBLExample } from './RadiusRBLExample';
@@ -46,8 +45,9 @@ import { VariantExample } from './VariantExample';
 
 const Page = (): ReactNode => (
   <>
-    <ExampleTitle>UnstyledBox</ExampleTitle>
+    <ExampleTitle>UnstyledLabel</ExampleTitle>
     <DefaultExample />
+    <PlacementExample />
     <VariantExample />
     <PaddingExample />
     <PaddingPExample />
@@ -88,8 +88,6 @@ const Page = (): ReactNode => (
     <ShadowExample />
     <RingExample />
     <GapExample />
-    <GapXExample />
-    <GapYExample />
   </>
 );
 
