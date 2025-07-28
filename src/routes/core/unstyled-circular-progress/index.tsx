@@ -1,11 +1,11 @@
 import { lazy } from 'react';
 import type { RouteObject } from 'react-router';
 
-export const UnstyledSpinnerRoute: RouteObject = {
-  path: '/core/unstyled-spinner',
+export const UnstyledCircularProgressRoute: RouteObject = {
+  path: '/core/unstyled-circular-progress',
   Component: lazy(
     (): Promise<
-      typeof import('/Users/ritchiw/vscode/testing/src/routes/core/unstyled-spinner/Page')
+      typeof import('/Users/ritchiw/vscode/testing/src/routes/core/unstyled-circular-progress/Page')
     > => import('./Page')
   )
 };

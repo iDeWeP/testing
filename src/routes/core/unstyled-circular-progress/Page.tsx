@@ -4,6 +4,7 @@ import { BorderExample } from './BorderExample';
 import { ColorExample } from './ColorExample';
 import { DefaultExample } from './DefaultExample';
 import { DisabledExample } from './DisabledExample';
+import { GapExample } from './GapExample';
 import { MarginExample } from './MarginExample';
 import { MarginMBExample } from './MarginMBExample';
 import { MarginMExample } from './MarginMExample';
@@ -22,8 +23,9 @@ import { VariantExample } from './VariantExample';
 
 const Page = (): ReactNode => (
   <>
-    <ExampleTitle>UnstyledSpinner</ExampleTitle>
+    <ExampleTitle>UnstyledCircularProgress</ExampleTitle>
     <DefaultExample />
+    <GapExample />
     <DisabledExample />
     <TrailExample />
     <SpinExample />
