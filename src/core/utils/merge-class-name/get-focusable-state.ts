@@ -3,10 +3,11 @@ import type { Loading } from '../../types';
 type States = {
   loading?: Loading;
   disabled?: boolean;
+  clickable?: boolean;
 };
 
 export const getFocusableState = (
-  { loading, disabled }: States,
+  { loading, disabled, clickable }: States,
   isPeer?: boolean
 ): string => {
   if (disabled) {
@@ -15,6 +16,10 @@ export const getFocusableState = (
 
   if (loading) {
     return 'loading';
+  }
+
+  if (!clickable) {
+    return 'unset';
   }
 
   return isPeer ? 'peer' : 'default';
