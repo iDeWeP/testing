@@ -27,7 +27,7 @@ export const styleCircularProgressLabel = (
     systemStyle.color.default.text[theme][autoColor],
     systemStyle.color.default.fill[theme][autoColor],
     systemStyle.gap.all[gap],
-    disabled && sharedStyle.cursor.none,
+    disabled && sharedStyle.cursor.disabled,
     className
   );
 };
