@@ -5,17 +5,17 @@ import type {
   UnstyledBoxProps
 } from '../UnstyledBox/UnstyledBox.types';
 
-export type MarkDefaultProps = {
+type DefaultProps = {
   font?: Font;
   color?: Color;
 };
 
 export type MarkConfigProps = MergeProps<
   UnstyledBoxConfigProps,
-  MarkDefaultProps
+  DefaultProps
 >;
 
 export type MarkProps<E extends ElementType> = MergeProps<
   UnstyledBoxProps<E>,
-  MarkDefaultProps
+  DefaultProps
 >;
