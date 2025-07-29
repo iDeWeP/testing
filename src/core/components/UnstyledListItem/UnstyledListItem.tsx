@@ -1,5 +1,6 @@
 import type { ElementType, ReactNode } from 'react';
 import { useTheme } from '../../hooks/use-theme/use-theme';
+import { isAutoBordered } from '../../utils/is-auto-bordered/is-auto-bordered';
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
 import { mergeProps } from '../../utils/merge-props/merge-props';
 import { setAria } from '../../utils/set-aria/set-aria';
@@ -9,7 +10,6 @@ import { UnstyledBox } from '../UnstyledBox/UnstyledBox';
 import { UnstyledRipple } from '../UnstyledRipple/UnstyledRipple';
 import type { UnstyledListItemProps } from './UnstyledListItem.types';
 import { unstyledListItemConfig } from './unstyledListItemConfig';
-import { isAutoBordered } from '../../utils/is-auto-bordered/is-auto-bordered';
 
 export const UnstyledListItem = <E extends ElementType>(
   props: UnstyledListItemProps<E>
