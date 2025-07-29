@@ -8,6 +8,7 @@ import { BorderBTExample } from './BorderBTExample';
 import { BorderBXExample } from './BorderBXExample';
 import { BorderBYExample } from './BorderBYExample';
 import { BorderExample } from './BorderExample';
+import { ClickableExample } from './ClickableExample';
 import { ColorExample } from './ColorExample';
 import { DefaultExample } from './DefaultExample';
 import { DisabledExample } from './DisabledExample';
@@ -51,10 +52,11 @@ const Page = (): ReactNode => (
     <ExampleTitle>UnstyledListItem</ExampleTitle>
     <DefaultExample />
     <DisabledExample />
+    <ClickableExample />
     <VariantExample />
-    <OrientationExample />
     <EffectExample />
     <RippleExample />
+    <OrientationExample />
     <PaddingExample />
     <PaddingPExample />
     <PaddingPXExample />
