@@ -4,7 +4,7 @@ import type { UnstyledTypographyConfigProps } from './UnstyledTypography.types';
 export const unstyledTypographyConfig: ComponentConfig<UnstyledTypographyConfigProps> =
   {
     props: {
-      as: 'div',
+      as: 'span',
       variant: 'solid',
       padding: 'unset',
       p: 'unset',
