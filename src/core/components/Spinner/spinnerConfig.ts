@@ -3,13 +3,13 @@ import type { SpinnerConfigProps } from './Spinner.types';
 
 export const spinnerConfig: ComponentConfig<SpinnerConfigProps> = {
   props: {
-    spin: true,
-    value: 75,
     variant: 'text',
     size: 'md',
-    thickness: 4,
     color: 'primary',
     componentsProps: {},
+    spin: false,
+    value: 0,
+    thickness: 4,
     margin: 'unset',
     m: 'unset',
     mx: 'unset',
