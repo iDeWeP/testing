@@ -21,9 +21,9 @@ export const Example = ({
   return (
     <UnstyledToggleButton
       checked={checked}
-      onClick={handleClick}
       color={clear ? 'unset' : 'primary'}
       ripple={clear ? 'none' : 'default'}
+      onClick={handleClick}
       {...restProps}
     >
       {children}
