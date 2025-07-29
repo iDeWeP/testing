@@ -5,7 +5,7 @@ export const unstyledTypographyConfig: ComponentConfig<UnstyledTypographyConfigP
   {
     props: {
       as: 'span',
-      variant: 'solid',
+      variant: 'text',
       padding: 'unset',
       p: 'unset',
       px: 'unset',
