@@ -1,7 +1,7 @@
 import type { ElementType, ReactNode } from 'react';
 import { useMergeProps } from '../../hooks/use-merge-props/use-merge-props';
 import { setReversedFont } from '../../utils/set-reversed-font/set-reversed-font';
-import { UnstyledBox } from '../UnstyledBox/UnstyledBox';
+import { UnstyledTypography } from '../UnstyledTypography/UnstyledTypography';
 import type { TitleProps } from './Title.types';
 import { titleConfig } from './titleConfig';
 
@@ -15,7 +15,7 @@ export const Title = <E extends ElementType>(
   );
 
   return (
-    <UnstyledBox
+    <UnstyledTypography
       font={setReversedFont(font)}
       {...restProps}
     />
