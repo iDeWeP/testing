@@ -6,7 +6,7 @@ export const titleConfig: ComponentConfig<TitleConfigProps> = {
     as: 'h3',
     font: 'md',
     color: 'neutral',
-    variant: 'text',
+    variant: 'solid',
     padding: 'unset',
     p: 'unset',
     px: 'unset',
