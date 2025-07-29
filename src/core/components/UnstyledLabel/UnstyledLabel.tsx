@@ -21,6 +21,8 @@ export const UnstyledLabel = <E extends ElementType>(
 
   return (
     <UnstyledBox
+      gx="unset"
+      gy="unset"
       className={mergedClassName}
       {...restProps}
     >
