@@ -1,5 +1,5 @@
-import { sharedStyles } from '../../config/shared-styles';
-import { systemStyles } from '../../config/system-styles';
+import { sharedStyle } from '../../config/shared-style';
+import { systemStyle } from '../../config/system-style';
 import type { Classes, ClassName } from '../../types';
 import { getColor } from './get-color';
 import { getFocusableState } from './get-focusable-state';
@@ -11,25 +11,27 @@ export const styleListItem = (
     theme = 'light',
     checked,
     disabled = false,
+    clickable = false,
     variant = 'solid',
     orientation = 'row',
     color = 'unset',
-    effect = 'unset',
-    decorated = false
+    effect = 'unset'
   }: Classes
 ): ClassName => {
   const focusable = getFocusableState({ disabled });
-  const colorType = getColor(variant, color, { disabled }, checked);
+  const autoColor = getColor(variant, color, { checked, disabled });
 
   return mergeClasses(
-    sharedStyles.position.relative,
-    sharedStyles.focusable[focusable],
-    disabled && systemStyles.color.default.bg[theme][colorType.bg],
-    disabled && systemStyles.color.default.text[theme][colorType.text],
-    disabled && systemStyles.color.default.fill[theme][colorType.text],
-    decorated && systemStyles.color.default.ring[theme][colorType.ring],
-    sharedStyles.direction[orientation],
-    sharedStyles.effect[effect],
+    checked && sharedStyle.state.on,
+    sharedStyle.position.relative,
+    clickable && sharedStyle.transition.color,
+    sharedStyle.focusable[focusable],
+    systemStyle.color.default.bg[theme][autoColor.bg],
+    systemStyle.color.default.text[theme][autoColor.text],
+    systemStyle.color.default.fill[theme][autoColor.text],
+    systemStyle.color.default.ring[theme][autoColor.ring],
+    sharedStyle.direction[orientation],
+    sharedStyle.effect[effect],
     className
   );
 };
