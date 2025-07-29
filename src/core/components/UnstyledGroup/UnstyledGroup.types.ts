@@ -1,21 +1,20 @@
 import type { ElementType } from 'react';
-import type { Orientation, GroupGap, MergeProps, OmitGaps } from '../../types';
+import type { GroupGap, MergeProps } from '../../types';
 import type {
-  UnstyledBoxConfigProps,
-  UnstyledBoxProps
-} from '../UnstyledBox/UnstyledBox.types';
+  UnstyledPaperConfigProps,
+  UnstyledPaperProps
+} from '../UnstyledPaper/UnstyledPaper.types';
 
 type DefaultProps = {
-  orientation?: Orientation;
   gap?: GroupGap;
 };
 
 export type UnstyledGroupConfigProps = MergeProps<
-  OmitGaps<UnstyledBoxConfigProps>,
+  UnstyledPaperConfigProps,
   DefaultProps
 >;
 
 export type UnstyledGroupProps<E extends ElementType> = MergeProps<
-  OmitGaps<UnstyledBoxProps<E>>,
+  UnstyledPaperProps<E>,
   DefaultProps
 >;
