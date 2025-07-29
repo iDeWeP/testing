@@ -33,6 +33,7 @@ export const UnstyledListItem = <E extends ElementType>(
 
   const theme = useTheme();
 
+  const isClickable = clickable || checked !== undefined;
   const { autoVariant, autoColor, defaultVariant, defaultColor } =
     setCheckableStyle(variant, color, checked, 'text');
 
@@ -40,7 +41,7 @@ export const UnstyledListItem = <E extends ElementType>(
     theme,
     checked,
     disabled,
-    clickable,
+    clickable: isClickable,
     variant: autoVariant,
     color: autoColor,
     effect
@@ -61,7 +62,7 @@ export const UnstyledListItem = <E extends ElementType>(
       variant="solid"
       border={autoBorder}
       color="unset"
-      ring={clickable ? 'unset' : ring}
+      ring={isClickable ? 'unset' : ring}
       className={mergedClassName}
       {...setAria('listItem', {
         element: Component,

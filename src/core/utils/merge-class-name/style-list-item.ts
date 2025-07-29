@@ -17,14 +17,13 @@ export const styleListItem = (
     effect = 'unset'
   }: Classes
 ): ClassName => {
-  const isTransitionable = clickable || checked !== undefined;
   const focusable = getFocusableState({ disabled, clickable });
   const autoColor = getColor(variant, color, { checked, disabled });
 
   return mergeClasses(
     checked && sharedStyle.state.on,
     sharedStyle.position.relative,
-    isTransitionable && sharedStyle.transition.color,
+    clickable && sharedStyle.transition.color,
     sharedStyle.focusable[focusable],
     systemStyle.color.default.bg[theme][autoColor.bg],
     systemStyle.color.default.text[theme][autoColor.text],
