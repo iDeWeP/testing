@@ -1,5 +1,5 @@
-import { sharedStyles } from '../../config/shared-styles';
-import { systemStyles } from '../../config/system-styles';
+import { sharedStyle } from '../../config/shared-style';
+import { systemStyle } from '../../config/system-style';
 import type { Classes, ClassName } from '../../types';
 import { getBorder } from './get-border';
 import { getColor } from './get-color';
@@ -36,39 +36,39 @@ export const styleIcon = (
     ring = 'unset'
   }: Classes
 ): ClassName => {
-  const marginType = getSpacing(margin);
-  const defaultBorder = getBorder(variant, border).all;
-  const colorType = getColor(variant, color);
+  const autoMargin = getSpacing(margin);
+  const autoBorder = getBorder(variant, border).all;
+  const autoColor = getColor(variant, color);
   const hasRing = ring !== 'unset';
 
   return mergeClasses(
-    systemStyles.size.text.default[font],
-    systemStyles.margin.all[marginType.all],
-    systemStyles.margin.x[marginType.x],
-    systemStyles.margin.y[marginType.y],
-    systemStyles.margin.all[m],
-    systemStyles.margin.x[mx],
-    systemStyles.margin.y[my],
-    systemStyles.margin.t[mt],
-    systemStyles.margin.b[mb],
-    systemStyles.margin.l[ml],
-    systemStyles.margin.r[mr],
-    systemStyles.border.all[defaultBorder],
-    systemStyles.radius.all[radius],
-    systemStyles.radius.all[r],
-    systemStyles.radius.t[rt],
-    systemStyles.radius.b[rb],
-    systemStyles.radius.l[rl],
-    systemStyles.radius.r[rr],
-    systemStyles.radius.tl[rtl],
-    systemStyles.radius.tr[rtr],
-    systemStyles.radius.bl[rbl],
-    systemStyles.radius.br[rbr],
-    systemStyles.color.default.bg[theme][colorType.bg],
-    systemStyles.color.default.fill[theme][colorType.text],
-    hasRing && systemStyles.color.default.ring[theme][ring],
-    systemStyles.shadow[shadow],
-    hasRing && sharedStyles.ring.default,
+    systemStyle.size.text.default[font],
+    systemStyle.margin.all[autoMargin.all],
+    systemStyle.margin.x[autoMargin.x],
+    systemStyle.margin.y[autoMargin.y],
+    systemStyle.margin.all[m],
+    systemStyle.margin.x[mx],
+    systemStyle.margin.y[my],
+    systemStyle.margin.t[mt],
+    systemStyle.margin.b[mb],
+    systemStyle.margin.l[ml],
+    systemStyle.margin.r[mr],
+    systemStyle.border.all[autoBorder],
+    systemStyle.radius.all[radius],
+    systemStyle.radius.all[r],
+    systemStyle.radius.t[rt],
+    systemStyle.radius.b[rb],
+    systemStyle.radius.l[rl],
+    systemStyle.radius.r[rr],
+    systemStyle.radius.tl[rtl],
+    systemStyle.radius.tr[rtr],
+    systemStyle.radius.bl[rbl],
+    systemStyle.radius.br[rbr],
+    systemStyle.color.default.bg[theme][autoColor.bg],
+    systemStyle.color.default.fill[theme][autoColor.text],
+    hasRing && systemStyle.color.default.ring[theme][ring],
+    systemStyle.shadow[shadow],
+    hasRing && sharedStyle.ring.default,
     className
   );
 };

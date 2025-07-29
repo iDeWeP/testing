@@ -1,5 +1,5 @@
-import { sharedStyles } from '../../config/shared-styles';
-import { systemStyles } from '../../config/system-styles';
+import { sharedStyle } from '../../config/shared-style';
+import { systemStyle } from '../../config/system-style';
 import type { Classes, ClassName } from '../../types';
 import { mergeClasses } from './merge-classes';
 
@@ -8,7 +8,7 @@ export const styleFab = (
   { defaultPosition = 'absolute', cornerPlacement = 'bottom-right' }: Classes
 ): ClassName =>
   mergeClasses(
-    sharedStyles.position[defaultPosition],
-    systemStyles.placement[cornerPlacement],
+    sharedStyle.position[defaultPosition],
+    systemStyle.placement[cornerPlacement],
     className
   );
