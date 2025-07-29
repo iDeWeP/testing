@@ -5,17 +5,17 @@ import type {
   UnstyledPaperProps
 } from '../UnstyledPaper/UnstyledPaper.types';
 
-export type SidebarDefaultProps = {
+type DefaultProps = {
   orientation?: Orientation;
   gap?: Gap;
 };
 
 export type SidebarConfigProps = MergeProps<
   UnstyledPaperConfigProps,
-  SidebarDefaultProps
+  DefaultProps
 >;
 
 export type SidebarProps<E extends ElementType> = MergeProps<
   UnstyledPaperProps<E>,
-  SidebarDefaultProps
+  DefaultProps
 >;

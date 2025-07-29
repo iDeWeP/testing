@@ -44,8 +44,6 @@ export const sidebarConfig: ComponentConfig<SidebarConfigProps> = {
     font: 'unset',
     color: 'unset',
     shadow: 'unset',
-    ring: 'unset',
-    gx: 'unset',
-    gy: 'unset'
+    ring: 'unset'
   }
 };
