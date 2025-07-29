@@ -11,7 +11,7 @@ export const getFocusableState = (
   isPeer?: boolean
 ): string => {
   if (disabled) {
-    return isPeer ? 'unset' : 'disabled';
+    return isPeer ? 'unset' : clickable ? 'box-disabled' : 'disabled';
   }
 
   if (loading) {
