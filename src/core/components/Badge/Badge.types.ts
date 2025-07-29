@@ -8,15 +8,15 @@ import type {
   MergeProps
 } from '../../types';
 import type {
-  UnstyledContainerConfigProps,
-  UnstyledContainerProps
-} from '../UnstyledContainer/UnstyledContainer.types';
+  UnstyledBadgeConfigProps,
+  UnstyledBadgeProps
+} from '../UnstyledBadge/UnstyledBadge.types';
 
-export type BadgeOptionalProps = {
+type OptionalProps = {
   max?: number;
 };
 
-export type BadgeDefaultProps = {
+type DefaultProps = {
   showZero?: boolean;
   variant?: Variant;
   placement?: CornerPlacement;
@@ -26,11 +26,11 @@ export type BadgeDefaultProps = {
 };
 
 export type BadgeConfigProps = MergeProps<
-  UnstyledContainerConfigProps,
-  BadgeDefaultProps
+  UnstyledBadgeConfigProps,
+  DefaultProps
 >;
 
 export type BadgeProps<E extends ElementType> = MergeProps<
-  UnstyledContainerProps<E>,
-  BadgeDefaultProps & BadgeOptionalProps
+  UnstyledBadgeProps<E>,
+  DefaultProps & OptionalProps
 >;
