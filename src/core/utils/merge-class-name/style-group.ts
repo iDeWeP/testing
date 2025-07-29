@@ -1,4 +1,3 @@
-import { sharedStyle } from '../../config/shared-style';
 import { systemStyle } from '../../config/system-style';
 import type { Classes, ClassName } from '../../types';
 import { mergeClasses } from './merge-classes';
@@ -11,10 +10,5 @@ export const styleGroup = (
   const gapType = isInner ? orientation : 'all';
   const autoGap = isInner ? groupGap.slice(1) : groupGap;
 
-  return mergeClasses(
-    sharedStyle.display.flex,
-    sharedStyle.direction[orientation],
-    systemStyle.gap[gapType][autoGap],
-    className
-  );
+  return mergeClasses(systemStyle.gap[gapType][autoGap], className);
 };
