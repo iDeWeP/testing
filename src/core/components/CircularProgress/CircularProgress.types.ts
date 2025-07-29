@@ -1,21 +1,16 @@
+import type { Variant, Size, Color, MergeProps } from '../../types';
 import type {
-  ComponentRefProps,
-  Variant,
-  Size,
-  Color,
-  Gap,
-  MergeProps
-} from '../../types';
-import type {
-  UnstyledSpinnerBarProps,
-  UnstyledSpinnerOptionalProps,
-  UnstyledSpinnerConfigProps,
-  UnstyledSpinnerProps
-} from '../UnstyledSpinner/UnstyledSpinner.types';
+  UnstyledCircularProgressContainerProps,
+  UnstyledCircularProgressLabelProps,
+  UnstyledCircularProgressBarProps,
+  UnstyledCircularProgressConfigProps,
+  UnstyledCircularProgressProps
+} from '../UnstyledCircularProgress/UnstyledCircularProgress.types';
 
-export type CircularProgressContainerProps = ComponentRefProps<'div'>;
-export type CircularProgressLabelProps = ComponentRefProps<'span'>;
-export type CircularProgressBarProps = UnstyledSpinnerBarProps;
+export type CircularProgressContainerProps =
+  UnstyledCircularProgressContainerProps;
+export type CircularProgressLabelProps = UnstyledCircularProgressLabelProps;
+export type CircularProgressBarProps = UnstyledCircularProgressBarProps;
 
 export type CircularProgressComponentsProps = {
   container?: CircularProgressContainerProps;
@@ -26,26 +21,20 @@ export type CircularProgressComponentsProps = {
   outerBorder?: CircularProgressBarProps;
 };
 
-export type CircularProgressOptionalProps = UnstyledSpinnerOptionalProps;
-
-export type CircularProgressDefaultProps = {
-  spin?: boolean;
+export type DefaultProps = {
   value?: number;
   variant?: Variant;
   size?: Size;
-  thickness?: number;
   color?: Color;
-  gap?: Gap;
   componentsProps?: CircularProgressComponentsProps;
-  label?: boolean;
 };
 
 export type CircularProgressConfigProps = MergeProps<
-  UnstyledSpinnerConfigProps,
-  CircularProgressDefaultProps
+  UnstyledCircularProgressConfigProps,
+  DefaultProps
 >;
 
 export type CircularProgressProps = MergeProps<
-  UnstyledSpinnerProps,
-  CircularProgressDefaultProps & CircularProgressOptionalProps
+  UnstyledCircularProgressProps,
+  DefaultProps
 >;
