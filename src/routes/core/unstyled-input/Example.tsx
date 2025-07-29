@@ -1,4 +1,4 @@
-import { type ReactNode, useState, type ChangeEvent } from 'react';
+import { type ReactNode, useState, useCallback, type ChangeEvent } from 'react';
 import { UnstyledInput } from '../../../core/components/UnstyledInput/UnstyledInput';
 import type { UnstyledInputProps } from '../../../core/components/UnstyledInput/UnstyledInput.types';
 
@@ -14,13 +14,17 @@ export const Example = ({
 }: Props): ReactNode => {
   const [value, setValue] = useState('');
 
+  const handleChange = useCallback(
+    (event: ChangeEvent<HTMLTextAreaElement>): void =>
+      setValue(event.target.value),
+    []
+  );
+
   return (
     <UnstyledInput
       value={value}
       color={clear ? 'unset' : 'primary'}
-      onChange={(event: ChangeEvent<HTMLTextAreaElement>): void =>
-        setValue(event.target.value)
-      }
+      onChange={handleChange}
       label={children}
       {...restProps}
     />
