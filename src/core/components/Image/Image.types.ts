@@ -5,16 +5,13 @@ import type {
   UnstyledBoxProps
 } from '../UnstyledBox/UnstyledBox.types';
 
-export type ImageDefaultProps = {
+type DefaultProps = {
   radius?: Radius;
 };
 
-export type ImageConfigProps = MergeProps<
-  UnstyledBoxConfigProps,
-  ImageDefaultProps
->;
+export type ImageConfigProps = MergeProps<UnstyledBoxConfigProps, DefaultProps>;
 
 export type ImageProps<E extends ElementType> = MergeProps<
   UnstyledBoxProps<E>,
-  ImageDefaultProps
+  DefaultProps
 >;
