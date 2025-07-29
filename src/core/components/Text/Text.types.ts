@@ -10,10 +10,7 @@ type DefaultProps = {
   color?: Color;
 };
 
-export type TextConfigProps = MergeProps<
-  UnstyledBoxConfigProps,
-  DefaultProps
->;
+export type TextConfigProps = MergeProps<UnstyledBoxConfigProps, DefaultProps>;
 
 export type TextProps<E extends ElementType> = MergeProps<
   UnstyledBoxProps<E>,
