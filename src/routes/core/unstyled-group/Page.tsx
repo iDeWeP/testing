@@ -47,8 +47,8 @@ const Page = (): ReactNode => (
   <>
     <ExampleTitle>UnstyledGroup</ExampleTitle>
     <DefaultExample />
-    <OrientationExample />
     <GapExample />
+    <OrientationExample />
     <VariantExample />
     <PaddingExample />
     <PaddingPExample />
