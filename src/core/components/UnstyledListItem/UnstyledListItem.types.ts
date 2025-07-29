@@ -2,16 +2,14 @@ import type { ElementType } from 'react';
 import type {
   ComponentRefProps,
   CheckableVariant,
-  Orientation,
   Effect,
   Ripple,
-  MergeProps,
-  OmitGaps
+  MergeProps
 } from '../../types';
 import type {
-  UnstyledBoxConfigProps,
-  UnstyledBoxProps
-} from '../UnstyledBox/UnstyledBox.types';
+  UnstyledPaperConfigProps,
+  UnstyledPaperProps
+} from '../UnstyledPaper/UnstyledPaper.types';
 
 export type UnstyledListItemRippleProps = ComponentRefProps<'span'>;
 
@@ -22,22 +20,22 @@ export type UnstyledListItemComponentsProps = {
 type OptionalProps = {
   selected?: boolean;
   disabled?: boolean;
+  clickable?: boolean;
 };
 
 type DefaultProps = {
   variant?: CheckableVariant;
-  orientation?: Orientation;
   effect?: Effect;
   componentsProps?: UnstyledListItemComponentsProps;
   ripple?: Ripple;
 };
 
 export type UnstyledListItemConfigProps = MergeProps<
-  OmitGaps<UnstyledBoxConfigProps>,
+  UnstyledPaperConfigProps,
   DefaultProps
 >;
 
 export type UnstyledListItemProps<E extends ElementType> = MergeProps<
-  OmitGaps<UnstyledBoxProps<E>>,
+  UnstyledPaperProps<E>,
   DefaultProps & OptionalProps
 >;

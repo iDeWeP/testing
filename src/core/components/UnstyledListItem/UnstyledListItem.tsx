@@ -6,7 +6,7 @@ import { mergeProps } from '../../utils/merge-props/merge-props';
 import { setAria } from '../../utils/set-aria/set-aria';
 import { setCheckableStyle } from '../../utils/set-checkale-style/set-checkable-style';
 import { setProps } from '../../utils/set-props/set-props';
-import { UnstyledBox } from '../UnstyledBox/UnstyledBox';
+import { UnstyledPaper } from '../UnstyledPaper/UnstyledPaper';
 import { UnstyledRipple } from '../UnstyledRipple/UnstyledRipple';
 import type { UnstyledListItemProps } from './UnstyledListItem.types';
 import { unstyledListItemConfig } from './unstyledListItemConfig';
@@ -18,8 +18,8 @@ export const UnstyledListItem = <E extends ElementType>(
     as: Component,
     selected: checked,
     disabled = false,
+    clickable = false,
     variant,
-    orientation,
     effect,
     className,
     componentsProps,
@@ -33,7 +33,6 @@ export const UnstyledListItem = <E extends ElementType>(
 
   const theme = useTheme();
 
-  const isClickable = checked !== undefined;
   const { autoVariant, autoColor, defaultVariant, defaultColor } =
     setCheckableStyle(variant, color, checked, 'text');
 
@@ -41,9 +40,8 @@ export const UnstyledListItem = <E extends ElementType>(
     theme,
     checked,
     disabled,
-    clickable: isClickable,
+    clickable,
     variant: autoVariant,
-    orientation,
     color: autoColor,
     effect
   });
@@ -54,7 +52,7 @@ export const UnstyledListItem = <E extends ElementType>(
   const hasRipple = ripple !== 'none' && !disabled;
 
   return (
-    <UnstyledBox
+    <UnstyledPaper
       as={Component}
       {...setProps('button', {
         element: Component,
@@ -63,21 +61,20 @@ export const UnstyledListItem = <E extends ElementType>(
       variant="solid"
       border={autoBorder}
       color="unset"
-      ring={isClickable ? 'unset' : ring}
-      gx="unset"
-      gy="unset"
+      ring={clickable ? 'unset' : ring}
       className={mergedClassName}
-      {...setAria('button', {
+      {...setAria('listItem', {
         element: Component,
+        checked,
         disabled,
-        clickable: isClickable
+        clickable
       })}
       {...restProps}
     >
       {children}
       {hasRipple && (
         <UnstyledRipple
-          stateful={isClickable}
+          stateful={checked !== undefined}
           variant={defaultVariant}
           scale="default"
           color={defaultColor}
@@ -85,6 +82,6 @@ export const UnstyledListItem = <E extends ElementType>(
           {...componentsProps.ripple}
         />
       )}
-    </UnstyledBox>
+    </UnstyledPaper>
   );
 };

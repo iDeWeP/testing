@@ -6,10 +6,10 @@ export const unstyledListItemConfig: ComponentConfig<UnstyledListItemConfigProps
     props: {
       as: 'div',
       variant: 'solid',
-      orientation: 'row',
       effect: 'unset',
       componentsProps: {},
       ripple: 'none',
+      orientation: 'row',
       padding: 'unset',
       p: 'unset',
       px: 'unset',
