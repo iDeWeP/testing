@@ -21,7 +21,8 @@ export const styleToggleButton = (
 
   return mergeClasses(
     checked && sharedStyle.state.on,
-    sharedStyle.button,
+    sharedStyle.position.relative,
+    sharedStyle.animation.color,
     sharedStyle.focusable[focusable],
     systemStyle.color.default.bg[theme][autoColor.bg],
     systemStyle.color.default.text[theme][autoColor.text],
