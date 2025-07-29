@@ -1,6 +1,7 @@
 import type { ElementType, ReactNode } from 'react';
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
 import { mergeProps } from '../../utils/merge-props/merge-props';
+import { setAria } from '../../utils/set-aria/set-aria';
 import { UnstyledBox } from '../UnstyledBox/UnstyledBox';
 import type { UnstyledGroupProps } from './UnstyledGroup.types';
 import { unstyledGroupConfig } from './unstyledGroupConfig';
@@ -25,6 +26,7 @@ export const UnstyledGroup = <E extends ElementType>(
       gx="unset"
       gy="unset"
       className={mergedClassName}
+      {...setAria('group', { orientation })}
       {...restProps}
     />
   );
