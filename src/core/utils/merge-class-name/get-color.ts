@@ -54,14 +54,6 @@ export const getColor = (
 
   const { checked, valid, invalid, disabled } = states;
 
-  if (checked === false && disabled) {
-    return {
-      bg: hasVariantBg(variant) ? 'disabled-light' : 'none',
-      text: hasVariantBg(variant) ? 'disabled' : 'disabled-light',
-      ring: 'unset'
-    };
-  }
-
   if (checked && disabled) {
     return {
       bg: hasVariantBg(variant) ? 'disabled' : 'none',
