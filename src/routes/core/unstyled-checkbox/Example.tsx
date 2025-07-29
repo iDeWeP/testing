@@ -1,4 +1,4 @@
-import { type ReactNode, useState } from 'react';
+import { type ReactNode, useState, useCallback } from 'react';
 import { UnstyledCheckbox } from '../../../core/components/UnstyledCheckbox/UnstyledCheckbox';
 import type { UnstyledCheckboxProps } from '../../../core/components/UnstyledCheckbox/UnstyledCheckbox.types';
 
@@ -9,12 +9,17 @@ type Props = {
 export const Example = ({ clear, ...restProps }: Props): ReactNode => {
   const [isChecked, setIsChecked] = useState(false);
 
+  const handleChange = useCallback(
+    (): void => setIsChecked((checked): boolean => !checked),
+    []
+  );
+
   return (
     <UnstyledCheckbox
       checked={isChecked}
       color={clear ? 'unset' : 'primary'}
       ripple={clear ? 'none' : 'default'}
-      onChange={(): void => setIsChecked((checked): boolean => !checked)}
+      onChange={handleChange}
       {...restProps}
     />
   );
