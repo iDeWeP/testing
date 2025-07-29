@@ -8,7 +8,6 @@ export const cardBodyConfig: ComponentConfig<CardBodyConfigProps> = {
     orientation: 'col',
     placement: 'default',
     padding: 'md',
-    radius: 'unset',
     color: 'unset',
     gap: 'unset',
     p: 'unset',
@@ -34,6 +33,7 @@ export const cardBodyConfig: ComponentConfig<CardBodyConfigProps> = {
     bb: 'unset',
     bl: 'unset',
     br: 'unset',
+    radius: 'unset',
     r: 'unset',
     rt: 'unset',
     rb: 'unset',
@@ -45,8 +45,6 @@ export const cardBodyConfig: ComponentConfig<CardBodyConfigProps> = {
     rbr: 'unset',
     font: 'unset',
     shadow: 'unset',
-    ring: 'unset',
-    gx: 'unset',
-    gy: 'unset'
+    ring: 'unset'
   }
 };

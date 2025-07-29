@@ -4,7 +4,6 @@ import type {
   Orientation,
   CardPlacement,
   Padding,
-  Radius,
   Color,
   Gap,
   MergeProps
@@ -14,22 +13,21 @@ import type {
   UnstyledCardBodyProps
 } from '../UnstyledCardBody/UnstyledCardBody.types';
 
-export type CardBodyDefaultProps = {
+type DefaultProps = {
   variant?: Variant;
   orientation?: Orientation;
   placement?: CardPlacement;
   padding?: Padding;
-  radius?: Radius;
   color?: Color;
   gap?: Gap;
 };
 
 export type CardBodyConfigProps = MergeProps<
   UnstyledCardBodyConfigProps,
-  CardBodyDefaultProps
+  DefaultProps
 >;
 
 export type CardBodyProps<E extends ElementType> = MergeProps<
   UnstyledCardBodyProps<E>,
-  CardBodyDefaultProps
+  DefaultProps
 >;
