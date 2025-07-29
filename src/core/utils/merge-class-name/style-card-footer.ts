@@ -1,4 +1,3 @@
-import { sharedStyle } from '../../config/shared-style';
 import { systemStyle } from '../../config/system-style';
 import type { Classes, ClassName } from '../../types';
 import { getBorder } from './get-border';
@@ -20,7 +19,6 @@ export const styleCardFooter = (
   const autoBorder = getBorder(variant, border, { placement: 'bottom' });
 
   return mergeClasses(
-    sharedStyle.display.flex,
     systemStyle.padding.default.x[autoPadding.x],
     systemStyle.padding.default.b[autoPadding.b],
     systemStyle.margin.x[autoMargin.x],
