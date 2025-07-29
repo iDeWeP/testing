@@ -78,7 +78,7 @@ export const UnstyledSwitch = (props: UnstyledSwitchProps): ReactNode => {
         disabled={disabled}
         {...setProps('switch')}
         className={mergedClassName}
-        {...setAria('switch')}
+        {...setAria('switch', { invalid })}
         {...restProps}
       />
       <UnstyledSwitchTrail
