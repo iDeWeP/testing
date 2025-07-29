@@ -5,17 +5,17 @@ import type {
   UnstyledBoxProps
 } from '../UnstyledBox/UnstyledBox.types';
 
-export type AnchorDefaultProps = {
+type DefaultProps = {
   font?: Font;
   color?: Color;
 };
 
 export type AnchorConfigProps = MergeProps<
   UnstyledBoxConfigProps,
-  AnchorDefaultProps
+  DefaultProps
 >;
 
 export type AnchorProps<E extends ElementType> = MergeProps<
   UnstyledBoxProps<E>,
-  AnchorDefaultProps
+  DefaultProps
 >;
