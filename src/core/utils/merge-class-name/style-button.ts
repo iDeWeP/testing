@@ -24,9 +24,9 @@ export const styleButton = (
   return mergeClasses(
     sharedStyle.position.relative,
     sharedStyle.focusable[focusable],
-    disabled && systemStyle.color.default.bg[theme][autoColor.bg],
-    disabled && systemStyle.color.default.text[theme][autoColor.text],
-    disabled && systemStyle.color.default.fill[theme][autoColor.text],
+    systemStyle.color.default.bg[theme][autoColor.bg],
+    systemStyle.color.default.text[theme][autoColor.text],
+    systemStyle.color.default.fill[theme][autoColor.text],
     !loading && systemStyle.color.default.ring[theme][autoColor.ring],
     isLoading && unstyledButtonConfig.styles.root.loading,
     sharedStyle.effect[effect],
