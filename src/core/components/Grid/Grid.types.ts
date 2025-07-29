@@ -11,10 +11,7 @@ type DefaultProps = {
   gy?: Gap;
 };
 
-export type GridConfigProps = MergeProps<
-  UnstyledBoxConfigProps,
-  DefaultProps
->;
+export type GridConfigProps = MergeProps<UnstyledBoxConfigProps, DefaultProps>;
 
 export type GridProps<E extends ElementType> = MergeProps<
   UnstyledBoxProps<E>,
