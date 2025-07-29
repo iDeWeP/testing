@@ -5,7 +5,7 @@ type Styles = {
   styles: {
     root: {
       default: CSSProps;
-      unstyledLayouts: CSSStyles;
+      layout: CSSStyles;
     };
   };
 };
@@ -64,7 +64,7 @@ export const unstyledLayoutConfig: ComponentConfig<UnstyledLayoutConfigProps> &
         display: 'grid',
         width: 'w-full'
       },
-      unstyledLayouts: {
+      layout: {
         default: {
           maxWidth: 'max-w-376',
           padding: 'px-4 md:px-8',
