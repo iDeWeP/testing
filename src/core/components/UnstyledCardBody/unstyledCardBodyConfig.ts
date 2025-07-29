@@ -5,8 +5,8 @@ export const unstyledCardBodyConfig: ComponentConfig<UnstyledCardBodyConfigProps
   {
     props: {
       as: 'div',
-      orientation: 'row',
       placement: 'center',
+      orientation: 'row',
       variant: 'solid',
       padding: 'unset',
       p: 'unset',

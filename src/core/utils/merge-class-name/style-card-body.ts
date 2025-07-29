@@ -1,4 +1,3 @@
-import { sharedStyle } from '../../config/shared-style';
 import { systemStyle } from '../../config/system-style';
 import type { Classes, ClassName } from '../../types';
 import { getAutoRadius } from './get-auto-radius';
@@ -10,7 +9,6 @@ export const styleCardBody = (
   className: string,
   {
     variant = 'solid',
-    orientation = 'row',
     cardPlacement = 'default',
     padding = 'unset',
     margin = 'unset',
@@ -24,7 +22,6 @@ export const styleCardBody = (
   const autoRadius = getAutoRadius(cardPlacement, radius);
 
   return mergeClasses(
-    sharedStyle.display.flex,
     systemStyle.padding.default.all[autoPadding.all],
     systemStyle.padding.default.x[autoPadding.x],
     systemStyle.padding.default.y[autoPadding.y],
@@ -40,7 +37,6 @@ export const styleCardBody = (
     systemStyle.border.t[autoBorder.t],
     systemStyle.border.b[autoBorder.b],
     systemStyle.radius[autoRadius.type][autoRadius.radius],
-    sharedStyle.direction[orientation],
     className
   );
 };
