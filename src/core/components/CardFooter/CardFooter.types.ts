@@ -1,7 +1,6 @@
 import type { ElementType } from 'react';
 import type {
   Variant,
-  Orientation,
   Padding,
   Color,
   Gap,
@@ -15,7 +14,6 @@ import type {
 
 type DefaultProps = {
   variant?: Variant;
-  orientation?: Orientation;
   padding?: Padding;
   color?: Color;
   gap?: Gap;

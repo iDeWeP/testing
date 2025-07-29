@@ -5,10 +5,10 @@ export const cardFooterConfig: ComponentConfig<CardFooterConfigProps> = {
   props: {
     as: 'div',
     variant: 'solid',
-    orientation: 'row',
     padding: 'md',
     color: 'unset',
     gap: 'unset',
+    orientation: 'row',
     p: 'unset',
     px: 'unset',
     py: 'unset',
