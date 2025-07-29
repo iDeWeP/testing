@@ -5,17 +5,17 @@ import type {
   UnstyledGroupProps
 } from '../UnstyledGroup/UnstyledGroup.types';
 
-export type GroupDefaultProps = {
+type DefaultProps = {
   orientation?: Orientation;
   gap?: GroupGap;
 };
 
 export type GroupConfigProps = MergeProps<
   UnstyledGroupConfigProps,
-  GroupDefaultProps
+  DefaultProps
 >;
 
 export type GroupProps<E extends ElementType> = MergeProps<
   UnstyledGroupProps<E>,
-  GroupDefaultProps
+  DefaultProps
 >;
