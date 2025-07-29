@@ -17,9 +17,9 @@ export const styleListItem = (
     effect = 'unset'
   }: Classes
 ): ClassName => {
-  const isTransitionable = checked !== undefined;
-  const isClickable = clickable || isTransitionable;
-  const focusable = getFocusableState({ disabled, clickable });
+  const isTransitionable = checked !== undefined && !disabled;
+  const isClickable = clickable || checked !== undefined;
+  const focusable = getFocusableState({ disabled, clickable: isClickable });
   const autoColor = getColor(variant, color, { checked, disabled });
 
   return mergeClasses(
