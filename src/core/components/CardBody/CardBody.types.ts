@@ -1,7 +1,6 @@
 import type { ElementType } from 'react';
 import type {
   Variant,
-  Orientation,
   CardPlacement,
   Padding,
   Color,
@@ -15,7 +14,6 @@ import type {
 
 type DefaultProps = {
   variant?: Variant;
-  orientation?: Orientation;
   placement?: CardPlacement;
   padding?: Padding;
   color?: Color;

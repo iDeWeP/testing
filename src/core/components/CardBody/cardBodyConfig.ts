@@ -5,11 +5,11 @@ export const cardBodyConfig: ComponentConfig<CardBodyConfigProps> = {
   props: {
     as: 'div',
     variant: 'solid',
-    orientation: 'col',
     placement: 'default',
     padding: 'md',
     color: 'unset',
     gap: 'unset',
+    orientation: 'col',
     p: 'unset',
     px: 'unset',
     py: 'unset',
