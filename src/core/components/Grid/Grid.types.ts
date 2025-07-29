@@ -5,7 +5,7 @@ import type {
   UnstyledBoxProps
 } from '../UnstyledBox/UnstyledBox.types';
 
-export type GridDefaultProps = {
+type DefaultProps = {
   gap?: Gap;
   gx?: Gap;
   gy?: Gap;
@@ -13,10 +13,10 @@ export type GridDefaultProps = {
 
 export type GridConfigProps = MergeProps<
   UnstyledBoxConfigProps,
-  GridDefaultProps
+  DefaultProps
 >;
 
 export type GridProps<E extends ElementType> = MergeProps<
   UnstyledBoxProps<E>,
-  GridDefaultProps
+  DefaultProps
 >;
