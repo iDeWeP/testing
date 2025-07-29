@@ -1,18 +1,17 @@
 import type { ElementType } from 'react';
 import type {
+  Loading,
   Variant,
   Size,
-  Radius,
   Color,
   Effect,
-  Ripple,
-  MergeProps
+  MergeProps,
+  OmitDecorators
 } from '../../types';
 import type {
   UnstyledButtonRippleProps,
   UnstyledButtonLoaderProps,
   UnstyledButtonBarProps,
-  UnstyledButtonOptionalProps,
   UnstyledButtonConfigProps,
   UnstyledButtonProps
 } from '../UnstyledButton/UnstyledButton.types';
@@ -29,27 +28,25 @@ export type IconButtonComponentsProps = {
   outerBorder?: IconButtonBarProps;
 };
 
-export type IconButtonOptionalProps = Omit<
-  UnstyledButtonOptionalProps,
-  'startDecorator' | 'endDecorator'
->;
+type OptionalProps = {
+  loading?: Loading;
+  disabled?: boolean;
+};
 
-export type IconButtonDefaultProps = {
+type DefaultProps = {
   variant?: Variant;
   size?: Size;
-  radius?: Radius;
   color?: Color;
   effect?: Effect;
   componentsProps?: IconButtonComponentsProps;
-  ripple?: Ripple;
 };
 
 export type IconButtonConfigProps = MergeProps<
   UnstyledButtonConfigProps,
-  IconButtonDefaultProps
+  DefaultProps
 >;
 
 export type IconButtonProps<E extends ElementType> = MergeProps<
-  Omit<UnstyledButtonProps<E>, 'startDecorator' | 'endDecorator'>,
-  IconButtonDefaultProps & IconButtonOptionalProps
+  OmitDecorators<UnstyledButtonProps<E>>,
+  DefaultProps & OptionalProps
 >;
