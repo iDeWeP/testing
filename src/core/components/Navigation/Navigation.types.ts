@@ -5,17 +5,17 @@ import type {
   UnstyledPaperProps
 } from '../UnstyledPaper/UnstyledPaper.types';
 
-export type NavigationDefaultProps = {
+type DefaultProps = {
   orientation?: Orientation;
   gap?: Gap;
 };
 
 export type NavigationConfigProps = MergeProps<
   UnstyledPaperConfigProps,
-  NavigationDefaultProps
+  DefaultProps
 >;
 
 export type NavigationProps<E extends ElementType> = MergeProps<
   UnstyledPaperProps<E>,
-  NavigationDefaultProps
+  DefaultProps
 >;
