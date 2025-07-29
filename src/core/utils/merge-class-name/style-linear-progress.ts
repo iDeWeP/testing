@@ -41,7 +41,7 @@ export const styleLinearProgress = (
     decorated = false
   }: Classes
 ): ClassName => {
-  const autoSize = decorated ? 'decorated' : 'default';
+  const sizeType = decorated ? 'decorated' : 'default';
   const autoMargin = getSpacing(margin);
   const autoBorder = getBorder(variant, border).all;
   const isBordered = isAutoBordered(variant, border);
@@ -50,7 +50,7 @@ export const styleLinearProgress = (
 
   return mergeClasses(
     unstyledLinearProgressConfig.styles.root.orientation[orientation],
-    unstyledLinearProgressConfig.styles.root.size[orientation][autoSize][size],
+    unstyledLinearProgressConfig.styles.root.size[orientation][sizeType][size],
     systemStyle.margin.all[autoMargin.all],
     systemStyle.margin.x[autoMargin.x],
     systemStyle.margin.y[autoMargin.y],
