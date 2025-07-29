@@ -7,10 +7,10 @@ import type {
   MergeProps
 } from '../../types';
 import type {
-  UnstyledButtonConfigProps,
-  UnstyledButtonProps
-} from '../UnstyledButton/UnstyledButton.types';
-import type { UnstyledToggleButtonRippleProps } from '../UnstyledToggleButton/UnstyledToggleButton.types';
+  UnstyledToggleButtonRippleProps,
+  UnstyledToggleButtonConfigProps,
+  UnstyledToggleButtonProps
+} from '../UnstyledToggleButton/UnstyledToggleButton.types';
 
 export type ToggleButtonRippleProps = UnstyledToggleButtonRippleProps;
 
@@ -32,11 +32,11 @@ type DefaultProps = {
 };
 
 export type ToggleButtonConfigProps = MergeProps<
-  UnstyledButtonConfigProps,
+  UnstyledToggleButtonConfigProps,
   DefaultProps
 >;
 
 export type ToggleButtonProps<E extends ElementType> = MergeProps<
-  UnstyledButtonProps<E>,
+  UnstyledToggleButtonProps<E>,
   DefaultProps & OptionalProps
 >;
