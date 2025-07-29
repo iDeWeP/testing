@@ -6,7 +6,7 @@ export const textConfig: ComponentConfig<TextConfigProps> = {
     as: 'p',
     font: 'md',
     color: 'surface',
-    variant: 'solid',
+    variant: 'text',
     padding: 'unset',
     p: 'unset',
     px: 'unset',
@@ -43,8 +43,6 @@ export const textConfig: ComponentConfig<TextConfigProps> = {
     rbr: 'unset',
     shadow: 'unset',
     ring: 'unset',
-    gap: 'unset',
-    gx: 'unset',
-    gy: 'unset'
+    gap: 'unset'
   }
 };
