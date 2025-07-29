@@ -1,7 +1,7 @@
 import { systemStyle } from '../../config/system-style';
 import type { Classes, ClassName } from '../../types';
-import { getAutoRadius } from './get-auto-radius';
 import { getBorder } from './get-border';
+import { getCardRadius } from './get-card-radius';
 import { getSpacing } from './get-spacing';
 import { mergeClasses } from './merge-classes';
 
@@ -19,7 +19,7 @@ export const styleCardBody = (
   const autoPadding = getSpacing(padding, cardPlacement);
   const autoMargin = getSpacing(margin, cardPlacement);
   const autoBorder = getBorder(variant, border, { placement: cardPlacement });
-  const autoRadius = getAutoRadius(cardPlacement, radius);
+  const autoRadius = getCardRadius(cardPlacement, radius);
 
   return mergeClasses(
     systemStyle.padding.default.all[autoPadding.all],

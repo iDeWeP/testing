@@ -30,13 +30,13 @@ export const styleSwitchContainer = (
     decorated = false
   }: Classes
 ): ClassName => {
-  const autoPlacement = decorated ? 'decorated' : 'default';
+  const sizeType = decorated ? 'decorated' : 'default';
   const sizeScale = decorated ? 'default' : 'text';
   const autoMargin = getSpacing(margin);
 
   return mergeClasses(
     sharedStyle.container,
-    unstyledSwitchConfig.styles.root.size[autoPlacement][defaultSize],
+    unstyledSwitchConfig.styles.root.size[sizeType][defaultSize],
     systemStyle.size[sizeScale].default[defaultSize],
     systemStyle.margin.all[autoMargin.all],
     systemStyle.margin.x[autoMargin.x],

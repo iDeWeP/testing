@@ -2,9 +2,9 @@ import { unstyledContainerConfig } from '../../components/UnstyledContainer/unst
 import { sharedStyle } from '../../config/shared-style';
 import { systemStyle } from '../../config/system-style';
 import type { Classes, ClassName } from '../../types';
-import { getAutoSpacing } from './get-auto-spacing';
 import { getBorder } from './get-border';
 import { getColor } from './get-color';
+import { getContainerSpacing } from './get-container-spacing';
 import { getFontSize } from './get-font-size';
 import { getSpacing } from './get-spacing';
 import { mergeClasses } from './merge-classes';
@@ -41,7 +41,7 @@ export const styleContainer = (
     gap = 'unset'
   }: Classes
 ): ClassName => {
-  const autoSpacing = getAutoSpacing(variant, size, scale, border);
+  const autoSpacing = getContainerSpacing(variant, size, scale, border);
   const autoMargin = getSpacing(margin);
   const autoBorder = getBorder(variant, border).all;
   const autoFont = getFontSize(size);
