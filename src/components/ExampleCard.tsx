@@ -10,17 +10,18 @@ type Props = {
 export const ExampleCard = ({
   col,
   height,
+  className,
   ...restProps
 }: Props): ReactNode => {
-  const className = `relative ${
+  const mergedClassName = `relative ${
     height ? 'h-[100px]' : ''
-  } bg-disabled-100 flex-wrap justify-evenly items-center`;
+  } bg-disabled-100 flex-wrap justify-evenly items-center ${className}`;
 
   return (
     <Paper
       orientation={col ? 'col' : 'row'}
       gap="xs"
-      className={className}
+      className={mergedClassName}
       {...restProps}
     />
   );

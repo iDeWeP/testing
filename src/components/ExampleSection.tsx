@@ -7,14 +7,21 @@ type Props = {
   title: string;
 } & SectionProps<'section'>;
 
-export const ExampleSection = ({ title, children }: Props): ReactNode => {
+export const ExampleSection = ({
+  title,
+  children,
+  ...restProps
+}: Props): ReactNode => {
   const id = title
     .toLowerCase()
     .trim()
     .replace(/\s{2,}/, ' ');
 
   return (
-    <Section aria-labelledby={id}>
+    <Section
+      aria-labelledby={id}
+      {...restProps}
+    >
       <Title id={id}>{title}</Title>
       {children}
     </Section>
