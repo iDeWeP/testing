@@ -7,7 +7,6 @@ export const checkboxConfig: ComponentConfig<CheckboxConfigProps> = {
     size: 'md',
     color: 'primary',
     componentsProps: {},
-    ripple: 'default',
     margin: 'unset',
     m: 'unset',
     mx: 'unset',
@@ -27,6 +26,7 @@ export const checkboxConfig: ComponentConfig<CheckboxConfigProps> = {
     rtr: 'unset',
     rbl: 'unset',
     rbr: 'unset',
-    shadow: 'unset'
+    shadow: 'unset',
+    ripple: 'default'
   }
 };
