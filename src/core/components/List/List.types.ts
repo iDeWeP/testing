@@ -5,17 +5,17 @@ import type {
   UnstyledPaperProps
 } from '../UnstyledPaper/UnstyledPaper.types';
 
-export type ListDefaultProps = {
+type DefaultProps = {
   orientation?: Orientation;
   gap?: Gap;
 };
 
 export type ListConfigProps = MergeProps<
   UnstyledPaperConfigProps,
-  ListDefaultProps
+  DefaultProps
 >;
 
 export type ListProps<E extends ElementType> = MergeProps<
   UnstyledPaperProps<E>,
-  ListDefaultProps
+  DefaultProps
 >;
