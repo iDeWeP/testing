@@ -1,6 +1,6 @@
 import type { ElementType, ReactNode } from 'react';
 import { useMergeProps } from '../../hooks/use-merge-props/use-merge-props';
-import { UnstyledCardFooter } from '../UnstyledCardFooter/UnstyledCardFooter';
+import { UnstyledCardBody } from '../UnstyledCardBody/UnstyledCardBody';
 import type { CardFooterProps } from './CardFooter.types';
 import { cardFooterConfig } from './cardFooterConfig';
 
@@ -13,5 +13,10 @@ export const CardFooter = <E extends ElementType>(
     props
   );
 
-  return <UnstyledCardFooter {...mergedProps} />;
+  return (
+    <UnstyledCardBody
+      placement="bottom"
+      {...mergedProps}
+    />
+  );
 };

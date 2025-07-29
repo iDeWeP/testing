@@ -7,7 +7,6 @@ export const cardFooterConfig: ComponentConfig<CardFooterConfigProps> = {
     variant: 'solid',
     orientation: 'row',
     padding: 'md',
-    radius: 'unset',
     color: 'unset',
     gap: 'unset',
     p: 'unset',
@@ -33,6 +32,7 @@ export const cardFooterConfig: ComponentConfig<CardFooterConfigProps> = {
     bb: 'unset',
     bl: 'unset',
     br: 'unset',
+    radius: 'unset',
     r: 'unset',
     rt: 'unset',
     rb: 'unset',
@@ -44,8 +44,6 @@ export const cardFooterConfig: ComponentConfig<CardFooterConfigProps> = {
     rbr: 'unset',
     font: 'unset',
     shadow: 'unset',
-    ring: 'unset',
-    gx: 'unset',
-    gy: 'unset'
+    ring: 'unset'
   }
 };

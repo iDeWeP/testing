@@ -3,31 +3,30 @@ import type {
   Variant,
   Orientation,
   Padding,
-  Radius,
   Color,
   Gap,
-  MergeProps
+  MergeProps,
+  OmitPlacement
 } from '../../types';
 import type {
-  UnstyledCardFooterConfigProps,
-  UnstyledCardFooterProps
-} from '../UnstyledCardFooter/UnstyledCardFooter.types';
+  UnstyledCardBodyConfigProps,
+  UnstyledCardBodyProps
+} from '../UnstyledCardBody/UnstyledCardBody.types';
 
-export type CardFooterDefaultProps = {
+type DefaultProps = {
   variant?: Variant;
   orientation?: Orientation;
   padding?: Padding;
-  radius?: Radius;
   color?: Color;
   gap?: Gap;
 };
 
 export type CardFooterConfigProps = MergeProps<
-  UnstyledCardFooterConfigProps,
-  CardFooterDefaultProps
+  OmitPlacement<UnstyledCardBodyConfigProps>,
+  DefaultProps
 >;
 
 export type CardFooterProps<E extends ElementType> = MergeProps<
-  UnstyledCardFooterProps<E>,
-  CardFooterDefaultProps
+  OmitPlacement<UnstyledCardBodyProps<E>>,
+  DefaultProps
 >;
