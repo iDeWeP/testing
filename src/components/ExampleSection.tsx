@@ -1,6 +1,7 @@
 import type { ReactNode } from 'react';
 import { Section } from '../core/components/Section/Section';
 import type { SectionProps } from '../core/components/Section/Section.types';
+import { Title } from '../core/components/Title/Title';
 
 type Props = {
   title: string;
@@ -13,11 +14,8 @@ export const ExampleSection = ({ title, children }: Props): ReactNode => {
     .replace(/\s{2,}/, ' ');
 
   return (
-    <Section
-      aria-labelledby={id}
-      className="flex flex-col"
-    >
-      <h1 id={id}>{title}</h1>
+    <Section aria-labelledby={id}>
+      <Title id={id}>{title}</Title>
       {children}
     </Section>
   );

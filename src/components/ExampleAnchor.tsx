@@ -7,7 +7,6 @@ export const ExampleAnchor = ({
   ...restProps
 }: PaperProps<'div'>): ReactNode => (
   <Paper
-    variant="solid"
     padding="xs-xs"
     color="primary-on"
     className={`relative ${className}`}

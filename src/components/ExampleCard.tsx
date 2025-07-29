@@ -14,13 +14,11 @@ export const ExampleCard = ({
 }: Props): ReactNode => {
   const className = `relative ${
     height ? 'h-[100px]' : ''
-  } bg-disabled-100 flex-wrap justify-evenly items-center
-  }`;
+  } bg-disabled-100 flex-wrap justify-evenly items-center`;
 
   return (
     <Paper
       orientation={col ? 'col' : 'row'}
-      color="unset"
       gap="xs"
       className={className}
       {...restProps}
