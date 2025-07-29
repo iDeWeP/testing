@@ -9,7 +9,6 @@ export const styleCardFooter = (
   className: string,
   {
     variant = 'solid',
-    orientation = 'row',
     padding = 'unset',
     margin = 'unset',
     border = 'unset',
@@ -29,7 +28,6 @@ export const styleCardFooter = (
     systemStyle.border.x[autoBorder.x],
     systemStyle.border.b[autoBorder.b],
     systemStyle.radius.b[radius],
-    sharedStyle.direction[orientation],
     className
   );
 };
