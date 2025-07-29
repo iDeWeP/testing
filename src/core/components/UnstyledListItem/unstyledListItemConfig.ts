@@ -4,7 +4,7 @@ import type { UnstyledListItemConfigProps } from './UnstyledListItem.types';
 export const unstyledListItemConfig: ComponentConfig<UnstyledListItemConfigProps> =
   {
     props: {
-      as: 'div',
+      as: 'li',
       variant: 'solid',
       effect: 'unset',
       componentsProps: {},
