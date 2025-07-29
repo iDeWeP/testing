@@ -92,6 +92,7 @@ export const UnstyledLinearProgress = (
         variant={variant}
         orientation={orientation}
         color={color}
+        {...componentsProps.bar}
       >
         {children && (
           <UnstyledLinearProgressLabel
