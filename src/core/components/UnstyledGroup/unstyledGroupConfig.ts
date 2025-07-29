@@ -4,8 +4,8 @@ import type { UnstyledGroupConfigProps } from './UnstyledGroup.types';
 export const unstyledGroupConfig: ComponentConfig<UnstyledGroupConfigProps> = {
   props: {
     as: 'div',
-    orientation: 'row',
     gap: 'unset',
+    orientation: 'row',
     variant: 'solid',
     padding: 'unset',
     p: 'unset',
