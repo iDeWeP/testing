@@ -35,7 +35,7 @@ export const UnstyledListItem = <E extends ElementType>(
 
   const isClickable = checked !== undefined;
   const { autoVariant, autoColor, defaultVariant, defaultColor } =
-    setCheckableStyle(variant, color, checked);
+    setCheckableStyle(variant, color, checked, 'text');
 
   const mergedClassName = mergeClassName('listItem', className, {
     theme,

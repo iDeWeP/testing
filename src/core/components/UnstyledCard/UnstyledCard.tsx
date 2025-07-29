@@ -49,8 +49,8 @@ export const UnstyledCard = <E extends ElementType>(
         element: Component,
         disabled
       })}
-      variant={variant}
-      color={color}
+      variant="solid"
+      color="unset"
       ring={clickable ? 'unset' : ring}
       gx="unset"
       gy="unset"

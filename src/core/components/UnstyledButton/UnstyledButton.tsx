@@ -86,9 +86,9 @@ export const UnstyledButton = <E extends ElementType>(
     <UnstyledContainer
       as={Component}
       {...setProps('button', buttonProps)}
-      variant={variant}
+      variant="solid"
       size={size}
-      color={color}
+      color="unset"
       ring="unset"
       className={mergedClassName}
       {...setAria('button', buttonProps)}
