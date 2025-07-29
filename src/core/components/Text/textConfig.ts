@@ -6,7 +6,7 @@ export const textConfig: ComponentConfig<TextConfigProps> = {
     as: 'p',
     font: 'md',
     color: 'surface',
-    variant: 'text',
+    variant: 'solid',
     padding: 'unset',
     p: 'unset',
     px: 'unset',
