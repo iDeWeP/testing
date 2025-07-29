@@ -1,19 +1,17 @@
-import type { ElementType } from 'react';
+import type { ReactNode, ElementType } from 'react';
 import type {
+  Loading,
   Variant,
   Size,
   DefaultScale,
-  Radius,
   Color,
   Effect,
-  Ripple,
   MergeProps
 } from '../../types';
 import type {
   UnstyledButtonRippleProps,
   UnstyledButtonLoaderProps,
   UnstyledButtonBarProps,
-  UnstyledButtonOptionalProps,
   UnstyledButtonConfigProps,
   UnstyledButtonProps
 } from '../UnstyledButton/UnstyledButton.types';
@@ -30,25 +28,28 @@ export type LinkComponentsProps = {
   outerBorder?: LinkBarProps;
 };
 
-export type LinkOptionalProps = UnstyledButtonOptionalProps;
+type OptionalProps = {
+  loading?: Loading;
+  disabled?: boolean;
+  startDecorator?: ReactNode;
+  endDecorator?: ReactNode;
+};
 
-export type LinkDefaultProps = {
+type DefaultProps = {
   variant?: Variant;
   size?: Size;
   scale?: DefaultScale;
-  radius?: Radius;
   color?: Color;
   effect?: Effect;
   componentsProps?: LinkComponentsProps;
-  ripple?: Ripple;
 };
 
 export type LinkConfigProps = MergeProps<
   UnstyledButtonConfigProps,
-  LinkDefaultProps
+  DefaultProps
 >;
 
 export type LinkProps<E extends ElementType> = MergeProps<
   UnstyledButtonProps<E>,
-  LinkDefaultProps & LinkOptionalProps
+  DefaultProps & OptionalProps
 >;
