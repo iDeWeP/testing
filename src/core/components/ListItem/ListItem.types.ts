@@ -25,6 +25,7 @@ type DefaultProps = {
   padding?: Padding;
   color?: Color;
   gap?: Gap;
+  componentsProps?: ListItemComponentsProps;
 };
 
 export type ListItemConfigProps = MergeProps<
