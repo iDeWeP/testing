@@ -118,15 +118,15 @@ const dimensionMap: DimensionMap = {
               ? size[orientation].start
               : size[orientation].viewEnd
         };
-      } else {
-        return {
-          [dimension]:
-            size[orientation].viewEnd + el[getElLength(end)] <
-            anchor[getOffsetSize(orientation)]
-              ? size[orientation].end
-              : size[orientation].viewEnd
-        };
       }
+
+      return {
+        [dimension]:
+          size[orientation].viewEnd + el[getElLength(end)] <
+          anchor[getOffsetSize(orientation)]
+            ? size[orientation].end
+            : size[orientation].viewEnd
+      };
     }
 
     if (overflow[orientation].centerStart < view[start]) {
@@ -138,14 +138,14 @@ const dimensionMap: DimensionMap = {
               ? size[orientation].viewStart
               : size[orientation].end
         };
-      } else {
-        return {
-          [dimension]:
-            size[orientation].viewStart < anchor[getPosition(orientation)]
-              ? size[orientation].viewStart
-              : size[orientation].start
-        };
       }
+
+      return {
+        [dimension]:
+          size[orientation].viewStart < anchor[getPosition(orientation)]
+            ? size[orientation].viewStart
+            : size[orientation].start
+      };
     }
   }
 };
