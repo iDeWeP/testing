@@ -82,7 +82,7 @@ export const UnstyledLinearProgress = (
   return (
     <div
       className={mergedClassName}
-      {...setAria('linearProgress', { min: 0, max: 100, value })}
+      {...setAria('progress', { min: 0, max: 100, value })}
       {...restProps}
     >
       <UnstyledLinearProgressBar
