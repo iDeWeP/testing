@@ -7,10 +7,9 @@ export const textareaConfig: ComponentConfig<TextareaConfigProps> = {
     variant: 'outlined',
     size: 'md',
     resize: false,
-    radius: 'lg',
+    width: 'default',
     color: 'primary',
     componentsProps: {},
-    width: 'default',
     margin: 'unset',
     m: 'unset',
     mx: 'unset',
@@ -19,6 +18,7 @@ export const textareaConfig: ComponentConfig<TextareaConfigProps> = {
     mb: 'unset',
     ml: 'unset',
     mr: 'unset',
+    radius: 'unset',
     r: 'unset',
     rt: 'unset',
     rb: 'unset',
@@ -28,6 +28,7 @@ export const textareaConfig: ComponentConfig<TextareaConfigProps> = {
     rtr: 'unset',
     rbl: 'unset',
     rbr: 'unset',
-    gap: 'xs'
+    ring: 'unset',
+    gap: 'unset'
   }
 };
