@@ -82,11 +82,13 @@ export const getInputRadius = (
     radiusType.l = setRadius(r, rl);
     radiusType.tl = setRadius(rt, rtl);
     radiusType.bl = setRadius(rb, rbl);
-  } else {
-    radiusType.r = setRadius(r, rr);
-    radiusType.tr = setRadius(rt, rtr);
-    radiusType.br = setRadius(rb, rbr);
+
+    return radiusType;
   }
+
+  radiusType.r = setRadius(r, rr);
+  radiusType.tr = setRadius(rt, rtr);
+  radiusType.br = setRadius(rb, rbr);
 
   return radiusType;
 };
