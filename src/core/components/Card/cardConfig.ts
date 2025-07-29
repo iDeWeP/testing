@@ -35,7 +35,7 @@ export const cardConfig: ComponentConfig<CardConfigProps> = {
     bb: 'unset',
     bl: 'unset',
     br: 'unset',
-    radius: 'unset',
+    radius: 'lg',
     r: 'unset',
     rt: 'unset',
     rb: 'unset',
