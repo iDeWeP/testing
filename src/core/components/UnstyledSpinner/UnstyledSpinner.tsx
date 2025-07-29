@@ -58,6 +58,7 @@ export const UnstyledSpinner = (props: UnstyledSpinnerProps): ReactNode => {
       viewBox="0 0 40 40"
       strokeLinecap="round"
       className={mergedClassName}
+      {...setAria('block', { disabled })}
       {...restProps}
     >
       {hasTrail && (
@@ -70,7 +71,6 @@ export const UnstyledSpinner = (props: UnstyledSpinnerProps): ReactNode => {
           strokeWidth={thickness}
           variant={variant}
           color={color}
-          {...setAria('block', { disabled })}
           {...componentsProps.trail}
         />
       )}
