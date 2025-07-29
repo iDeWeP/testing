@@ -1,11 +1,9 @@
 import type { ElementType } from 'react';
 import type {
+  SVGNodeProps,
   Variant,
   Size,
-  Radius,
   Color,
-  Effect,
-  Ripple,
   MergeProps
 } from '../../types';
 import type {
@@ -13,7 +11,6 @@ import type {
   UnstyledCloseButtonRippleProps,
   UnstyledCloseButtonLoaderProps,
   UnstyledCloseButtonBarProps,
-  UnstyledCloseButtonOptionalProps,
   UnstyledCloseButtonConfigProps,
   UnstyledCloseButtonProps
 } from '../UnstyledCloseButton/UnstyledCloseButton.types';
@@ -32,24 +29,25 @@ export type CloseButtonComponentsProps = {
   outerBorder?: CloseButtonBarProps;
 };
 
-export type CloseButtonOptionalProps = UnstyledCloseButtonOptionalProps;
+type OptionalProps = {
+  loading?: boolean;
+  disabled?: boolean;
+  children?: SVGNodeProps;
+};
 
-export type CloseButtonDefaultProps = {
+type DefaultProps = {
   variant?: Variant;
   size?: Size;
-  radius?: Radius;
   color?: Color;
-  effect?: Effect;
   componentsProps?: CloseButtonComponentsProps;
-  ripple?: Ripple;
 };
 
 export type CloseButtonConfigProps = MergeProps<
   UnstyledCloseButtonConfigProps,
-  CloseButtonDefaultProps
+  DefaultProps
 >;
 
 export type CloseButtonProps<E extends ElementType> = MergeProps<
   UnstyledCloseButtonProps<E>,
-  CloseButtonDefaultProps & CloseButtonOptionalProps
+  DefaultProps & OptionalProps
 >;
