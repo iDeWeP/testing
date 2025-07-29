@@ -1,22 +1,23 @@
 import type { ElementType } from 'react';
-import type { Gap, MergeProps } from '../../types';
+import type { Layout, Gap, MergeProps } from '../../types';
 import type {
-  UnstyledBoxConfigProps,
-  UnstyledBoxProps
-} from '../UnstyledBox/UnstyledBox.types';
+  UnstyledLayoutConfigProps,
+  UnstyledLayoutProps
+} from '../UnstyledLayout/UnstyledLayout.types';
 
-export type LayoutDefaultProps = {
+type DefaultProps = {
+  layout?: Layout;
   gap?: Gap;
   gx?: Gap;
   gy?: Gap;
 };
 
 export type LayoutConfigProps = MergeProps<
-  UnstyledBoxConfigProps,
-  LayoutDefaultProps
+  UnstyledLayoutConfigProps,
+  DefaultProps
 >;
 
 export type LayoutProps<E extends ElementType> = MergeProps<
-  UnstyledBoxProps<E>,
-  LayoutDefaultProps
+  UnstyledLayoutProps<E>,
+  DefaultProps
 >;
