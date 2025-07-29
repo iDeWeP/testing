@@ -1,9 +1,9 @@
 import type { ElementType } from 'react';
 import type { Font, Color, MergeProps } from '../../types';
 import type {
-  UnstyledBoxConfigProps,
-  UnstyledBoxProps
-} from '../UnstyledBox/UnstyledBox.types';
+  UnstyledTypographyConfigProps,
+  UnstyledTypographyProps
+} from '../UnstyledTypography/UnstyledTypography.types';
 
 type DefaultProps = {
   font?: Font;
@@ -11,11 +11,11 @@ type DefaultProps = {
 };
 
 export type AnchorConfigProps = MergeProps<
-  UnstyledBoxConfigProps,
+  UnstyledTypographyConfigProps,
   DefaultProps
 >;
 
 export type AnchorProps<E extends ElementType> = MergeProps<
-  UnstyledBoxProps<E>,
+  UnstyledTypographyProps<E>,
   DefaultProps
 >;
