@@ -5,7 +5,6 @@ import { styleBox } from './style-box';
 import { styleButton } from './style-button';
 import { styleCard } from './style-card';
 import { styleCardBody } from './style-card-body';
-import { styleCardFooter } from './style-card-footer';
 import { styleCheckbox } from './style-checkbox';
 import { styleCheckboxContainer } from './style-checkbox-container';
 import { styleCheckboxIcon } from './style-checkbox-icon';
@@ -22,6 +21,7 @@ import { styleGroup } from './style-group';
 import { styleIcon } from './style-icon';
 import { styleImage } from './style-image';
 import { styleInput } from './style-input';
+import { styleInputBody } from './style-input-body';
 import { styleInputClearance } from './style-input-clearance';
 import { styleInputContainer } from './style-input-container';
 import { styleInputDecorator } from './style-input-decorator';
@@ -32,17 +32,19 @@ import { styleLayout } from './style-layout';
 import { styleLinearProgress } from './style-linear-progress';
 import { styleLinearProgressBar } from './style-linear-progress-bar';
 import { styleLinearProgressLabel } from './style-linear-progress-label';
+import { styleListItem } from './style-list-item';
 import { styleLoader } from './style-loader';
+import { stylePaper } from './style-paper';
 import { styleRipple } from './style-ripple';
 import { styleSpinner } from './style-spinner';
 import { styleSpinnerBar } from './style-spinner-bar';
-import { styleStack } from './style-stack';
 import { styleSwitch } from './style-switch';
 import { styleSwitchBar } from './style-switch-bar';
 import { styleSwitchContainer } from './style-switch-container';
 import { styleSwitchIcon } from './style-switch-icon';
 import { styleSwitchRipple } from './style-switch-ripple';
 import { styleSwitchTrail } from './style-switch-trail';
+import { styleToggleButton } from './style-toggle-button';
 import { styleTransition } from './style-transition';
 
 const componentsClasses = {
@@ -51,7 +53,6 @@ const componentsClasses = {
   box: styleBox,
   button: styleButton,
   cardBody: styleCardBody,
-  cardFooter: styleCardFooter,
   card: styleCard,
   checkboxContainer: styleCheckboxContainer,
   checkboxIcon: styleCheckboxIcon,
@@ -68,6 +69,7 @@ const componentsClasses = {
   group: styleGroup,
   icon: styleIcon,
   image: styleImage,
+  inputBody: styleInputBody,
   inputClearance: styleInputClearance,
   inputContainer: styleInputContainer,
   inputDecorator: styleInputDecorator,
@@ -79,21 +81,20 @@ const componentsClasses = {
   linearProgressBar: styleLinearProgressBar,
   linearProgressLabel: styleLinearProgressLabel,
   linearProgress: styleLinearProgress,
+  listItem: styleListItem,
   loader: styleLoader,
+  paper: stylePaper,
   ripple: styleRipple,
   spinnerBar: styleSpinnerBar,
   spinner: styleSpinner,
-  stack: styleStack,
   switchBar: styleSwitchBar,
   switchContainer: styleSwitchContainer,
   switchIcon: styleSwitchIcon,
   switchRipple: styleSwitchRipple,
   switchTrail: styleSwitchTrail,
   switch: styleSwitch,
+  toggleButton: styleToggleButton,
   transition: styleTransition
-  /* unstyledPopperArrow: styleUnstyledPopperArrow,
-  unstyledPopperBackdrop: styleUnstyledPopperBackdrop,
-  unstyledPopper: styleUnstyledPopper */
 };
 
 export const mergeClassName = (
