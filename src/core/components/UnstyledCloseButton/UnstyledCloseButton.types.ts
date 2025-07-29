@@ -3,7 +3,6 @@ import type {
   ComponentRefProps,
   SVGNodeProps,
   MergeProps,
-  OmitGap,
   OmitDecorators
 } from '../../types';
 import type {
@@ -39,7 +38,7 @@ type DefaultProps = {
 };
 
 export type UnstyledCloseButtonConfigProps = MergeProps<
-  OmitGap<UnstyledButtonConfigProps>,
+  UnstyledButtonConfigProps,
   DefaultProps
 >;
 
