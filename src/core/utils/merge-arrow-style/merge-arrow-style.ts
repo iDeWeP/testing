@@ -1,11 +1,13 @@
 import type { CSSProperties } from 'react';
 import type { DefaultPlacement, ArrowOffset } from '../../types';
-import { getOffset } from '../get-offset/get-offset';
 
 type PlacementMap = Record<
   DefaultPlacement,
   (offset: ArrowOffset) => CSSProperties
 >;
+
+const getOffset = (offset: number | string): string =>
+  typeof offset === 'number' ? `${offset}px` : offset;
 
 const placementMap: PlacementMap = {
   top: (offset): CSSProperties => ({
