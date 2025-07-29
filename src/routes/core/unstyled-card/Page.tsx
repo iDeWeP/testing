@@ -53,9 +53,9 @@ const Page = (): ReactNode => (
     <DefaultExample />
     <DisabledExample />
     <ClickableExample />
-    <OrientationExample />
     <EffectExample />
     <RippleExample />
+    <OrientationExample />
     <VariantExample />
     <PaddingExample />
     <PaddingPExample />
