@@ -3,52 +3,40 @@ import type {
   Variant,
   Size,
   DefaultScale,
-  Radius,
   Color,
-  Effect,
-  Ripple,
   MergeProps
 } from '../../types';
 import type {
-  UnstyledButtonRippleProps,
-  UnstyledButtonLoaderProps,
-  UnstyledButtonBarProps,
-  UnstyledButtonOptionalProps,
   UnstyledButtonConfigProps,
   UnstyledButtonProps
 } from '../UnstyledButton/UnstyledButton.types';
+import type { UnstyledToggleButtonRippleProps } from '../UnstyledToggleButton/UnstyledToggleButton.types';
 
-export type ToggleButtonRippleProps = UnstyledButtonRippleProps;
-export type ToggleButtonLoaderProps = UnstyledButtonLoaderProps;
-export type ToggleButtonBarProps = UnstyledButtonBarProps;
+export type ToggleButtonRippleProps = UnstyledToggleButtonRippleProps;
 
 export type ToggleButtonComponentsProps = {
   ripple?: ToggleButtonRippleProps;
-  loader?: ToggleButtonLoaderProps;
-  bar?: ToggleButtonBarProps;
-  innerBorder?: ToggleButtonBarProps;
-  outerBorder?: ToggleButtonBarProps;
 };
 
-export type ToggleButtonOptionalProps = UnstyledButtonOptionalProps;
+type OptionalProps = {
+  checked?: boolean;
+  disabled?: boolean;
+};
 
-export type ToggleButtonDefaultProps = {
+type DefaultProps = {
   variant?: Variant;
   size?: Size;
   scale?: DefaultScale;
-  radius?: Radius;
   color?: Color;
-  effect?: Effect;
   componentsProps?: ToggleButtonComponentsProps;
-  ripple?: Ripple;
 };
 
 export type ToggleButtonConfigProps = MergeProps<
   UnstyledButtonConfigProps,
-  ToggleButtonDefaultProps
+  DefaultProps
 >;
 
 export type ToggleButtonProps<E extends ElementType> = MergeProps<
   UnstyledButtonProps<E>,
-  ToggleButtonDefaultProps & ToggleButtonOptionalProps
+  DefaultProps & OptionalProps
 >;
