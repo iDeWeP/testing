@@ -21,7 +21,7 @@ export type CircularProgressComponentsProps = {
   outerBorder?: CircularProgressBarProps;
 };
 
-export type DefaultProps = {
+type DefaultProps = {
   value?: number;
   variant?: Variant;
   size?: Size;
