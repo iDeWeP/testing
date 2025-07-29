@@ -2,8 +2,8 @@ import type { Variant, Color, CheckableVariant } from '../../types';
 import { getCheckableVariants } from '../get-checkable-variants/get-checkable-variants';
 
 type Style = {
-  currentVariant: Variant;
-  currentColor: Color;
+  autoVariant: Variant;
+  autoColor: Color;
   defaultVariant: Variant;
   defaultColor: Color;
 };
@@ -11,14 +11,18 @@ type Style = {
 export const setCheckableStyle = (
   variant: CheckableVariant,
   color: Color,
-  checked?: boolean
+  checked?: boolean,
+  defaultVariant?: Variant
 ): Style => {
   const isUnchecked = checked === false;
-  const [uncheckedVariant, checkedVariant] = getCheckableVariants(variant);
+  const [uncheckedVariant, checkedVariant] = getCheckableVariants(
+    variant,
+    defaultVariant
+  );
 
   return {
-    currentVariant: isUnchecked ? uncheckedVariant : checkedVariant,
-    currentColor: isUnchecked && color !== 'unset' ? 'surface' : color,
+    autoVariant: isUnchecked ? uncheckedVariant : checkedVariant,
+    autoColor: isUnchecked && color !== 'unset' ? 'surface' : color,
     defaultVariant: checkedVariant,
     defaultColor: color
   };
