@@ -4,10 +4,10 @@ import type { UnstyledCardConfigProps } from './UnstyledCard.types';
 export const unstyledCardConfig: ComponentConfig<UnstyledCardConfigProps> = {
   props: {
     as: 'div',
-    orientation: 'row',
     effect: 'unset',
     componentsProps: {},
     ripple: 'none',
+    orientation: 'row',
     variant: 'solid',
     padding: 'unset',
     p: 'unset',

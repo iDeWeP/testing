@@ -4,7 +4,7 @@ import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
 import { mergeProps } from '../../utils/merge-props/merge-props';
 import { setAria } from '../../utils/set-aria/set-aria';
 import { setProps } from '../../utils/set-props/set-props';
-import { UnstyledBox } from '../UnstyledBox/UnstyledBox';
+import { UnstyledPaper } from '../UnstyledPaper/UnstyledPaper';
 import { UnstyledRipple } from '../UnstyledRipple/UnstyledRipple';
 import type { UnstyledCardProps } from './UnstyledCard.types';
 import { unstyledCardConfig } from './unstyledCardConfig';
@@ -16,7 +16,6 @@ export const UnstyledCard = <E extends ElementType>(
     as: Component,
     disabled = false,
     clickable = false,
-    orientation,
     effect,
     className,
     componentsProps,
@@ -35,7 +34,6 @@ export const UnstyledCard = <E extends ElementType>(
     disabled,
     clickable,
     variant,
-    orientation,
     color,
     effect
   });
@@ -43,7 +41,7 @@ export const UnstyledCard = <E extends ElementType>(
   const hasRipple = ripple !== 'none' && clickable && !disabled;
 
   return (
-    <UnstyledBox
+    <UnstyledPaper
       as={Component}
       {...setProps('button', {
         element: Component,
@@ -72,6 +70,6 @@ export const UnstyledCard = <E extends ElementType>(
           {...componentsProps.ripple}
         />
       )}
-    </UnstyledBox>
+    </UnstyledPaper>
   );
 };

@@ -1,16 +1,14 @@
 import type { ElementType } from 'react';
 import type {
   ComponentRefProps,
-  Orientation,
   Effect,
   Ripple,
-  MergeProps,
-  OmitGaps
+  MergeProps
 } from '../../types';
 import type {
-  UnstyledBoxConfigProps,
-  UnstyledBoxProps
-} from '../UnstyledBox/UnstyledBox.types';
+  UnstyledPaperConfigProps,
+  UnstyledPaperProps
+} from '../UnstyledPaper/UnstyledPaper.types';
 
 export type UnstyledCardRippleProps = ComponentRefProps<'span'>;
 
@@ -24,18 +22,17 @@ type OptionalProps = {
 };
 
 type DefaultProps = {
-  orientation?: Orientation;
   effect?: Effect;
   componentsProps?: UnstyledCardComponentsProps;
   ripple?: Ripple;
 };
 
 export type UnstyledCardConfigProps = MergeProps<
-  OmitGaps<UnstyledBoxConfigProps>,
+  UnstyledPaperConfigProps,
   DefaultProps
 >;
 
 export type UnstyledCardProps<E extends ElementType> = MergeProps<
-  OmitGaps<UnstyledBoxProps<E>>,
+  UnstyledPaperProps<E>,
   DefaultProps & OptionalProps
 >;
