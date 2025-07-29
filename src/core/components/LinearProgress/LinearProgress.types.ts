@@ -2,14 +2,12 @@ import type {
   Variant,
   Orientation,
   Size,
-  Radius,
   Color,
   MergeProps
 } from '../../types';
 import type {
   UnstyledLinearProgressLabelProps,
   UnstyledLinearProgressBarProps,
-  UnstyledLinearProgressOptionalProps,
   UnstyledLinearProgressConfigProps,
   UnstyledLinearProgressProps
 } from '../UnstyledLinearProgress/UnstyledLinearProgress.types';
@@ -22,24 +20,25 @@ export type LinearProgressComponentsProps = {
   bar?: LinearProgressBarProps;
 };
 
-export type LinearProgressOptionalProps = UnstyledLinearProgressOptionalProps;
+type OptionalProps = {
+  disabled?: boolean;
+};
 
-export type LinearProgressDefaultProps = {
+type DefaultProps = {
   value?: number;
   variant?: Variant;
   orientation?: Orientation;
   size?: Size;
-  radius?: Radius;
   color?: Color;
   componentsProps?: LinearProgressComponentsProps;
 };
 
 export type LinearProgressConfigProps = MergeProps<
   UnstyledLinearProgressConfigProps,
-  LinearProgressDefaultProps
+  DefaultProps
 >;
 
 export type LinearProgressProps = MergeProps<
   UnstyledLinearProgressProps,
-  LinearProgressDefaultProps & LinearProgressOptionalProps
+  DefaultProps & OptionalProps
 >;

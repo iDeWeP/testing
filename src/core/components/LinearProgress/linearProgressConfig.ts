@@ -8,7 +8,6 @@ export const linearProgressConfig: ComponentConfig<LinearProgressConfigProps> =
       variant: 'light',
       orientation: 'row',
       size: 'md',
-      radius: 'full',
       color: 'primary',
       componentsProps: {},
       margin: 'unset',
@@ -20,6 +19,7 @@ export const linearProgressConfig: ComponentConfig<LinearProgressConfigProps> =
       ml: 'unset',
       mr: 'unset',
       border: 'auto',
+      radius: 'unset',
       r: 'unset',
       rt: 'unset',
       rb: 'unset',
@@ -31,6 +31,6 @@ export const linearProgressConfig: ComponentConfig<LinearProgressConfigProps> =
       rbr: 'unset',
       shadow: 'unset',
       ring: 'unset',
-      gap: 'xs'
+      gap: 'unset'
     }
   };
