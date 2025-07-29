@@ -18,6 +18,7 @@ type SetAria =
   | undefined;
 
 type Element =
+  | 'block'
   | 'button'
   | 'checkbox'
   | 'divider'
@@ -31,6 +32,11 @@ type Element =
 type TypeMap = Record<Element, (props: Props) => SetAria>;
 
 const typeMap: TypeMap = {
+  block: ({ disabled }: Props): SetAria => {
+    if (disabled) {
+      return { 'aria-disabled': true };
+    }
+  },
   button: ({ element, disabled, clickable = true }: Props): SetAria => {
     if (element !== 'button' && clickable) {
       return {
@@ -83,8 +89,9 @@ const typeMap: TypeMap = {
       };
     }
   },
-  progress: ({ min, max, value }: Props): SetAria => ({
+  progress: ({ disabled, min, max, value }: Props): SetAria => ({
     role: 'progressbar',
+    ...(disabled && { 'aria-disabled': true }),
     'aria-valuemin': min,
     'aria-valuemax': max,
     'aria-valuenow': value
