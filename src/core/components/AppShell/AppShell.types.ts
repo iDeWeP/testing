@@ -5,7 +5,7 @@ import type {
   UnstyledBoxProps
 } from '../UnstyledBox/UnstyledBox.types';
 
-export type AppShellDefaultProps = {
+type DefaultProps = {
   variant?: Variant;
   font?: Font;
   color?: Color;
@@ -13,10 +13,10 @@ export type AppShellDefaultProps = {
 
 export type AppShellConfigProps = MergeProps<
   UnstyledBoxConfigProps,
-  AppShellDefaultProps
+  DefaultProps
 >;
 
 export type AppShellProps<E extends ElementType> = MergeProps<
   UnstyledBoxProps<E>,
-  AppShellDefaultProps
+  DefaultProps
 >;

@@ -1,15 +1,7 @@
-import type { CSSProps, ComponentConfig } from '../../types';
+import type { ComponentConfig } from '../../types';
 import type { AppShellConfigProps } from './AppShell.types';
 
-type Styles = {
-  styles: {
-    root: {
-      default: CSSProps;
-    };
-  };
-};
-
-export const appShellConfig: ComponentConfig<AppShellConfigProps> & Styles = {
+export const appShellConfig: ComponentConfig<AppShellConfigProps> = {
   props: {
     as: 'div',
     variant: 'text',
@@ -54,15 +46,5 @@ export const appShellConfig: ComponentConfig<AppShellConfigProps> & Styles = {
     gap: 'unset',
     gx: 'unset',
     gy: 'unset'
-  },
-  styles: {
-    root: {
-      default: {
-        display: 'grid',
-        minHeight: 'min-h-screen',
-        gridTemplateColumns: 'grid-cols-default',
-        gridTemplateRows: 'grid-rows-default'
-      }
-    }
   }
 };
