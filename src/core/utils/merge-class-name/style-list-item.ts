@@ -17,19 +17,21 @@ export const styleListItem = (
     effect = 'unset'
   }: Classes
 ): ClassName => {
+  const isTransitionable = checked !== undefined;
+  const isClickable = clickable || isTransitionable;
   const focusable = getFocusableState({ disabled, clickable });
   const autoColor = getColor(variant, color, { checked, disabled });
 
   return mergeClasses(
     checked && sharedStyle.state.on,
     sharedStyle.position.relative,
-    clickable && sharedStyle.transition.color,
+    isTransitionable && sharedStyle.transition.color,
     sharedStyle.focusable[focusable],
     systemStyle.color.default.bg[theme][autoColor.bg],
     systemStyle.color.default.text[theme][autoColor.text],
     systemStyle.color.default.fill[theme][autoColor.text],
-    clickable && systemStyle.color.default.ring[theme][autoColor.ring],
-    clickable && sharedStyle.effect[effect],
+    isClickable && systemStyle.color.default.ring[theme][autoColor.ring],
+    isClickable && sharedStyle.effect[effect],
     className
   );
 };

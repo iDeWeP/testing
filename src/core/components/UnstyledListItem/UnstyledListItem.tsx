@@ -33,7 +33,6 @@ export const UnstyledListItem = <E extends ElementType>(
 
   const theme = useTheme();
 
-  const isClickable = clickable || checked !== undefined;
   const { autoVariant, autoColor, defaultVariant, defaultColor } =
     setCheckableStyle(variant, color, checked, 'text');
 
@@ -41,7 +40,7 @@ export const UnstyledListItem = <E extends ElementType>(
     theme,
     checked,
     disabled,
-    clickable: isClickable,
+    clickable,
     variant: autoVariant,
     color: autoColor,
     effect
@@ -50,6 +49,7 @@ export const UnstyledListItem = <E extends ElementType>(
   const autoBorder = isAutoBordered(autoVariant, border, checked)
     ? 'set'
     : border;
+  const isClickable = clickable || checked !== undefined;
   const hasRipple = ripple !== 'none' && !disabled;
 
   return (
