@@ -1,7 +1,8 @@
+import type { ReactNode } from 'react';
 import type {
   InputVariant,
   InputSize,
-  Radius,
+  Width,
   Color,
   MergeProps
 } from '../../types';
@@ -9,9 +10,9 @@ import type {
   UnstyledInputContainerProps,
   UnstyledInputLabelProps,
   UnstyledInputDecoratorProps,
+  UnstyledInputBodyProps,
   UnstyledInputFieldsetProps,
   UnstyledInputClearanceProps,
-  UnstyledInputOptionalProps,
   UnstyledInputConfigProps,
   UnstyledInputProps
 } from '../UnstyledInput/UnstyledInput.types';
@@ -19,6 +20,7 @@ import type {
 export type InputContainerProps = UnstyledInputContainerProps;
 export type InputLabelProps = UnstyledInputLabelProps;
 export type InputDecoratorProps = UnstyledInputDecoratorProps;
+export type InputBodyProps = UnstyledInputBodyProps;
 export type InputFieldsetProps = UnstyledInputFieldsetProps;
 export type InputClearanceProps = UnstyledInputClearanceProps;
 
@@ -27,26 +29,36 @@ export type InputComponentsProps = {
   label?: InputLabelProps;
   startDecorator?: InputDecoratorProps;
   endDecorator?: InputDecoratorProps;
+  body?: InputBodyProps;
   fieldset?: InputFieldsetProps;
   clearance?: InputClearanceProps;
 };
 
-export type InputOptionalProps = UnstyledInputOptionalProps;
+type OptionalProps = {
+  focused?: boolean;
+  shifted?: boolean;
+  valid?: boolean;
+  invalid?: boolean;
+  disabled?: boolean;
+  label?: ReactNode;
+  startDecorator?: ReactNode;
+  endDecorator?: ReactNode;
+};
 
-export type InputDefaultProps = {
+type DefaultProps = {
   variant?: InputVariant;
   size?: InputSize;
-  radius?: Radius;
+  width?: Width;
   color?: Color;
   componentsProps?: InputComponentsProps;
 };
 
 export type InputConfigProps = MergeProps<
   UnstyledInputConfigProps,
-  InputDefaultProps
+  DefaultProps
 >;
 
 export type InputProps = MergeProps<
   UnstyledInputProps<'input'>,
-  InputDefaultProps & InputOptionalProps
+  DefaultProps & OptionalProps
 >;

@@ -6,11 +6,10 @@ export const inputConfig: ComponentConfig<InputConfigProps> = {
     as: 'input',
     variant: 'outlined',
     size: 'md',
-    radius: 'lg',
+    width: 'default',
     color: 'primary',
     componentsProps: {},
     resize: false,
-    width: 'default',
     margin: 'unset',
     m: 'unset',
     mx: 'unset',
@@ -19,6 +18,7 @@ export const inputConfig: ComponentConfig<InputConfigProps> = {
     mb: 'unset',
     ml: 'unset',
     mr: 'unset',
+    radius: 'unset',
     r: 'unset',
     rt: 'unset',
     rb: 'unset',
@@ -28,6 +28,7 @@ export const inputConfig: ComponentConfig<InputConfigProps> = {
     rtr: 'unset',
     rbl: 'unset',
     rbr: 'unset',
-    gap: 'xs'
+    ring: 'unset',
+    gap: 'unset'
   }
 };
