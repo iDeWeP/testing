@@ -4,13 +4,9 @@ import type { DropdownConfigProps } from './Dropdown.types';
 export const dropdownConfig: ComponentConfig<DropdownConfigProps> = {
   props: {
     as: 'div',
-    variant: 'solid',
     orientation: 'col',
+    variant: 'solid',
     padding: 'unset',
-    radius: 'lg',
-    color: 'surface-on',
-    shadow: 'unset',
-    gap: 'unset',
     p: 'unset',
     px: 'unset',
     py: 'unset',
@@ -26,6 +22,7 @@ export const dropdownConfig: ComponentConfig<DropdownConfigProps> = {
     bb: 'unset',
     bl: 'unset',
     br: 'unset',
+    radius: 'lg',
     r: 'unset',
     rt: 'unset',
     rb: 'unset',
@@ -36,8 +33,9 @@ export const dropdownConfig: ComponentConfig<DropdownConfigProps> = {
     rbl: 'unset',
     rbr: 'unset',
     font: 'unset',
+    color: 'surface-on',
+    shadow: 'unset',
     ring: 'unset',
-    gx: 'unset',
-    gy: 'unset'
+    gap: 'unset'
   }
 };
