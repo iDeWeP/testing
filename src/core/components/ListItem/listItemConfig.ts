@@ -7,9 +7,11 @@ export const listItemConfig: ComponentConfig<ListItemConfigProps> = {
     variant: 'solid',
     orientation: 'row',
     padding: 'unset',
-    radius: 'lg',
     color: 'surface-on',
     gap: 'unset',
+    effect: 'unset',
+    componentsProps: {},
+    ripple: 'none',
     p: 'unset',
     px: 'unset',
     py: 'unset',
@@ -33,6 +35,7 @@ export const listItemConfig: ComponentConfig<ListItemConfigProps> = {
     bb: 'unset',
     bl: 'unset',
     br: 'unset',
+    radius: 'unset',
     r: 'unset',
     rt: 'unset',
     rb: 'unset',
@@ -44,8 +47,6 @@ export const listItemConfig: ComponentConfig<ListItemConfigProps> = {
     rbr: 'unset',
     font: 'unset',
     shadow: 'unset',
-    ring: 'unset',
-    gx: 'unset',
-    gy: 'unset'
+    ring: 'unset'
   }
 };

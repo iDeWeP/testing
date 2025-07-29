@@ -3,31 +3,36 @@ import type {
   Variant,
   Orientation,
   Padding,
-  Radius,
   Color,
   Gap,
   MergeProps
 } from '../../types';
 import type {
-  UnstyledCardConfigProps,
-  UnstyledCardProps
-} from '../UnstyledCard/UnstyledCard.types';
+  UnstyledListItemRippleProps,
+  UnstyledListItemConfigProps,
+  UnstyledListItemProps
+} from '../UnstyledListItem/UnstyledListItem.types';
 
-export type ListItemDefaultProps = {
+export type ListItemRippleProps = UnstyledListItemRippleProps;
+
+export type ListItemComponentsProps = {
+  ripple?: ListItemRippleProps;
+};
+
+type DefaultProps = {
   variant?: Variant;
   orientation?: Orientation;
   padding?: Padding;
-  radius?: Radius;
   color?: Color;
   gap?: Gap;
 };
 
 export type ListItemConfigProps = MergeProps<
-  UnstyledCardConfigProps,
-  ListItemDefaultProps
+  UnstyledListItemConfigProps,
+  DefaultProps
 >;
 
 export type ListItemProps<E extends ElementType> = MergeProps<
-  UnstyledCardProps<E>,
-  ListItemDefaultProps
+  UnstyledListItemProps<E>,
+  DefaultProps
 >;
