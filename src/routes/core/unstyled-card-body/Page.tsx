@@ -48,8 +48,8 @@ const Page = (): ReactNode => (
   <>
     <ExampleTitle>UnstyledCardBody</ExampleTitle>
     <DefaultExample />
-    <OrientationExample />
     <PlacementExample />
+    <OrientationExample />
     <VariantExample />
     <PaddingExample />
     <PaddingPExample />
