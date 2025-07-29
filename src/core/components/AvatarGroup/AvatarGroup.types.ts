@@ -12,12 +12,12 @@ export type AvatarGroupComponentsProps = {
   surplus?: AvatarGroupSurplusProps;
 };
 
-export type AvatarGroupOptionalProps = {
+type OptionalProps = {
   max?: number;
   total?: number;
 };
 
-export type AvatarGroupDefaultProps = {
+type DefaultProps = {
   orientation?: Orientation;
   gap?: GroupGap;
   componentsProps?: AvatarGroupComponentsProps;
@@ -26,10 +26,10 @@ export type AvatarGroupDefaultProps = {
 
 export type AvatarGroupConfigProps = MergeProps<
   UnstyledGroupConfigProps,
-  AvatarGroupDefaultProps
+  DefaultProps
 >;
 
 export type AvatarGroupProps<E extends ElementType> = MergeProps<
   UnstyledGroupProps<E>,
-  AvatarGroupDefaultProps & AvatarGroupOptionalProps
+  DefaultProps & OptionalProps
 >;
