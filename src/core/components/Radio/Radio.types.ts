@@ -1,8 +1,8 @@
 import type {
+  SVGNodeProps,
   CheckableVariant,
   DefaultSize,
   Color,
-  Ripple,
   MergeProps
 } from '../../types';
 import type {
@@ -10,7 +10,6 @@ import type {
   UnstyledCheckboxIconProps,
   UnstyledCheckboxTrailProps,
   UnstyledCheckboxRippleProps,
-  UnstyledCheckboxOptionalProps,
   UnstyledCheckboxConfigProps,
   UnstyledCheckboxProps
 } from '../UnstyledCheckbox/UnstyledCheckbox.types';
@@ -27,22 +26,27 @@ export type RadioComponentsProps = {
   ripple?: RadioRippleProps;
 };
 
-export type RadioOptionalProps = UnstyledCheckboxOptionalProps;
+type OptionalProps = {
+  checked?: boolean;
+  valid?: boolean;
+  invalid?: boolean;
+  disabled?: boolean;
+  children?: SVGNodeProps;
+};
 
-export type RadioDefaultProps = {
+type DefaultProps = {
   variant?: CheckableVariant;
   size?: DefaultSize;
   color?: Color;
   componentsProps?: RadioComponentsProps;
-  ripple?: Ripple;
 };
 
 export type RadioConfigProps = MergeProps<
   UnstyledCheckboxConfigProps,
-  RadioDefaultProps
+  DefaultProps
 >;
 
 export type RadioProps = MergeProps<
   UnstyledCheckboxProps,
-  RadioDefaultProps & RadioOptionalProps
+  DefaultProps & OptionalProps
 >;

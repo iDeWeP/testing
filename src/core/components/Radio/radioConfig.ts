@@ -7,7 +7,6 @@ export const radioConfig: ComponentConfig<RadioConfigProps> = {
     size: 'md',
     color: 'primary',
     componentsProps: {},
-    ripple: 'default',
     margin: 'unset',
     m: 'unset',
     mx: 'unset',
@@ -17,7 +16,7 @@ export const radioConfig: ComponentConfig<RadioConfigProps> = {
     ml: 'unset',
     mr: 'unset',
     border: 'auto',
-    radius: 'full',
+    radius: 'unset',
     r: 'unset',
     rt: 'unset',
     rb: 'unset',
@@ -27,6 +26,7 @@ export const radioConfig: ComponentConfig<RadioConfigProps> = {
     rtr: 'unset',
     rbl: 'unset',
     rbr: 'unset',
-    shadow: 'unset'
+    shadow: 'unset',
+    ripple: 'none'
   }
 };
