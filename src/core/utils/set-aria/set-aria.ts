@@ -3,6 +3,7 @@ import type { Orientation } from '../../types';
 
 type Props = {
   element?: ElementType;
+  checked?: boolean;
   invalid?: boolean;
   disabled?: boolean;
   clickable?: boolean;
@@ -16,7 +17,17 @@ type SetAria =
   | Record<string, string | number | boolean | undefined>
   | undefined;
 
-type Element = 'button' | 'divider' | 'icon' | 'input' | 'progress' | 'switch';
+type Element =
+  | 'button'
+  | 'checkbox'
+  | 'divider'
+  | 'group'
+  | 'icon'
+  | 'input'
+  | 'listItem'
+  | 'progress'
+  | 'switch'
+  | 'toggleButton';
 type TypeMap = Record<Element, (props: Props) => SetAria>;
 
 const typeMap: TypeMap = {
@@ -28,21 +39,70 @@ const typeMap: TypeMap = {
       };
     }
   },
+  checkbox: ({ invalid }: Props): SetAria => {
+    if (invalid) {
+      return { 'aria-invalid': true };
+    }
+  },
   divider: ({ orientation }: Props): SetAria => ({
     role: 'separator',
-    'aria-orientation': (orientation === 'row' ? 'horizontal' : 'vertical') as
-      | 'horizontal'
-      | 'vertical'
+    ...(orientation === 'col' && { 'aria-orientation': 'vertical' })
+  }),
+  group: ({ orientation }: Props): SetAria => ({
+    role: 'group',
+    ...(orientation === 'col' && { 'aria-orientation': 'vertical' })
   }),
   icon: (): SetAria => ({ 'aria-hidden': true }),
-  input: ({ invalid }: Props): SetAria => ({ 'aria-invalid': !!invalid }),
+  input: ({ invalid }: Props): SetAria => {
+    if (invalid) {
+      return { 'aria-invalid': true };
+    }
+  },
+  listItem: ({ element, checked, disabled, clickable }: Props): SetAria => {
+    if (element === 'button') {
+      return checked === undefined
+        ? undefined
+        : {
+            'aria-pressed': checked
+          };
+    }
+
+    if (clickable) {
+      return {
+        role: 'button',
+        ...(checked !== undefined && { 'aria-pressed': checked }),
+        ...(disabled ? { 'aria-disabled': true } : { tabIndex: 0 })
+      };
+    }
+
+    if (checked !== undefined) {
+      return {
+        role: 'option',
+        'aria-selected': checked,
+        ...(disabled ? { 'aria-disabled': true } : { tabIndex: 0 })
+      };
+    }
+  },
   progress: ({ min, max, value }: Props): SetAria => ({
     role: 'progressbar',
     'aria-valuemin': min,
     'aria-valuemax': max,
     'aria-valuenow': value
   }),
-  switch: (): SetAria => ({ role: 'switch' })
+  switch: ({ invalid }: Props): SetAria => ({
+    role: 'switch',
+    ...(invalid && { 'aria-invalid': true })
+  }),
+  toggleButton: ({ element, checked, disabled }: Props): SetAria =>
+    element === 'button'
+      ? {
+          'aria-pressed': checked
+        }
+      : {
+          role: 'button',
+          'aria-pressed': checked,
+          ...(disabled ? { 'aria-disabled': true } : { tabIndex: 0 })
+        }
 };
 
 export const setAria = (
