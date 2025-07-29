@@ -2,6 +2,7 @@ import type { ReactNode } from 'react';
 import { getCheckableVariants } from '../../utils/get-checkable-variants/get-checkable-variants';
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
 import { mergeProps } from '../../utils/merge-props/merge-props';
+import { setAria } from '../../utils/set-aria/set-aria';
 import { setRippleVariant } from '../../utils/set-ripple-variant/set-ripple-variant';
 import { UnstyledRipple } from '../UnstyledRipple/UnstyledRipple';
 import type { UnstyledCheckboxProps } from './UnstyledCheckbox.types';
@@ -73,6 +74,7 @@ export const UnstyledCheckbox = (props: UnstyledCheckboxProps): ReactNode => {
         disabled={disabled}
         type={type}
         className={mergedClassName}
+        {...setAria('checkbox', { invalid })}
         {...restProps}
       />
       <UnstyledCheckboxTrail
