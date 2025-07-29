@@ -14,7 +14,7 @@ const placementMap: PlacementMap = {
   bottom: (radius): AutoRadius => ({ type: 'b', radius })
 };
 
-export const getAutoRadius = (
+export const getCardRadius = (
   placement: CardPlacement,
   radius: Radius
 ): AutoRadius => placementMap[placement](radius);
