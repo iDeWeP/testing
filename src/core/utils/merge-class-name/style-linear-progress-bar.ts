@@ -28,8 +28,8 @@ export const styleLinearProgressBar = (
     decorated && unstyledLinearProgressConfig.styles.bar.decorated,
     unstyledLinearProgressConfig.styles.bar.orientation[orientation],
     systemStyle.color.default.bg[theme][autoColor.text],
-    systemStyle.color.default.text[theme][autoColor.bg],
-    systemStyle.color.default.fill[theme][autoColor.bg],
+    decorated && systemStyle.color.default.text[theme][autoColor.bg],
+    decorated && systemStyle.color.default.fill[theme][autoColor.bg],
     className
   );
 };
