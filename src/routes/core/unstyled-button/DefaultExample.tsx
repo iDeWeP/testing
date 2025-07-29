@@ -13,7 +13,6 @@ export const DefaultExample = (): ReactNode => (
         startDecorator="START-DECORATOR"
         endDecorator="END-DECORATOR"
       />
-      <Example ripple="none">RIPPLE-NONE</Example>
     </ExampleCard>
   </ExampleSection>
 );
