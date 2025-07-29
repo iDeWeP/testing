@@ -15,12 +15,11 @@ export const styleRipple = (
     color = 'unset'
   }: Classes
 ): ClassName => {
-  const uncheckedColor = getColor(
-    variant,
-    color,
-    { valid, invalid },
-    false
-  ).text;
+  const uncheckedColor = getColor(variant, color, {
+    checked: false,
+    valid,
+    invalid
+  }).text;
   const defaultColor = getColor(variant, color, { valid, invalid }).text;
   const autoColor = stateful ? uncheckedColor : defaultColor;
 
