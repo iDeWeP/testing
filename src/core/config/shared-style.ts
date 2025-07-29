@@ -163,6 +163,9 @@ export const sharedStyle: SharedStyle = {
     }
   },
   cursor: {
+    none: {
+      pointerEvents: 'pointer-events-none'
+    },
     pointer: {
       cursor: 'cursor-pointer'
     },
