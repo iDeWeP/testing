@@ -5,7 +5,6 @@ import type {
   Padding,
   Font,
   Color,
-  Gap,
   MergeProps
 } from '../../types';
 import type {
@@ -21,22 +20,21 @@ export type DividerComponentsProps = {
   endLine?: DividerLineProps;
 };
 
-export type DividerDefaultProps = {
+type DefaultProps = {
   orientation?: Orientation;
   placement?: CrossPlacement;
   padding?: Padding;
   font?: Font;
   color?: Color;
-  gap?: Gap;
   componentsProps?: DividerComponentsProps;
 };
 
 export type DividerConfigProps = MergeProps<
   UnstyledDividerConfigProps,
-  DividerDefaultProps
+  DefaultProps
 >;
 
 export type DividerProps<E extends ElementType> = MergeProps<
   UnstyledDividerProps<E>,
-  DividerDefaultProps
+  DefaultProps
 >;

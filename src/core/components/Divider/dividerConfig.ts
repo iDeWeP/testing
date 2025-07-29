@@ -9,7 +9,6 @@ export const dividerConfig: ComponentConfig<DividerConfigProps> = {
     padding: 'unset',
     font: 'xs',
     color: 'surface',
-    gap: 'xs',
     componentsProps: {},
     p: 'unset',
     px: 'unset',
@@ -25,6 +24,7 @@ export const dividerConfig: ComponentConfig<DividerConfigProps> = {
     mt: 'unset',
     mb: 'unset',
     ml: 'unset',
-    mr: 'unset'
+    mr: 'unset',
+    gap: 'xs'
   }
 };
