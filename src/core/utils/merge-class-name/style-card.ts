@@ -12,7 +12,6 @@ export const styleCard = (
     disabled = false,
     clickable = false,
     variant = 'solid',
-    orientation = 'row',
     color = 'unset',
     effect = 'unset'
   }: Classes
@@ -21,14 +20,12 @@ export const styleCard = (
   const autoColor = getColor(variant, color, { disabled });
 
   return mergeClasses(
-    sharedStyle.display.flex,
     sharedStyle.position.relative,
     sharedStyle.focusable[focusable],
     systemStyle.color.default.bg[theme][autoColor.bg],
     systemStyle.color.default.text[theme][autoColor.text],
     systemStyle.color.default.fill[theme][autoColor.text],
     clickable && systemStyle.color.default.ring[theme][autoColor.ring],
-    sharedStyle.direction[orientation],
     clickable && sharedStyle.effect[effect],
     className
   );
