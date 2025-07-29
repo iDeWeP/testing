@@ -133,7 +133,7 @@ export type Size =
   | 'xxl-xxl';
 export type DefaultSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl';
 export type InputSize = 'sm' | 'md' | 'lg';
-export type Scale = 'default' | 'square' | 'circle';
+export type Scale = 'none' | 'default' | 'square' | 'circle';
 export type DefaultScale = 'default' | 'square';
 export type SwitchScale = 'default' | 'slider';
 export type RippleScale = 'default' | 'peer';
@@ -231,6 +231,7 @@ export type Classes = {
   valid?: boolean;
   invalid?: boolean;
   disabled?: boolean;
+  clickable?: boolean;
   stateful?: boolean;
   followCursor?: boolean;
   variant?: Variant;
@@ -291,7 +292,7 @@ export type Classes = {
   font?: Font;
   color?: Color;
   shadow?: Shadow;
-  ring?: Color;
+  ring?: Ring;
   invisible?: boolean;
   blur?: boolean;
   gap?: Gap;
@@ -411,3 +412,15 @@ export type MergeProps<D extends object, T extends object> = Omit<
   keyof T | 'scale'
 > &
   T;
+
+export type OmitRing<T> = Omit<T, 'ring'>;
+export type OmitGaps<T> = Omit<T, 'gx' | 'gy'>;
+export type OmitGap<T> = Omit<T, 'gap'>;
+export type OmitDecorators<T> = Omit<
+  T,
+  'gap' | 'startDecorator' | 'endDecorator'
+>;
+export type OmitMargin<T> = Omit<
+  T,
+  'margin' | 'm' | 'mx' | 'my' | 'mt' | 'mb' | 'ml' | 'mr'
+>;
