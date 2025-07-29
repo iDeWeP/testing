@@ -33,7 +33,6 @@ export const UnstyledCloseButton = <E extends ElementType>(
   return (
     <UnstyledButton
       scale="square"
-      gap="unset"
       componentsProps={restComponentsProps}
       {...restProps}
     >
