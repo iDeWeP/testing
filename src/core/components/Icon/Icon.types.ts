@@ -2,23 +2,24 @@ import type { ComponentPropsWithRef } from 'react';
 import type {
   SVGNodeProps,
   Variant,
-  Font,
+  Spacing,
   Margin,
   Border,
   DefaultBorder,
   Radius,
   Color,
   Shadow,
+  Ring,
   MergeProps
 } from '../../types';
 
-export type IconOptionalProps = {
+type OptionalProps = {
   children?: SVGNodeProps;
 };
 
-export type IconDefaultProps = {
+type DefaultProps = {
   variant?: Variant;
-  size?: Font;
+  size?: Spacing;
   margin?: Margin;
   m?: Margin;
   mx?: Margin;
@@ -47,12 +48,12 @@ export type IconDefaultProps = {
   rbr?: Radius;
   color?: Color;
   shadow?: Shadow;
-  ring?: Color;
+  ring?: Ring;
 };
 
-export type IconConfigProps = IconDefaultProps;
+export type IconConfigProps = DefaultProps;
 
 export type IconProps = MergeProps<
   ComponentPropsWithRef<'svg'>,
-  IconDefaultProps & IconOptionalProps
+  DefaultProps & OptionalProps
 >;
