@@ -30,16 +30,16 @@ export const styleInputContainer = (
     ring = 'unset'
   }: Classes
 ): ClassName => {
-  const autoVariant = disabled ? 'solid' : 'text';
+  const variant = disabled ? 'solid' : 'text';
   const autoSize = resize ? 'full' : inputSize;
   const autoMargin = getSpacing(margin);
-  const autoColor = getColor(autoVariant, color, {
+  const autoColor = getColor(variant, color, {
     checked: false,
     valid,
     invalid,
     disabled
   }).text;
-  const onAutoColor = getColor(autoVariant, color, {
+  const onAutoColor = getColor(variant, color, {
     checked: true,
     valid,
     invalid,
