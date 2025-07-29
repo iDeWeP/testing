@@ -3,6 +3,7 @@ import type {
   ComponentRefProps,
   MergeProps,
   Radius,
+  OmitRadius,
   Border,
   SVGNodeProps,
   CheckableVariant,
@@ -31,10 +32,7 @@ export type UnstyledCheckboxContainerProps = MergeProps<
   }
 >;
 
-export type UnstyledCheckboxIconProps = Omit<
-  ComponentRefProps<'svg'>,
-  'radius' | 'r'
->;
+export type UnstyledCheckboxIconProps = OmitRadius<ComponentRefProps<'svg'>>;
 
 export type UnstyledCheckboxTrailProps = MergeProps<
   ComponentRefProps<'span'>,
