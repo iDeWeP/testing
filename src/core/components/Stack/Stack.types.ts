@@ -1,20 +1,20 @@
 import type { ElementType } from 'react';
-import type { Gap, MergeProps } from '../../types';
+import type { Gap, MergeProps, OmitOrientation } from '../../types';
 import type {
-  UnstyledBoxConfigProps,
-  UnstyledBoxProps
-} from '../UnstyledBox/UnstyledBox.types';
+  UnstyledPaperConfigProps,
+  UnstyledPaperProps
+} from '../UnstyledPaper/UnstyledPaper.types';
 
-export type StackDefaultProps = {
+type DefaultProps = {
   gap?: Gap;
 };
 
 export type StackConfigProps = MergeProps<
-  UnstyledBoxConfigProps,
-  StackDefaultProps
+  OmitOrientation<UnstyledPaperConfigProps>,
+  DefaultProps
 >;
 
 export type StackProps<E extends ElementType> = MergeProps<
-  UnstyledBoxProps<E>,
-  StackDefaultProps
+  OmitOrientation<UnstyledPaperProps<E>>,
+  DefaultProps
 >;
