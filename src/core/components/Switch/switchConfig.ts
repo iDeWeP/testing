@@ -18,7 +18,7 @@ export const switchConfig: ComponentConfig<SwitchConfigProps> = {
     ml: 'unset',
     mr: 'unset',
     border: 'auto',
-    radius: 'full',
+    radius: 'unset',
     r: 'unset',
     rt: 'unset',
     rb: 'unset',

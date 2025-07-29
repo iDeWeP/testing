@@ -1,4 +1,5 @@
 import type {
+  SVGNodeProps,
   CheckableVariant,
   DefaultSize,
   SwitchScale,
@@ -12,7 +13,6 @@ import type {
   UnstyledSwitchTrailProps,
   UnstyledSwitchIconProps,
   UnstyledSwitchRippleProps,
-  UnstyledSwitchOptionalProps,
   UnstyledSwitchConfigProps,
   UnstyledSwitchProps
 } from '../UnstyledSwitch/UnstyledSwitch.types';
@@ -31,9 +31,15 @@ export type SwitchComponentsProps = {
   ripple?: SwitchRippleProps;
 };
 
-export type SwitchOptionalProps = UnstyledSwitchOptionalProps;
+type OptionalProps = {
+  checked?: boolean;
+  valid?: boolean;
+  invalid?: boolean;
+  disabled?: boolean;
+  children?: SVGNodeProps;
+};
 
-export type SwitchDefaultProps = {
+type DefaultProps = {
   variant?: CheckableVariant;
   size?: DefaultSize;
   scale?: SwitchScale;
@@ -44,10 +50,10 @@ export type SwitchDefaultProps = {
 
 export type SwitchConfigProps = MergeProps<
   UnstyledSwitchConfigProps,
-  SwitchDefaultProps
+  DefaultProps
 >;
 
 export type SwitchProps = MergeProps<
   UnstyledSwitchProps,
-  SwitchDefaultProps & SwitchOptionalProps
+  DefaultProps & OptionalProps
 >;
