@@ -5,8 +5,8 @@ export const unstyledDropdownConfig: ComponentConfig<UnstyledDropdownConfigProps
   {
     props: {
       as: 'div',
-      variant: 'solid',
       orientation: 'row',
+      variant: 'solid',
       padding: 'unset',
       p: 'unset',
       px: 'unset',
