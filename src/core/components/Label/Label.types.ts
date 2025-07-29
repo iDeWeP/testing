@@ -7,15 +7,15 @@ import type {
   MergeProps
 } from '../../types';
 import type {
-  UnstyledBoxConfigProps,
-  UnstyledBoxProps
-} from '../UnstyledBox/UnstyledBox.types';
+  UnstyledLabelConfigProps,
+  UnstyledLabelProps
+} from '../UnstyledLabel/UnstyledLabel.types';
 
-export type LabelOptionalProps = {
+type OptionalProps = {
   label?: ReactNode;
 };
 
-export type LabelDefaultProps = {
+type DefaultProps = {
   placement?: DefaultPlacement;
   font?: Font;
   color?: Color;
@@ -23,11 +23,11 @@ export type LabelDefaultProps = {
 };
 
 export type LabelConfigProps = MergeProps<
-  UnstyledBoxConfigProps,
-  LabelDefaultProps
+  UnstyledLabelConfigProps,
+  DefaultProps
 >;
 
 export type LabelProps<E extends ElementType> = MergeProps<
-  UnstyledBoxProps<E>,
-  LabelDefaultProps & LabelOptionalProps
+  UnstyledLabelProps<E>,
+  DefaultProps & OptionalProps
 >;

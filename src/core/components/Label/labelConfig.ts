@@ -44,8 +44,6 @@ export const labelConfig: ComponentConfig<LabelConfigProps> = {
     rbl: 'unset',
     rbr: 'unset',
     shadow: 'unset',
-    ring: 'unset',
-    gx: 'unset',
-    gy: 'unset'
+    ring: 'unset'
   }
 };
