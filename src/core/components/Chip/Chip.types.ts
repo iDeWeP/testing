@@ -1,18 +1,15 @@
-import type { ElementType } from 'react';
+import type { ReactNode, ElementType } from 'react';
 import type {
+  Loading,
   Variant,
   DefaultSize,
-  Radius,
   Color,
-  Effect,
-  Ripple,
   MergeProps
 } from '../../types';
 import type {
   UnstyledButtonRippleProps,
   UnstyledButtonLoaderProps,
   UnstyledButtonBarProps,
-  UnstyledButtonOptionalProps,
   UnstyledButtonConfigProps,
   UnstyledButtonProps
 } from '../UnstyledButton/UnstyledButton.types';
@@ -29,24 +26,26 @@ export type ChipComponentsProps = {
   outerBorder?: ChipBarProps;
 };
 
-export type ChipOptionalProps = UnstyledButtonOptionalProps;
+type OptionalProps = {
+  loading?: Loading;
+  disabled?: boolean;
+  startDecorator?: ReactNode;
+  endDecorator?: ReactNode;
+};
 
-export type ChipDefaultProps = {
+type DefaultProps = {
   variant?: Variant;
   size?: DefaultSize;
-  radius?: Radius;
   color?: Color;
-  effect?: Effect;
   componentsProps?: ChipComponentsProps;
-  ripple?: Ripple;
 };
 
 export type ChipConfigProps = MergeProps<
   UnstyledButtonConfigProps,
-  ChipDefaultProps
+  DefaultProps
 >;
 
 export type ChipProps<E extends ElementType> = MergeProps<
   UnstyledButtonProps<E>,
-  ChipDefaultProps & ChipOptionalProps
+  DefaultProps & OptionalProps
 >;
