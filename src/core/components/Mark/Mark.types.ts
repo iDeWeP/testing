@@ -1,18 +1,21 @@
 import type { ElementType } from 'react';
 import type { Font, Color, MergeProps } from '../../types';
 import type {
-  UnstyledBoxConfigProps,
-  UnstyledBoxProps
-} from '../UnstyledBox/UnstyledBox.types';
+  UnstyledTypographyConfigProps,
+  UnstyledTypographyProps
+} from '../UnstyledTypography/UnstyledTypography.types';
 
 type DefaultProps = {
   font?: Font;
   color?: Color;
 };
 
-export type MarkConfigProps = MergeProps<UnstyledBoxConfigProps, DefaultProps>;
+export type MarkConfigProps = MergeProps<
+  UnstyledTypographyConfigProps,
+  DefaultProps
+>;
 
 export type MarkProps<E extends ElementType> = MergeProps<
-  UnstyledBoxProps<E>,
+  UnstyledTypographyProps<E>,
   DefaultProps
 >;

@@ -43,8 +43,6 @@ export const markConfig: ComponentConfig<MarkConfigProps> = {
     rbr: 'unset',
     shadow: 'unset',
     ring: 'unset',
-    gap: 'unset',
-    gx: 'unset',
-    gy: 'unset'
+    gap: 'unset'
   }
 };
