@@ -43,10 +43,6 @@ export const UnstyledToggleButton = <E extends ElementType>(
     effect
   });
 
-  const buttonProps = {
-    element: Component,
-    disabled
-  };
   const autoBorder = isAutoBordered(autoVariant, border, checked)
     ? 'set'
     : border;
@@ -55,13 +51,20 @@ export const UnstyledToggleButton = <E extends ElementType>(
   return (
     <UnstyledContainer
       as={Component}
-      {...setProps('button', buttonProps)}
+      {...setProps('button', {
+        element: Component,
+        disabled
+      })}
       variant="solid"
       border={autoBorder}
       color="unset"
       ring="unset"
       className={mergedClassName}
-      {...setAria('button', buttonProps)}
+      {...setAria('toggleButton', {
+        element: Component,
+        checked,
+        disabled
+      })}
       {...restProps}
     >
       {children}
