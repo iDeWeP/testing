@@ -7,6 +7,7 @@ import type { UnstyledCircularProgressContainerProps } from './UnstyledCircularP
 type Props = MergeProps<
   UnstyledCircularProgressContainerProps,
   {
+    disabled: boolean;
     value: number;
     size: Size;
     margin: Margin;
@@ -21,6 +22,7 @@ type Props = MergeProps<
 >;
 
 export const UnstyledCircularProgressContainer = ({
+  disabled,
   value,
   size,
   margin,
@@ -53,7 +55,7 @@ export const UnstyledCircularProgressContainer = ({
   return (
     <div
       className={mergedClassName}
-      {...setAria('progress', { min: 0, max: 100, value })}
+      {...setAria('progress', { disabled, min: 0, max: 100, value })}
       {...restProps}
     />
   );

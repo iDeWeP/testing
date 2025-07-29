@@ -37,6 +37,7 @@ export const UnstyledCircularProgress = (
 
   return (
     <UnstyledCircularProgressContainer
+      disabled={disabled}
       value={value}
       size={size}
       margin={margin}
