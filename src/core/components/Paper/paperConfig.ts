@@ -4,13 +4,9 @@ import type { PaperConfigProps } from './Paper.types';
 export const paperConfig: ComponentConfig<PaperConfigProps> = {
   props: {
     as: 'div',
-    variant: 'solid',
     orientation: 'row',
+    variant: 'solid',
     padding: 'unset',
-    radius: 'lg',
-    color: 'surface-on',
-    shadow: 'unset',
-    gap: 'unset',
     p: 'unset',
     px: 'unset',
     py: 'unset',
@@ -34,6 +30,7 @@ export const paperConfig: ComponentConfig<PaperConfigProps> = {
     bb: 'unset',
     bl: 'unset',
     br: 'unset',
+    radius: 'unset',
     r: 'unset',
     rt: 'unset',
     rb: 'unset',
@@ -44,8 +41,9 @@ export const paperConfig: ComponentConfig<PaperConfigProps> = {
     rbl: 'unset',
     rbr: 'unset',
     font: 'unset',
+    color: 'unset',
+    shadow: 'unset',
     ring: 'unset',
-    gx: 'unset',
-    gy: 'unset'
+    gap: 'unset'
   }
 };
