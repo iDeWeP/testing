@@ -21,8 +21,6 @@ export const mergeClasses = (
       if (typeof className === 'string') {
         return className;
       }
-
-      return undefined;
     })
     .join(' ')
     .trim()
