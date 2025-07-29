@@ -8,7 +8,6 @@ import { BorderBTExample } from './BorderBTExample';
 import { BorderBXExample } from './BorderBXExample';
 import { BorderBYExample } from './BorderBYExample';
 import { BorderExample } from './BorderExample';
-import { ClickableExample } from './ClickableExample';
 import { ColorExample } from './ColorExample';
 import { DefaultExample } from './DefaultExample';
 import { DisabledExample } from './DisabledExample';
@@ -49,14 +48,13 @@ import { VariantExample } from './VariantExample';
 
 const Page = (): ReactNode => (
   <>
-    <ExampleTitle>UnstyledCard</ExampleTitle>
+    <ExampleTitle>UnstyledListItem</ExampleTitle>
     <DefaultExample />
     <DisabledExample />
-    <ClickableExample />
+    <VariantExample />
     <OrientationExample />
     <EffectExample />
     <RippleExample />
-    <VariantExample />
     <PaddingExample />
     <PaddingPExample />
     <PaddingPXExample />
