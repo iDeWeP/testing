@@ -24,7 +24,5 @@ dist-ssr
 *.sw?
 
 todo.txt
-test.txt
 popover.txt
-generic.txt
 get-triggers.ts
