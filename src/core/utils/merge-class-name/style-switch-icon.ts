@@ -19,7 +19,7 @@ export const styleSwitchIcon = (
   }: Classes
 ): ClassName => {
   const isDefault = switchScale === 'default';
-  const autoPlacement = decorated ? 'decorated' : 'default';
+  const placementType = decorated ? 'decorated' : 'default';
   const uncheckedColor = getColor(variant, color, {
     checked: false,
     valid,
@@ -35,7 +35,7 @@ export const styleSwitchIcon = (
 
   return mergeClasses(
     unstyledSwitchConfig.styles.icon.default,
-    unstyledSwitchConfig.styles.icon.placement[autoPlacement][defaultSize],
+    unstyledSwitchConfig.styles.icon.placement[placementType][defaultSize],
     systemStyle.size.text.square[defaultSize],
     isDefault && systemStyle.padding.default.all['xs-xs'],
     systemStyle.color.default.fill[theme][uncheckedColor],
