@@ -3,6 +3,7 @@ import { isAutoBordered } from '../../utils/is-auto-bordered/is-auto-bordered';
 import { hasVariantBg } from '../../utils/merge-class-name/has-variant-bg';
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
 import { mergeProps } from '../../utils/merge-props/merge-props';
+import { setAria } from '../../utils/set-aria/set-aria';
 import type { UnstyledSpinnerProps } from './UnstyledSpinner.types';
 import { UnstyledSpinnerBar } from './UnstyledSpinnerBar';
 import { unstyledSpinnerConfig } from './unstyledSpinnerConfig';
@@ -69,6 +70,7 @@ export const UnstyledSpinner = (props: UnstyledSpinnerProps): ReactNode => {
           strokeWidth={thickness}
           variant={variant}
           color={color}
+          {...setAria('block', { disabled })}
           {...componentsProps.trail}
         />
       )}
