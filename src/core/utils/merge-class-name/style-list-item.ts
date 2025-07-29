@@ -13,7 +13,6 @@ export const styleListItem = (
     disabled = false,
     clickable = false,
     variant = 'solid',
-    orientation = 'row',
     color = 'unset',
     effect = 'unset'
   }: Classes
@@ -23,7 +22,6 @@ export const styleListItem = (
 
   return mergeClasses(
     checked && sharedStyle.state.on,
-    sharedStyle.display.flex,
     sharedStyle.position.relative,
     clickable && sharedStyle.transition.color,
     sharedStyle.focusable[focusable],
@@ -31,7 +29,6 @@ export const styleListItem = (
     systemStyle.color.default.text[theme][autoColor.text],
     systemStyle.color.default.fill[theme][autoColor.text],
     clickable && systemStyle.color.default.ring[theme][autoColor.ring],
-    sharedStyle.direction[orientation],
     clickable && sharedStyle.effect[effect],
     className
   );
