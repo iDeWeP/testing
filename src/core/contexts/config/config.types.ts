@@ -5,6 +5,7 @@ import type { AvatarGroupConfigProps } from '../../components/AvatarGroup/Avatar
 import type { BadgeConfigProps } from '../../components/Badge/Badge.types';
 import type { BoxConfigProps } from '../../components/Box/Box.types';
 import type { ButtonConfigProps } from '../../components/Button/Button.types';
+import type { CardConfigProps } from '../../components/Card/Card.types';
 import type { CardBodyConfigProps } from '../../components/CardBody/CardBody.types';
 import type { CardFooterConfigProps } from '../../components/CardFooter/CardFooter.types';
 import type { CheckboxConfigProps } from '../../components/Checkbox/Checkbox.types';
@@ -54,6 +55,7 @@ export type CoreComponentsMap = {
   badge?: BadgeConfigProps;
   box?: BoxConfigProps;
   button?: ButtonConfigProps;
+  card?: CardConfigProps;
   cardBody?: CardBodyConfigProps;
   cardFooter?: CardFooterConfigProps;
   checkbox?: CheckboxConfigProps;
@@ -96,12 +98,6 @@ export type CoreComponentsMap = {
   transition?: TransitionConfigProps;
 };
 
-/* export type RouterComponents {
-  anchor?: ComponentConfig<RouterAnchorProps>;
-  link?: ComponentConfig<RouterLinkProps>;
-  navlink?: ComponentConfig<RouterNavlinkProps>;
-} */
-
 type ComponentConfig<P> = {
   styles?: string;
   props?: P;
@@ -115,5 +111,4 @@ export type CoreComponentsConfig = ComponentConfigUtil<CoreComponentsMap>;
 
 export type ComponentConfigContext = {
   core?: CoreComponentsConfig;
-  // router?: RouterComponents;
 };
