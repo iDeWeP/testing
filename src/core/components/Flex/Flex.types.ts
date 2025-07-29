@@ -1,20 +1,20 @@
 import type { ElementType } from 'react';
-import type { Gap, MergeProps } from '../../types';
+import type { Gap, MergeProps, OmitGaps } from '../../types';
 import type {
   UnstyledBoxConfigProps,
   UnstyledBoxProps
 } from '../UnstyledBox/UnstyledBox.types';
 
-export type FlexDefaultProps = {
+type DefaultProps = {
   gap?: Gap;
 };
 
 export type FlexConfigProps = MergeProps<
-  Omit<UnstyledBoxConfigProps, 'gx' | 'gy'>,
-  FlexDefaultProps
+  OmitGaps<UnstyledBoxConfigProps>,
+  DefaultProps
 >;
 
 export type FlexProps<E extends ElementType> = MergeProps<
-  Omit<UnstyledBoxProps<E>, 'gx' | 'gy'>,
-  FlexDefaultProps
+  OmitGaps<UnstyledBoxProps<E>>,
+  DefaultProps
 >;
