@@ -1,6 +1,6 @@
 import type { CSSStyles, Theme } from '../types';
 
-type SizeType = 'default' | 'square';
+type SizeScale = 'default' | 'square';
 type PaddingScale =
   | 'default'
   | 'rect'
@@ -16,8 +16,8 @@ type GapType = 'all' | 'x' | 'y' | 'row' | 'col';
 type SystemCSSStyle = {
   placement: CSSStyles;
   size: {
-    default: Record<SizeType, CSSStyles>;
-    text: Record<SizeType, CSSStyles>;
+    default: Record<SizeScale, CSSStyles>;
+    text: Record<SizeScale, CSSStyles>;
     font: CSSStyles;
   };
   padding: Record<PaddingScale, Record<SpacingType, CSSStyles>>;
@@ -3059,168 +3059,168 @@ export const systemStyle: SystemCSSStyle = {
       ring: {
         light: {
           disabled: {
-            color: 'ring-disabled-500'
+            color: 'outline-disabled-500'
           },
           surface: {
-            color: 'ring-surface-500'
+            color: 'outline-surface-500'
           },
           neutral: {
-            color: 'ring-neutral-500'
+            color: 'outline-neutral-500'
           },
           primary: {
-            color: 'ring-primary-500'
+            color: 'outline-primary-500'
           },
           secondary: {
-            color: 'ring-secondary-500'
+            color: 'outline-secondary-500'
           },
           tertiary: {
-            color: 'ring-tertiary-500'
+            color: 'outline-tertiary-500'
           },
           success: {
-            color: 'ring-success-500'
+            color: 'outline-success-500'
           },
           warning: {
-            color: 'ring-warning-500'
+            color: 'outline-warning-500'
           },
           error: {
-            color: 'ring-error-500'
+            color: 'outline-error-500'
           },
           'disabled-light': {
-            color: 'ring-disabled-300'
+            color: 'outline-disabled-300'
           },
           'surface-light': {
-            color: 'ring-surface-300'
+            color: 'outline-surface-300'
           },
           'neutral-light': {
-            color: 'ring-neutral-300'
+            color: 'outline-neutral-300'
           },
           'primary-light': {
-            color: 'ring-primary-300'
+            color: 'outline-primary-300'
           },
           'secondary-light': {
-            color: 'ring-secondary-300'
+            color: 'outline-secondary-300'
           },
           'tertiary-light': {
-            color: 'ring-tertiary-300'
+            color: 'outline-tertiary-300'
           },
           'success-light': {
-            color: 'ring-success-300'
+            color: 'outline-success-300'
           },
           'warning-light': {
-            color: 'ring-warning-300'
+            color: 'outline-warning-300'
           },
           'error-light': {
-            color: 'ring-error-300'
+            color: 'outline-error-300'
           },
           'disabled-on': {
-            color: 'ring-disabled-50'
+            color: 'outline-disabled-50'
           },
           'surface-on': {
-            color: 'ring-surface-50'
+            color: 'outline-surface-50'
           },
           'neutral-on': {
-            color: 'ring-neutral-50'
+            color: 'outline-neutral-50'
           },
           'primary-on': {
-            color: 'ring-primary-50'
+            color: 'outline-primary-50'
           },
           'secondary-on': {
-            color: 'ring-secondary-50'
+            color: 'outline-secondary-50'
           },
           'tertiary-on': {
-            color: 'ring-tertiary-50'
+            color: 'outline-tertiary-50'
           },
           'success-on': {
-            color: 'ring-success-50'
+            color: 'outline-success-50'
           },
           'warning-on': {
-            color: 'ring-warning-50'
+            color: 'outline-warning-50'
           },
           'error-on': {
-            color: 'ring-error-50'
+            color: 'outline-error-50'
           }
         },
         dark: {
           disabled: {
-            color: 'ring-disabled-600'
+            color: 'outline-disabled-600'
           },
           surface: {
-            color: 'ring-surface-600'
+            color: 'outline-surface-600'
           },
           neutral: {
-            color: 'ring-neutral-600'
+            color: 'outline-neutral-600'
           },
           primary: {
-            color: 'ring-primary-600'
+            color: 'outline-primary-600'
           },
           secondary: {
-            color: 'ring-secondary-600'
+            color: 'outline-secondary-600'
           },
           tertiary: {
-            color: 'ring-tertiary-600'
+            color: 'outline-tertiary-600'
           },
           success: {
-            color: 'ring-success-600'
+            color: 'outline-success-600'
           },
           warning: {
-            color: 'ring-warning-600'
+            color: 'outline-warning-600'
           },
           error: {
-            color: 'ring-error-600'
+            color: 'outline-error-600'
           },
           'disabled-light': {
-            color: 'ring-disabled-400'
+            color: 'outline-disabled-400'
           },
           'surface-light': {
-            color: 'ring-surface-400'
+            color: 'outline-surface-400'
           },
           'neutral-light': {
-            color: 'ring-neutral-400'
+            color: 'outline-neutral-400'
           },
           'primary-light': {
-            color: 'ring-primary-400'
+            color: 'outline-primary-400'
           },
           'secondary-light': {
-            color: 'ring-secondary-400'
+            color: 'outline-secondary-400'
           },
           'tertiary-light': {
-            color: 'ring-tertiary-400'
+            color: 'outline-tertiary-400'
           },
           'success-light': {
-            color: 'ring-success-400'
+            color: 'outline-success-400'
           },
           'warning-light': {
-            color: 'ring-warning-400'
+            color: 'outline-warning-400'
           },
           'error-light': {
-            color: 'ring-error-400'
+            color: 'outline-error-400'
           },
           'disabled-on': {
-            color: 'ring-disabled-100'
+            color: 'outline-disabled-100'
           },
           'surface-on': {
-            color: 'ring-surface-100'
+            color: 'outline-surface-100'
           },
           'neutral-on': {
-            color: 'ring-neutral-100'
+            color: 'outline-neutral-100'
           },
           'primary-on': {
-            color: 'ring-primary-100'
+            color: 'outline-primary-100'
           },
           'secondary-on': {
-            color: 'ring-secondary-100'
+            color: 'outline-secondary-100'
           },
           'tertiary-on': {
-            color: 'ring-tertiary-100'
+            color: 'outline-tertiary-100'
           },
           'success-on': {
-            color: 'ring-success-100'
+            color: 'outline-success-100'
           },
           'warning-on': {
-            color: 'ring-warning-100'
+            color: 'outline-warning-100'
           },
           'error-on': {
-            color: 'ring-error-100'
+            color: 'outline-error-100'
           }
         }
       }
@@ -4069,168 +4069,168 @@ export const systemStyle: SystemCSSStyle = {
       ring: {
         light: {
           disabled: {
-            color: '[.on]:ring-disabled-500'
+            color: '[.on]:outline-disabled-500'
           },
           surface: {
-            color: '[.on]:ring-surface-500'
+            color: '[.on]:outline-surface-500'
           },
           neutral: {
-            color: '[.on]:ring-neutral-500'
+            color: '[.on]:outline-neutral-500'
           },
           primary: {
-            color: '[.on]:ring-primary-500'
+            color: '[.on]:outline-primary-500'
           },
           secondary: {
-            color: '[.on]:ring-secondary-500'
+            color: '[.on]:outline-secondary-500'
           },
           tertiary: {
-            color: '[.on]:ring-tertiary-500'
+            color: '[.on]:outline-tertiary-500'
           },
           success: {
-            color: '[.on]:ring-success-500'
+            color: '[.on]:outline-success-500'
           },
           warning: {
-            color: '[.on]:ring-warning-500'
+            color: '[.on]:outline-warning-500'
           },
           error: {
-            color: '[.on]:ring-error-500'
+            color: '[.on]:outline-error-500'
           },
           'disabled-light': {
-            color: '[.on]:ring-disabled-300'
+            color: '[.on]:outline-disabled-300'
           },
           'surface-light': {
-            color: '[.on]:ring-surface-300'
+            color: '[.on]:outline-surface-300'
           },
           'neutral-light': {
-            color: '[.on]:ring-neutral-300'
+            color: '[.on]:outline-neutral-300'
           },
           'primary-light': {
-            color: '[.on]:ring-primary-300'
+            color: '[.on]:outline-primary-300'
           },
           'secondary-light': {
-            color: '[.on]:ring-secondary-300'
+            color: '[.on]:outline-secondary-300'
           },
           'tertiary-light': {
-            color: '[.on]:ring-tertiary-300'
+            color: '[.on]:outline-tertiary-300'
           },
           'success-light': {
-            color: '[.on]:ring-success-300'
+            color: '[.on]:outline-success-300'
           },
           'warning-light': {
-            color: '[.on]:ring-warning-300'
+            color: '[.on]:outline-warning-300'
           },
           'error-light': {
-            color: '[.on]:ring-error-300'
+            color: '[.on]:outline-error-300'
           },
           'disabled-on': {
-            color: '[.on]:ring-disabled-50'
+            color: '[.on]:outline-disabled-50'
           },
           'surface-on': {
-            color: '[.on]:ring-surface-50'
+            color: '[.on]:outline-surface-50'
           },
           'neutral-on': {
-            color: '[.on]:ring-neutral-50'
+            color: '[.on]:outline-neutral-50'
           },
           'primary-on': {
-            color: '[.on]:ring-primary-50'
+            color: '[.on]:outline-primary-50'
           },
           'secondary-on': {
-            color: '[.on]:ring-secondary-50'
+            color: '[.on]:outline-secondary-50'
           },
           'tertiary-on': {
-            color: '[.on]:ring-tertiary-50'
+            color: '[.on]:outline-tertiary-50'
           },
           'success-on': {
-            color: '[.on]:ring-success-50'
+            color: '[.on]:outline-success-50'
           },
           'warning-on': {
-            color: '[.on]:ring-warning-50'
+            color: '[.on]:outline-warning-50'
           },
           'error-on': {
-            color: '[.on]:ring-error-50'
+            color: '[.on]:outline-error-50'
           }
         },
         dark: {
           disabled: {
-            color: '[.on]:ring-disabled-600'
+            color: '[.on]:outline-disabled-600'
           },
           surface: {
-            color: '[.on]:ring-surface-600'
+            color: '[.on]:outline-surface-600'
           },
           neutral: {
-            color: '[.on]:ring-neutral-600'
+            color: '[.on]:outline-neutral-600'
           },
           primary: {
-            color: '[.on]:ring-primary-600'
+            color: '[.on]:outline-primary-600'
           },
           secondary: {
-            color: '[.on]:ring-secondary-600'
+            color: '[.on]:outline-secondary-600'
           },
           tertiary: {
-            color: '[.on]:ring-tertiary-600'
+            color: '[.on]:outline-tertiary-600'
           },
           success: {
-            color: '[.on]:ring-success-600'
+            color: '[.on]:outline-success-600'
           },
           warning: {
-            color: '[.on]:ring-warning-600'
+            color: '[.on]:outline-warning-600'
           },
           error: {
-            color: '[.on]:ring-error-600'
+            color: '[.on]:outline-error-600'
           },
           'disabled-light': {
-            color: '[.on]:ring-disabled-400'
+            color: '[.on]:outline-disabled-400'
           },
           'surface-light': {
-            color: '[.on]:ring-surface-400'
+            color: '[.on]:outline-surface-400'
           },
           'neutral-light': {
-            color: '[.on]:ring-neutral-400'
+            color: '[.on]:outline-neutral-400'
           },
           'primary-light': {
-            color: '[.on]:ring-primary-400'
+            color: '[.on]:outline-primary-400'
           },
           'secondary-light': {
-            color: '[.on]:ring-secondary-400'
+            color: '[.on]:outline-secondary-400'
           },
           'tertiary-light': {
-            color: '[.on]:ring-tertiary-400'
+            color: '[.on]:outline-tertiary-400'
           },
           'success-light': {
-            color: '[.on]:ring-success-400'
+            color: '[.on]:outline-success-400'
           },
           'warning-light': {
-            color: '[.on]:ring-warning-400'
+            color: '[.on]:outline-warning-400'
           },
           'error-light': {
-            color: '[.on]:ring-error-400'
+            color: '[.on]:outline-error-400'
           },
           'disabled-on': {
-            color: '[.on]:ring-disabled-100'
+            color: '[.on]:outline-disabled-100'
           },
           'surface-on': {
-            color: '[.on]:ring-surface-100'
+            color: '[.on]:outline-surface-100'
           },
           'neutral-on': {
-            color: '[.on]:ring-neutral-100'
+            color: '[.on]:outline-neutral-100'
           },
           'primary-on': {
-            color: '[.on]:ring-primary-100'
+            color: '[.on]:outline-primary-100'
           },
           'secondary-on': {
-            color: '[.on]:ring-secondary-100'
+            color: '[.on]:outline-secondary-100'
           },
           'tertiary-on': {
-            color: '[.on]:ring-tertiary-100'
+            color: '[.on]:outline-tertiary-100'
           },
           'success-on': {
-            color: '[.on]:ring-success-100'
+            color: '[.on]:outline-success-100'
           },
           'warning-on': {
-            color: '[.on]:ring-warning-100'
+            color: '[.on]:outline-warning-100'
           },
           'error-on': {
-            color: '[.on]:ring-error-100'
+            color: '[.on]:outline-error-100'
           }
         }
       }

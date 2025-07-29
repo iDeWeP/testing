@@ -31,10 +31,14 @@ export const sharedStyle: SharedStyle = {
   },
   focusable: {
     default: {
-      focus: 'focus:outline-none',
-      focusVisible: 'focus-visible:ring-2 focus-visible:ring-offset-2'
+      focusVisible: 'focus-visible:outline-2 focus-visible:outline-offset-2'
     },
     disabled: {
+      cursor: 'cursor-not-allowed',
+      userSelect: 'select-none'
+    },
+    'box-disabled': {
+      pointerEvents: 'pointer-events-none',
       cursor: 'cursor-not-allowed',
       userSelect: 'select-none'
     },
@@ -42,7 +46,7 @@ export const sharedStyle: SharedStyle = {
       opacity: 'opacity-50'
     },
     peer: {
-      group: 'peer-focus-visible:ring-2 peer-focus-visible:ring-offset-2'
+      group: 'peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2'
     }
   },
   display: {
@@ -89,7 +93,7 @@ export const sharedStyle: SharedStyle = {
   },
   ring: {
     default: {
-      ring: 'ring-2'
+      ring: 'outline-2'
     }
   },
   direction: {
@@ -159,9 +163,6 @@ export const sharedStyle: SharedStyle = {
     }
   },
   cursor: {
-    none: {
-      pointerEvents: 'pointer-events-none'
-    },
     pointer: {
       cursor: 'cursor-pointer'
     },
