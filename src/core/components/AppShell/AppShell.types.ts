@@ -1,9 +1,9 @@
 import type { ElementType } from 'react';
 import type { Variant, Font, Color, MergeProps } from '../../types';
 import type {
-  UnstyledBoxConfigProps,
-  UnstyledBoxProps
-} from '../UnstyledBox/UnstyledBox.types';
+  UnstyledAppShellConfigProps,
+  UnstyledAppShellProps
+} from '../UnstyledAppShell/UnstyledAppShell.types';
 
 type DefaultProps = {
   variant?: Variant;
@@ -12,11 +12,11 @@ type DefaultProps = {
 };
 
 export type AppShellConfigProps = MergeProps<
-  UnstyledBoxConfigProps,
+  UnstyledAppShellConfigProps,
   DefaultProps
 >;
 
 export type AppShellProps<E extends ElementType> = MergeProps<
-  UnstyledBoxProps<E>,
+  UnstyledAppShellProps<E>,
   DefaultProps
 >;
