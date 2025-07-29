@@ -153,6 +153,7 @@ export type Radius =
   | 'xl'
   | 'xxl'
   | 'full';
+export type Font = Spacing;
 export type Color =
   | 'unset'
   | 'surface'
@@ -173,7 +174,6 @@ export type Color =
   | 'error-on';
 export type Shadow = DefaultSpacing;
 export type Ring = Color;
-export type Font = Spacing;
 export type Gap = Spacing;
 export type GroupGap =
   | Spacing
@@ -401,8 +401,8 @@ export type ComponentRefProps<E extends ElementType> = Omit<
   'color' | 'scale'
 >;
 
-export type ComponentConfig<P> = {
-  props: Required<P>;
+export type ComponentConfig<T> = {
+  props: Required<T>;
 };
 
 export type SVGNodeProps = ReactElement<ComponentPropsWithRef<'svg'>>;
@@ -415,12 +415,11 @@ export type MergeProps<D extends object, T extends object> = Omit<
 
 export type OmitRing<T> = Omit<T, 'ring'>;
 export type OmitGaps<T> = Omit<T, 'gx' | 'gy'>;
-export type OmitGap<T> = Omit<T, 'gap'>;
-export type OmitDecorators<T> = Omit<
-  T,
-  'gap' | 'startDecorator' | 'endDecorator'
->;
+export type OmitDecorators<T> = Omit<T, 'startDecorator' | 'endDecorator'>;
 export type OmitMargin<T> = Omit<
   T,
   'margin' | 'm' | 'mx' | 'my' | 'mt' | 'mb' | 'ml' | 'mr'
 >;
+export type OmitPlacement<T> = Omit<T, 'placement'>;
+export type OmitOrientation<T> = Omit<T, 'orientation'>;
+export type OmitRadius<T> = Omit<T, 'radius' | 'r'>;
