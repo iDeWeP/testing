@@ -37,7 +37,7 @@ export const styleSwitchBar = (
   const isFloating = switchScale === 'slider' || decorated;
   const focusable = getFocusableState({ disabled }, true);
   const autoBorder = getBorder(variant, border).all;
-  const isBordered = isAutoBordered(variant, border);
+  const isBordered = isAutoBordered(variant, border, true);
   const autoColor = getColor(variant, color, {
     checked: true,
     valid,
