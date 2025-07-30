@@ -3,5 +3,9 @@ import type { RouteObject } from 'react-router';
 
 export const IconButtonRoute: RouteObject = {
   path: '/core/icon-button',
-  Component: lazy(() => import('./Page'))
+  Component: lazy(
+    (): Promise<
+      typeof import('/Users/ritchiw/vscode/testing/src/routes/core/icon-button/Page')
+    > => import('./Page')
+  )
 };
