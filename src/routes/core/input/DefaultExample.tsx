@@ -7,11 +7,6 @@ export const DefaultExample = (): ReactNode => (
   <ExampleSection title="Default">
     <ExampleCard>
       <Example />
-      <Example
-        startDecorator="START"
-        endDecorator="END"
-        label="LABEL"
-      />
     </ExampleCard>
   </ExampleSection>
 );
