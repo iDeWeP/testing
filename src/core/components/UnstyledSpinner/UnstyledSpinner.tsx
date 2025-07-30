@@ -50,7 +50,7 @@ export const UnstyledSpinner = (props: UnstyledSpinnerProps): ReactNode => {
 
   const length = 2 * Math.PI * (20 - thickness / 2);
   const offset = length - (value * length) / 100;
-  const hasTrail = trail === undefined ? hasVariantBg(variant) : trail;
+  const hasTrail = trail ?? hasVariantBg(variant);
   const hasBorder = isAutoBordered(variant, border);
 
   return (
