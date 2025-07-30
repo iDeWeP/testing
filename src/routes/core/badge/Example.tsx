@@ -19,6 +19,6 @@ export const Example = ({
     >
       {children}
     </Badge>
-    {children}
+    BADGE
   </ExampleAnchor>
 );
