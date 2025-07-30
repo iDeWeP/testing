@@ -1,8 +1,9 @@
 import { type ReactNode, useState, useCallback } from 'react';
+import { ExampleBox } from '../../../components/ExampleBox';
+import { ExampleButton } from '../../../components/ExampleButton';
 import { ExampleCard } from '../../../components/ExampleCard';
 import { Transition } from '../../../core/components/Transition/Transition';
 import type { TransitionProps } from '../../../core/components/Transition/Transition.types';
-import { UnstyledBox } from '../../../core/components/UnstyledBox/UnstyledBox';
 
 export const Example = ({
   children = 'TRANSITION',
@@ -17,13 +18,13 @@ export const Example = ({
 
   return (
     <>
-      <button onClick={handleClick}>Toggle {children}</button>
+      <ExampleButton onClick={handleClick}>Toggle {children}</ExampleButton>
       <ExampleCard>
         <Transition
           in={isIn}
           {...restProps}
         >
-          <UnstyledBox>{children}</UnstyledBox>
+          <ExampleBox>{children}</ExampleBox>
         </Transition>
       </ExampleCard>
     </>
