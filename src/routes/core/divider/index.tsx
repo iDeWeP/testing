@@ -3,5 +3,9 @@ import type { RouteObject } from 'react-router';
 
 export const DividerRoute: RouteObject = {
   path: '/core/divider',
-  Component: lazy(() => import('./Page'))
+  Component: lazy(
+    (): Promise<
+      typeof import('/Users/ritchiw/vscode/testing/src/routes/core/divider/Page')
+    > => import('./Page')
+  )
 };
