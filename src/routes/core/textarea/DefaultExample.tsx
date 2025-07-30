@@ -8,9 +8,8 @@ export const DefaultExample = (): ReactNode => (
     <ExampleCard>
       <Example />
       <Example
-        startDecorator="START"
-        endDecorator="END"
         label="LABEL"
+        startDecorator="START"
       />
     </ExampleCard>
   </ExampleSection>
