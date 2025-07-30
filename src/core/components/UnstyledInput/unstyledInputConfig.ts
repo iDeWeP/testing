@@ -166,13 +166,13 @@ export const unstyledInputConfig: ComponentConfig<UnstyledInputConfigProps> &
       },
       size: {
         sm: {
-          minHeight: 'min-h-14'
+          minHeight: 'min-h-15.5'
         },
         md: {
-          minHeight: 'min-h-18'
+          minHeight: 'min-h-19.5'
         },
         lg: {
-          minHeight: 'min-h-22'
+          minHeight: 'min-h-27.5'
         }
       },
       stable: {
