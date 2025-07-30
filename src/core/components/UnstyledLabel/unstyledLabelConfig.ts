@@ -1,11 +1,20 @@
-import type { ComponentConfig } from '../../types';
+import type { CSSProps, ComponentConfig } from '../../types';
 import type { UnstyledLabelConfigProps } from './UnstyledLabel.types';
 
-export const unstyledLabelConfig: ComponentConfig<UnstyledLabelConfigProps> = {
+type Styles = {
+  styles: {
+    root: {
+      default: CSSProps;
+    };
+  };
+};
+
+export const unstyledLabelConfig: ComponentConfig<UnstyledLabelConfigProps> &
+  Styles = {
   props: {
     as: 'label',
     placement: 'right',
-    variant: 'solid',
+    variant: 'text',
     padding: 'unset',
     p: 'unset',
     px: 'unset',
@@ -45,5 +54,13 @@ export const unstyledLabelConfig: ComponentConfig<UnstyledLabelConfigProps> = {
     shadow: 'unset',
     ring: 'unset',
     gap: 'unset'
+  },
+  styles: {
+    root: {
+      default: {
+        display: 'inline-flex',
+        alignItems: 'items-center'
+      }
+    }
   }
 };
