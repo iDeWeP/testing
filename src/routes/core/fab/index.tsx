@@ -3,5 +3,9 @@ import type { RouteObject } from 'react-router';
 
 export const FabRoute: RouteObject = {
   path: '/core/fab',
-  Component: lazy(() => import('./Page'))
+  Component: lazy(
+    (): Promise<
+      typeof import('/Users/ritchiw/vscode/testing/src/routes/core/fab/Page')
+    > => import('./Page')
+  )
 };
