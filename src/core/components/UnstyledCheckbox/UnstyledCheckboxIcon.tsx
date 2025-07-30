@@ -14,6 +14,7 @@ import type {
   Shadow,
   SVGNodeProps
 } from '../../types';
+import { hasVariantBg } from '../../utils/merge-class-name/has-variant-bg';
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
 import { mergeClasses } from '../../utils/merge-class-name/merge-classes';
 import { setAria } from '../../utils/set-aria/set-aria';
@@ -119,7 +120,7 @@ export const UnstyledCheckboxIcon = ({
         <circle
           cx="12"
           cy="12"
-          r={variant === 'text' ? '8' : '4'}
+          r={hasVariantBg(variant) ? '4' : '8'}
         />
       )}
     </svg>
