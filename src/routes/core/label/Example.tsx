@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react';
-import { ExampleBox } from '../../../components/ExampleBox';
+import { ExampleAvatar } from '../../../components/ExampleAvatar';
 import { Label } from '../../../core/components/Label/Label';
 import type { LabelProps } from '../../../core/components/Label/Label.types';
 
@@ -11,6 +11,6 @@ export const Example = ({
     label={children}
     {...restProps}
   >
-    <ExampleBox>{children}</ExampleBox>
+    <ExampleAvatar>{children}</ExampleAvatar>
   </Label>
 );
