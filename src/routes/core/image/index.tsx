@@ -3,5 +3,9 @@ import type { RouteObject } from 'react-router';
 
 export const ImageRoute: RouteObject = {
   path: '/core/image',
-  Component: lazy(() => import('./Page'))
+  Component: lazy(
+    (): Promise<
+      typeof import('/Users/ritchiw/vscode/testing/src/routes/core/image/Page')
+    > => import('./Page')
+  )
 };
