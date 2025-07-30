@@ -12,7 +12,7 @@ export const fabConfig: ComponentConfig<FabConfigProps> = {
     color: 'primary',
     effect: 'unset',
     componentsProps: {},
-    ripple: 'none',
+    ripple: 'default',
     margin: 'unset',
     m: 'unset',
     mx: 'unset',

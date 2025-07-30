@@ -18,7 +18,7 @@ export const inputConfig: ComponentConfig<InputConfigProps> = {
     mb: 'unset',
     ml: 'unset',
     mr: 'unset',
-    radius: 'unset',
+    radius: 'md',
     r: 'unset',
     rt: 'unset',
     rb: 'unset',
@@ -29,6 +29,6 @@ export const inputConfig: ComponentConfig<InputConfigProps> = {
     rbl: 'unset',
     rbr: 'unset',
     ring: 'unset',
-    gap: 'unset'
+    gap: 'xs'
   }
 };
