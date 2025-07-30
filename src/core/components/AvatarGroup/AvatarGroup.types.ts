@@ -1,12 +1,12 @@
 import type { ElementType } from 'react';
 import type { Orientation, GroupGap, MergeProps } from '../../types';
-import type { UnstyledAvatarProps } from '../UnstyledAvatar/UnstyledAvatar.types';
 import type {
-  UnstyledGroupConfigProps,
-  UnstyledGroupProps
-} from '../UnstyledGroup/UnstyledGroup.types';
+  UnstyledAvatarGroupSurplusProps,
+  UnstyledAvatarGroupConfigProps,
+  UnstyledAvatarGroupProps
+} from '../UnstyledAvatarGroup/UnstyledAvatarGroup.types';
 
-export type AvatarGroupSurplusProps = UnstyledAvatarProps<'div'>;
+export type AvatarGroupSurplusProps = UnstyledAvatarGroupSurplusProps;
 
 export type AvatarGroupComponentsProps = {
   surplus?: AvatarGroupSurplusProps;
@@ -25,11 +25,11 @@ type DefaultProps = {
 };
 
 export type AvatarGroupConfigProps = MergeProps<
-  UnstyledGroupConfigProps,
+  UnstyledAvatarGroupConfigProps,
   DefaultProps
 >;
 
 export type AvatarGroupProps<E extends ElementType> = MergeProps<
-  UnstyledGroupProps<E>,
+  UnstyledAvatarGroupProps<E>,
   DefaultProps & OptionalProps
 >;
