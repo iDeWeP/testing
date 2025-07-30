@@ -3,5 +3,9 @@ import type { RouteObject } from 'react-router';
 
 export const SectionRoute: RouteObject = {
   path: '/core/section',
-  Component: lazy(() => import('./Page'))
+  Component: lazy(
+    (): Promise<
+      typeof import('/Users/ritchiw/vscode/testing/src/routes/core/section/Page')
+    > => import('./Page')
+  )
 };
