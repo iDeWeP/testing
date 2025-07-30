@@ -18,8 +18,13 @@ export const useHandlers = (
 ): Handlers => {
   const handleKeyDown = useCallback<KeyboardEventHandler>(
     (event): void => {
-      if ((event.key === 'Enter' || event.key === ' ') && onClick) {
+      if (event.key === ' ') {
         event.preventDefault();
+
+        if (onClick) {
+          onClick();
+        }
+      } else if (event.key === 'Enter' && onClick) {
         onClick();
       }
     },
