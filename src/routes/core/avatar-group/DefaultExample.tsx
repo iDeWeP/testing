@@ -7,10 +7,6 @@ export const DefaultExample = (): ReactNode => (
   <ExampleSection title="Default">
     <ExampleCard>
       <Example />
-      <Example
-        max={3}
-        total={10}
-      />
     </ExampleCard>
   </ExampleSection>
 );
