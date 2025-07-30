@@ -1,9 +1,9 @@
 import type { ElementType, ReactNode } from 'react';
 import { useTheme } from '../../hooks/use-theme/use-theme';
-import { isAutoBordered } from '../../utils/is-auto-bordered/is-auto-bordered';
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
 import { mergeProps } from '../../utils/merge-props/merge-props';
 import { setAria } from '../../utils/set-aria/set-aria';
+import { setBorder } from '../../utils/set-border/set-border';
 import { setCheckableStyle } from '../../utils/set-checkale-style/set-checkable-style';
 import { setProps } from '../../utils/set-props/set-props';
 import { UnstyledPaper } from '../UnstyledPaper/UnstyledPaper';
@@ -46,10 +46,8 @@ export const UnstyledListItem = <E extends ElementType>(
     effect
   });
 
-  const autoBorder = isAutoBordered(autoVariant, border, checked)
-    ? 'set'
-    : border;
-  const isClickable = clickable || checked !== undefined;
+  const isCheckable = checked !== undefined;
+  const isClickable = clickable || isCheckable;
   const hasRipple = ripple !== 'none' && !disabled;
 
   return (
@@ -60,7 +58,7 @@ export const UnstyledListItem = <E extends ElementType>(
         disabled
       })}
       variant="solid"
-      border={autoBorder}
+      border={setBorder(autoVariant, border, checked)}
       color="unset"
       ring={isClickable ? 'unset' : ring}
       className={mergedClassName}
@@ -75,7 +73,7 @@ export const UnstyledListItem = <E extends ElementType>(
       {children}
       {hasRipple && (
         <UnstyledRipple
-          stateful={checked !== undefined}
+          stateful={isCheckable}
           variant={defaultVariant}
           scale="default"
           color={defaultColor}
