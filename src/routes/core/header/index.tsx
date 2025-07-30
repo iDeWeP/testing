@@ -3,5 +3,9 @@ import type { RouteObject } from 'react-router';
 
 export const HeaderRoute: RouteObject = {
   path: '/core/header',
-  Component: lazy(() => import('./Page'))
+  Component: lazy(
+    (): Promise<
+      typeof import('/Users/ritchiw/vscode/testing/src/routes/core/header/Page')
+    > => import('./Page')
+  )
 };
