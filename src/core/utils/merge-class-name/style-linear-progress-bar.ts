@@ -25,9 +25,9 @@ export const styleLinearProgressBar = (
 
   return mergeClasses(
     unstyledLinearProgressConfig.styles.bar.default,
-    decorated && unstyledLinearProgressConfig.styles.bar.decorated,
     unstyledLinearProgressConfig.styles.bar.orientation[orientation],
     systemStyle.color.default.bg[theme][autoColor.text],
+    decorated && unstyledLinearProgressConfig.styles.bar.decorated,
     decorated && systemStyle.color.default.text[theme][autoColor.bg],
     decorated && systemStyle.color.default.fill[theme][autoColor.bg],
     className
