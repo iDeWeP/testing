@@ -13,7 +13,8 @@ type Handlers = {
 export const useHandlers = (
   element: ElementType,
   onClick?: VoidFunction,
-  onKeyDown?: KeyboardEventHandler
+  onKeyDown?: KeyboardEventHandler,
+  isClickable: boolean = true
 ): Handlers => {
   const handleKeyDown = useCallback<KeyboardEventHandler>(
     (event): void => {
@@ -28,7 +29,7 @@ export const useHandlers = (
   return {
     onClick,
     onKeyDown:
-      element === 'button'
+      element === 'button' || !isClickable
         ? onKeyDown
         : combineHandlers(onKeyDown, handleKeyDown)
   };
