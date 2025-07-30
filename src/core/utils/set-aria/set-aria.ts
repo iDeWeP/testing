@@ -1,4 +1,5 @@
 import type { ElementType } from 'react';
+import { setValue } from '../../../utils/utils/set-value/set-value';
 import type { Orientation } from '../../types';
 
 type Props = {
@@ -65,23 +66,23 @@ const typeMap: TypeMap = {
     }
   },
   listItem: ({ element, checked, disabled, clickable }: Props): SetAria => {
+    const isCheckable = checked !== undefined;
+
     if (element === 'button') {
-      return checked === undefined
-        ? undefined
-        : {
-            'aria-pressed': checked
-          };
+      return setValue(isCheckable, {
+        'aria-pressed': checked
+      });
     }
 
     if (clickable) {
       return {
         role: 'button',
-        ...(checked !== undefined && { 'aria-pressed': checked }),
+        ...(isCheckable && { 'aria-pressed': checked }),
         ...(disabled ? { 'aria-disabled': true } : { tabIndex: 0 })
       };
     }
 
-    if (checked !== undefined) {
+    if (isCheckable) {
       return {
         role: 'option',
         'aria-selected': checked,
