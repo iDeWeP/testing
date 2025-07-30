@@ -1,4 +1,5 @@
 import type { ElementType, ReactNode } from 'react';
+import { useHandlers } from '../../hooks/use-handlers/use-handlers';
 import { useTheme } from '../../hooks/use-theme/use-theme';
 import { getFontSize } from '../../utils/merge-class-name/get-font-size';
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
@@ -20,6 +21,8 @@ export const UnstyledButton = <E extends ElementType>(
     disabled = false,
     effect,
     className,
+    onClick,
+    onKeyDown,
     componentsProps,
     ripple,
     startDecorator,
@@ -32,6 +35,8 @@ export const UnstyledButton = <E extends ElementType>(
   } = mergeProps(unstyledButtonConfig.props, props);
 
   const theme = useTheme();
+
+  const handlers = useHandlers(Component, onClick, onKeyDown);
 
   const mergedClassName = mergeClassName('button', className, {
     theme,
@@ -92,6 +97,7 @@ export const UnstyledButton = <E extends ElementType>(
       ring="unset"
       className={mergedClassName}
       {...setAria('button', buttonProps)}
+      {...handlers}
       {...restProps}
     >
       {leftLoader}

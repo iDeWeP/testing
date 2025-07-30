@@ -1,4 +1,5 @@
 import type { ElementType, ReactNode } from 'react';
+import { useHandlers } from '../../hooks/use-handlers/use-handlers';
 import { useTheme } from '../../hooks/use-theme/use-theme';
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
 import { mergeProps } from '../../utils/merge-props/merge-props';
@@ -18,6 +19,8 @@ export const UnstyledCard = <E extends ElementType>(
     clickable = false,
     effect,
     className,
+    onClick,
+    onKeyDown,
     componentsProps,
     ripple,
     children,
@@ -28,6 +31,8 @@ export const UnstyledCard = <E extends ElementType>(
   } = mergeProps(unstyledCardConfig.props, props);
 
   const theme = useTheme();
+
+  const handlers = useHandlers(Component, onClick, onKeyDown);
 
   const mergedClassName = mergeClassName('card', className, {
     theme,
@@ -56,6 +61,7 @@ export const UnstyledCard = <E extends ElementType>(
         disabled,
         clickable
       })}
+      {...handlers}
       {...restProps}
     >
       {children}

@@ -1,4 +1,5 @@
 import type { ElementType, ReactNode } from 'react';
+import { useHandlers } from '../../hooks/use-handlers/use-handlers';
 import { useTheme } from '../../hooks/use-theme/use-theme';
 import { mergeClassName } from '../../utils/merge-class-name/merge-class-name';
 import { mergeProps } from '../../utils/merge-props/merge-props';
@@ -22,6 +23,8 @@ export const UnstyledListItem = <E extends ElementType>(
     variant,
     effect,
     className,
+    onClick,
+    onKeyDown,
     componentsProps,
     ripple,
     children,
@@ -32,6 +35,8 @@ export const UnstyledListItem = <E extends ElementType>(
   } = mergeProps(unstyledListItemConfig.props, props);
 
   const theme = useTheme();
+
+  const handlers = useHandlers(Component, onClick, onKeyDown);
 
   const { autoVariant, autoColor, defaultVariant, defaultColor } =
     setCheckableStyle(variant, color, checked, 'text');
@@ -68,6 +73,7 @@ export const UnstyledListItem = <E extends ElementType>(
         disabled,
         clickable
       })}
+      {...handlers}
       {...restProps}
     >
       {children}
