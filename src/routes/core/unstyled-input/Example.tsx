@@ -15,7 +15,7 @@ export const Example = ({
   const [value, setValue] = useState('');
 
   const handleChange = useCallback(
-    (event: ChangeEvent<HTMLTextAreaElement>): void =>
+    (event: ChangeEvent<HTMLInputElement>): void =>
       setValue(event.target.value),
     []
   );

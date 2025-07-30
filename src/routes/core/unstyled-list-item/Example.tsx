@@ -4,7 +4,7 @@ import type { UnstyledListItemProps } from '../../../core/components/UnstyledLis
 
 type Props = {
   clear?: boolean;
-} & UnstyledListItemProps<'div'>;
+} & UnstyledListItemProps<'li'>;
 
 export const Example = ({
   clear,

@@ -4,7 +4,7 @@ import type { UnstyledLabelProps } from '../../../core/components/UnstyledLabel/
 
 type Props = {
   clear?: boolean;
-} & UnstyledLabelProps<'div'>;
+} & UnstyledLabelProps<'label'>;
 
 export const Example = ({
   clear,
