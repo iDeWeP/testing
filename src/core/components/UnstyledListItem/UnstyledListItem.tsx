@@ -36,7 +36,10 @@ export const UnstyledListItem = <E extends ElementType>(
 
   const theme = useTheme();
 
-  const handlers = useHandlers(Component, onClick, onKeyDown);
+  const isCheckable = checked !== undefined;
+  const isClickable = clickable || isCheckable;
+
+  const handlers = useHandlers(Component, onClick, onKeyDown, isClickable);
 
   const { autoVariant, autoColor, defaultVariant, defaultColor } =
     setCheckableStyle(variant, color, checked, 'text');
@@ -51,8 +54,6 @@ export const UnstyledListItem = <E extends ElementType>(
     effect
   });
 
-  const isCheckable = checked !== undefined;
-  const isClickable = clickable || isCheckable;
   const hasRipple = ripple !== 'none' && !disabled;
 
   return (

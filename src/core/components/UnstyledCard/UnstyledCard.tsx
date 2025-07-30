@@ -32,7 +32,7 @@ export const UnstyledCard = <E extends ElementType>(
 
   const theme = useTheme();
 
-  const handlers = useHandlers(Component, onClick, onKeyDown);
+  const handlers = useHandlers(Component, onClick, onKeyDown, clickable);
 
   const mergedClassName = mergeClassName('card', className, {
     theme,
