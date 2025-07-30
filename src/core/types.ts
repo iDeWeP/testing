@@ -398,7 +398,7 @@ export type AnimationProps = {
  */
 export type ComponentRefProps<E extends ElementType> = Omit<
   ComponentPropsWithRef<E>,
-  'color' | 'scale'
+  'scale' | 'color'
 >;
 
 export type ComponentConfig<T> = {
