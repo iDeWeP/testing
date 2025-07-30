@@ -39,7 +39,6 @@ export const styleDivider = (
 
   return mergeClasses(
     sharedStyle.display.flex,
-    decorated && unstyledDividerConfig.styles.root.decorated,
     unstyledDividerConfig.styles.root.orientation[orientation],
     systemStyle.padding.default.x[autoPadding.x],
     systemStyle.padding.default.y[autoPadding.y],
@@ -59,8 +58,9 @@ export const styleDivider = (
     systemStyle.margin.b[mb],
     systemStyle.margin.l[ml],
     systemStyle.margin.r[mr],
-    decorated && systemStyle.size.font[font],
     systemStyle.color.default.text[theme][autoColor],
+    decorated && unstyledDividerConfig.styles.root.decorated,
+    decorated && systemStyle.size.font[font],
     decorated && systemStyle.color.default.fill[theme][autoColor],
     decorated && systemStyle.gap.all[gap],
     className
