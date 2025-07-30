@@ -7,6 +7,7 @@ export const DefaultExample = (): ReactNode => (
   <ExampleSection title="Default">
     <ExampleCard>
       <Example />
+      <Example value={50}>50%</Example>
     </ExampleCard>
   </ExampleSection>
 );
