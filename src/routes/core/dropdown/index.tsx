@@ -3,5 +3,9 @@ import type { RouteObject } from 'react-router';
 
 export const DropdownRoute: RouteObject = {
   path: '/core/dropdown',
-  Component: lazy(() => import('./Page'))
+  Component: lazy(
+    (): Promise<
+      typeof import('/Users/ritchiw/vscode/testing/src/routes/core/dropdown/Page')
+    > => import('./Page')
+  )
 };
