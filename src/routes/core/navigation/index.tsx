@@ -3,5 +3,9 @@ import type { RouteObject } from 'react-router';
 
 export const NavigationRoute: RouteObject = {
   path: '/core/navigation',
-  Component: lazy(() => import('./Page'))
+  Component: lazy(
+    (): Promise<
+      typeof import('/Users/ritchiw/vscode/testing/src/routes/core/navigation/Page')
+    > => import('./Page')
+  )
 };
