@@ -12,8 +12,6 @@ import { ColorExample } from './ColorExample';
 import { DefaultExample } from './DefaultExample';
 import { FontExample } from './FontExample';
 import { GapExample } from './GapExample';
-import { GapXExample } from './GapXExample';
-import { GapYExample } from './GapYExample';
 import { MarginExample } from './MarginExample';
 import { MarginMBExample } from './MarginMBExample';
 import { MarginMExample } from './MarginMExample';
@@ -46,7 +44,7 @@ import { VariantExample } from './VariantExample';
 
 const Page = (): ReactNode => (
   <>
-    <ExampleTitle>UnstyledBox</ExampleTitle>
+    <ExampleTitle>UnstyledTypography</ExampleTitle>
     <DefaultExample />
     <VariantExample />
     <PaddingExample />
@@ -88,8 +86,6 @@ const Page = (): ReactNode => (
     <ShadowExample />
     <RingExample />
     <GapExample />
-    <GapXExample />
-    <GapYExample />
   </>
 );
 
