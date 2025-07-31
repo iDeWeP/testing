@@ -20,9 +20,10 @@ export const getMaxTotal = (
   const count = max && total && maxCount ? total - max : 0;
 
   return {
-    nodes: max
-      ? children.slice(0, surplus && !totalCount ? max - 1 : max)
-      : children,
+    nodes:
+      max && maxCount
+        ? children.slice(0, surplus && !totalCount ? max - 1 : max)
+        : children,
     count:
       count || totalCount || (surplus && maxCount ? maxCount + 1 : maxCount)
   };
