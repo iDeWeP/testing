@@ -4,7 +4,7 @@ import { DefaultExample } from './DefaultExample';
 
 const Page = (): ReactNode => (
   <>
-    <ExampleTitle>Box</ExampleTitle>
+    <ExampleTitle>Paper</ExampleTitle>
     <DefaultExample />
   </>
 );

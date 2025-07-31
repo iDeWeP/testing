@@ -1,8 +1,8 @@
 import type { ReactNode } from 'react';
-import { Box } from '../../../core/components/Box/Box';
-import type { BoxProps } from '../../../core/components/Box/Box.types';
+import { Paper } from '../../../core/components/Paper/Paper';
+import type { PaperProps } from '../../../core/components/Paper/Paper.types';
 
 export const Example = ({
-  children = 'BOX',
+  children = 'PAPER',
   ...restProps
-}: BoxProps<'div'>): ReactNode => <Box {...restProps}>{children}</Box>;
+}: PaperProps<'div'>): ReactNode => <Paper {...restProps}>{children}</Paper>;
