@@ -1,20 +1,20 @@
 import type { ReactNode } from 'react';
-import { UnstyledBox } from '../../../core/components/UnstyledBox/UnstyledBox';
-import type { UnstyledBoxProps } from '../../../core/components/UnstyledBox/UnstyledBox.types';
+import { UnstyledTypography } from '../../../core/components/UnstyledTypography/UnstyledTypography';
+import type { UnstyledTypographyProps } from '../../../core/components/UnstyledTypography/UnstyledTypography.types';
 
 type Props = {
   clear?: boolean;
-} & UnstyledBoxProps<'div'>;
+} & UnstyledTypographyProps<'span'>;
 
 export const Example = ({
   clear,
-  children = 'UNSTYLED-BOX',
+  children = 'UNSTYLED-TYPOGRAPHY',
   ...restProps
 }: Props): ReactNode => (
-  <UnstyledBox
+  <UnstyledTypography
     color={clear ? 'unset' : 'primary'}
     {...restProps}
   >
     {children}
-  </UnstyledBox>
+  </UnstyledTypography>
 );
