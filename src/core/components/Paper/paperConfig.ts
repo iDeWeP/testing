@@ -41,7 +41,7 @@ export const paperConfig: ComponentConfig<PaperConfigProps> = {
     rbl: 'unset',
     rbr: 'unset',
     font: 'unset',
-    color: 'unset',
+    color: 'surface-on',
     shadow: 'unset',
     ring: 'unset',
     gap: 'unset'
