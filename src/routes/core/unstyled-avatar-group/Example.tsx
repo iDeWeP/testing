@@ -1,20 +1,26 @@
 import type { ReactNode } from 'react';
-import { UnstyledGroup } from '../../../core/components/UnstyledGroup/UnstyledGroup';
-import type { UnstyledGroupProps } from '../../../core/components/UnstyledGroup/UnstyledGroup.types';
+import { ExampleAvatar } from '../../../components/ExampleAvatar';
+import { UnstyledAvatarGroup } from '../../../core/components/UnstyledAvatarGroup/UnstyledAvatarGroup';
+import type { UnstyledAvatarGroupProps } from '../../../core/components/UnstyledAvatarGroup/UnstyledAvatarGroup.types';
 
 type Props = {
   clear?: boolean;
-} & UnstyledGroupProps<'div'>;
+} & UnstyledAvatarGroupProps<'div'>;
 
 export const Example = ({
   clear,
-  children = 'GROUP',
+  children = 'UNSTYLED-AVATAR-GROUP',
   ...restProps
 }: Props): ReactNode => (
-  <UnstyledGroup
-    color={clear ? 'unset' : 'primary'}
+  <UnstyledAvatarGroup
+    color={clear ? 'unset' : 'primary-on'}
+    surplus={!clear}
     {...restProps}
   >
-    {children}
-  </UnstyledGroup>
+    <ExampleAvatar>{children} #1</ExampleAvatar>
+    <ExampleAvatar>{children} #2</ExampleAvatar>
+    <ExampleAvatar>{children} #3</ExampleAvatar>
+    <ExampleAvatar>{children} #4</ExampleAvatar>
+    <ExampleAvatar>{children} #5</ExampleAvatar>
+  </UnstyledAvatarGroup>
 );

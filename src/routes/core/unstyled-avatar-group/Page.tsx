@@ -20,6 +20,7 @@ import { MarginMRExample } from './MarginMRExample';
 import { MarginMTExample } from './MarginMTExample';
 import { MarginMXExample } from './MarginMXExample';
 import { MarginMYExample } from './MarginMYExample';
+import { MaxExample } from './MaxExample';
 import { OrientationExample } from './OrientationExample';
 import { PaddingExample } from './PaddingExample';
 import { PaddingPBExample } from './PaddingPBExample';
@@ -41,12 +42,17 @@ import { RadiusRTLExample } from './RadiusRTLExample';
 import { RadiusRTRExample } from './RadiusRTRExample';
 import { RingExample } from './RingExample';
 import { ShadowExample } from './ShadowExample';
+import { SurplusExample } from './SurplusExample';
+import { TotalExample } from './TotalExample';
 import { VariantExample } from './VariantExample';
 
 const Page = (): ReactNode => (
   <>
-    <ExampleTitle>UnstyledGroup</ExampleTitle>
+    <ExampleTitle>UnstyledAvatarGroup</ExampleTitle>
     <DefaultExample />
+    <MaxExample />
+    <TotalExample />
+    <SurplusExample />
     <GapExample />
     <OrientationExample />
     <VariantExample />
