@@ -13,7 +13,7 @@ export const Example = ({
   ...restProps
 }: Props): ReactNode => (
   <UnstyledAvatarGroup
-    color={clear ? 'unset' : 'primary-on'}
+    color={clear ? 'unset' : 'primary'}
     surplus={!clear}
     {...restProps}
   >
